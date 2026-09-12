@@ -1,0 +1,31 @@
+name: weekly-radar
+
+on:
+  schedule:
+    - cron: "0 13 * * 0"   # UTC 周日 13:00 = 北京时间 21:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: weekly synthesis
+        env:
+          ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+          ARK_MODEL: ${{ vars.ARK_MODEL }}
+        run: python -m radar.run weekly
+      - name: commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add weekly/
+          git diff --cached --quiet || git commit -m "weekly $(date -u +%G-W%V)"
+          git push

@@ -1,0 +1,118 @@
+# 信息源定义。按 4 个领域分组。
+# 新增来源：在对应 domain 下加关键词 / query / feed 即可，collector 会自动拾取。
+
+domains:
+  - name: aging_multimodal
+    label_zh: 衰老与多模态健康模型
+    keywords_zh: [衰老时钟, 表观遗传时钟, 蛋白质组年龄, 多模态衰老, 类器官衰老, 生物年龄]
+    keywords_en: [aging clock, epigenetic clock, proteomic age, multimodal aging, organoid aging, biological age]
+    arxiv:
+      categories: [q-bio.QM, q-bio.GN, q-bio.CB]
+      queries:
+        - "aging clock"
+        - "epigenetic clock"
+        - "proteomic age"
+        - "multimodal aging"
+        - "organoid aging"
+    europepmc_query: '(aging clock OR biological age OR epigenetic age OR "proteomic age") AND (multimodal OR proteomic OR methylation OR organoid)'
+    rss:
+      - https://www.nature.com/nataging.rss
+      - https://onlinelibrary.wiley.com/feed/14749726/most-recent
+      - https://link.springer.com/search.rss?query=aging+clock&channel=geroscience
+    github_queries:
+      - aging-clock
+      - epigenetic-clock
+      - biological age prediction
+    hf_queries:
+      - aging
+      - methylation
+
+  - name: data_models
+    label_zh: 生物医学数据库 / 模型 / 部署
+    keywords_zh: [单细胞, 空间转录组, 蛋白质组, 甲基化, 细胞绘制, foundation model]
+    keywords_en: [single-cell, spatial transcriptomics, proteomics, methylation, cell painting, foundation model]
+    arxiv:
+      categories: [q-bio.QM, cs.CV, cs.LG]
+      queries:
+        - "single-cell foundation model"
+        - "spatial transcriptomics"
+        - "cell painting"
+    europepmc_query: '(single-cell OR "spatial transcriptomics" OR proteomics) AND (database OR benchmark OR "foundation model")'
+    rss:
+      - https://www.nature.com/nbt.rss
+    github_queries:
+      - single-cell
+      - spatial-transcriptomics
+      - foundation-model
+      - cell-painting
+    hf_queries:
+      - single-cell
+      - spatial transcriptomics
+      - proteomics
+      - methylation
+      - cell painting
+
+  - name: ml_algorithms
+    label_zh: ML / AI 底层算法
+    keywords_zh: [世界模型, 自监督, 表征学习, 扩散模型, 状态空间模型, JEPA]
+    keywords_en: [JEPA, world model, self-supervised, representation learning, diffusion, state space model]
+    arxiv:
+      categories: [cs.LG, stat.ML]
+      queries:
+        - "JEPA"
+        - "world model"
+        - "self-supervised representation learning"
+        - "state space model"
+    europepmc_query: ""
+    rss:
+      - https://jack-clark.net/feed/
+      - https://research.google/blog/rss/
+      - https://bair.berkeley.edu/blog/feed.xml
+    github_queries:
+      - world-model
+      - jepa
+      - self-supervised-learning
+    hf_queries:
+      - jepa
+      - world model
+      - diffusion
+
+  - name: agents
+    label_zh: Agent 进展
+    keywords_zh: [LLM agent, 工具调用, 强化学习, 自我改进, RSI, RLVR]
+    keywords_en: [LLM agent, tool use, reinforcement learning LLM, self-improving, RSI, RLVR, agentic]
+    arxiv:
+      categories: [cs.AI, cs.MA]
+      queries:
+        - "LLM agent"
+        - "tool use language model"
+        - "reinforcement learning LLM"
+        - "self-improving agent"
+        - "RLVR"
+    europepmc_query: ""
+    rss:
+      - https://openai.com/news/rss.xml
+      - https://deepmind.google/blog/rss.xml
+      - https://www.deeplearning.ai/the-batch/feed
+    # 注：Anthropic / Meta AI 无公开 RSS（2026-09 验证 404），靠 arxiv + 上方 feed 覆盖。
+    github_queries:
+      - llm-agent
+      - agentic
+      - rlvr
+    hf_queries:
+      - agent
+    # TODO: 后续可接入 Hacker News 高分帖（Algolia API，无 key），此处留注释提醒。
+
+# Semantic Scholar 引用追踪的种子论文：用 DOI:xxx 或 S2 paper id（CorpusId:xxx / 40 位 hash）。
+seed_papers:
+  - DOI:10.18632/aging.101414          # Levine et al. 2018 PhenoAge
+  - DOI:10.1038/s41586-023-06139-9     # Geneformer (Nature 2023)
+  - DOI:10.1038/s41592-024-02201-0     # scGPT (Nature Methods 2024)
+  - DOI:10.1186/gb-2013-14-10-r115     # Horvath 2013 pan-tissue 甲基化时钟
+  # imAgeScore (cell painting aging) 是 bioRxiv preprint，S2 未收录 DOI，
+  # 可在 semanticscholar.org 搜到后改用其 40 位 paper id 加在这里。
+
+# 追踪其新论文的作者。格式 S2 author id。
+# 怎么查 author id: https://api.semanticscholar.org/graph/v1/author/search?query=Steve+Horvath&fields=name,affiliations
+tracked_authors:
+  # - 1009999   # 示例：占位，请按上方注释查到真实 id 后取消注释并替换
