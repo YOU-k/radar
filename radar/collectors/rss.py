@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 import re
+import socket
 import time
 from datetime import date, timedelta
 
 import feedparser
 
 from ..schema import Item
+
+socket.setdefaulttimeout(30)  # 防止个别 feed 挂死整个 job
 
 _TAG = re.compile(r"<[^>]+>")
 
