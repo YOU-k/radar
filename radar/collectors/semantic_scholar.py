@@ -45,9 +45,12 @@ def _to_item(p: dict, kind: str, via: str) -> Item | None:
     )
 
 
-def collect(cfg: dict, days: int) -> list[Item]:
-    cutoff = (date.today() - timedelta(days=days)).isoformat()
+def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
     items = []
+    cadence = cfg.get("s2_cadence", "daily")
+    if cadence not in freqs:
+        return items
+    cutoff = (date.today() - timedelta(days=freqs[cadence])).isoformat()
 
     for pid in cfg.get("seed_papers") or []:
         try:

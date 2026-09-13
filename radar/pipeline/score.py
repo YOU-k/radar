@@ -6,11 +6,11 @@ import re
 
 import requests
 
-from ..config import load_profile
+from ..config import llm_api_key, load_profile
 from ..schema import Item
 
-ARK_BASE = os.environ.get("ARK_BASE_URL") or "https://ark.cn-beijing.volces.com/api/v3"
-ARK_MODEL = os.environ.get("ARK_MODEL") or "doubao-seed-1-6-250615"
+LLM_BASE = os.environ.get("LLM_BASE_URL") or "https://api.deepseek.com"
+LLM_MODEL = os.environ.get("LLM_MODEL") or "deepseek-chat"
 PREFILTER_TOP = 40
 BATCH = 20
 
@@ -41,7 +41,7 @@ def prefilter(items: list[Item], cfg: dict) -> list[Item]:
 
 
 def llm_rerank(items: list[Item]) -> bool:
-    key = os.environ.get("ARK_API_KEY")
+    key = llm_api_key()
     if not key or not items:
         return False
     profile = load_profile()
@@ -62,10 +62,10 @@ def llm_rerank(items: list[Item]) -> bool:
         )
         try:
             r = requests.post(
-                f"{ARK_BASE}/chat/completions",
+                f"{LLM_BASE}/chat/completions",
                 headers={"Authorization": f"Bearer {key}",
                          "Content-Type": "application/json"},
-                json={"model": ARK_MODEL,
+                json={"model": LLM_MODEL,
                       "messages": [{"role": "user", "content": prompt}],
                       "temperature": 0.2},
                 timeout=180,

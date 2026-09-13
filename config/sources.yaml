@@ -1,5 +1,9 @@
 # 信息源定义。按 4 个领域分组。
 # 新增来源：在对应 domain 下加关键词 / query / feed 即可，collector 会自动拾取。
+# 节奏：每个源可标 cadence: daily(默认) / weekly(周日收) / monthly(每月1号收)。
+#   论文类保持 daily；格局型源（github/hf/blog）建议 weekly 或 monthly 降噪。
+#   支持的位置：arxiv.cadence、europepmc_cadence、github_cadence、hf_cadence、
+#   rss 条目写成 {url, cadence}、顶层 s2_cadence。
 
 domains:
   - name: aging_multimodal
@@ -23,9 +27,11 @@ domains:
       - aging-clock
       - epigenetic-clock
       - biological age prediction
+    github_cadence: weekly
     hf_queries:
       - aging
       - methylation
+    hf_cadence: weekly
 
   - name: data_models
     label_zh: 生物医学数据库 / 模型 / 部署
@@ -45,12 +51,14 @@ domains:
       - spatial-transcriptomics
       - foundation-model
       - cell-painting
+    github_cadence: weekly
     hf_queries:
       - single-cell
       - spatial transcriptomics
       - proteomics
       - methylation
       - cell painting
+    hf_cadence: weekly
 
   - name: ml_algorithms
     label_zh: ML / AI 底层算法
@@ -65,17 +73,22 @@ domains:
         - "state space model"
     europepmc_query: ""
     rss:
-      - https://jack-clark.net/feed/
-      - https://research.google/blog/rss/
-      - https://bair.berkeley.edu/blog/feed.xml
+      - url: https://jack-clark.net/feed/
+        cadence: weekly
+      - url: https://research.google/blog/rss/
+        cadence: weekly
+      - url: https://bair.berkeley.edu/blog/feed.xml
+        cadence: weekly
     github_queries:
       - world-model
       - jepa
       - self-supervised-learning
+    github_cadence: weekly
     hf_queries:
       - jepa
       - world model
       - diffusion
+    hf_cadence: monthly
 
   - name: agents
     label_zh: Agent 进展
@@ -99,11 +112,14 @@ domains:
       - llm-agent
       - agentic
       - rlvr
+    github_cadence: weekly
     hf_queries:
       - agent
+    hf_cadence: monthly
     # TODO: 后续可接入 Hacker News 高分帖（Algolia API，无 key），此处留注释提醒。
 
 # Semantic Scholar 引用追踪的种子论文：用 DOI:xxx 或 S2 paper id（CorpusId:xxx / 40 位 hash）。
+# s2_cadence: daily   # 默认值；想降频就取消注释改成 weekly
 seed_papers:
   - DOI:10.18632/aging.101414          # Levine et al. 2018 PhenoAge
   - DOI:10.1038/s41586-023-06139-9     # Geneformer (Nature 2023)

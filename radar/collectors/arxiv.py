@@ -50,11 +50,14 @@ def _search(query: str, categories: list[str], max_results: int = 25) -> list[di
     return out
 
 
-def collect(cfg: dict, days: int) -> list[Item]:
-    cutoff = (date.today() - timedelta(days=days)).isoformat()
+def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
     items = []
     for dom in cfg.get("domains", []):
         spec = dom.get("arxiv") or {}
+        cadence = spec.get("cadence", "daily")
+        if cadence not in freqs:
+            continue
+        cutoff = (date.today() - timedelta(days=freqs[cadence])).isoformat()
         queries = spec.get("queries") or []
         cats = spec.get("categories") or []
         for q in queries:

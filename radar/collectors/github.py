@@ -11,14 +11,17 @@ from ..schema import Item
 API = "https://api.github.com/search/repositories"
 
 
-def collect(cfg: dict, days: int) -> list[Item]:
-    since = (date.today() - timedelta(days=days)).isoformat()
+def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
     headers = {"Accept": "application/vnd.github+json", "User-Agent": "bio-radar/0.1"}
     token = os.environ.get("GITHUB_TOKEN")
     if token:
         headers["Authorization"] = f"Bearer {token}"
     items = []
     for dom in cfg.get("domains", []):
+        cadence = dom.get("github_cadence", "daily")
+        if cadence not in freqs:
+            continue
+        since = (date.today() - timedelta(days=freqs[cadence])).isoformat()
         for q in dom.get("github_queries") or []:
             try:
                 r = requests.get(API, headers=headers, params={

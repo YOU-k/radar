@@ -1,25 +1,39 @@
 from __future__ import annotations
 
 import argparse
-import os
-import re
 from datetime import date, timedelta
 
 import requests
 
 from .collectors import COLLECTORS
-from .config import ROOT, load_profile, load_sources
+from .config import ROOT, llm_api_key, load_local_env, load_profile, load_sources
 from .pipeline.dedup import filter_new
 from .pipeline.digest import write_digest
-from .pipeline.score import ARK_BASE, ARK_MODEL, score_items
+from .pipeline.score import LLM_BASE, LLM_MODEL, score_items
+
+FREQ_DAYS = {"daily": 1, "weekly": 7, "monthly": 30}
+
+
+def active_freqs(today: date) -> dict[str, int]:
+    """每天跑 daily 源；周日顺带收 weekly 慢源；每月 1 号顺带收 monthly 慢源。"""
+    freqs = {"daily": FREQ_DAYS["daily"]}
+    if today.weekday() == 6:
+        freqs["weekly"] = FREQ_DAYS["weekly"]
+    if today.day == 1:
+        freqs["monthly"] = FREQ_DAYS["monthly"]
+    return freqs
 
 
 def cmd_daily(days: int, use_llm: bool) -> None:
     cfg = load_sources()
+    freqs = active_freqs(date.today())
+    if days > 1:  # 手动回补窗口
+        freqs = {f: days for f in freqs}
+    print(f"[plan] cadences: {sorted(freqs)}")
     items = []
     for name, mod in COLLECTORS.items():
         try:
-            got = mod.collect(cfg, days)
+            got = mod.collect(cfg, freqs)
             print(f"[{name}] {len(got)} items")
             items.extend(got)
         except Exception as exc:
@@ -54,8 +68,60 @@ def cmd_weekly(use_llm: bool) -> None:
     print(f"[weekly] wrote {out}")
 
 
+def cmd_landscape(use_llm: bool) -> None:
+    """每月一次：LLM 对照近 30 天 digest 审查 registry，提增补/修订建议。"""
+    today = date.today()
+    out = ROOT / "registry_updates" / f"{today.year}-{today.month:02d}.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    header = f"# Registry 月度刷新建议 — {today.year}-{today.month:02d}\n\n"
+
+    registry_text = "\n\n".join(
+        f"### 文件 registry/{p.name}\n{p.read_text(encoding='utf-8')}"
+        for p in sorted((ROOT / "registry").glob("*.md"))
+    )
+    news = []
+    for i in range(30):
+        p = ROOT / "digests" / f"{(today - timedelta(days=i)).isoformat()}.md"
+        if p.exists():
+            news.extend(l for l in p.read_text(encoding="utf-8").splitlines()
+                        if l.startswith("- **["))
+
+    key = llm_api_key()
+    if not key or not use_llm:
+        out.write_text(header + "（未启用 LLM，跳过本月刷新。）\n", encoding="utf-8")
+        print(f"[landscape] no LLM, wrote {out}")
+        return
+
+    prompt = (
+        "下面是某研究者的兴趣画像、他的长期知识库 registry 现状、以及近一个月情报 digest 的条目清单。\n\n"
+        f"【兴趣画像】\n{load_profile()}\n\n"
+        f"【registry 现状】\n{registry_text[:12000]}\n\n"
+        f"【近一月情报条目】\n" + "\n".join(news[:400])[:12000] + "\n\n"
+        "请审查：近一月的信息里，有没有应该进入长期知识库、或使现有条目过时的内容？\n"
+        "只输出有建议的文件，按 '## databases.md' / '## models.md' / '## people.md' 分节，"
+        "每条一行 markdown（沿用各文件现有格式，标注 [新增] 或 [修订]）。"
+        "背景格局没有实质变化的分节不要出现。都没有就回复'本月无建议'。"
+    )
+    try:
+        r = requests.post(
+            f"{LLM_BASE}/chat/completions",
+            headers={"Authorization": f"Bearer {key}",
+                     "Content-Type": "application/json"},
+            json={"model": LLM_MODEL,
+                  "messages": [{"role": "user", "content": prompt}],
+                  "temperature": 0.3},
+            timeout=300,
+        )
+        r.raise_for_status()
+        body = r.json()["choices"][0]["message"]["content"]
+    except Exception as exc:
+        body = f"（LLM 调用失败：{exc}）"
+    out.write_text(header + body + "\n", encoding="utf-8")
+    print(f"[landscape] wrote {out}")
+
+
 def _weekly_llm(texts: list[str]) -> str | None:
-    key = os.environ.get("ARK_API_KEY")
+    key = llm_api_key()
     if not key:
         return None
     joined = "\n\n---\n\n".join(t[:6000] for t in texts)[:24000]
@@ -70,10 +136,10 @@ def _weekly_llm(texts: list[str]) -> str | None:
     )
     try:
         r = requests.post(
-            f"{ARK_BASE}/chat/completions",
+            f"{LLM_BASE}/chat/completions",
             headers={"Authorization": f"Bearer {key}",
                      "Content-Type": "application/json"},
-            json={"model": ARK_MODEL,
+            json={"model": LLM_MODEL,
                   "messages": [{"role": "user", "content": prompt}],
                   "temperature": 0.3},
             timeout=300,
@@ -91,22 +157,26 @@ def _weekly_fallback(texts: list[str]) -> str:
         for line in t.splitlines():
             if line.startswith("- **["):
                 titles.append(line)
-    return ("（未启用 LLM，以下为本周 digest 高分条目汇总）\n\n"
+    return ("（未启用 LLM，以下为本周 digest 条目汇总）\n\n"
             + "\n".join(titles[:80]) + "\n")
 
 
 def main() -> None:
+    load_local_env()  # 本机运行时注入 /data3/yy/key.env（不打印、不覆盖已有变量）
     ap = argparse.ArgumentParser(prog="radar")
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("daily", "weekly"):
+    for name in ("daily", "weekly", "landscape"):
         p = sub.add_parser(name)
         p.add_argument("--days", type=int, default=1)
         p.add_argument("--no-llm", action="store_true")
     args = ap.parse_args()
+    use_llm = not args.no_llm
     if args.cmd == "daily":
-        cmd_daily(args.days, use_llm=not args.no_llm)
+        cmd_daily(args.days, use_llm)
+    elif args.cmd == "weekly":
+        cmd_weekly(use_llm)
     else:
-        cmd_weekly(use_llm=not args.no_llm)
+        cmd_landscape(use_llm)
 
 
 if __name__ == "__main__":

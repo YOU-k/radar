@@ -18,11 +18,19 @@ def _clean(html: str, n: int = 1200) -> str:
     return " ".join(_TAG.sub(" ", html or "").split())[:n]
 
 
-def collect(cfg: dict, days: int) -> list[Item]:
-    cutoff = (date.today() - timedelta(days=days)).isoformat()
+def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
     items = []
     for dom in cfg.get("domains", []):
-        for url in dom.get("rss") or []:
+        for entry in dom.get("rss") or []:
+            # 允许 "url" 或 {url, cadence} 两种写法
+            if isinstance(entry, dict):
+                url = entry["url"]
+                cadence = entry.get("cadence", "daily")
+            else:
+                url, cadence = entry, "daily"
+            if cadence not in freqs:
+                continue
+            cutoff = (date.today() - timedelta(days=freqs[cadence])).isoformat()
             feed = feedparser.parse(url)
             if feed.bozo and not feed.entries:
                 print(f"[rss] {url} returned no entries")

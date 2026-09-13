@@ -22,14 +22,15 @@ def _search(query: str, start: str, end: str, page_size: int = 50) -> list[dict]
     return r.json().get("resultList", {}).get("result", [])
 
 
-def collect(cfg: dict, days: int) -> list[Item]:
+def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
     end = date.today()
-    start = end - timedelta(days=days)
     items = []
     for dom in cfg.get("domains", []):
         query = (dom.get("europepmc_query") or "").strip()
-        if not query:
+        cadence = dom.get("europepmc_cadence", "daily")
+        if not query or cadence not in freqs:
             continue
+        start = end - timedelta(days=freqs[cadence])
         try:
             rows = _search(query, start.isoformat(), end.isoformat())
         except Exception as exc:

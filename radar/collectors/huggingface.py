@@ -27,10 +27,13 @@ def _search(kind: str, query: str, cutoff: datetime, limit: int = 10) -> list[di
     return out
 
 
-def collect(cfg: dict, days: int) -> list[Item]:
-    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
     items = []
     for dom in cfg.get("domains", []):
+        cadence = dom.get("hf_cadence", "daily")
+        if cadence not in freqs:
+            continue
+        cutoff = datetime.now(timezone.utc) - timedelta(days=freqs[cadence])
         for q in dom.get("hf_queries") or []:
             for kind in ("models", "datasets"):
                 try:
