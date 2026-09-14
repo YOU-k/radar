@@ -12,7 +12,7 @@ from .pipeline.digest import write_digest
 from .pipeline.score import score_items
 from .pipeline.site import build_site
 
-FREQ_DAYS = {"daily": 1, "weekly": 7, "monthly": 30}
+FREQ_DAYS = {"daily": 2, "weekly": 7, "monthly": 30}  # daily 重叠收 2 天：某天采集失败次日自动补回，重复由 dedup 挡
 
 
 def active_freqs(today: date) -> dict[str, int]:
