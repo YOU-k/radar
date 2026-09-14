@@ -17,6 +17,7 @@ class Item:
 
     score: float = 0.0
     reason_zh: str = ""
+    deepread: str = ""  # 深读环节产出的中文 markdown（空 = 未深读）
 
     def to_dict(self) -> dict:
         return asdict(self)

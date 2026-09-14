@@ -1,16 +1,12 @@
 from __future__ import annotations
 
 import json
-import os
 import re
 
-import requests
-
-from ..config import llm_api_key, load_profile
+from .. import llm
+from ..config import load_profile
 from ..schema import Item
 
-LLM_BASE = os.environ.get("LLM_BASE_URL") or "https://api.deepseek.com"
-LLM_MODEL = os.environ.get("LLM_MODEL") or "deepseek-chat"
 PREFILTER_TOP = 40
 BATCH = 20
 
@@ -41,8 +37,7 @@ def prefilter(items: list[Item], cfg: dict) -> list[Item]:
 
 
 def llm_rerank(items: list[Item]) -> bool:
-    key = llm_api_key()
-    if not key or not items:
+    if not llm.available() or not items:
         return False
     profile = load_profile()
     ok = False
@@ -61,17 +56,7 @@ def llm_rerank(items: list[Item]) -> bool:
             + '\n\n只输出 JSON 数组，形如 [{"id":0,"score":8,"reason":"..."}]，不要输出其他内容。'
         )
         try:
-            r = requests.post(
-                f"{LLM_BASE}/chat/completions",
-                headers={"Authorization": f"Bearer {key}",
-                         "Content-Type": "application/json"},
-                json={"model": LLM_MODEL,
-                      "messages": [{"role": "user", "content": prompt}],
-                      "temperature": 0.2},
-                timeout=180,
-            )
-            r.raise_for_status()
-            content = r.json()["choices"][0]["message"]["content"]
+            content = llm.chat(prompt, model=llm.SCORE_MODEL, temperature=0.2, timeout=180)
             m = re.search(r"\[.*\]", content, re.DOTALL)
             scores = json.loads(m.group(0)) if m else []
             for s in scores:

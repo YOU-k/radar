@@ -31,6 +31,12 @@ def _search(query: str, categories: list[str], max_results: int = 25) -> list[di
             with urllib.request.urlopen(req, timeout=60) as r:
                 root = ET.fromstring(r.read())
             break
+        except urllib.error.HTTPError as exc:
+            last_exc = exc
+            if exc.code == 429:  # 限流：共享出口 IP 常见，长退避
+                time.sleep(30 * (attempt + 1))
+            else:
+                time.sleep(5 * (attempt + 1))
         except Exception as exc:  # 网络抖动常见，重试两次
             last_exc = exc
             time.sleep(5 * (attempt + 1))

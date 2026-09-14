@@ -3,13 +3,14 @@ from __future__ import annotations
 import argparse
 from datetime import date, timedelta
 
-import requests
-
+from . import llm
 from .collectors import COLLECTORS
-from .config import ROOT, llm_api_key, load_local_env, load_profile, load_sources
+from .config import ROOT, load_local_env, load_profile, load_sources
 from .pipeline.dedup import filter_new
+from .pipeline.deepread import deepread_top
 from .pipeline.digest import write_digest
-from .pipeline.score import LLM_BASE, LLM_MODEL, score_items
+from .pipeline.score import score_items
+from .pipeline.site import build_site
 
 FREQ_DAYS = {"daily": 1, "weekly": 7, "monthly": 30}
 
@@ -41,6 +42,9 @@ def cmd_daily(days: int, use_llm: bool) -> None:
     fresh = filter_new(items)
     print(f"[dedup] {len(items)} -> {len(fresh)} new")
     scored = score_items(fresh, cfg, use_llm=use_llm)
+    if use_llm:
+        n = deepread_top(scored)
+        print(f"[deepread] {n} items")
     out = write_digest(scored, date.today())
     print(f"[digest] wrote {out}")
 
@@ -86,8 +90,7 @@ def cmd_landscape(use_llm: bool) -> None:
             news.extend(l for l in p.read_text(encoding="utf-8").splitlines()
                         if l.startswith("- **["))
 
-    key = llm_api_key()
-    if not key or not use_llm:
+    if not llm.available() or not use_llm:
         out.write_text(header + "（未启用 LLM，跳过本月刷新。）\n", encoding="utf-8")
         print(f"[landscape] no LLM, wrote {out}")
         return
@@ -103,17 +106,7 @@ def cmd_landscape(use_llm: bool) -> None:
         "背景格局没有实质变化的分节不要出现。都没有就回复'本月无建议'。"
     )
     try:
-        r = requests.post(
-            f"{LLM_BASE}/chat/completions",
-            headers={"Authorization": f"Bearer {key}",
-                     "Content-Type": "application/json"},
-            json={"model": LLM_MODEL,
-                  "messages": [{"role": "user", "content": prompt}],
-                  "temperature": 0.3},
-            timeout=300,
-        )
-        r.raise_for_status()
-        body = r.json()["choices"][0]["message"]["content"]
+        body = llm.chat(prompt, model=llm.SYNTH_MODEL, temperature=0.3, timeout=300)
     except Exception as exc:
         body = f"（LLM 调用失败：{exc}）"
     out.write_text(header + body + "\n", encoding="utf-8")
@@ -121,8 +114,7 @@ def cmd_landscape(use_llm: bool) -> None:
 
 
 def _weekly_llm(texts: list[str]) -> str | None:
-    key = llm_api_key()
-    if not key:
+    if not llm.available():
         return None
     joined = "\n\n---\n\n".join(t[:6000] for t in texts)[:24000]
     prompt = (
@@ -135,17 +127,7 @@ def _weekly_llm(texts: list[str]) -> str | None:
         "按 databases.md / models.md / people.md 分组，每条一行。"
     )
     try:
-        r = requests.post(
-            f"{LLM_BASE}/chat/completions",
-            headers={"Authorization": f"Bearer {key}",
-                     "Content-Type": "application/json"},
-            json={"model": LLM_MODEL,
-                  "messages": [{"role": "user", "content": prompt}],
-                  "temperature": 0.3},
-            timeout=300,
-        )
-        r.raise_for_status()
-        return r.json()["choices"][0]["message"]["content"]
+        return llm.chat(prompt, model=llm.SYNTH_MODEL, temperature=0.3, timeout=300)
     except Exception as exc:
         print(f"[weekly] LLM failed, fallback to raw list: {exc}")
         return None
@@ -169,14 +151,18 @@ def main() -> None:
         p = sub.add_parser(name)
         p.add_argument("--days", type=int, default=1)
         p.add_argument("--no-llm", action="store_true")
+    sub.add_parser("site")
     args = ap.parse_args()
-    use_llm = not args.no_llm
+    use_llm = not getattr(args, "no_llm", False)
     if args.cmd == "daily":
         cmd_daily(args.days, use_llm)
     elif args.cmd == "weekly":
         cmd_weekly(use_llm)
-    else:
+    elif args.cmd == "landscape":
         cmd_landscape(use_llm)
+    else:
+        out = build_site()
+        print(f"[site] wrote {out}")
 
 
 if __name__ == "__main__":
