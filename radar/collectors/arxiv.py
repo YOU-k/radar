@@ -35,7 +35,7 @@ def _search(queries: list[str], categories: list[str], max_results: int = 50) ->
     })
     url = f"{API}?{params}"
     last_exc: Exception | None = None
-    for attempt in range(3):
+    for attempt in range(2):  # Actions IP 基本必被 429，快速转 RSS 兜底
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "bio-radar/0.1"})
             with urllib.request.urlopen(req, timeout=150) as r:
@@ -44,12 +44,12 @@ def _search(queries: list[str], categories: list[str], max_results: int = 50) ->
         except urllib.error.HTTPError as exc:
             last_exc = exc
             if exc.code == 429:  # 限流：共享出口 IP 常见，长退避
-                time.sleep(30 * (attempt + 1))
+                time.sleep(30)
             else:
                 time.sleep(5 * (attempt + 1))
-        except Exception as exc:  # 网络抖动常见，重试两次
+        except Exception as exc:  # 网络抖动常见，重试一次
             last_exc = exc
-            time.sleep(10 * (attempt + 1))
+            time.sleep(10)
     else:
         raise last_exc  # type: ignore[misc]
     out = []
