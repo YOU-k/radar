@@ -3,6 +3,7 @@
 GitHub Pages 直接以 main 分支 /docs 发布，零构建、零外部资源。
 日报 md 是本仓库 digest.py 生成的固定格式，这里解析成结构化条目渲染卡片；
 周报是自由 markdown，直接整篇转换。
+顶部 Tab：周报 / 日报，点击切换，默认周报。
 """
 from __future__ import annotations
 
@@ -18,51 +19,61 @@ from ..config import ROOT
 OUT = ROOT / "docs" / "index.html"
 
 CSS = """
-:root{color-scheme:dark}
+:root{color-scheme:light}
 *{box-sizing:border-box}
-body{margin:0;background:#0d1117;color:#e6edf3;font:16px/1.7 -apple-system,"PingFang SC","Noto Sans SC",sans-serif}
-main{max-width:720px;margin:0 auto;padding:14px 12px 80px}
-a{color:#58a6ff;text-decoration:none}
+body{margin:0;background:#f6f8fa;color:#1f2328;font:16px/1.7 -apple-system,"PingFang SC","Noto Sans SC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:0 12px 80px}
+a{color:#0969da;text-decoration:none}
 a:active{opacity:.7}
-.top{position:sticky;top:0;z-index:9;background:rgba(13,17,23,.92);backdrop-filter:blur(8px);padding:10px 0 8px;border-bottom:1px solid #21262d;margin:0 -12px 14px;padding-left:12px;padding-right:12px}
+.top{position:sticky;top:0;z-index:9;background:rgba(246,248,250,.94);backdrop-filter:blur(8px);padding:12px 0 10px;border-bottom:1px solid #d0d7de;margin:0 -12px 16px;padding-left:12px;padding-right:12px}
 .top h1{font-size:17px;margin:0 0 2px}
-.top .meta{color:#8b949e;font-size:12px;margin-bottom:8px}
-#q{width:100%;padding:9px 12px;border:1px solid #30363d;border-radius:20px;background:#161b22;color:#e6edf3;font-size:14px;outline:none}
-#q:focus{border-color:#58a6ff}
-h2.sec{font-size:15px;margin:22px 0 10px;color:#7ee787;letter-spacing:.05em}
+.top .meta{color:#57606a;font-size:12px;margin-bottom:10px}
+.tabs{display:flex;gap:8px}
+.tab{flex:1;text-align:center;padding:9px 0;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#57606a;font-size:14.5px;font-weight:600;cursor:pointer;user-select:none}
+.tab.on{background:#1f6feb;border-color:#1f6feb;color:#fff}
+#panel-week,#panel-day{display:none}
+#panel-week.on,#panel-day.on{display:block}
+#q{width:100%;padding:9px 14px;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#1f2328;font-size:14px;outline:none;margin-bottom:12px}
+#q:focus{border-color:#0969da}
+.wk{background:#fff;border:1px solid #d0d7de;border-radius:12px;padding:4px 16px 14px;margin:0 0 10px;font-size:14.5px;box-shadow:0 1px 2px rgba(31,35,40,.04)}
+.wk h2{font-size:15px;color:#1a7f37}
+.wk h3{font-size:14.5px;color:#8250df;margin-bottom:4px}
 details.day{margin:0 0 10px}
-details.day>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:10px 4px;border-bottom:1px solid #21262d;font-weight:600;font-size:15px}
+details.day>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:11px 4px;border-bottom:1px solid #d0d7de;font-weight:600;font-size:15px}
 details.day>summary::-webkit-details-marker{display:none}
-details.day>summary .cnt{font-weight:400;color:#8b949e;font-size:12px}
-details.day>summary::after{content:"›";color:#484f58;transition:transform .15s}
+details.day>summary .cnt{font-weight:400;color:#57606a;font-size:12px}
+details.day>summary::after{content:"›";color:#8c959f;transition:transform .15s}
 details.day[open]>summary::after{transform:rotate(90deg)}
-details.day>.daybody{padding-top:6px}
-.dom{color:#d2a8ff;font-size:13px;font-weight:600;margin:14px 2px 6px}
-.card{background:#161b22;border:1px solid #21262d;border-radius:12px;padding:11px 13px;margin:0 0 10px}
+details.day>.daybody{padding-top:8px}
+.dom{color:#8250df;font-size:13px;font-weight:600;margin:14px 2px 6px}
+.card{background:#fff;border:1px solid #d0d7de;border-radius:12px;padding:11px 13px;margin:0 0 10px;box-shadow:0 1px 2px rgba(31,35,40,.04)}
 .card .t{font-size:15px;line-height:1.5}
-.card .t a{color:#e6edf3;font-weight:600}
+.card .t a{color:#1f2328;font-weight:600}
 .badge{display:inline-block;min-width:34px;text-align:center;font-size:12px;font-weight:700;border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:2px}
-.badge.hi{background:#1f6f3f;color:#7ee787}
-.badge.mid{background:#3d3413;color:#e3b341}
-.badge.lo{background:#21262d;color:#8b949e}
-.reason{color:#c9d1d9;font-size:13.5px;margin-top:5px}
-.meta{color:#8b949e;font-size:12px;margin-top:5px}
-details.deep{margin-top:8px;border-top:1px dashed #30363d;padding-top:6px}
-details.deep>summary{cursor:pointer;list-style:none;color:#58a6ff;font-size:13px}
+.badge.hi{background:#dafbe1;color:#1a7f37}
+.badge.mid{background:#fff8c5;color:#9a6700}
+.badge.lo{background:#eaeef2;color:#57606a}
+.reason{color:#4b5563;font-size:13.5px;margin-top:5px}
+.meta{color:#57606a;font-size:12px;margin-top:5px}
+details.deep{margin-top:8px;border-top:1px dashed #d0d7de;padding-top:6px}
+details.deep>summary{cursor:pointer;list-style:none;color:#0969da;font-size:13px}
 details.deep>summary::-webkit-details-marker{display:none}
 details.deep>summary::before{content:"▸ "}
 details.deep[open]>summary::before{content:"▾ "}
-details.deep .deepbody{font-size:13.5px;color:#c9d1d9;padding-top:4px}
-details.deep .deepbody h2,details.deep .deepbody h3{font-size:13.5px;color:#7ee787;margin:10px 0 2px}
+details.deep .deepbody{font-size:13.5px;color:#4b5563;padding-top:4px}
+details.deep .deepbody h2,details.deep .deepbody h3{font-size:13.5px;color:#1a7f37;margin:10px 0 2px}
 details.deep .deepbody p{margin:4px 0}
-.wk{background:#161b22;border:1px solid #21262d;border-radius:12px;padding:4px 14px 12px;margin:0 0 10px;font-size:14.5px}
-.wk h2{font-size:15px;color:#7ee787}
-.wk h3{font-size:14px;color:#d2a8ff}
-.empty{color:#8b949e;font-size:13px;padding:6px 2px}
+.empty{color:#57606a;font-size:13px;padding:6px 2px}
 .hide{display:none!important}
 """
 
 JS = """
+const tabs=[...document.querySelectorAll('.tab')];
+const panels={week:document.getElementById('panel-week'),day:document.getElementById('panel-day')};
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.classList.toggle('on',x===t));
+  Object.entries(panels).forEach(([k,p])=>p.classList.toggle('on',k===t.dataset.tab));
+}));
 const q=document.getElementById('q');
 const days=[...document.querySelectorAll('details.day')];
 q.addEventListener('input',()=>{
@@ -193,6 +204,11 @@ def build_site(today: date | None = None) -> Path:
     digests = sorted((ROOT / "digests").glob("*.md"), reverse=True)
     weeklies = sorted((ROOT / "weekly").glob("*.md"), reverse=True)
 
+    week_html = ("\n".join(_render_weekly(p) for p in weeklies)
+                 if weeklies else '<div class="empty">暂无周报。</div>')
+    day_html = ("\n".join(_render_digest(p, i == 0) for i, p in enumerate(digests))
+                if digests else '<div class="empty">暂无日报。</div>')
+
     parts = [
         "<!doctype html><html lang=zh><head>",
         '<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">',
@@ -201,18 +217,16 @@ def build_site(today: date | None = None) -> Path:
         '<div class="top"><h1>radar · 科研情报</h1>',
         f'<div class="meta">更新至 {today.isoformat()} · '
         f'{len(digests)} 份日报 / {len(weeklies)} 份周报</div>',
+        '<div class="tabs">'
+        '<div class="tab on" data-tab="week">周报</div>'
+        '<div class="tab" data-tab="day">日报</div>'
+        "</div></div>",
+        f'<div id="panel-week" class="on">{week_html}</div>',
+        '<div id="panel-day">',
         '<input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">',
-        "</div>",
+        f"{day_html}</div>",
+        f"<script>{JS}</script></main></body></html>",
     ]
-    if weeklies:
-        parts.append('<h2 class="sec">周报</h2>')
-        parts.extend(_render_weekly(p) for p in weeklies)
-    parts.append('<h2 class="sec">日报</h2>')
-    if digests:
-        parts.extend(_render_digest(p, i == 0) for i, p in enumerate(digests))
-    else:
-        parts.append('<div class="empty">暂无日报。</div>')
-    parts.append(f"<script>{JS}</script></main></body></html>")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(parts), encoding="utf-8")
