@@ -122,8 +122,6 @@ domains:
     rss:
       - https://openai.com/news/rss.xml
       - https://deepmind.google/blog/rss.xml
-      - url: https://blog.langchain.dev/rss/
-        cadence: weekly
       - url: "https://www.alignmentforum.org/feed.xml?view=curated-rss"
         cadence: weekly
     # 注：Anthropic / Meta AI 无公开 RSS（2026-09 验证 404），靠 arxiv + 上方 feed 覆盖。

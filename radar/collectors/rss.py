@@ -5,8 +5,7 @@ import socket
 import time
 from datetime import date, timedelta
 
-import feedparser
-
+from . import feed_parse
 from ..schema import Item
 
 socket.setdefaulttimeout(30)  # 防止个别 feed 挂死整个 job
@@ -31,7 +30,7 @@ def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
             if cadence not in freqs:
                 continue
             cutoff = (date.today() - timedelta(days=freqs[cadence])).isoformat()
-            feed = feedparser.parse(url)
+            feed = feed_parse(url)
             if feed.bozo and not feed.entries:
                 print(f"[rss] {url} returned no entries")
                 continue

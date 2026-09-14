@@ -1,14 +1,17 @@
 from __future__ import annotations
 
+import re
 import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import date, timedelta
 
+from . import feed_parse
 from ..schema import Item
 
 API = "https://export.arxiv.org/api/query"
+RSS = "https://arxiv.org/rss/"
 NS = {"a": "http://www.w3.org/2005/Atom"}
 
 
@@ -63,6 +66,47 @@ def _search(queries: list[str], categories: list[str], max_results: int = 50) ->
     return out
 
 
+_TAG = re.compile(r"<[^>]+>")
+
+
+def _rss_fallback(categories: list[str], queries: list[str]) -> list[dict]:
+    """export.arxiv.org 对数据中心 IP（GitHub Actions）长期 429。
+
+    退路：主站分类 RSS（CDN 前置，一般不墙）拉当日新 listing，
+    再用本领域的 query 词在标题+摘要里过滤，语义接近 query 检索。
+    """
+    kws = [q.lower() for q in queries]
+    rows = []
+    for cat in categories:
+        try:
+            feed = feed_parse(f"{RSS}{cat}")
+        except Exception as exc:
+            print(f"[arxiv-rss] {cat} failed: {exc}")
+            continue
+        if not feed.entries:
+            print(f"[arxiv-rss] {cat} returned no entries")
+            continue
+        for e in feed.entries:
+            title = " ".join((getattr(e, "title", "") or "").split())
+            abstract = " ".join(_TAG.sub(" ", getattr(e, "summary", "") or "").split())
+            haystack = f"{title} {abstract}".lower()
+            if kws and not any(k in haystack for k in kws):
+                continue
+            link = getattr(e, "link", "") or ""
+            if not link:
+                continue
+            rows.append({
+                "id": link,
+                "title": title,
+                "abstract": abstract,
+                "authors": getattr(e, "author", "") or "",
+                "published": "",  # RSS 即当日 listing，发布日期由调用方窗口隐含
+            })
+        time.sleep(3)
+    print(f"[arxiv-rss] fallback collected {len(rows)} rows")
+    return rows
+
+
 def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
     items = []
     for dom in cfg.get("domains", []):
@@ -78,8 +122,8 @@ def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
         try:
             rows = _search(queries, cats)
         except Exception as exc:
-            print(f"[arxiv] domain {dom['name']} failed: {exc}")
-            continue
+            print(f"[arxiv] domain {dom['name']} API failed: {exc}; trying RSS fallback")
+            rows = _rss_fallback(cats, queries)
         for r in rows:
             if not r["id"] or (r["published"] and r["published"] < cutoff):
                 continue
