@@ -4,31 +4,53 @@
 <style>
 :root{color-scheme:dark}
 *{box-sizing:border-box}
-body{margin:0;background:#0d1117;color:#e6edf3;font:16px/1.65 -apple-system,"PingFang SC","Noto Sans SC",sans-serif}
-main{max-width:760px;margin:0 auto;padding:16px 14px 60px}
-h1{font-size:20px;margin:8px 0 12px}
-h2{font-size:17px;margin:22px 0 8px;color:#7ee787}
-h3{font-size:15px}
+body{margin:0;background:#0d1117;color:#e6edf3;font:16px/1.7 -apple-system,"PingFang SC","Noto Sans SC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:14px 12px 80px}
 a{color:#58a6ff;text-decoration:none}
-input#q{width:100%;padding:10px 12px;margin:6px 0 14px;border:1px solid #30363d;border-radius:8px;background:#161b22;color:#e6edf3;font-size:15px;position:sticky;top:0;z-index:9}
-details{border:1px solid #21262d;border-radius:10px;margin:0 0 10px;background:#161b22;overflow:hidden}
-details>summary{padding:10px 12px;cursor:pointer;font-weight:600;list-style:none}
-details>summary::before{content:"▸ ";color:#7ee787}
-details[open]>summary::before{content:"▾ "}
-details>.body{padding:0 12px 10px;border-top:1px solid #21262d}
-details details{margin:8px 0;background:#0d1117}
-details details>summary{font-weight:400;color:#8b949e}
-sub{color:#8b949e}
-code{background:#21262d;border-radius:4px;padding:0 4px;font-size:13px;color:#f0883e}
-ul{padding-left:20px}
-li{margin:6px 0}
-.meta{color:#8b949e;font-size:13px}
+a:active{opacity:.7}
+.top{position:sticky;top:0;z-index:9;background:rgba(13,17,23,.92);backdrop-filter:blur(8px);padding:10px 0 8px;border-bottom:1px solid #21262d;margin:0 -12px 14px;padding-left:12px;padding-right:12px}
+.top h1{font-size:17px;margin:0 0 2px}
+.top .meta{color:#8b949e;font-size:12px;margin-bottom:8px}
+#q{width:100%;padding:9px 12px;border:1px solid #30363d;border-radius:20px;background:#161b22;color:#e6edf3;font-size:14px;outline:none}
+#q:focus{border-color:#58a6ff}
+h2.sec{font-size:15px;margin:22px 0 10px;color:#7ee787;letter-spacing:.05em}
+details.day{margin:0 0 10px}
+details.day>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:10px 4px;border-bottom:1px solid #21262d;font-weight:600;font-size:15px}
+details.day>summary::-webkit-details-marker{display:none}
+details.day>summary .cnt{font-weight:400;color:#8b949e;font-size:12px}
+details.day>summary::after{content:"›";color:#484f58;transition:transform .15s}
+details.day[open]>summary::after{transform:rotate(90deg)}
+details.day>.daybody{padding-top:6px}
+.dom{color:#d2a8ff;font-size:13px;font-weight:600;margin:14px 2px 6px}
+.card{background:#161b22;border:1px solid #21262d;border-radius:12px;padding:11px 13px;margin:0 0 10px}
+.card .t{font-size:15px;line-height:1.5}
+.card .t a{color:#e6edf3;font-weight:600}
+.badge{display:inline-block;min-width:34px;text-align:center;font-size:12px;font-weight:700;border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+.badge.hi{background:#1f6f3f;color:#7ee787}
+.badge.mid{background:#3d3413;color:#e3b341}
+.badge.lo{background:#21262d;color:#8b949e}
+.reason{color:#c9d1d9;font-size:13.5px;margin-top:5px}
+.meta{color:#8b949e;font-size:12px;margin-top:5px}
+details.deep{margin-top:8px;border-top:1px dashed #30363d;padding-top:6px}
+details.deep>summary{cursor:pointer;list-style:none;color:#58a6ff;font-size:13px}
+details.deep>summary::-webkit-details-marker{display:none}
+details.deep>summary::before{content:"▸ "}
+details.deep[open]>summary::before{content:"▾ "}
+details.deep .deepbody{font-size:13.5px;color:#c9d1d9;padding-top:4px}
+details.deep .deepbody h2,details.deep .deepbody h3{font-size:13.5px;color:#7ee787;margin:10px 0 2px}
+details.deep .deepbody p{margin:4px 0}
+.wk{background:#161b22;border:1px solid #21262d;border-radius:12px;padding:4px 14px 12px;margin:0 0 10px;font-size:14.5px}
+.wk h2{font-size:15px;color:#7ee787}
+.wk h3{font-size:14px;color:#d2a8ff}
+.empty{color:#8b949e;font-size:13px;padding:6px 2px}
+.hide{display:none!important}
 </style></head><body><main>
-<h1>radar · 科研情报</h1>
-<div class=meta>更新至 2026-09-14 · 2 份日报 / 1 份周报</div>
-<input id=q placeholder="过滤日报（标题 / 关键词）…">
-<h2>周报</h2>
-<details class="week" open><summary>2026-W37</summary><div class="body"><h2>跨域趋势</h2>
+<div class="top"><h1>radar · 科研情报</h1>
+<div class="meta">更新至 2026-09-14 · 2 份日报 / 1 份周报</div>
+<input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">
+</div>
+<h2 class="sec">周报</h2>
+<div class="wk"><h3>2026-W37</h3><h2>跨域趋势</h2>
 <ol>
 <li>
 <p><strong>Agent 能力评估正在从"能不能做"转向"压力下还稳不稳"</strong>：RLVR-stress-test 这类工作说明社区开始系统性地质疑 RLVR 的鲁棒性，而不只是刷 benchmark。这对 agentic 科研工作流是必要的基础设施——如果 agent 在扰动下不可靠，就没法托付真实的科研 pipeline。</p>
@@ -71,62 +93,49 @@ li{margin:6px 0}
 <h3>people.md</h3>
 <ul>
 <li>（本周无值得长期跟踪的独立研究者条目；上述 repo 均为工具/代码类，暂不单列人物）</li>
-</ul></div></details>
-<h2>日报</h2>
-<details class="day" open><summary>2026-09-14</summary><div class="body"><p>共 4 条（抓取 → 去重 → 关键词粗筛 → LLM 精排）。分数 0-10，10 = 必须马上读。</p>
-<h2>生物医学数据库 / 模型 / 部署（1 条）</h2>
-<ul>
-<li><strong><a href="https://arxiv.org/abs/2609.12761">Same Encoder, Different Winner: A Paired-View Framework for Cell Painting Encoder Evaluation</a></strong> <code>9.0</code> — Cell Painting编码器配对评估基准，直接契合cell painting+ML合作方向。
-  <sub>arxiv ·  · Tim Treis, Nikita Moshkov, Johan Fredin Haslum, Shantanu Singh, Fabian J. Theis</sub></li>
-</ul>
-<details class="deep"><summary>深读</summary><div class="body"><h2>总结</h2>
+</ul></div>
+<h2 class="sec">日报</h2>
+<details class="day" data-first="1" open><summary>2026-09-14 · 周一<span class="cnt">4 条</span></summary><div class="daybody"><div class="dom">生物医学数据库 / 模型 / 部署</div>
+<div class="card" data-score="9.0"><div class="t"><a href="https://arxiv.org/abs/2609.12761">Same Encoder, Different Winner: A Paired-View Framework for Cell Painting Encoder Evaluation</a><span class="badge hi">9.0</span></div><div class="reason">Cell Painting编码器配对评估基准，直接契合cell painting+ML合作方向。</div><div class="meta">arxiv ·  · Tim Treis, Nikita Moshkov, Johan Fredin Haslum, Shantanu Singh, Fabian J. Theis</div><details class="deep"><summary>深读笔记</summary><div class="deepbody"><h2>总结</h2>
 <p>该文提出 CP-BG-Bench，一个"配对视图"评估框架：对同一细胞中心固定不变，生成原始裁剪（C）、分割（S）、密度增强（CD/SD）四种视图，在 JUMP-CP、RxRx1、RxRx3-core 三个 Cell Painting 数据集和三种编码器上，用四套社区标准协议（replicate mAP、scIB、CellProfiler 特征预测、跨批次扰动召回）评估，发现同一编码器在不同协议下排名系统性不一致。作者将分歧分解为三条正交轴：细胞 vs 背景、形态 vs 上下文、研究内 vs 跨批次，并指出单指标排名 Cell Painting 编码器高度依赖所选协议。</p>
-<p>## 核心方法
-  核心是配对视图的受控干预设计：用 Cellpose-SAM 分割后，对每个单细胞裁剪保留同一细胞中心，分别生成 C（含背景）、S（掩膜外置零）、CD/SD（四角叠加编码局部细胞密度的 patch），从而把背景与密度从细胞形态中解耦。三种编码器（DINOv3 ViT-B/16、OpenPhenom、SubCell）在每种视图下用 LoRA + 多正样本对比目标（化合物用 ECFP4、基因扰动用 ESM2 条件）微调，共 36 个 checkpoint，再在四套协议下评估。</p>
-<p>## 数据与代码可用性
-  作者承诺随最终版公开配对视图 JUMP-CP 数据集（CC0 v1.0，含 Croissant 元数据与 Responsible AI 字段）、RxRx1（CC BY-NC）与 RxRx3-core 的确定性重建管线（不重分发源图）、36 个训练 checkpoint、聚合的 well 级 embedding 以及完整评估套件。可直接拿来用的线索：JUMP-CP 配对视图数据 + 重建脚本 + checkpoint + 评估套件，适合作为方法学 baseline 或迁移到自有数据的评估模板；RxRx1/RxRx3-core 需自行跑重建管线。</p>
-<p>## 局限
-  评估仅覆盖三种视觉编码器与三个 Cell Painting 数据集，结论对更广的 foundation model 与模态（如蛋白组、甲基化、空间转录组）的外推性未知；密度 patch 是显式人工编码而非学习得到，可能低估真实密度信号；CPM 基线为无监督特征、与有监督微调编码器对比，差距部分反映监督而非架构优势；跨批次召回在 JUMP-CP 上绝对数值很低，协议本身的判别力有限。</p>
-<p>## 对多模态衰老模型合作的启发
-  这篇正好命中画像中"cell painting + ML"与"多模态整合方法学"的高分信号，且直接服务于多模态健康衰老模型的 demo 阶段：可先用其配对视图框架在公共 Cell Painting 数据上验证"背景/密度信号是否可跨批次迁移"，作为类器官成像模态进入合作项目前的评估预演。具体可执行：把 CP-BG-Bench 的四协议评估套件接入你现有的单细胞 foundation model 评测流程，作为"跨队列校正/缺失模态"方法学的对照基准；同时借鉴其"固定中心、切换上下文"的受控干预思路，设计类器官 + 组学数据中"模态缺失/模态替换"的配对评估，避免单一指标（如仅看整合后聚类）误判模型。</p></div></details>
-<h2>Agent 进展（3 条）</h2>
-<ul>
-<li><strong><a href="https://arxiv.org/abs/2609.11957">Look Before You Leap: Pre-Action Verification for LLM Agents</a></strong> <code>7.0</code> — agent动作前验证，可迁移到科研工作流，思路实用且有代码潜力。
-  <sub>arxiv ·  · Asaad Althoubi</sub></li>
-<li><strong><a href="https://arxiv.org/abs/2609.03753">SimSkill: A Self-Evolving LLM Agent for Skill and Knowledge Accumulation in Traffic Simulation</a></strong> <code>6.0</code> — 自进化agent技能积累，思路可迁移到科研agent，但交通领域较远。
-  <sub>arxiv ·  · Qi Liu, Qinzheng Wang, Can Li, Yiming Bie, Wanjing Ma</sub></li>
-<li><strong><a href="https://arxiv.org/abs/2609.12746">What Drives Recovery in Agentic Text-to-Cypher? LAST-CQ: An LLM Agent Self-Refinement Framework</a></strong> <code>5.0</code> — Text-to-Cypher自反思框架，agentic方法可借鉴但领域偏数据库。
-  <sub>arxiv ·  · Ioannis Prokopiou, Athanasios Aidinis, Panagiotis-Christos Kyrmpatsos, Pantelis </sub></li>
-</ul></div></details>
-<details class="day"><summary>2026-09-13</summary><div class="body"><p>共 5 条（抓取 → 去重 → 关键词粗筛 → LLM 精排）。分数 0-10，10 = 必须马上读。</p>
-<h2>衰老与多模态健康模型（1 条）</h2>
-<ul>
-<li><strong><a href="https://github.com/awictor/molecularclock">awictor/molecularclock</a></strong> <code>2.0</code> — 分子钟严格定年工具，与衰老多模态建模关联弱，方法老旧。
-  <sub>github · 2026-09-13 · awictor</sub></li>
-</ul>
-<h2>生物医学数据库 / 模型 / 部署（2 条）</h2>
-<ul>
-<li><strong><a href="https://github.com/wakisaka805-cpu/HPV_OPC_spatial_transcriptomics">wakisaka805-cpu/HPV_OPC_spatial_transcriptomics</a></strong> <code>6.0</code> — HPV口咽癌空间转录组分析代码，空转方法可迁移，但非衰老方向。
-  <sub>github · 2026-09-13 · wakisaka805-cpu</sub></li>
-<li><strong><a href="https://github.com/vanch007/mlx-AuK">vanch007/mlx-AuK</a></strong> <code>3.0</code> — 语音基础模型MLX移植，与衰老、单细胞、多模态方向无关。
-  <sub>github · 2026-09-12 · vanch007</sub></li>
-</ul>
-<h2>Agent 进展（2 条）</h2>
-<ul>
-<li><strong><a href="https://github.com/aabhimittal/RLVR-stress-test">aabhimittal/RLVR-stress-test</a></strong> <code>7.0</code> — RLVR压力测试，与兴趣中RLVR/agentic方向直接相关，值得一看。
-  <sub>github · 2026-09-13 · aabhimittal</sub></li>
-<li><strong><a href="https://github.com/ivyfan-toowell/IvyClaw">ivyfan-toowell/IvyClaw</a></strong> <code>4.0</code> — 多智能体软件工程系统，agentic工作流相关但偏工程，非科研核心。
-  <sub>github · 2026-09-13 · ivyfan-toowell</sub></li>
-</ul></div></details>
+<h2>核心方法</h2>
+<p>核心是配对视图的受控干预设计：用 Cellpose-SAM 分割后，对每个单细胞裁剪保留同一细胞中心，分别生成 C（含背景）、S（掩膜外置零）、CD/SD（四角叠加编码局部细胞密度的 patch），从而把背景与密度从细胞形态中解耦。三种编码器（DINOv3 ViT-B/16、OpenPhenom、SubCell）在每种视图下用 LoRA + 多正样本对比目标（化合物用 ECFP4、基因扰动用 ESM2 条件）微调，共 36 个 checkpoint，再在四套协议下评估。</p>
+<h2>数据与代码可用性</h2>
+<p>作者承诺随最终版公开配对视图 JUMP-CP 数据集（CC0 v1.0，含 Croissant 元数据与 Responsible AI 字段）、RxRx1（CC BY-NC）与 RxRx3-core 的确定性重建管线（不重分发源图）、36 个训练 checkpoint、聚合的 well 级 embedding 以及完整评估套件。可直接拿来用的线索：JUMP-CP 配对视图数据 + 重建脚本 + checkpoint + 评估套件，适合作为方法学 baseline 或迁移到自有数据的评估模板；RxRx1/RxRx3-core 需自行跑重建管线。</p>
+<h2>局限</h2>
+<p>评估仅覆盖三种视觉编码器与三个 Cell Painting 数据集，结论对更广的 foundation model 与模态（如蛋白组、甲基化、空间转录组）的外推性未知；密度 patch 是显式人工编码而非学习得到，可能低估真实密度信号；CPM 基线为无监督特征、与有监督微调编码器对比，差距部分反映监督而非架构优势；跨批次召回在 JUMP-CP 上绝对数值很低，协议本身的判别力有限。</p>
+<h2>对多模态衰老模型合作的启发</h2>
+<p>这篇正好命中画像中"cell painting + ML"与"多模态整合方法学"的高分信号，且直接服务于多模态健康衰老模型的 demo 阶段：可先用其配对视图框架在公共 Cell Painting 数据上验证"背景/密度信号是否可跨批次迁移"，作为类器官成像模态进入合作项目前的评估预演。具体可执行：把 CP-BG-Bench 的四协议评估套件接入你现有的单细胞 foundation model 评测流程，作为"跨队列校正/缺失模态"方法学的对照基准；同时借鉴其"固定中心、切换上下文"的受控干预思路，设计类器官 + 组学数据中"模态缺失/模态替换"的配对评估，避免单一指标（如仅看整合后聚类）误判模型。</p></div></details></div>
+<div class="dom">Agent 进展</div>
+<div class="card" data-score="7.0"><div class="t"><a href="https://arxiv.org/abs/2609.11957">Look Before You Leap: Pre-Action Verification for LLM Agents</a><span class="badge mid">7.0</span></div><div class="reason">agent动作前验证，可迁移到科研工作流，思路实用且有代码潜力。</div><div class="meta">arxiv ·  · Asaad Althoubi</div></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2609.03753">SimSkill: A Self-Evolving LLM Agent for Skill and Knowledge Accumulation in Traffic Simulation</a><span class="badge mid">6.0</span></div><div class="reason">自进化agent技能积累，思路可迁移到科研agent，但交通领域较远。</div><div class="meta">arxiv ·  · Qi Liu, Qinzheng Wang, Can Li, Yiming Bie, Wanjing Ma</div></div>
+<div class="card" data-score="5.0"><div class="t"><a href="https://arxiv.org/abs/2609.12746">What Drives Recovery in Agentic Text-to-Cypher? LAST-CQ: An LLM Agent Self-Refinement Framework</a><span class="badge mid">5.0</span></div><div class="reason">Text-to-Cypher自反思框架，agentic方法可借鉴但领域偏数据库。</div><div class="meta">arxiv ·  · Ioannis Prokopiou, Athanasios Aidinis, Panagiotis-Christos Kyrmpatsos, Pantelis </div></div></div></details>
+<details class="day" data-first="0"><summary>2026-09-13 · 周日<span class="cnt">5 条</span></summary><div class="daybody"><div class="dom">衰老与多模态健康模型</div>
+<div class="card" data-score="2.0"><div class="t"><a href="https://github.com/awictor/molecularclock">awictor/molecularclock</a><span class="badge lo">2.0</span></div><div class="reason">分子钟严格定年工具，与衰老多模态建模关联弱，方法老旧。</div><div class="meta">github · 2026-09-13 · awictor</div></div>
+<div class="dom">生物医学数据库 / 模型 / 部署</div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://github.com/wakisaka805-cpu/HPV_OPC_spatial_transcriptomics">wakisaka805-cpu/HPV_OPC_spatial_transcriptomics</a><span class="badge mid">6.0</span></div><div class="reason">HPV口咽癌空间转录组分析代码，空转方法可迁移，但非衰老方向。</div><div class="meta">github · 2026-09-13 · wakisaka805-cpu</div></div>
+<div class="card" data-score="3.0"><div class="t"><a href="https://github.com/vanch007/mlx-AuK">vanch007/mlx-AuK</a><span class="badge lo">3.0</span></div><div class="reason">语音基础模型MLX移植，与衰老、单细胞、多模态方向无关。</div><div class="meta">github · 2026-09-12 · vanch007</div></div>
+<div class="dom">Agent 进展</div>
+<div class="card" data-score="7.0"><div class="t"><a href="https://github.com/aabhimittal/RLVR-stress-test">aabhimittal/RLVR-stress-test</a><span class="badge mid">7.0</span></div><div class="reason">RLVR压力测试，与兴趣中RLVR/agentic方向直接相关，值得一看。</div><div class="meta">github · 2026-09-13 · aabhimittal</div></div>
+<div class="card" data-score="4.0"><div class="t"><a href="https://github.com/ivyfan-toowell/IvyClaw">ivyfan-toowell/IvyClaw</a><span class="badge mid">4.0</span></div><div class="reason">多智能体软件工程系统，agentic工作流相关但偏工程，非科研核心。</div><div class="meta">github · 2026-09-13 · ivyfan-toowell</div></div></div></details>
 <script>
-const q=document.getElementById('q'),days=[...document.querySelectorAll('details.day')];
+const q=document.getElementById('q');
+const days=[...document.querySelectorAll('details.day')];
 q.addEventListener('input',()=>{
   const s=q.value.trim().toLowerCase();
   days.forEach(d=>{
-    if(!s){d.style.display='';d.open=false;return}
-    const hit=d.textContent.toLowerCase().includes(s);
-    d.style.display=hit?'':'none';d.open=!!s&&hit;
+    let any=false;
+    d.querySelectorAll('.card').forEach(c=>{
+      const hit=!s||c.textContent.toLowerCase().includes(s);
+      c.classList.toggle('hide',!hit); any=any||hit;
+    });
+    d.querySelectorAll('.dom').forEach(g=>{
+      let n=g.nextElementSibling, has=false;
+      while(n&&n.classList.contains('card')){if(!n.classList.contains('hide'))has=true;n=n.nextElementSibling}
+      g.classList.toggle('hide',!has);
+    });
+    d.classList.toggle('hide',!any);
+    if(s)d.open=any; else d.open=d.dataset.first==='1';
   });
-  if(!s&&days[0])days[0].open=true;
 });
 </script></main></body></html>
