@@ -12,8 +12,15 @@ API = "https://export.arxiv.org/api/query"
 NS = {"a": "http://www.w3.org/2005/Atom"}
 
 
-def _search(query: str, categories: list[str], max_results: int = 25) -> list[dict]:
-    q = f'all:"{query}"'
+def _search(queries: list[str], categories: list[str], max_results: int = 50) -> list[dict]:
+    """一个领域的所有 query 合并成一次 OR 请求。
+
+    arXiv API 响应慢（30-120s 常见），逐 query 请求既慢又容易触发限流；
+    合并后每领域一次请求，重复条目交给下游 dedup。
+    """
+    q = " OR ".join(f'all:"{query}"' for query in queries)
+    if len(queries) > 1:
+        q = f"({q})"
     if categories:
         q += " AND (" + " OR ".join(f"cat:{c}" for c in categories) + ")"
     params = urllib.parse.urlencode({
@@ -28,7 +35,7 @@ def _search(query: str, categories: list[str], max_results: int = 25) -> list[di
     for attempt in range(3):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "bio-radar/0.1"})
-            with urllib.request.urlopen(req, timeout=60) as r:
+            with urllib.request.urlopen(req, timeout=150) as r:
                 root = ET.fromstring(r.read())
             break
         except urllib.error.HTTPError as exc:
@@ -39,7 +46,7 @@ def _search(query: str, categories: list[str], max_results: int = 25) -> list[di
                 time.sleep(5 * (attempt + 1))
         except Exception as exc:  # 网络抖动常见，重试两次
             last_exc = exc
-            time.sleep(5 * (attempt + 1))
+            time.sleep(10 * (attempt + 1))
     else:
         raise last_exc  # type: ignore[misc]
     out = []
@@ -66,19 +73,20 @@ def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
         cutoff = (date.today() - timedelta(days=freqs[cadence])).isoformat()
         queries = spec.get("queries") or []
         cats = spec.get("categories") or []
-        for q in queries:
-            try:
-                rows = _search(q, cats)
-            except Exception as exc:
-                print(f"[arxiv] query {q!r} failed: {exc}")
+        if not queries:
+            continue
+        try:
+            rows = _search(queries, cats)
+        except Exception as exc:
+            print(f"[arxiv] domain {dom['name']} failed: {exc}")
+            continue
+        for r in rows:
+            if not r["id"] or (r["published"] and r["published"] < cutoff):
                 continue
-            for r in rows:
-                if not r["id"] or (r["published"] and r["published"] < cutoff):
-                    continue
-                items.append(Item(
-                    id=r["id"], source="arxiv", domain=dom["name"],
-                    title=r["title"], url=r["id"], authors=r["authors"],
-                    abstract=r["abstract"], published=r["published"],
-                ))
-            time.sleep(3)  # arxiv 要求请求间隔
+            items.append(Item(
+                id=r["id"], source="arxiv", domain=dom["name"],
+                title=r["title"], url=r["id"], authors=r["authors"],
+                abstract=r["abstract"], published=r["published"],
+            ))
+        time.sleep(3)  # arxiv 要求请求间隔
     return items
