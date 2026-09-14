@@ -1,0 +1,146 @@
+<!doctype html><html lang=zh><head>
+<meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>radar · 科研情报</title>
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:#0d1117;color:#e6edf3;font:16px/1.65 -apple-system,"PingFang SC","Noto Sans SC",sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px 14px 60px}
+h1{font-size:20px;margin:8px 0 12px}
+h2{font-size:17px;margin:22px 0 8px;color:#7ee787}
+h3{font-size:15px}
+a{color:#58a6ff;text-decoration:none}
+input#q{width:100%;padding:10px 12px;margin:6px 0 14px;border:1px solid #30363d;border-radius:8px;background:#161b22;color:#e6edf3;font-size:15px;position:sticky;top:0;z-index:9}
+details{border:1px solid #21262d;border-radius:10px;margin:0 0 10px;background:#161b22;overflow:hidden}
+details>summary{padding:10px 12px;cursor:pointer;font-weight:600;list-style:none}
+details>summary::before{content:"▸ ";color:#7ee787}
+details[open]>summary::before{content:"▾ "}
+details>.body{padding:0 12px 10px;border-top:1px solid #21262d}
+details details{margin:8px 0;background:#0d1117}
+details details>summary{font-weight:400;color:#8b949e}
+sub{color:#8b949e}
+code{background:#21262d;border-radius:4px;padding:0 4px;font-size:13px;color:#f0883e}
+ul{padding-left:20px}
+li{margin:6px 0}
+.meta{color:#8b949e;font-size:13px}
+</style></head><body><main>
+<h1>radar · 科研情报</h1>
+<div class=meta>更新至 2026-09-14 · 2 份日报 / 1 份周报</div>
+<input id=q placeholder="过滤日报（标题 / 关键词）…">
+<h2>周报</h2>
+<details class="week" open><summary>2026-W37</summary><div class="body"><h2>跨域趋势</h2>
+<ol>
+<li>
+<p><strong>Agent 能力评估正在从"能不能做"转向"压力下还稳不稳"</strong>：RLVR-stress-test 这类工作说明社区开始系统性地质疑 RLVR 的鲁棒性，而不只是刷 benchmark。这对 agentic 科研工作流是必要的基础设施——如果 agent 在扰动下不可靠，就没法托付真实的科研 pipeline。</p>
+</li>
+<li>
+<p><strong>空间转录组分析代码正在快速"工具化/模板化"</strong>：HPV_OPC_spatial_transcriptomics 这类 repo 表明空转分析流程正从"每篇论文自己写"变成"可复用的分析模板"。方法迁移成本在下降，跨癌种/跨组织的空转方法复用窗口正在打开。</p>
+</li>
+<li>
+<p><strong>基础模型的"平台移植"成为独立工作类型</strong>：mlx-AuK 把语音基础模型搬到 MLX，本身与你的方向无关，但反映出一个信号——foundation model 的部署/移植/量化正在成为一类独立工程产出。对单细胞 foundation model 而言，类似"能在本地/边缘跑"的移植工作未来会变多，值得留意。</p>
+</li>
+<li>
+<p><strong>GitHub 作为科研情报源的信噪比在下降</strong>：本周 5 条里 3 条是低分或无关，说明纯 GitHub 抓取 + 关键词粗筛的召回质量有限。趋势判断：需要引入更强的来源分层（如 papers with code、biorxiv、HF datasets/models）来平衡。</p>
+</li>
+<li>
+<p><strong>"分子钟"类传统方法仍在被重新包装</strong>：molecularclock 这类老方法以新 repo 形式出现，提示关键词"clock"会持续带来噪声。aging clock 与分子钟定年是两个完全不同的领域，粗筛阶段需要更精确的消歧。</p>
+</li>
+</ol>
+<h2>对多模态衰老模型合作的启发</h2>
+<ol>
+<li>
+<p><strong>数据层面——把空转分析模板纳入 demo 数据管线</strong>：HPV_OPC_spatial_transcriptomics 的分析代码可作为空转模态的"参考实现"，用来验证你多模态 demo 中空间转录组分支的预处理/对齐流程是否合理。具体动作：clone 下来，用公共衰老空转数据（如小鼠/人组织 aging atlas）跑一遍，检查其 QC、归一化、空间邻域构建步骤能否直接复用。</p>
+</li>
+<li>
+<p><strong>方法层面——把 RLVR 鲁棒性思路迁移到多模态整合的"缺失模态"场景</strong>：RLVR-stress-test 的核心是"在扰动下测试可靠性"。你的合作项目明确要处理缺失模态和跨队列校正，可以把"stress test"作为评估范式：人为 mask 掉某个模态（蛋白组/甲基化），看整合模型是否仍稳定。这是一个可直接写进方法学章节的评估设计。</p>
+</li>
+<li>
+<p><strong>实验设计层面——为"持续学习/增量学习"预留接口</strong>：合作方后续会陆续进新模态和新队列，本周信号（agent 鲁棒性、模型移植）都指向"系统要能持续演进"。建议在 demo 阶段就把模型设计成支持增量接入的架构（如 modality adapter + 冻结主干），而不是等新数据来了再重构。具体动作：先定义好模态注册接口和版本化数据 schema。</p>
+</li>
+</ol>
+<h2>Registry 增补建议</h2>
+<h3>databases.md</h3>
+<ul>
+<li><code>HPV_OPC_spatial_transcriptomics</code> — HPV 口咽癌空转分析代码库，可作为空转分析模板参考（github: wakisaka805-cpu）</li>
+</ul>
+<h3>models.md</h3>
+<ul>
+<li><code>RLVR-stress-test</code> — RLVR 鲁棒性压力测试框架，可用于多模态整合的缺失模态/扰动评估范式迁移（github: aabhimittal）</li>
+<li><code>mlx-AuK</code> — 语音基础模型 MLX 移植，作为"foundation model 平台移植"类工作的样例记录（github: vanch007）</li>
+</ul>
+<h3>people.md</h3>
+<ul>
+<li>（本周无值得长期跟踪的独立研究者条目；上述 repo 均为工具/代码类，暂不单列人物）</li>
+</ul></div></details>
+<h2>日报</h2>
+<details class="day" open><summary>2026-09-14</summary><div class="body"><p>共 5 条（抓取 → 去重 → 关键词粗筛 → LLM 精排）。分数 0-10，10 = 必须马上读。</p>
+<h2>衰老与多模态健康模型（4 条）</h2>
+<ul>
+<li><strong><a href="https://doi.org/10.64898/2026.09.06.749715">A single-cell view of human tissue aging reveals architectural decline beyond cellular composition</a></strong> <code>9.0</code> — GTEx组织切片大规模单细胞空间图谱，多模态衰老数据资源，可直接用于建模。
+  <sub>europepmc · 2026-09-13 · Abila E, Zheng Y, Bago-Horvath Z, Rendeiro AF.</sub></li>
+</ul>
+<details class="deep"><summary>深读</summary><div class="body"><p><strong>总结</strong>
+  该研究把 GTEx 组织病理切片当作“人群尺度、覆盖成年全生命周期的空间生物学资源”，在近千名个体的 16 个器官中检测了超过 35 亿个单细胞，提出组织衰老存在两条部分独立的轴：细胞密度/组成的普遍下降，以及空间结构的重塑。核心结论是结构衰退（architecture remodeling）在很大程度上与细胞组成解耦（R²=0.07），即组织“变空”之外还“变乱”。</p>
+<p><strong>核心方法</strong>
+  方法上以病理图像为基础做大规模单细胞检测与空间图分析：用 vision-language 表型分型把上皮细胞细分为九种亚型并刻画其差异化衰老轨迹，再在空间细胞图上做社区检测以识别功能组织单元（functional tissue units），并量化其随年龄从致密特化单元向稀疏、基质/免疫富集结构的转变。整体属于“图像 + 空间图 + 自监督/多模态表型”的路径，而非分子空间组学。</p>
+<p><strong>数据与代码可用性</strong>
+  摘要未提及代码或模型发布，数据侧依托 GTEx 组织病理档案这一可申请获取的资源，但“3.5 亿细胞级”的衍生数据与 pipeline 是否公开需查原文/补充材料确认。就目前信息看，不能直接拿来即用；可执行的线索是先去论文的数据与代码可用性声明、GTEx 申请入口及作者实验室页面找衍生表和模型权重。</p>
+<p><strong>局限</strong>
+  仅见摘要，无法判断细胞检测与 vision-language 分型的准确性、跨器官批次校正是否充分，以及“结构重塑”指标对切片质量、染色差异和采样位置的稳健性。此外，病理切片是二维截面，空间图推断的“功能单元”与真实三维组织架构之间存在映射误差，且与分子模态（转录组、蛋白组、甲基化）的对应关系尚未建立。</p>
+<p><strong>对多模态衰老模型合作的启发</strong>
+  第一，可把该研究的“结构轴”作为合作项目里独立于组成轴的表征目标，先在公共 GTEx 病理 demo 上复现其细胞密度与空间图社区指标，再与 PBMC/单细胞、蛋白组、甲基化模态做跨队列对齐，检验结构特征是否提升 aging clock。第二，方法上可借用其 vision-language 表型分型与空间图社区检测，作为缺失模态时的代理表征，并设计增量学习流程：新类器官/空转数据进来后，先独立训练结构编码器，再与现有统一模型做对齐与持续校正。第三，若原文公开衍生特征或模型，可直接作为多模态融合中的“组织架构模态”输入，用于检验结构衰退是否在类器官扰动响应中可复现。</p></div></details>
+<ul>
+<li><strong><a href="https://doi.org/10.64898/2026.09.09.750459">A transitional senescence program drives inflammatory monocyte state expansion in aging humans</a></strong> <code>7.0</code> — 人衰老单核细胞状态转变的单细胞整合分析，PBMC相关，可借鉴调控网络方法。
+  <sub>europepmc · 2026-09-13 · Vasilopoulos T, Turano PS, Garza-Martinez L, Akbulut E, Konda M, Herbig U, Fitzg</sub></li>
+<li><strong><a href="https://doi.org/10.64898/2026.09.11.750342">Lifelong Invertebrate Chordate Central Nervous System Regeneration is Driven by a Migrating Pool of Conserved Neural Stem Cells Program</a></strong> <code>5.0</code> — 被囊动物CNS再生的单细胞空间研究，方法可迁移但物种与方向较远。
+  <sub>europepmc · 2026-09-13 · Anselmi C, Levy T, Yu JC, Ishizuka KJ, Palmeri KJ, Liu DD, Sinha R, Voskoboynik </sub></li>
+<li><strong><a href="https://doi.org/10.64898/2026.09.09.26362574">Integrative Genetic and Single-Cell Analysis Reveals Macrophages as Key Mediators Linking Aging and Osteoporosis</a></strong> <code>4.0</code> — 衰老与骨质疏松的整合分析，方法常规，无新数据集或模型，可作背景参考。
+  <sub>europepmc · 2026-09-13 · Li X, Yang M, Gai S, Wei P, Gu Z, Han M, Wu Y, Yu J, Chen W, Liao Z, Gu J, Zhong</sub></li>
+</ul>
+<h2>追踪更新（种子论文引用 / 关注作者）（1 条）</h2>
+<ul>
+<li><strong><a href="https://www.semanticscholar.org/paper/8b43c527a9ce49c29072d912e021a82b249b6019">A sandbox for prediction and integration of DNA, RNA, and protein data in single cells</a></strong> <code>9.0</code> — 单细胞DNA/RNA/蛋白多模态整合预测基准，直接契合多模态建模需求。
+  <sub>semantic_scholar ·  · M. Luecken, Daniel B. Burkhardt, Robrecht Cannoodt, Christopher Lance, A. Agrawa</sub></li>
+</ul>
+<details class="deep"><summary>深读</summary><div class="body"><h2>总结</h2>
+<p>该文献提出一个用于单细胞 DNA、RNA 和蛋白质数据预测与整合的“sandbox”基准框架，属于多模态单细胞整合方法学工作。它直接对应你兴趣画像中“多模态整合方法”和“公共数据做 demo”的高分信号。</p>
+<p>## 核心方法
+  通过构建配对/非配对的多组学单细胞数据沙盒，系统评估不同模态间（DNA→RNA、RNA→蛋白等）的预测与整合算法。核心是提供标准化任务划分、评估指标和基线方法，而非提出单一新模型。</p>
+<p>## 数据与代码可用性
+  从摘要看，该工作强调“sandbox”和基准测试，通常这类研究会在 NeurIPS 等会议配套公开数据与代码（如 Kaggle 竞赛或 GitHub 仓库）。线索：可查其是否属于 NeurIPS 2021 多模态单细胞整合挑战赛（Open Problems）的配套论文，若是则数据和基线代码可直接获取。</p>
+<p>## 局限
+  仅基于摘要，无法判断其是否覆盖衰老相关队列或类器官扰动数据；且作为基准框架，它不直接提供可迁移到多模态衰老建模的预训练模型。若只做方法评估而不含新算法，对“直接部署或微调”的贡献有限。</p>
+<p>## 对多模态衰老模型合作的启发
+  可将其 sandbox 任务设计（如模态缺失下的预测、跨队列校正）直接借用到你合作项目的 demo 阶段：用公共 PBMC 多组学数据先跑通“独立训练再整合”与“统一模型矫正”两条路线。同时，可关注其评估指标是否能迁移到类器官+蛋白组/甲基化的衰老时钟任务中，作为合作方新数据进来前的预实验框架。</p></div></details></div></details>
+<details class="day"><summary>2026-09-13</summary><div class="body"><p>共 5 条（抓取 → 去重 → 关键词粗筛 → LLM 精排）。分数 0-10，10 = 必须马上读。</p>
+<h2>衰老与多模态健康模型（1 条）</h2>
+<ul>
+<li><strong><a href="https://github.com/awictor/molecularclock">awictor/molecularclock</a></strong> <code>2.0</code> — 分子钟严格定年工具，与衰老多模态建模关联弱，方法老旧。
+  <sub>github · 2026-09-13 · awictor</sub></li>
+</ul>
+<h2>生物医学数据库 / 模型 / 部署（2 条）</h2>
+<ul>
+<li><strong><a href="https://github.com/wakisaka805-cpu/HPV_OPC_spatial_transcriptomics">wakisaka805-cpu/HPV_OPC_spatial_transcriptomics</a></strong> <code>6.0</code> — HPV口咽癌空间转录组分析代码，空转方法可迁移，但非衰老方向。
+  <sub>github · 2026-09-13 · wakisaka805-cpu</sub></li>
+<li><strong><a href="https://github.com/vanch007/mlx-AuK">vanch007/mlx-AuK</a></strong> <code>3.0</code> — 语音基础模型MLX移植，与衰老、单细胞、多模态方向无关。
+  <sub>github · 2026-09-12 · vanch007</sub></li>
+</ul>
+<h2>Agent 进展（2 条）</h2>
+<ul>
+<li><strong><a href="https://github.com/aabhimittal/RLVR-stress-test">aabhimittal/RLVR-stress-test</a></strong> <code>7.0</code> — RLVR压力测试，与兴趣中RLVR/agentic方向直接相关，值得一看。
+  <sub>github · 2026-09-13 · aabhimittal</sub></li>
+<li><strong><a href="https://github.com/ivyfan-toowell/IvyClaw">ivyfan-toowell/IvyClaw</a></strong> <code>4.0</code> — 多智能体软件工程系统，agentic工作流相关但偏工程，非科研核心。
+  <sub>github · 2026-09-13 · ivyfan-toowell</sub></li>
+</ul></div></details>
+<script>
+const q=document.getElementById('q'),days=[...document.querySelectorAll('details.day')];
+q.addEventListener('input',()=>{
+  const s=q.value.trim().toLowerCase();
+  days.forEach(d=>{
+    if(!s){d.style.display='';d.open=false;return}
+    const hit=d.textContent.toLowerCase().includes(s);
+    d.style.display=hit?'':'none';d.open=!!s&&hit;
+  });
+  if(!s&&days[0])days[0].open=true;
+});
+</script></main></body></html>
