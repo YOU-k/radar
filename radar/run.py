@@ -9,6 +9,7 @@ from .config import ROOT, load_local_env, load_profile, load_sources
 from .pipeline.dedup import filter_new
 from .pipeline.deepread import deepread_top
 from .pipeline.digest import write_digest
+from .pipeline.resources import append_resources
 from .pipeline.score import score_items
 from .pipeline.site import build_site
 
@@ -45,6 +46,8 @@ def cmd_daily(days: int, use_llm: bool) -> None:
     if use_llm:
         n = deepread_top(scored)
         print(f"[deepread] {n} items")
+    n = append_resources(scored, date.today())
+    print(f"[resources] {n} new")
     out = write_digest(scored, date.today())
     print(f"[digest] wrote {out}")
 
@@ -118,13 +121,13 @@ def _weekly_llm(texts: list[str]) -> str | None:
         return None
     joined = "\n\n---\n\n".join(t[:6000] for t in texts)[:24000]
     prompt = (
-        "下面是某研究者的兴趣画像和本周每日科研情报 digest。\n\n"
+        "下面是某研究者的兴趣画像和本周每日科研情报 digest（已按领域分节）。\n\n"
         f"【兴趣画像】\n{load_profile()}\n\n【本周 digest】\n{joined}\n\n"
-        "请输出中文 markdown，含三节：\n"
-        "## 跨域趋势\n本周值得注意的 3-5 个跨领域信号（不是条目罗列，是趋势判断）。\n"
-        "## 对多模态衰老模型合作的启发\n结合画像里的合作项目，给 3 个具体、可执行的启发（数据/方法/实验设计层面）。\n"
-        "## Registry 增补建议\n本周出现的数据库/模型/人物中，建议加入 registry 长期知识库的条目，"
-        "按 databases.md / models.md / people.md 分组，每条一行。"
+        "请输出中文 markdown，按领域分开总结，不要跨领域混合：\n"
+        "对本周实际有内容的每个领域，写一节 '## <领域名>'，2-4 句概括该领域本周的实质进展"
+        "（哪些新工作值得注意、意味着什么），不提具体低分条目。没有实质内容的领域不写。\n"
+        "最后加一节 '## Registry 增补建议'：本周出现的数据库/模型/人物中，"
+        "建议加入 registry 长期知识库的条目，按 databases.md / models.md / people.md 分组，每条一行。"
     )
     try:
         return llm.chat(prompt, model=llm.SYNTH_MODEL, temperature=0.3, timeout=300)

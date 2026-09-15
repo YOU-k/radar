@@ -58,17 +58,20 @@ def llm_rerank(items: list[Item]) -> bool:
         chunk = items[i:i + BATCH]
         payload = [
             {"id": j, "title": it.title, "abstract": (it.abstract or "")[:600],
-             "source": it.source, "domain": it.domain}
+             "source": it.source, "domain": it.domain,
+             "journal": it.extra.get("journal", "")}
             for j, it in enumerate(chunk)
         ]
         prompt = (
             "下面是某研究者的兴趣画像和一批新条目。"
-            "请对每条打分 0-10（10=必须马上读，0=完全无关）并用一句中文说明理由（不超过40字）。"
-            "从严打分，宁低勿高：无公开数据/代码的纯关联研究、小作坊项目、综述灌水一律 ≤4 分；"
-            "7 分以上只给能直接拿来用的数据集/模型/方法。\n\n"
+            "请对每条打分 0-10（10=必须马上读，0=完全无关）、标类型、用一句中文说明理由（不超过40字）。\n"
+            "打分从严，宁低勿高：无公开数据/代码的纯关联研究、小作坊项目一律 ≤4 分；"
+            "7 分以上只给能直接拿来用的数据集/模型/方法。"
+            "综述原则上 ≤5 分，但 journal 字段为知名期刊（Nature/Cell/Science 及其子刊）的高质量综述正常评估，可到 6-7 分。\n"
+            "类型 type 五选一：paper（论文/新闻）/ dataset（数据集/数据库）/ model（模型）/ tool（软件工具）/ other。\n\n"
             f"【兴趣画像】\n{profile}\n\n【条目】\n"
             + json.dumps(payload, ensure_ascii=False)
-            + '\n\n只输出 JSON 数组，形如 [{"id":0,"score":8,"reason":"..."}]，不要输出其他内容。'
+            + '\n\n只输出 JSON 数组，形如 [{"id":0,"score":8,"type":"dataset","reason":"..."}]，不要输出其他内容。'
         )
         try:
             content = llm.chat(prompt, model=llm.SCORE_MODEL, temperature=0.2, timeout=180)
@@ -79,6 +82,9 @@ def llm_rerank(items: list[Item]) -> bool:
                 if 0 <= j < len(chunk):
                     chunk[j].score = float(s.get("score", chunk[j].score))
                     chunk[j].reason_zh = str(s.get("reason", ""))[:120]
+                    kind = str(s.get("type", "")).strip().lower()
+                    if kind in ("paper", "dataset", "model", "tool", "other"):
+                        chunk[j].extra["kind"] = kind
             ok = True
         except Exception as exc:
             print(f"[llm] batch {i // BATCH} failed, keep keyword scores: {exc}")

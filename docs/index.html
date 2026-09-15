@@ -14,8 +14,8 @@ a:active{opacity:.7}
 .tabs{display:flex;gap:8px}
 .tab{flex:1;text-align:center;padding:9px 0;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#57606a;font-size:14.5px;font-weight:600;cursor:pointer;user-select:none}
 .tab.on{background:#1f6feb;border-color:#1f6feb;color:#fff}
-#panel-week,#panel-day{display:none}
-#panel-week.on,#panel-day.on{display:block}
+#panel-week,#panel-day,#panel-res{display:none}
+#panel-week.on,#panel-day.on,#panel-res.on{display:block}
 #q{width:100%;padding:9px 14px;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#1f2328;font-size:14px;outline:none;margin-bottom:12px}
 #q:focus{border-color:#0969da}
 .wk{background:#fff;border:1px solid #d0d7de;border-radius:12px;padding:4px 16px 14px;margin:0 0 10px;font-size:14.5px;box-shadow:0 1px 2px rgba(31,35,40,.04)}
@@ -36,6 +36,7 @@ details.day>.daybody{padding-top:8px}
 .badge.hi{background:#dafbe1;color:#1a7f37}
 .badge.mid{background:#fff8c5;color:#9a6700}
 .badge.lo{background:#eaeef2;color:#57606a}
+.badge.res{background:#ddf4ff;color:#0969da}
 .reason{color:#4b5563;font-size:13.5px;margin-top:5px}
 .meta{color:#57606a;font-size:12px;margin-top:5px}
 details.deep{margin-top:8px;border-top:1px dashed #d0d7de;padding-top:6px}
@@ -51,7 +52,7 @@ details.deep .deepbody p{margin:4px 0}
 </style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
 <div class="meta">更新至 2026-09-15 · 1 份日报 / 2 份周报</div>
-<div class="tabs"><div class="tab on" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div></div></div>
+<div class="tabs"><div class="tab on" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div><div class="tab" data-tab="res">资源库</div></div></div>
 <div id="panel-week" class="on"><div class="wk"><h3>2026-W38</h3><h1>科研情报周报分析 — 2026-09-15</h1>
 <h2>跨域趋势</h2>
 <p><strong>1. "世界模型 + 动作条件化"正在从纯 RL/机器人领域向生物医学渗透，且开始与 AI Scientist 治理流程耦合。</strong>
@@ -176,9 +177,11 @@ BTEC 的深读笔记明确指出"需查正文/补充材料确认是否公开 BTE
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.09646">How Do Video Foundation Models Encode Intuitive Physics? Probing Across Pretraining Paradigms</a><span class="badge mid">6.0</span></div><div class="reason">V-JEPA等视频基础模型物理表征探针，JEPA范式对表征学习有参考价值。</div><div class="meta">arxiv ·  · Samuele Punzo, Niccol\`o Caselli, Ippokratis Pantelidis, Francesco Massafra, Sal</div></div>
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2609.13507">Pretraining for Sample-Efficient Neural Interfaces</a><span class="badge mid">6.0</span></div><div class="reason">神经接口自监督预训练，跨被试表征思路可迁移到单细胞。</div><div class="meta">arxiv ·  · Ben Tang, Zachary Spalding, Gregory B. Cogan</div></div>
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.02388">Policy and World Modeling Co-Training for Language Agents</a><span class="badge mid">6.0</span></div><div class="reason">策略与世界模型协同训练，方法学可迁移到扰动响应建模。</div><div class="meta">arxiv ·  · Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Yanbin Wei, Lingting Z</div></div></div></details></div>
+<div id="panel-res"><div class="empty">暂无资源条目。</div></div>
 <script>
 const tabs=[...document.querySelectorAll('.tab')];
-const panels={week:document.getElementById('panel-week'),day:document.getElementById('panel-day')};
+const panels={};
+tabs.forEach(t=>panels[t.dataset.tab]=document.getElementById('panel-'+t.dataset.tab));
 tabs.forEach(t=>t.addEventListener('click',()=>{
   tabs.forEach(x=>x.classList.toggle('on',x===t));
   Object.entries(panels).forEach(([k,p])=>p.classList.toggle('on',k===t.dataset.tab));

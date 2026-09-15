@@ -6,6 +6,7 @@ from pathlib import Path
 
 from ..config import ROOT, load_sources
 from ..schema import Item
+from .resources import is_resource
 
 MIN_SCORE = float(os.environ.get("DIGEST_MIN_SCORE", "6"))  # 低于此分不进 digest：领域噪音多，只呈现高价值条目
 
@@ -38,7 +39,8 @@ def write_digest(items: list[Item], day: date) -> Path:
         lines.append("")
         for it in group:
             reason = f" — {it.reason_zh}" if it.reason_zh else ""
-            lines.append(f"- **[{it.title}]({it.url})** `{it.score:.1f}`{reason}")
+            tag = "〔资源〕" if is_resource(it) else ""
+            lines.append(f"- **[{it.title}]({it.url})** `{it.score:.1f}`{tag}{reason}")
             lines.append(f"  <sub>{it.source} · {it.published} · {it.authors[:80]}</sub>")
             if it.deepread:
                 body = "\n".join(f"  {l}" for l in it.deepread.splitlines())

@@ -31,8 +31,8 @@ a:active{opacity:.7}
 .tabs{display:flex;gap:8px}
 .tab{flex:1;text-align:center;padding:9px 0;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#57606a;font-size:14.5px;font-weight:600;cursor:pointer;user-select:none}
 .tab.on{background:#1f6feb;border-color:#1f6feb;color:#fff}
-#panel-week,#panel-day{display:none}
-#panel-week.on,#panel-day.on{display:block}
+#panel-week,#panel-day,#panel-res{display:none}
+#panel-week.on,#panel-day.on,#panel-res.on{display:block}
 #q{width:100%;padding:9px 14px;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#1f2328;font-size:14px;outline:none;margin-bottom:12px}
 #q:focus{border-color:#0969da}
 .wk{background:#fff;border:1px solid #d0d7de;border-radius:12px;padding:4px 16px 14px;margin:0 0 10px;font-size:14.5px;box-shadow:0 1px 2px rgba(31,35,40,.04)}
@@ -53,6 +53,7 @@ details.day>.daybody{padding-top:8px}
 .badge.hi{background:#dafbe1;color:#1a7f37}
 .badge.mid{background:#fff8c5;color:#9a6700}
 .badge.lo{background:#eaeef2;color:#57606a}
+.badge.res{background:#ddf4ff;color:#0969da}
 .reason{color:#4b5563;font-size:13.5px;margin-top:5px}
 .meta{color:#57606a;font-size:12px;margin-top:5px}
 details.deep{margin-top:8px;border-top:1px dashed #d0d7de;padding-top:6px}
@@ -69,7 +70,8 @@ details.deep .deepbody p{margin:4px 0}
 
 JS = """
 const tabs=[...document.querySelectorAll('.tab')];
-const panels={week:document.getElementById('panel-week'),day:document.getElementById('panel-day')};
+const panels={};
+tabs.forEach(t=>panels[t.dataset.tab]=document.getElementById('panel-'+t.dataset.tab));
 tabs.forEach(t=>t.addEventListener('click',()=>{
   tabs.forEach(x=>x.classList.toggle('on',x===t));
   Object.entries(panels).forEach(([k,p])=>p.classList.toggle('on',k===t.dataset.tab));
@@ -97,7 +99,7 @@ q.addEventListener('input',()=>{
 
 ITEM_RE = re.compile(
     r"^- \*\*\[(?P<title>.+?)\]\((?P<url>[^)]+)\)\*\*"
-    r" `(?P<score>[0-9.]+)`(?: — (?P<reason>.*))?$")
+    r" `(?P<score>[0-9.]+)`(?P<tag>〔资源〕)?(?: — (?P<reason>.*))?$")
 SEC_RE = re.compile(r"^## (?P<name>.+?)（\d+ 条）$")
 META_RE = re.compile(r"^  <sub>(?P<meta>.*)</sub>$")
 DEEP_RE = re.compile(
@@ -128,7 +130,8 @@ def _parse_digest(text: str) -> list[tuple[str, list[dict]]]:
         if m:
             it = {"title": m.group("title"), "url": m.group("url"),
                   "score": float(m.group("score")),
-                  "reason": m.group("reason") or "", "meta": "", "deep": ""}
+                  "reason": m.group("reason") or "", "meta": "", "deep": "",
+                  "tag": m.group("tag") or ""}
             cur.append(it)
             i += 1
             if i < len(lines):
@@ -173,6 +176,8 @@ def _render_digest(path: Path, first: bool) -> str:
         for it in items:
             badge = (f'<span class="badge {_score_class(it["score"])}">'
                      f'{it["score"]:.1f}</span>')
+            if it.get("tag"):
+                badge += '<span class="badge res">资源</span>'
             parts = [f'<div class="card" data-score="{it["score"]}">',
                      f'<div class="t"><a href="{html.escape(it["url"])}">'
                      f'{html.escape(it["title"])}</a>{badge}</div>']
@@ -208,6 +213,11 @@ def build_site(today: date | None = None) -> Path:
                  if weeklies else '<div class="empty">暂无周报。</div>')
     day_html = ("\n".join(_render_digest(p, i == 0) for i, p in enumerate(digests))
                 if digests else '<div class="empty">暂无日报。</div>')
+    res_file = ROOT / "resources.md"
+    res_html = ('<div class="wk">'
+                + markdown.markdown(res_file.read_text(encoding="utf-8"),
+                                    extensions=["extra", "sane_lists"])
+                + "</div>") if res_file.exists() else '<div class="empty">暂无资源条目。</div>'
 
     parts = [
         "<!doctype html><html lang=zh><head>",
@@ -220,11 +230,13 @@ def build_site(today: date | None = None) -> Path:
         '<div class="tabs">'
         '<div class="tab on" data-tab="week">周报</div>'
         '<div class="tab" data-tab="day">日报</div>'
+        '<div class="tab" data-tab="res">资源库</div>'
         "</div></div>",
         f'<div id="panel-week" class="on">{week_html}</div>',
         '<div id="panel-day">',
         '<input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">',
         f"{day_html}</div>",
+        f'<div id="panel-res">{res_html}</div>',
         f"<script>{JS}</script></main></body></html>",
     ]
 
