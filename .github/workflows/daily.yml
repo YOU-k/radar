@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "23 0 * * *"   # UTC 00:23 = 北京时间 08:23（整点是全网拥堵高峰，GitHub 定时任务会排长队）
   workflow_dispatch:
+    inputs:
+      days:
+        description: "回补窗口天数（默认 0 = 按节奏表）"
+        type: number
+        default: 0
 
 permissions:
   contents: write
@@ -25,7 +30,7 @@ jobs:
           SCORE_MODEL: ${{ vars.SCORE_MODEL }}
           DEEP_MODEL: ${{ vars.DEEP_MODEL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python -m radar.run daily
+        run: python -m radar.run daily --days ${{ inputs.days || 1 }}
       - name: build site
         run: python -m radar.run site
       - name: commit results

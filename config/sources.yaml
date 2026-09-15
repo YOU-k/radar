@@ -22,9 +22,21 @@ domains:
         - "DNA methylation age"
         - "cell painting aging"
     europepmc_query: '(aging clock OR biological age OR epigenetic age OR methylation age OR "transcriptomic age" OR "proteomic age" OR "aging biomarker") AND (multimodal OR proteomic OR methylation OR organoid OR single-cell OR "spatial transcriptomics")'
-    rss:
-      - https://www.nature.com/nataging.rss
-      - https://onlinelibrary.wiley.com/feed/14749726/most-recent
+    # 整刊订阅：新文全收（不限关键词），相关性交给 LLM 从严打分。
+    # CNS 正刊全学科、量大，先经关键词粗筛（含 aging 等词才进 top40），
+    # 所以只放aging 领域，不污染其他领域配额。
+    journals:
+      - Nature
+      - Science
+      - Cell
+      - Nature Aging
+      - Aging Cell
+      - GeroScience
+      - Nature Cell Biology
+      - Cell Metabolism
+      - Nature Metabolism
+      - Cell Stem Cell
+    rss: []  # 期刊源已由上方 EuropePMC 整刊订阅覆盖（nataging/wiley feed 不稳定）
     github_queries:
       - aging-clock
       - epigenetic-clock
@@ -51,8 +63,10 @@ domains:
         - "perturb-seq"
         - "virtual cell"
     europepmc_query: '(single-cell OR "spatial transcriptomics" OR proteomics OR "protein language model") AND (database OR benchmark OR "foundation model" OR atlas)'
-    rss:
-      - https://www.nature.com/nbt.rss
+    journals:
+      - Nature Methods
+      - Nature Biotechnology
+    rss: []  # 原 nbt.rss 已由整刊订阅覆盖
     github_queries:
       - single-cell
       - spatial-transcriptomics

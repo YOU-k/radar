@@ -24,8 +24,18 @@ def _fulltext(it: Item) -> str:
     if it.source == "arxiv" and "/abs/" in it.url:
         pdf_url = it.url.replace("/abs/", "/pdf/")
         from pypdf import PdfReader  # 重依赖，用到才导入
-        r = requests.get(pdf_url, timeout=120)
-        r.raise_for_status()
+        import time
+        last: Exception | None = None
+        for _ in range(2):  # 代理/网络中断常见，重试一次
+            try:
+                r = requests.get(pdf_url, timeout=120)
+                r.raise_for_status()
+                break
+            except Exception as exc:
+                last = exc
+                time.sleep(5)
+        else:
+            raise last  # type: ignore[misc]
         reader = PdfReader(io.BytesIO(r.content))
         text = "\n".join((p.extract_text() or "") for p in reader.pages[:15])
         if len(text) > 2000:

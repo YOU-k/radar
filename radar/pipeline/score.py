@@ -36,6 +36,19 @@ def prefilter(items: list[Item], cfg: dict) -> list[Item]:
     return items[:PREFILTER_TOP]
 
 
+JOURNAL_SLOT = 20  # 整刊订阅条目直通 LLM：关键词表永远追不上期刊新发，靠 LLM 筛
+
+
+def score_items(items: list[Item], cfg: dict, use_llm: bool = True) -> list[Item]:
+    watch = [it for it in items if it.extra.get("journal_watch")][:JOURNAL_SLOT]
+    rest = [it for it in items if not it.extra.get("journal_watch")]
+    items = prefilter(rest, cfg) + watch
+    if use_llm:
+        llm_rerank(items)
+    items.sort(key=lambda x: x.score, reverse=True)
+    return items
+
+
 def llm_rerank(items: list[Item]) -> bool:
     if not llm.available() or not items:
         return False
@@ -71,10 +84,3 @@ def llm_rerank(items: list[Item]) -> bool:
             print(f"[llm] batch {i // BATCH} failed, keep keyword scores: {exc}")
     return ok
 
-
-def score_items(items: list[Item], cfg: dict, use_llm: bool = True) -> list[Item]:
-    items = prefilter(items, cfg)
-    if use_llm:
-        llm_rerank(items)
-    items.sort(key=lambda x: x.score, reverse=True)
-    return items
