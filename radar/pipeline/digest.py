@@ -1,10 +1,13 @@
 from __future__ import annotations
 
+import os
 from datetime import date
 from pathlib import Path
 
 from ..config import ROOT, load_sources
 from ..schema import Item
+
+MIN_SCORE = float(os.environ.get("DIGEST_MIN_SCORE", "6"))  # 低于此分不进 digest：领域噪音多，只呈现高价值条目
 
 
 def write_digest(items: list[Item], day: date) -> Path:
@@ -14,14 +17,21 @@ def write_digest(items: list[Item], day: date) -> Path:
     order = [d["name"] for d in cfg.get("domains", [])]
     order += sorted({it.domain for it in items} - set(order))
 
+    kept = [it for it in items if it.score >= MIN_SCORE]
+    dropped = len(items) - len(kept)
+
     lines = [
         f"# 科研情报 digest — {day.isoformat()}",
         "",
-        f"共 {len(items)} 条（抓取 → 去重 → 关键词粗筛 → LLM 精排）。分数 0-10，10 = 必须马上读。",
+        f"共 {len(kept)} 条（仅保留 ≥{MIN_SCORE:g} 分；另有 {dropped} 条低分已过滤）。"
+        "分数 0-10，10 = 必须马上读。",
         "",
     ]
+    if not kept:
+        lines.append("今日无高分条目。")
+        lines.append("")
     for dom in order:
-        group = [it for it in items if it.domain == dom]
+        group = [it for it in kept if it.domain == dom]
         if not group:
             continue
         lines.append(f"## {labels.get(dom, dom)}（{len(group)} 条）")

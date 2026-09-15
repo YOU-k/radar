@@ -52,6 +52,7 @@ GitHub Actions 跑在境外，不需要。
 | `SYNTH_MODEL` | weekly / landscape 综合 | `deepseek-chat` |
 | `DEEPREAD_MIN` | 深读分数门槛（0-10） | `7.5` |
 | `DEEPREAD_MAX` | 每天最多深读篇数（控成本） | `3` |
+| `DIGEST_MIN_SCORE` | digest 只保留 ≥ 此分的条目（低分直接过滤） | `6` |
 
 GitHub Actions 设置（一次性）：
 
