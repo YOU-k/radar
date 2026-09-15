@@ -50,7 +50,7 @@ details.deep .deepbody p{margin:4px 0}
 .hide{display:none!important}
 </style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
-<div class="meta">更新至 2026-09-15 · 3 份日报 / 1 份周报</div>
+<div class="meta">更新至 2026-09-15 · 1 份日报 / 1 份周报</div>
 <div class="tabs"><div class="tab on" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div></div></div>
 <div id="panel-week" class="on"><div class="wk"><h3>2026-W37</h3><h2>跨域趋势</h2>
 <ol>
@@ -98,45 +98,39 @@ details.deep .deepbody p{margin:4px 0}
 </ul></div></div>
 <div id="panel-day">
 <input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">
-<details class="day" data-first="1" open><summary>2026-09-15 · 周二<span class="cnt">4 条</span></summary><div class="daybody"><div class="dom">生物医学数据库 / 模型 / 部署</div>
-<div class="card" data-score="7.0"><div class="t"><a href="https://arxiv.org/abs/2609.13665">MARC: Morphology-Aware Regression of Consensus for Cell Segmentation in Subcellular Spatial Transcriptomics</a><span class="badge mid">7.0</span></div><div class="reason">亚细胞空转细胞分割新方法，直接服务空间转录组分析，可拿来用。</div><div class="meta">arxiv ·  · Xinyu Shu, Andrew Zhang, Jean Yang, Jinman Kim</div></div>
+<details class="day" data-first="1" open><summary>2026-09-15 · 周二<span class="cnt">7 条</span></summary><div class="daybody"><div class="dom">衰老与多模态健康模型</div>
+<div class="card" data-score="8.0"><div class="t"><a href="https://doi.org/10.1080/15592294.2026.2714582">A breast tissue-specific epigenetic clock provides accurate chronological age predictions and reveals de-correlation of age and DNA methylation in tumor-adjacent and tumor samples.</a><span class="badge hi">8.0</span></div><div class="reason">乳腺组织特异甲基化时钟，公开数据构建，可直接用于aging clock参考。</div><div class="meta">europepmc · 2026-09-11 · Garma LD, Pernas S, Fullana B, Vethencourt A, Vicente Baz D, García Manrique T, </div><details class="deep"><summary>深读笔记</summary><div class="deepbody"><h1>深读笔记：Breast Tissue-specific Epigenetic Clock (BTEC)</h1>
+<p><strong>总结</strong>
+该研究基于 7 个研究、553 例健康乳腺组织的 DNA 甲基化数据，构建了乳腺组织特异性表观遗传时钟 BTEC，在年龄预测精度（r=0.91, MAE=3.0y）和跨祖源稳健性上显著优于 Horvath/Hannum 等经典时钟。作者进一步发现肿瘤及瘤旁组织的表观年龄出现系统性"去相关"（肿瘤样本平均偏差 -14~-15 年），且 EAA 与 HR+ 乳腺癌患者生存相关，提示组织特异时钟兼具方法学与临床价值。</p>
+<p><strong>核心方法</strong>
+采用多队列健康乳腺甲基化数据训练组织特异性年龄回归模型（弹性网/惩罚回归类），并系统评估了残差型 EAA 对参考数据集的依赖性。关键分析包括跨祖源偏差比较、肿瘤/瘤旁样本的预测偏差分层（按分子亚型）、以及 BTEC 探针的基因通路注释（JAK1、TP73、PDGFRA、CCND1、STAT5B 及 Wnt/Hedgehog/ErbB 通路）。</p>
+<p><strong>数据与代码可用性</strong>
+摘要未提及代码或模型权重仓库，需查正文/补充材料确认是否公开 BTEC 探针列表与系数（这是能否直接复用的关键）。训练数据来自 7 项已发表研究（多为 GEO 公共甲基化数据集），原则上可重建，但需自行整合与标准化。目前看<strong>不能直接拿来用</strong>，需先确认模型参数与预处理流程是否开源。</p>
+<p><strong>局限</strong>
+仅基于摘要，样本量（553 例健康组织）对组织特异时钟偏小，且缺乏独立外部验证队列的明确说明；EAA 与生存的关联为探索性分析，未做多变量校正或前瞻验证；肿瘤样本的"负向偏差"机制（去甲基化 vs 细胞组成混杂）未在摘要中厘清，可能受肿瘤纯度、细胞类型比例影响。</p>
+<p><strong>对多模态衰老模型合作的启发</strong>
+第一，BTEC 是"组织/模态特异时钟 + 跨队列校正"的现成范例，可直接借鉴其<strong>参考数据集依赖性问题</strong>的处理思路，用于你合作项目中甲基化模态与类器官/蛋白组的对齐。第二，其"肿瘤去相关"现象提示：在多模态衰老模型中，<strong>疾病/扰动状态会系统性扭曲单模态 aging clock 输出</strong>，建议在 demo 阶段就设计 modality-specific 与 shared 表征分离的架构（如 JEPA 式共享潜空间 + 模态私有头）。第三，可执行动作：检索 BTEC 探针列表与系数是否公开，若公开则纳入你公共数据 demo 的甲基化基线；若不公开，则用其"多队列训练 + 跨祖源评估"流程作为你自己训练组织特异时钟的模板。</p></div></details></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://doi.org/10.1016/j.cell.2026.08.024">Metax enables accurate cross-domain taxonomic profiling of metagenomes.</a><span class="badge mid">6.0</span></div><div class="reason">Metax跨域宏基因组分类工具，有代码可用的方法学</div><div class="meta">europepmc · 2026-09-11 · Deng ZL, Safaei N, McHardy AC.</div></div>
+<div class="dom">生物医学数据库 / 模型 / 部署</div>
+<div class="card" data-score="7.0"><div class="t"><a href="https://arxiv.org/abs/2609.13665">MARC: Morphology-Aware Regression of Consensus for Cell Segmentation in Subcellular Spatial Transcriptomics</a><span class="badge mid">7.0</span></div><div class="reason">亚细胞空转细胞分割新方法，直接可用于空间转录组流程。</div><div class="meta">arxiv ·  · Xinyu Shu, Andrew Zhang, Jean Yang, Jinman Kim</div></div>
 <div class="dom">ML / AI 底层算法</div>
 <div class="card" data-score="8.0"><div class="t"><a href="https://arxiv.org/abs/2609.14709">An immune world model for multiscale forecasting and therapeutic hypothesis generation</a><span class="badge hi">8.0</span></div><div class="reason">免疫世界模型，动作条件多尺度预测，与多模态衰老建模高度契合。</div><div class="meta">arxiv ·  · Taoyong Cui, Xi Wang, Zonghang Li, Jinchao Ding, Lingsen You, Yuzhi Xu, Wanghan </div><details class="deep"><summary>深读笔记</summary><div class="deepbody"><h1>深读笔记：An immune world model for multiscale forecasting and therapeutic hypothesis generation</h1>
 <p><strong>总结</strong>
-该工作用"受治理的进化式 AI Scientist（Agent Genesis）"自动搜索并冻结了一个<strong>免疫世界模型（Immune World Model）</strong>，把细胞、组织、个体三层免疫状态编码为结构化状态 S_t，把干预（细胞因子/CRISPR/药物/检查点）编码为独立动作 A_t，学习转移 S_{t+1}=F_θ(S_t,A_t)，并支持有界反事实 rollout（S_{t+2}）。模型在未见干预/上下文上泛化，能整合细胞+组织信息提升生态与患者响应预测，并据此提名 IL-36γ + SIRPα 抑制这一互补轴治疗假设。整体是"世界模型 + AI Scientist 自动研发 + 治疗假设生成"三合一的框架性工作。</p>
+该工作用"受治理的进化式 AI Scientist"（Agent Genesis）自动搜索并冻结了一个<strong>动作条件化的免疫世界模型</strong>，把细胞、组织、个体三个尺度的免疫状态编码为结构化状态 S_t，把干预（细胞因子/CRISPR/药物/检查点）编码为动作 A_t，学习转移 S_{t+1}=F_θ(S_t,A_t)，并解码出可解释读出（细胞比例、通路、DE 方向、NR→R 分数）。模型在冻结后于未见干预/上下文、跨尺度 rollout、动作组合上做了锁定评估，并据此提名 IL-36γ + SIRPα 抑制这一互补轴治疗假设。整体是"世界模型 + AI Scientist 治理流程"在免疫治疗预测上的概念验证。</p>
 <p><strong>核心方法</strong>
-核心是把世界模型范式（latent state + action-conditioned transition）搬到多尺度免疫建模：结构化编码器分别产出 Z_cell、Z_tme、Z_patient 并组合为 S_t，动作经门控残差（gated residual）注入，结构化解码器输出表达预测与可解释读出（细胞比例、program score、通路位移、DE 方向、NR→R 分数、机制解释）。开发流程由 Agent Genesis 驱动，采用版本化数据清单 + 预设评估门（如 +0.02 效应量门槛）做 promote/rollback，冻结后再做独立确认与跨系统审计。</p>
+架构上分三层结构化状态（Z_cell / Z_tme / Z_patient）与独立动作编码，用门控残差动作模型做转移，结构化解码器输出表达级预测与生物学读出；消融显示结构化解码器（-0.14）、动作条件动态（-0.10）、多尺度编码器（-0.08）贡献最大。开发流程由 Agent Genesis 驱动：候选 Scientist 工作流在版本化数据清单与预设评估门（如 +0.02 效应量门）下进化，16 个更新被 promote、9 个被 reject，模型冻结后才做独立确认。评估覆盖 builder macro-F1、五项锁定外部能力探针、跨系统审计与动作组合。</p>
 <p><strong>数据与代码可用性</strong>
-从摘要与正文看，训练/评测数据多为<strong>公共数据</strong>：Parse PBMC 细胞因子扰动图谱（~10M PBMCs、12 donors、90 cytokines，保留 86 contexts）、GEARS/scGPT 常用扰动基准、K562→RPE1 与 8→48h 基因转移、HCC/HNSCC/melanoma/BCC 的 anti-PD-1 队列、C1–C6 免疫生态亚型、PULSAR 供体表征基线等，均属可获取资源。但<strong>本文未给出代码仓库、模型权重或数据 manifest 链接</strong>（arXiv 2609.14709，PhAI Labs 商业机构主导），因此"直接拿来用"目前只能复现思路与基线，不能直接部署其冻结模型；建议邮件联系通讯作者索取 Agent Genesis 配置与 Immune World Model 权重。</p>
+摘要与正文未给出代码/权重/数据仓库链接，只提到公开数据来源（Parse PBMC 约 1000 万 PBMC、90 细胞因子图谱、GEARS/scGPT/scFoundation/UCE 等作为基线或 backbone），以及自建的 Immune68 特征表与 TabPFN 组合。<strong>不能直接拿来用</strong>：需要向作者（PhAI Labs / CUHK，通讯作者 Pheng Ann Heng、Ling Yang、Zhenfei Yin、Yingcheng Wu）索取代码与冻结配置；可先复现的线索是 Parse PBMC few-shot 基准与 GEARS 常用扰动数据集，以及 TabPFN 这一现成组件。</p>
 <p><strong>局限</strong>
-一是<strong>全局均值未超越 condition-mean 基线</strong>（Δcos 均 0.46），仅在 64% 动作上优于 scGPT，说明其增益主要体现在条件特异而非整体精度；二是 anti-PD-1 LOO AUC 在 composition 特征上仅 0.54，个体层预测仍弱；三是 IL-36γ + SIRPα 假设<strong>尚未湿实验验证</strong>，且自校正审计拒绝了所有筛选的细胞因子对，提示假设生成的选择性/假阳性控制仍需检验；四是 AI Scientist 的"治理"依赖预设门槛，门槛设定本身可能引入偏置，且商业机构主导下可复现性存疑。</p>
+全局平均 ∆cos 上并未超过 condition-mean 基线（均 0.46），只在相对 scGPT 的 64% 动作上更优，说明增益主要来自条件特异而非整体表征；抗 PD-1 LOO AUC 在 composition 上仅 0.54，个体层增益普遍很小（+0.005~+0.067）；定量动态基准只评估了一步转移，rollout 与动作组合的定量验证有限；IL-36γ + SIRPα 仍是<strong>未经湿实验验证的假设</strong>，且自校正审计否决了所有筛选的细胞因子对，提示假阳性风险控制仍是开放问题。</p>
 <p><strong>对多模态衰老模型合作的启发</strong>
-第一，可直接借鉴其<strong>结构化状态 + 独立动作接口</strong>设计：把合作方的类器官/蛋白组/甲基化/空转模态各自编码为 Z_modality，再组合为统一 S_t，动作定义为扰动（药物、基因编辑、细胞因子），这与"每模态独立训练再整合"的路线天然契合。第二，其<strong>门控残差动作注入 + 有界 rollout</strong> 可用于衰老干预（如 senolytic、重编程因子）的跨尺度反事实预测，尤其适合"公共数据做 demo → 新数据持续矫正"的两阶段策略。第三，<strong>预设评估门 + promote/rollback 的版本化谱系</strong>可直接搬来做多模态衰老模型的持续学习治理，避免增量更新时的性能回退。第四，建议优先复现其 Parse PBMC few-shot 与 action composition 两个基准，作为多模态衰老模型 demo 的对照基线；同时主动联系作者获取 Agent Genesis 工作流，评估能否用于自动化搜索衰老模态对齐架构。第五，其"measured perturbation + cross-axis inference"提名互补轴的思路，可迁移到衰老领域寻找互补干预靶点（如衰老细胞清除 + 免疫检查点调节）。</p></div></details></div>
+1. <strong>可直接迁移的架构范式</strong>：把"结构化状态 + 独立动作编码 + 门控残差转移"套到你的多模态健康衰老模型上——状态层可对应 PBMC 单细胞 / 蛋白组 / 甲基化 / 空间转录组，动作层对应药物、扰动、类器官处理条件，正好匹配你"每模态独立训练再整合"与"持续矫正统一模型"的两条路线。
+2. <strong>治理流程可复用</strong>：Agent Genesis 的"版本化数据清单 + 预设效应量门 + promote/rollback 审计"可直接作为你合作项目的模型更新协议，解决新模态数据进来后"何时该合并、何时该回滚"的决策问题，也契合你关注的增量/持续学习。
+3. <strong>缺失模态与跨队列校正</strong>：其" withhold 整个尺度信息"的泛化评估设计，可借来测试你的模型在缺失蛋白组或甲基化模态时的鲁棒性；跨上下文转移（K562→RPE1、8h→48h）的探针思路可改造为跨队列/跨年龄的 aging clock 验证。
+4. <strong>可执行下一步</strong>：先复现 Parse PBMC few-shot 与 GEARS 扰动预测作为 demo 基线，同时联系作者索取冻结配置；把 IL-36γ+SIRPα 这类"互补轴假设生成"流程，移植到你的类器官 + 扰动响应建模中，作为合作方湿实验的候选优先级排序工具。</p></div></details></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.09646">How Do Video Foundation Models Encode Intuitive Physics? Probing Across Pretraining Paradigms</a><span class="badge mid">6.0</span></div><div class="reason">V-JEPA等视频基础模型物理表征探针，JEPA范式对表征学习有参考价值。</div><div class="meta">arxiv ·  · Samuele Punzo, Niccol\`o Caselli, Ippokratis Pantelidis, Francesco Massafra, Sal</div></div>
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2609.13507">Pretraining for Sample-Efficient Neural Interfaces</a><span class="badge mid">6.0</span></div><div class="reason">神经接口自监督预训练，跨被试表征思路可迁移到单细胞。</div><div class="meta">arxiv ·  · Ben Tang, Zachary Spalding, Gregory B. Cogan</div></div>
-<div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.02388">Policy and World Modeling Co-Training for Language Agents</a><span class="badge mid">6.0</span></div><div class="reason">策略与世界模型协同训练，LLM agent方法，可迁移到扰动建模。</div><div class="meta">arxiv ·  · Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Yanbin Wei, Lingting Z</div></div></div></details>
-<details class="day" data-first="0"><summary>2026-09-14 · 周一<span class="cnt">4 条</span></summary><div class="daybody"><div class="dom">生物医学数据库 / 模型 / 部署</div>
-<div class="card" data-score="9.0"><div class="t"><a href="https://arxiv.org/abs/2609.12761">Same Encoder, Different Winner: A Paired-View Framework for Cell Painting Encoder Evaluation</a><span class="badge hi">9.0</span></div><div class="reason">Cell Painting编码器配对评估基准，直接契合cell painting+ML合作方向。</div><div class="meta">arxiv ·  · Tim Treis, Nikita Moshkov, Johan Fredin Haslum, Shantanu Singh, Fabian J. Theis</div><details class="deep"><summary>深读笔记</summary><div class="deepbody"><h2>总结</h2>
-<p>该文提出 CP-BG-Bench，一个"配对视图"评估框架：对同一细胞中心固定不变，生成原始裁剪（C）、分割（S）、密度增强（CD/SD）四种视图，在 JUMP-CP、RxRx1、RxRx3-core 三个 Cell Painting 数据集和三种编码器上，用四套社区标准协议（replicate mAP、scIB、CellProfiler 特征预测、跨批次扰动召回）评估，发现同一编码器在不同协议下排名系统性不一致。作者将分歧分解为三条正交轴：细胞 vs 背景、形态 vs 上下文、研究内 vs 跨批次，并指出单指标排名 Cell Painting 编码器高度依赖所选协议。</p>
-<h2>核心方法</h2>
-<p>核心是配对视图的受控干预设计：用 Cellpose-SAM 分割后，对每个单细胞裁剪保留同一细胞中心，分别生成 C（含背景）、S（掩膜外置零）、CD/SD（四角叠加编码局部细胞密度的 patch），从而把背景与密度从细胞形态中解耦。三种编码器（DINOv3 ViT-B/16、OpenPhenom、SubCell）在每种视图下用 LoRA + 多正样本对比目标（化合物用 ECFP4、基因扰动用 ESM2 条件）微调，共 36 个 checkpoint，再在四套协议下评估。</p>
-<h2>数据与代码可用性</h2>
-<p>作者承诺随最终版公开配对视图 JUMP-CP 数据集（CC0 v1.0，含 Croissant 元数据与 Responsible AI 字段）、RxRx1（CC BY-NC）与 RxRx3-core 的确定性重建管线（不重分发源图）、36 个训练 checkpoint、聚合的 well 级 embedding 以及完整评估套件。可直接拿来用的线索：JUMP-CP 配对视图数据 + 重建脚本 + checkpoint + 评估套件，适合作为方法学 baseline 或迁移到自有数据的评估模板；RxRx1/RxRx3-core 需自行跑重建管线。</p>
-<h2>局限</h2>
-<p>评估仅覆盖三种视觉编码器与三个 Cell Painting 数据集，结论对更广的 foundation model 与模态（如蛋白组、甲基化、空间转录组）的外推性未知；密度 patch 是显式人工编码而非学习得到，可能低估真实密度信号；CPM 基线为无监督特征、与有监督微调编码器对比，差距部分反映监督而非架构优势；跨批次召回在 JUMP-CP 上绝对数值很低，协议本身的判别力有限。</p>
-<h2>对多模态衰老模型合作的启发</h2>
-<p>这篇正好命中画像中"cell painting + ML"与"多模态整合方法学"的高分信号，且直接服务于多模态健康衰老模型的 demo 阶段：可先用其配对视图框架在公共 Cell Painting 数据上验证"背景/密度信号是否可跨批次迁移"，作为类器官成像模态进入合作项目前的评估预演。具体可执行：把 CP-BG-Bench 的四协议评估套件接入你现有的单细胞 foundation model 评测流程，作为"跨队列校正/缺失模态"方法学的对照基准；同时借鉴其"固定中心、切换上下文"的受控干预思路，设计类器官 + 组学数据中"模态缺失/模态替换"的配对评估，避免单一指标（如仅看整合后聚类）误判模型。</p></div></details></div>
-<div class="dom">Agent 进展</div>
-<div class="card" data-score="7.0"><div class="t"><a href="https://arxiv.org/abs/2609.11957">Look Before You Leap: Pre-Action Verification for LLM Agents</a><span class="badge mid">7.0</span></div><div class="reason">agent动作前验证，可迁移到科研工作流，思路实用且有代码潜力。</div><div class="meta">arxiv ·  · Asaad Althoubi</div></div>
-<div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2609.03753">SimSkill: A Self-Evolving LLM Agent for Skill and Knowledge Accumulation in Traffic Simulation</a><span class="badge mid">6.0</span></div><div class="reason">自进化agent技能积累，思路可迁移到科研agent，但交通领域较远。</div><div class="meta">arxiv ·  · Qi Liu, Qinzheng Wang, Can Li, Yiming Bie, Wanjing Ma</div></div>
-<div class="card" data-score="5.0"><div class="t"><a href="https://arxiv.org/abs/2609.12746">What Drives Recovery in Agentic Text-to-Cypher? LAST-CQ: An LLM Agent Self-Refinement Framework</a><span class="badge mid">5.0</span></div><div class="reason">Text-to-Cypher自反思框架，agentic方法可借鉴但领域偏数据库。</div><div class="meta">arxiv ·  · Ioannis Prokopiou, Athanasios Aidinis, Panagiotis-Christos Kyrmpatsos, Pantelis </div></div></div></details>
-<details class="day" data-first="0"><summary>2026-09-13 · 周日<span class="cnt">5 条</span></summary><div class="daybody"><div class="dom">衰老与多模态健康模型</div>
-<div class="card" data-score="2.0"><div class="t"><a href="https://github.com/awictor/molecularclock">awictor/molecularclock</a><span class="badge lo">2.0</span></div><div class="reason">分子钟严格定年工具，与衰老多模态建模关联弱，方法老旧。</div><div class="meta">github · 2026-09-13 · awictor</div></div>
-<div class="dom">生物医学数据库 / 模型 / 部署</div>
-<div class="card" data-score="6.0"><div class="t"><a href="https://github.com/wakisaka805-cpu/HPV_OPC_spatial_transcriptomics">wakisaka805-cpu/HPV_OPC_spatial_transcriptomics</a><span class="badge mid">6.0</span></div><div class="reason">HPV口咽癌空间转录组分析代码，空转方法可迁移，但非衰老方向。</div><div class="meta">github · 2026-09-13 · wakisaka805-cpu</div></div>
-<div class="card" data-score="3.0"><div class="t"><a href="https://github.com/vanch007/mlx-AuK">vanch007/mlx-AuK</a><span class="badge lo">3.0</span></div><div class="reason">语音基础模型MLX移植，与衰老、单细胞、多模态方向无关。</div><div class="meta">github · 2026-09-12 · vanch007</div></div>
-<div class="dom">Agent 进展</div>
-<div class="card" data-score="7.0"><div class="t"><a href="https://github.com/aabhimittal/RLVR-stress-test">aabhimittal/RLVR-stress-test</a><span class="badge mid">7.0</span></div><div class="reason">RLVR压力测试，与兴趣中RLVR/agentic方向直接相关，值得一看。</div><div class="meta">github · 2026-09-13 · aabhimittal</div></div>
-<div class="card" data-score="4.0"><div class="t"><a href="https://github.com/ivyfan-toowell/IvyClaw">ivyfan-toowell/IvyClaw</a><span class="badge mid">4.0</span></div><div class="reason">多智能体软件工程系统，agentic工作流相关但偏工程，非科研核心。</div><div class="meta">github · 2026-09-13 · ivyfan-toowell</div></div></div></details></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.02388">Policy and World Modeling Co-Training for Language Agents</a><span class="badge mid">6.0</span></div><div class="reason">策略与世界模型协同训练，方法学可迁移到扰动响应建模。</div><div class="meta">arxiv ·  · Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Yanbin Wei, Lingting Z</div></div></div></details></div>
 <script>
 const tabs=[...document.querySelectorAll('.tab')];
 const panels={week:document.getElementById('panel-week'),day:document.getElementById('panel-day')};
