@@ -50,7 +50,7 @@ details.deep .deepbody p{margin:4px 0}
 .hide{display:none!important}
 </style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
-<div class="meta">更新至 2026-09-14 · 2 份日报 / 1 份周报</div>
+<div class="meta">更新至 2026-09-15 · 3 份日报 / 1 份周报</div>
 <div class="tabs"><div class="tab on" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div></div></div>
 <div id="panel-week" class="on"><div class="wk"><h3>2026-W37</h3><h2>跨域趋势</h2>
 <ol>
@@ -98,7 +98,23 @@ details.deep .deepbody p{margin:4px 0}
 </ul></div></div>
 <div id="panel-day">
 <input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">
-<details class="day" data-first="1" open><summary>2026-09-14 · 周一<span class="cnt">4 条</span></summary><div class="daybody"><div class="dom">生物医学数据库 / 模型 / 部署</div>
+<details class="day" data-first="1" open><summary>2026-09-15 · 周二<span class="cnt">4 条</span></summary><div class="daybody"><div class="dom">生物医学数据库 / 模型 / 部署</div>
+<div class="card" data-score="7.0"><div class="t"><a href="https://arxiv.org/abs/2609.13665">MARC: Morphology-Aware Regression of Consensus for Cell Segmentation in Subcellular Spatial Transcriptomics</a><span class="badge mid">7.0</span></div><div class="reason">亚细胞空转细胞分割新方法，直接服务空间转录组分析，可拿来用。</div><div class="meta">arxiv ·  · Xinyu Shu, Andrew Zhang, Jean Yang, Jinman Kim</div></div>
+<div class="dom">ML / AI 底层算法</div>
+<div class="card" data-score="8.0"><div class="t"><a href="https://arxiv.org/abs/2609.14709">An immune world model for multiscale forecasting and therapeutic hypothesis generation</a><span class="badge hi">8.0</span></div><div class="reason">免疫世界模型，动作条件多尺度预测，与多模态衰老建模高度契合。</div><div class="meta">arxiv ·  · Taoyong Cui, Xi Wang, Zonghang Li, Jinchao Ding, Lingsen You, Yuzhi Xu, Wanghan </div><details class="deep"><summary>深读笔记</summary><div class="deepbody"><h1>深读笔记：An immune world model for multiscale forecasting and therapeutic hypothesis generation</h1>
+<p><strong>总结</strong>
+该工作用"受治理的进化式 AI Scientist（Agent Genesis）"自动搜索并冻结了一个<strong>免疫世界模型（Immune World Model）</strong>，把细胞、组织、个体三层免疫状态编码为结构化状态 S_t，把干预（细胞因子/CRISPR/药物/检查点）编码为独立动作 A_t，学习转移 S_{t+1}=F_θ(S_t,A_t)，并支持有界反事实 rollout（S_{t+2}）。模型在未见干预/上下文上泛化，能整合细胞+组织信息提升生态与患者响应预测，并据此提名 IL-36γ + SIRPα 抑制这一互补轴治疗假设。整体是"世界模型 + AI Scientist 自动研发 + 治疗假设生成"三合一的框架性工作。</p>
+<p><strong>核心方法</strong>
+核心是把世界模型范式（latent state + action-conditioned transition）搬到多尺度免疫建模：结构化编码器分别产出 Z_cell、Z_tme、Z_patient 并组合为 S_t，动作经门控残差（gated residual）注入，结构化解码器输出表达预测与可解释读出（细胞比例、program score、通路位移、DE 方向、NR→R 分数、机制解释）。开发流程由 Agent Genesis 驱动，采用版本化数据清单 + 预设评估门（如 +0.02 效应量门槛）做 promote/rollback，冻结后再做独立确认与跨系统审计。</p>
+<p><strong>数据与代码可用性</strong>
+从摘要与正文看，训练/评测数据多为<strong>公共数据</strong>：Parse PBMC 细胞因子扰动图谱（~10M PBMCs、12 donors、90 cytokines，保留 86 contexts）、GEARS/scGPT 常用扰动基准、K562→RPE1 与 8→48h 基因转移、HCC/HNSCC/melanoma/BCC 的 anti-PD-1 队列、C1–C6 免疫生态亚型、PULSAR 供体表征基线等，均属可获取资源。但<strong>本文未给出代码仓库、模型权重或数据 manifest 链接</strong>（arXiv 2609.14709，PhAI Labs 商业机构主导），因此"直接拿来用"目前只能复现思路与基线，不能直接部署其冻结模型；建议邮件联系通讯作者索取 Agent Genesis 配置与 Immune World Model 权重。</p>
+<p><strong>局限</strong>
+一是<strong>全局均值未超越 condition-mean 基线</strong>（Δcos 均 0.46），仅在 64% 动作上优于 scGPT，说明其增益主要体现在条件特异而非整体精度；二是 anti-PD-1 LOO AUC 在 composition 特征上仅 0.54，个体层预测仍弱；三是 IL-36γ + SIRPα 假设<strong>尚未湿实验验证</strong>，且自校正审计拒绝了所有筛选的细胞因子对，提示假设生成的选择性/假阳性控制仍需检验；四是 AI Scientist 的"治理"依赖预设门槛，门槛设定本身可能引入偏置，且商业机构主导下可复现性存疑。</p>
+<p><strong>对多模态衰老模型合作的启发</strong>
+第一，可直接借鉴其<strong>结构化状态 + 独立动作接口</strong>设计：把合作方的类器官/蛋白组/甲基化/空转模态各自编码为 Z_modality，再组合为统一 S_t，动作定义为扰动（药物、基因编辑、细胞因子），这与"每模态独立训练再整合"的路线天然契合。第二，其<strong>门控残差动作注入 + 有界 rollout</strong> 可用于衰老干预（如 senolytic、重编程因子）的跨尺度反事实预测，尤其适合"公共数据做 demo → 新数据持续矫正"的两阶段策略。第三，<strong>预设评估门 + promote/rollback 的版本化谱系</strong>可直接搬来做多模态衰老模型的持续学习治理，避免增量更新时的性能回退。第四，建议优先复现其 Parse PBMC few-shot 与 action composition 两个基准，作为多模态衰老模型 demo 的对照基线；同时主动联系作者获取 Agent Genesis 工作流，评估能否用于自动化搜索衰老模态对齐架构。第五，其"measured perturbation + cross-axis inference"提名互补轴的思路，可迁移到衰老领域寻找互补干预靶点（如衰老细胞清除 + 免疫检查点调节）。</p></div></details></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2609.13507">Pretraining for Sample-Efficient Neural Interfaces</a><span class="badge mid">6.0</span></div><div class="reason">神经接口自监督预训练，跨被试表征思路可迁移到单细胞。</div><div class="meta">arxiv ·  · Ben Tang, Zachary Spalding, Gregory B. Cogan</div></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.02388">Policy and World Modeling Co-Training for Language Agents</a><span class="badge mid">6.0</span></div><div class="reason">策略与世界模型协同训练，LLM agent方法，可迁移到扰动建模。</div><div class="meta">arxiv ·  · Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Yanbin Wei, Lingting Z</div></div></div></details>
+<details class="day" data-first="0"><summary>2026-09-14 · 周一<span class="cnt">4 条</span></summary><div class="daybody"><div class="dom">生物医学数据库 / 模型 / 部署</div>
 <div class="card" data-score="9.0"><div class="t"><a href="https://arxiv.org/abs/2609.12761">Same Encoder, Different Winner: A Paired-View Framework for Cell Painting Encoder Evaluation</a><span class="badge hi">9.0</span></div><div class="reason">Cell Painting编码器配对评估基准，直接契合cell painting+ML合作方向。</div><div class="meta">arxiv ·  · Tim Treis, Nikita Moshkov, Johan Fredin Haslum, Shantanu Singh, Fabian J. Theis</div><details class="deep"><summary>深读笔记</summary><div class="deepbody"><h2>总结</h2>
 <p>该文提出 CP-BG-Bench，一个"配对视图"评估框架：对同一细胞中心固定不变，生成原始裁剪（C）、分割（S）、密度增强（CD/SD）四种视图，在 JUMP-CP、RxRx1、RxRx3-core 三个 Cell Painting 数据集和三种编码器上，用四套社区标准协议（replicate mAP、scIB、CellProfiler 特征预测、跨批次扰动召回）评估，发现同一编码器在不同协议下排名系统性不一致。作者将分歧分解为三条正交轴：细胞 vs 背景、形态 vs 上下文、研究内 vs 跨批次，并指出单指标排名 Cell Painting 编码器高度依赖所选协议。</p>
 <h2>核心方法</h2>
