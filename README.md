@@ -4,12 +4,14 @@
 按 `config/profile.md` 里的研究画像用 LLM 打分，高分论文自动深读全文，
 生成中文 digest，并发布成一个手机友好的可浏览站点。
 
-- **每日**（GitHub Actions，北京时间 09:00）：arXiv + EuropePMC(PubMed/bioRxiv) +
+- **每日**（GitHub Actions，北京时间 08:23）：arXiv + EuropePMC(PubMed/bioRxiv) +
   Semantic Scholar 引用追踪 + HuggingFace + GitHub + RSS → `digests/YYYY-MM-DD.md`
   → 深读当日 ≥7.5 分 top 3 篇全文（折叠在条目下）
-- **每周**（北京时间周日 21:00）：汇总一周 digest → 跨域趋势 + 项目启发 +
+- **每周**（北京时间周日 20:41）：汇总一周 digest → 跨域趋势 + 项目启发 +
   registry 增补建议 → `weekly/YYYY-Www.md`
-- **每月**（1 号 09:30）：对照近 30 天 digest 审查 `registry/` 长期知识库，提增补/修订建议
+- **每月**（1 号 09:17）：对照近 30 天 digest 审查 `registry/` 长期知识库，提增补/修订建议
+
+定时任务刻意避开整点/半点——GitHub Actions 高峰期排队，整点 cron 可能延迟数小时。
 - **站点**：`docs/index.html` 由 `radar run site` 生成，GitHub Pages 零成本发布，
   暗色、按天折叠、可关键词过滤，手机上比翻仓库舒服
 - `registry/` 是长期知识库（数据库/模型/人物索引），**人工维护**，weekly 只提建议。
