@@ -2,7 +2,7 @@ name: weekly-radar
 
 on:
   schedule:
-    - cron: "0 13 * * 0"   # UTC 周日 13:00 = 北京时间 21:00
+    - cron: "41 12 * * 0"   # UTC 周日 12:41 = 北京时间 20:41（避开整点/半点拥堵）
   workflow_dispatch:
 
 permissions:
