@@ -50,9 +50,54 @@ details.deep .deepbody p{margin:4px 0}
 .hide{display:none!important}
 </style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
-<div class="meta">更新至 2026-09-15 · 1 份日报 / 1 份周报</div>
+<div class="meta">更新至 2026-09-15 · 1 份日报 / 2 份周报</div>
 <div class="tabs"><div class="tab on" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div></div></div>
-<div id="panel-week" class="on"><div class="wk"><h3>2026-W37</h3><h2>跨域趋势</h2>
+<div id="panel-week" class="on"><div class="wk"><h3>2026-W38</h3><h1>科研情报周报分析 — 2026-09-15</h1>
+<h2>跨域趋势</h2>
+<p><strong>1. "世界模型 + 动作条件化"正在从纯 RL/机器人领域向生物医学渗透，且开始与 AI Scientist 治理流程耦合。</strong>
+本周最值得注意的信号是 immune world model（8.0）——它不是简单的"预测模型"，而是把干预编码为动作、把多尺度生物状态编码为结构化状态、学习转移函数，并用 Agent Genesis 做版本化数据清单 + 效应量门 + promote/rollback 的自动治理。与此同时，Policy and World Modeling Co-Training（6.0）在语言 agent 侧做同样的事。这说明"世界模型"已不再只是视频/机器人概念，而是正在成为<strong>扰动响应建模的通用范式</strong>：状态 + 动作 + 转移 + 可解释解码。对你而言，这意味着多模态衰老建模不必再纠结"统一模型 vs 独立模型"，而可以走"共享潜空间 + 模态私有头 + 动作条件转移"的第三条路。</p>
+<p><strong>2. 组织/模态特异时钟的"参考数据集依赖性问题"被正面提出，且疾病状态会系统性扭曲时钟输出。</strong>
+BTEC（8.0）的核心贡献不只是又一个甲基化时钟，而是揭示了肿瘤/瘤旁组织的表观年龄系统性"去相关"（-14~-15 年偏差），并明确指出残差型 EAA 对参考数据集高度依赖。这是一个方法学警告：<strong>任何单模态 aging clock 在扰动/疾病状态下都会失真</strong>。结合 immune world model 的"结构化状态 + 动作编码"思路，跨模态衰老建模的正确姿势可能是把"疾病/扰动"显式建模为动作或协变量，而不是让时钟自己去吸收。</p>
+<p><strong>3. 自监督预训练 + 跨被试/跨域迁移正在成为多个生物医学子领域的共同解法。</strong>
+本周三条 6.0 分条目（视频基础模型物理表征探针、神经接口自监督预训练、策略-世界模型协同训练）看似分散，但共享同一底层逻辑：<strong>用大规模无标注数据学通用表征，再用少量标注做跨域/跨被试适配</strong>。神经接口那条尤其值得注意——"跨被试表征"与单细胞领域的"跨队列/跨供体整合"在数学结构上高度同构。这提示你：单细胞 foundation model 的下一波进展可能来自神经接口/脑机接口领域的跨被试对齐方法，而非纯 scRNA 社区内部。</p>
+<p><strong>4. 亚细胞空转分割（MARC, 7.0）代表空间转录组流程正在从"细胞级"下沉到"亚细胞级"，这对多模态对齐是双刃剑。</strong>
+好处是空间模态的信息粒度提升，可与蛋白组/甲基化的空间分布做更精细对齐；坏处是分割误差会作为系统性噪声进入下游多模态整合。建议在 demo 阶段就把分割不确定性作为模态质量权重纳入。</p>
+<p><strong>5. 跨域宏基因组分类（Metax, 6.0）虽分数不高，但"跨域"二字值得留意。</strong>
+宏基因组与 PBMC 单细胞在"组成性数据 + 参考数据库依赖"上有共同结构，其跨域迁移策略（domain adaptation for taxonomic profiling）可能对跨队列单细胞整合有借鉴意义，属于可迁移的方法学信号。</p>
+<hr />
+<h2>对多模态衰老模型合作的启发</h2>
+<p><strong>启发 1（方法层）：把 immune world model 的"结构化状态 + 独立动作编码 + 门控残差转移"直接作为你多模态衰老模型的架构骨架。</strong>
+具体做法：状态层设计为 Z_pbmc / Z_proteome / Z_methylation / Z_spatial 四个模态私有编码器 + 一个共享潜空间；动作层编码药物、扰动、类器官处理条件、甚至"疾病状态"；转移函数用门控残差网络学习 S_{t+1}=F(S_t, A_t)。这正好同时满足你画像里"持续矫正统一模型"和"每模态独立训练再整合"两条路线——共享潜空间负责整合，模态私有头负责独立训练，动作条件负责新数据进来后的增量更新。可执行第一步：先在公共数据（Parse PBMC + GEO 甲基化 + 公开蛋白组）上搭一个最小 demo，验证共享潜空间是否真的比简单 concat 更好。</p>
+<p><strong>启发 2（数据层）：立即检索 BTEC 探针列表与系数是否公开，并把它作为甲基化模态的基线 + 参考数据集依赖性测试用例。</strong>
+BTEC 的深读笔记明确指出"需查正文/补充材料确认是否公开 BTEC 探针列表与系数"。如果公开，直接纳入你公共数据 demo 的甲基化基线；如果不公开，用其"多队列训练 + 跨祖源评估"流程作为模板自训组织特异时钟。更关键的是：<strong>把 BTEC 报告的"肿瘤去相关"现象作为你多模态模型的压力测试</strong>——如果你的模型在疾病/扰动状态下也出现单模态时钟失真，说明架构需要显式建模扰动；如果没有，说明共享潜空间起到了矫正作用。这是一个低成本、高信息量的验证实验。</p>
+<p><strong>启发 3（实验设计层）：借用 immune world model 的"withhold 整个尺度信息"泛化评估设计，改造为你的缺失模态鲁棒性测试协议。</strong>
+具体做法：在 demo 阶段就设计三组评估——(a) 完整模态输入；(b) withhold 蛋白组；(c) withhold 甲基化。观察共享潜空间的补全能力。同时借用其"跨上下文转移探针"（K562→RPE1、8h→48h）思路，改造为跨队列/跨年龄的 aging clock 验证：训练集用年轻队列，测试集用老年队列，看模型是否学到真正的衰老表征而非队列批次效应。此外，Agent Genesis 的"版本化数据清单 + 预设效应量门 + promote/rollback"治理流程，可直接作为你合作项目在新模态数据进来时的模型更新协议——这解决的是你画像里"何时该合并、何时该回滚"的决策问题，且是现成可抄的工程实践。</p>
+<hr />
+<h2>Registry 增补建议</h2>
+<h3>databases.md</h3>
+<ul>
+<li><strong>BTEC (Breast Tissue-specific Epigenetic Clock)</strong> — 乳腺组织特异甲基化时钟，553 例健康组织训练，需确认探针列表与系数是否公开；作为甲基化模态基线与参考数据集依赖性测试用例。</li>
+<li><strong>Immune68 特征表</strong> — immune world model 自建免疫特征表，配合 TabPFN 使用；需向作者索取。</li>
+<li><strong>Parse PBMC (~10M PBMC)</strong> — 公开 PBMC 单细胞数据，immune world model 的 few-shot 基准；可作为你 PBMC 模态 demo 的公共数据源。</li>
+<li><strong>Metax 参考数据库</strong> — 跨域宏基因组分类工具配套数据库，跨域迁移策略可迁移到跨队列单细胞整合。</li>
+</ul>
+<h3>models.md</h3>
+<ul>
+<li><strong>Immune World Model (PhAI Labs / CUHK)</strong> — 动作条件多尺度免疫世界模型，结构化状态 + 门控残差转移 + 结构化解码器；代码/权重未公开，需联系 Pheng Ann Heng / Ling Yang / Zhenfei Yin / Yingcheng Wu。</li>
+<li><strong>Agent Genesis</strong> — 治理式进化 AI Scientist 流程，版本化数据清单 + 效应量门 + promote/rollback；可作为合作项目模型更新协议模板。</li>
+<li><strong>MARC</strong> — 亚细胞空转细胞分割，Morphology-Aware Regression of Consensus；直接可用于空间转录组流程。</li>
+<li><strong>V-JEPA 系列（视频基础模型）</strong> — JEPA 范式在视频物理表征上的探针研究；对自监督表征学习有参考价值。</li>
+<li><strong>神经接口自监督预训练模型 (Tang et al.)</strong> — 跨被试表征学习，思路可迁移到单细胞跨队列整合。</li>
+</ul>
+<h3>people.md</h3>
+<ul>
+<li><strong>Pheng Ann Heng (CUHK)</strong> — immune world model 通讯作者之一，世界模型 + 生物医学方向。</li>
+<li><strong>Ling Yang (CUHK / PhAI Labs)</strong> — immune world model 通讯作者，AI Scientist + 世界模型方向。</li>
+<li><strong>Zhenfei Yin / Yingcheng Wu</strong> — immune world model 通讯作者，可联系索取代码与冻结配置。</li>
+<li><strong>Garma LD, Pernas S, Fullana B 等</strong> — BTEC 作者团队，甲基化时钟 + 乳腺癌方向，可关注其后续组织特异时钟工作。</li>
+<li><strong>Taoyong Cui, Xi Wang 等</strong> — immune world model 第一作者团队，多尺度免疫建模方向。</li>
+</ul></div>
+<div class="wk"><h3>2026-W37</h3><h2>跨域趋势</h2>
 <ol>
 <li>
 <p><strong>Agent 能力评估正在从"能不能做"转向"压力下还稳不稳"</strong>：RLVR-stress-test 这类工作说明社区开始系统性地质疑 RLVR 的鲁棒性，而不只是刷 benchmark。这对 agentic 科研工作流是必要的基础设施——如果 agent 在扰动下不可靠，就没法托付真实的科研 pipeline。</p>
