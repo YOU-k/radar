@@ -68,7 +68,9 @@ def llm_rerank(items: list[Item]) -> bool:
             "打分从严，宁低勿高：无公开数据/代码的纯关联研究、小作坊项目一律 ≤4 分；"
             "7 分以上只给能直接拿来用的数据集/模型/方法。"
             "综述原则上 ≤5 分，但 journal 字段为知名期刊（Nature/Cell/Science 及其子刊）的高质量综述正常评估，可到 6-7 分。\n"
-            "类型 type 五选一：paper（论文/新闻）/ dataset（数据集/数据库）/ model（模型）/ tool（软件工具）/ other。\n\n"
+            "类型 type 五选一：paper（论文/新闻）/ dataset（数据集/数据库）/ model（模型）/ tool（软件工具）/ other。\n"
+            "dataset/model 的认定从严：必须有真实存在、公开可获取的产物（公开下载链接、GEO/Zenodo 编号、"
+            "HuggingFace 页面、官方开源权重）；只发了论文、数据/权重未公开或「可应要求提供」的一律标 paper。\n\n"
             f"【兴趣画像】\n{profile}\n\n【条目】\n"
             + json.dumps(payload, ensure_ascii=False)
             + '\n\n只输出 JSON 数组，形如 [{"id":0,"score":8,"type":"dataset","reason":"..."}]，不要输出其他内容。'

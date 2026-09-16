@@ -51,7 +51,7 @@ details.deep .deepbody p{margin:4px 0}
 .hide{display:none!important}
 </style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
-<div class="meta">更新至 2026-09-15 · 1 份日报 / 2 份周报</div>
+<div class="meta">更新至 2026-09-16 · 1 份日报 / 2 份周报</div>
 <div class="tabs"><div class="tab on" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div><div class="tab" data-tab="res">资源库</div></div></div>
 <div id="panel-week" class="on"><div class="wk"><h3>2026-W38</h3><h2>衰老与多模态健康模型</h2>
 <p>本周该领域最值得关注的是乳腺组织特异性表观遗传时钟 BTEC：基于 7 项研究、553 例健康乳腺甲基化数据构建，年龄预测精度（r=0.91, MAE=3.0y）优于 Horvath/Hannum 等经典时钟，并揭示肿瘤及瘤旁组织的系统性表观年龄"去相关"现象。对多模态衰老建模而言，它的价值不只是又一个 aging clock，而是提供了"组织/模态特异时钟 + 跨队列校正"的现成范例，以及一个关键警示——疾病/扰动状态会系统性扭曲单模态 clock 输出，提示 demo 阶段就应设计模态私有表征与共享表征分离的架构。需注意其代码/探针系数是否公开尚不明确，直接复用前需确认。此外 Metax 提供了跨域宏基因组分类的可复现方法学工具，属周边可用资源。</p>
@@ -161,16 +161,11 @@ details.deep .deepbody p{margin:4px 0}
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.09646">How Do Video Foundation Models Encode Intuitive Physics? Probing Across Pretraining Paradigms</a><span class="badge mid">6.0</span></div><div class="reason">V-JEPA等视频基础模型物理表征探针，JEPA范式对表征学习有参考价值。</div><div class="meta">arxiv ·  · Samuele Punzo, Niccol\`o Caselli, Ippokratis Pantelidis, Francesco Massafra, Sal</div></div>
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2609.13507">Pretraining for Sample-Efficient Neural Interfaces</a><span class="badge mid">6.0</span></div><div class="reason">神经接口自监督预训练，跨被试表征思路可迁移到单细胞。</div><div class="meta">arxiv ·  · Ben Tang, Zachary Spalding, Gregory B. Cogan</div></div>
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.02388">Policy and World Modeling Co-Training for Language Agents</a><span class="badge mid">6.0</span></div><div class="reason">策略与世界模型协同训练，方法学可迁移到扰动响应建模。</div><div class="meta">arxiv ·  · Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Yanbin Wei, Lingting Z</div></div></div></details></div>
-<div id="panel-res"><div class="wk"><h1>可用资源清单（数据集 / 数据库 / 模型 / 工具）</h1>
-<p>自动累积：每日打分 ≥6 的资源类条目沉淀在此，持续更新。资讯请看日报。</p>
+<div id="panel-res"><div class="wk"><h1>可用资源清单（数据集 / 模型）</h1>
+<p>自动累积：只收确认公开可获取、打分 ≥7 的大数据集和模型，持续更新。资讯请看日报。</p>
 <h2>衰老与多模态健康模型</h2>
 <ul>
-<li><a href="https://doi.org/10.1016/j.cell.2026.08.024">Metax enables accurate cross-domain taxonomic profiling of metagenomes.</a> — Metax跨域宏基因组分类工具，有代码可用的方法学 <code>6.0</code> · tool · europepmc · 2026-09-15</li>
 <li><a href="https://doi.org/10.1080/15592294.2026.2714582">A breast tissue-specific epigenetic clock provides accurate chronological age predictions and reveals de-correlation of age and DNA methylation in tumor-adjacent and tumor samples.</a> — 乳腺组织特异甲基化时钟，公开数据构建，可直接用于aging clock参考。 <code>8.0</code> · model · europepmc · 2026-09-15</li>
-</ul>
-<h2>生物医学数据库 / 模型 / 部署</h2>
-<ul>
-<li><a href="https://arxiv.org/abs/2609.13665">MARC: Morphology-Aware Regression of Consensus for Cell Segmentation in Subcellular Spatial Transcriptomics</a> — 亚细胞空转细胞分割新方法，直接可用于空间转录组流程。 <code>7.0</code> · tool · arxiv · 2026-09-15</li>
 </ul></div></div>
 <script>
 const tabs=[...document.querySelectorAll('.tab')];

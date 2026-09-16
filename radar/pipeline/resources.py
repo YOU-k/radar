@@ -1,7 +1,9 @@
 """资源清单：数据集 / 数据库 / 模型 / 工具 的长期沉淀，与日报资讯分流。
 
 日报是流动的（当天看过就过），resources.md 是累积的（长期留存、持续更新）。
-每天 daily 跑完，把 ≥6 分的资源类条目追加进来；同 URL 不重复。
+每天 daily 跑完，把达标的数据集/模型条目追加进来；同 URL 不重复。
+门槛从严：只收 LLM 判定为 dataset/model 且 ≥7 分的——即确实存在、
+公开可获取、能直接拿来用的大数据集或模型；普通方法论文和小工具不进清单。
 """
 from __future__ import annotations
 
@@ -12,16 +14,15 @@ from ..config import ROOT, load_sources
 from ..schema import Item
 
 FILE = ROOT / "resources.md"
-RESOURCE_KINDS = {"dataset", "model", "tool"}
-RESOURCE_SOURCES = {"huggingface", "github"}  # 这两个源天然是资源
-MIN_SCORE = 6.0
+RESOURCE_KINDS = {"dataset", "model"}
+MIN_SCORE = 7.0
 
-HEADER = ("# 可用资源清单（数据集 / 数据库 / 模型 / 工具）\n\n"
-          "自动累积：每日打分 ≥6 的资源类条目沉淀在此，持续更新。资讯请看日报。\n")
+HEADER = ("# 可用资源清单（数据集 / 模型）\n\n"
+          "自动累积：只收确认公开可获取、打分 ≥7 的大数据集和模型，持续更新。资讯请看日报。\n")
 
 
 def is_resource(it: Item) -> bool:
-    return it.extra.get("kind") in RESOURCE_KINDS or it.source in RESOURCE_SOURCES
+    return it.extra.get("kind") in RESOURCE_KINDS
 
 
 def append_resources(items: list[Item], day: date) -> int:
