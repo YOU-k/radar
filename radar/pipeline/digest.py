@@ -41,7 +41,9 @@ def write_digest(items: list[Item], day: date) -> Path:
             reason = f" — {it.reason_zh}" if it.reason_zh else ""
             tag = "〔资源〕" if is_resource(it) else ""
             lines.append(f"- **[{it.title}]({it.url})** `{it.score:.1f}`{tag}{reason}")
-            lines.append(f"  <sub>{it.source} · {it.published} · {it.authors[:80]}</sub>")
+            journal = it.extra.get("journal")
+            src = f"{journal} · {it.source}" if journal else it.source
+            lines.append(f"  <sub>{src} · {it.published} · {it.authors[:80]}</sub>")
             if it.deepread:
                 body = "\n".join(f"  {l}" for l in it.deepread.splitlines())
                 lines.append(f"  <details markdown=\"1\"><summary>深读</summary>\n\n{body}\n\n  </details>")

@@ -167,16 +167,23 @@ details.deep .deepbody p{margin:4px 0}
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2609.13507">Pretraining for Sample-Efficient Neural Interfaces</a><span class="badge mid">6.0</span></div><div class="reason">神经接口自监督预训练，跨被试表征思路可迁移到单细胞。</div><div class="meta">arxiv ·  · Ben Tang, Zachary Spalding, Gregory B. Cogan</div></div>
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.02388">Policy and World Modeling Co-Training for Language Agents</a><span class="badge mid">6.0</span></div><div class="reason">策略与世界模型协同训练，方法学可迁移到扰动响应建模。</div><div class="meta">arxiv ·  · Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Yanbin Wei, Lingting Z</div></div></div></details></div>
 <div id="panel-res"><div class="wk"><h1>可用资源清单（数据集 / 模型）</h1>
-<p>自动累积：只收确认公开可获取、打分 ≥7 的大数据集和模型，持续更新。资讯请看日报。</p>
-<h2>衰老与多模态健康模型</h2>
+<p>自动累积：只收确认公开可获取、打分 ≥7 的大数据集和模型，按使用场景分组，持续更新。资讯请看日报。</p>
+<h2>单细胞 / 空间组学</h2>
 <ul>
-<li><a href="https://doi.org/10.1080/15592294.2026.2714582">A breast tissue-specific epigenetic clock provides accurate chronological age predictions and reveals de-correlation of age and DNA methylation in tumor-adjacent and tumor samples.</a> — 乳腺组织特异甲基化时钟，公开数据构建，可直接用于aging clock参考。 <code>8.0</code> · model · europepmc · 2026-09-15</li>
+<li><a href="https://doi.org/10.64898/2026.09.08.750024">LucaCell: a sequence-centric foundation model for cross-species single-cell analysis</a> — 跨物种单细胞序列基础模型，适合做细胞表征微调基线
+  <code>model</code> · 单细胞转录组（序列） · 跨物种 · 获取：预印本，权重待确认 · <code>7.0</code> 分 · 2026-09-16</li>
+<li><a href="https://doi.org/10.64898/2026.09.11.748700">Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence</a> — 跨组织单细胞长读长异构体图谱，含衰老维度，可做异构体层分析参考
+  <code>dataset</code> · 单细胞长读长转录组 · 跨组织（Tabula 系） · 获取：公开数据 · <code>7.0</code> 分 · 2026-09-16</li>
 </ul>
-<h2>生物医学数据库 / 模型 / 部署</h2>
+<h2>衰老时钟 / 表观遗传</h2>
 <ul>
-<li><a href="https://doi.org/10.64898/2026.09.13.751267">A massively parallel synthetic gene atlas for learning compact cis-regulatory grammar across cellular contexts</a> — 大规模合成基因图谱公开数据集，约6万顺式调控元件，可复用。 <code>7.0</code> · dataset · europepmc · 2026-09-16</li>
-<li><a href="https://doi.org/10.64898/2026.09.11.748700">Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence</a> — 跨组织单细胞长读长异构体图谱，公开数据，契合单细胞与衰老方向。 <code>7.0</code> · dataset · europepmc · 2026-09-16</li>
-<li><a href="https://doi.org/10.64898/2026.09.08.750024">LucaCell: a sequence-centric foundation model for cross-species single-cell analysis</a> — 跨物种单细胞序列基础模型，预训练权重若公开可直接微调，契合单细胞方向。 <code>7.0</code> · model · europepmc · 2026-09-16</li>
+<li><a href="https://doi.org/10.1080/15592294.2026.2714582">A breast tissue-specific epigenetic clock provides accurate chronological age predictions and reveals de-correlation of age and DNA methylation in tumor-adjacent and tumor samples.</a> — 乳腺组织特异甲基化时钟（BTEC），跨祖源稳健，组织特异时钟参考
+  <code>model</code> · DNA甲基化（450K/EPIC） · 553例健康乳腺 · 获取：训练数据为GEO公共集，系数待确认 · <code>8.0</code> 分 · 2026-09-15</li>
+</ul>
+<h2>基因组 / 调控</h2>
+<ul>
+<li><a href="https://doi.org/10.64898/2026.09.13.751267">A massively parallel synthetic gene atlas for learning compact cis-regulatory grammar across cellular contexts</a> — 大规模合成顺式调控元件图谱，适合训练调控语法模型
+  <code>dataset</code> · MPRA合成调控元件 · ~6万元件 · 获取：公开数据 · <code>7.0</code> 分 · 2026-09-16</li>
 </ul></div></div>
 <script>
 const tabs=[...document.querySelectorAll('.tab')];
