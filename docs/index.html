@@ -51,7 +51,7 @@ details.deep .deepbody p{margin:4px 0}
 .hide{display:none!important}
 </style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
-<div class="meta">更新至 2026-09-17 · 3 份日报 / 2 份周报 / 0 份专题</div>
+<div class="meta">更新至 2026-09-17 · 3 份日报 / 2 份周报 / 1 份专题</div>
 <div class="tabs"><div class="tab on" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div><div class="tab" data-tab="report">专题报告</div><div class="tab" data-tab="res">资源库</div></div></div>
 <div id="panel-week" class="on"><div class="wk"><h3>2026-W38</h3><h2>衰老与多模态健康模型</h2>
 <p>本周该领域最值得关注的是乳腺组织特异性表观遗传时钟 BTEC：基于 7 项研究、553 例健康乳腺甲基化数据构建，年龄预测精度（r=0.91, MAE=3.0y）优于 Horvath/Hannum 等经典时钟，并揭示肿瘤及瘤旁组织的系统性表观年龄"去相关"现象。对多模态衰老建模而言，它的价值不只是又一个 aging clock，而是提供了"组织/模态特异时钟 + 跨队列校正"的现成范例，以及一个关键警示——疾病/扰动状态会系统性扭曲单模态 clock 输出，提示 demo 阶段就应设计模态私有表征与共享表征分离的架构。需注意其代码/探针系数是否公开尚不明确，直接复用前需确认。此外 Metax 提供了跨域宏基因组分类的可复现方法学工具，属周边可用资源。</p>
@@ -175,7 +175,303 @@ details.deep .deepbody p{margin:4px 0}
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.09646">How Do Video Foundation Models Encode Intuitive Physics? Probing Across Pretraining Paradigms</a><span class="badge mid">6.0</span></div><div class="reason">V-JEPA等视频基础模型物理表征探针，JEPA范式对表征学习有参考价值。</div><div class="meta">arxiv ·  · Samuele Punzo, Niccol\`o Caselli, Ippokratis Pantelidis, Francesco Massafra, Sal</div></div>
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2609.13507">Pretraining for Sample-Efficient Neural Interfaces</a><span class="badge mid">6.0</span></div><div class="reason">神经接口自监督预训练，跨被试表征思路可迁移到单细胞。</div><div class="meta">arxiv ·  · Ben Tang, Zachary Spalding, Gregory B. Cogan</div></div>
 <div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2606.02388">Policy and World Modeling Co-Training for Language Agents</a><span class="badge mid">6.0</span></div><div class="reason">策略与世界模型协同训练，方法学可迁移到扰动响应建模。</div><div class="meta">arxiv ·  · Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Yanbin Wei, Lingting Z</div></div></div></details></div>
-<div id="panel-report"><div class="empty">暂无专题报告。</div></div>
+<div id="panel-report"><div class="wk"><h3>2026-09-17-virtual-cell</h3><h1>虚拟细胞（Virtual Cell）近 6 个月研究调研报告</h1>
+<blockquote>
+<p>说明：本报告严格基于所提供的 77 篇文献抽取结果撰写。产业新闻部分因输入为空，按写作要求标注"本期无足够信息"。所有定量结果均保留原文数字，未引入抽取结果之外的引用。</p>
+</blockquote>
+<hr />
+<h2>摘要（TL;DR）</h2>
+<ol>
+<li><strong>虚拟细胞正从"表征模型"转向"世界模型/生成模拟"</strong>：CellOS（多视图联合嵌入世界模型）、Lingshu-Cell（掩码离散扩散）、Chreode（一步式时序动力学）、U-Pert（非平衡生成动力学）等一批工作明确以"细胞世界模型"为目标，强调干预条件下的状态转移而非静态表征。</li>
+<li><strong>扰动响应预测进入"大基准 + 严格反思"阶段</strong>：至少 10 项基准/评估工作集中出现（Empirical Comparison、VCBench、AssayBench、scArchon、STGBench、SBB 原则、PerturbHD、scContam、SVC-Probe、SCMBench），核心结论是<strong>现有基准高估了模型能力</strong>。</li>
+<li><strong>最刺眼的负面证据</strong>：29 个数据集 7170 个扰动中 <strong>65% 不可靠、11% 共享、24% 特异</strong>；PBMC 3k 与 CELLxGENE 人胰岛图谱存在 <strong>80.4% 预训练重叠证据</strong>；逐细胞 macro-F1 仅 <strong>0.2–0.3</strong>；无神经网络的解析校准方法可<strong>匹配或超越</strong>深度模型。</li>
+<li><strong>多模态整合成为主战场</strong>：HoloCell（表观+转录+蛋白三模态）、CellxPert（scRNA/ATAC/CITE/MERFISH/IMC）、MultiVCDiff（形态+转录组）、StateXDiff（多模态扩散）等，直接对应"缺失模态处理"与"跨模态对齐"需求。</li>
+<li><strong>蛋白质组虚拟细胞出现里程碑</strong>：Nature 的 ProteinTalks 基于 <strong>3800 万条时序蛋白丰度测量</strong>，是本期唯一大规模时序蛋白组资源，与衰老/蛋白组方向高度相关。</li>
+<li><strong>Agent 化科研工作流密集落地</strong>：VCHarness（自主 AI 智能体+基础模型）、CellScientist（双空间分层编排）、AblateCell（复现-消融智能体）、VCR-Agent（多智能体验证式推理）构成一条清晰的"自动化建模"线索。</li>
+<li><strong>评测揭示"癌细胞系异质性"是规模化筛选的首要瓶颈</strong>：UniPert-G2CP 扩展到 162 细胞系/32039 化合物/12328 基因后，正常与原代细胞系 PCC <strong>0.480</strong> vs 癌细胞系 <strong>0.296</strong>（p=3.93e-11）。</li>
+<li><strong>产业侧本期无足够信息</strong>：输入未提供任何公司、合作或授权新闻，无法评估转化动态。</li>
+</ol>
+<hr />
+<h2>背景与定义</h2>
+<p>虚拟细胞（virtual cell）指以计算模型模拟细胞结构、状态与功能，并预测细胞对遗传、化学、细胞因子等扰动响应的一类方法体系。本期文献显示该概念已从早期 E-Cell、CellPACK 等机制性平台，演进为以<strong>单细胞/空间多组学数据 + 基础模型 + 生成式建模</strong>为主流技术栈的预测性框架。多篇工作（What Makes a Virtual Cell a World Model?、The next-generation virtual cell、Virtual cell: Current perspectives）尝试给出更严格的形式化定义：虚拟细胞世界模型（VCWM）被刻画为具有生物与观测上下文、干预条件转移和时变结构的"维持性细胞状态"，并明确指出三个反复出现的缺口——<strong>表征不等于动力学、预测不等于干预、多模态不等于多尺度世界建模</strong>。同时，Virtual cell/virtual cell like 一文指出该术语在 HIV 研究中尚未标准化，但多尺度、多模态计算模拟的核心概念已深入前沿。</p>
+<hr />
+<h2>关键时间线</h2>
+<h3>2026 年 3 月</h3>
+<ul>
+<li><strong>03-23</strong> CellFluxRL：用强化学习对图像型虚拟细胞生成模型做后训练，设计生物功能、结构有效性、形态正确性三类共 7 个奖励，在所有奖励指标上持续优于 CellFlux。</li>
+<li><strong>03-26</strong> Lingshu-Cell：掩码离散扩散生成模型，覆盖约 18000 个基因，直接在离散 token 空间建模单细胞转录组。</li>
+<li><strong>03-28</strong> Virtual cell/virtual cell like（HIV/AIDS 治疗综述）。</li>
+<li>另有 Evaluating the Utilities of Foundation Models in Single-Cell Data Analysis（十个基础模型/八任务）。</li>
+</ul>
+<h3>2026 年 4 月</h3>
+<ul>
+<li><strong>04-07</strong> T-World 虚拟人心肌细胞（Circulation Research），数据驱动微分方程描述性别特异性兴奋-收缩耦联。</li>
+<li><strong>04-13</strong> Towards Autonomous Mechanistic Reasoning in Virtual Cells：发布 VC-TRACES 数据集，提出 VCR-Agent 多智能体框架。</li>
+<li><strong>04-14</strong> VCHarness：自主 AI 智能体 + 生物基础模型，自动探索架构与训练流程。</li>
+<li><strong>04-16</strong> Intermediate Layers Encode Optimal Biological Representations：轨迹最优层较末层 +31%。</li>
+<li><strong>04-21</strong> AblateCell：面向虚拟细胞仓库的"先复现再消融"智能体。</li>
+<li><strong>04-22</strong> AROMA（多模态增强推理，构建两个知识图谱）；Signal, Bounds, and Baselines（SBB 评测原则）。</li>
+<li><strong>04-25</strong> Are Current AI Virtual Cell Models Useful for Scientific Discovery?：提出 PerturbHD 命中发现评估框架。</li>
+<li><strong>04-28</strong> scPert（多模态 LLM 知识融合 Transformer）；From genes to germ layers（原肠胚虚拟孪生）。</li>
+<li><strong>04-30</strong> Benchmarking virtual cell models for in-the-wild perturbation response；CellxPert（多组学基础模型 + MCMC 引导，154 类细胞注释标签空间）。</li>
+</ul>
+<h3>2026 年 5 月</h3>
+<ul>
+<li><strong>05-02</strong> SCMBench：23 种方法的多组学整合基准。</li>
+<li><strong>05-08</strong> CellScientist：双空间分层编排，闭环修正虚拟细胞模型。</li>
+<li><strong>05-11</strong> AssayBench：assay 级别 LLM/智能体虚拟细胞基准。</li>
+<li><strong>05-12</strong> scArchon：基于 Snakemake 的可复现基准平台，6 个 scRNA-seq 数据集。</li>
+<li><strong>05-15</strong> StateXDiff：细胞状态上下文化多模态扩散。</li>
+<li><strong>05-21</strong> MultiVCDiff：1118 化学 + 130 遗传扰动、4 数据集，零样本下优于单模态基线。</li>
+<li><strong>05-27</strong> Virtual cell: Current perspectives and future prospects（综述）；Chreode：一步式细胞世界模型。</li>
+<li><strong>05-28</strong> Computational blueprints for cell fate programming（综述）。</li>
+</ul>
+<h3>2026 年 6 月</h3>
+<ul>
+<li><strong>06-07/06-11</strong> HoloCell：首个面向表观/转录/蛋白三模态的生成式基础模型。</li>
+<li><strong>06-08/06-11</strong> OCOO-T：极简 flow matching 虚拟细胞模型（arXiv 与 europepmc 双版本）。</li>
+<li><strong>06-09</strong> Evaluating the role of pretraining dataset size and diversity：2220 万细胞、400 模型、6400 实验，性能随数据规模趋于平台。</li>
+<li><strong>06-15/06-18</strong> Benchmarking gene expression reconstruction from single-cell latent representations；VCBench（七维度中五维可评测）。</li>
+<li><strong>06-16/06-22</strong> ImmuneNavi：AI 虚拟细胞免疫恢复模型，配对 PBMC 单细胞转录组，用于中药成分筛选。</li>
+<li><strong>06-18/06-23</strong> CellOS：多视图联合嵌入世界模型，三阶段训练策略。</li>
+<li><strong>06-26</strong> SVC-Probe：空间基础模型嵌入扰动泛化评估，98.6% 三方一致性。</li>
+<li><strong>06-30/07-04</strong> U-Pert：非平衡生成动力学，从非配对单细胞快照学习扰动动力学。</li>
+</ul>
+<h3>2026 年 7 月</h3>
+<ul>
+<li><strong>07-01</strong> scDifformer（NAR）：扩散后训练 Transformer，跨 7 个组织基准；STGBench：空间 DNA-RNA 测序级模拟器。</li>
+<li><strong>07-06</strong> Score Distributions, Not Cells：逐细胞 macro-F1 仅 0.2–0.3。</li>
+<li><strong>07-08</strong> Universal cell embedding（UCE，Nature）；Counterfactual Diffusion Modeling（SPAD-CFR，空间点云反事实扩散）。</li>
+<li><strong>07-12</strong> OCellus：基于 Qwen3.5-9B 的 90 亿参数语言模型，22 项生物任务，EvenClock 空间编码。</li>
+<li><strong>07-16</strong> scYeast：首个酵母单细胞转录组基础模型。</li>
+<li><strong>07-17</strong> A Neural-Network-Free Calibration：AMM-SimWMag 匹配或超越 scGen 等深度模型。</li>
+<li><strong>07-21</strong> What Makes a Virtual Cell a World Model?；Auditing pretraining contamination（scContam）。</li>
+<li><strong>07-22</strong> An Empirical Comparison of Virtual Cell Models：11 种方法/5 模型家族/6 类任务/9 个数据集。</li>
+<li><strong>07-24</strong> The next-generation virtual cell（Life Sciences 综述）。</li>
+<li><strong>07-25</strong> Integrative AI-Enabled Virtual Cell Modeling（CD8⁺ T 细胞潜在效应状态）；UniPert-G2CP（Cell）。</li>
+<li><strong>07-30</strong> The organ-on-a-chip-AI virtual cell loop（Science Bulletin）。</li>
+</ul>
+<h3>2026 年 8 月</h3>
+<ul>
+<li><strong>08-01</strong> 西湖秋季 AI 蛋白质组学与虚拟细胞研讨会综述；多模态肿瘤边界聚类识别（Golden Eyes 3.0）。</li>
+<li><strong>08-03</strong> CellPrism 可视分析系统；Scaling an Autoregressive Transformer for Single-Cell Generation。</li>
+<li><strong>08-07</strong> GeneGeoFlow：控制锚定残差流匹配，以基因几何为条件。</li>
+<li><strong>08-09</strong> Human-Guided Causal Knowledge Injection for Virtual Cells。</li>
+<li><strong>08-10/08-15</strong> Cancer Cell Line Heterogeneity：162 细胞系/32039 化合物/12328 基因，正常细胞 PCC 0.480 vs 癌细胞 0.296。</li>
+<li><strong>08-11/08-12</strong> Reliable single-cell perturbations：29 数据集/7170 扰动，65% 不可靠。</li>
+<li><strong>08-26</strong> Artificial intelligence virtual bone organoids（AIVBOs）。</li>
+<li><strong>08-29</strong> scPILOT：深度生成模型 + 最优传输，跨生物情境扰动响应预测。</li>
+</ul>
+<h3>2026 年 9 月</h3>
+<ul>
+<li><strong>09-01</strong> TFActProfiler：260 万 TF-mRNA 相互作用资源。</li>
+<li><strong>09-08/09-10</strong> PHAROS：将预训练扰动模型转为靶向药物组合搜索引擎。</li>
+<li><strong>09-09</strong> An operational perturbation proteomics-based virtual cell model（Nature，ProteinTalks）；A systematic comparison of single-cell perturbation response prediction models（Science Advances，13 方法/25 数据集/24 指标）。</li>
+<li><strong>09-14</strong> scKITE：知识增强单细胞基础模型。</li>
+<li><strong>09-17</strong> Toward AI Virtual Cells for Hepatology（综述）。</li>
+</ul>
+<hr />
+<h2>使用的技术</h2>
+<h3>1. 生成式建模（扩散 / 流匹配 / 非平衡动力学）</h3>
+<ul>
+<li><strong>Lingshu-Cell</strong>：掩码离散扩散模型，直接在离散 token 空间建模单细胞转录组状态分布，覆盖约 18000 个基因，无需先验即可捕捉全转录组表达依赖，支持扰动条件下的模拟。</li>
+<li><strong>OCOO-T</strong>：极简 flow matching 模型，预测单细胞对遗传、化学和细胞因子扰动的转录响应；刻意避免辅助细胞状态编码器、层次 VAE、专用 Transformer 编解码模块或基因互作先验，以提升可扩展性与泛化性。</li>
+<li><strong>GeneGeoFlow</strong>：控制锚定残差流匹配，以生物网络导出的基因几何为条件，区分稳定关联与干预特异的响应方向和幅度，用于未见遗传扰动和药物组合预测。</li>
+<li><strong>StateXDiff</strong>：细胞状态上下文化多模态扩散，先学习解耦的多模态细胞状态表征再建模条件分布，缓解仅依赖 RNA、条件分布漂移和低信噪比导致的伪相关。</li>
+<li><strong>MultiVCDiff</strong>：统一多模态生成扩散框架，从化学或遗传扰动同时预测高保真细胞形态图像和转录组谱，无需扰动后实测数据；在 1118 个化学 + 130 个遗传扰动、4 个数据集上训练，严格零样本设置下优于最先进单模态基线。</li>
+<li><strong>U-Pert</strong>：非平衡生成框架，从非配对单细胞快照学习条件与情境依赖的扰动动力学，联合建模转录组状态转移与细胞数量变化，刻画增殖、凋亡、选择导致的非质量守恒响应。</li>
+<li><strong>scDifformer</strong>：上下文感知 Transformer + 去噪扩散模块，三阶段（掩码语言模型预训练、扩散驱动后训练、下游微调），跨 7 个组织基准测试。</li>
+<li><strong>CellFluxRL</strong>：用强化学习对图像型生成虚拟细胞模型后训练，7 个奖励（生物功能、结构有效性、形态正确性三类），所有奖励指标优于 CellFlux，测试时扩展进一步提升。</li>
+</ul>
+<h3>2. 世界模型与动力学建模</h3>
+<ul>
+<li><strong>CellOS</strong>：多视图基础模型，从配对的表达与感知视图学习细胞表征；三阶段训练（因果细胞句子语言建模、保函数稠密到专家混合扩展、潜在空间对齐），目标是学习可表征、查询和预测细胞状态的世界模型。</li>
+<li><strong>Chreode</strong>：一步式细胞世界模型，结构化残差转移算子预测动作条件下的细胞状态转变，将分布演化从推理时转移到训练时，实现单次前向生成；受 Waddington 景观启发，分解为下坡景观流、切向旋转动态和随机扩散。</li>
+<li><strong>What Makes a Virtual Cell a World Model?</strong>：提出 VCWM 结构化评估框架，形式化为具有生物与观测上下文、干预条件转移和时变结构的维持性细胞状态，给出三个动机实验与路线图。</li>
+</ul>
+<h3>3. 基础模型与表征学习</h3>
+<ul>
+<li><strong>UCE（Universal Cell Embedding）</strong>：自监督跨物种、跨组织大规模细胞数据训练，构建统一生物潜空间，捕捉重要生物变异并抵抗实验噪声，新细胞无需标注即可嵌入（Nature）。</li>
+<li><strong>HoloCell</strong>：首个面向表观基因组、转录组和蛋白质组三大单细胞组学模态的生成式基础模型，联合表示学习与生成建模，稳健应对模态缺失异质性。</li>
+<li><strong>CellxPert</strong>：可扩展多模态基础模型，在共同表示空间统一单细胞和空间多组学，联合编码转录组、染色质可及性和表面蛋白，纳入 MERFISH 和成像质谱空间层；支持 154 类细胞注释、LoRA 微调、全基因组转录组扰动响应预测。</li>
+<li><strong>scYeast</strong>：首个酵母单细胞转录组基础模型，非对称并行架构将转录调控信息注入 Transformer 注意力机制。</li>
+<li><strong>scKITE</strong>：知识增强单细胞基础模型，通过轻量辅助解码器将细胞级文本注释与基因级调控监督融入共享 Transformer 编码器，预训练后丢弃解码器。</li>
+<li><strong>OCellus</strong>：基于 Qwen3.5-9B 的 90 亿参数语言模型，22 项生物任务微调；EvenClock 将二维空间坐标编码为 18 个钟面扇区文本，统一支持单细胞、空间与扰动生物学及自然语言推理。</li>
+<li><strong>Intermediate Layers Encode Optimal Biological Representations</strong>：系统评估 scFoundation 和 Tahoe-X1 各层表征，轨迹在 60% 深度达峰（较末层 +31%），扰动最优层随 T 细胞激活状态偏移 0–96%，静息细胞中首层优于所有深层。</li>
+<li><strong>Scaling an Autoregressive Transformer for Single-Cell Generation</strong>：因果 Transformer + 学习型量化 VAE 分词器，交叉熵损失训练，评估生成分布生物保真度并刻画预训练损失缩放行为。</li>
+</ul>
+<h3>4. 多模态整合与缺失模态处理</h3>
+<ul>
+<li><strong>HoloCell</strong>（见上）、<strong>CellxPert</strong>（见上）、<strong>StateXDiff</strong>（见上）、<strong>MultiVCDiff</strong>（见上）。</li>
+<li><strong>SCMBench</strong>：23 种方法在单细胞多组学整合中的基准，评估整合准确性、生物标志物检测、轨迹推断和批次效应校正，揭示基础模型相较专用模型的效能与局限。</li>
+<li><strong>STGBench</strong>：测序级空间 DNA-RNA 模拟器，在用户定义二维组织网格上生成配对 DNA-seq BAM 与匹配基因表达矩阵，支持多组学与虚拟细胞导向的多模态基准测试。</li>
+</ul>
+<h3>5. Agent / LLM 驱动的自动化建模</h3>
+<ul>
+<li><strong>VCHarness</strong>：将 AI 编码智能体与多模态生物基础模型结合，自动探索架构与训练流程，构建遗传和化学扰动到转录响应的预测模型，以极少人工干预自动生成、评估和优化模型。</li>
+<li><strong>CellScientist</strong>：双空间分层编排框架，耦合高层假设空间与低层可执行实现空间，使预测偏差能在建模假设、表征设计、实现或任务约束等层级间传播反馈，支持闭环修正。</li>
+<li><strong>AblateCell</strong>：面向虚拟细胞仓库的"先复现再消融"智能体，自动配置环境、解决依赖与数据问题、重跑官方评估以端到端复现报告基线，随后闭环消融检验组件重要性。</li>
+<li><strong>VCR-Agent</strong>：多智能体框架，将生物推理表示为可系统验证和证伪的机制动作图，结合有生物依据的知识检索与验证器过滤，发布 VC-TRACES 数据集。</li>
+<li><strong>AROMA</strong>：增强推理多模态架构，整合文本证据、图拓扑信息和蛋白序列特征建模扰动-靶点依赖关系，两阶段优化，构建两个知识图谱和扰动推理数据集。</li>
+<li><strong>Human-Guided Causal Knowledge Injection</strong>：基因相似度感知的因果图可视化 + 混合优化算法，引入人工引导修正因果图。</li>
+</ul>
+<h3>6. 扰动响应预测（非生成式 / 迁移学习）</h3>
+<ul>
+<li><strong>UniPert-G2CP</strong>：两阶段深度学习框架，统一多模态分子扰动表示，实现遗传到化学扰动的表型迁移学习，桥接遗传与化学筛选（Cell）。</li>
+<li><strong>scPILOT</strong>：查询条件化框架，判别器辅助训练学习生成式隐表示，借助潜在最优传输将已观测扰动响应迁移到新生物情境（细胞类型、患者、物种）。</li>
+<li><strong>scPert</strong>：基于 Transformer 的多模态框架，融合大语言模型嵌入预测单细胞遗传扰动效应。</li>
+<li><strong>PHAROS</strong>：将预训练单细胞扰动模型转化为靶向药物组合搜索引擎，逐个预测药物作用下细胞群变化再串联模拟组合，无需重新训练；在两个独立组合扰动数据集中恢复精确或机制匹配的双药响应。</li>
+<li><strong>AMM-SimWMag</strong>：无神经网络解析校准方法，将 scGen 优势分解为每类型响应幅度和每基因响应方向两个无泄漏解析部分，加入每基因仿射矩匹配；在 4 数据集、3 类生物学、2 种 LOCO 轴、九指标评估下匹配或超越深度模型。</li>
+<li><strong>TFActProfiler</strong>：整合 ChIP、motif 和人工注释等异质先验与大规模 bulk 及单细胞 RNA-seq 图谱，学习带符号定量 TF-mRNA 调控系数，构建 2,606,176 个带符号 TF-mRNA 相互作用资源，TF 敲低基准中优于常用 regulon 资源。</li>
+</ul>
+<h3>7. 空间与形态学建模</h3>
+<ul>
+<li><strong>SPAD-CFR</strong>：将组织视为包含细胞分子谱和物理坐标的空间点云，采用 Pearl 三步反事实工作流进行空间靶向重编程。</li>
+<li><strong>SVC-Probe</strong>：结合亚细胞嵌入图谱稳定性、Mondrian 邻域图和基础模型扰动探针，评估荧光显微图像空间基础模型嵌入在药物处理下的稳定性、邻域重连与质心预测；应用于含 462 个抗体标签的 CM4AI MDA-MB-468 化学扰动图谱与 SubCell 1536 维嵌入，98.6% 三方一致性。</li>
+<li><strong>CellPrism</strong>：可视分析系统，帮助研究者交互式分析基因扰动预测结果，应对扰动空间组合爆炸与细胞特异性响应复杂问题。</li>
+</ul>
+<h3>8. 机制性 / 微分方程 / 多范式智能体</h3>
+<ul>
+<li><strong>T-World 虚拟人心肌细胞</strong>：数据驱动微分方程描述性别特异性兴奋-收缩耦联、机械收缩、β 肾上腺素信号及其细胞靶点效应。</li>
+<li><strong>From genes to germ layers</strong>：以智能体驱动的多范式方法构建原肠胚虚拟孪生。</li>
+<li><strong>AIVBOs</strong>：以虚拟细胞为基本单元，融合多模态组学数据与生物物理约束，构建 AI 虚拟骨器官oid，目前仍处早期构想阶段。</li>
+</ul>
+<hr />
+<h2>数据</h2>
+<h3>大规模扰动资源</h3>
+<ul>
+<li><strong>ProteinTalks / 时序扰动蛋白质组</strong>：超过 <strong>3800 万条</strong>时序蛋白丰度测量，来自系统扰动的乳腺癌细胞系，是本期唯一的超大规模时序蛋白组资源（Nature）。</li>
+<li><strong>UniPert-G2CP 扩展平台</strong>：<strong>162 个细胞系、32039 个化合物、12328 个基因</strong>输出。</li>
+<li><strong>MultiVCDiff trimodal 语料</strong>：<strong>1118 个化学扰动 + 130 个遗传扰动</strong>，4 个数据集。</li>
+<li><strong>TFActProfiler</strong>：<strong>2,606,176 个</strong>带符号 TF-mRNA 相互作用。</li>
+<li><strong>Reliable single-cell perturbations</strong>：<strong>29 个数据集、7170 个扰动</strong>。</li>
+<li><strong>Evaluating pretraining dataset size</strong>：<strong>2220 万细胞</strong>语料、<strong>400 个模型</strong>、<strong>6400 次实验</strong>。</li>
+<li><strong>A systematic comparison</strong>：<strong>13 种方法、25 个数据集、24 个指标</strong>。</li>
+<li><strong>Empirical Comparison of Virtual Cell Models</strong>：<strong>11 种方法、5 个模型家族、6 类任务、9 个公开数据集</strong>。</li>
+</ul>
+<h3>多模态 / 空间数据</h3>
+<ul>
+<li><strong>HoloCell</strong>：单细胞表观、转录、蛋白三模态。</li>
+<li><strong>CellxPert</strong>：scRNA / ATAC / CITE / MERFISH / IMC。</li>
+<li><strong>STGBench</strong>：配对 DNA-seq BAM 与表达矩阵，二维组织网格。</li>
+<li><strong>SVC-Probe</strong>：CM4AI MDA-MB-468 化学扰动图谱（462 抗体标签）+ SubCell 1536 维嵌入。</li>
+<li><strong>Integrative AI Virtual Cell（CD8⁺ T）</strong>：单细胞 RNA 测序 + 配对 TCR 测序。</li>
+<li><strong>ImmuneNavi</strong>：配对 PBMC 单细胞转录组。</li>
+<li><strong>Lingshu-Cell</strong>：约 18000 基因的单细胞转录组。</li>
+<li><strong>scDifformer</strong>：大规模多模态单细胞数据，7 个组织。</li>
+<li><strong>OCellus</strong>：22 项生物任务。</li>
+<li><strong>scYeast</strong>：大规模酵母单细胞转录组。</li>
+<li><strong>UCE</strong>：跨物种多组织单细胞数据。</li>
+<li><strong>SCMBench</strong>：23 种方法、多组学数据。</li>
+<li><strong>scArchon</strong>：6 个代表性 scRNA-seq 数据集。</li>
+<li><strong>VCBench</strong>：五个基础模型、多数据集。</li>
+<li><strong>CellxPert</strong>：154 细胞类型标签空间。</li>
+</ul>
+<h3>知识资源与数据集发布</h3>
+<ul>
+<li><strong>VC-TRACES</strong>（VCR-Agent 发布）。</li>
+<li><strong>AROMA</strong>：两个知识图谱 + 扰动推理数据集。</li>
+<li><strong>TFActProfiler</strong>：TF 调控图谱资源。</li>
+<li><strong>PerturbHD</strong>：命中发现评估框架（非数据集，但定义了评估数据需求）。</li>
+</ul>
+<hr />
+<h2>应用场景</h2>
+<h3>1. 药物发现与虚拟筛选</h3>
+<ul>
+<li><strong>VCHarness</strong>：扰动响应建模、药物发现。</li>
+<li><strong>ProteinTalks</strong>：在硅药物发现、治疗响应预测。</li>
+<li><strong>PHAROS</strong>：靶向药物组合筛选，恢复精确或机制匹配双药响应。</li>
+<li><strong>MultiVCDiff</strong>：从头虚拟筛选，零样本预测形态与转录组。</li>
+<li><strong>CellPrism</strong>：药物发现中虚拟细胞的可视探索。</li>
+<li><strong>OCOO-T</strong>：药物发现 / 基因调控网络。</li>
+<li><strong>AssayBench</strong>：体外表型筛选、in silico 表型筛选标准评测。</li>
+</ul>
+<h3>2. 免疫与免疫治疗</h3>
+<ul>
+<li><strong>Integrative AI Virtual Cell（CD8⁺ T）</strong>：识别此前未被认识的 CD8⁺ T 细胞动态潜在效应状态，与免疫检查点抑制剂治疗响应相关，常规分析无法检测。</li>
+<li><strong>ImmuneNavi</strong>：配对 PBMC 数据中对中药成分排序，将异质 PBMC 队列映射到统一健康免疫坐标系。</li>
+<li><strong>A systematic comparison</strong>：包含两个原代免疫细胞药物响应资源。</li>
+</ul>
+<h3>3. 复杂疾病与器官特异性虚拟细胞</h3>
+<ul>
+<li><strong>肝病虚拟细胞</strong>（Toward AI Virtual Cells for Hepatology）：生成模型表征、动力学与运输模型、预训练/基础模型三条路线；指出单细胞与空间图谱无法预测肝损伤进展或对未测试药物、毒物、遗传扰动的响应。</li>
+<li><strong>HIV/AIDS</strong>（Virtual cell/virtual cell like）：多尺度、多模态计算模型模拟 HIV 感染、免疫应答和治疗干预。</li>
+<li><strong>T-World 虚拟人心肌细胞</strong>：心律失常机制与治疗。</li>
+<li><strong>AIVBOs</strong>：骨器官oid 标准化与筛选。</li>
+<li><strong>原肠胚虚拟孪生</strong>：人类原肠胚多尺度生物学重建。</li>
+<li><strong>肿瘤边界识别</strong>（Golden Eyes 3.0）：图卷积虚拟细胞模型 + 近红外光谱 + 门控注意力多模态融合。</li>
+</ul>
+<h3>4. 细胞命运编程与干预设计</h3>
+<ul>
+<li><strong>U-Pert</strong>：细胞命运设计、最优干预的逆设计。</li>
+<li><strong>Computational blueprints for cell fate programming</strong>：细胞注释、网络推断、轨迹分析、转录因子与小分子优先级排序，整合为迭代设计-测试-学习流程。</li>
+<li><strong>SPAD-CFR</strong>：组织微环境空间靶向重编程。</li>
+</ul>
+<h3>5. 闭环实验与器官芯片</h3>
+<ul>
+<li><strong>The organ-on-a-chip-AI virtual cell loop</strong>：提出器官芯片与 AI 虚拟细胞构成的闭环路径（摘要缺失，具体方法与结果无法确认）。</li>
+<li><strong>The next-generation virtual cell</strong>：从时空转录组建模到复杂疾病闭环靶点发现，弥合体外靶点筛选与体内疗效间的转化鸿沟。</li>
+</ul>
+<h3>6. 中药与天然产物筛选</h3>
+<ul>
+<li><strong>ImmuneNavi</strong>：中药处理-对照谱转化为固定成分扰动库，患者与成分状态在匹配的基因、通路和转录层面表征。</li>
+</ul>
+<hr />
+<h2>评测与可靠性反思</h2>
+<p>本期最显著的特征是<strong>评测与批判性工作的大量涌现</strong>，且结论普遍偏负面。</p>
+<h3>基准与评估框架</h3>
+<ul>
+<li><strong>An Empirical Comparison of Virtual Cell Models</strong>：统一数据划分与预处理下比较 11 种方法（GEARS、CPA、chemCPA、scGen、Geneformer、scGPT、scFoundation、UCE、State 等）、5 个模型家族、6 类任务、9 个公开数据集，揭示基线差距，指出哪些能力真实可靠。</li>
+<li><strong>VCBench</strong>：将四个独立虚拟细胞框架综合为七个能力维度（扰动响应预测、跨物种通用性、基因调控网络推断、模态整合、时序动态、多尺度整合、in silico 实验），评估五个基础模型；<strong>多尺度整合和 in silico 实验在当前架构与数据下尚无法端到端测试</strong>。</li>
+<li><strong>AssayBench</strong>：assay 级别基准，评估 LLM 和智能体在未见生物背景下预测细胞扰动表型效应的能力，弥补现有基准偏重分子读出、与真实药物发现表型终点脱节的问题。</li>
+<li><strong>scArchon</strong>：基于 Snakemake 的可复现模块化基准平台，在 6 个 scRNA-seq 数据集上比较 scGen、CPA、trVAE、scPRAM、scVIDR、scDisInFact、SCREEN、scPreGAN、CellOT 等与基线方法。</li>
+<li><strong>Benchmarking virtual cell models for in-the-wild perturbation response</strong>：在未见细胞背景、未见扰动和跨数据集等真实挑战场景下评估多种模型。</li>
+<li><strong>Signal, Bounds, and Baselines（SBB）</strong>：Signal 引入诊断元指标并推广基于差异表达基因的加权或过滤；Bounds 提供扰动级指标校准；Baselines 强调合理基线。</li>
+<li><strong>PerturbHD</strong>：面向 AI 驱动命中发现的评估框架，主张建立直接衡量模型预测对具体科学发现成果价值的新基准。</li>
+<li><strong>SCMBench</strong>：23 种方法的多组学整合基准，指出当前评估空白并提供整合工具使用指南。</li>
+<li><strong>STGBench</strong>：解决空间 CNV、SNV 和突变负荷代理分析缺乏已知真值数据的问题。</li>
+<li><strong>SVC-Probe</strong>：98.6% 三方一致性。</li>
+<li><strong>A systematic comparison</strong>（Science Advances）：13 种方法、25 个数据集、24 个指标，覆盖多种扰动模态和物种，评估未见单基因扰动泛化、组合交互预测和跨细胞类型迁移三类任务，<strong>发现性能强烈依赖扰动效应大小</strong>。</li>
+</ul>
+<h3>批判性结果与"没跑赢基线"的证据</h3>
+<ol>
+<li><strong>数据可靠性危机</strong>：29 个数据集的 7170 个扰动中，<strong>65% 不可靠、11% 共享、24% 特异</strong>；将质量标签应用于已发表基准后发现<strong>模型比较结果依赖于扰动质量</strong>，使用可靠扰动训练可改善性能。</li>
+<li><strong>预训练污染</strong>：scContam 逐细胞审计框架（MinHash 基因集指纹 + MIA-scFM 成员推断攻击）应用于四个 scIB 基准和三个 scFM，发现 <strong>PBMC 3k 与 CELLxGENE 人胰岛图谱存在 80.4% 预训练重叠证据</strong>，提示零样本性能可能反映预训练暴露而非真实泛化。</li>
+<li><strong>逐细胞指标失效</strong>：单细胞扰动数据类别高度重叠，逐细胞准确率实际衡量的是重叠而非模型质量，线性分类器、MLP 和 Transformer 的 <strong>macro-F1 均停滞在 0.2–0.3</strong>；应改为在扰动群体层面聚合分类器概率向量评分。</li>
+<li><strong>无神经网络方法追平深度模型</strong>：AMM-SimWMag 在 4 数据集、3 类生物学、2 种 LOCO 轴、九指标评估下<strong>匹配或超越</strong> scGen 等深度单细胞扰动响应模型。</li>
+<li><strong>预训练规模收益递减</strong>：2220 万细胞、400 模型、6400 实验显示，当前方法在远小于现有语料的数据规模上性能即趋于平台，<strong>不同于大语言模型</strong>。</li>
+<li><strong>癌细胞系异质性瓶颈</strong>：UniPert-G2CP 扩展到 162 细胞系/32039 化合物/12328 基因后，正常和原代细胞系预测保真度显著高于癌细胞系，平均 <strong>PCC 0.480 vs 0.296</strong>（Mann-Whitney p=3.93e-11）。</li>
+<li><strong>表征层选择被忽视</strong>：最优层依赖任务和上下文，轨迹在 60% 深度达峰（较末层 +31%），扰动最优层随 T 细胞激活状态偏移 0–96%，静息细胞中首层优于所有深层——表示选择通常被当作实现细节而非核心建模决策。</li>
+<li><strong>概念缺口</strong>：VCWM 框架指出表征不等于动力学、预测不等于干预、多模态不等于多尺度世界建模；肝病综述指出单细胞与空间图谱本身无法预测肝损伤进展或对未测试扰动的响应。</li>
+</ol>
+<hr />
+<h2>产业动态</h2>
+<p><strong>本期无足够信息。</strong> 输入未提供任何公司、合作、授权或融资新闻，无法评估虚拟细胞领域的转化与商业化动态。文献中仅有的产业化线索包括：
+- <strong>The organ-on-a-chip-AI virtual cell loop</strong>（Science Bulletin）提出器官芯片与 AI 虚拟细胞的闭环路径，但摘要缺失，无法确认具体合作方或落地情况。
+- <strong>AIVBOs</strong>（Journal of Orthopaedic Translation）提出 AI 虚拟骨器官oid 概念，明确"目前仍处早期构想阶段"。
+- <strong>CellPrism</strong> 面向药物发现场景的可视分析系统，属工具层而非产业合作。</p>
+<hr />
+<h2>趋势结论与空白</h2>
+<ol>
+<li><strong>"世界模型"叙事已成型但缺乏统一评测</strong>：CellOS、Chreode、Lingshu-Cell、U-Pert、VCWM 框架共同指向干预条件下的状态转移建模，但 VCWM 明确指出"多模态不等于多尺度世界建模"，且 VCBench 显示多尺度整合与 in silico 实验<strong>当前无法端到端测试</strong>——这是一个明确的方法学空白。</li>
+<li><strong>数据可靠性审计应成为标准前置步骤</strong>：65% 扰动不可靠、80.4% 预训练重叠、macro-F1 0.2–0.3 三项证据叠加，意味着<strong>任何新模型报告的性能数字都需要先过数据质量与污染审计</strong>。目前只有 scContam、Reliable single-cell perturbations 等少数工作在做这件事，尚未形成社区标准流程。</li>
+<li><strong>无神经网络基线被系统性低估</strong>：AMM-SimWMag 匹配或超越深度模型，提示大量深度扰动预测工作的增益可能来自校准而非表征学习。<strong>缺少将解析基线纳入标准对比的系统性实践</strong>。</li>
+<li><strong>时序蛋白质组虚拟细胞仅有一个孤例</strong>：ProteinTalks 的 3800 万条时序蛋白丰度测量是本期唯一大规模时序蛋白组资源，且未见后续工作在其上做迁移、跨模态对齐或衰老建模。<strong>蛋白组 × 虚拟细胞 × 时序动力学</strong>是明显空白。</li>
+<li><strong>多模态缺失处理刚起步</strong>：HoloCell 明确以"稳健应对模态缺失异质性"为目标，但仅覆盖表观/转录/蛋白三模态；CellxPert 覆盖 scRNA/ATAC/CITE/MERFISH/IMC 但未强调缺失模态。<strong>跨队列校正、增量学习/持续学习在虚拟细胞语境下几乎未见专门工作</strong>。</li>
+<li><strong>衰老方向在 77 篇文献中几乎缺席</strong>：未出现以 aging clock、衰老细胞、衰老队列为核心的虚拟细胞工作。考虑到虚拟细胞与单细胞/多模态/扰动建模的高度重叠，<strong>衰老虚拟细胞（aging virtual cell）是一个未被占据的方向</strong>。</li>
+<li><strong>Agent 化科研工作流密集但缺乏互操作标准</strong>：VCHarness、CellScientist、AblateCell、VCR-Agent 各自定义任务与验证器，<strong>没有共享的智能体-模型接口或复现协议</strong>；AblateCell 的"先复现再消融"是目前最接近可验证工件的方案。</li>
+<li><strong>空间虚拟细胞与组织尺度建模脱节</strong>：SPAD-CFR、SVC-Probe、STGBench 处理空间维度，但 VCBench 指出多尺度整合无法端到端测试；<strong>从单细胞到组织微环境的多尺度世界模型尚无可行架构</strong>。</li>
+<li><strong>临床转化评估框架缺失</strong>：PerturbHD 提出应衡量模型预测对具体科学发现成果的价值，但本期未见任何工作报告"虚拟细胞预测 → 实验验证 → 临床命中"的完整闭环数据。</li>
+<li><strong>癌细胞系异质性作为首要瓶颈尚未被系统性解决</strong>：PCC 0.480 vs 0.296 的差距明确指向细胞系异质性，但未见针对该瓶颈的专门方法学工作（如细胞系特异校正、原代细胞迁移学习）。</li>
+</ol>
+<hr />
+<h2>参考文献</h2>
+<p>[1] Harnessing AI to Build Virtual Cells, europepmc, 2026-04-14, https://doi.org/10.64898/2026.04.11.717183
+[2] The 2025 Westlake Autumn Symposium for AI Proteomics and Virtual Cell., Genomics, proteomics &amp; bioinformatics, 2026-08-01, https://doi.org/10.1093/gpbjnl/qzag022
+[3] Toward AI Virtual Cells for Hepatology: Representation, Generation, Dynamics, and Intervention in Single-Cell Models., Clinical and molecular hepatology, 2026-09-17, https://doi.org/10.3350/cmh.2026.0820
+[4] An operational perturbation proteomics-based virtual cell model., Nature, 2026-09-09, https://doi.org/10.1038/s41586-026-11001-9
+[5] Integrative AI-Enabled Virtual Cell Modeling Reveals a Clinically Relevant Latent Effector State of Human CD8⁺ T Cells Undetectable by Conventional Analyses, europepmc, 2026-07-25, https://doi.org/10.64898/2026.07.22.739582
+[6] An Empirical Comparison of Virtual Cell Models: Perturbation Prediction, Representation, and the Baseline Gap, europepmc, 2026-07-22, https://doi.org/10.21203/rs.3.rs-10434123/v</p></div></div>
 <div id="panel-res"><div class="wk"><h1>可用资源清单（数据集 / 模型）</h1>
 <p>自动累积：只收确认公开可获取、打分 ≥7 的大数据集和模型，按使用场景分组，持续更新。资讯请看日报。</p>
 <h2>单细胞 / 空间组学</h2>
