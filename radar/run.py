@@ -1,12 +1,15 @@
 from __future__ import annotations
 
 import argparse
+import json
 from datetime import date, timedelta
 
 from . import llm
 from .collectors import COLLECTORS
 from .config import ROOT, load_local_env, load_profile, load_sources
+from .pipeline import extract
 from .pipeline.dedup import filter_new
+from .pipeline.deepdive import run_deepdive
 from .pipeline.deepread import deepread_top
 from .pipeline.digest import write_digest
 from .pipeline.resources import append_resources
@@ -48,6 +51,10 @@ def cmd_daily(days: int, use_llm: bool) -> None:
         print(f"[deepread] {n} items")
     n = append_resources(scored, date.today())
     print(f"[resources] {n} new")
+    if use_llm:
+        hot = [it for it in scored if it.score >= 7.0]
+        n = extract.store(hot, extract.extract_items(hot), date.today())
+        print(f"[extract] {n} records")
     out = write_digest(scored, date.today())
     print(f"[digest] wrote {out}")
 
@@ -119,13 +126,26 @@ def cmd_landscape(use_llm: bool) -> None:
 def _weekly_llm(texts: list[str]) -> str | None:
     if not llm.available():
         return None
-    joined = "\n\n---\n\n".join(t[:6000] for t in texts)[:24000]
+    cfg = load_sources()
+    labels = {d["name"]: d.get("label_zh", d["name"]) for d in cfg.get("domains", [])}
+    by_dom: dict[str, list[dict]] = {}
+    for r in extract.load_since(7):
+        r = {k: v for k, v in r.items() if k != "date" and v}
+        by_dom.setdefault(labels.get(r.get("domain", ""), r.get("domain", "")), []).append(r)
+    material = json.dumps(by_dom, ensure_ascii=False)[:16000]
+    joined = "\n\n---\n\n".join(t[:4000] for t in texts)[:12000]
     prompt = (
-        "下面是某研究者的兴趣画像和本周每日科研情报 digest（已按领域分节）。\n\n"
-        f"【兴趣画像】\n{load_profile()}\n\n【本周 digest】\n{joined}\n\n"
-        "请输出中文 markdown，按领域分开总结，不要跨领域混合：\n"
-        "对本周实际有内容的每个领域，写一节 '## <领域名>'，2-4 句概括该领域本周的实质进展"
-        "（哪些新工作值得注意、意味着什么），不提具体低分条目。没有实质内容的领域不写。\n"
+        "下面是某研究者的兴趣画像、本周高分条目的结构化抽取（按领域分组）、以及本周每日 digest。\n\n"
+        f"【兴趣画像】\n{load_profile()}\n\n"
+        f"【本周结构化抽取】\n{material}\n\n"
+        f"【本周 digest 全文】\n{joined}\n\n"
+        "请输出中文 markdown，按领域分开总结，不要跨领域混合。\n"
+        "对本周实际有内容的每个领域写一节 '## <领域名>'，固定四个小节：\n"
+        "### 本周亮点 —— 2-4 个最重要工作，每个 1-2 句，要具体（方法/数据/关键数字），附链接；\n"
+        "### 数据与资源 —— 本周出现的数据集/模型（没有就写：无）；\n"
+        "### 评测与警示 —— 基准结果、没跑赢基线、可复现性等值得警惕的信号（没有就写：无）；\n"
+        "### 一句话判断 —— 该领域本周的实质进展。\n"
+        "没有实质内容的领域不写。\n"
         "最后加一节 '## Registry 增补建议'：本周出现的数据库/模型/人物中，"
         "建议加入 registry 长期知识库的条目，按 databases.md / models.md / people.md 分组，每条一行。"
     )
@@ -146,6 +166,10 @@ def _weekly_fallback(texts: list[str]) -> str:
             + "\n".join(titles[:80]) + "\n")
 
 
+def cmd_deepdive(topic: str, months: int) -> None:
+    run_deepdive(topic, months)
+
+
 def main() -> None:
     load_local_env()  # 本机运行时注入 /data3/yy/key.env（不打印、不覆盖已有变量）
     ap = argparse.ArgumentParser(prog="radar")
@@ -154,6 +178,9 @@ def main() -> None:
         p = sub.add_parser(name)
         p.add_argument("--days", type=int, default=1)
         p.add_argument("--no-llm", action="store_true")
+    p = sub.add_parser("deepdive")
+    p.add_argument("--topic", required=True)
+    p.add_argument("--months", type=int, default=6)
     sub.add_parser("site")
     args = ap.parse_args()
     use_llm = not getattr(args, "no_llm", False)
@@ -163,6 +190,8 @@ def main() -> None:
         cmd_weekly(use_llm)
     elif args.cmd == "landscape":
         cmd_landscape(use_llm)
+    elif args.cmd == "deepdive":
+        cmd_deepdive(args.topic, args.months)
     else:
         out = build_site()
         print(f"[site] wrote {out}")

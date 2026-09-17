@@ -31,8 +31,8 @@ a:active{opacity:.7}
 .tabs{display:flex;gap:8px}
 .tab{flex:1;text-align:center;padding:9px 0;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#57606a;font-size:14.5px;font-weight:600;cursor:pointer;user-select:none}
 .tab.on{background:#1f6feb;border-color:#1f6feb;color:#fff}
-#panel-week,#panel-day,#panel-res{display:none}
-#panel-week.on,#panel-day.on,#panel-res.on{display:block}
+#panel-week,#panel-day,#panel-res,#panel-report{display:none}
+#panel-week.on,#panel-day.on,#panel-res.on,#panel-report.on{display:block}
 #q{width:100%;padding:9px 14px;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#1f2328;font-size:14px;outline:none;margin-bottom:12px}
 #q:focus{border-color:#0969da}
 .wk{background:#fff;border:1px solid #d0d7de;border-radius:12px;padding:4px 16px 14px;margin:0 0 10px;font-size:14.5px;box-shadow:0 1px 2px rgba(31,35,40,.04)}
@@ -213,6 +213,9 @@ def build_site(today: date | None = None) -> Path:
                  if weeklies else '<div class="empty">暂无周报。</div>')
     day_html = ("\n".join(_render_digest(p, i == 0) for i, p in enumerate(digests))
                 if digests else '<div class="empty">暂无日报。</div>')
+    reports = sorted((ROOT / "reports").glob("*.md"), reverse=True)
+    report_html = ("\n".join(_render_weekly(p) for p in reports)
+                   if reports else '<div class="empty">暂无专题报告。</div>')
     res_file = ROOT / "resources.md"
     res_html = ('<div class="wk">'
                 + markdown.markdown(res_file.read_text(encoding="utf-8"),
@@ -226,16 +229,18 @@ def build_site(today: date | None = None) -> Path:
         f"<style>{CSS}</style></head><body><main>",
         '<div class="top"><h1>radar · 科研情报</h1>',
         f'<div class="meta">更新至 {today.isoformat()} · '
-        f'{len(digests)} 份日报 / {len(weeklies)} 份周报</div>',
+        f'{len(digests)} 份日报 / {len(weeklies)} 份周报 / {len(reports)} 份专题</div>',
         '<div class="tabs">'
         '<div class="tab on" data-tab="week">周报</div>'
         '<div class="tab" data-tab="day">日报</div>'
+        '<div class="tab" data-tab="report">专题报告</div>'
         '<div class="tab" data-tab="res">资源库</div>'
         "</div></div>",
         f'<div id="panel-week" class="on">{week_html}</div>',
         '<div id="panel-day">',
         '<input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">',
         f"{day_html}</div>",
+        f'<div id="panel-report">{report_html}</div>',
         f'<div id="panel-res">{res_html}</div>',
         f"<script>{JS}</script></main></body></html>",
     ]

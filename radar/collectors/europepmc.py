@@ -12,12 +12,14 @@ API = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 _TAG = re.compile(r"<[^>]+>")
 
 
-def _search(query: str, start: str, end: str, page_size: int = 250) -> list[dict]:
+def _search(query: str, start: str, end: str, page_size: int = 250,
+            sort: str = "") -> list[dict]:
     q = f'({query}) AND (SRC:MED OR SRC:PPR) AND FIRST_PDATE:[{start} TO {end}]'
-    r = requests.get(API, params={
-        "query": q, "format": "json", "pageSize": page_size,
-        "resultType": "core",
-    }, timeout=60)
+    params = {"query": q, "format": "json", "pageSize": page_size,
+              "resultType": "core"}
+    if sort:
+        params["sort"] = sort
+    r = requests.get(API, params=params, timeout=60)
     r.raise_for_status()
     return r.json().get("resultList", {}).get("result", [])
 
