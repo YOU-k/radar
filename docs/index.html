@@ -51,7 +51,7 @@ details.deep .deepbody p{margin:4px 0}
 .hide{display:none!important}
 </style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
-<div class="meta">更新至 2026-09-16 · 2 份日报 / 2 份周报</div>
+<div class="meta">更新至 2026-09-17 · 3 份日报 / 2 份周报</div>
 <div class="tabs"><div class="tab on" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div><div class="tab" data-tab="res">资源库</div></div></div>
 <div id="panel-week" class="on"><div class="wk"><h3>2026-W38</h3><h2>衰老与多模态健康模型</h2>
 <p>本周该领域最值得关注的是乳腺组织特异性表观遗传时钟 BTEC：基于 7 项研究、553 例健康乳腺甲基化数据构建，年龄预测精度（r=0.91, MAE=3.0y）优于 Horvath/Hannum 等经典时钟，并揭示肿瘤及瘤旁组织的系统性表观年龄"去相关"现象。对多模态衰老建模而言，它的价值不只是又一个 aging clock，而是提供了"组织/模态特异时钟 + 跨队列校正"的现成范例，以及一个关键警示——疾病/扰动状态会系统性扭曲单模态 clock 输出，提示 demo 阶段就应设计模态私有表征与共享表征分离的架构。需注意其代码/探针系数是否公开尚不明确，直接复用前需确认。此外 Metax 提供了跨域宏基因组分类的可复现方法学工具，属周边可用资源。</p>
@@ -128,7 +128,16 @@ details.deep .deepbody p{margin:4px 0}
 </ul></div></div>
 <div id="panel-day">
 <input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">
-<details class="day" data-first="1" open><summary>2026-09-16 · 周三<span class="cnt">4 条</span></summary><div class="daybody"><div class="dom">生物医学数据库 / 模型 / 部署</div>
+<details class="day" data-first="1" open><summary>2026-09-17 · 周四<span class="cnt">6 条</span></summary><div class="daybody"><div class="dom">衰老与多模态健康模型</div>
+<div class="card" data-score="7.0"><div class="t"><a href="https://arxiv.org/abs/2609.17801">GIA: Germline-Informed Aging with AlphaGenome Finds Genetically Regulated CpGs</a><span class="badge mid">7.0</span></div><div class="reason">表观时钟CpG受胚系变异影响，直接关系aging clock建模，值得细读。</div><div class="meta">arxiv ·  · Sean Lim</div></div>
+<div class="dom">生物医学数据库 / 模型 / 部署</div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://doi.org/10.1109/tpami.2026.3733393">Domain Elastic Transform: Bayesian Function Registration for High-Dimensional Scientific Data.</a><span class="badge mid">6.0</span></div><div class="reason">空间转录组高维函数配准新方法，思路可迁移到多模态对齐，但需看代码是否公开。</div><div class="meta">IEEE transactions on pattern analysis and machine intelligence · europepmc · 2026-09-15 · Hirose O, Rodola E.</div></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://doi.org/10.21203/rs.3.rs-10583472/v1">A systematic benchmark and practical guide for rare-cell detection in single-cell RNA-seq data</a><span class="badge mid">6.0</span></div><div class="reason">稀有细胞检测系统基准，给出实用指南，单细胞分析可借鉴。</div><div class="meta">europepmc · 2026-09-16 · Liu K, Jin X, Fu C.</div></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://doi.org/10.7554/elife.108950">Comprehensive RNA velocity by modeling the cascade of gene regulation, transcription, and splicing from single-cell RNA sequencing data with TSvelo.</a><span class="badge mid">6.0</span></div><div class="reason">RNA velocity新框架TSvelo，单细胞动力学建模思路可迁移，需查代码。</div><div class="meta">eLife · europepmc · 2026-09-15 · Li J, Wang Z, Shen HB, Yuan Y.</div></div>
+<div class="dom">ML / AI 底层算法</div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2605.31111">Subspace-Decomposed JEPAs: Disentangling Progression and Content in Latent World Models</a><span class="badge mid">6.0</span></div><div class="reason">JEPA潜空间解耦方法，思路可迁移到多模态衰老表征，但无代码。</div><div class="meta">arxiv ·  · Lucas Thil, Jesse Read, Rim Kaddah, Guillaume Doquet</div></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://arxiv.org/abs/2609.18950">Changepoint-Aware World Models: Detecting Dynamics Shifts and Recovering by Forgetting Stale Replay in Model-Based RL</a><span class="badge mid">6.0</span></div><div class="reason">变点感知世界模型+遗忘陈旧回放，持续学习思路契合跨队列校正。</div><div class="meta">arxiv ·  · Everest Yang</div></div></div></details>
+<details class="day" data-first="0"><summary>2026-09-16 · 周三<span class="cnt">4 条</span></summary><div class="daybody"><div class="dom">生物医学数据库 / 模型 / 部署</div>
 <div class="card" data-score="7.0"><div class="t"><a href="https://doi.org/10.64898/2026.09.08.750024">LucaCell: a sequence-centric foundation model for cross-species single-cell analysis</a><span class="badge mid">7.0</span><span class="badge res">资源</span></div><div class="reason">跨物种单细胞序列基础模型，预训练权重若公开可直接微调，契合单细胞方向。</div><div class="meta">europepmc · 2026-09-14 · Sun Y, He Y, Ren M, Wang Y, Xu P, Hou Y, Kang Y, Hou T, Ye J, Yang H, Wang Z.</div></div>
 <div class="card" data-score="7.0"><div class="t"><a href="https://doi.org/10.64898/2026.09.11.748700">Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence</a><span class="badge mid">7.0</span><span class="badge res">资源</span></div><div class="reason">跨组织单细胞长读长异构体图谱，公开数据，契合单细胞与衰老方向。</div><div class="meta">europepmc · 2026-09-14 · Mantri M, Detweiler AM, Lee J, Kwon JH, Zhou A, Tong L, Jones RC, Neff NF, Tabul</div></div>
 <div class="card" data-score="7.0"><div class="t"><a href="https://doi.org/10.64898/2026.09.13.751267">A massively parallel synthetic gene atlas for learning compact cis-regulatory grammar across cellular contexts</a><span class="badge mid">7.0</span><span class="badge res">资源</span></div><div class="reason">大规模合成基因图谱公开数据集，约6万顺式调控元件，可复用。</div><div class="meta">europepmc · 2026-09-14 · Hagen T, Liu I, Nagainis A, Khosrojerdi N, Yousefi H, Gunnels T, Moarefi A, Gree</div></div>
