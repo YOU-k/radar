@@ -16,7 +16,6 @@ from pathlib import Path
 import requests
 
 from .. import llm
-from ..collectors import feed_parse
 from ..collectors.europepmc import _search, _to_item
 from ..config import ROOT, load_profile
 from ..schema import Item
@@ -106,21 +105,35 @@ def _collect_arxiv(queries: list[str], start: str, end: str) -> list[Item]:
 
 
 def _collect_news(queries: list[str], months: int) -> list[dict]:
+    """产业新闻：Bing News RSS（需浏览器 UA）为主，Google News 兜底。"""
     news = {}
     for q in queries:
-        url = (f"https://news.google.com/rss/search?"
-               f"q={requests.utils.quote(q)}+when:{months}m&hl=en-US&gl=US&ceid=US:en")
-        try:
-            feed = feed_parse(url)
-        except Exception as exc:
-            print(f"[deepdive] news {q!r} failed: {exc}")
-            continue
-        for e in feed.entries[:10]:
-            news[e.get("link", e.get("title", ""))] = {
-                "title": e.get("title", ""),
-                "published": e.get("published", "")}
+        feeds = [
+            (f"https://www.bing.com/news/search?q={requests.utils.quote(q)}"
+             "&format=rss"),
+            (f"https://news.google.com/rss/search?q={requests.utils.quote(q)}"
+             f"+when:{months}m&hl=en-US&gl=US&ceid=US:en"),
+        ]
+        for url in feeds:
+            try:
+                import feedparser
+                r = requests.get(url, timeout=30,
+                                 headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64)"})
+                r.raise_for_status()
+                entries = feedparser.parse(r.content).entries
+            except Exception as exc:
+                print(f"[deepdive] news fetch failed: {exc}")
+                continue
+            if entries:
+                for e in entries[:10]:
+                    news[e.get("link", e.get("title", ""))] = {
+                        "title": e.get("title", ""),
+                        "published": e.get("published", "")}
+                break
         time.sleep(1)
-    return list(news.values())[:25]
+    out = list(news.values())[:25]
+    print(f"[deepdive] news entries: {len(out)}")
+    return out
 
 
 def _filter_relevant(items: list[Item], topic: str) -> list[Item]:
@@ -161,15 +174,17 @@ TEMPLATE = """请输出中文调研报告，严格用以下章节结构（markdo
 ## 评测与可靠性反思——基准、批判性结果、没跑赢基线的证据
 ## 产业动态——公司/合作/授权（基于提供的新闻）
 ## 趋势结论与空白——编号列表，指出没人做的方向
-## 参考文献——编号列表，格式 [n] 标题, 期刊/来源, 日期, URL
-写作要求：每个论点落到具体工作；保留所有定量结果；宁缺勿滥，没有内容的章节写"本期无足够信息"；不要编造文献列表之外的引用。"""
+写作要求：正文提及具体工作时用 [n] 引用（n 为文献抽取里的 ref 编号）；
+每个论点落到具体工作；保留所有定量结果；宁缺勿滥，没有内容的章节写"本期无足够信息"；
+不要编造文献列表之外的引用；不要自己写参考文献章节（由系统生成）。"""
 
 
 def _synthesize(topic: str, months: int, papers: list[Item],
                 extractions: list[dict], news: list[dict]) -> str:
     recs = []
-    for it, ex in zip(papers, extractions):
+    for i, (it, ex) in enumerate(zip(papers, extractions)):
         recs.append({
+            "ref": i + 1,
             "title": it.title, "url": it.url, "date": it.published,
             "journal": it.extra.get("journal", "") or it.source,
             **{k: v for k, v in ex.items() if v}})
@@ -214,10 +229,14 @@ def run_deepdive(topic: str, months: int = 6) -> Path:
     print(f"[deepdive] extracted: {sum(1 for e in extractions if e['summary'])}")
 
     body = _synthesize(topic, months, papers, extractions, news)
+    refs = ["## 参考文献", ""]
+    for i, it in enumerate(papers):
+        src = it.extra.get("journal", "") or it.source
+        refs.append(f"[{i + 1}] {it.title} *{src}*, {it.published}, {it.url}")
     out = ROOT / "reports" / f"{end.isoformat()}-{plan['slug']}.md"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(
-        f"# 专题调研：{topic}（{start} ~ {end}）\n\n{body}\n",
+        f"# 专题调研：{topic}（{start} ~ {end}）\n\n{body}\n\n" + "\n".join(refs) + "\n",
         encoding="utf-8")
     print(f"[deepdive] wrote {out}")
     return out
