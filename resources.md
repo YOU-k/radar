@@ -18,3 +18,13 @@
 
 - [A massively parallel synthetic gene atlas for learning compact cis-regulatory grammar across cellular contexts](https://doi.org/10.64898/2026.09.13.751267) — 大规模合成顺式调控元件图谱，适合训练调控语法模型
   `dataset` · MPRA合成调控元件 · ~6万元件 · 获取：公开数据 · `7.0` 分 · 2026-09-16
+
+## 人群队列 / 多模态
+
+- [A lifespan-scale single-cell atlas defines an early-childhood immunometabolic transition linked to age-referenced immune states](https://doi.org/10.64898/2026.09.11.750312) — 0-100岁PBMC单细胞图谱，揭示6岁免疫代谢转变，适合衰老研究
+  `dataset` · 单细胞转录组+代谢 · 规模 2008人PBMC · `7.0` 分 · 2026-09-19
+
+## 通用 ML / 其他
+
+- [spaGFM is a scalable graph foundation model for spatial transcriptomics analyses](https://doi.org/10.21203/rs.3.rs-11012643/v1) — 空间转录组图基础模型，随机游走序列化邻域，可微调用于组织分析
+  `model` · 空间转录组图 · 规模 4390万细胞 · `8.0` 分 · 2026-09-19
