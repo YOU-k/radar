@@ -53,34 +53,107 @@ details.deep .deepbody p{margin:4px 0}
 <div class="top"><h1>radar · 科研情报</h1>
 <div class="meta">更新至 2026-09-20 · 6 份日报 / 2 份周报 / 1 份专题</div>
 <div class="tabs"><div class="tab on" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div><div class="tab" data-tab="report">专题报告</div><div class="tab" data-tab="res">资源库</div></div></div>
-<div id="panel-week" class="on"><div class="wk"><h3>2026-W38</h3><h2>衰老与多模态健康模型</h2>
-<p>本周该领域最值得关注的是乳腺组织特异性表观遗传时钟 BTEC：基于 7 项研究、553 例健康乳腺甲基化数据构建，年龄预测精度（r=0.91, MAE=3.0y）优于 Horvath/Hannum 等经典时钟，并揭示肿瘤及瘤旁组织的系统性表观年龄"去相关"现象。对多模态衰老建模而言，它的价值不只是又一个 aging clock，而是提供了"组织/模态特异时钟 + 跨队列校正"的现成范例，以及一个关键警示——疾病/扰动状态会系统性扭曲单模态 clock 输出，提示 demo 阶段就应设计模态私有表征与共享表征分离的架构。需注意其代码/探针系数是否公开尚不明确，直接复用前需确认。此外 Metax 提供了跨域宏基因组分类的可复现方法学工具，属周边可用资源。</p>
+<div id="panel-week" class="on"><div class="wk"><h3>2026-W38</h3><h1>本周科研情报总结（2026-09-15 ~ 2026-09-19）</h1>
+<h2>衰老与多模态健康模型</h2>
+<h3>本周亮点</h3>
+<ul>
+<li><strong>Sex-specific biological aging clocks across organs and omics</strong>（Nature Medicine，8.0）：基于 MULTI 联盟多队列多组学数据，构建覆盖 <strong>15 个器官系统、38 个性别特异性衰老时钟</strong>，证明性别分层建模能暴露 pooled 模型掩盖的器官特异衰老信号（尤其脑衰老与 AD 临床前认知下降关联）。<a href="https://doi.org/10.1038/s41591-026-04662-6">链接</a></li>
+<li><strong>A breast tissue-specific epigenetic clock (BTEC)</strong>（8.0）：基于 7 项研究、553 例健康乳腺甲基化数据，年龄预测 r=0.91、MAE=3.0y，优于 Horvath/Hannum；发现肿瘤/瘤旁组织表观年龄系统性"去相关"（平均偏差 -14~-15 年）。<a href="https://doi.org/10.1080/15592294.2026.2714582">链接</a></li>
+<li><strong>A lifespan-scale single-cell atlas defines an early-childhood immunometabolic transition</strong>（7.0）：整合 <strong>2008 名 0-100 岁健康个体 PBMC scRNA-seq</strong>，年龄分辨建模发现以 6 岁为中心的免疫代谢转变，血清代谢组/脂质组在 6-8 岁出现变化波。<a href="https://doi.org/10.64898/2026.09.11.750312">链接</a></li>
+<li><strong>GIA: Germline-Informed Aging with AlphaGenome Finds Genetically Regulated CpGs</strong>（7.0）：揭示表观时钟 CpG 受胚系变异影响，直接关系 aging clock 建模的因果解释。<a href="https://arxiv.org/abs/2609.17801">链接</a></li>
+</ul>
+<h3>数据与资源</h3>
+<ul>
+<li>寿命尺度 PBMC 单细胞图谱（2008 人 / 0-100 岁，scRNA-seq + 血清代谢组/脂质组）</li>
+<li>BTEC 乳腺组织特异甲基化时钟（探针列表与系数是否公开待确认）</li>
+<li>MULTI 联盟 38 个器官-性别特异衰老时钟（权重/模型开放情况待查）</li>
+<li>心脏移植同化受体生物学年龄的多组学数据（Poganik et al.）</li>
+</ul>
+<h3>评测与警示</h3>
+<ul>
+<li>BTEC 样本量偏小（553 例健康组织），缺乏明确外部验证队列；EAA 与生存关联为探索性分析，未做多变量校正；肿瘤"负向偏差"机制（去甲基化 vs 细胞组成混杂）未厘清。</li>
+<li>MULTI 联盟数据多为受控访问（ADNI、BLSA 等），直接复用可能受限；性别二元处理未涉及性别谱系/激素状态连续变量；38 个 clock 相对 pooled clock 的增量预测力需 head-to-head 比较。</li>
+<li>本周多篇甲基化衰老工作（DNA methylation variability、co-methylation modules）均为 6.0 分档，方法可借鉴但无突破性新范式。</li>
+</ul>
+<h3>一句话判断</h3>
+<p>本周衰老建模的实质进展集中在<strong>"分层/条件化建模"</strong>——性别分层、组织特异、年龄分辨，共同指向一个结论：统一模型会抹平关键异质性，多模态衰老模型应默认并行训练 pooled 与 stratified 版本。</p>
+<hr />
 <h2>生物医学数据库 / 模型 / 部署</h2>
-<p>本周实质进展是 MARC——面向亚细胞空间转录组的形态学感知细胞分割方法，直接可嵌入现有空转分析流程。对需要处理空间转录组模态的合作项目来说，这类分割质量的提升会直接影响下游细胞类型注释与状态建模的可靠性，属于"拿来即用"型工具。</p>
+<h3>本周亮点</h3>
+<ul>
+<li><strong>spaGFM: scalable graph foundation model for spatial transcriptomics</strong>（8.0）：通过随机游走将细胞邻域序列化，用增强自监督邻域重建替代图消息传递，在 <strong>132 个图像型 ST 数据集、4390 万细胞</strong>上预训练，可跨组织/疾病/平台迁移。<a href="https://doi.org/10.21203/rs.3.rs-11012643/v1">链接</a></li>
+<li><strong>Domain Elastic Transform (DET)</strong>（7.0）：无网格贝叶斯概率框架，联合对齐空间转录组的几何与功能，避免体素化导致的单细胞分辨率损失。<a href="https://arxiv.org/abs/2603.21235">链接</a></li>
+<li><strong>Dynamic Generalized Gromov-Wasserstein Optimal Transport (TP-DATE)</strong>（7.0）：将 GW 最优传输动态推广，无模拟方式统一静态与动态二次型 OT，用于空转连续轨迹重建并保留组织结构。<a href="https://arxiv.org/abs/2609.20008">链接</a></li>
+<li><strong>LucaCell: sequence-centric foundation model for cross-species single-cell analysis</strong>（7.0）：跨物种单细胞序列基础模型，预训练权重若公开可直接微调。<a href="https://doi.org/10.64898/2026.09.08.750024">链接</a></li>
+</ul>
+<h3>数据与资源</h3>
+<ul>
+<li>spaGFM 预训练模型（4390 万细胞 / 132 数据集，权重开放情况待确认）</li>
+<li>LucaCell 跨物种单细胞基础模型</li>
+<li>单细胞长读长异构体图谱（跨组织，含 senescence 轴）</li>
+<li>大规模合成基因图谱（约 6 万顺式调控元件，公开）</li>
+<li>MARC 亚细胞空转细胞分割方法</li>
+<li>SPLENDID 连续遗传祖先多基因风险预测方法</li>
+</ul>
+<h3>评测与警示</h3>
+<ul>
+<li>spaGFM 为 Research Square 预印本，代码/权重/数据开放情况摘要未明示，需查 GitHub/Zenodo 确认。</li>
+<li>DET 在 arXiv 与 IEEE TPAMI 双版本出现（分数 6.0 vs 7.0），代码是否公开是能否复用的关键。</li>
+<li>本周空转方法密集（spaGFM、DET、TP-DATE、MARC），但均未给出与既有 baseline 的定量对比细节，需读正文确认增益幅度。</li>
+</ul>
+<h3>一句话判断</h3>
+<p>空间转录组方法学本周集中爆发，<strong>"图→序列→基础模型"范式（spaGFM）与几何-功能联合对齐（DET/TP-DATE）</strong> 是两条可直接迁移到你多模态对齐 pipeline 的技术路线。</p>
+<hr />
 <h2>ML / AI 底层算法</h2>
-<p>本周最重磅的是免疫世界模型（Agent Genesis 驱动）：将细胞/组织/个体三尺度免疫状态编码为结构化状态、干预编码为动作，学习动作条件化转移 S_{t+1}=F_θ(S_t,A_t)，并据此提名 IL-36γ + SIRPα 治疗假设。其"结构化状态 + 独立动作编码 + 门控残差转移"架构与"版本化数据清单 + 预设效应量门 + promote/rollback 审计"的治理流程，几乎可直接迁移到多模态健康衰老模型的状态-动作建模与新模态增量整合决策上；其 withhold 整个尺度信息的泛化评估设计也可借来测试缺失模态鲁棒性。局限在于整体增益有限（全局 ∆cos 未超 condition-mean 基线）、个体层增益小、假设未经湿实验验证，且代码/权重未公开需向作者索取。其余三条（视频基础模型物理表征探针、神经接口自监督预训练、策略-世界模型协同训练）均为 6 分档，思路可迁移但非直接可用。</p>
+<h3>本周亮点</h3>
+<ul>
+<li><strong>An immune world model for multiscale forecasting and therapeutic hypothesis generation</strong>（8.0）：用"受治理的进化式 AI Scientist"（Agent Genesis）自动搜索并冻结<strong>动作条件化免疫世界模型</strong>，将细胞/组织/个体三尺度状态编码为 S_t，干预编码为 A_t，学习 S_{t+1}=F_θ(S_t,A_t)，据此提名 IL-36γ + SIRPα 抑制假设。<a href="https://arxiv.org/abs/2609.14709">链接</a></li>
+<li><strong>Clin-JEPA: Multi-Phase Co-Training for JEPA Pretraining on EHR Trajectories</strong>（7.0）：将 JEPA 用于 EHR 患者轨迹，用 LLM 作编码器直接读小时级文本记录，避免特征工程；指出仅 SFT 不能围绕生理动态组织潜空间。<a href="https://arxiv.org/abs/2605.10840">链接</a></li>
+<li><strong>JEPA-Anything: Learning Predictive Models across Different Worlds</strong>（7.0）：基于正交预测因子分解（OPF）的领域无关框架，在视觉、生物学、临床轨迹、控制、分子动力学、物理场、天气<strong>七个领域</strong>评估。<a href="https://www.semanticscholar.org/paper/ba43a23966622ae3823e225b32d69f59f0aea695">链接</a></li>
+<li><strong>Changepoint-Aware World Models</strong>（6.0）：变点感知世界模型 + 遗忘陈旧回放，持续学习思路契合跨队列校正。<a href="https://arxiv.org/abs/2609.18950">链接</a></li>
+</ul>
+<h3>数据与资源</h3>
+<ul>
+<li>Immune world model 自建 Immune68 特征表 + TabPFN 组合（代码/权重未公开，需向 PhAI Labs/CUHK 索取）</li>
+<li>Clin-JEPA 使用 EHR 小时级文本记录（数据来源未明示）</li>
+</ul>
+<h3>评测与警示</h3>
+<ul>
+<li><strong>Immune world model 未跑赢 condition-mean 基线</strong>：全局平均 ∆cos 均 0.46，仅在相对 scGPT 的 64% 动作上更优；抗 PD-1 LOO AUC 在 composition 上仅 0.54，个体层增益 +0.005~+0.067；定量动态基准只评估一步转移；IL-36γ + SIRPα 未经湿实验验证；自校正审计否决了所有筛选的细胞因子对，假阳性风险控制仍是开放问题。</li>
+<li>Clin-JEPA、JEPA-Anything、Subspace-Decomposed JEPAs 均<strong>未明示代码</strong>，可复现性存疑。</li>
+<li>本周 JEPA 系工作密集（Clin-JEPA、JEPA-Anything、Subspace-Decomposed JEPAs），但多为概念验证，缺乏统一基准对比。</li>
+</ul>
+<h3>一句话判断</h3>
+<p>本周 JEPA/世界模型方向持续升温，<strong>"结构化状态 + 独立动作编码 + 门控残差转移"</strong> 是可直接迁移到你多模态衰老模型的核心架构范式；但免疫世界模型的基线未跑赢问题提示：世界模型在生物医学场景的增益仍主要来自条件特异而非整体表征。</p>
+<hr />
 <h2>Registry 增补建议</h2>
 <h3>databases.md</h3>
 <ul>
-<li>BTEC（Breast Tissue-specific Epigenetic Clock）探针列表与系数 — 待确认是否公开，若公开可作甲基化模态基线</li>
-<li>Immune68 特征表（免疫世界模型配套） — 需向作者索取</li>
-<li>Parse PBMC（约 1000 万 PBMC） — 可作单细胞 few-shot 基准</li>
-<li>90 细胞因子图谱 — 免疫扰动建模参考数据</li>
+<li>寿命尺度 PBMC 单细胞图谱（2008 人 / 0-100 岁，scRNA-seq + 血清代谢组/脂质组）— https://doi.org/10.64898/2026.09.11.750312</li>
+<li>单细胞长读长异构体图谱（跨组织，含 senescence 轴）— https://doi.org/10.64898/2026.09.11.748700</li>
+<li>大规模合成基因图谱（约 6 万顺式调控元件）— https://doi.org/10.64898/2026.09.13.751267</li>
+<li>MULTI 联盟多器官多组学衰老时钟数据集（15 器官系统 / 38 时钟）— https://doi.org/10.1038/s41591-026-04662-6</li>
+<li>BTEC 乳腺组织特异甲基化时钟训练数据（7 研究 / 553 例）— https://doi.org/10.1080/15592294.2026.2714582</li>
 </ul>
 <h3>models.md</h3>
 <ul>
-<li>Immune World Model（Agent Genesis 冻结版） — 动作条件多尺度免疫预测，架构可迁移至多模态衰老建模</li>
-<li>Metax — 跨域宏基因组分类工具</li>
-<li>MARC — 亚细胞空转细胞分割模型</li>
-<li>BTEC — 乳腺组织特异甲基化时钟（待确认权重公开性）</li>
+<li>spaGFM（空间转录组图基础模型，4390 万细胞预训练）— https://doi.org/10.21203/rs.3.rs-11012643/v1</li>
+<li>LucaCell（跨物种单细胞序列基础模型）— https://doi.org/10.64898/2026.09.08.750024</li>
+<li>Clin-JEPA（EHR 患者轨迹 JEPA 预训练框架）— https://arxiv.org/abs/2605.10840</li>
+<li>JEPA-Anything（正交预测因子分解，跨七领域）— https://www.semanticscholar.org/paper/ba43a23966622ae3823e225b32d69f59f0aea695</li>
+<li>Immune World Model（动作条件化多尺度免疫世界模型）— https://arxiv.org/abs/2609.14709</li>
+<li>Domain Elastic Transform (DET)（贝叶斯函数配准）— https://arxiv.org/abs/2603.21235</li>
+<li>TP-DATE（动态 Gromov-Wasserstein 最优传输）— https://arxiv.org/abs/2609.20008</li>
+<li>MARC（亚细胞空转细胞分割）— https://arxiv.org/abs/2609.13665</li>
 </ul>
 <h3>people.md</h3>
 <ul>
-<li>Pheng Ann Heng（CUHK，免疫世界模型通讯作者）</li>
-<li>Ling Yang（免疫世界模型通讯作者）</li>
-<li>Zhenfei Yin（免疫世界模型通讯作者）</li>
-<li>Yingcheng Wu（免疫世界模型通讯作者）</li>
-<li>Garma LD / Pernas S（BTEC 作者，乳腺表观时钟方向）</li>
+<li>Sean Lim（GIA: Germline-Informed Aging with AlphaGenome 作者）— https://arxiv.org/abs/2609.17801</li>
+<li>Osamu Hirose / Emanuele Rodola（Domain Elastic Transform 作者）— https://doi.org/10.1109/tpami.2026.3733393</li>
+<li>Junda Ying, Zhiwei Zeng, Peijie Zhou, Lei Zhang（TP-DATE 作者）— https://arxiv.org/abs/2609.20008</li>
+<li>Taoyong Cui, Xi Wang, Zonghang Li 等（Immune World Model 作者，PhAI Labs / CUHK）— https://arxiv.org/abs/2609.14709</li>
+<li>Yixuan Yang, Mehak Arora, Ryan Zhang 等（Clin-JEPA 作者）— https://arxiv.org/abs/2605.10840</li>
+<li>Wang J, Zhong Y, He F 等（spaGFM 作者）— https://doi.org/10.21203/rs.3.rs-11012643/v1</li>
 </ul></div>
 <div class="wk"><h3>2026-W37</h3><h2>跨域趋势</h2>
 <ol>
