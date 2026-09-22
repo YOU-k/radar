@@ -4,6 +4,8 @@
 
 ## 单细胞 / 空间组学
 
+- [A single-cell RNA-seq catalog of ground truth gene coregulation](https://doi.org/10.64898/2026.09.18.752692) — 含已知调控关系的scRNA-seq基准目录，用于评估共调控识别与归一化方法。
+  `dataset` · 单细胞转录组 · 规模 35个样本 · `7.0` 分 · 2026-09-22
 - [LucaCell: a sequence-centric foundation model for cross-species single-cell analysis](https://doi.org/10.64898/2026.09.08.750024) — 跨物种单细胞序列基础模型，适合做细胞表征微调基线
   `model` · 单细胞转录组（序列） · 跨物种 · 获取：预印本，权重待确认 · `7.0` 分 · 2026-09-16
 - [Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence](https://doi.org/10.64898/2026.09.11.748700) — 跨组织单细胞长读长异构体图谱，含衰老维度，可做异构体层分析参考
