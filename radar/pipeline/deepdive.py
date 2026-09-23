@@ -19,7 +19,8 @@ from .. import llm
 from ..collectors.europepmc import _search, _to_item
 from ..config import ROOT, load_profile
 from ..schema import Item
-from .extract import extract_items
+from .extract import extract_items, store
+from .resources import mine_infrastructure
 
 ARXIV_API = "https://export.arxiv.org/api/query"
 MAX_PAPERS = 120   # 抽取上限：控制 LLM 成本
@@ -227,6 +228,12 @@ def run_deepdive(topic: str, months: int = 6) -> Path:
 
     extractions = extract_items(papers, topic=topic)
     print(f"[deepdive] extracted: {sum(1 for e in extractions if e['summary'])}")
+    n = store(papers, extractions, end)
+    print(f"[deepdive] stored {n} extraction records")
+    recs = [{"title": it.title, "data": ex.get("data", "")}
+            for it, ex in zip(papers, extractions)]
+    n = mine_infrastructure(recs, end)
+    print(f"[deepdive] infrastructure resources: {n}")
 
     body = _synthesize(topic, months, papers, extractions, news)
     refs = ["## 参考文献", ""]

@@ -4,6 +4,12 @@
 门槛从严：只收 LLM 判定为 dataset/model 且 ≥7 分的——即确实存在、
 公开可获取、能直接拿来用的；普通方法论文和小工具不进清单。
 条目由 LLM 补结构化字段（数据类型/规模/获取方式/一句话价值），按使用场景分组。
+
+资源判断双通道：
+A. 发布驱动（append_resources）：新论文自发布的数据集/模型，≥7 分进「新发布资源」。
+B. 用量挖掘（mine_infrastructure）：聚合抽取记录里每篇文献"用了什么数据"，
+   被 ≥2 篇独立高分工作反复使用的资源才是真基础设施（Tahoe-100M、TCGA 这类），
+   进「领域基础设施」区并附使用证据。这是主通道——用量投票比单次打分可靠。
 """
 from __future__ import annotations
 
@@ -28,9 +34,11 @@ CATEGORIES = [
     "通用 ML / 其他",
 ]
 
-HEADER = ("# 可用资源清单（数据集 / 模型）\n\n"
-          "自动累积：只收确认公开可获取、打分 ≥7 的大数据集和模型，"
-          "按使用场景分组，持续更新。资讯请看日报。\n")
+INFRA_SECTION = "领域基础设施（被多篇高分工作反复使用）"
+
+HEADER = ("# 可用资源清单\n\n"
+          "「领域基础设施」：用量挖掘——被多篇高分工作反复用于训练/评测的数据集与基准，附使用证据。\n"
+          "「新发布资源」：只收确认公开可获取、打分 ≥7 的新数据集/模型，按场景分组。资讯请看日报。\n")
 
 
 def is_resource(it: Item) -> bool:
@@ -96,6 +104,17 @@ def _parse_existing() -> dict[str, list[str]]:
     return body
 
 
+def _write(body: dict[str, list[str]]) -> None:
+    out = [HEADER]
+    order = [INFRA_SECTION] + CATEGORIES
+    for cat in order + sorted(set(body) - set(order)):
+        if body.get(cat):
+            out.append(f"## {cat}\n")
+            out.extend(body[cat])
+            out.append("")
+    FILE.write_text("\n".join(out), encoding="utf-8")
+
+
 def append_resources(items: list[Item], day: date) -> int:
     cand = [it for it in items if it.score >= MIN_SCORE and is_resource(it)]
     if not cand:
@@ -120,11 +139,57 @@ def append_resources(items: list[Item], day: date) -> int:
         block = f"- [{it.title}]({it.url}) — {meta['value']}\n  {detail}"
         body.setdefault(meta["category"] or CATEGORIES[-1], []).insert(0, block)
 
-    out = [HEADER]
-    for cat in CATEGORIES + sorted(set(body) - set(CATEGORIES)):
-        if body.get(cat):
-            out.append(f"## {cat}\n")
-            out.extend(body[cat])
-            out.append("")
-    FILE.write_text("\n".join(out), encoding="utf-8")
+    _write(body)
     return len(cand)
+
+
+def mine_infrastructure(recs: list[dict], day: date) -> int:
+    """通道 B（主通道）：从抽取记录聚合"每篇用了什么数据"，
+    被 ≥2 篇独立高分工作使用的资源 → 「领域基础设施」区，附使用证据。
+
+    recs: extract 模块的记录（需含 title / data / summary 字段）。
+    """
+    pool = [{"id": i, "title": r.get("title", ""), "data": r.get("data", "")}
+            for i, r in enumerate(recs) if r.get("data")]
+    if len(pool) < 3 or not llm.available():
+        return 0
+    prompt = (
+        "下面是一批高分科研文献的标题和它们「训练/评测所用的数据」字段。"
+        "请识别被 ≥2 篇独立文献使用的数据集 / 数据库 / 基准资源"
+        "（如 Tahoe-100M、DepMap PRISM、TCGA 这类被反复使用的基础设施）。\n"
+        "对每个资源输出：name（标准英文名）、scale（规模，提及才写）、"
+        "usage（它被用来干什么，≤20字，如 扰动预测训练基准）、"
+        "used_by（使用它的文献 id 列表，从输入抄）。\n"
+        "只在单篇出现的自发布数据集不要收录；常识性小工具不要收录。\n\n"
+        "【文献数据字段】\n" + json.dumps(pool, ensure_ascii=False)[:16000]
+        + '\n\n只输出 JSON 数组，形如 [{"name":"...","scale":"...","usage":"...","used_by":[0,3]}]。'
+    )
+    try:
+        content = llm.chat(prompt, model=llm.SCORE_MODEL, temperature=0.1, timeout=180)
+        m = re.search(r"\[.*\]", content, re.DOTALL)
+        rows = json.loads(m.group(0)) if m else []
+    except Exception as exc:
+        print(f"[resources] infrastructure mining failed: {exc}")
+        return 0
+
+    body = _parse_existing()
+    existing_names = {
+        re.sub(r"\*\*", "", e.split("—")[0]).strip(" -[]").lower()
+        for e in body.get(INFRA_SECTION, [])}
+    added = 0
+    for r in rows:
+        name = str(r.get("name", "")).strip()
+        used = [pool[j]["title"] for j in r.get("used_by", [])
+                if isinstance(j, int) and 0 <= j < len(pool)]
+        if not name or len(used) < 2 or name.lower() in existing_names:
+            continue
+        scale = f"{str(r.get('scale', '')).strip()} · " if r.get("scale") else ""
+        shown = " / ".join(t[:40] for t in used[:3])
+        block = (f"- **{name}** — {scale}{str(r.get('usage', '')).strip()}\n"
+                 f"  被 {len(used)} 篇高分工作使用：{shown} · {day.isoformat()} 收录")
+        body.setdefault(INFRA_SECTION, []).insert(0, block)
+        existing_names.add(name.lower())
+        added += 1
+    if added:
+        _write(body)
+    return added
