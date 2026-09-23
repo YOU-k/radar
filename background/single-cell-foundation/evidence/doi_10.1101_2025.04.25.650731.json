@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.04.25.650731",
+  "title": "A Cross-Species Generative Cell Atlas Across 1.5 Billion Years of Evolution: The TranscriptFormer Single-cell Model",
+  "url": "https://doi.org/10.1101/2025.04.25.650731",
+  "abstract": "Single-cell transcriptomics has revolutionized our understanding of cellular diversity, yet our understanding of the transcriptional programs across the tree of life remains limited. Here we present TranscriptFormer, a family of generative foundation models trained on up to 112 million cells spanning 1.53 billion years of evolution across 12 species. By jointly modeling gene identities and expression levels using a novel generative architecture, TranscriptFormer encodes multi-scale biological structure, functioning as a queryable virtual cell atlas. We demonstrate state-of-the-art performance on both in-distribution and out-of-distribution cell type classification, with robust performance even for species separated by over 685 million years of evolution. TranscriptFormer can also perform zero-shot disease state identification in human cells and accurately transfers cell state annotations across species boundaries. As a generative model, TranscriptFormer can be prompted to predict cell type-specific transcription factors and gene-gene interactions that align with independent experimental observations. Developmental trajectories, phylogenetic relationships and cellular hierarchies emerge naturally in TranscriptFormer’s representations without any explicit training on these annotations. This work establishes a powerful framework for quantitative single-cell analysis, and comparative cellular biology, thus demonstrating that universal principles of cellular organization can be learned and predicted across the tree of life.",
+  "authors": "James D. Pearce, Sara E. Simmonds, Gita Mahmoudabadi, Lakshmi Krishnan, G. Palla, A. Istrate, Alexander Tarashansky, Benjamin Nelson",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 37,
+  "found_by": [
+   "s2kw:single-cell foundation model z"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种生成式单细胞基础模型，虚拟细胞图谱",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨物种生成式虚拟细胞图谱，有公开权重",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "生成式基础模型TranscriptFormer联合建模基因与表达",
+  "data": "1.12亿细胞、12物种、跨越15.3亿年进化",
+  "scenario": "跨物种细胞图谱与虚拟细胞查询",
+  "benchmark": "分布内与分布外细胞类型分类SOTA",
+  "results": "跨物种细胞类型分类SOTA，可零样本疾病状态识别，跨物种注释转移准确，发育轨迹与系统发育自然涌现",
+  "availability": "",
+  "limitations": "",
+  "summary": "TranscriptFormer是一类生成式基础模型，在多达1.12亿细胞、12个物种、跨越15.3亿年进化的数据上训练。通过联合建模基因身份与表达水平，编码多尺度生物结构，充当可查询的虚拟细胞图谱。在分布内和分布外细胞类型分类上达SOTA，可零样本识别疾病状态并跨物种转移注释，发育轨迹和系统发育关系自然涌现。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

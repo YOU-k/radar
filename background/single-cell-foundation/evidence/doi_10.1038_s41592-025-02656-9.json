@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-025-02656-9",
+  "title": "PTM-Mamba: a PTM-aware protein language model with bidirectional gated Mamba blocks.",
+  "url": "https://doi.org/10.1038/s41592-025-02656-9",
+  "abstract": "Proteins serve as the workhorses of living organisms, orchestrating a wide array of vital functions. Post-translational modifications (PTMs) of their amino acids greatly influence the structural and functional diversity of different protein types and uphold proteostasis, allowing cells to swiftly respond to environmental changes and intricately regulate complex biological processes. To this point, efforts to model the complex features of proteins have involved the training of large and expressive protein language models (pLMs) such as ESM-2 and ProtT5, which accurately encode structural, functional, and physicochemical properties of input protein sequences. However, the over 200 million sequences that these pLMs were trained on merely scratch the surface of proteomic diversity, as they neither input nor account for the effects of PTMs. In this work, we fill this major gap in protein sequence modeling by introducing PTM tokens into the pLM training regime. We then leverage recent advancements in structured state space models (SSMs), specifically Mamba, which utilizes efficient hardware-aware primitives to overcome the quadratic time complexities of Transformers. After adding a comprehensive set of PTM tokens to the model vocabulary, we train bidirectional Mamba blocks whose outputs are fused with state-of-the-art ESM-2 embeddings via a novel gating mechanism. We demonstrate that our resultant PTM-aware pLM, PTM-Mamba, improves upon ESM-2’s performance on various PTM-specific tasks. PTM-Mamba is the first and only pLM that can uniquely input and represent both wild-type and PTM sequences, motivating downstream modeling and design applications specific to post-translationally modified proteins. To facilitate PTM-aware protein language modeling applications, we have made our model available at: https://huggingface.co/ChatterjeeLab/PTM-Mamba.",
+  "authors": "Peng FZ, Wang C, Chen T, Schussheim B, Vincoff S, Chatterjee P.",
+  "venue": "Nature methods",
+  "year": 2025,
+  "citations": 38,
+  "found_by": [
+   "journal-retro",
+   "s2:references:doi:10.1016/j.cell.2024.11.015"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC12074982",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PTM感知蛋白语言模型，有公开权重且属蛋白基础模型",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "PTM感知蛋白语言模型，Nature Methods，蛋白基础模型方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PTM-Mamba双向门控Mamba模型",
+  "data": "79,707条修饰序列，源自311,350条Swiss-Prot PTM记录",
+  "scenario": "PTM感知蛋白序列建模",
+  "benchmark": "PTM-Transformer基线及ESM-2-650M",
+  "results": "训练准确率收敛快于PTM-Transformer，门控融合ESM-2嵌入区分修饰与野生型序列",
+  "availability": "代码公开",
+  "limitations": "依赖ESM-2嵌入，PTM类型与序列长度覆盖有限",
+  "summary": "提出PTM感知蛋白语言模型PTM-Mamba。基于双向Mamba块并以门控机制融合ESM-2与PTM嵌入，用79,707条修饰序列训练。相比PTM-Transformer收敛更快，能区分并相关表示修饰与未修饰序列。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 5,
+ "added_on": "2026-09-23"
+}

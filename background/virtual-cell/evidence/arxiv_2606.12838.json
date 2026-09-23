@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2606.12838",
+  "title": "OCOO-T : A Simple and Scalable Virtual Cell Model for Transcriptional Perturbation Response Prediction",
+  "url": "https://arxiv.org/abs/2606.12838v2",
+  "abstract": "Predicting single-cell transcriptional responses to genetic, chemical and cytokine perturbations is a fundamental challenge in computational biology and AI Virtual Cell (AIVC) modeling, with direct implications for drug discovery and the elucidation of gene regulatory networks. Existing approaches often rely on auxiliary cell-state encoders, hierarchical variational autoencoders, dedicated Transformer encoder-decoder modules, or gene-interaction priors to compress high-dimensional expression profiles into latent representations. While effective, these designs increase architectural complexity and may limit scalability and generalizability. This paper introduces OCOO-T, a minimalist flow-matching-based AIVC model for transcriptional perturbation response prediction. OCOO-T utilizes a vanilla Transformer stack that operates directly on continuous gene expression profiles and formulates perturbation response prediction as a continuous-time denoising process. Perturbation embeddings, dosage information, and cell-line/cell-type specificity are integrated through adaptive layer normalization and in-context tokens. Comprehensive evaluations on Tahoe100M, Replogle, and PBMC benchmarks demonstrate that OCOO-T achieves state-of-the-art performance across diverse perturbations and cell types while effectively scaling to long transcriptional profiles through patching and depatching of cellular contexts. By leveraging the simplicity of Transformer-based denoising for single-cell omics, OCOO-T provides an effective and scalable framework for in-silico cellular simulation.",
+  "authors": "Danning Jiang, Zhiwen Yan, Qirun Wang, Zheming An, Yalong Zhao, Lipeng Lai",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "极简flow matching扰动预测模型，可扩展性强",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "极简flow matching扰动响应模型，可扩展虚拟细胞",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "极简流匹配Transformer去噪模型",
+  "data": "Tahoe100M、Replogle、PBMC基准",
+  "scenario": "转录扰动响应预测",
+  "benchmark": "scGPT、STATE、Squidiff、CellFlow、scPPDM、PerturbDiff等",
+  "results": "在Tahoe100M、Replogle、PBMC上达到最先进性能，可扩展至长转录谱",
+  "availability": "",
+  "limitations": "基于扩散/流匹配的方法学习对照到扰动分布仍具挑战",
+  "summary": "提出OCOO-T，一种极简流匹配虚拟细胞模型，用普通Transformer直接作用于连续基因表达谱。将扰动响应预测建模为连续时间去噪过程，通过自适应层归一化和上下文token整合扰动、剂量与细胞系信息。在Tahoe100M、Replogle、PBMC上达到最先进性能，并可扩展至长转录谱。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

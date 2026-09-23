@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41587-025-02811-9",
+  "title": "Standardized metrics for assessment and reproducibility of imaging-based spatial transcriptomics datasets.",
+  "url": "https://doi.org/10.1038/s41587-025-02811-9",
+  "abstract": "Spatial transcriptomics lacks standardized metrics for evaluating imaging-based in situ hybridization technologies across sites. In this study, we generated the Spatial Touchstone (ST) dataset from six tissue types across several global sites with centralized sectioning, analyzed on both Xenium and CosMx platforms. These platforms were selected for their widespread use and distinct chemistries. We assessed reproducibility, sensitivity, dynamic ranges, signal-to-noise ratio, false discovery rates, cell type annotation and congruence with single-cell profiling. This study offers ST standardized operating procedures (STSOPs) and an open-source software, SpatialQM, enabling evaluation of samples across all technical metrics and direct imputation of cell annotations. The generated imaging-based spatial transcriptomics data repository comprises 254 spatial profiles, incorporating both public and newly generated ST datasets in a web-based application, which enables analysis and comparison of user data against an extensive collection of imaging-based datasets. Finally, we establish best practices and metrics to evaluate and integrate imaging-based multi-omics data from single cells into spatial transcriptomics to spatial proteomics.",
+  "authors": "Plummer JT, Dezem FS, Cook DP, Park J, Zhang L, Liu Y, Marção M, DuBose H, Wani A, Wise K, Roach M, Harvey K, Wang T, Jensen KB, Morosini N, De Gregorio R, Alonso A, Houlihan SL, Schwartz RE, Hissong E, Snopkowski C, Wrana JL, Ryan N, Butler LM, Church G, Swarbrick A, Mason CE, Martelotto LG.",
+  "venue": "Nature biotechnology",
+  "year": 2025,
+  "citations": 30,
+  "found_by": [
+   "eupmc:multimodal single-cell RNA pro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13368583",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "空间转录组标准化评测基准，含开源软件与数据集，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Biotech空间组学标准化评测与开源工具，方向必读基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "STSOPs+SpatialQM+STP标准框架",
+  "data": "ST约800万细胞，PUB约3300万细胞、约70亿转录本",
+  "scenario": "成像空间转录组质量与可重复性评估",
+  "benchmark": "Xenium与CosMx跨三站点、六组织类型比较",
+  "results": "建立跨站点准确度、精密度、重复性、灵敏度与特异性指标，STP实时评估约3300万细胞数据",
+  "availability": "SpatialQM开源，STP门户公开",
+  "limitations": "主要覆盖Xenium/CosMx，组织类型与平台有限",
+  "summary": "建立成像空间转录组标准化评测体系。通过多站点统一SOP、开源SpatialQM指标和STP数据门户，跨三站点比较Xenium与CosMx。实现跨平台可重复性评估，并构建约3300万细胞的社区质量指标库。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 5,
+ "added_on": "2026-09-23"
+}

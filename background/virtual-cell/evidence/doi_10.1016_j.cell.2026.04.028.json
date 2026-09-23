@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.04.028",
+  "title": "D-SPIN constructs regulatory network models from scRNA-seq that reveal organizing principles of perturbation response.",
+  "url": "https://doi.org/10.1016/j.cell.2026.04.028",
+  "abstract": "Gene regulatory networks modulate the expression of the genome in response to signals and environmental conditions. Reconstructions of such networks can reveal the control principles cells use to maintain homeostasis and execute cell-state transitions. Here, we introduce a computational framework, dimension-scalable single-cell perturbation integration network (D-SPIN), that infers mechanistically interpretable and generative models of gene regulatory networks from single-cell mRNA-seq datasets collected across thousands of perturbation conditions. The models explain how perturbations modulate cell-state proportions by reconfiguring underlying regulatory interactions. Using large Perturb-seq and drug response datasets, D-SPIN models reveal key regulators of cell fate decisions and the coordination of distant cellular pathways in response to gene knockdowns and drug treatments, elucidate how combinations of immunomodulatory drugs induce combinatorial cell states through additive recruitment of gene expression programs, and simulate shifts in immune cell population structures across unobserved drug dosage combinations. D-SPIN provides a computational framework for revealing principles of cellular information processing and physiological control.",
+  "authors": "Jiang J, Chen S, Tsou T, McGinnis CS, Khazaei T, Zhu Q, Park JH, Strazhnik IM, Vielmetter J, Gong Y, Hanna J, Chow ED, Sivak DA, Gartner ZJ, Thomson M.",
+  "venue": "Cell",
+  "year": 2026,
+  "citations": 6,
+  "found_by": [
+   "eupmc:Perturb-seq generative model",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13387596",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Cell刊，从Perturb-seq推断可解释生成式调控网络，契合扰动响应建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell正刊，从Perturb-seq推断可解释生成式调控网络，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "D-SPIN从scRNA-seq推断可解释生成式调控网络",
+  "data": "大规模Perturb-seq与药物响应scRNA-seq，数千扰动条件",
+  "scenario": "扰动响应与细胞状态比例预测",
+  "benchmark": "未明确列出对比方法",
+  "results": "揭示细胞命运关键调控因子、免疫调节药物组合的加性招募及未观测剂量组合下的免疫细胞群变化",
+  "availability": "",
+  "limitations": "依赖已有扰动数据覆盖，未提外推验证范围",
+  "summary": "作者提出维度可扩展的单细胞扰动整合网络D-SPIN，从跨数千扰动条件的单细胞mRNA-seq数据推断机制可解释且可生成的基因调控网络模型。模型通过重构调控相互作用解释扰动如何改变细胞状态比例。在Perturb-seq和药物响应数据上，D-SPIN识别细胞命运关键调控因子、解析药物组合的加性基因程序招募，并模拟未观测剂量组合下的免疫细胞群结构变化。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

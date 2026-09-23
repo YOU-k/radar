@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2605.28111",
+  "title": "Chreode: A Cell World Model for One-Step Temporal Dynamics and Perturbation Prediction",
+  "url": "https://arxiv.org/abs/2605.28111v1",
+  "abstract": "Predicting how a cell will change its transcriptional state under a developmental signal or a genetic perturbation is the computational core of in-silico biology and the AI Virtual Cell program. Existing approaches either fit static control-to-treated maps that discard time, or solve multi-step ODE / Schrödinger-bridge problems on each dataset independently. We introduce Chreode, a one-step cell world model that predicts action-conditioned cell-state transitions through a structured residual transition operator. It shifts distributional evolution from inference time to training time, enabling single-pass generation while preserving a Waddington-inspired decomposition into downhill landscape flow, rotational in-tangent dynamics, and stochastic spread. The model is pretrained with a shared scVI encoder and a DiT-based dynamics backbone on a 2.4M-cell mouse embryonic atlas spanning 7 datasets. As a fine-tuning initialization, Chreode improves per-target Sinkhorn distance on Weinreb hematopoiesis and Veres islet differentiation over matched scratch models, PI-SDE, and PRESCIENT. As a transferable gene-state embedding for GEARS, the pretrained dynamics representation reduces shared-vocabulary DE20 mean squared error on Norman Perturb-seq from 0.2121 to 0.1858, a 12.4% relative improvement, without changing the GEARS training procedure. We interpret this transfer to perturbation prediction as evidence that pretrained developmental-trajectory dynamics encode differentiation primitives transferable to CRISPR-induced state shifts, since both involve cell-state transitions in a shared latent geometry. The pretrained backbone additionally produces zero-shot clonal fate scores on Weinreb that are competitive with strong dynamic-OT baselines.",
+  "authors": "Mufan Qiu, Genhui Zheng, Yinuo Xu, Ruichen Zhang, Ying Ding, Qi Long, Tianlong Chen",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "一步式细胞世界模型，扰动响应预测新架构",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "细胞世界模型单步时序扰动预测，契合方向核心",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "一步式细胞世界模型（残差转移算子）",
+  "data": "240万细胞小鼠胚胎图谱，7个数据集",
+  "scenario": "时序动态与扰动预测",
+  "benchmark": "PI-SDE、PRESCIENT、GEARS、动态OT基线",
+  "results": "GEARS上DE20 MSE从0.2121降至0.1858（相对提升12.4%）；Weinreb与Veres上Sinkhorn距离优于匹配的从头训练模型",
+  "availability": "",
+  "limitations": "仅做预测建模，不声称具备规划或推演能力",
+  "summary": "提出Chreode，一种一步式细胞世界模型，通过结构化残差转移算子预测动作条件下的细胞状态转移。将分布演化从推理时移至训练时，实现单次生成，并保留Waddington式分解。在240万细胞小鼠胚胎图谱上预训练，在造血与胰岛分化微调及GEARS扰动预测上均优于基线。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

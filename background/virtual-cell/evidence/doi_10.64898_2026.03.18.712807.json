@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.03.18.712807",
+  "title": "X-Cell: Scaling Causal Perturbation Prediction Across Diverse Cellular Contexts via Diffusion Language Models",
+  "url": "https://doi.org/10.64898/2026.03.18.712807",
+  "abstract": "Causal models of cellular systems hold the promise to empower broad biological discovery, including the systematic identification of novel targets for drug discovery. Predicting how genetic and pathway perturbations reshape gene expression across diverse cellular contexts is a prerequisite for building generalizable cellular foundation models. However, current methods typically fail to extrapolate beyond their training distributions because they rely predominantly on observational expression atlases rather than interventional perturbation data. We present X-Atlas/Pisces, the largest genome-wide CRISPRi Perturb-seq compendium to date, comprising 25.6 million perturbed single-cell transcriptomes across 16 biologically diverse contexts, including widely used cell lines, induced pluripotent stem cells (iPSCs), resting and CD3/CD28 activated Jurkat T lymphoma cells, and multi-lineage differentiating iPSCs. Leveraging this resource, we develop X-Cell, a diffusion language model that predicts perturbation responses by iteratively refining control-to-perturbed state transitions through cross-attention to multi-modal biological priors derived from natural language, protein language models, interaction networks, genetic dependency maps, and morphological profiles. X-Cell outperforms existing state-of-the-art models by up to five-fold on key metrics such as Pearson  Δ (correlation between predicted and observed perturbation-induced log-fold changes), and demonstrates zero-shot prediction of T cell inactivating perturbations in stimulated Jurkat cells. We scale X-Cell to 4.9 billion parameters (X-Cell-Ultra), the largest causal perturbation model to date. We demonstrate for the first time that perturbation prediction follows power-law scaling with an exponent matching large language models. X-Cell-Ultra demonstrates zero-shot generalization to novel biological contexts, including unseen iPSC-derived melanocyte progenitors and primary human CD4  + T cells from multiple donors, and outperforms all baselines after self-supervised test-time adaptation. These results demonstrate that coordinated scaling of causal perturbation data and model capacity yields foundation models capable of generalizable perturbation prediction across cellular contexts, with potential applications for improving computational target identification, validation, and context-specific therapeutic prioritization.",
+  "authors": "Wang C, Karimzadeh M, Ravindra NG, Bounds LR, Alerasool N, Huang AC, Ma S, Gulbranson DR, Cui H, Lee Y, Arjavalingam A, MacKrell EJ, Wilken MS, Chen J, Herken BW, Weber JA, Onesto MM, Gonzalez-Teran B, Leung NF, Shi SY, Smith BJ, Lam SK, Barner A, Wright P, Rumsey EM, Kim S, Sit RV, Litterman AJ, Chu C, Wang B.",
+  "venue": "",
+  "year": 2026,
+  "citations": 7,
+  "found_by": [
+   "eupmc:drug perturbation single-cell "
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "最大CRISPRi Perturb-seq图谱加扩散因果预测模型",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "最大CRISPRi Perturb-seq图谱加扩散模型，因果扰动预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "扩散语言模型（多模态先验交叉注意力）",
+  "data": "X-Atlas/Pisces：2560万扰动单细胞，16种情境",
+  "scenario": "跨细胞情境因果扰动预测",
+  "benchmark": "现有最先进模型",
+  "results": "在Pearson Δ等关键指标上优于现有最先进模型最高达五倍，并展示零样本预测能力",
+  "availability": "",
+  "limitations": "现有方法多依赖观察性表达图谱而非干预扰动数据，难以外推",
+  "summary": "构建X-Atlas/Pisces，迄今最大全基因组CRISPRi Perturb-seq数据集，含2560万扰动单细胞转录组、16种生物学情境。开发X-Cell扩散语言模型，通过交叉注意力整合自然语言、蛋白质语言模型、互作网络等多模态先验预测扰动响应。在Pearson Δ等指标上优于现有最先进模型最高五倍，并展示零样本预测能力。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2606.08816",
+  "title": "Knowledge Graphs and Reasoning LLMs for Finding Simple Yet Effective Transcriptomic Perturbation Predictors",
+  "url": "https://arxiv.org/abs/2606.08816v1",
+  "abstract": "Predicting the effect of an unseen gene knockout perturbation on transcriptomic gene expression remains a highly challenging problem for virtual cell models. Recent progress has been made by leveraging biological knowledge graphs to provide a notion of similar perturbation, allowing for improved extrapolation beyond the set of training perturbations. In this work, we demonstrate that the simplest model to leverage these assumptions - a K-nearest neighbour from the knowledge graph - achieves highly competitive performance on this task, and that this can be improved further using LLMs optimised via reinforcement learning (RL) for predictive performance. Specifically, we find that the K-nearest neighbour approach beats almost all methods on out-of-distribution perturbation prediction, and when a reasoning LLM is trained via RL to make changes to the neighbourhood, it obtains equivalent performance to current state of the art methods on the cell lines from Replogle et al. (2022). We also demonstrate that the RL training improves the LLM's performance on the downstream task of differential expression prediction, despite not being trained on this directly. Overall, these findings demonstrate the efficacy of knowledge graphs as model priors, and show early signs that RL can refine LLMs into generalizable tools for predicting complex biological responses.",
+  "authors": "Jake Fawkes, Liam Hodgson, Jason Hartford",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "知识图谱+KNN基线揭示简单模型竞争力，含批判性证据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "知识图谱+KNN简单基线击败复杂模型，批判性结果",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "知识图谱KNN+RL优化推理LLM预测扰动",
+  "data": "Replogle等2022细胞系扰动数据",
+  "scenario": "未见基因敲除转录组效应预测",
+  "benchmark": "现有虚拟细胞模型；Replogle 2022细胞系",
+  "results": "KNN在分布外扰动预测上击败几乎所有方法；RL-LLM达SOTA水平",
+  "availability": "",
+  "limitations": "全文未提供，依赖知识图谱质量",
+  "summary": "该工作证明利用知识图谱的最简KNN模型在扰动预测上极具竞争力。用强化学习优化推理LLM调整邻域，在Replogle 2022细胞系上达到当前SOTA水平。RL训练还提升LLM在差异表达预测上的表现，显示知识图谱作为模型先验与RL精炼LLM的潜力。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.08.042",
+  "title": "A world model of the virtual cell.",
+  "url": "https://doi.org/10.1016/j.cell.2026.08.042",
+  "abstract": "The prospect of an AI-driven digital organism (AIDO), such as a virtual cell, has recently captured growing excitement and imagination across the AI and biology communities. We envision a virtual cell as a multi-modal, multi-scale, dynamic, and stateful computational system capable of simulating the activity and behavior of a living cell. Such a system could shift cell biology from trial-and-error experimentation with cell-culture models in the wet lab toward systematic simulation of combinatorial interventions in a digital laboratory. In this paper, we propose the world model as an operational framework for realizing this vision-an emerging AI paradigm that supports action-conditioned simulation, counterfactual reasoning and long-horizon planning in complex dynamic environments. In this formulation, a virtual cell world model (VCWM) represents a persistent cellular state and simulates its evolution under genetic, chemical, environmental, and other biological interventions. In contrast to predictive foundation models optimized for specific tasks or endpoints, a VCWM seeks to model the underlying cellular system, allowing interventions to propagate through an evolving state and generate coherent molecular, structural, interactional, and morphological outcomes over time. We outline an architecture, a data framework, training strategy, and evaluation principles for realizing this vision and discuss how existing biological foundation models can serve as its building blocks. We envisage that VCWMs could transform biological discovery from exhaustive experimental search toward structured navigation of learned cellular worlds, enabling counterfactual exploration, rational intervention design, and ultimately more predictive, designable, and programmable cell biology.",
+  "authors": "Xing EP, Song L.",
+  "venue": "Cell",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "虚拟细胞世界模型框架性愿景论文，方向纲领",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell虚拟细胞世界模型框架，方向纲领性必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出虚拟细胞世界模型(VCWM)框架与架构",
+  "data": "无新数据，综述性框架，未给规模",
+  "scenario": "虚拟细胞仿真与反事实推理",
+  "benchmark": "对比面向特定任务的预测型基础模型",
+  "results": "未报告定量结果，仅提出架构、数据框架、训练策略与评估原则",
+  "availability": "",
+  "limitations": "属愿景性论文，无实验验证与定量结果",
+  "summary": "该文提出将虚拟细胞构建为多模态、多尺度、有状态的动态计算系统。方法上引入世界模型作为操作框架，支持动作条件仿真、反事实推理与长程规划，并给出架构、数据框架、训练策略与评估原则。核心观点是VCWM应建模底层细胞系统本身，使干预在演化状态中传播，而非仅优化特定任务端点。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

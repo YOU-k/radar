@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.09.750484",
+  "title": "Cell-level random splits leak group-owned answers in single-cell benchmarks",
+  "url": "https://doi.org/10.64898/2026.09.09.750484",
+  "abstract": "Machine learning models in single-cell biology increasingly forecast differentiation, reprogramming and therapeutic response from early transcriptomic profiles. Testing whether a model has learned real biology requires held-out cells. Single-cell data, however, are grouped: cells from the same clone, patient or batch share the same label. A random split therefore places relatives of each test cell, carrying its label, in the training set, and a model can score well by memorizing a relative instead of learning a transferable rule. Grouped validation removes this leakage but leaves far fewer independent units behind each error bar. Here we show how to estimate this leakage before training any model, from two properties of the data: exposure, the fraction of test cells with relatives in training, and retrievability, how often a nearest-neighbor search returns such a relative rather than an unrelated cell. Across lineage-barcoded and patient data, exposure determines whether a random split opens a leakage channel, and retrievability determines how much it can inflate the score. The inflation is negligible where cell state has decoupled from ancestry, much larger where clonal sisters remain close in expression space, and in a patient cohort large enough to overturn a clinical conclusion. We also provide leakcheck, which computes both properties in seconds, before the outcome model is fitted.",
+  "authors": "Cang Hu, Sha Sun",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41592-024-02201-0"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞基准数据泄漏批判，评测效度关键证据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "揭示单细胞基准随机划分泄漏，评测批判性工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "leakcheck：基于暴露度与可检索性估计泄漏",
+  "data": "谱系条形码与患者单细胞数据",
+  "scenario": "单细胞基准数据泄漏检测",
+  "benchmark": "随机划分 vs 分组验证",
+  "results": "暴露度决定泄漏通道，可检索性决定分数膨胀；患者队列可推翻临床结论",
+  "availability": "提供leakcheck工具",
+  "limitations": "全文未提供，仅估计泄漏不修正模型",
+  "summary": "该研究揭示单细胞基准中细胞级随机划分会泄漏组内答案，因同克隆或同患者细胞共享标签。提出从暴露度与可检索性两属性在训练前估计泄漏，并给出leakcheck工具。在谱系条形码与患者数据中，暴露度决定泄漏通道，可检索性决定分数膨胀，患者队列中泄漏足以推翻临床结论。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

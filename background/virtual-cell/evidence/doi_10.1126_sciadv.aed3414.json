@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/sciadv.aed3414",
+  "title": "A systematic comparison of single-cell perturbation response prediction models.",
+  "url": "https://doi.org/10.1126/sciadv.aed3414",
+  "abstract": "Predicting single-cell transcriptional responses to perturbations is central to dissecting gene regulation and accelerating therapeutic design, yet the field lacks a rigorous, task-spanning assessment of model behavior. We present a large-scale benchmark of 13 representative methods and baselines across 25 datasets spanning diverse perturbation modalities and species, including two primary immune-cell drug-response resources. We evaluated three core tasks-generalization to unseen single-gene perturbations, prediction of combinatorial interactions, and transfer across cell types-using 24 metrics covering expression-level accuracy, relative changes, differential expression (DE) recovery, and distributional similarity. Across tasks, performance depended strongly on perturbation effect size and evaluation perspective: Expression-level agreement was the highest for small-effect perturbations resembling controls, whereas delta- and DE-based metrics improved with larger effects, providing clearer signals. Models shared a conservative bias, with fine-tuned foundation models compressing variance and underestimating synergistic effects in combinations. PerturbNet showed superior recovery of DE signatures in Tasks 1 and 2, while no method consistently generalized across cell types in Task 3, where biological consistency dominated outcomes. This benchmark establishes current methodological limits, clarifies that different metrics probe distinct biological signals rather than redundant summaries of the same prediction problem, and provides a foundation for developing virtual-cell models that more faithfully capture heterogeneous perturbation responses.",
+  "authors": "Li L, You Y, Fu Y, Liao W, Fan X, Lu S, Cao Y, Li B, Ren W, Kong J, Zheng S, Chen J, Liu X, Tian L.",
+  "venue": "Science advances",
+  "year": 2026,
+  "citations": 4,
+  "found_by": [
+   "eupmc:Perturb-seq generative model",
+   "eupmc:virtual cell benchmark baselin"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13557097",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "大规模基准比较13种扰动预测方法，含批判性评估，契合评测基准",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Science Advances系统基准，含未跑赢基线证据，评测必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "系统基准评测13个扰动响应预测模型",
+  "data": "23个公开+2个自建数据集，含CRISPR、药物、免疫刺激",
+  "scenario": "跨数据集与任务的扰动响应预测",
+  "benchmark": "13个预测模型及多种简单基线",
+  "results": "扰动效应幅度强烈影响泛化与双扰动预测；细胞类型迁移中转录组距离越大准确率越低",
+  "availability": "",
+  "limitations": "实验系统多限于细胞系，原代与体内适用性有限",
+  "summary": "该研究构建了覆盖多样数据集、扰动模态与预测任务的综合基准，系统评测13个单细胞扰动响应预测模型及多种基线。评测涵盖遗传扰动、小分子处理和免疫刺激，跨癌细胞系、多能干细胞与免疫细胞。结果显示扰动效应幅度显著影响泛化与双扰动预测，细胞类型迁移中源-目标转录组距离越大准确率越低。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

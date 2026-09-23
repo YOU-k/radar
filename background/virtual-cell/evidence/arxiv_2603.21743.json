@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2603.21743",
+  "title": "CellFluxRL: Biologically-Constrained Virtual Cell Modeling via Reinforcement Learning",
+  "url": "https://arxiv.org/abs/2603.21743v4",
+  "abstract": "Building virtual cells with generative models to simulate cellular behavior in silico is emerging as a promising paradigm for accelerating drug discovery. However, prior image-based generative approaches can produce implausible cell images that violate basic physical and biological constraints. To address this, we propose to post-train virtual cell models with reinforcement learning (RL), leveraging biologically meaningful evaluators as reward functions. We design seven rewards spanning three categories-biological function, structural validity, and morphological correctness-and optimize the state-of-the-art CellFlux model to yield CellFluxRL. CellFluxRL consistently improves over CellFlux across all rewards, with further performance boosts from test-time scaling. Overall, our results present a virtual cell modeling framework that enforces physically-based constraints through RL, advancing beyond \"visually realistic\" generations towards \"biologically meaningful\" ones.",
+  "authors": "Dongxia Wu, Shiye Su, Yuhui Zhang, Elaine Sui, Emma Lundberg, Emily B. Fox, Serena Yeung-Levy",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "RL后训练虚拟细胞模型，含生物约束奖励，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "RL后训练虚拟细胞模型，含生物约束奖励，契合方向。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "强化学习后训练CellFlux，七类生物奖励约束",
+  "data": "图像型细胞筛选数据（CellFlux训练数据）",
+  "scenario": "图像虚拟细胞生成",
+  "benchmark": "基线模型CellFlux",
+  "results": "CellFluxRL在所有奖励上持续优于CellFlux，测试时扩展进一步提升性能",
+  "availability": "",
+  "limitations": "奖励为加权线性组合，权重设计依赖人工；仅验证于CellFlux一种生成框架",
+  "summary": "针对图像虚拟细胞生成违反物理与生物约束的问题，提出用强化学习后训练CellFlux。设计生物功能、结构有效性与形态正确性三类共七个奖励，通过采样-优化交替提升高奖励样本似然。CellFluxRL在所有奖励上优于基线，测试时扩展进一步增益，实现从视觉逼真到生物学有意义的生成。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

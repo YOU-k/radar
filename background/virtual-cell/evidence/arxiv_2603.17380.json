@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2603.17380",
+  "title": "SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction",
+  "url": "https://arxiv.org/abs/2603.17380v3",
+  "abstract": "Virtual-cell models aim to predict how cell populations respond to perturbations, but control and treated cells are measured as unpaired populations, complicating the learning of perturbation-specific effects. We present SCALE, a conditional transport model that represents cells as unordered sets and predicts treated populations without cell-level matching. A shared set-aware encoder and conditional DiT backbone learn latent transport, making endpoint supervision directly delta-aligned without an auxiliary delta objective. Across genetic, chemical, developmental and immune perturbations, SCALE recovered gene-expression changes, response directions and population structure. In CRISPR data with dominant cell-line effects, SCALE outperformed competing methods across seven metrics and maintained separation among gene-target representations rather than collapsing them into a shared region. SCALE further prioritized cytokines predicted to produce distinct immune activation and inflammatory responses. Experiments using matched PBMC samples from three donors confirmed these predicted differences. Together, SCALE enables perturbation-specific prediction from unpaired populations and supports experimental prioritization.",
+  "authors": "Shuizhou Chen, Lang Yu, Xueqin Lin, Xinjie Mao, Songming Zhang, Xinyu Gu, Hao Wu, Sheng Xu",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "条件最优传输预测扰动响应，方法新颖，契合扰动预测模型",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "条件传输预测扰动响应，有方法创新，属该方向模型",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SCALE：条件传输模型预测处理群体",
+  "data": "CRISPR、化学、发育与免疫扰动单细胞数据",
+  "scenario": "非配对群体的扰动响应预测",
+  "benchmark": "竞争方法，7项指标对比",
+  "results": "在CRISPR数据中7项指标优于竞争方法，保持基因靶表示分离；预测的细胞因子差异经3名供体PBMC实验验证",
+  "availability": "预印本arXiv:2603.17380v3",
+  "limitations": "依赖非配对群体假设，扰动特异性监督仍具挑战",
+  "summary": "针对对照与处理细胞为非配对群体的问题，作者提出条件传输模型SCALE，将细胞表示为无序集合并预测处理群体而无需细胞级配对。共享集合感知编码器与条件DiT骨干学习潜传输，使端点监督直接delta对齐。在遗传、化学、发育与免疫扰动中，SCALE恢复基因表达变化、响应方向与群体结构，在CRISPR数据7项指标上优于竞争方法，其预测的细胞因子差异经三名供体PBMC实验验证。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

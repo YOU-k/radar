@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-019-0494-8",
+  "title": "scGen predicts single-cell perturbation responses",
+  "url": "https://doi.org/10.1038/s41592-019-0494-8",
+  "abstract": "",
+  "authors": "M. Lotfollahi, F. Wolf, Fabian J Theis",
+  "venue": "Nature Methods",
+  "year": 2019,
+  "citations": 729,
+  "found_by": [
+   "s2:references:doi:10.1038/s41592-024-02201-0"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:31363220"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "扰动响应预测经典方法，方向奠基性工作",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "scGen扰动响应预测奠基之作，高引必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "scGen：基于VAE的潜空间扰动向量预测",
+  "data": "",
+  "scenario": "单细胞扰动响应预测",
+  "benchmark": "",
+  "results": "",
+  "availability": "",
+  "limitations": "",
+  "summary": "scGen提出用变分自编码器在潜空间学习扰动向量以预测单细胞扰动响应。方法在潜空间中加减扰动向量实现跨细胞类型与跨物种的响应预测。该工作为单细胞扰动响应预测奠定基础，但全文未提供。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

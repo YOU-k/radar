@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.03.04.709254",
+  "title": "Predicting how perturbations reshape cellular trajectories with PerturbGen",
+  "url": "https://doi.org/10.64898/2026.03.04.709254",
+  "abstract": "A major challenge in biology is predicting how cells transition between states over time and how perturbations disrupt these transitions. Understanding such dynamics is critical for identifying interventions that reverse pathological programs or reprogram cells toward desired states. Although recent computational approaches can predict single-cell perturbation responses  in silico , they cannot predict responses across dynamic cell trajectories, for example how early perturbations reconfigure later cell states. To address this gap, we introduce PerturbGen, a generative foundation model trained on over 100 million single-cell transcriptomes that predicts perturbation responses along cellular trajectories. PerturbGen predicts how genetic perturbation at source state shapes downstream states, alters gene programs and trajectories across time, for example in differentiation or disease progression. We apply PerturbGen to three newly generated multi-condition human single-cell datasets spanning immune responses, hematopoiesis and skin development. In an  in vivo immune challenge, PerturbGen predicts that knocking out an  IL1B signal in myeloid cells attenuates later cytokine-interferon programs, with downstream changes consistent with a reversal of IL-1β stimulation signature. In hematopoiesis, anchoring perturbation-induced programs to human genetics enables simulation of monogenic blood disorders, recapitulates established disease-associated biology whilst systematically revealing lineage-specific programs, including in lineages where this was not previously possible. In skin organoids, PerturbGen predicted that Wnt activation enhances stromal differentiation recapitulating the trajectory observed in human prenatal skin, findings that were functionally validated by experimentally activating Wnt signaling. Together, PerturbGen extends modeling of gene perturbations from static to dynamic cellular systems. We envision PerturbGen enabling the creation of  in silico , trajectory-aware perturbation atlases and virtual cells across diverse biological scenarios, supporting optimization of disease models and prioritization of candidate molecular interventions for therapeutic discovery.",
+  "authors": "Chi Hao Ly K, Miraki Feriz A, Isobe T, Vahidi A, Vaghari D, Rostron A, Quiroga Londoño M, Mende N, Vijayabaskar M, Moullet M, Rose Foster A, Graves E, Torabi F, Admane C, Horsfall D, Basurto-Lozada D, Stephenson E, Botting RA, Iskander D, Webb S, Goh I, Jafree DJ, Sturgess KHM, Scott J, Sendama W, Magnani L, Hannah R, Asadollahzadeh H, Holland A, Prete M, Simpson J, Roy A, Roberts I, Jardine L, Laurenti E, Trynka G, Wilson NK, Haniffa M, Göttgens B, Lotfollahi M.",
+  "venue": "",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "eupmc:Perturb-seq generative model"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "轨迹扰动响应生成基础模型，契合方向，需核验代码",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "PerturbGen预测扰动重塑细胞轨迹，生成式基础模型，有代码",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PerturbGen：生成式基础模型预测轨迹扰动响应",
+  "data": "超1亿单细胞转录组；3套多条件人类数据集",
+  "scenario": "沿细胞轨迹的扰动响应预测",
+  "benchmark": "",
+  "results": "预测IL1B敲除减弱后续细胞因子-干扰素程序，与IL-1β刺激逆转一致",
+  "availability": "",
+  "limitations": "全文未提供，需更多轨迹验证",
+  "summary": "PerturbGen是训练于超1亿单细胞转录组的生成式基础模型，预测沿细胞轨迹的扰动响应。方法预测源状态遗传扰动如何塑造下游状态、改变基因程序与轨迹。在免疫挑战、造血与皮肤发育三套数据中，预测IL1B敲除减弱后续细胞因子-干扰素程序，与IL-1β刺激逆转一致。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

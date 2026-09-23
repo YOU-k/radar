@@ -1,0 +1,52 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.patter.2025.101326",
+  "title": "BioLLM: A standardized framework for integrating and benchmarking single-cell foundation models",
+  "url": "https://doi.org/10.1016/j.patter.2025.101326",
+  "abstract": "The application and evaluation of single cell foundational models (scFMs) present significant challenges stemming from the heterogeneity of architectural frameworks and coding standards. To address these issues, we introduce BioLLM, a framework facilitating the integration and application of scFMs in single-cell RNA sequencing data analysis. BioLLM provides a universal interface, bridging diverse scFMs into a seamless ecosystem. By mitigating architectural disparities and coding conventions, it empowers researchers with streamlined access to scFMs. With standardized APIs and comprehensive documentation, BioLLM streamlines model switching and comparative analyses, while incorporating best practices for consistent model evaluation. Our comprehensive evaluation of scFMs revealed distinct strengths and limitations, highlighting scGPT’s robust performance across all tasks, both in zero-shot and fine-tuning scenarios. Geneformer and scFoundation also demonstrated strong capabilities in gene-level tasks, benefiting from effective pretraining strategies. In contrast, scBERT underperformed relative to other models, likely attributable to its considerably smaller parameter count and the limited size of the training dataset. Ultimately, BioLLM aims to empower the scientific community to leverage the full potential of foundational models, advancing our understanding of complex biological systems through enhanced single-cell analysis.",
+  "authors": "Ping Qiu, Qianqian Chen, Hua Qin, Shuangsang Fang, Yi-Lin Zhang, Yanlin Zhang, Tianyi Xia, Lei Cao",
+  "venue": "bioRxiv",
+  "year": 2024,
+  "citations": 22,
+  "found_by": [
+   "s2kw:single-cell foundation model b",
+   "s2kw:single-cell foundation model z"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:40843339"
+   ],
+   "pmcid": "PMC12365531"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞基础模型标准化整合与评测框架",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞基础模型标准化整合评测框架",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BioLLM标准化框架统一集成与基准评测",
+  "data": "scBERT、Geneformer、scFoundation、scGPT等模型",
+  "scenario": "单细胞基础模型统一调用与基准评测",
+  "benchmark": "多模型跨任务对比，含细胞类型注释与药物响应预测",
+  "results": "提供统一API与决策树预处理，支持零样本推理与微调，实现跨模型可比分析",
+  "availability": "开源框架与文档",
+  "limitations": "各模型代码可及性与文档不一致，集成困难",
+  "summary": "BioLLM是一个标准化框架，旨在统一集成和使用单细胞基础模型。通过决策树预处理接口、BioTask执行器和统一模型加载器，支持零样本推理与微调，覆盖细胞类型注释和药物响应预测等任务。该框架解决了预处理不一致、接口异构和评估指标非标准化三大挑战，提升可重复性与可比性。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

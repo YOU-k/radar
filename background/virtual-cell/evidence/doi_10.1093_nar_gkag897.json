@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/nar/gkag897",
+  "title": "A transcription factor regulatory atlas for activity inference and perturbation prediction",
+  "url": "https://doi.org/10.1093/nar/gkag897",
+  "abstract": "Abstract Inferring transcription factor (TF) activity from transcriptomes and predicting transcriptome-wide responses to TF perturbations remain challenging, in part because available TF–mRNA resources often face a trade-off between precision and coverage and typically lack signed regulatory information. Here, we present TFActProfiler, a TF–mRNA resource and computational framework that learns signed, quantitative TF–mRNA regulatory coefficients by integrating heterogeneous prior evidence (ChIP-based, motif-based, and curated TF–mRNA annotations) with large-scale bulk and single-cell RNA-seq atlases. TFActProfiler contains 2 606 176 signed TF–mRNA interactions and improves TF activity inference in TF knockdown benchmarks relative to widely used regulon resources while retaining broad TF and target coverage. In addition, because the same learned regulatory coefficients can be used to model downstream transcriptional effects, TFActProfiler enables prediction of transcriptome-wide gene expression responses to TF knockdown without training on task-matched perturbation data. When perturbation datasets are available, TFActProfiler can be further refined to achieve performance comparable to state-of-the-art machine-learning baselines. By providing a direction-aware representation of TF–mRNA regulation for both activity inference and perturbation-response modeling, TFActProfiler supports systematic dissection of gene regulatory programs across diverse cellular contexts.",
+  "authors": "Hikaru Sugimoto, Koki Tsuyuzaki, Zhao-Nan Zou, Shinya Oki, Tazro Ohta, Eiryo Kawakami",
+  "venue": "Nucleic Acids Research",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41592-024-02201-0"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42741841"
+   ],
+   "pmcid": "PMC13575427"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "TF调控图谱支持扰动预测，资源+框架契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "TF调控图谱支持扰动预测，资源+框架有代码",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "TFActProfiler：先验+大规模RNA-seq学习TF-mRNA系数",
+  "data": "ChIP-Atlas/CellOracle/CollecTRI先验；DISCO等RNA-seq图谱",
+  "scenario": "TF活性推断与扰动响应预测",
+  "benchmark": "多种人类细胞TF敲低基准；现有TF活性推断法",
+  "results": "多细胞类型TF KD基准上优于现有方法，覆盖广且提供可靠性度量",
+  "availability": "Zenodo公开（记录20779282）",
+  "limitations": "主要聚焦人类数据；依赖先验资源覆盖",
+  "summary": "TFActProfiler整合TF-mRNA先验与大规模RNA-seq图谱，学习带符号定量的调控系数。通过聚类正则化回归估计TF-mRNA相互作用，兼顾覆盖度与精度并提供可靠性度量。在多细胞类型TF敲低基准上优于现有TF活性推断方法，且无需额外训练即可预测TF扰动转录组响应。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

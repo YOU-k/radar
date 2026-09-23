@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.04.022",
+  "title": "RegVelo: Gene-regulatory-informed dynamics of single cells.",
+  "url": "https://doi.org/10.1016/j.cell.2026.04.022",
+  "abstract": "Cell fate transitions are driven by regulatory circuitry, yet RNA velocity models cellular dynamics without explicitly accounting for gene regulatory interactions, limiting mechanistic insight. Conversely, gene regulatory network (GRN) inference methods largely neglect the dynamic nature of biological systems. To overcome this conceptual disconnect, we present RegVelo, a bottom-up, actionable, and interpretable deep learning framework that jointly models splicing kinetics and gene regulatory interactions. Across diverse biological systems, RegVelo provides reliable predictive power for terminal states, gene interactions, and perturbation simulations. By applying RegVelo to zebrafish neural crest development using full-length Smart-seq3 and shared gene expression and chromatin accessibility measurements, we delineate regulatory programs underlying fate specification. Guided by in silico perturbations and validated by CRISPR-Cas9 knockout and single-cell Perturb-seq, we establish tfec as an early driver and elf1 as a regulator of pigment cell fate. RegVelo establishes a quantitative framework for bridging gene regulation and cell fate decisions.",
+  "authors": "Wang W, Hu Z, Weiler P, Mayes S, Lange M, Fountain DM, Haug JO, Wang J, Xue Z, Sauka-Spengler T, Theis FJ.",
+  "venue": "Cell",
+  "year": 2026,
+  "citations": 7,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "GRN约束的RNA velocity动力学，支持扰动模拟，有代码",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell 上调控信息动力学模型，可做扰动模拟",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "联合建模剪接动力学与基因调控网络",
+  "data": "单细胞转录组、Smart-seq3、染色质可及性、Perturb-seq",
+  "scenario": "细胞命运转变与扰动模拟",
+  "benchmark": "RNA velocity模型、GRN推断方法；CRISPR-Cas9敲除验证",
+  "results": "可靠预测终态、基因互作和扰动模拟；鉴定tfec为早期驱动因子、elf1为色素细胞命运调控因子",
+  "availability": "",
+  "limitations": "未明确说明；可能依赖高质量多模态与扰动数据",
+  "summary": "针对RNA velocity未显式建模基因调控、GRN推断忽略动态性的问题，提出RegVelo自下而上、可操作且可解释的深度学习框架，联合建模剪接动力学和基因调控互作。该方法在多种生物系统中预测终态、基因互作和扰动模拟，并应用于斑马鱼神经嵴发育的Smart-seq3及共享表达和染色质可及性数据。结合计算机扰动、CRISPR-Cas9敲除和单细胞Perturb-seq验证，确立tfec为早期驱动因子、elf1为色素细胞命运调控因子。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-64292-3",
+  "title": "Systematic benchmarking of high-throughput subcellular spatial transcriptomics platforms across human tumors.",
+  "url": "https://doi.org/10.1038/s41467-025-64292-3",
+  "abstract": "Recent advancements in spatial transcriptomics technologies have significantly enhanced resolution and throughput, underscoring an urgent need for systematic benchmarking. Here, we generate serial tissue sections from colon adenocarcinoma, hepatocellular carcinoma, and ovarian cancer samples for systematic evaluation. Using these uniformly processed samples, we generate spatial transcriptomics data across four high-throughput platforms with subcellular resolution: Stereo-seq v1.3, Visium HD FFPE, CosMx 6K, and Xenium 5K. To establish ground truth datasets, we profile proteins on tissue sections adjacent to all platforms using CODEX and perform single-cell RNA sequencing on the same samples. Leveraging manual nuclear segmentation and detailed annotations, we systematically assess each platform's performance across capture sensitivity, specificity, diffusion control, cell segmentation, cell annotation, spatial clustering, and concordance with adjacent CODEX. The uniformly generated and processed multi-omics dataset could advance computational method development and biological discoveries. The dataset is accessible via SPATCH, a user-friendly web server for visualization and download.",
+  "authors": "Ren P, Zhang R, Wang Y, Zhang P, Luo C, Wang S, Li X, Zhang Z, Zhao Y, He Y, Zhang H, Li Y, Gao Z, Zhang X, Zhao Y, Liu Z, Meng Y, Zhang Z, Zeng Z.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 43,
+  "found_by": [
+   "eupmc:multimodal single-cell RNA pro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12534522",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多平台亚细胞空间转录组系统评测，含CODEX与scRNA-seq基准数据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多平台空间转录组系统评测，含CODEX与scRNA金标准，方向必读基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "四平台统一实验系统基准评测",
+  "data": "3种人肿瘤连续切片，4个亚细胞ST平台+CODEX+scRNA-seq",
+  "scenario": "肿瘤空间转录组平台评测",
+  "benchmark": "Stereo-seq v1.3、Visium HD、CosMx 6K、Xenium 5K；CODEX/scRNA-seq真值",
+  "results": "统一评估灵敏度、特异性、扩散控制、细胞分割、注释、空间聚类及转录本-蛋白对齐；各平台性能差异显著",
+  "availability": "",
+  "limitations": "仅3种肿瘤、4个平台，结论外推受限",
+  "summary": "系统评测四种高通量亚细胞空间转录组平台。采集三种癌症连续切片，用CODEX蛋白和scRNA-seq作真值，统一流程比较各平台。发现平台在灵敏度、扩散控制和细胞分割等关键指标上差异明显，为选型提供依据。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 5,
+ "added_on": "2026-09-23"
+}

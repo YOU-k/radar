@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.06.18.733146",
+  "title": "VCBench: A Multi-Dimensional Benchmark for Single-Cell Foundation Models",
+  "url": "https://doi.org/10.64898/2026.06.18.733146",
+  "abstract": "Single-cell foundation models are increasingly positioned as virtual cells, yet their capabilities are assessed by fragmented, largely single-task benchmarks that obscure where these models improve on simple baselines. VCBench addresses this by synthesizing four independent virtual-cell frameworks into seven capability dimensions: perturbation response prediction, cross-species universality, gene regulatory network (GRN) inference, modality integration, temporal dynamics, multi-scale integration, and in silico experimentation. Each dimension is assessed for operational testability under current architectures and datasets: five admit direct or proxy evaluation, while multi-scale integration and in silico experimentation are structurally untestable as end-to-end tasks. We evaluate five foundation models (Geneformer, scGPT, UCE, TranscriptFormer, Arc State) against pre-registered linear and nearest-neighbor baselines across the five testable dimensions, and report three findings. First, the baselines match or exceed every foundation model on four of the five scored dimensions, replicating the reported competitiveness of linear baselines on perturbation prediction and extending it to cross-species transfer, GRN inference, and temporal ordering. Second, TranscriptFormer alone exceeds the strongest baseline on cross-modal RNA-to-protein prediction (53% Pearson improvement, with a documented contamination caveat) and is the only model to reach Level 2 in the pre-registered Virtual Cell (VC) Level rubric; the architectural choice behind this advantage simultaneously causes a spectral collapse that destroys its temporal-ordering performance, a tradeoff invisible to single-task benchmarks. Third, no foundation model publishes a complete cell-level training manifest, leaving data contamination undetectable to users. Alongside the benchmark, VCBench releases a Contamination Reporting Schema and contributes two further methodological tools: a common-label-set protocol that controls for class-count confounds in cross-species transfer, and a spread-error correlation probe for epistemic calibration.",
+  "authors": "L. Weidener, M. Brkić, M. Jovanović, E. Ulgac, A. Meduri",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2kw:single-cell foundation model b"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多维虚拟细胞评测基准，含扰动预测与批判性维度",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "虚拟细胞多维评测基准，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "整合四框架为七维能力基准VCBench",
+  "data": "5个基础模型，5个可测维度，预注册线性/最近邻基线",
+  "scenario": "单细胞基础模型虚拟细胞能力评测",
+  "benchmark": "Geneformer、scGPT、UCE、TranscriptFormer、Arc State对比线性/最近邻基线",
+  "results": "基线在5维中4维追平或超越所有基础模型；仅TranscriptFormer在RNA到蛋白预测超最强基线53% Pearson",
+  "availability": "",
+  "limitations": "多尺度整合与in silico实验两维度结构上无法端到端测试",
+  "summary": "VCBench将四个虚拟细胞框架综合为七个能力维度，构建多维基准。通过预注册的线性与最近邻基线，在五个可测维度上评测五个单细胞基础模型。发现简单基线在四维上追平或超越基础模型，仅TranscriptFormer在跨模态RNA到蛋白预测上显著领先。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

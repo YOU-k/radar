@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2605.07335",
+  "title": "CellScientist: Dual-Space Hierarchical Orchestration for Closed-Loop Refinement of Virtual Cell Models",
+  "url": "https://arxiv.org/abs/2605.07335v1",
+  "abstract": "Virtual Cell Modeling (VCM) requires models that not only predict perturbation responses, but also support targeted revision when predictions fail. Current LLM-assisted modeling workflows face a refinement-routing problem: prediction discrepancies are observed through executable implementations, but the relevant revision may involve the modeling assumption, representation design, implementation, or task constraint. Without structured feedback propagation across these levels, iterative refinement may repair code while failing to revise the assumption responsible for the discrepancy. We propose CellScientist, a dual-space hierarchical framework that couples a high-level hypothesis space with a low-level executable implementation space. CellScientist represents modeling decisions as structured states, realizes them as admissible programs under task and interface constraints, and routes execution discrepancies back to targeted hypothesis or implementation updates. This enables a closed Hypothesis -> Implementation -> Hypothesis loop where failures become structured signals for model refinement rather than debugging events. Across morphology and transcriptomic benchmarks, with additional single-cell perturbation evaluations, the final executable models selected by CellScientist improve over reference baselines under fixed split and evaluation protocols, while the workflow produces auditable refinement traces.",
+  "authors": "Mengran Li, Bo Li, Jiaying Wang, Wenbin Xing, Yixuan Dong, Chengyang Zhang, Hongliang Zhang, Yuzhong Peng",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "闭环智能体迭代精修虚拟细胞模型，契合闭环方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "闭环智能体迭代精炼虚拟细胞模型，契合闭环方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "双空间分层编排的闭环模型精炼框架",
+  "data": "形态学与转录组基准，含单细胞扰动评估",
+  "scenario": "虚拟细胞模型迭代精炼",
+  "benchmark": "固定划分与评估协议下的参考基线",
+  "results": "案例中PCC由0.3416提升至0.4368；最终可执行模型优于参考基线",
+  "availability": "预印本arXiv:2605.07335v1",
+  "limitations": "精炼依赖LLM代理，长程工作流仍脆弱",
+  "summary": "针对虚拟细胞建模中预测失败难以归因的问题，作者提出CellScientist框架。该方法将高层假设空间与低层可执行实现空间耦合，把执行偏差路由回假设或实现层面的定向更新，形成假设-实现-假设闭环。在形态学和转录组基准及单细胞扰动评估中，所选最终模型在固定协议下优于参考基线，并产生可审计的精炼轨迹。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

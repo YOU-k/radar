@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.08.035",
+  "title": "Tahoe-100M: Mapping drug-induced molecular phenotypes at single-cell resolution.",
+  "url": "https://doi.org/10.1016/j.cell.2026.08.035",
+  "abstract": "We present Tahoe-100M, a giga-scale single-cell perturbation atlas comprising 100 million transcriptomes from 50 diverse cancer cell lines treated with 1,100 drug-dose conditions. This parallel profiling of thousands of perturbations at single-cell resolution with minimal batch effects is enabled by the Mosaic platform, which multiplexes genetically distinct cell models into balanced \"cell villages.\" Beyond cataloging transcriptomic shifts, Tahoe-100M systematically quantifies cellular phenotypes, including proliferation, cytotoxicity, lineage-specific vulnerabilities, and cell-cycle changes. It captures population-level transcriptomic heterogeneity, characterizing whether drug responses drive cells toward divergent fates or convergent states. Pathway-based signatures define drug-induced expression programs, classify mechanisms of action, reveal off-target activities, and expose adaptive stress responses associated with resistance. By unifying cellular and molecular readouts, this broadly applicable perturbation atlas advances our ability to model gene regulation, drug response, and network dynamics. Its public release enables the training of AI frameworks to advance predictive models of cell behavior.",
+  "authors": "Zhang J, Ubas AA, Svensson V, Thomas N, Subramanyam V, Carpenter C, Winters A, de Borja R, Teyssier N, Thakar N, Khan U, Akella PV, Green HJ, Thompson JD, Tran V, Pangallo J, Papalexi E, Sapre A, Nguyen H, Sanderson O, Nigos M, Kaplan O, Schroeder S, Hariadi B, Marrujo S, Curca C, Salvino A, Gallareta Olivares G, Koehler R, Rosenberg A, Roco C, Ricci-Tam C, Jones MG, Dobin A, Plosky BS, Lyons DE, Merico D, Alidoust N, Goodarzi H, Yu J.",
+  "venue": "Cell",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Tahoe-100M亿级单细胞扰动图谱，明确纳入标准的数据资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell正刊，1亿细胞药物扰动图谱，核心数据资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Mosaic平台构建大规模单细胞扰动图谱",
+  "data": "1亿转录组，50个癌细胞系，1100种药物-剂量条件",
+  "scenario": "药物诱导分子表型图谱构建",
+  "benchmark": "未列对比方法",
+  "results": "量化增殖、细胞毒性、谱系特异性脆弱性与细胞周期变化，通路特征可分类作用机制并揭示脱靶活性",
+  "availability": "公开释放",
+  "limitations": "限于50个癌细胞系，未覆盖原代或体内",
+  "summary": "作者提出Tahoe-100M，一个包含1亿转录组、50个癌细胞系、1100种药物-剂量条件的十亿级单细胞扰动图谱。借助Mosaic平台将遗传上不同的细胞模型多重化为平衡的细胞村，实现低批次效应的并行分析。图谱系统量化增殖、细胞毒性、谱系脆弱性与细胞周期变化，并用通路特征定义药物诱导表达程序、分类作用机制、揭示脱靶活性与耐药相关应激反应。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

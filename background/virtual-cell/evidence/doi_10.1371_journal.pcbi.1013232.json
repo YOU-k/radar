@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1371/journal.pcbi.1013232",
+  "title": "Monotherapy cancer drug-blind response prediction is limited to intraclass generalization.",
+  "url": "https://doi.org/10.1371/journal.pcbi.1013232",
+  "abstract": "Monotherapy cancer drug response prediction (DRP) models predict the response of a cell line to a given drug. Analyzing these models' performance includes assessing their ability to predict the response of cell lines to new drugs, i.e., drugs that are not in the training set. Drug-blind prediction displays greatly diminished performance or outright failure across a wide range of model architectures and different large pharmacogenomic datasets. Drug-blind failure is hypothesized to be caused by the relatively limited set of drugs present in these datasets. The time and cost associated with further cell line experiments is significant, and it is impossible to predict beforehand how much data would be enough to overcome drug-blind failure. We must first define how current data contributes to drug-blind failure before attempting to remedy drug-blind failure with further data collection. In this work, we quantify the extent to which drug-blind generalizability relies on mechanistic overlap of drugs between training and testing splits. We first identify that the majority of mixed set DRP model performance can be attributed to drug overfitting, likely inhibiting generalization and preventing accurate analysis. Then, by specifically probing the drug-blind ability of models, we reveal the sources of generalizable drug features are confined to shared mechanisms of action and related pathways. Furthermore, we observed that, for certain mechanisms, we can significantly improve performance by limiting the training of models to a single mechanism compared to training on all drugs simultaneously. Across multiple different model architectures examined in this paper, we observe that drug-blind performance is a poor benchmark for DRP as it does not describe model behavior, it describes dataset behavior. Our investigation displays that these deep learning models trained on large, monotherapy cell line panels can more accurately describe mechanism of action of drugs rather than their advertised connection to broader cancer biology.",
+  "authors": "Herbert WG, Chia N, Jensen PA, Walther-Antonio MRS.",
+  "venue": "PLoS computational biology",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "eupmc:perturbation response predicti"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13128123",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "批判性结果：药物盲预测仅类内泛化，契合效度批判与基准。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "批判性结果：药物盲预测泛化失败，评测效度必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "数据划分与训练行为分析，药物盲评估",
+  "data": "大型单药药物基因组癌细胞系面板；CTRP等",
+  "scenario": "单药癌症药物盲响应预测",
+  "benchmark": "混合集、癌症盲、药物盲划分；对比已有DRP模型与基线",
+  "results": "模型通常能做癌症盲预测，但药物盲性能显著下降，部分模型完全失败；药物盲泛化主要限于同类内",
+  "availability": "",
+  "limitations": "药物盲泛化差；细胞系与患者相关性存疑；实验噪声影响化学特征学习",
+  "summary": "文章审视单药癌症药物响应预测模型在药物盲设置下的泛化能力，重点分析训练过程中导致药物盲失败的原因。作者比较混合集、癌症盲和药物盲评估方式，并讨论大型药物基因组数据集的局限、药物间信息与实验噪声影响。结论是模型通常可进行癌症盲预测，但药物盲性能显著恶化甚至失败，说明单药癌症药物盲响应预测主要限于同类内泛化。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.08.002",
+  "title": "Genome-scale perturb-seq in primary human CD4&lt;sup&gt;+&lt;/sup&gt; T cells maps context-specific regulators of T cell programs and human immune traits.",
+  "url": "https://doi.org/10.1016/j.cell.2026.08.002",
+  "abstract": "Gene regulatory networks encode the fundamental logic of cellular functions, but systematic network mapping remains challenging, especially in cell states relevant to human biology and disease. Here, we perturbed all expressed genes across 22 million primary human CD4 +  T cells from four donors and developed a probe-based perturb-seq platform to measure the transcriptome effects in cells at rest and after stimulation. These data allowed us to map genes regulating immune pathways, including previously uncharacterized regulators of cytokine production. Importantly, active regulators and the gene programs they control changed dramatically across stimulation conditions. Perturbation signatures enabled us to model T cell states observed in population-scale transcriptomic atlases, nominating regulators of T cell polarization and of age-related phenotypes. Finally, we leveraged perturb-seq to implicate context-specific gene regulatory pathways in autoimmune disease risk. Our study provides a foundational resource and new approaches to decode T cell function and human immune traits.",
+  "authors": "Zhu R, Dann E, Yan J, Reyes Retana J, Goto R, Guitche RC, Brixi L, Ota M, Hartman A, Roth TL, Satpathy AT, Pritchard JK, Marson A.",
+  "venue": "Cell",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "原代T细胞全基因组Perturb-seq图谱，大规模扰动数据资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell 基因组尺度原代T细胞 Perturb-seq，关键扰动数据资源。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "探针式perturb-seq平台，全基因组扰动CD4+T细胞",
+  "data": "2200万原代人CD4+T细胞，4名供体",
+  "scenario": "T细胞程序与免疫性状调控",
+  "benchmark": "群体规模转录组图谱中的T细胞状态",
+  "results": "绘制免疫通路调控基因，发现调控因子随刺激条件剧变，关联自身免疫病风险",
+  "availability": "",
+  "limitations": "仅4名供体，供体间异质性可能限制泛化",
+  "summary": "对4名供体2200万原代人CD4+T细胞进行全表达基因扰动，开发探针式perturb-seq平台。测量静息与刺激后转录组效应，绘制免疫通路调控基因并建模群体图谱T细胞状态。发现活跃调控因子及所控程序随刺激条件剧变，并将扰动特征关联自身免疫病风险。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

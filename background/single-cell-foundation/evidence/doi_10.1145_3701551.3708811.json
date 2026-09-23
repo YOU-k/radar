@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.1145/3701551.3708811",
+  "title": "A Systematic Evaluation of Single-Cell Foundation Models on Cell-Type Classification Task",
+  "url": "https://doi.org/10.1145/3701551.3708811",
+  "abstract": "This study presents a comprehensive benchmarking of three state-of-the-art single-cell foundation models scGPT, Geneformer, and scFoundation, on cell-type classification tasks. We evaluate the models on three datasets: myeloid, human pancreas, and multiple sclerosis, examining both standard fine-tuning and few-shot learning scenarios. Our work reveals that scFoundation consistently achieves the best performance while Geneformer performs poorly, yielding results sometimes even worse than those of the baseline models. Additionally, we demonstrate that a good foundation model can generalize well even when fine-tuned with out-of-distribution data, a capability that the baseline models lack. Our work highlights the potential of foundation models for addressing challenging biomedical questions, particularly in contexts where models are trained on one population but deployed on another.",
+  "authors": "Nicolas Steiner, Zi-Teng Li, Omid Vosoughi, J. Schrader, Soumyadeep Roy, Wolfgang Nejdl, Ming Tang",
+  "venue": "Web Search and Data Mining",
+  "year": 2025,
+  "citations": 6,
+  "found_by": [
+   "s2kw:single-cell foundation model b",
+   "s2kw:single-cell foundation model z"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统评测三个单细胞基础模型，含未跑赢基线证据，契合评测基准",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "系统评测单细胞基础模型，含负面结果，属方向必读基准",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "系统基准评测三个基础模型细胞类型分类",
+  "data": "scGPT、Geneformer、scFoundation，3个数据集",
+  "scenario": "细胞类型分类标准微调与少样本学习",
+  "benchmark": "scGPT、Geneformer、scFoundation对比基线模型",
+  "results": "scFoundation持续最佳；Geneformer表现差甚至不如基线；好基础模型可用分布外数据微调泛化",
+  "availability": "",
+  "limitations": "仅评测三个模型和三个数据集，覆盖有限",
+  "summary": "该研究对scGPT、Geneformer和scFoundation三个单细胞基础模型在细胞类型分类任务上进行全面基准评测。在髓系、人胰腺和多发性硬化三个数据集上，考察标准微调和少样本学习场景。发现scFoundation持续最佳，Geneformer表现差甚至不如基线，且好基础模型可用分布外数据微调并保持泛化。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.14970",
+  "title": "Towards a knowledge-enhanced single-cell foundation model",
+  "url": "https://arxiv.org/abs/2609.14970",
+  "abstract": "Single-cell foundation models (scFMs) increasingly rely on large-scale transcriptomic pretraining, yet expanding pretraining data can yield diminishing gains while substantially increasing computational cost. Our data scaling analyses showed that incorporating biological knowledge, including cell-level text annotation and gene-level regulatory information, provided additional scaling dimension than simply increasing data size. Motivated by this observation, we present scKITE, a simple yet effective scFM that integrates cell-annotation and gene-regulatory supervision into a shared transcriptomic Transformer encoder through lightweight auxiliary decoders. These decoders are used only during pretraining and subsequently discarded, yielding a general-purpose encoder enriched with biological knowledge for downstream applications. With only 179,067 pretraining samples, i.e., less than 0.5\\% of those used by previous strong scFMs, scKITE outperformed these models across diverse downstream tasks, highlighting knowledge-enhanced pretraining as a promising paradigm for biologically grounded scFMs.",
+  "authors": "Han-Qing Zhang, Jie Bao, Mei Ma, Shuai Liu, Jia-Ying Ma, Jia-Guan Liu, Jia-Xiao Li, Zhen-Bo Li",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41592-024-02201-0"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "知识增强单细胞基础模型，含调控监督，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "知识增强单细胞基础模型，含调控监督，方向相关",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "scKITE：知识增强预训练，辅助解码器注入细胞注释与GRN",
+  "data": "179,067个预训练样本（不足先前强模型0.5%）",
+  "scenario": "单细胞基础模型下游任务",
+  "benchmark": "Geneformer、scGPT、scFoundation等强scFM",
+  "results": "下游任务平均相对提升28.8%，以<0.5%数据量超越先前强模型",
+  "availability": "",
+  "limitations": "辅助解码器预训练后丢弃；知识来源依赖注释与GRN推断质量",
+  "summary": "分析发现生物知识（细胞文本注释与基因调控信息）提供额外缩放维度，据此提出scKITE。通过轻量辅助解码器将细胞注释与基因调控监督融入共享转录组Transformer编码器，解码器仅预训练使用。仅用179,067样本（不足先前强模型0.5%）即在多下游任务超越Geneformer、scGPT等，知识增强训练带来平均28.8%相对提升。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

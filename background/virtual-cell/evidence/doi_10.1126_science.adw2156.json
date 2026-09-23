@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/science.adw2156",
+  "title": "Mapping transcription factor functions in astrocytes using in vivo gain-of-function Perturb-seq.",
+  "url": "https://doi.org/10.1126/science.adw2156",
+  "abstract": "An in vivo approach combining high-throughput screening with cell type-specific readouts could enable elucidation of genotype-phenotype relationships in complex tissues. We developed an in vivo gain-of-function Perturb-seq platform, termed iGOF-Perturb-seq, to build a functional atlas of ~1000 transcription factors (TFs) in astrocytes, a cell type essential to many brain functions. We then identified cofunctional modules, annotated uncharacterized TFs, and predicted disease-associated TF clusters. Furthermore, iGOF-Perturb-seq performed in a mouse neuroinflammatory model identified  Ferd3l  as a therapeutic candidate, and astrocyte-specific overexpression of  Ferd3l  alleviated Alzheimer's disease symptoms in mice. This study provides resources for understanding gene regulation and disease mechanisms in vivo and for identifying potential therapeutic targets for different brain diseases.",
+  "authors": "Zhang L, Ma Q, Kong X, Zou W, Wang B, Wu B, Cai S, Bai T, Tan R, Dai Z, Liu X, Jia Z, Zhang M, Li T, Zheng Y, Hu X, Wu J, Xu Z, Zhou H.",
+  "venue": "Science (New York, N.Y.)",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "体内GOF Perturb-seq建TF功能图谱，属大规模扰动数据资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Science 体内 Perturb-seq 图谱，扰动数据资源，方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "iGOF-Perturb-seq体内功能获得性扰动测序平台",
+  "data": "约1000个转录因子，小鼠星形胶质细胞",
+  "scenario": "体内星形胶质细胞TF功能图谱",
+  "benchmark": "现有体外或非细胞类型特异筛选方法",
+  "results": "鉴定Ferd3l为治疗候选，星形胶质细胞过表达Ferd3l缓解小鼠阿尔茨海默病症状",
+  "availability": "",
+  "limitations": "仅限小鼠模型与星形胶质细胞，向人类转化需验证",
+  "summary": "开发iGOF-Perturb-seq体内功能获得性扰动测序平台。在星形胶质细胞中构建约1000个转录因子的功能图谱，识别共功能模块并注释未表征TF。在神经炎症模型中鉴定Ferd3l为治疗候选，其过表达可缓解小鼠AD症状。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-026-03120-y",
+  "title": "Evaluating the role of pretraining dataset size and diversity on single-cell foundation model performance.",
+  "url": "https://doi.org/10.1038/s41592-026-03120-y",
+  "abstract": "The success of transformer-based foundation models on natural language and images has motivated their use in single-cell biology. Single-cell foundation models have been trained on increasingly larger transcriptomic datasets, scaling from initial studies with 1 million cells to newer atlases with over 100 million cells. Here we investigate the role of pretraining dataset size and diversity on the performance of single-cell foundation models on both zero-shot and fine-tuned tasks. Using a large corpus of 22.2 million cells, we pretrain a total of 400 models, which we evaluate by conducting 6,400 experiments. Our results show that current methods tend to plateau in performance with pretraining datasets that are only a fraction of the size of current training corpora. Unlike large language models, single-cell foundation models show no clear data scaling laws, indicating that developers should focus on balancing model capacity, dataset size and computational resources rather than indiscriminately increasing all three.",
+  "authors": "DenAdel A, Hughes M, Thoutam A, Gupta A, Navia AW, Fusi N, Raghavan S, Winter PS, Amini AP, Crawford L.",
+  "venue": "Nature methods",
+  "year": 2026,
+  "citations": 15,
+  "found_by": [
+   "eupmc:virtual cell model",
+   "eupmc:perturbation response predicti",
+   "eupmc:Perturb-seq generative model",
+   "eupmc:drug perturbation single-cell ",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13412022",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞基础模型预训练规模与多样性批判性评测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞基础模型预训练规模与多样性批判性评测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "预训练400个单细胞基础模型，评估数据规模与多样性影响",
+  "data": "2220万细胞语料，6400次实验",
+  "scenario": "零样本与微调任务",
+  "benchmark": "不同预训练数据规模/多样性下的模型性能对比",
+  "results": "性能在远小于现有语料的数据规模即达平台期；无明确数据缩放定律",
+  "availability": "",
+  "limitations": "未发现类似大语言模型的数据缩放规律，需平衡容量、数据与算力",
+  "summary": "研究预训练数据规模与多样性对单细胞基础模型性能的影响。用2220万细胞预训练400个模型并开展6400次实验，评估零样本与微调任务。发现性能在数据规模仅为现有语料一小部分时即趋于平台，且无清晰数据缩放定律，提示应平衡模型容量、数据规模与算力而非盲目扩大。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

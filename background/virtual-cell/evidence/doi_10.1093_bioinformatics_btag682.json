@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/bioinformatics/btag682",
+  "title": "scBalFlow: A Staged Flow Matching Framework for Imbalanced Single-Cell Drug Perturbation Prediction.",
+  "url": "https://doi.org/10.1093/bioinformatics/btag682",
+  "abstract": "Motivation Conventional drug perturbation prediction models typically employ end-to-end encoder-decoder architectures, directly mapping control samples and perturbation conditions to post-perturbation gene expression profiles. However, these approaches widely overlook the severe class imbalance inherent in perturbation datasets, leading to a predictive bias toward weakly responsive samples. Results To address this bottleneck, we propose scBalFlow, a decoupled two-stage training framework. The first stage predicts the perturbation response intensity under given conditions, employing a Gaussian-Augmented Inference (GAI) strategy to counteract data imbalance. Crucially, the second stage bypasses weakly responsive conditions, while utilizing a Flow Matching model to synthesize highly responsive samples. Comprehensive evaluations on large-scale benchmarks, including SciPlex3 and McFarland, demonstrate that scBalFlow effectively overcomes the imbalance issue and significantly outperforms existing state-of-the-art methods on imbalanced datasets, particularly in capturing complex distribution shifts and maintaining single-cell distributional consistency. Availability The source code and datasets are available at GitHub https://github.com/hanwenlv-cmd/scBalFlow and Figshare with DOI: 10.6084/m9.figshare.33137447. The datasets of SciPlex3, ComboSciPlex, and McFarland underlying this study are available via the pertpy package. Alternatively, they can be downloaded manually from https://exampledata.scverse.org/pertpy/srivatsan_2020_sciplex3.h5ad for SciPlex3, https://exampledata.scverse.org/pertpy/combosciplex.h5ad for combosciplex, and https://exampledata.scverse.org/pertpy/mcfarland_2020.h5ad for McFarland. Supplementary information Supplementary data are available at Bioinformatics online.",
+  "authors": "Lyu H, Luo J.",
+  "venue": "Bioinformatics (Oxford, England)",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "分阶段流匹配预测药物扰动，针对类别不平衡，有代码，契合扰动响应模型。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "扰动响应预测新方法，含代码，针对类别不平衡，契合方向。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "两阶段解耦训练+流匹配+GAI",
+  "data": "单细胞药物扰动数据；SciPlex3、McFarland等大规模基准",
+  "scenario": "不平衡单细胞药物扰动响应预测",
+  "benchmark": "SciPlex3、McFarland；对比现有SOTA方法",
+  "results": "显著优于现有SOTA，尤其在不平衡数据集上；更好捕捉复杂分布偏移并保持单细胞分布一致性",
+  "availability": "代码与数据公开于GitHub和Figshare",
+  "limitations": "未明确说明；可能依赖大规模扰动数据与两阶段训练复杂度",
+  "summary": "针对药物扰动预测中类别严重不平衡导致偏向弱响应样本的问题，提出scBalFlow两阶段解耦训练框架。第一阶段预测扰动响应强度并用高斯增强推断GAI缓解不平衡，第二阶段跳过弱响应条件并用Flow Matching合成高响应样本。在SciPlex3和McFarland等大规模基准上，scBalFlow显著优于现有SOTA，尤其能捕捉复杂分布偏移并保持单细胞分布一致性。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

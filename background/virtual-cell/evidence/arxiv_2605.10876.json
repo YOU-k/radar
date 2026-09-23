@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2605.10876",
+  "title": "AssayBench: An Assay-Level Virtual Cell Benchmark for LLMs and Agents",
+  "url": "https://arxiv.org/abs/2605.10876v1",
+  "abstract": "Recent advances in machine learning and large-scale biological data collections have revived the prospect of building a virtual cell, a computational model of cellular behavior that could accelerate biological discovery. One of the most compelling promises of this vision is the ability to perform in silico phenotypic screens, in which a model predicts the effects of cellular perturbations in unseen biological contexts. This task combines heterogeneous textual inputs with diverse phenotypic outputs, making it particularly well-suited to LLMs and agentic systems. Yet, no standard benchmark currently exists for this task, as existing efforts focus on narrower molecular readouts that are only indirectly aligned with the phenotypic endpoints driving many real-world drug discovery workflows. In this work, we present AssayBench, a benchmark for phenotypic screen prediction, built from 1,920 publicly available CRISPR screens spanning five broad classes of cellular phenotypes. We formulate the screen prediction task as a gene rank prediction for each screen and introduce the adjusted nDCG, a continuous metric for comparing performance across heterogeneous assays. Our extensive evaluation shows that existing methods remain far from empirically estimated performance ceilings and zero-shot generalist LLMs outperform biology-specific LLMs and trainable baselines. Optimization techniques such as fine-tuning, ensembling, and prompt optimization can further improve LLM performance on this task. Overall, AssayBench offers a practical testbed for measuring progress toward in silico phenotypic screening and, more broadly, virtual cell models.",
+  "authors": "Edward De Brouwer, Carl Edwards, Alexander Wu, Jenna Collier, Graham Heimberg, Xiner Li, Meena Subramaniam, Ehsan Hajiramezanali",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "LLM/智能体表型筛选基准，填补评测空白",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "LLM/智能体表型筛选虚拟细胞基准，填补评测空白",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "表型筛选预测基准（LLM与智能体）",
+  "data": "1920个CRISPR筛选，5类表型，每筛选约13826基因",
+  "scenario": "在体外表型筛选预测",
+  "benchmark": "零样本通用LLM、生物学专用LLM、可训练基线",
+  "results": "现有方法远未达经验性能上限；零样本通用LLM优于生物学专用LLM和可训练基线；微调、集成、提示优化可进一步提升",
+  "availability": "公开：https://github.com/Genentech/AssayBench",
+  "limitations": "现有扰动模型多针对特定模态，难以直接适用",
+  "summary": "提出ASSAYBENCH，基于1920个公开CRISPR筛选的表型筛选预测基准，涵盖五类细胞表型。将筛选预测建模为基因排序任务，引入调整nDCG指标跨异质实验比较。发现现有方法远未达性能上限，零样本通用LLM优于生物学专用LLM和可训练基线。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

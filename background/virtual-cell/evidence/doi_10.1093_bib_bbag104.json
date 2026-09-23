@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/bib/bbag104",
+  "title": "Artificial intelligence-enabled multi-scale virtual cell: perspective, challenges, and opportunities.",
+  "url": "https://doi.org/10.1093/bib/bbag104",
+  "abstract": "As the fundamental unit of life, cells coordinate biological activities through the interaction between microscopic molecular mechanisms and macroscopic tissue organization. Traditional research studies, experiments, and biochemical analyses, give rise to important insights, although they are restricted in spatiotemporal resolution and processing power, thereby precluding the understanding of dynamic cross-scale biological events . Breakthroughs in artificial intelligence (AI) have given birth to the AI virtual cell (AIVC) as a new way to do research. By integrating multi-omics data and mixing methods from multidisciplinary models, AIVC establishes a digital twin system to simulate cell functions and behaviors. AIVC still faces a number of pressing challenges that need to be addressed in its current development stage. In this review, we are proposing a unified definition and technical framework for AIVC and analyze in detail the cross-scale coupling mechanisms of the \"gene-protein-pathway-cell\" hierarchy. Furthermore, we decompose the technical construction framework of AIVC from cross-scale representation engineering, functional submodule design, and multi-component dynamic regulation mechanisms. Additionally, we summarize the existing models and datasets in the field to provide reference resources for researchers. Finally, we deeply discuss the challenges faced by AIVC, such as data heterogeneity and model interpretability, and aim to accelerate the research progress in the AIVC field while driving the life sciences to shift from observational analysis to a paradigm that integrates predictability and innovation. Despite being in the early stage, AIVC is a trending topic that has garnered widespread interest. This review aims to integrate existing models, datasets, and technical ideas to provide a unified framework for field development.",
+  "authors": "Jiang H, Huang X, Bi X, Ma W, Ni H, Wei Z, Sun P, Zhang H, Zhang S.",
+  "venue": "Briefings in bioinformatics",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "eupmc:Tahoe-100M perturbation datase"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12967334",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI虚拟细胞多尺度综述，直接契合虚拟细胞框架方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "虚拟细胞综述，方向背景必读，虽无数据。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "AI虚拟细胞AIVC框架综述与多尺度建模",
+  "data": "多组学、单细胞转录组、染色质可及性等；如5000万+细胞图谱",
+  "scenario": "AI驱动多尺度虚拟细胞构建",
+  "benchmark": "VCell、E-Cell、CellML、JCVI-syn3A、scFoundation、GET等",
+  "results": "总结AIVC可整合多学科知识，实现从单尺度模拟到全链条动态预测；列举scFoundation 1亿参数、5000万+细胞预训练，GET覆盖213种人类细胞类型",
+  "availability": "",
+  "limitations": "AIVC仍非单一系统；跨尺度整合、泛化性与标准化仍具挑战",
+  "summary": "文章综述AI赋能多尺度虚拟细胞的前景、挑战与机遇，提出AIVC作为整合细胞生物学、AI算法和多尺度建模的研究范式。通过梳理VCell、E-Cell、CellML、JCVI-syn3A、scFoundation、GET等代表性模型，比较其训练数据、贡献、输出、覆盖范围和局限。作者指出AIVC核心价值在于整合分散技术，实现从单尺度模拟到全链条动态预测，但仍面临跨尺度整合、泛化和标准化挑战。"
+ },
+ "sections": [
+  "7"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

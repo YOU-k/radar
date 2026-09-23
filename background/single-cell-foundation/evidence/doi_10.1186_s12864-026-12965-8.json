@@ -1,0 +1,52 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s12864-026-12965-8",
+  "title": "Systematic evaluation of single-cell foundation model interpretability: attention-derived edge scores add no incremental value over gene-level features for perturbation-target prediction",
+  "url": "https://doi.org/10.1186/s12864-026-12965-8",
+  "abstract": "Single-cell foundation models such as scGPT and Geneformer are increasingly used for gene regulatory network (GRN) inference, with attention-derived edge scores routinely interpreted as regulatory proxies. Prior benchmarks have evaluated curated-reference recovery but have not systematically tested whether attention adds information beyond expression statistics for predicting the outcomes of genetic perturbations, nor whether attention-identified “regulatory” components are causally required for such predictions. This gap matters because the NLP interpretability literature has established that attention weights do not reliably indicate feature importance, and biological foundation models are being deployed without analogous scrutiny. We present an evaluation framework comprising thirty-seven analyses and 153 statistical tests under Benjamini-Hochberg FDR correction, spanning two architectures (scGPT, Geneformer V2-316M), four cell types (K562, RPE1, primary T cells, iPSC neurons), and two perturbation modalities (CRISPRi, CRISPRa). The framework separates two objectives: (A) mechanistic interpretability / GRN recovery against curated references, and (B) perturbation-target prediction, i.e. classifying which genes show differential expression after a CRISPR perturbation. Five test families—trivial-baseline comparison, conditional incremental-value testing, residualisation and propensity matching, causal ablation with intervention-fidelity diagnostics, and cross-context replication—address Objective B, supplemented by a synthetic positive control establishing pipeline sensitivity. Attention patterns encode layer-specific biological structure—protein–protein interactions in early layers, transcriptional regulation in late layers—and Cell-State Stratified Interpretability (CSSI) exploits this structure to improve curated GRN recovery up to \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$1.85\\times$$\\end{document} on the Objective A task. On Objective B, however, attention-derived edge scores add no incremental value beyond trivial gene-level features (variance, mean expression, dropout rate): gene-level baselines outperform both attention and correlation edges (AUROC 0.81–0.88 versus 0.70), augmenting gene-level predictors with pairwise edges produces \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\Delta$$\\end{document}AUROC of \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$-0.0004$$\\end{document} to \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$-0.002$$\\end{document} across 559,720 perturbation–gene observations, and causal ablation of TRRUST-ranked attention heads produces no degradation across three independent intervention channels. The attention–correlation relationship is context-dependent (equal in K562 CRISPRi, worse in CRISPRa, better in RPE1), but gene-level dominance on Objective B is universal across both cell types where adequate power is available. Attention patterns in single-cell foundation models encode biologically structured information, including layer-specific regulatory signals recoverable via CSSI, but provide no unique predictive information beyond simple gene-level statistics for the perturbation-target prediction task. The paper thus offers both a cautionary finding for Objective B and a constructive method (CSSI) for Objective A. Practitioners should apply trivial-baseline and incremental-value tests before claiming pairwise regulatory signal, and should stratify by cell state when extracting attention-derived GRNs.",
+  "authors": "I. Kendiukhov",
+  "venue": "BMC Genomics",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:single-cell foundation model b",
+   "s2:citations:doi:10.1016/j.cell.2016.11.048"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42482180"
+   ],
+   "pmcid": "PMC13390336"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "批判性证据：注意力边分数无增量价值，契合基准方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "揭示注意力无增量价值，重要批判性结果",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "两层可解释性评估框架含37项分析与因果消融",
+  "data": "2个模型架构、4种细胞类型、2种扰动模态、153项统计检验",
+  "scenario": "注意力边分数预测扰动靶标",
+  "benchmark": "scGPT、Geneformer V2-316M对比单变量基因级基线",
+  "results": "注意力边分数相对基因级特征无增量价值；单变量基线优于注意力和相关边；TRRUST头因果消融无行为效应",
+  "availability": "",
+  "limitations": "注意力-相关关系随细胞类型变化，部分场景统计功效不足",
+  "summary": "作者构建两层评估框架，系统检验单细胞基础模型注意力边分数是否提供超越基因级特征的预测价值。在两种架构、四种细胞类型和两种扰动模态下进行153项统计检验，并做因果消融。发现注意力边分数对扰动靶标预测无增量贡献，单变量基因级基线反而更优，因果消融调控头也无行为效应。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.05.17.725083",
+  "title": "Benchmarking Static Gene Regulatory Network Reconstruction and Dynamic Transition Probing in Single-Cell Foundation Models",
+  "url": "https://doi.org/10.64898/2026.05.17.725083",
+  "abstract": "Single-cell foundation models may encode gene regulatory information, but it remains unclear which model components capture this signal and how it compares with conventional inference methods. Here, we introduce a unified benchmark that evaluates gene regulatory network (GRN) reconstruction from six single-cell foundation models and three classical baselines across six datasets and four reference network types. We disentangle three sources of regulatory signal within each model—pretrained token embeddings, final-layer hidden states, and attention-derived scores. Under a strict zero-shot setting, scGPT token-embedding similarity outperforms classical baselines on STRING and ChIP-seq references, recovers core transcription factors, and best preserves reference network topology. Moreover, static GRNs cannot test whether learned gene–gene relationships are predictive of expression dynamics, we therefore introduce dynamic transition probing, which iteratively applies a model’s reconstruction head to drive early-cell profiles toward late-cell states without temporal supervision. We find pretrained models capture meaningful developmental transitions, with scFoundation showing the strongest overall performance. Together, our results show that single-cell foundation models encode transferable regulatory and dynamical priors, but how well these priors can be recovered depends on model architecture, pretraining design, and extraction strategy.",
+  "authors": "Zhongni Ye, Ning Yang, Xiaojing Yang, Xiaowei Mao, Chao Tang",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:single-cell foundation model z"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统评测单细胞基础模型GRN重建，含零样本对比",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞基础模型GRN系统性基准，批判性证据",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "统一基准评测GRN重建与动态转移动态探测",
+  "data": "6个基础模型、3个经典基线、6数据集、4类参考网络",
+  "scenario": "静态GRN重建与动态转移探测",
+  "benchmark": "scGPT、scFoundation等6个基础模型对比3个经典基线",
+  "results": "零样本下scGPT token嵌入相似度在STRING和ChIP-seq上超越经典基线；scFoundation动态转移表现最强",
+  "availability": "",
+  "limitations": "静态GRN无法检验基因关系是否预测表达动态",
+  "summary": "作者提出统一基准，从六个单细胞基础模型中评测GRN重建，并区分token嵌入、隐状态和注意力分数三种信号来源。在严格零样本设置下，scGPT token嵌入相似度在STRING和ChIP-seq参考上优于经典基线。进一步引入动态转移探测，发现预训练模型能捕捉发育转变，scFoundation整体表现最强。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

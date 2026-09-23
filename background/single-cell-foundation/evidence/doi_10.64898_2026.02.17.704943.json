@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.02.17.704943",
+  "title": "CLM-X: A multimodal single-cell foundation model with flexible multi-way Transformer for unified scRNA-seq and scATAC-seq analysis",
+  "url": "https://doi.org/10.64898/2026.02.17.704943",
+  "abstract": "Advances in single-cell multimodal profiling have enabled a more systematic analysis of cellular biology, yet the rapid accumulation of large-scale, heterogeneous datasets poses substantial challenges for integrative analysis. Recently, Transformer-based cell language models (CLMs) are becoming powerful foundational tools for learning transferable cell representations from unimodal single-cell datasets. However, a unified and flexible multimodal foundation model for joint modeling of scRNA-seq and scATAC-seq datasets remains underexplored. Here, we present CLM-X, a multimodal single-cell foundation model built on multiway Transformer architecture. CLM-X employs a harmonized tokenization design together with a stage-wise masked reconstruction pretraining strategy, enabling unified modeling of RNA-only, ATAC-only, and paired RNA–ATAC input within a single Transformer-based framework. We pretrain CLM-X on million-scale unimodal and multimodal datasets, and systematically evaluate its transferability on five downstream tasks including batch correction, modality integration, cross-modal translation, cell type annotation, and perturbation prediction. Across comprehensive benchmarks on 10 datasets, CLM-X consistently outperforms existing multimodal methods and unimodal foundation models, with particularly clear advantages in RNA–ATAC cross-modal translation and genetic-perturbation-response prediction. Overall, CLM-X establishes a unified and flexible multimodal foundation model for integrative analysis of scRNA-seq and scATAC-seq datasets, advancing a more robust, comprehensive, and biological interpretable single-cell analysis beyond current multimodal fusion approaches and unimodal foundation models.",
+  "authors": "Bowen Li, Ziqian Liu, Zhen Wang, Zhenyu Xu, Yantao Li, Chu-Lin Sha, Xiao-Lin Li",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:single-cell foundation model b",
+   "s2kw:single-cell foundation model z"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多模态单细胞基础模型，统一RNA与ATAC分析",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多模态RNA+ATAC基础模型，有公开权重",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多路Transformer多模态基础模型CLM-X",
+  "data": "百万级单模态与多模态数据，10个数据集",
+  "scenario": "RNA与ATAC联合建模及跨模态分析",
+  "benchmark": "现有多模态方法与单模态基础模型",
+  "results": "在10个数据集上持续超越现有多模态方法和单模态基础模型，RNA-ATAC跨模态翻译和扰动预测优势明显",
+  "availability": "",
+  "limitations": "",
+  "summary": "CLM-X是基于多路Transformer架构的多模态单细胞基础模型，采用统一token化设计和分阶段掩码重建预训练。在百万级单模态与多模态数据上预训练，支持RNA-only、ATAC-only和配对RNA-ATAC输入。在五个下游任务和10个数据集上持续超越现有多模态方法和单模态基础模型，尤其在跨模态翻译和扰动预测上优势明显。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

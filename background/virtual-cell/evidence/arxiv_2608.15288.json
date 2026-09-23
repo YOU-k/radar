@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.15288",
+  "title": "$D^{2}R^{2}$: Discrete Diffusion with Regulation Reinforcement for Single-Cell Perturbation Prediction",
+  "url": "https://arxiv.org/abs/2608.15288v1",
+  "abstract": "Predicting single-cell transcriptomic responses to genetic perturbations is central to functional genomics and virtual-cell modeling. Existing approaches, however, typically predict an entire expression profile as a whole, leaving the order in which individual gene responses are generated unmodeled. To address this problem, we introduce \\textbf{$D^{2}R^{2}$} (\\textbf{D}iscrete \\textbf{D}iffusion with \\textbf{R}egulation \\textbf{R}einforcement), which reformulates perturbation prediction as regulation-guided gene-wise progressive generation. A Masked Discrete Diffusion Model represents expression as ordinal tokens and reconstructs a fully masked profile step by step, allowing generated gene responses to condition those that remain masked. A Regulatory Policy Module initializes the generation policy from a gene regulatory network inferred from control cells and adapts it to the perturbation and current partially generated state. Then, group-relative policy optimization refines only the ordering policy using final perturbation-effect agreement as reward. Across Norman19 and VCC-H1, $D^{2}R^{2}$ achieves the best performance on all five metrics on Norman19 and remains competitive on H1. Controlled ablations holding the generator and generation budget fixed show that biological-prior ordering improves over random ordering and is more reliable than uncertainty-based heuristics, whereas reversing the biological-prior ordering degrades every metric. Biological analyses further show that the refined policy prioritizes regulatory genes early while promoting perturbation-specific transcription factors and responsive genes. These results establish gene generation order as an effective, controllable, and biologically interpretable dimension of single-cell perturbation prediction.",
+  "authors": "Ninghan Fan, Qi Liu, Xunuo Zhu, Yukai Sun, Luyuan Chen, Xuheng Zhou, Yuetian Du, Ming Kong",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "离散扩散+调控强化做扰动预测，方法新颖有代码",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "离散扩散+RL后训练做扰动预测，方法新颖契合方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "D2R2：离散扩散+调控强化，基因级渐进生成",
+  "data": "Norman19与VCC-H1单细胞扰动数据集",
+  "scenario": "单细胞扰动响应预测",
+  "benchmark": "Norman19与VCC-H1上五个指标，对比随机/不确定性排序",
+  "results": "Norman19五项指标最优，H1具竞争力；生物先验排序优于随机与不确定性启发式",
+  "availability": "",
+  "limitations": "仅在两个数据集验证；排序策略依赖推断的GRN质量",
+  "summary": "将单细胞扰动预测重构为调控引导的基因级渐进生成，提出D2R2。用掩码离散扩散以序数token逐步重建表达谱，调控策略模块由对照细胞GRN初始化并经组相对策略优化微调排序。在Norman19五项指标最优、H1具竞争力，消融显示生物先验排序优于随机与不确定性启发式，且优先调控基因与扰动特异TF。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

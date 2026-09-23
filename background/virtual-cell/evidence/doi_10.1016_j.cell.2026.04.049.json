@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.04.049",
+  "title": "Uncovering spatially resolved functional genomics with CRISPR screen sequencing.",
+  "url": "https://doi.org/10.1016/j.cell.2026.04.049",
+  "abstract": "Spatial omics has advanced our understanding of tissue-level biology, yet tools to systematically link gene functional perturbations to spatial phenotypes and signaling pathways remain limited. To address this, we developed spatial CRISPR screen sequencing (SPAC-seq), a high-throughput spatial CRISPR screen platform, and TARDIS (target prioritization toolkit for perturbation data in spatial omics), a statistical spatial perturbation analysis toolkit. Using SPAC-seq and TARDIS, we linked gene perturbations to spatial phenotypes and pathways, uncovering how Icam1 loss in tumor cells promotes metastasis via immune suppression and macrophage polarization. In CD8 +  T cells, we revealed Cd44's role in regulating spatial phenotypes by interacting with Spp1 on macrophages. We also demonstrated the model of the transcription factor-chemokine receptor axis coupling cell states with chemotaxis. SPAC-seq and TARDIS provide an effective framework to study spatially resolved functional genomics and pathways across diverse biological and disease contexts.",
+  "authors": "Zhang H, Zhang Z, Wang P, Xu T, Chen X, Zhao Y, Lin S, Cai W, Ren P, Luo C, Zhang P, Wang Y, Hou S, Zhao Y, Zeng H, Liu Z, Wang C, Gao Z, Feng Y, Pan D, Zeng Z.",
+  "venue": "Cell",
+  "year": 2026,
+  "citations": 3,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "空间CRISPR筛选平台，扰动数据资源新范式",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "空间CRISPR筛选平台，扰动功能基因组学新资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SPAC-seq空间CRISPR筛选平台与TARDIS分析工具",
+  "data": "空间CRISPR筛选测序数据（肿瘤、CD8+T细胞）",
+  "scenario": "空间分辨功能基因组学",
+  "benchmark": "现有空间组学与功能扰动关联工具的空白",
+  "results": "揭示Icam1缺失促转移、Cd44与巨噬细胞Spp1互作、转录因子-趋化因子受体轴",
+  "availability": "",
+  "limitations": "未明确说明平台通量与适用组织范围的限制",
+  "summary": "开发SPAC-seq高通量空间CRISPR筛选平台及TARDIS统计分析工具。将基因扰动与空间表型和通路关联，应用于肿瘤与CD8+T细胞。发现Icam1缺失经免疫抑制促转移、Cd44调控空间表型、转录因子-趋化因子受体轴耦合细胞状态与趋化。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

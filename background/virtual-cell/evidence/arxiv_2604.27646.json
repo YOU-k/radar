@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2604.27646",
+  "title": "Benchmarking virtual cell models for in-the-wild perturbation response",
+  "url": "https://arxiv.org/abs/2604.27646v1",
+  "abstract": "Virtual cell (VC) models aim to predict cellular responses to any perturbations in silico and have emerged as a promising approach for drug discovery and precision medicine. Yet, a clear gap still remains: while models routinely reported impressive results on standard benchmarks, it is unclear whether their predictions are truly meaningful in practice. This is mainly due to limitations in current evaluation setups, which are often overly simplified or inconsistent, and do not reflect the complexity and variability of real biological systems. Here, we introduce a standardized and modular benchmarking framework for virtual cell prediction. Our framework evaluates diverse models under in-the-wild challenging scenarios, including unseen cell contexts, unseen perturbations, and cross-dataset generalization, which better reflect practical applications. Our analysis shows that model performance is highly context-dependent and shaped by task design and evaluation criteria. In commonly used setups, performance is often overestimated, and naive dataset aggregation can even reduce performance. When evaluated under more strict conditions, model performance drops markedly, indicating limited robustness to shifts across cellular contexts. In unseen perturbation settings, models including simple linear approaches capture global transcriptional trends but fail to recover fine-grained perturbation-specific effects. In addition, different evaluation metrics focus on different biological properties, leading to substantially different model rankings. Together, our framework provides a more reliable and biologically grounded evaluation, offering clearer guidance for applying virtual cell models in real scenarios.",
+  "authors": "Xinjie Mao, Songming Zhang, Qianhong Wen, Xiangyu Wen, Kedu Jin, Hao Wu, Shuizhou Chen, Yuqiang Li",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "虚拟细胞in-the-wild评测框架，批判现有基准失真",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "虚拟细胞in-the-wild标准化评测框架，批判性基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "标准化模块化虚拟细胞基准框架",
+  "data": "多数据集，含未见细胞情境与扰动",
+  "scenario": "真实场景扰动响应预测",
+  "benchmark": "scGen、scVI、trVAE、CPA、CellOT、GEARS、Squidiff、scGPT等",
+  "results": "常用设置下性能被高估；严格条件下性能显著下降；简单线性模型仅捕捉全局转录趋势，无法恢复细粒度扰动特异效应",
+  "availability": "",
+  "limitations": "现有评估设置过度简化或不一致，未反映真实生物系统复杂性",
+  "summary": "针对虚拟细胞模型在真实场景中预测是否有意义的问题，提出标准化模块化基准框架。在未见细胞情境、未见扰动和跨数据集泛化等挑战场景下评估多种模型。发现模型性能高度依赖情境，常用设置高估性能，严格条件下鲁棒性有限，不同指标导致模型排名差异显著。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

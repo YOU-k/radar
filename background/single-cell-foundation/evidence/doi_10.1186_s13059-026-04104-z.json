@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s13059-026-04104-z",
+  "title": "scArchon: a scalable benchmarking framework for assessing single-cell perturbation models.",
+  "url": "https://doi.org/10.1186/s13059-026-04104-z",
+  "abstract": "Background The accurate prediction of cellular responses to perturbations, such as drug treatments, remains a pivotal challenge in single-cell transcriptomics. While numerous deep learning tools have been developed for this task, their systematic benchmarking across diverse datasets and performance metrics has been limited. Results Here, we present scArchon, a reproducible, modular benchmarking platform built on Snakemake. It is designed to evaluate perturbation response prediction tools in an unbiased and extensible manner. Employing six representative single-cell RNA-seq datasets, we compare leading methods such as scGen, CPA, trVAE, scPRAM, scVIDR, scDisInFact, SCREEN, scPreGAN, and CellOT against baselines. We assess model performance using a composite of statistical and biological metrics. Our analysis reveals heterogeneous performance. While methods like trVAE, scGen, scPRAM, and scVIDR achieve robust results across multiple datasets, other tools occasionally underperform even compared to linear or control baselines. Notably, models with favorable quantitative scores may fail to retain key biological perturbation signatures, underscoring the need for gene-level evaluation. Conclusions scArchon provides a unified, extensible foundation for large-scale, standardized benchmarking of perturbation prediction tools, facilitating methodological transparency and accelerating development in this rapidly evolving field. We encourage adoption of scArchon and sharing of containerized tools to drive progress in single-cell perturbation modeling.",
+  "authors": "Radig J, Droit R, Doncevic D, Li A, Bui DT, Herfurth L, Kühn T, Herrmann C.",
+  "venue": "Genome biology",
+  "year": 2026,
+  "citations": 5,
+  "found_by": [
+   "eupmc:perturbation response predicti"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13162514",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "扰动预测模型系统评测框架，可复用基准平台",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "扰动预测系统评测基准，含批判性比较，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "scArchon容器化基准框架",
+  "data": "含对照与扰动多样本scRNA-seq，.h5ad格式",
+  "scenario": "扰动响应预测模型评测",
+  "benchmark": "trVAE、scGen、CPA、CellOT、SCREEN等9种工具",
+  "results": "统一MSE、Wasserstein及生物指标并聚合评分排名，解决环境不兼容，支持用户自有数据",
+  "availability": "容器化可复现流程公开",
+  "limitations": "仅限非遗传扰动，未涵盖基因敲除类方法",
+  "summary": "提出scArchon系统评测单细胞扰动预测模型。标准化数据集与指标，容器化运行9种工具并聚合评分排名。实现公平可复现比较，并支持用户将工具应用于自有数据。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 5,
+ "added_on": "2026-09-23"
+}

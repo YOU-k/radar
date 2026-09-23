@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.10831",
+  "title": "scDEFT: A deep learning framework for drug-effect prediction and counterfactual reasoning",
+  "url": "https://arxiv.org/abs/2609.10831",
+  "abstract": "Longitudinal single cell atlases now capture matched pre treatment and post treatment states from responders and non responders, presenting an opportunity to mechanistically explain why two patients on the same drug diverge. We introduce scDEFT (single cell Drug EFfect Transducer), which treats a drug as a conditioning operator on cell representations, enabling prediction and explanation. In scDEFT, feature wise linear modulation produces drug conditioned cell latents, learned under abundant per cell supervision and then frozen. Two independent heads aggregate those latents over shared transcriptional neighborhoods to predict drug induced state change and responder status. A backward stage ranks the latent dimensions by how strongly they separate responders from non responders and maps them to genes under a cell composition control. On a harmonized inflammatory bowel disease atlas of 1.16 million cells, three cohorts and two drug classes, scDEFT predicts state change at 45% of the baseline to reproducibility ceiling headroom and stratifies responders before treatment at AUROC 0.70, where standard predictors remain at chance. These predictions and the drivers behind them support target and co target nomination, patient stratification, and counterfactual prediction of unseen drug cohort effects.",
+  "authors": "Murthy Devarakonda",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41592-024-02201-0"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "药物效应预测与反事实推理框架，契合扰动响应",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "药物效应预测与反事实推理框架，契合扰动响应方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "scDEFT：药物条件化潜变量+双头预测+反向归因",
+  "data": "IBD单细胞图谱116万细胞，3队列2类药物，51供体",
+  "scenario": "药物效应预测与反事实推理",
+  "benchmark": "基线至可复现上限headroom；标准预测器",
+  "results": "状态变化预测达headroom的45%；治疗前分层AUROC 0.70，标准法仅随机水平",
+  "availability": "",
+  "limitations": "仅IBD两药类验证，归因结果为待实验验证的假设",
+  "summary": "scDEFT将药物视为细胞表征的条件算子，实现药效预测与解释。方法用特征级线性调制生成药物条件化潜变量，冻结后由两个独立头按转录邻域聚合预测状态变化与应答状态，反向阶段排序潜维度并映射到基因。在116万细胞IBD图谱上，状态变化预测达headroom的45%，治疗前应答分层AUROC 0.70，而标准预测器仅达随机水平。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/virtual-cell/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

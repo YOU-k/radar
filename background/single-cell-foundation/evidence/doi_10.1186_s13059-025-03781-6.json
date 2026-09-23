@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s13059-025-03781-6",
+  "title": "Biology-driven insights into the power of single-cell foundation models",
+  "url": "https://doi.org/10.1186/s13059-025-03781-6",
+  "abstract": "Single-cell foundation models (scFMs) have emerged as powerful tools for integrating heterogeneous datasets and exploring biological systems. Despite high expectations, their ability to extract unique biological insights beyond standard methods and their advantages over traditional approaches in specific tasks remain unclear. Here, we present a comprehensive benchmark study of six scFMs against well-established baselines under realistic conditions, encompassing two gene-level and four cell-level tasks. Pre-clinical batch integration and cell type annotation are evaluated across five datasets with diverse biological conditions, while clinically relevant tasks, such as cancer cell identification and drug sensitivity prediction, are assessed across seven cancer types and four drugs. Model performance is evaluated using 12 metrics spanning unsupervised, supervised, and knowledge-based approaches, including scGraph-OntoRWR, a novel metric designed to uncover intrinsic knowledge encoded by scFMs. We provide holistic rankings from dataset-specific to general performance to guide model selection. Our findings reveal that scFMs are robust and versatile tools for diverse applications while simpler machine learning models are more adept at efficiently adapting to specific datasets, particularly under resource constraints. Notably, no single scFM consistently outperforms others across all tasks, emphasizing the need for tailored model selection based on factors such as dataset size, task complexity, biological interpretability, and computational resources. This benchmark introduces novel evaluation perspectives, identifying the strengths and limitations of current scFMs, and paves the way for their effective application in biological and clinical research, including cell atlas construction, tumor microenvironment studies, and treatment decision-making.",
+  "authors": "Jialu Wu, Qing Ye, Yilin Wang, Renling Hu, Yiheng Zhu, Mingze Yin, Tianyue Wang, Ji-Ke Wang",
+  "venue": "Genome Biology",
+  "year": 2025,
+  "citations": 36,
+  "found_by": [
+   "s2kw:single-cell foundation model b"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41044630"
+   ],
+   "pmcid": "PMC12492631"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "六模型对比基线的批判性基准，含生物洞察",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "六模型系统基准，方向必读批判性证据",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "生物学驱动零样本嵌入评测含本体信息指标",
+  "data": "6个scFM、2个基因级和4个细胞级任务、AIDA v2独立数据集",
+  "scenario": "零样本嵌入的生物学相关性与模型选择",
+  "benchmark": "HVG、Seurat、Harmony、scVI等基线策略",
+  "results": "零样本scFM嵌入捕捉生物学信息；提出scGraph-OntoRWR和LCAD本体指标；部分场景基础模型未超越简单基线",
+  "availability": "",
+  "limitations": "预训练基础模型在某些场景未超越简单基线",
+  "summary": "作者提出生物学驱动的基准框架，对六个单细胞基础模型的零样本嵌入进行深度评测。在基因级和细胞级任务上，使用HVG、Seurat、Harmony和scVI等基线，并引入AIDA v2独立数据集和细胞本体信息指标。发现零样本嵌入确实捕捉生物学信息，但预训练基础模型在部分场景未超越简单基线，需按任务选择模型。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

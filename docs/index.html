@@ -63,9 +63,9 @@ details.deep .deepbody p{margin:4px 0}
 .hide{display:none!important}
 </style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
-<div class="meta">更新至 2026-09-23 · 6 个方向背景 / 2 份周报 / 9 份日报</div>
+<div class="meta">更新至 2026-09-23 · 7 个方向背景 / 2 份周报 / 9 份日报</div>
 <div class="tabs"><div class="tab on" data-tab="bg">方向背景</div><div class="tab" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div><div class="tab" data-tab="res">资源库</div></div></div>
-<div id="panel-bg" class="on"><details class="bg"><summary>联合分析<span class="cnt">5 个方向 · 证据 390 篇 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>全景</h2>
+<div id="panel-bg" class="on"><details class="bg"><summary>联合分析<span class="cnt">6 个方向 · 证据 439 篇 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>全景</h2>
 <table>
 <thead>
 <tr>
@@ -78,193 +78,124 @@ details.deep .deepbody p{margin:4px 0}
 <tbody>
 <tr>
 <td>多模态衰老时钟与生物年龄</td>
-<td>成熟（方法层）/ 争议期（可靠性层）</td>
+<td>朝阳期偏早期（内部高度不均：单组学时钟成熟、多模态/单细胞朝阳、类器官与评测萌芽）</td>
 <td>71</td>
-<td>表观、蛋白、转录、影像、单细胞时钟已全面铺开，<strong>蛋白组时钟临床预测力最强</strong>，但跨组织可比性、跨队列泛化、预测偏差与"通用 vs 细胞类型特异"两大分歧未解；单细胞时钟正从细胞类型特异模型走向大规模注意力网络与 LLM 微调。</td>
+<td>表观/蛋白/转录时钟已固化，<strong>多模态整合与单细胞/空间时钟的"方法定义权"窗口约剩 12–18 个月</strong>，而类器官扰动（n=1）与评测（n=0）几乎空白。</td>
 </tr>
 <tr>
 <td>人群健康与多组学 AI</td>
-<td>分化：2.1 生成式轨迹朝阳、2.2 多组学整合成熟、2.3 EHR 基础模型萌芽→朝阳、2.4 纵向组学时钟朝阳、5 评测近乎空白</td>
+<td>成熟偏朝阳（生成式轨迹朝阳、多组学整合成熟、EHR 基础模型过渡、评测空白）</td>
 <td>90</td>
-<td>生成式疾病轨迹（ALADYNOULLI、Delphi-2M、Foresight）与 UKB-PPP 级蛋白组遗传图谱并行推进，但<strong>外部验证不足、跨祖源泛化未证、PRS 个体一致性差</strong>；评测与可复现性是最明显结构性缺口。</td>
+<td>UKB/FinnGen 类资源层已定型为"地基"，<strong>生成式疾病轨迹与纵向多组学衰老时钟是主战场</strong>，但外部验证与评测（n=2）是系统性短板。</td>
 </tr>
 <tr>
 <td>LLM 科研智能体与可验证奖励强化学习</td>
-<td>朝阳（2.2 已热、2.1 爆发、2.4 与 4 几乎空白）</td>
+<td>朝阳（RLVR 已热、智能体系统爆发、生物医学落地与信用分配空白）</td>
 <td>91</td>
-<td>RLVR/GRPO 主线已被 DeepSeekMath、DeepSeek-R1、Kimi k1.5 推到 CNS 级，科研智能体系统方法未收敛；<strong>生物医学落地与过程级验证是最大缝隙</strong>，且存在"RL 是否真扩展推理能力"的关键反证。</td>
+<td><strong>RLVR/GRPO 主线窗口约剩 6–12 个月</strong>，而<strong>生物医学智能体 + 过程级验证窗口还有 18–24 个月</strong>（该交叉区 n 仅 4+2、CNS 占比 0.0）。</td>
 </tr>
 <tr>
 <td>单细胞与空间组学基础模型与虚拟细胞</td>
-<td>成熟范式 + 信任危机</td>
-<td>73</td>
-<td>"大规模预训练+微调"范式已确立（Geneformer、scGPT、CellFM、SCimilarity），但<strong>零样本不如 HVG/Harmony/scVI 等简单基线、数据缩放定律不成立、预训练语料重叠达 77–80%</strong>，虚拟细胞评估标准正在被重写。</td>
+<td>朝阳期偏中后段（FM 与资源成熟、扰动/空间/评测朝阳、可解释性与形态萌芽）</td>
+<td>86</td>
+<td>通用单细胞 FM 已是默认基线，<strong>窗口在扰动响应/虚拟细胞、空间多模态、评测与两个萌芽区</strong>；"扰动预测未跑赢基线"已被 CNS 级点名。</td>
+</tr>
+<tr>
+<td>虚拟细胞与扰动响应预测</td>
+<td>朝阳期偏早（生成模型拥挤、世界模型萌芽、评测被低估）</td>
+<td>36</td>
+<td><strong>2.1 纯方法红利约剩 6–12 个月</strong>（accepted_per_round 37→4），<strong>细胞世界模型（n=3、全 2026、0 引）与效度批判（n=10、CNS 0.5）窗口约 12–24 个月</strong>。</td>
 </tr>
 <tr>
 <td>世界模型与自监督表征学习</td>
-<td>核心范式爆发、科学迁移起步、评测与基准空白</td>
+<td>错位窗口期（核心范式爆发、科学迁移起步、评测与基准空白）</td>
 <td>65</td>
-<td>JEPA 式隐空间预测已成主流（V-JEPA 2 单篇 725 引），但<strong>点云/表格侧出现反例、防坍塌路线冲突、数据与基准 n=0</strong>；顶刊入口在"迁移到科学数据 + 严格基准"而非再造 JEPA 变体。</td>
+<td><strong>方法供给过剩、评测与科学落地供给严重不足</strong>：2.1 占 29/65 且 79% 近两年，而"数据与基准"n=0、CNS 占比整体仅 0.03。</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2>方向间交叉点</h2>
-<h3>一、方法同时出现在 ≥2 个方向</h3>
-<p><strong>1. JEPA / 隐空间预测式自监督（世界模型 ↔ 单细胞基础模型 ↔ 衰老时钟）</strong>
-- 世界模型方向：V-JEPA 2、I-JEPA、DINO-WM、LeJEPA/SIGReg、JEPA-DNA、RegFormer。
-- 单细胞方向：RegFormer（融合基因调控层级与 Mamba 的单细胞基础模型）、scPRINT-2、Geneformer/scGPT 的表征层评估。
-- 衰老方向：单细胞时钟 sc-ImmuAging、scAgeClock、LLM 时钟，均依赖"细胞表征 + 线性探针"这一同一评测范式。
-- <strong>判断：世界模型方向的防坍塌机制（SIGReg、EMA 教师）与掩码隐空间预测，可直接替换单细胞基础模型的 MAE 式原始计数重构损失，这是目前无人占位的交叉。</strong></p>
-<p><strong>2. 线性探针 / 冻结表征评测协议（世界模型 ↔ 单细胞基础模型 ↔ 衰老时钟）</strong>
-- 世界模型：ImageNet-1k 线性评估、ModelNet40/ScanObjectNN 线性探测。
-- 单细胞：HVG/Harmony/scVI 基线对比、逐层评估（中间层在轨迹推断中优于最终层 31%）。
-- 衰老：单细胞时钟"三者参照系不同、精度数字不宜直接横向比较"。
-- <strong>判断：三个方向都在用线性探针，但协议不统一；统一协议本身就是可发表贡献。</strong></p>
-<p><strong>3. 过程级可验证奖励 / 中间步骤判定（科研智能体 ↔ 单细胞分析流程 ↔ 多组学基准）</strong>
-- 科研智能体：PURE 最小形式信用分配、TreeRL、BAVAR、R-Judge、VPRM 规则确定性验证器。
-- 单细胞：Cell-o1 单细胞推理题式任务、BixBench 计算生物学任务、PerturbBench/PertEval-scFM 扰动预测基准。
-- 衰老：ClockBase Agent 评估 43,602 个干预-对照比较。
-- <strong>判断：单细胞/组学流程天然有 ground-truth marker 与已知扰动，是构造过程奖励的最佳土壤，而科研智能体方向 2.4 仅 2 条证据、其中一篇 0 引用。</strong></p>
-<p><strong>4. 生成式轨迹建模 / 世界模型式状态转移（人群健康 ↔ 世界模型 ↔ 衰老时钟）</strong>
-- 人群健康：ALADYNOULLI 贝叶斯生成框架、Delphi-2M、Foresight、EHR-MPC 数字孪生 + 模型预测控制。
-- 世界模型：DINO-WM、Dreamer 式规划、Chreode 一步式细胞世界模型、Test-time 世界模型适配。
-- 衰老：类器官/重编程时序多组学、LivAge 小鼠干预评估、ClockBase Agent 干预筛选。
-- <strong>判断：EHR-MPC 的"数字孪生 + 模型预测控制"骨架与 DINO-WM 的"预训练特征上建世界模型"骨架，可直接搬到类器官干预规划。</strong></p>
-<p><strong>5. LLM 语义嵌入 / 文本-组学对齐（人群健康 ↔ 科研智能体 ↔ 单细胞）</strong>
-- 人群健康：GRASP 用 LLM 语义嵌入在英芬美超 100 万人上做跨编码体系风险预测；EHRAgent 自主代码生成。
-- 科研智能体：ToolMaker 从论文代码自动生成工具、MatClaw 每步 API 调用准确率约 99%。
-- 单细胞：GenePT 基于 ChatGPT 嵌入的基础模型、LLM 时钟以"细胞句子"微调。
-- <strong>判断：GRASP 已证明"编码语义统一不必依赖标准化"，这条结论对单细胞注释本体（cell ontology）与衰老表型本体同样适用。</strong></p>
-<h3>二、数据/资源同时出现在 ≥2 个方向</h3>
-<table>
-<thead>
-<tr>
-<th>资源</th>
-<th>涉及方向</th>
-<th>具体工作</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>UK Biobank（含 UKB-PPP、Olink 蛋白组）</strong></td>
-<td>人群健康、衰老时钟</td>
-<td>UKB 44,498 人 11 器官蛋白组年龄差；UKB-PPP 54,219 人 2,941 蛋白；ProtBAG、HPS、PAC、MetBAG</td>
-</tr>
-<tr>
-<td><strong>All of Us</strong></td>
-<td>人群健康、衰老时钟</td>
-<td>297,861 人 12 项生物标志物 3 年轨迹；ATM 亚型 PRS；PAD 多基因评分</td>
-</tr>
-<tr>
-<td><strong>FinnGen</strong></td>
-<td>人群健康、衰老时钟</td>
-<td>176,899 人隐性关联扫描；器官特异时钟外部验证</td>
-</tr>
-<tr>
-<td><strong>Perturb-seq / CRISPR 扰动数据</strong></td>
-<td>单细胞基础模型、科研智能体</td>
-<td>PerturbNet、SCALE、PerturbBench；Cell-o1、BixBench 的过程奖励任务</td>
-</tr>
-<tr>
-<td><strong>PBMC scRNA-seq（130 万细胞）</strong></td>
-<td>衰老时钟、单细胞基础模型</td>
-<td>sc-ImmuAging 五类免疫细胞建模；scContam 检测 PBMC 3k 中 80.4% 指纹重叠</td>
-</tr>
-<tr>
-<td><strong>ImageNet-1K</strong></td>
-<td>世界模型、单细胞基础模型（作为评测范式参照）</td>
-<td>LeJEPA ViT-H/14 线性评估 79%；单细胞侧 HVG 基线对比</td>
-</tr>
-<tr>
-<td><strong>MIMIC-III/IV</strong></td>
-<td>人群健康、科研智能体</td>
-<td>NOAH、MiGHT-EHR；EHRAgent 评测环境</td>
-</tr>
-</tbody>
-</table>
-<h3>三、哪些方向的进展会直接改变另一方向的做法</h3>
-<ol>
-<li>
-<p><strong>单细胞基础模型的"信任危机"直接决定衰老单细胞时钟的可信度。</strong> scContam 检测到 PBMC 3k 与胰腺胰岛图谱中 80.4%/77.0% 细胞指纹与预训练语料显著重叠，MIA AUROC 随模型容量数据比从 0.494 升至 0.881——<strong>如果衰老单细胞时钟建立在 Geneformer/scGPT 嵌入上，其"预测年龄"可能部分是在回忆预训练语料中的年龄标签。</strong></p>
-</li>
-<li>
-<p><strong>世界模型的防坍塌机制会改写单细胞基础模型的训练目标。</strong> 目前单细胞基础模型主流仍是 MAE 式重构或自回归，而世界模型方向已证明 SIGReg 各向同性高斯约束可在 60+ 架构上稳定训练；<strong>若把重构损失换成隐空间预测 + SIGReg，可能同时解决单细胞基础模型的"零样本不如 HVG"问题。</strong></p>
-</li>
-<li>
-<p><strong>科研智能体的过程奖励会重塑衰老干预筛选的证据等级。</strong> ClockBase Agent 目前只能做"干预-对照比较"的终点判定，若引入 PURE/TreeRL 式步级信用分配，<strong>可把"某干预降低生物年龄"拆解为可验证的中间步骤（如特定通路甲基化位点变化），直接回应"无法单独区分衰老与疾病特异效应"的困境。</strong></p>
-</li>
-<li>
-<p><strong>人群健康的 PRS 个体一致性结论会波及衰老时钟的临床解读。</strong> 171,095 人、48 个冠心病 PRS 显示群体表现相似但个体一致性差（ICC 与 Light κ 低）——<strong>同理，多种衰老时钟在群体层面 MAE 相近，不代表对同一个体能给出一致结论；这是目前衰老时钟领域尚未系统检验的盲区。</strong></p>
-</li>
-<li>
-<p><strong>世界模型方向"数据与基准 n=0"与单细胞方向"评测信任危机"合流，指向同一个机会：生物多模态表征的严格基准。</strong></p>
-</li>
-</ol>
-<hr />
+<p><strong>一、方法同时出现在 ≥2 个方向</strong></p>
+<ul>
+<li><strong>JEPA / 隐空间预测</strong>：世界模型方向（I-JEPA、V-JEPA 2、LeJEPA、Point-JEPA）↔ 单细胞基础模型方向（RegFormer 用 Mamba + GRN 先验）↔ 虚拟细胞方向（Chreode 一步式残差转移算子、VCWM 框架）。<strong>世界模型方向的 JEPA 组件已成熟可复用，但没有任何一条证据把它用在衰老/类器官时序上</strong>。</li>
+<li><strong>GRN / 调控先验注入</strong>：虚拟细胞方向（D-SPIN 推断可解释 GRN、RegVelo 联合剪接动力学与调控互作、scKITE 注入 GRN 监督，179,067 样本超越 Geneformer/scGPT）↔ 单细胞基础模型方向（RegFormer 融合基因调控层级与 Mamba）↔ 衰老方向（TFMethyl Clock 基于 TF 结合位点 CpG 聚类）。<strong>scKITE 用不足先前强模型 0.5% 的数据量超越大规模无标注预训练，这条"知识增强 &gt; 规模"的路线可直接迁移到衰老时钟</strong>。</li>
+<li><strong>过程奖励 / 可验证奖励</strong>：科研智能体方向（PURE 最小形式信用分配、TreeRL、VPRM 规则确定性验证器、Sci-PRM 工具感知过程奖励）↔ 虚拟细胞方向（CellFluxRL 用七类生物奖励后训练）↔ 单细胞方向（Cell-o1 单细胞推理题式任务）。<strong>生物域的过程可验证性天然更强（有 ground-truth marker、有已知扰动），但该交叉区 CNS 占比 0.0</strong>。</li>
+<li><strong>扩散 / 流匹配生成</strong>：虚拟细胞方向（D²R² 掩码离散扩散、scBalFlow 两阶段解耦、SCALE 条件传输）↔ 单细胞基础模型方向（scDifformer 三阶段扩散后训练）↔ 世界模型方向（Flow-JEPA 条件流匹配生成未来潜轨迹）。<strong>技术族内部差异集中在"如何约束生成过程"，尚未收敛</strong>。</li>
+<li><strong>稀疏自编码器 / 可解释性</strong>：单细胞基础模型方向（TopK SAE 特征图谱显示仅 3/48 转录因子具调控靶标特异性、因果电路追踪 CRISPRi 方向准确率 56.4%）↔ 世界模型方向（表征分析）。<strong>2.4 是纯萌芽（7 篇、median_citations 0、CNS 0），2026 年才起步</strong>。</li>
+<li><strong>LLM 语义嵌入替代专用模型</strong>：人群健康方向（GRASP 用 LLM 语义嵌入在英芬美超 100 万人上给出"编码语义统一不必依赖标准化"的否定答案）↔ 单细胞基础模型方向（GenePT 用 GPT-3.5 基因文本嵌入在部分任务上媲美 Geneformer）↔ 科研智能体方向（EHRAgent、Longevity-LLM）。<strong>"简单基线即有效"在三个方向同时出现，构成对大规模专用预训练的持续质疑</strong>。</li>
+</ul>
+<p><strong>二、数据同时出现在 ≥2 个方向</strong></p>
+<ul>
+<li><strong>UK Biobank（含 UKB-PPP）</strong>：衰老方向（45,441 人 2,897 蛋白构建 ProtAgeGap；53,018 人血浆蛋白组）↔ 人群健康方向（54,219 人 2,941 蛋白分析物；53,026 人 2,920 蛋白关联 406 种现患与 660 种新发疾病）↔ 世界模型方向（作为多模态人群队列）。<strong>这是唯一横跨三个方向的资源，但衰老与人群健康两侧的蛋白组时钟工作尚未互相对标</strong>。</li>
+<li><strong>Perturb-seq / genome-scale Perturb-seq</strong>：单细胞基础模型方向（749 引，K562 与 RPE1 数千敲低）↔ 虚拟细胞方向（4 个数据集约 48.5 万细胞；Replogle 2022 细胞系）↔ 科研智能体方向（作为过程奖励的 ground-truth 来源）。<strong>同一数据被三个方向以不同目标使用（表征预训练 / 扰动预测 / 奖励构造），但评测协议不统一</strong>。</li>
+<li><strong>All of Us</strong>：人群健康方向（297,861 人 12 项生物标志物 3 年轨迹，AUROC 0.797 vs 静态 0.755；245,388 全基因组序列）↔ 衰老方向（作为多模态衰老验证队列）。<strong>纵向轨迹特征携带独立信号这一结论，尚未在衰老时钟上被系统检验</strong>。</li>
+<li><strong>Cell Painting / JUMP</strong>：单细胞基础模型方向（Cell Painting CRISPR 平台 12 引、JUMP-lite 压缩基准）↔ 衰老方向（[61] Cell Painting 作为影像表型模板，n=1 综述）↔ 世界模型方向（形态表征）。<strong>衰老方向明确把 Cell Painting 列为"影像表型模板"，但该方向 2.5 仅 1 篇综述、recent_share=0.0</strong>。</li>
+<li><strong>Human Cell Atlas / CZ CELLxGENE（超 7000 万细胞）</strong>：单细胞基础模型方向（HCA 走向统一基础模型）↔ 衰老方向（作为单细胞/空间图谱来源）↔ 虚拟细胞方向（5000 万+ 细胞图谱）。<strong>资源层已就位，但衰老维度的细胞类型分辨时钟建模尚未标准化</strong>。</li>
+</ul>
+<p><strong>三、问题同时出现在 ≥2 个方向</strong></p>
+<ul>
+<li><strong>"规模是否等于能力"</strong>：单细胞基础模型方向（400 个模型、6400 次实验未发现清晰数据缩放定律，性能常在远小于现有语料时饱和）↔ 虚拟细胞方向（2220 万细胞预训练 400 个模型、6400 次实验同样发现平台期）↔ 世界模型方向（2.2 经典自监督已成熟、新工作占比仅 20%）。<strong>三个方向独立得出同一否定性结论，这是当前最强的跨方向共识</strong>。</li>
+<li><strong>"跑不赢简单基线"</strong>：单细胞基础模型方向（Geneformer 和 scGPT 多数指标低于 HVG、Harmony、scVI 基线）↔ 虚拟细胞方向（知识图谱 KNN 击败几乎所有方法）↔ 世界模型方向（Point-LeWM 与图像基线统计等价）↔ 人群健康方向（GRASP 用 LLM 语义嵌入否定标准化必要性）。<strong>四方向同时出现，说明"复杂模型必要性"是全领域待验证命题</strong>。</li>
+<li><strong>"外部验证 / 跨队列泛化缺失"</strong>：衰老方向（跨队列泛化是关键瓶颈，迁移学习校准、GOLD BioAge、OMICmAge 给出不同答案）↔ 人群健康方向（Foresight-England 无定量结果、NOAH 与 MiGHT-EHR 均基于 MIMIC、ALADYNOULLI 仅覆盖三个生物库）↔ 单细胞基础模型方向（四平台基准显示 Stereo-seq、Visium HD、CosMx、Xenium 性能差异显著）。</li>
+<li><strong>"评测标准未定"</strong>：衰老方向（section 5 为 n=0，完全空白）↔ 人群健康方向（section 5 n=2，CNS 0.0）↔ 科研智能体方向（section 5 n=1 但 median_citations 1039）↔ 虚拟细胞方向（scArchon 与系统比较尚未形成共识基准）↔ 世界模型方向（section 3 n=0）。<strong>五个方向的评测层同时薄弱，这是最大的结构性缺口</strong>。</li>
+<li><strong>"个体轨迹偏离群体趋势"</strong>：人群健康方向（335 名女性 8 年随访中 5,061 个基因和 181 个代谢物随时间变化但个体轨迹常偏离群体趋势）↔ 衰老方向（单时点偏差 vs 纵向速度 vs 器官特异性累积负担三种主张并存）。<strong>这对单时点"衰老时钟"构成方法论挑战，但两方向尚未联合回应</strong>。</li>
+</ul>
+<p><strong>四、哪些方向的进展会直接改变另一方向的做法</strong></p>
+<ul>
+<li><strong>世界模型方向的 JEPA 成熟 → 直接改变虚拟细胞与衰老方向的做法</strong>：V-JEPA 2 在超 100 万小时视频上预训练、用少于 62 小时 Droid 视频后训练出可零样本部署的 V-JEPA 2-AC，证明"隐空间预测 + 少量后训练"可行；而衰老方向的类器官时序数据正是"可动作条件化的轨迹"，<strong>一旦有人把 DINO-WM 式"在预训练特征上建世界模型"用到类器官干预预测，衰老方向的干预评估范式会被重写</strong>。</li>
+<li><strong>单细胞基础模型方向的"未跑赢基线"结论 → 直接改变虚拟细胞与科研智能体方向的做法</strong>：如果扰动预测在跨细胞类型/跨扰动泛化上持续打不过基线，整个"虚拟细胞"的算法叙事会被压缩成"数据 + 评测"问题；同时科研智能体方向若把过程奖励建立在"预测扰动响应"上，其奖励信号的可信度也会被同一质疑波及。</li>
+<li><strong>科研智能体方向的 RLVR 批判（[84] 质疑 RL 是否真正扩展推理能力）→ 直接改变虚拟细胞方向的 CellFluxRL 类工作</strong>：若 RL 只是重加权而非扩展能力，则"用七类生物奖励后训练 CellFlux"的增益需要重新归因。</li>
+<li><strong>人群健康方向的纵向多组学证据 → 直接改变衰老方向的时钟设计</strong>：All of Us 297,861 人 3 年轨迹的 LightGBM 模型 AUROC 0.797 显著优于静态 0.755（P&lt;0.001），且可提前 3–12 个月持续预测；<strong>这直接支持衰老方向从"单时点时钟"转向"轨迹时钟"，但衰老方向目前仍以横断面为主</strong>。</li>
+<li><strong>单细胞基础模型方向的可解释性负面结论 → 直接改变衰老方向的机制叙事</strong>：SAE 特征图谱显示仅 3/48（6.2%）转录因子具调控靶标特异性、因果电路追踪 CRISPRi 方向准确率仅 56.4%，<strong>这意味着基于单细胞 FM 表征的"衰老调控机制发现"需要先过可解释性这一关</strong>。</li>
+</ul>
 <h2>联合行动建议</h2>
-<h3>项目 1：跨模态隐空间预测的单细胞衰老表征（JEPA × 单细胞 × 衰老时钟）</h3>
-<p><strong>目标</strong>：把 JEPA 式隐空间预测搬到 CITE-seq / 10x Multiome（RNA+ATAC）或类器官时序多组学，做跨模态掩码预测而非原始计数重构，在衰老标签上做线性探针评测。</p>
-<p><strong>用到的方向与具体方法/数据</strong>：
-- 世界模型方向：I-JEPA 的联合嵌入预测架构、LeJEPA 的 SIGReg 各向同性高斯正则、V-JEPA 2 的规模化验证经验。
-- 单细胞方向：RegFormer（融合基因调控层级与 Mamba）、scPRINT-2（350M 细胞预训练）、逐层评估发现"中间层在轨迹推断中优于最终层 31%"。
-- 衰老方向：sc-ImmuAging（130 万 PBMC 五类免疫细胞）、scAgeClock（超 7000 万细胞）、hUSI 的 OCLR 通用衰老指数。
-- 数据：公共 CITE-seq / 10x Multiome、PBMC scRNA-seq、类器官时序多组学（合作项目）。</p>
-<p><strong>为什么现在</strong>：世界模型方向 2.1 有 29 条证据、79% 近两年，方法组件现成；而科学迁移侧仅 7 条证据、median_citations=0，JEPA-DNA 刚出现说明这条路刚被打开。单细胞方向零样本评估显示 Geneformer/scGPT 多数不如 HVG/Harmony/scVI，<strong>换损失函数是最直接的改进杠杆</strong>。</p>
-<p><strong>预期产出</strong>：一个跨模态隐空间预测的表征模型 + 在衰老标签（细胞衰老评分、供体年龄回归）上的线性探针评测；可发表为方法论文或作为类器官项目的表征 backbone。</p>
-<p><strong>主要风险</strong>：单细胞数据的批次效应远强于图像，SIGReg 的各向同性假设可能不成立；需先在小规模 PBMC 上验证防坍塌是否有效。</p>
-<hr />
-<h3>项目 2：单细胞/组学分析流程的过程级可验证奖励（科研智能体 × 单细胞 × 衰老）</h3>
-<p><strong>目标</strong>：把"聚类注释、批次校正、差异表达、衰老评分"每一步做成可自动判定的中间奖励，用 GRPO 训练一个带过程奖励的组学分析智能体，而非只看最终答案。</p>
-<p><strong>用到的方向与具体方法/数据</strong>：
-- 科研智能体方向：PURE 最小形式信用分配（仅 30% 步数达可验证奖励方法相当性能）、TreeRL 的 EPTree 在线树搜索、BAVAR 的预算自适应验证（安全验证成功率 72.6%、成本降 45.5%）、VPRM 规则确定性验证器。
-- 单细胞方向：Cell-o1 单细胞推理题式任务、BixBench 计算生物学任务、PerturbBench/PertEval-scFM 扰动预测基准。
-- 衰老方向：ClockBase Agent 的 43,602 个干预-对照比较框架。
-- 数据：公共 PBMC scRNA-seq、Perturb-seq、类器官多组学。</p>
-<p><strong>为什么现在</strong>：科研智能体方向 2.2 有 40 条证据但 CNS 占比仅 0.03、median_citations=0，说明过程奖励在通用域尚未定型；而 2.4 仅 2 条证据、其中一篇 0 引用，是整张表最空的一格。<strong>生物域的过程可验证性天然更强（有 ground-truth marker、有已知扰动）。</strong></p>
-<p><strong>预期产出</strong>：带过程奖励的 GRPO 训练脚本 + 在 BixBench 上的对照结果；可直接用于类器官项目的自动化分析流水线。</p>
-<p><strong>主要风险</strong>：过程奖励的构造本身需要领域专家标注，成本可能高于预期；需先用规则确定性验证器（VPRM 路线）降低标注依赖。</p>
-<hr />
-<h3>项目 3：类器官时序多组学的世界模型式干预规划（世界模型 × 衰老 × 类器官合作项目）</h3>
-<p><strong>目标</strong>：把类器官/细胞重编程的时序多组学当作可动作条件化的轨迹，用 DINO-WM 式"在预训练特征上建世界模型"或 Dreamer 式规划，预测干预（部分重编程因子、senolytics）后的状态。</p>
-<p><strong>用到的方向与具体方法/数据</strong>：
-- 世界模型方向：DINO-WM（基于 DINOv2 特征的隐空间世界模型，368 引）、Dreamer 式规划、Chreode 一步式细胞世界模型、Test-time 世界模型适配、Sandwich-Residuals（冻结世界模型仅学预测器前后残差）。
-- 衰老方向：LivAge 小鼠转录组干预评估、ClockBase Agent 干预筛选、二甲双胍干预食蟹猴多组学时钟。
-- 人群健康方向：EHR-MPC 的"生成式数字孪生 + 模型预测控制"骨架（8 家医院 ICU 脓毒症队列）。
-- 数据：公共单细胞扰动图谱（Tahoe-100M、Perturb-seq）、类器官时序多组学（合作项目）。</p>
-<p><strong>为什么现在</strong>：世界模型方向 2.1 有 79% 近两年、方法组件现成，但<strong>没有任何一条证据把它用在衰老/类器官时序上</strong>；同时 test-time 适配刚出现单条证据，说明"世界模型 + 测试时计算"是下一个接口。</p>
-<p><strong>预期产出</strong>：可做干预规划的潜空间动力学模型 + 湿实验可验证的预测假设；对合作项目是直接的方法学交付。</p>
-<p><strong>主要风险</strong>：类器官时序数据的样本量通常远小于视频/机器人数据，世界模型可能过拟合；需先用公共 Perturb-seq 做 demo 验证可行性。</p>
-<hr />
-<h3>项目 4：生物多模态表征的严格基准（世界模型 × 单细胞 × 衰老，抢占 n=0 空地）</h3>
-<p><strong>目标</strong>：复现 MAE / DINO / 对比学习 / JEPA 四类范式在统一单细胞数据上的表现，控制预训练数据规模、批次效应、下游任务（细胞类型注释、扰动预测、衰老轨迹）。</p>
-<p><strong>用到的方向与具体方法/数据</strong>：
-- 世界模型方向：<strong>3 数据与基准 n=0</strong>，是最大结构性缺口；5 评测板块 cns_share=0.5、病理 SSL 临床基准已拿到 78 引。
-- 单细胞方向：scContam 的 MinHash 指纹 + MIA 审计框架（PBMC 3k 80.4%、胰腺胰岛 77.0% 重叠）、无参数线性流程在分布外任务上超越 TranscriptFormer、PerturbBench/PertEval-scFM。
-- 衰老方向：ComputAgeBench（可靠时钟应能区分健康与衰老加速疾病个体）、LongevityBench（17 项任务、5 个生物数据域、18 个前沿 AI 系统）。
-- 数据：公共单细胞图谱、Perturb-seq、衰老队列。</p>
-<p><strong>为什么现在</strong>：世界模型方向 <strong>3 数据与基准 n=0</strong>，单细胞方向只有一篇方法学批判（39 引）远未饱和，衰老方向 LongevityBench 刚提出"组学年龄预测最困难"。<strong>三方向合流指向同一个空白，且这类工作引用寿命长。</strong></p>
-<p><strong>预期产出</strong>：开源基准 + 负面结果报告，直接支撑你自己后续的方法选择；可发表为 benchmark 论文。</p>
-<p><strong>主要风险</strong>：基准工作算力消耗大、周期长；建议先做单细胞单模态版本，再扩展到多模态。</p>
-<hr />
-<h3>项目 5：衰老时钟的个体一致性与预测偏差审计（衰老时钟 × 人群健康 × 科研智能体）</h3>
-<p><strong>目标</strong>：把人群健康方向"48 个冠心病 PRS 个体一致性差"的检验框架，搬到衰老时钟上——检验多种衰老时钟在群体 MAE 相近时，对同一个体是否给出一致结论；同时复现"预测脑龄越大认知越好"式虚假关联。</p>
-<p><strong>用到的方向与具体方法/数据</strong>：
-- 衰老方向：TranslAGE 评估 18 种时钟发现生物学可靠性低至中等且与技术重现性脱节；系统预测偏差（需约束优化回归框架校正）；rentosertib 2a 期试验中六种蛋白时钟一致预测治疗组生物年龄更低但无法区分衰老与疾病特异效应。
-- 人群健康方向：171,095 人、48 个冠心病 PRS 的 ICC 与 Light κ 评估；ATM 在 282,957 + 211,908 人中识别 52 种共病异质性疾病。
-- 科研智能体方向：R-Judge 风险判定框架（最佳模型 GPT-4o 仅 74.42%）、Strategic Verification 长程验证。
-- 数据：UKB 蛋白组/代谢组、Generation Scotland DNAm 队列、公共 DNAm 数据集。</p>
-<p><strong>为什么现在</strong>：衰老方向已明确"跨队列泛化是普遍短板"、"系统预测偏差可能扭曲下游关联"，但<strong>尚无系统性的个体一致性审计</strong>；人群健康方向已有成熟方法可直接迁移。这是低成本、高引用潜力的批判性工作。</p>
-<p><strong>预期产出</strong>：一篇批判性 benchmark/审计论文 + 一套可复用的时钟一致性评估工具。</p>
-<p><strong>主要风险</strong>：需要访问多个受限队列（UKB、Generation Scotland），数据申请周期长；建议先用公开 DNAm 数据集做 demo。</p>
-<hr />
+<h3>项目一：衰老扰动 OOD 评测基准（公共数据 demo 优先）</h3>
+<ul>
+<li><strong>目标</strong>：构造"训练年轻/测试衰老""训练一种细胞类型/测试另一种"的 split，系统评测 scGPT、Geneformer 与线性基线在衰老维度的扰动响应预测能力，产出"哪些扰动在衰老语境下可预测、哪些不可预测"的效度地图。</li>
+<li><strong>用到的方向与具体方法/数据</strong>：单细胞基础模型方向（PerturBench 协议、Tahoe-100M / genome-scale Perturb-seq、scGPT、Geneformer）＋ 虚拟细胞方向（scArchon 基准框架、系统比较框架、X-Cell 的 2560 万扰动单细胞 / 16 种生物学情境）＋ 衰老方向（衰老作为条件变量）。</li>
+<li><strong>为什么现在</strong>：<strong>"未跑赢基线"已被 CNS 级别点名</strong>（单细胞基础模型方向：Evaluating the role of pretraining dataset size and diversity on single-cell foundation models），但<strong>没人做衰老维度的系统评测</strong>；虚拟细胞方向评测段 recent_share 0.9、CNS 0.5，且已出现"预训练规模/多样性未必有用"的否定性证据，领域正从"刷模型"转向"验效度"。</li>
+<li><strong>预期产出</strong>：开源 benchmark + 负面结果报告（可发表点：高引潜力的批判性 benchmark，引用寿命长）；合作交付：为类器官扰动数据提供现成的评测协议。</li>
+<li><strong>主要风险</strong>：公共 Perturb-seq 图谱多为细胞系，与类器官/原代/空间语境的迁移性未知；若评测结论过于负面，可能难以获得模型作者的合作。</li>
+</ul>
+<h3>项目二：类器官时序的潜空间世界模型（衰老轨迹预测）</h3>
+<ul>
+<li><strong>目标</strong>：把类器官/细胞重编程的时序多组学当作可动作条件化的轨迹，用 DINO-WM 式"在预训练特征上建世界模型"或 Dreamer 式规划，预测干预（部分重编程因子、senolytics）后的状态，产出可做干预规划的潜空间动力学模型 + 湿实验可验证的预测假设。</li>
+<li><strong>用到的方向与具体方法/数据</strong>：世界模型方向（DINO-WM 368 引、Dreamer 式规划、V-JEPA 2 的"少量后训练"范式、test-time 世界模型适配）＋ 虚拟细胞方向（Chreode 一步式残差转移算子、CellScientist 假设—实现闭环、VCWM 框架）＋ 衰老方向（类器官 + 多组学合作项目）。</li>
+<li><strong>为什么现在</strong>：世界模型方向 2.1 板块 <strong>79% 近两年、方法组件现成</strong>，但<strong>没有任何一条证据把它用在衰老/类器官时序上</strong>；虚拟细胞方向 2.2 仅 <strong>3 篇、全 2026、0 引</strong>，[16] 刚提出概念但无实证，<strong>先做闭环验证者比再做模型更容易占位</strong>；且天然需要湿实验合作方。</li>
+<li><strong>预期产出</strong>：可复现的闭环 benchmark + 潜空间动力学模型（可发表点：方法 + 生物学发现双线）；合作交付：为类器官项目提供干预规划的算法模块。</li>
+<li><strong>主要风险</strong>：世界模型方向 2.1 的 <strong>median_citations=0</strong>，大量新工作尚未被验证，方法可能快速被下一代架构（SSM/线性注意力，目前仅 1 条证据）替代；类器官时序数据的规模与时间分辨率可能不足以训练世界模型。</li>
+</ul>
+<h3>项目三：跨模态隐空间预测的衰老表征模型（JEPA 迁移）</h3>
+<ul>
+<li><strong>目标</strong>：用公共 CITE-seq / 10x Multiome（RNA+ATAC）或类器官时序多组学，把一种模态当 context、另一种当 target，在隐空间做预测（而非 MAE 式原始计数重构），损失用 latent prediction + VICReg 式正则，产出跨模态隐空间预测的表征模型 + 在衰老标签（细胞衰老评分、供体年龄回归）上的线性探针评测。</li>
+<li><strong>用到的方向与具体方法/数据</strong>：世界模型方向（I-JEPA、V-JEPA 2、LeJEPA 的 SIGReg 防坍塌、JEPA-DNA 持续训练框架）＋ 单细胞基础模型方向（MultiVI 299 引、moscot 175 引、RegFormer 的 GRN + Mamba 路线）＋ 衰老方向（细胞类型分辨的衰老速率估计、跨组织对齐）。</li>
+<li><strong>为什么现在</strong>：JEPA 侧方法已成熟可复用，而<strong>科学迁移侧只有 7 条证据、median_citations=0</strong>，JEPA-DNA 刚出现说明这条路刚被打开、尚未被占满；衰老方向 2.3 是 <strong>median_citations=28 的最高影响力区且 cns_share=0.67</strong>，但时钟建模尚未标准化。</li>
+<li><strong>预期产出</strong>：跨模态隐空间预测的表征模型 + 衰老标签线性探针评测（可发表点：方法 + 衰老生物学）；合作交付：为多模态衰老模型提供表征底座。</li>
+<li><strong>主要风险</strong>：世界模型方向 2.2 经典自监督已成熟（recent_share 仅 0.20），JEPA 变体可能迅速拥挤；跨模态对齐的评测协议不统一，结论可能被后续基准推翻。</li>
+</ul>
+<h3>项目四：衰老 AI 基准与"评测层"建设（对标 ComputAgeBench + Biolearn）</h3>
+<ul>
+<li><strong>目标</strong>：以 ComputAgeBench（66 个数据集、19 种衰老加速疾病，仅限血液 DNA 甲基化）和 Biolearn（开源库统一协调多种衰老标志物与数据集）为起点，补衰老方向 section 5 的空白（<strong>n=0</strong>），扩展到单细胞/空间/类器官模态，产出可复现的衰老时钟 benchmark + 争议性评测报告。</li>
+<li><strong>用到的方向与具体方法/数据</strong>：衰老方向（ComputAgeBench、Biolearn、LongevityBench 的 17 项任务 / 5 个数据域、Immunosenescence Inventory）＋ 人群健康方向（UKB、All of Us 纵向轨迹）＋ 单细胞基础模型方向（PerturBench、FM 效用评测、整合基准 1286 引）。</li>
+<li><strong>为什么现在</strong>：衰老方向 2.4 <strong>median_citations=2、cns_share=0.12</strong>，标准未定，先入者定义规则；[59] 已指出验证需求；同时科研智能体方向 3 节 <strong>n=20、CNS 0.0</strong>，评测层缺权威结论。<strong>五个方向的评测层同时薄弱，这是最大的结构性缺口</strong>。</li>
+<li><strong>预期产出</strong>：可复现的衰老时钟 benchmark + 争议性评测报告（可发表点：高引潜力，且能反向指导自己的训练/建模选择）；合作交付：为合作项目提供统一的评测口径。</li>
+<li><strong>主要风险</strong>：基准类工作难以获得短期引用回报；ComputAgeBench 仅限血液 DNA 甲基化，扩展到单细胞/空间/类器官模态需要大量数据 curation 工作。</li>
+</ul>
+<h3>项目五：多模态衰老数据资源 + 标准化元数据 schema</h3>
+<ul>
+<li><strong>目标</strong>：参照 Immunosenescence Inventory（整合单细胞、bulk、表观组与 TCR/BCR 多物种数据并提供免疫时钟计算）与 Biolearn，整合公开多模态衰老数据做统一 curation 与元数据标准，产出多模态衰老数据资源 + 标准化元数据 schema，作为后续所有建模的底座。</li>
+<li><strong>用到的方向与具体方法/数据</strong>：衰老方向（section 3 数据与资源，recent_share=1.0 但仅 n=2）＋ 人群健康方向（UKB、FinnGen、All of Us 资源层已定型，是"地基"而非"赛道"）＋ 单细胞基础模型方向（HCA 走向统一基础模型、CZ CELLxGENE 超 7000 万细胞）＋ 虚拟细胞方向（数据资源段 CNS 0.83、recent_share 0.83）。</li>
+<li><strong>为什么现在</strong>：衰老方向 section 3 <strong>recent_share=1.0 但仅 n=2</strong>，资源层是所有人下游依赖；世界模型方向 <strong>section 3 n=0</strong>，是最大结构性缺口；<strong>资源层是低成本高杠杆切入点</strong>。</li>
+<li><strong>预期产出</strong>：多模态衰老数据资源 + 标准化元数据 schema（可发表点：资源类论文引用寿命长）；合作交付：为类器官 + 多组学合作项目提供数据底座。</li>
+<li><strong>主要风险</strong>：资源类工作工程量大、学术回报周期长；元数据标准需要社区共识，单打独斗难以推广。</li>
+</ul>
 <h2>不要做的事</h2>
-<p><strong>1. 不要再造一个通用 JEPA 变体或通用单细胞基础模型。</strong>
-依据：世界模型方向 2.1 已有 29 条证据、79% 近两年，V-JEPA 2 单篇 725 引，但 <strong>cns_share=0.0、median_citations=0</strong>，说明方法未收敛且大量新工作尚未被验证；单细胞方向已有 Geneformer、scGPT、CellFM、SCimilarity、scPRINT-2 等，且零样本评估显示<strong>多数不如 HVG/Harmony/scVI 等简单基线</strong>，数据缩放定律在 2220 万细胞、400 个模型、6400 次实验上被证伪。<strong>纯方法增量会迅速拥挤，且窗口期仅剩 6–12 个月。</strong></p>
-<p><strong>2. 不要追 RLVR/GRPO 的纯算法增量。</strong>
-依据：科研智能体方向 2.2 已有 40 条证据、recent_share 0.95，DeepSeekMath、DeepSeek-R1、Kimi k1.5 已把范式推到 CNS 级；更关键的是，<strong>虚假奖励与单样本 RLVR 实验显示随机甚至负相关奖励仍使 MATH-500 提升 21.4 点（接近真实奖励 29.1 点），单样本 RLVR 使 MATH500 从 36.0% 升至 73.6%</strong>，提示增益可能主要来自策略梯度对既有行为的放大而非能力扩展。<strong>若 [84] 的质疑成立，许多"能力提升"叙事会被重估。</strong></p>
-<p><strong>3. 不要用单一队列的蛋白组-疾病关联结果直接宣称临床可用性。</strong>
-依据：人群健康方向 UK Biobank 53,026 人、2,920 种蛋白关联 406 种现患与 660 种新发疾病、183 种疾病 AUC&gt;0.80，但<strong>该结果在同一人群、中位随访 14.8 年、缺乏外部验证条件下取得</strong>；Foresight-England 虽有 243M 参数、约 6100 万人训练数据，却因 NHS England 暂停数据访问导致定量结果不可得；NOAH 与 MiGHT-EHR 均主要基于 MIMIC。<strong>跨医疗体系泛化性普遍未验证，是系统性短板而非个别问题。</strong></p></div></details>
+<p><strong>一、不要再去卷通用单细胞基础模型的预训练。</strong></p>
+<p>依据：单细胞基础模型方向 2.1 已 <strong>成熟（16 篇、median_citations 37、CNS 0.5）</strong>，scGPT <strong>1370 引</strong>、Geneformer <strong>1252 引</strong>已成默认基线；更关键的是，<strong>"未跑赢基线"已被 CNS 级别点名</strong>——在 Pancreas 16k、PBMC 12k 等数据集上，Geneformer 和 scGPT 多数指标低于 HVG、Harmony、scVI 基线，HVG 在所有指标上优于二者；同时 400 个模型、6400 次实验<strong>未发现清晰数据缩放定律</strong>，性能常在远小于现有语料时饱和。<strong>规模扩张路线已被证伪，正面竞争无胜算</strong>。</p>
+<p><strong>二、不要做又一个 flow matching / 扩散扰动响应生成模型。</strong></p>
+<p>依据：虚拟细胞方向 2.1 已有 <strong>16 篇、recent_share 0.88</strong>，但 <strong>accepted_per_round 从 37 骤降到 4、coverage 从 0.607 降到 0.559</strong>，说明增量方法论文已难被接收；且<strong>知识图谱 KNN 击败几乎所有方法</strong>，RL 优化推理 LLM 调整邻域后在 Replogle 2022 细胞系上达 SOTA，对复杂生成模型构成尖锐质疑。<strong>纯方法红利约剩 6–12 个月，且已被最简方法挑战</strong>。</p>
+<p><strong>三、不要碰衰老方向的"又一个组织级时钟"或产业叙事。</strong></p>
+<p>依据：衰老方向 2.1 单组学时钟已 <strong>成熟（n=25、recent_share=0.72）</strong>，奠基工作已高被引固化（Horvath 2013 <strong>6423 次</strong>），<strong>median_citations=10、cns_share=0.2</strong>，新工作多为增量；跨组织差异可达<strong>近 30 年</strong>，且生物学可靠性低至中等、技术重现性无法预测。同时虚拟细胞方向 <strong>section 5 产业动态 n_evidence=0</strong>，无可核验技术细节发布，<strong>此处无短期商业噪音，但也无学术占位价值</strong>。<strong>应切"评测 + 扰动 + 空间/形态多模态"的交叉缝隙，而非正面竞争</strong>。</p></div></details>
 <details class="bg"><summary>多模态衰老时钟与生物年龄<span class="cnt">证据 71 篇 · 覆盖度 0.62 · 第 4 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
 <li>表观时钟从 Horvath 2013 的 <strong>353 个 CpG、约 3.6 年误差</strong> [1] 演进到结局预测、因果拆分、通路级与 TFBS 聚类，但跨组织差异可达<strong>近 30 年</strong> [2]，且生物学可靠性低至中等、技术重现性无法预测 [3]。</li>
@@ -984,157 +915,399 @@ details.deep .deepbody p{margin:4px 0}
 <li>Reinforcement Learning without Ground-Truth Solutions can Improve LLMs. arXiv.org 2026. https://doi.org/10.48550/arXiv.2606.27369</li>
 <li>Spurious Rewards: Rethinking Training Signals in RLVR. arXiv.org 2025. https://doi.org/10.48550/arXiv.2506.10947</li>
 </ol></div></details>
-<details class="bg"><summary>单细胞与空间组学基础模型与虚拟细胞<span class="cnt">证据 48 篇 · 覆盖度 0.62 · 第 2 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>本次变更</h2>
+<details class="bg"><summary>单细胞与空间组学基础模型与虚拟细胞<span class="cnt">证据 86 篇 · 覆盖度 0.65 · 第 5 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>新增 [37] A pooled Cell Painting CRISPR screening platform enables de novo inference of gene function by self-supervised deep learning.</li>
-<li>新增 [6] Zero-shot evaluation reveals limitations of single-cell foundation models.</li>
-<li>新增 [33] AI-driven virtual cell models in preclinical research: technical pathways, validation mechanisms, and clinical translation potential.</li>
-<li>新增 [47] Counting cells can accurately predict small-molecule bioactivity benchmarks.</li>
-<li>新增 [27] Predicting transcriptional responses to novel chemical perturbations using deep generative model for drug discovery.</li>
-<li>新增 [46] Benchmarking algorithms for generalizable single-cell perturbation response prediction.</li>
-<li>新增 [21] Single-cell foundation models: bringing artificial intelligence into cell biology.</li>
-<li>新增 [5] Evaluating the role of pretraining dataset size and diversity on single-cell foundation model performance.</li>
-<li>新增 [38] Retrieval-Based Evaluation of Cell Painting Feature Spaces Reveals Differences in the Preservation of Biologically Meaningful Phenotypic Similarity.</li>
-<li>新增 [23] Integrated multimodal cell atlas of Alzheimer's disease.</li>
-<li>新增 [3] CellFM: a large-scale foundation model pre-trained on transcriptomics of 100 million human cells.</li>
-<li>新增 [31] Human interpretable grammar encodes multicellular systems biology models to democratize virtual cell laboratories.</li>
-<li>新增 [32] A deep generative model for deciphering cellular dynamics and in silico drug discovery in complex diseases.</li>
-<li>新增 [11] A multimodal knowledge-enhanced whole-slide pathology foundation model.</li>
-<li>新增 [12] PerturbNet predicts single-cell responses to unseen chemical and genetic perturbations.</li>
-<li>新增 [39] Progress and new challenges in image-based profiling.</li>
-<li>新增 [24] Mapping cells through time and space with moscot.</li>
-<li>新增 [45] Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines.</li>
-</ul>
-<h2>摘要（TL;DR）</h2>
-<ul>
-<li>单细胞基础模型已确立“大规模预训练+下游微调”范式，Geneformer 在约3000万细胞上预训练并识别心肌病候选靶点 [1]，scGPT 扩至超3300万细胞并强调迁移学习 [2]，但两者侧重“因果推断”与“多组学通用性”的张力预示后续路线分化。</li>
-<li>规模扩张路线持续推进，CellFM 将语料推至1亿人类细胞并在多任务上超越 Geneformer、scGPT 等 [3]，而 SCimilarity 以2340万细胞、412项研究走“更优度量结构”路线，定位为细胞图谱搜索引擎 [4]。</li>
-<li>规模是否必然带来性能提升成为最尖锐争议：一项400个模型、6400次实验、2220万细胞的研究发现性能在远小于现有语料时即趋平台，未呈现清晰数据缩放定律 [5]。</li>
-<li>零样本评估显示 Geneformer 和 scGPT 的细胞嵌入在聚类与批次校正上多数不如 HVG、Harmony、scVI 等简单基线，HVG 在所有指标上均优于二者 [6]。</li>
-<li>表征层选择同样受挑战：逐层评估发现最优层任务与上下文依赖，轨迹推断中中间层优于最终层达31%，CD4+ T 细胞扰动预测中最优层随激活状态在0–96%深度间偏移 [7]。</li>
-<li>空间与多模态基础模型沿三条路线分化：PAST 以2000万配对图像-转录组做单细胞粒度跨模态预测与虚拟染色 [8]，OmiCLIP 以220万 patch 走 CLIP 式组织级对齐与平台化 [9]，CellWorld 则以5.74M小模型在11个线性探针和7个空间基准上超越全部基线，提示数据构成与优化策略可能比参数量更关键 [10]。</li>
-<li>全切片与知识增强路线以 mSTAR 为代表，整合26,169切片-模态对、10,275患者、32癌种、1.16亿 patch，显示多模态预训练可用更少数据达到竞争性能，但依赖报告与基因表达配对数据 [11]。</li>
-<li>扰动响应预测正从“拟合均值”转向“刻画分布”，PerturbNet 强调分布变化建模并对比 scGen、CPA、chemCPA、GEARS、Biolord [12]，SCALE 以集合级条件传输回避细胞级配对并预测出经三供体PBMC实验验证的细胞因子响应差异 [13]。</li>
-<li>虚拟细胞的评估标准正被重新定义，“可信虚拟细胞”路线图要求围绕四个经验层与结构化先验组织证据链，指出仅转录组读出与分布内基准不足以预测新条件下的细胞行为 [14]，而 Virtual Cell Challenge 提供开放基准竞赛框架但无具体模型结果 [15]。</li>
-<li>基础模型是否真正编码调控机制存在明显分歧：SAE 图谱发现仅3/48（6.2%）转录因子显示调控靶标特异性 [16]，注意力评估中平凡基因级基线 AUROC 达0.81–0.88 反而优于注意力边 [17]，而穷举电路追踪得到1,393,850条显著下游边并发现层位置决定分化方向性 [18]。</li>
-<li>评测面临信任危机：scContam 检测到 PBMC 3k 与胰腺胰岛图谱中分别有80.4%和77.0%细胞指纹与预训练语料显著重叠，MIA AUROC 随模型容量数据比从0.494升至0.881 [19]，同时无参数线性流程在分布外任务上超越 TranscriptFormer 等基础模型 [20]，提示基础模型优势可能被高估。</li>
+<li>单细胞基础模型的核心范式是把 NLP 自监督预训练迁移到细胞生物学，以 Geneformer（约 3000 万细胞）[1] 和 scGPT（超 3300 万细胞）[2] 确立“大规模预训练 + 下游微调”路线。</li>
+<li>规模扩张趋势明显：CellFM 达 1 亿人类细胞 [3]，scPRINT-2 达 3.5 亿细胞/16 物种 [4]，TranscriptFormer 覆盖 1.12 亿细胞/12 物种/15.3 亿年进化 [5]。</li>
+<li>结构先验路线以 RegFormer 为代表，将 GRN 先验与 Mamba 架构结合，在 2500 万人类细胞上预训练，在注释、GRN 重建、扰动预测和药物响应上优于 scGPT 与 Geneformer [6]。</li>
+<li>规模收益存在直接争议：400 个模型、6400 次实验未发现清晰数据缩放定律，性能常在远小于现有语料时饱和 [7]，与 CellFM、scPRINT-2 的“更大即更好”形成张力 [3][4]。</li>
+<li>零样本评估对基础模型成色提出尖锐质疑：在 Pancreas 16k、PBMC 12k 等数据集上，Geneformer 和 scGPT 多数指标低于 HVG、Harmony、scVI 基线，HVG 在所有指标上优于二者 [8]。</li>
+<li>表征读取方式本身成为变量：逐层分析显示轨迹推断中中间层优于最终层达 31%、稳定在 60% 深度，扰动最优层随 T 细胞激活状态偏移 0–96%，挑战“默认最终层嵌入”惯例 [9]。</li>
+<li>复用外部知识可低成本竞争：GenePT 用 GPT-3.5 基因文本嵌入在部分任务上媲美 Geneformer [10]，PTM-Mamba 复用 ESM-2 嵌入与 79,707 条修饰序列训练 [11]。</li>
+<li>虚拟细胞方向从“注释准不准”转向生成、反事实与样本级异质性：scDifformer 三阶段扩散后训练在 7 个组织提升跨数据集表现 [12]，MrVI 用层次生成模型实现无注释差异表达与丰度分析 [13]。</li>
+<li>检索路线与生成路线分化：SCimilarity 在 2340 万细胞、412 项研究上以度量学习实现跨器官细胞搜索，不追求生成新表达，说明单细胞基础模型是围绕注释、整合、生成、检索分化的方法群 [14]。</li>
+<li>空间与多模态基础模型的核心张力在于跨模态对齐与评测：PAST 基于 2000 万配对病理图像与单细胞转录组 [15]，OmiCLIP 基于 220 万 patch/1007 样本/32 器官 [16]，而 CellWorld 以 5.74M 参数在全部 11 个线性探针和 7 个空间基准上超越基线，挑战“参数与数据规模决定空间迁移能力”的直觉 [17]。</li>
+<li>扰动响应与虚拟细胞的路线分歧集中在泛化来源：Tahoe-x1 以 30 亿参数在四项基准达 SOTA [18]，但 70M 参数跨模态蛋白质组继续预训练模型在多数基准匹配或超过 1B/3B RNA-only 模型 [19]。</li>
+<li>评估标准本身尚未统一：具体模型以留出扰动/细胞系精度为成功标志 [20][21]，可信虚拟细胞路线图主张超越留出重建、转向未见细胞类型与扰动的生物学泛化 [22]，虚拟细胞挑战赛试图以开放基准仲裁但尚未给出模型结果 [23]。</li>
+<li>可解释性研究呈现张力：SAE 特征图谱显示仅 3/48（6.2%）转录因子具调控靶标特异性 [24]，因果电路追踪 CRISPRi 方向准确率仅 56.4% [25]，但 L5 层穷举电路追踪将显著下游边扩大 27 倍，提示“调控逻辑稀缺”可能部分源于采样偏差 [26]。</li>
+<li>数据与平台异质性是共同约束：四平台基准显示 Stereo-seq、Visium HD、CosMx、Xenium 性能差异显著 [27]，SEA-AD 虽整合 340 万核/84 供体但主要聚焦 MTG [28]，扰动数据普遍受限于数百分子、少数细胞系与供体数量 [20][29]。</li>
 </ul>
 <h2>1 背景与定义</h2>
-<p>单细胞基础模型的核心技术路线，是将自然语言处理中的生成式预训练范式迁移到转录组数据上，把细胞视为“句子”、基因视为“词元”，通过自监督学习从大规模未标注数据中提取通用表征 [21]。这一思路最早由 Geneformer 系统实现：该模型在约 3000 万个单细胞转录组上预训练，采用上下文感知的注意力架构，以自监督方式学习网络动力学，并将网络层级编码进注意力权重；微调后在染色质与网络动力学相关任务中持续提升预测准确率，并在有限患者数据下识别出心肌病候选治疗靶点 [1]。紧随其后的 scGPT 将预训练规模扩大到超 3300 万个细胞，同样基于生成式预训练 Transformer，在细胞类型注释、多批次与多组学整合、扰动预测、基因网络推断等任务上报告了优越性能，并强调迁移学习是释放模型能力的关键环节 [2]。两者共同确立了“大规模预训练 + 下游微调”的基本范式，但 Geneformer 更侧重网络生物学的因果推断场景，scGPT 则更强调多组学与多任务的通用性，这一侧重差异也预示了后续工作在“通用表征”与“特定生物学洞见”之间的张力。</p>
-<p>沿着规模扩张的方向，CellFM 将预训练语料推至 1 亿人类细胞，系统收集并标准化公共 scRNA-seq 数据，采用自监督学习获得通用细胞与基因表征，在多种单细胞任务上达到或超过 Geneformer、scGPT、scFoundation、UCE 等模型，验证了单物种超大规模预训练的潜力 [3]。与之形成对照的是 SCimilarity，它并未追求最大参数量，而是采用深度度量学习，通过同时优化监督三元组损失和无监督重构损失，在 2340 万细胞、412 项研究的参考集上学习低维表征，使相似细胞彼此靠近，从而支持跨器官、系统与条件的可扩展细胞搜索，并在查询敏感性与整合性能之间取得最佳平衡（β=0.001）[4]。SCimilarity 的定位更接近“细胞图谱搜索引擎”，其局限在于依赖 Cell Ontology 注释质量，部分细胞类型关系模糊 [4]；而 CellFM 的局限则是仅覆盖人类单物种，数据清洗与批次异质性仍影响泛化 [3]。两者分别代表了“更大规模”与“更优度量结构”两条不同的技术取向。</p>
-<p>然而，规模扩张是否必然带来性能提升，成为这一领域最尖锐的争议。一项针对预训练数据规模与多样性的系统研究训练了 400 个模型、进行 6400 次实验，使用 2220 万细胞语料，发现当前方法在远小于现有训练语料的数据规模上性能即趋于平台，单细胞基础模型并未表现出类似大型语言模型的清晰数据缩放定律，因此建议平衡而非盲目同时增加模型容量、数据规模和计算资源 [5]。这一结论直接挑战了 CellFM 所代表的“规模至上”叙事 [3]。更严峻的是零样本评估的结果：在五个多样数据集上，Geneformer 和 scGPT 的细胞嵌入在细胞类型聚类与批次校正上多数情况下不如 HVG、Harmony、scVI 等更简单的基线，HVG 在所有指标上均优于二者，scGPT 仅在 PBMC 12k 数据集的部分指标上优于 scVI/Harmony [6]。该研究同时指出，零样本评估仍不常见，且预训练与评估数据存在部分重叠，这既削弱了既有正面结论的可信度，也说明评估协议本身尚未标准化 [6]。值得注意的是，Geneformer 原文亦承认模型依赖大规模转录组数据，在数据有限场景仍受限 [1]，这与零样本评估揭示的泛化短板相互印证。</p>
-<p>在“用哪一层表征”这一更细粒度的子问题上，默认使用最终层嵌入的惯例同样受到挑战。一项工作系统评估了 scFoundation 和 Tahoe-X1 的逐层表征，通过提取各 Transformer 块隐藏状态并跨模型归一化层索引进行比较，发现最优层是任务依赖且上下文依赖的：在轨迹推断任务中，中间层优于最终层达 31%，且稳定在约 60% 深度；在 CD4+ T 细胞 CRISPRi 扰动响应预测中，最优层随 T 细胞激活状态在 0–96% 深度间偏移；对于静息细胞，首层甚至超越深层 [7]。该研究仅评估两个模型、任务和数据集有限，但其结论与零样本评估的批评形成合力：基础模型的“通用表征”并非在所有深度和所有情境下都最优，下游任务需要针对性地选择表征层，而非默认调用最终层 [6][7]。综合来看，单细胞基础模型已从概念验证走向规模化与多样化，但数据缩放定律的缺失、零样本泛化不及简单基线、以及表征层选择的任务依赖性，共同构成当前领域必须直面的三重争议；综述所指出的“需改进性能与生物学实用性” [21]，正是对这些争议的概括性回应。</p>
-<p>空间与多模态基础模型的核心张力，在于如何把组织形态、基因表达与空间位置这三类异质信号纳入同一表征空间。PAST 选择的是直接配对编码路线：基于 2000 万配对病理图像与单细胞转录组、覆盖泛癌数据训练，联合编码细胞形态与基因表达，学习统一的跨模态表征，并在多种癌症任务中超越现有方法，支持单细胞基因表达预测、虚拟分子染色和多模态生存分析 [8]。它明确批评现有方法多限于 bulk 或粗区域整合，难以捕捉单细胞变异 [8]。与之形成对照的是 OmiCLIP：它同样走图像-转录组配对路线，但数据规模为 ST-bank 的 220 万组织 patch、1007 样本、32 器官，采用 CLIP 式对比学习对齐图像与基因句子表示，并配套 Loki 平台提供组织对齐、注释、细胞分解、检索与基因表达预测五类功能，在 5 个模拟、19 个公开与 4 个内部数据集上对比 22 种 SOTA 方法 [9]。两者的差异不只是数据量级（2000 万对 vs 220 万 patch），更在于目标定位：PAST 强调单细胞粒度的跨模态预测与虚拟染色 [8]，OmiCLIP 则把重点放在组织级对齐与多任务平台化 [9]。值得注意的是，OmiCLIP 的局限被明确写为依赖配对 WSI 与 Visium 数据、泛化待验证 [9]，这实际上也构成对 PAST 类配对范式的共同约束——配对数据的可获得性决定了这类模型能走多远。</p>
-<p>第二条路线试图绕开"重建基因测量"这一目标本身。CellWorld 把预测目标从基因测量转向潜在细胞表征，采用 JEPA 式预训练，避免重建测定特异的技术变异；它用空间 Transformer 建模细胞交互，以可见上下文加部分表达提示预测被掩码细胞的潜在表征，预训练 4 个变体（5.74M–94.56M 参数），数据为 4600 万人细胞、3 平台 11 器官 [10]。结果上，CellWorld-Small（5.74M）在全部 11 个线性探针和 7 个空间基准上超越所有基线，而仅用 5% 语料的冻结 Large 模型在 7 个空间基准上超越全部微调基线 [10]。这一发现与 PAST、OmiCLIP 的"规模驱动"叙事形成有趣张力：CellWorld 明确指出空间迁移依赖生物来源多样性与充分优化，而非细胞数量，并承认细胞级目标歧义需部分表达提示 [10]。换言之，当 PAST 以 2000 万配对样本论证可扩展性 [8]、OmiCLIP 以 220 万 patch 支撑多任务稳健性 [9] 时，CellWorld 用 5.74M 小模型的反例提示：在空间任务上，数据构成与优化策略可能比绝对参数量更关键 [10]。这一争议尚未有定论，因为三者的评测基准并不重合，PAST 面向泛癌下游任务 [8]，OmiCLIP 覆盖五类功能 [9]，CellWorld 则聚焦 11 个线性探针与 7 个空间微调基准 [10]。</p>
-<p>第三条路线把多模态推向全切片与知识增强。mSTAR 整合病理切片、病理报告和基因表达，数据为 26,169 切片-模态对、10,275 患者、32 癌种、1.16 亿 patch，采用两阶段预训练：先以切片级对比学习训练聚合器，再将全切片上下文注入 patch 特征提取器；在 15 类 97 项任务中表现优异，并显示多模态预训练可用更少数据达到竞争性能，对比对象包括 PLIP、CONCH 及视觉单模态病理基础模型 [11]。其局限是依赖报告与基因表达配对数据、跨中心泛化仍需验证 [11]。这与病理基础模型临床基准评测的结论相呼应：该评测系统比较 CTransPath、Phikon、UNI、Virchow 等模型的参数量、算法与训练数据，评估下游临床任务性能，并指出数字病理数据缺乏与 WSI 计算资源需求高是主要瓶颈 [22]。把这两篇放在一起看，mSTAR 的"更少数据达到竞争性能" [11] 与基准评测强调的数据瓶颈 [22] 并不矛盾，而是指向同一问题：多模态预训练的价值可能恰恰在于用模态互补性缓解单一模态的数据稀缺，但其代价是引入对配对报告与基因表达的额外依赖。</p>
-<p>在应用与对齐层面，多模态图谱与最优传输提供了另一类整合思路。SEA-AD 联盟构建阿尔茨海默病中颞回的多模态整合细胞图谱，结合定量神经病理、单核多组学（snRNA-seq、snATAC-seq、snMultiome）与 MERFISH 空间转录组，将 340 万核映射到 139 种分子细胞类型，用连续伪进展评分排序 84 名供体，并在 A9 验证 120 万核、在公开 PFC 数据复制 430 万核/707 供体，数据公开于 SEA-AD 门户，局限是主要聚焦 MTG、其他脑区与纵向时间维度覆盖有限 [23]。moscot 则提供统一最优传输框架，把时序、空间、时空映射转化为 W、GW 或 FGW 型 OT 问题，支持多模态与图谱规模数据，在 170 万细胞小鼠胚胎等数据中实现高效对齐，计算时间与内存较既往 OT 工具（如 SPATEO 等）降数个数量级，并实验验证 NEUROD2 调控 epsilon 细胞形成，代码与文档公开，局限是依赖 OT 假设与先验知识、复杂映射仍需调参 [24]。这两项工作与前述基础模型的差别在于：它们不追求通用预训练表征，而是以具体生物学问题（AD 进展、胚胎发育）为锚点做图谱构建与映射 [23][24]。SEA-AD 的 139 种细胞类型与 340 万核 [23] 为空间基础模型提供了验证靶场，而 moscot 的数个数量级效率提升 [24] 则可能缓解 WSI 级计算瓶颈 [22]。此外，Cell Painting 十年综述提示，图像型 profiling 自 2013 年提出以来，经协议优化、特征提取改进与批次校正增强，已能捕获细胞对扰动的响应并解析化合物作用机制与毒性，未来将整合其他高内涵数据类型，局限是需计算与实验技术进步及多组学整合 [25]。这为空间与多模态模型提供了一个更早成熟的"形态学扰动"参照系：当 PAST 做虚拟分子染色 [8]、OmiCLIP 做基因表达预测 [9] 时，其形态学一端的能力积累可追溯到 Cell Painting 式的扰动 profiling 传统 [25]，而该传统自身也尚未解决多组学整合问题，这构成对当前多模态基础模型"整合"宣称的一重历史性提醒。</p>
-<p>扰动响应预测正从“拟合均值”转向“刻画分布”，而虚拟细胞的野心则要求模型在未见扰动、未见细胞类型乃至未见实验条件下仍能给出可验证的推断。这一目标把两类工作推到前台：一类以单细胞基础模型为骨架，通过轻量适配注入药物或序列条件，追求零样本泛化；另一类以条件传输或生成模型直接建模对照到扰动状态的分布变换，回避细胞级配对假设。二者在数据规模、监督信号和评估标准上分歧明显，也共同暴露出扰动数据覆盖狭窄、分布级监督薄弱、实验验证缺位等瓶颈。</p>
-<p>在基础模型适配路线上，最核心的争议是“预训练表征该保留多少、扰动条件该注入多深”。有工作提出药物条件适配器，仅微调不到1%的参数以保留预训练生物表征，在数千万细胞、多细胞类型/状态/疾病的scRNA-seq上训练，所有泛化设置均达SOTA，尤其在新细胞系少样本与零样本泛化上显著优于基线[26]。其代价是扰动数据集仅覆盖数百分子、少数细胞系，样本有限[26]。与之对照，PRnet走的是另一条路：以化合物SMILES和未扰动转录谱为输入，通过Perturb-adapter、Perturb-encoder和Perturb-decoder实现未见化合物泛化，训练数据约1亿bulk HTS观测、175,549个化合物，以及数千万单细胞HTS、188个化合物，可同时支持bulk和单细胞预测，并捕捉细胞异质性与基因级响应解释[27]。两者都强调“未见扰动”泛化，但前者依赖基础模型预训练表征、参数效率极高，后者依赖海量bulk化学筛选覆盖、以生成式解码器解释响应；前者的瓶颈是扰动空间窄，后者的瓶颈是依赖训练数据覆盖、新化学空间外推仍具挑战[26][27]。PerturbNet则把目标从“均值预测”推进到“分布预测”，利用化学与遗传扰动scRNA-seq（如Perturb-seq）学习扰动与细胞状态的联合表征，预测扰动引起的细胞状态分布变化，强调对全新扰动和状态选择性效应的建模，并在基准中对比scGen、CPA、chemCPA、GEARS、Biolord[12]。它明确指出扰动空间巨大、跨细胞类型与组合扰动泛化仍受限[12]。这三项工作共同显示：化学扰动预测的进展高度依赖数据覆盖与条件注入方式，而“零样本”在不同论文中含义并不一致——有的是新细胞系、有的是新化合物、有的是全新扰动类型，直接比较需谨慎。</p>
-<p>遗传扰动方向的关键分歧在于“基因级表征是否足够”。STRAND指出基因级模型会把同一基因不同位点的扰动坍缩为同一表征，因而以扰动位点调控DNA序列编码为条件，参数化从对照到扰动细胞状态的条件传输过程，在K562、Jurkat、RPE1 CRISPR扰动数据集上评估：低样本判别分提升达33%，未见基因基准取得最佳平均排名，新细胞系迁移Pearson提升达0.14，基因组覆盖从约1.5%扩至约95%[28]。其限制是输入空间大、序列到转录组映射高度非线性，且依赖序列编码质量[28]。AROMA则从多模态推理切入，针对无约束推理、不可解释预测、检索与调控拓扑弱对齐三大局限，整合文本证据、图拓扑与蛋白序列特征建模扰动-靶依赖，用两阶段优化训练，并构建两个知识图谱与PerturbReason数据集（&gt;498k样本），在多细胞系超越现有方法，未见细胞系零样本及知识稀疏长尾场景下保持稳健，权重与代码公开[29]。其限制是依赖知识图谱与检索质量，长尾与知识稀疏场景仍受限[29]。STRAND与AROMA的差异在于：前者把扰动特异性锚定在DNA序列这一物理因果变量上，后者把扰动特异性锚定在文本、图拓扑与蛋白序列的多模态知识上；前者以基因组覆盖从约1.5%扩至约95%回应“位点坍缩”，后者以&gt;498k样本与知识图谱回应“不可解释与弱对齐”。但两者都未彻底解决长尾与知识稀疏问题，且都依赖外部编码或检索质量。</p>
-<p>真正把“非配对”问题摆上台面的是SCALE。它针对对照与处理细胞非配对问题，提出条件传输模型，将细胞视为无序集合，用共享集合感知编码器与条件DiT学习潜在传输，无需细胞级匹配，在遗传、化学、发育、免疫扰动中恢复表达变化与群体结构，CRISPR七项指标全面超越竞争方法，保持基因靶表征分离，并预测出经三供体PBMC实验验证的细胞因子响应差异[13]。其局限是分布级学习扰动特异性监督弱，细胞级配对假设实验不成立[13]。这一工作与PRnet、PerturbNet形成有趣对照：PRnet和PerturbNet仍以扰动条件生成或联合表征学习为主，SCALE则明确把“集合到集合”的传输作为建模对象，并以三供体PBMC实验验证预测的细胞因子差异[27][12][13]。但SCALE也承认分布级监督弱，这意味着其“超越竞争方法”的七项指标虽强，扰动特异性仍可能被分布整体拟合所稀释。</p>
-<p>虚拟细胞的评估标准本身正在被重新定义。Virtual Cell Challenge提出开放基准竞赛与评估框架，通过提供评估框架、专用数据集和竞赛平台加速模型开发，作为开放循环基准促进领域进展，但该文仅为竞赛框架介绍，无具体模型结果[15]。与之呼应，有路线图论证虚拟细胞模型需明确数据、设计、基准与实验验证的证据链才具决策相关性，提出“可信虚拟细胞”概念，围绕四个经验层（分子状态、干预、生物背景、正交表型）与结构化先验组织进展，并指出静态图谱、仅转录组读出与分布内基准不足以预测新条件下的细胞行为，评估应转向泛化到未见细胞类型与扰动等生物学标准[14]。这一判断直接挑战了前述多项工作所依赖的留出重建精度：PRnet、PerturbNet、STRAND、AROMA、SCALE都在各自基准上报告SOTA或显著提升，但若按“可信虚拟细胞”的标准，仅转录组读出与分布内基准并不足以支撑决策相关性[14]。值得注意的是，SCALE已引入三供体PBMC实验验证[13]，AROMA公开权重与代码[29]，这些可视为对“实验验证与可复现”要求的局部回应，但整体上领域仍偏重模型规模与数据量，可信度不足[14]。</p>
-<p>从更宏观的愿景看，AI虚拟细胞被设想为多尺度多模态大神经网络模型，基于AI与组学两大革命，主张从数据直接学习细胞行为而无需显式规则，提出预测、生成、可查询三大能力，并对比规则模型及2012年首个全细胞模型（482基因）[30]。其挑战在于多尺度建模、海量互作组件与非线性动力学[30]。这一愿景与前述扰动预测工作在方法论上存在张力：基础模型适配、条件传输、多模态推理都试图用数据驱动方式绕过显式规则，但“可信虚拟细胞”路线图恰恰主张围绕四个经验层与结构化先验组织进展[14]。另一条路径则试图调和二者：提出人类可解释的细胞行为假设语法，将自然语言描述的细胞规则直接翻译为可执行的agent-based模型，既支持专家知识驱动规则，也支持从高通量分子与空间转录组数据参数化，案例涵盖肿瘤生长、侵袭、免疫治疗响应和脑发育，展示可复现、模块化构建虚拟细胞实验室的可行性，但依赖标注细胞状态与规则质量，复杂系统参数化仍具挑战[31]。这与纯数据驱动的AIVC愿景[30]形成鲜明对比：前者强调可解释语法与专家规则，后者强调从数据直接学习；而“可信虚拟细胞”路线图则要求两者都纳入证据链[14]。</p>
-<p>在临床前转化层面，UNAGI以VAE-GAN无监督框架从人类疾病时间序列单细胞数据解析细胞动力学并进行计算机药物扰动筛选，整合疾病特异基因调控信息与CMAP药物数据库，实现细胞嵌入学习与药物筛选的交互反馈，可标记潜在治疗靶点和药物，并以交互式可视化呈现结果，基准对比Seurat、SCANPY、scVI、scGPT、GEARS等，但依赖时间序列数据质量，虚拟扰动仍需实验验证[32]。另一篇综述则系统讨论AI驱动虚拟细胞模型在临床前研究中的技术路径、验证机制和临床转化潜力，强调整合多模态组学与深度生成模型、图神经网络，并采用CRISPR和类器官平台形成闭环验证，指出虚拟细胞可用于个性化药物筛选和疾病建模，但监管接受、数据隐私和模型可解释性仍是障碍[33]。这两项工作把扰动响应预测从“基准分数”推向“闭环验证”：UNAGI的虚拟筛选仍需实验验证[32]，综述则明确要求从计算评估到CRISPR和类器官实验验证的闭环流程[33]。这与SCALE的三供体PBMC实验验证[13]和AROMA的公开权重代码[29]共同构成一种趋势：虚拟细胞的可信度越来越取决于湿实验闭环与可复现性，而非单一基准上的SOTA。</p>
-<p>综合来看，扰动响应与虚拟细胞领域正沿三条轴线分化。第一条是条件注入方式：药物条件适配器微调&lt;1%参数[26]、PRnet的Perturb-adapter/encoder/decoder[27]、STRAND的调控DNA序列条件[28]、AROMA的文本+图拓扑+蛋白序列[29]、SCALE的条件DiT[13]，各自把扰动特异性锚定在不同变量上，尚无统一结论。第二条是监督粒度：PerturbNet强调分布变化而非均值[12]，SCALE以集合级传输回避配对[13]，但两者都承认分布级扰动特异性监督弱[13]，而“可信虚拟细胞”路线图进一步指出仅转录组读出与分布内基准不足[14]。第三条是验证标准：Virtual Cell Challenge提供开放基准[15]，AIVC提出预测、生成、可查询三大能力[30]，可解释语法路线强调模块化与可复现[31]，临床前综述要求CRISPR与类器官闭环[33]，UNAGI则把虚拟筛选与交互式可视化结合[32]。这些工作之间的冲突不在于谁的方法更优，而在于“什么才算虚拟细胞”尚未达成共识：是基础模型的零样本泛化[26]、是分布级传输[13]、是多模态可解释推理[29]，还是可解释语法构建的agent-based模型[31]。在扰动数据仅覆盖数百分子、少数细胞系[26]，而扰动空间巨大、跨细胞类型与组合扰动泛化仍受限[12]的现实下，任何单一基准上的SOTA都不足以宣告虚拟细胞的成立；真正的进展将取决于能否把序列条件[28]、多模态知识[29]、集合级传输[13]与湿实验闭环[33][32]整合进同一套可验证、可复现、可解释的评估体系[14][15]。</p>
-<p>围绕单细胞基础模型是否真正编码了调控机制，六项工作从稀疏自编码器特征图谱、注意力评估、电路追踪到算法提取，给出了彼此张力明显的证据。最系统的负面结论来自对Geneformer V2-316M与scGPT全人模型各层残差流激活的TopK稀疏自编码器（SAE）分析：该工作分别生成82525与24527个特征，发现99.8%的特征在SVD下不可见，29–59%可注释到通路，但仅3/48（6.2%）转录因子显示调控靶标特异性，多组织对照下也仅10.4% [16]。这意味着模型内部确实内化了有组织的生物学知识，却几乎不含因果调控逻辑，作者据此判断模型表示本身是瓶颈 [16]。与之呼应的是另一项包含37项分析、153个统计检验的系统评估框架：在scGPT与Geneformer、四种细胞类型、两种扰动模态上，平凡基因级基线AUROC达0.81–0.88，反而优于注意力边与相关性边的0.70，成对边分数带来零增量，消融调控头也无退化，唯有CSSI可将GRN恢复提升至多1.85× [17]。两项工作都指向同一争议点——注意力与SAE特征所呈现的"结构"未必等价于调控信号，注意力更多编码共表达而非独特调控信号 [17]。</p>
-<p>但另一些工作表明，这种"共表达而非因果"的判断可能低估了模型内部可被提取的计算结构。因果电路追踪对Geneformer V2-316M与scGPT消融SAE特征并测量下游响应，覆盖4条件、96892条边、80191次前向，发现两模型约53%生物一致性、65–89%抑制主导且不随架构与细胞类型变化，跨模型共识达1142个域对（10.6倍富集），然而CRISPRi基因级验证方向准确率仅56.4%，作者同样结论模型编码共表达而非因果调控 [34]。值得注意的是，该工作与前述SAE图谱在"抑制主导""生物一致性"上提供了正面结构证据，却在因果性上得出与[16]、[17]一致的保守结论，三者构成对"调控逻辑缺失"的相互印证。更激进的正面证据来自对Geneformer L5层4065个SAE特征的穷举电路追踪：它得到1393850条显著下游边，较选择性采样扩27倍，三阶冗余比0.59低于配对0.74且零协同，并发现层位置决定分化方向性——L17特征100%推向成熟，L0/L11为0.00–0.58 [18]。该工作明确批评采样偏差、仅配对交互与观测性轨迹三大局限，其重尾枢纽分布（1.8%特征占大量连接，40%顶级枢纽无注释）说明此前基于选择性采样的结论可能不完整 [18]。在应用层面，从scGPT提取造血流形算法的工作给出更乐观的图景：在Tabula Sapiens 564253细胞与多供体免疫面板上，提取算法伪时间深度排序|ρ|=0.439优于次优0.331，CD4/CD8 AUROC 0.867、单核/巨噬0.951，且比MLP探针快34.5倍、参数少约1000倍 [35]。这提示模型内部存在可被蒸馏为独立算法的有效计算，但其泛化性主要验证于造血系统 [35]。最后，针对GRN推断，有工作观察到scFM因重建式预训练未显式捕获调控信号而表现不佳，现有零样本方法有时甚至不及随机预测，遂提出GRN泛化基准并用虚拟值扰动与梯度轨迹从冻结scFM蒸馏可泛化基因间特征，显著超越现有方法 [36]。综合来看，六项工作在方法（SAE图谱、注意力评估、电路追踪、算法提取、蒸馏）与子问题上分歧明显：SAE与注意力评估强调调控逻辑稀缺甚至基线更优 [16][17]，穷举电路追踪与算法提取则展示出可提取的层依赖结构与高效算法 [18][35]，而因果电路追踪与GRN蒸馏在承认共表达主导的同时，试图通过消融与扰动把可用信号转化为推断能力 [34][36]。核心争议在于：模型编码的是共表达统计还是因果调控，以及这种编码能否支撑通用GRN推断，目前证据尚未收敛。</p>
-<p>在形态与图像表型基础模型的构建路径上，一项工作选择将扰动筛选与自监督表征学习直接耦合。CellPaint-POSH 把 Cell Painting 与 pooled 光学 CRISPR 筛选结合，并改造了样本处理流程以兼容原位测序：将线粒体染色替换为 RNA 探针 Mitoprobe，加入 RNase 抑制剂，并将逆转录步骤提前，从而在同一平台上同时获取 Cell Painting 图像与 4 色 ISS 信号，最终得到 163,090 个单细胞的数据 [37]。在此基础上，作者用自监督深度学习学习形态表征，报告自监督机器学习特征在预测性能上高于经典图像分析流程产出的专家形态特征；形态表型能够按已知功能对基因聚类，并且在没有通路报告基因的条件下也能揭示基因关联网络 [37]。这一结果的意义在于把"基因功能从头推断"作为目标，而非仅做已知通路的分类验证。其代价是方法依赖对 Cell Painting 的改造以兼容 ISS，并依赖成像与测序流程的优化，说明该路线的可迁移性受实验平台约束 [37]。</p>
-<p>与上述"端到端自监督+扰动筛选"的路线不同，另一项工作把问题定位为特征空间的适配性评估，而非直接提出新的表征模型。该研究提出在检测开发早期用基于检索的 mAP 框架判断某个 Cell Painting 特征空间是否适配特定生物学场景，方法上复用 Kalinin 的元数据驱动检索框架，在 U2OS 细胞的 JUMP-MOA 参考板上比较多种公开预训练深度模型与经典 CellProfiler 特征 [38]。结果显示 DINO 自监督较 CellProfiler 的 mAP 提升 29%，CLOOME 的 top-10 MoA 准确率为 61.3%，而 CellProfiler 为 24.5% [38]。但作者强调模型选择依赖具体实验条件，需按场景系统评估，且该结论仅基于单一 JUMP-MOA 参考板，未覆盖多细胞系与多实验条件 [38]。这与 CellPaint-POSH 所暗示的"自监督特征普遍更优"形成张力：前者在特定平台上报告自监督优于专家特征，后者则指出这种优势并非无条件成立，而是随场景变化。</p>
-<p>第三篇综述为上述分歧提供了更宽的对照背景。它系统回顾图像表型分析从实验设计、图像采集到特征提取与下游分析的全流程，并比较 CellProfiler、DeepProfiler、DINO、CLOOME 等在 MoA 预测等任务中的表现 [39]。值得注意的是，其汇总的数字呈现出与前述工作不完全一致的图景：MoA 预测中 CellProfiler 的 F1 为 0.41，DeepProfiler 为 0.42，两者接近；同时该综述也引用了 DINO mAP 提升 29% 这一结果 [39]。作者据此指出深度模型常占优但手工特征仍具竞争力，深度与手工特征的优劣仍依场景而定，领域面临可复现性、标准化和跨数据集泛化等新挑战 [39]。综合三篇证据可见，当前形态基础模型的争议焦点并不在"深度是否优于手工"这一简单判断，而在于评估框架、参考数据集与实验条件如何决定结论：CellPaint-POSH 在改造后的 Cell Painting+ISS 平台上支持自监督表征用于基因功能从头推断 [37]，检索式评估在 JUMP-MOA 上</p>
+<p>围绕单细胞基础模型是否真正编码了调控机制，近两年的可解释性研究呈现出一种耐人寻味的分裂：模型内部确有组织化的生物学结构，但这种结构距离因果调控逻辑仍有相当距离。一项包含 <strong>37 项分析、153 个统计检验</strong> 的系统评估框架，专门检验 scGPT 与 Geneformer 的注意力边分数是否提供超出表达统计的机制信息，结论是注意力虽编码分层生物结构，但对扰动预测<strong>无增量价值</strong>，平凡基因级基线反而更优，消融调控头也不产生影响 [30]。因果电路追踪进一步支持这一判断：对 Geneformer V2-316M 与 scGPT 消融 SAE 特征并测量下游响应，发现两模型约 <strong>53% 生物一致性、65–89% 抑制主导</strong>且不随架构与细胞类型变化，跨模型共识 <strong>1,142 域对（10.6 倍富集）</strong>，但 CRISPRi 验证方向准确率仅 <strong>56.4%</strong>，表明模型编码的是共表达而非因果调控 [25]。用 TopK 稀疏自编码器构建的特征图谱给出更细的量化：模型内化了有组织的生物学知识，却几乎不含因果调控逻辑，仅 <strong>6.2% 转录因子</strong>显示调控靶标特异性响应 [24]。穷举电路追踪则揭示出重尾枢纽分布（<strong>1.8% 特征占大量连接，40% 顶级枢纽无注释</strong>）、随交互阶数单调加深的冗余（零协同），以及层位置决定分化方向性的因果证据 [26]。这些发现与前述零样本评估中基础模型不敌简单基线的结果 [8] 相互印证，共同指向一个判断：<strong>当前单细胞基础模型的"生物学知识"更多是表达相关结构的压缩，而非可干预的调控机制</strong>。</p>
+<p>但可解释性研究并非只给出否定结论。同一批工作也展示了从模型内部提取可用算法的可能性：有研究从 scGPT 中发现并提取紧凑的造血流形算法，通过冻结注意力权重直接算子导出、轻量适配器和任务特定读出三阶段方法，生成无需目标数据重训练的独立算法，在 <strong>88 折供体留出基准</strong>中取得最强伪时间排序和关键亚型端点表现，且比标准探针更快、参数更少 [31]。GRN 推断方向也出现了转机：观察到 scFM 在 GRN 推断上表现不佳源于重建式预训练未显式捕获调控信号后，有工作提出 GRN 泛化基准评估未见基因与数据集，并用虚拟值扰动与梯度轨迹两种方法从冻结 scFM 蒸馏可泛化的基因间特征，显著超越现有方法 [32]。这两项结果说明，<strong>模型内部并非没有可提取的调控或动力学信号，而是默认的注意力读取与最终层嵌入方式未能有效暴露它们</strong>——这与逐层分析发现中间层常优于最终层、轨迹推断中中间层可优于最终层达 <strong>31%</strong> 的结论 [9] 在方法论上一致：问题部分出在"如何读"，而非完全出在"模型里没有"。</p>
+<p>评测体系自身的可信度问题，则从另一个方向动摇了既有结论。预训练污染审计工作提出 scContam 逐细胞审计框架，结合 MinHash 基因集指纹与基于损失的成员推断攻击（MIA-scFM），应用于四个 scIB 基准和三个 scFM，发现<strong>两个高引用基准存在大量预训练重叠证据</strong>，而截断后数据集无重叠，且 MIA AUROC 随模型容量数据比单调上升 [33]。这意味着部分报告的下游性能优势可能部分来自预训练与评测数据的重叠，而非真正的泛化能力。这一发现与前述零样本评估中"预训练与评估数据存在部分重叠，既可能高估也可能混淆泛化判断"的提醒 [8] 形成呼应，也直接威胁到以留出基准 SOTA 为成功标志的模型工作报告 [18][34] 的可比性。更激进的质疑来自参数无关表征：一项 2026 年工作采用依赖精细归一化与线性方法的简单可解释流程，在多个常用基准上取得 SOTA 或近 SOTA 性能，并在新细胞类型与未见物种的分布外任务上超越基础模型，表明<strong>细胞身份生物学可由简单线性表示捕获</strong> [35]。这与 GenePT 用 GPT-3.5 文本嵌入、无需单细胞预训练即可竞争的结果 [10] 一起，构成对"大规模单细胞预训练独特价值"的持续追问。</p>
+<p>综合本节证据，单细胞与空间组学基础模型及虚拟细胞方向的边界可以这样界定：它覆盖在单细胞/空间转录组、蛋白组、cell painting 与扰动测序数据上预训练、并有公开权重的基础模型 [2][1][3]，以其为核心的扰动响应预测与细胞状态生成框架 [34][36][37]，多模态整合方法 [38][39][40]，以及大规模图谱与扰动数据资源 [41][29] 和系统性评测基准 [23][42]。其演化脉络呈现三条交织主线：从 Geneformer、scGPT 确立"预训练+微调"范式 [1][2]，到 CellFM、scPRINT-2、Tahoe-x1 推动规模与模态扩张 [3][4][18]，再到可解释性、污染审计与参数无关基线对前两条主线的前提发起系统性质疑 [24][33][35]。核心问题因此不再是"模型能否在留出集上取得 SOTA"，而是<strong>这些模型是否编码了可干预的因果调控逻辑、其性能优势是否经得起污染审计与简单基线的检验、以及虚拟细胞的评估应否从分布内重建精度转向未见细胞类型与扰动的生物学泛化</strong> [22][23]。当前证据显示，这三问均无定论，而正是这种未收敛状态，构成了该方向下一阶段最实质的研究空间。</p>
 <h2>2 方法学</h2>
 <h3>2.1 单细胞基础模型</h3>
-<p>单细胞基础模型的核心技术路线，是将自然语言处理中的生成式预训练范式迁移到转录组数据上，把细胞视为“句子”、基因视为“词元”，通过自监督学习从大规模未标注数据中提取通用表征 [21]。这一思路最早由 Geneformer 系统实现：该模型在约 3000 万个单细胞转录组上预训练，采用上下文感知的注意力架构，以自监督方式学习网络动力学，并将网络层级编码进注意力权重；微调后在染色质与网络动力学相关任务中持续提升预测准确率，并在有限患者数据下识别出心肌病候选治疗靶点 [1]。紧随其后的 scGPT 将预训练规模扩大到超 3300 万个细胞，同样基于生成式预训练 Transformer，在细胞类型注释、多批次与多组学整合、扰动预测、基因网络推断等任务上报告了优越性能，并强调迁移学习是释放模型能力的关键环节 [2]。两者共同确立了“大规模预训练 + 下游微调”的基本范式，但 Geneformer 更侧重网络生物学的因果推断场景，scGPT 则更强调多组学与多任务的通用性，这一侧重差异也预示了后续工作在“通用表征”与“特定生物学洞见”之间的张力。</p>
-<p>沿着规模扩张的方向，CellFM 将预训练语料推至 1 亿人类细胞，系统收集并标准化公共 scRNA-seq 数据，采用自监督学习获得通用细胞与基因表征，在多种单细胞任务上达到或超过 Geneformer、scGPT、scFoundation、UCE 等模型，验证了单物种超大规模预训练的潜力 [3]。与之形成对照的是 SCimilarity，它并未追求最大参数量，而是采用深度度量学习，通过同时优化监督三元组损失和无监督重构损失，在 2340 万细胞、412 项研究的参考集上学习低维表征，使相似细胞彼此靠近，从而支持跨器官、系统与条件的可扩展细胞搜索，并在查询敏感性与整合性能之间取得最佳平衡（β=0.001）[4]。SCimilarity 的定位更接近“细胞图谱搜索引擎”，其局限在于依赖 Cell Ontology 注释质量，部分细胞类型关系模糊 [4]；而 CellFM 的局限则是仅覆盖人类单物种，数据清洗与批次异质性仍影响泛化 [3]。两者分别代表了“更大规模”与“更优度量结构”两条不同的技术取向。</p>
-<p>然而，规模扩张是否必然带来性能提升，成为这一领域最尖锐的争议。一项针对预训练数据规模与多样性的系统研究训练了 400 个模型、进行 6400 次实验，使用 2220 万细胞语料，发现当前方法在远小于现有训练语料的数据规模上性能即趋于平台，单细胞基础模型并未表现出类似大型语言模型的清晰数据缩放定律，因此建议平衡而非盲目同时增加模型容量、数据规模和计算资源 [5]。这一结论直接挑战了 CellFM 所代表的“规模至上”叙事 [3]。更严峻的是零样本评估的结果：在五个多样数据集上，Geneformer 和 scGPT 的细胞嵌入在细胞类型聚类与批次校正上多数情况下不如 HVG、Harmony、scVI 等更简单的基线，HVG 在所有指标上均优于二者，scGPT 仅在 PBMC 12k 数据集的部分指标上优于 scVI/Harmony [6]。该研究同时指出，零样本评估仍不常见，且预训练与评估数据存在部分重叠，这既削弱了既有正面结论的可信度，也说明评估协议本身尚未标准化 [6]。值得注意的是，Geneformer 原文亦承认模型依赖大规模转录组数据，在数据有限场景仍受限 [1]，这与零样本评估揭示的泛化短板相互印证。</p>
-<p>在“用哪一层表征”这一更细粒度的子问题上，默认使用最终层嵌入的惯例同样受到挑战。一项工作系统评估了 scFoundation 和 Tahoe-X1 的逐层表征，通过提取各 Transformer 块隐藏状态并跨模型归一化层索引进行比较，发现最优层是任务依赖且上下文依赖的：在轨迹推断任务中，中间层优于最终层达 31%，且稳定在约 60% 深度；在 CD4+ T 细胞 CRISPRi 扰动响应预测中，最优层随 T 细胞激活状态在 0–96% 深度间偏移；对于静息细胞，首层甚至超越深层 [7]。该研究仅评估两个模型、任务和数据集有限，但其结论与零样本评估的批评形成合力：基础模型的“通用表征”并非在所有深度和所有情境下都最优，下游任务需要针对性地选择表征层，而非默认调用最终层 [6][7]。综合来看，单细胞基础模型已从概念验证走向规模化与多样化，但数据缩放定律的缺失、零样本泛化不及简单基线、以及表征层选择的任务依赖性，共同构成当前领域必须直面的三重争议；综述所指出的“需改进性能与生物学实用性” [21]，正是对这些争议的概括性回应。</p>
+<p>单细胞基础模型的兴起，核心动因是把自然语言处理中的自监督预训练范式迁移到细胞生物学：把细胞类比为句子、基因类比为词元，先在大规模单细胞组学语料上学习通用表征，再适配到注释、整合、扰动预测等下游任务 [43]。这一思路的代表性起点是 <strong>Geneformer</strong>，它在约 <strong>3000 万个单细胞转录组</strong>上以自监督方式预训练，把网络层级编码进注意力权重，微调后在染色质与网络动力学任务中持续提升准确率，并在有限患者数据下识别出心肌病候选治疗靶点 [1]。紧随其后的 <strong>scGPT</strong> 采用生成式预训练 Transformer，在超过 <strong>3300 万个细胞</strong>上预训练，报告在细胞类型注释、多批次/多组学整合、扰动预测和基因网络推断等任务上经迁移学习后表现优异 [2]。两者共同确立了「大规模预训练 + 下游微调」的基本范式，但 Geneformer 的作者也明确指出，模型依赖大规模转录组数据，在数据有限场景下仍受限 [1]，这一自我限定为后续关于预训练数据规模是否真正带来收益的争论埋下伏笔。</p>
+<p>沿着「更大数据、更强通用性」的方向，模型规模被不断推高。<strong>CellFM</strong> 把预训练语料扩展到 <strong>1 亿人类细胞</strong>，系统收集并标准化公共 scRNA-seq 数据，采用自监督学习获得通用细胞与基因表征，在多种单细胞任务上取得竞争或更优性能，验证了单物种超大规模预训练的潜力，但其局限也很清楚：仅覆盖人类单物种，数据清洗与批次异质性仍影响泛化 [3]。<strong>scPRINT-2</strong> 则把规模推到 <strong>3.5 亿细胞、16 个物种</strong>，通过改进预训练任务、tokenization 和损失函数并采用细胞级架构，使模型具备生成能力，在表达去噪、细胞嵌入和细胞类型预测上达到 SOTA，并支持表达插补、反事实推理以及向未见模态和物种的泛化 [4]。<strong>TranscriptFormer</strong> 走的是跨物种路线，在多达 <strong>1.12 亿细胞、12 个物种、跨越 15.3 亿年进化</strong>的数据上联合建模基因身份与表达水平，在分布内和分布外细胞类型分类上达到 SOTA，可零样本识别疾病状态并跨物种转移注释，发育轨迹与系统发育关系自然涌现 [5]。与单纯堆数据不同，<strong>RegFormer</strong> 强调结构先验，把基因调控网络（GRN）先验与 Mamba 状态空间架构结合，在 <strong>2500 万人类细胞</strong>上做 GRN 引导的生成式预训练，针对 scRNA-seq 高维稀疏和无序特性学习基因表达动态与调控层级，在细胞注释、GRN 重建、遗传扰动预测和药物响应建模等基准上持续优于 scGPT 和 Geneformer [6]。这些工作共享「更大即更好」的隐含假设，但彼此在物种覆盖、是否引入调控先验、是否具备生成能力上差异明显。</p>
+<p>然而，规模扩张的收益并非没有争议。一项针对预训练数据规模与多样性的系统研究用 <strong>2220 万细胞语料训练了 400 个模型、进行了 6400 次实验</strong>，评估零样本与微调任务后发现，当前方法的性能常在远小于现有训练语料的数据规模上就趋于平台，单细胞基础模型并未显示清晰的<strong>数据缩放定律</strong>，因此不应盲目同时增加模型容量、数据规模和计算资源 [7]。这一结论与 CellFM、scPRINT-2 等以「更大语料带来更强性能」为卖点的工作形成直接张力：后者报告规模提升伴随性能提升 [3][4]，而前者认为这种提升在远未达到当前语料规模时就已饱和 [7]。更尖锐的质疑来自零样本评估：有研究在五个多样数据集（如 <strong>Pancreas 16k、PBMC 12k</strong>）上比较 Geneformer 和 scGPT 的细胞嵌入与批次校正表现，以 HVG、Harmony、scVI 为基线，结果发现两种基础模型在 AvgBIO 上多数低于这些更简单的基线，HVG 在所有指标上优于二者，scGPT 仅在 PBMC 12k 上部分优于 scVI/Harmony [8]。该研究同时提醒，零样本评估仍不常见，且预训练与评估数据存在部分重叠，这既可能高估也可能混淆对泛化能力的判断 [8]。由此，单细胞基础模型领域出现了明确的方法论分歧：一方以微调后下游性能为证据 [1][2]，另一方主张零样本泛化才是基础模型成色的试金石，而现有模型在此标准下并不占优 [8]。</p>
+<p>在「如何用好已有模型」这一子问题上，表征的取用方式本身成为研究对象。一项工作系统评估了 scFoundation 和 Tahoe-X1 的逐层表征在轨迹推断和扰动响应预测中的表现，通过提取各 Transformer 块隐藏状态并跨模型归一化层索引进行比较，发现最优层是任务依赖且上下文依赖的：轨迹推断中中间层优于最终层达 <strong>31%</strong>，稳定在 <strong>60% 深度</strong>；扰动最优层随 T 细胞激活状态偏移 <strong>0–96%</strong>；静息细胞中首层甚至超越深层 [9]。这直接挑战了「默认使用最终层嵌入」的惯例，也提示前述零样本评估若只取最终层，可能低估模型内部实际可用的生物学信息 [8]。该研究也坦承仅评估了两个模型、任务和数据集有限 [9]，因此其结论的普适性仍需更多模型验证，但它为「模型能力」与「表征读取方式」的区分提供了可操作的方法论。</p>
+<p>另一条差异化路线是放弃从零预训练，转而复用大语言模型或蛋白语言模型的既有知识。<strong>GenePT</strong> 用 GPT-3.5 基于 NCBI 基因文本描述生成基因嵌入，再通过表达加权平均或按表达排序的基因名句子嵌入生成单细胞嵌入，无需数据策展与额外预训练，在基因属性与细胞类型分类等下游任务上达到与 Geneformer 等相当甚至更优的性能 [10]。它的代价是依赖文献文本质量，且未充分利用表达数据本身 [10]。与之呼应，<strong>PTM-Mamba</strong> 把双向门控 Mamba 块与 ESM-2 嵌入结合，用源自 <strong>311,350 条 Swiss-Prot PTM 记录</strong>的 <strong>79,707 条修饰序列</strong>训练，训练准确率收敛快于 PTM-Transformer，并能通过门控融合 ESM-2 嵌入区分修饰与野生型序列 [11]。两者都说明，在单细胞基础模型之外，基因/蛋白层面的预训练表征可以低成本地迁移进细胞分析，但其局限同样明显：GenePT 未直接用表达数据 [10]，PTM-Mamba 依赖 ESM-2 嵌入且 PTM 类型与序列长度覆盖有限 [11]。</p>
+<p>面向「虚拟细胞」这一目标，模型开始强调生成、反事实与样本级异质性。<strong>scDifformer</strong> 采用掩码语言模型预训练、扩散驱动后训练和下游微调三阶段，在 <strong>7 个组织</strong>及多项独立研究中提升跨数据集表现，扩散模块在强批次效应下持续带来增益，细胞类型注释达到 SOTA，并可恢复关键 marker 基因、功能通路和跨组织分化轨迹，还能用于空间转录组 spot 去卷积 [12]。<strong>MrVI</strong> 则从概率框架切入多样本单细胞基因组，基于反事实分析和层次深度生成模型，用交叉注意力建模样本协变量效应，无需先验聚类即可识别样本分组，实现高分辨无注释差异表达与丰度分析，整合性能优于常用方法，并已在 scvi-tools 中提供 [13]。这两个工作把评价重心从「注释准不准」转向「能否生成与干预」，但其局限也需正视：scDifformer 的计算成本与可扩展性未详述 [12]，MrVI 的效应估计与不确定性建模仍依赖深度生成模型的假设 [13]。</p>
+<p>在「相似细胞搜索」这一具体子问题上，<strong>SCimilarity</strong> 提供了与生成式预训练不同的度量学习方案。早期版本在 <strong>2270 万细胞、399 项研究</strong>的语料上训练度量学习框架，实现细胞类型注释和跨数千万 profile 的即时细胞状态查询，并验证了跨组织查询能力：最初在间质性肺病中识别的巨噬细胞亚群也存在于其他纤维化疾病、组织和 3D 水凝胶系统中，并可在体外重现该状态 [44]。后续正式发表版本把参考规模更新为 <strong>2340 万细胞、412 项研究、56 训练/15 测试数据集</strong>，通过同时优化监督三元组损失和无监督重构损失学习低维表征，使相似细胞靠近，在查询敏感性和整合性能间取得最佳平衡（<strong>β=0.001</strong>），支持跨器官、系统、条件的可扩展细胞搜索，为 Human Cell Atlas 提供查询框架 [14]。其局限在于依赖 Cell Ontology 注释质量，部分细胞类型关系模糊 [14]；早期版本的查询性能与稀有细胞状态敏感性也未详述 [44]。与 scGPT、Geneformer 等生成式模型相比，SCimilarity 不追求生成新表达，而是把「检索」作为核心能力，这一取向差异说明单细胞基础模型并非单一技术路线，而是围绕注释、整合、生成、检索等不同子问题分化的方法群 [43]。</p>
+<p>综合来看，单细胞基础模型在方法上已形成生成式 Transformer、状态空间模型、度量学习、扩散后训练、层次生成模型等多条并行路线 [2][6][14][12][13]，数据规模从约 3000 万细胞 [1] 一路推到 1 亿 [3] 乃至 3.5 亿细胞 [4]，物种覆盖从人类单物种扩展到 12 个物种 [5]。但证据之间的冲突同样突出：规模扩张是否带来可预测的收益尚无定论，400 模型 6400 次实验未发现清晰的数据缩放定律 [7]；零样本条件下 Geneformer 和 scGPT 多数不如 HVG、Harmony、scVI 等简单基线 [8]；而逐层分析又表明最终层并非最优表征，中间层在轨迹推断中可优于最终层达 31% [9]。这些分歧提示，单细胞基础模型的评价体系本身仍在形成中：微调性能、零样本泛化、表征层选择、生成与反事实能力、以及跨物种跨模态迁移，构成了彼此不可替代又尚未统一的评判维度 [43]。当前模型仍有限制，需在性能与生物学实用性上继续改进 [43]，而 GenePT 这类「不预训练也能竞争」的结果 [10] 与 PTM-Mamba 对蛋白语言模型嵌入的复用 [11]，则从侧面追问：单细胞基础模型的独特价值究竟来自大规模单细胞预训练本身，还是来自可迁移的外部知识与恰当的架构设计。</p>
 <h3>2.2 空间与多模态模型</h3>
-<p>空间与多模态基础模型的核心张力，在于如何把组织形态、基因表达与空间位置这三类异质信号纳入同一表征空间。PAST 选择的是直接配对编码路线：基于 2000 万配对病理图像与单细胞转录组、覆盖泛癌数据训练，联合编码细胞形态与基因表达，学习统一的跨模态表征，并在多种癌症任务中超越现有方法，支持单细胞基因表达预测、虚拟分子染色和多模态生存分析 [8]。它明确批评现有方法多限于 bulk 或粗区域整合，难以捕捉单细胞变异 [8]。与之形成对照的是 OmiCLIP：它同样走图像-转录组配对路线，但数据规模为 ST-bank 的 220 万组织 patch、1007 样本、32 器官，采用 CLIP 式对比学习对齐图像与基因句子表示，并配套 Loki 平台提供组织对齐、注释、细胞分解、检索与基因表达预测五类功能，在 5 个模拟、19 个公开与 4 个内部数据集上对比 22 种 SOTA 方法 [9]。两者的差异不只是数据量级（2000 万对 vs 220 万 patch），更在于目标定位：PAST 强调单细胞粒度的跨模态预测与虚拟染色 [8]，OmiCLIP 则把重点放在组织级对齐与多任务平台化 [9]。值得注意的是，OmiCLIP 的局限被明确写为依赖配对 WSI 与 Visium 数据、泛化待验证 [9]，这实际上也构成对 PAST 类配对范式的共同约束——配对数据的可获得性决定了这类模型能走多远。</p>
-<p>第二条路线试图绕开"重建基因测量"这一目标本身。CellWorld 把预测目标从基因测量转向潜在细胞表征，采用 JEPA 式预训练，避免重建测定特异的技术变异；它用空间 Transformer 建模细胞交互，以可见上下文加部分表达提示预测被掩码细胞的潜在表征，预训练 4 个变体（5.74M–94.56M 参数），数据为 4600 万人细胞、3 平台 11 器官 [10]。结果上，CellWorld-Small（5.74M）在全部 11 个线性探针和 7 个空间基准上超越所有基线，而仅用 5% 语料的冻结 Large 模型在 7 个空间基准上超越全部微调基线 [10]。这一发现与 PAST、OmiCLIP 的"规模驱动"叙事形成有趣张力：CellWorld 明确指出空间迁移依赖生物来源多样性与充分优化，而非细胞数量，并承认细胞级目标歧义需部分表达提示 [10]。换言之，当 PAST 以 2000 万配对样本论证可扩展性 [8]、OmiCLIP 以 220 万 patch 支撑多任务稳健性 [9] 时，CellWorld 用 5.74M 小模型的反例提示：在空间任务上，数据构成与优化策略可能比绝对参数量更关键 [10]。这一争议尚未有定论，因为三者的评测基准并不重合，PAST 面向泛癌下游任务 [8]，OmiCLIP 覆盖五类功能 [9]，CellWorld 则聚焦 11 个线性探针与 7 个空间微调基准 [10]。</p>
-<p>第三条路线把多模态推向全切片与知识增强。mSTAR 整合病理切片、病理报告和基因表达，数据为 26,169 切片-模态对、10,275 患者、32 癌种、1.16 亿 patch，采用两阶段预训练：先以切片级对比学习训练聚合器，再将全切片上下文注入 patch 特征提取器；在 15 类 97 项任务中表现优异，并显示多模态预训练可用更少数据达到竞争性能，对比对象包括 PLIP、CONCH 及视觉单模态病理基础模型 [11]。其局限是依赖报告与基因表达配对数据、跨中心泛化仍需验证 [11]。这与病理基础模型临床基准评测的结论相呼应：该评测系统比较 CTransPath、Phikon、UNI、Virchow 等模型的参数量、算法与训练数据，评估下游临床任务性能，并指出数字病理数据缺乏与 WSI 计算资源需求高是主要瓶颈 [22]。把这两篇放在一起看，mSTAR 的"更少数据达到竞争性能" [11] 与基准评测强调的数据瓶颈 [22] 并不矛盾，而是指向同一问题：多模态预训练的价值可能恰恰在于用模态互补性缓解单一模态的数据稀缺，但其代价是引入对配对报告与基因表达的额外依赖。</p>
-<p>在应用与对齐层面，多模态图谱与最优传输提供了另一类整合思路。SEA-AD 联盟构建阿尔茨海默病中颞回的多模态整合细胞图谱，结合定量神经病理、单核多组学（snRNA-seq、snATAC-seq、snMultiome）与 MERFISH 空间转录组，将 340 万核映射到 139 种分子细胞类型，用连续伪进展评分排序 84 名供体，并在 A9 验证 120 万核、在公开 PFC 数据复制 430 万核/707 供体，数据公开于 SEA-AD 门户，局限是主要聚焦 MTG、其他脑区与纵向时间维度覆盖有限 [23]。moscot 则提供统一最优传输框架，把时序、空间、时空映射转化为 W、GW 或 FGW 型 OT 问题，支持多模态与图谱规模数据，在 170 万细胞小鼠胚胎等数据中实现高效对齐，计算时间与内存较既往 OT 工具（如 SPATEO 等）降数个数量级，并实验验证 NEUROD2 调控 epsilon 细胞形成，代码与文档公开，局限是依赖 OT 假设与先验知识、复杂映射仍需调参 [24]。这两项工作与前述基础模型的差别在于：它们不追求通用预训练表征，而是以具体生物学问题（AD 进展、胚胎发育）为锚点做图谱构建与映射 [23][24]。SEA-AD 的 139 种细胞类型与 340 万核 [23] 为空间基础模型提供了验证靶场，而 moscot 的数个数量级效率提升 [24] 则可能缓解 WSI 级计算瓶颈 [22]。此外，Cell Painting 十年综述提示，图像型 profiling 自 2013 年提出以来，经协议优化、特征提取改进与批次校正增强，已能捕获细胞对扰动的响应并解析化合物作用机制与毒性，未来将整合其他高内涵数据类型，局限是需计算与实验技术进步及多组学整合 [25]。这为空间与多模态模型提供了一个更早成熟的"形态学扰动"参照系：当 PAST 做虚拟分子染色 [8]、OmiCLIP 做基因表达预测 [9] 时，其形态学一端的能力积累可追溯到 Cell Painting 式的扰动 profiling 传统 [25]，而该传统自身也尚未解决多组学整合问题，这构成对当前多模态基础模型"整合"宣称的一重历史性提醒。</p>
+<p>空间与多模态基础模型的核心张力，在于如何把组织形态、基因表达与空间坐标放进同一个可迁移的表征空间。PAST 给出的答案是直接联合编码：它基于 <strong>2000万配对病理图像与单细胞转录组</strong> 训练泛癌单细胞基础模型，学习统一的跨模态表征，并支持单细胞基因表达预测、虚拟分子染色和多模态生存分析 [15]。这一路线明确针对现有方法的短板——多数工作局限于 bulk 数据或粗区域整合，难以捕捉单细胞层面的变异 [15]。与之形成对照的是 OmiCLIP 与 Loki 平台：它同样走图像-转录组对齐路线，但数据规模为 ST-bank 的 <strong>220万组织 patch、1007 样本、32 器官</strong>，用 CLIP 式对比学习把图像与基因句子表示对齐，并提供组织对齐、注释、细胞分解、检索与基因表达预测五项功能，在 5 个模拟、19 个公开和 4 个内部数据集上对比 22 种 SOTA 方法均表现一致准确稳健 [16]。两者都强调跨模态统一表征，但 PAST 的卖点是单细胞粒度与泛癌规模，OmiCLIP 的卖点是功能平台化与多任务一致性；差异背后是同一争议：配对 WSI 与 Visium 数据的依赖是否限制了泛化，OmiCLIP 自己也将此列为主要局限 [16]，而 PAST 则以“超越现有方法、强泛化与可扩展”作为回应 [15]。</p>
+<p>如果说上述工作解决的是“图像与表达如何对齐”，CellWorld 则把问题重新定义为“预测什么”。它主张将预测目标从基因测量转向潜在细胞表征，以避免重建测定特异的技术变异；具体做法是用空间 Transformer 建模细胞交互，以可见上下文加部分表达提示预测被掩码细胞的潜在表征，预训练 4 个变体（<strong>5.74M–94.56M 参数</strong>），数据覆盖 4600 万人细胞、3 平台 11 器官 [17]。其评测设计颇具针对性：11 个线性探针加 7 个空间微调基准，对比现有 ST 基础模型，结果 <strong>CellWorld-Small(5.74M) 在全部 11 个线性探针和 7 个空间基准上超越所有基线</strong>，而仅用 5% 语料的冻结 Large 模型在 7 个空间基准上超越全部微调基线 [17]。这一发现直接挑战了“参数与数据规模决定空间迁移能力”的直觉：作者指出空间迁移更依赖生物来源多样性与充分优化，而非细胞数量，同时承认细胞级目标存在歧义、需部分表达提示，且空间迁移依赖优化 [17]。这与 PAST、OmiCLIP 依赖大规模配对数据形成方法论上的分歧——一边押注数据规模与跨模态对齐，一边押注目标函数与表征抽象。</p>
+<p>多模态整合的另一条主线是概率生成建模与最优传输。MultiVI 用 VAE 分别建模基因表达与染色质可及性，通过惩罚使两模态潜空间对齐，并模块化扩展至表面蛋白，可整合单模态数据集，提供校准的不确定性估计，支持缺失模态的差异表达/可及性估计与样本外预测，基准对比 Cobolt、scVI、PeakVI、totalVI，开源集成于 scvi-tools [38]。其局限也很明确：依赖相关群体存在多模态信息，模型复杂度较高 [38]。CLM-X 则把这一子问题推向基础模型规模：基于多路 Transformer 架构，采用统一 token 化设计与分阶段掩码重建预训练，在百万级单模态与多模态数据上预训练，支持 RNA-only、ATAC-only 和配对 RNA-ATAC 输入，在五个下游任务和 10 个数据集上持续超越现有多模态方法与单模态基础模型，尤其在 RNA-ATAC 跨模态翻译和扰动预测上优势明显 [39]。与 MultiVI 相比，CLM-X 从“整合与插补”转向“统一建模与跨模态生成”，但两者共享同一前提：配对或相关群体的多模态信息是跨模态推断的基础 [38][39]。moscot 则从映射角度切入，把时序、空间、时空映射统一为 W、GW、FGW 型最优传输问题，支持多模态与图谱规模数据，在 <strong>170万细胞小鼠胚胎</strong> 等数据中实现高效对齐，计算时间与内存较既往 OT 工具降低数个数量级，并实验验证 NEUROD2 调控 epsilon 细胞形成 [40]。它同样承认依赖 OT 假设与先验知识、复杂映射仍需调参 [40]。这条路线与生成式整合的差别在于：moscot 不重建表达，而是求解细胞间的对应关系，因而更适合时空对齐而非缺失模态插补。</p>
+<p>病理与空间组学的落地还取决于评测与数据基础。临床基准工作系统比较了 CTransPath、Phikon、UNI、Virchow 等公开自监督病理基础模型，汇总算法、训练数据规模与分辨率，通过多下游任务评估性能，并指出数字病理数据缺乏与 WSI 计算资源需求高是主要瓶颈 [45]。mSTAR 则展示多模态知识增强的路径：整合病理切片、病理报告和基因表达，数据为 <strong>26,169 切片-模态对、10,275 患者、32 癌种、1.16 亿 patch</strong>，采用两阶段预训练——先以切片级对比学习训练聚合器，再将全切片上下文注入 patch 特征提取器，在 15 类 97 项任务中表现优异，并显示多模态预训练可用更少数据达到竞争性能 [46]。其局限是依赖报告与基因表达配对数据、跨中心泛化仍需验证 [46]。在更基础的层面，Cell Painting 综述记录了 2013 年提出的显微细胞标记检测经协议优化、特征提取改进与批次校正增强，可捕获细胞对扰动的响应，用于解析化合物作用机制与毒性，未来将整合其他高内涵数据类型 [47]。这提示图像型 profiling 与空间组学在扰动响应建模上存在互补，但该综述也强调需计算与实验技术进步及多组学整合 [47]。</p>
+<p>空间组学平台本身的异质性，是上述所有模型无法回避的现实约束。系统基准评测采集 3 种人肿瘤连续切片，用 CODEX 蛋白和 scRNA-seq 作真值，统一比较 Stereo-seq v1.3、Visium HD、CosMx 6K、Xenium 5K 四个亚细胞平台，评估灵敏度、特异性、扩散控制、细胞分割、注释、空间聚类及转录本-蛋白对齐，发现各平台性能差异显著 [27]。该研究仅覆盖 3 种肿瘤、4 个平台，结论外推受限 [27]。这一发现与模型侧的证据形成呼应：PAST 与 OmiCLIP 都依赖特定配对数据模态 [15][16]，CellWorld 强调空间迁移依赖生物来源多样性而非细胞数量 [17]，mSTAR 承认跨中心泛化待验证 [46]。在疾病图谱层面，SEA-AD 联盟整合 snRNA-seq、snATAC-seq、snMultiome 与 MERFISH，将 <strong>340万核、84 供体</strong> 映射到 139 种分子细胞类型，用连续伪进展评分排序供体，揭示随疾病进展受累的高粒度细胞类型及空间定位，并在 A9 验证 120 万核、在公开 PFC 数据复制 430 万核/707 供体，数据公开于 SEA-AD 门户，但主要聚焦 MTG，其他脑区与纵向时间维度覆盖有限 [28]。这类图谱既是多模态整合方法的验证场，也暴露了覆盖偏差：当训练与评测都集中在少数器官或脑区时，模型声称的泛化能力仍需在更广的组织与平台组合上检验 [28][27]。</p>
 <h3>2.3 扰动响应与虚拟细胞</h3>
-<p>扰动响应预测正从“拟合均值”转向“刻画分布”，而虚拟细胞的野心则要求模型在未见扰动、未见细胞类型乃至未见实验条件下仍能给出可验证的推断。这一目标把两类工作推到前台：一类以单细胞基础模型为骨架，通过轻量适配注入药物或序列条件，追求零样本泛化；另一类以条件传输或生成模型直接建模对照到扰动状态的分布变换，回避细胞级配对假设。二者在数据规模、监督信号和评估标准上分歧明显，也共同暴露出扰动数据覆盖狭窄、分布级监督薄弱、实验验证缺位等瓶颈。</p>
-<p>在基础模型适配路线上，最核心的争议是“预训练表征该保留多少、扰动条件该注入多深”。有工作提出药物条件适配器，仅微调不到1%的参数以保留预训练生物表征，在数千万细胞、多细胞类型/状态/疾病的scRNA-seq上训练，所有泛化设置均达SOTA，尤其在新细胞系少样本与零样本泛化上显著优于基线[26]。其代价是扰动数据集仅覆盖数百分子、少数细胞系，样本有限[26]。与之对照，PRnet走的是另一条路：以化合物SMILES和未扰动转录谱为输入，通过Perturb-adapter、Perturb-encoder和Perturb-decoder实现未见化合物泛化，训练数据约1亿bulk HTS观测、175,549个化合物，以及数千万单细胞HTS、188个化合物，可同时支持bulk和单细胞预测，并捕捉细胞异质性与基因级响应解释[27]。两者都强调“未见扰动”泛化，但前者依赖基础模型预训练表征、参数效率极高，后者依赖海量bulk化学筛选覆盖、以生成式解码器解释响应；前者的瓶颈是扰动空间窄，后者的瓶颈是依赖训练数据覆盖、新化学空间外推仍具挑战[26][27]。PerturbNet则把目标从“均值预测”推进到“分布预测”，利用化学与遗传扰动scRNA-seq（如Perturb-seq）学习扰动与细胞状态的联合表征，预测扰动引起的细胞状态分布变化，强调对全新扰动和状态选择性效应的建模，并在基准中对比scGen、CPA、chemCPA、GEARS、Biolord[12]。它明确指出扰动空间巨大、跨细胞类型与组合扰动泛化仍受限[12]。这三项工作共同显示：化学扰动预测的进展高度依赖数据覆盖与条件注入方式，而“零样本”在不同论文中含义并不一致——有的是新细胞系、有的是新化合物、有的是全新扰动类型，直接比较需谨慎。</p>
-<p>遗传扰动方向的关键分歧在于“基因级表征是否足够”。STRAND指出基因级模型会把同一基因不同位点的扰动坍缩为同一表征，因而以扰动位点调控DNA序列编码为条件，参数化从对照到扰动细胞状态的条件传输过程，在K562、Jurkat、RPE1 CRISPR扰动数据集上评估：低样本判别分提升达33%，未见基因基准取得最佳平均排名，新细胞系迁移Pearson提升达0.14，基因组覆盖从约1.5%扩至约95%[28]。其限制是输入空间大、序列到转录组映射高度非线性，且依赖序列编码质量[28]。AROMA则从多模态推理切入，针对无约束推理、不可解释预测、检索与调控拓扑弱对齐三大局限，整合文本证据、图拓扑与蛋白序列特征建模扰动-靶依赖，用两阶段优化训练，并构建两个知识图谱与PerturbReason数据集（&gt;498k样本），在多细胞系超越现有方法，未见细胞系零样本及知识稀疏长尾场景下保持稳健，权重与代码公开[29]。其限制是依赖知识图谱与检索质量，长尾与知识稀疏场景仍受限[29]。STRAND与AROMA的差异在于：前者把扰动特异性锚定在DNA序列这一物理因果变量上，后者把扰动特异性锚定在文本、图拓扑与蛋白序列的多模态知识上；前者以基因组覆盖从约1.5%扩至约95%回应“位点坍缩”，后者以&gt;498k样本与知识图谱回应“不可解释与弱对齐”。但两者都未彻底解决长尾与知识稀疏问题，且都依赖外部编码或检索质量。</p>
-<p>真正把“非配对”问题摆上台面的是SCALE。它针对对照与处理细胞非配对问题，提出条件传输模型，将细胞视为无序集合，用共享集合感知编码器与条件DiT学习潜在传输，无需细胞级匹配，在遗传、化学、发育、免疫扰动中恢复表达变化与群体结构，CRISPR七项指标全面超越竞争方法，保持基因靶表征分离，并预测出经三供体PBMC实验验证的细胞因子响应差异[13]。其局限是分布级学习扰动特异性监督弱，细胞级配对假设实验不成立[13]。这一工作与PRnet、PerturbNet形成有趣对照：PRnet和PerturbNet仍以扰动条件生成或联合表征学习为主，SCALE则明确把“集合到集合”的传输作为建模对象，并以三供体PBMC实验验证预测的细胞因子差异[27][12][13]。但SCALE也承认分布级监督弱，这意味着其“超越竞争方法”的七项指标虽强，扰动特异性仍可能被分布整体拟合所稀释。</p>
-<p>虚拟细胞的评估标准本身正在被重新定义。Virtual Cell Challenge提出开放基准竞赛与评估框架，通过提供评估框架、专用数据集和竞赛平台加速模型开发，作为开放循环基准促进领域进展，但该文仅为竞赛框架介绍，无具体模型结果[15]。与之呼应，有路线图论证虚拟细胞模型需明确数据、设计、基准与实验验证的证据链才具决策相关性，提出“可信虚拟细胞”概念，围绕四个经验层（分子状态、干预、生物背景、正交表型）与结构化先验组织进展，并指出静态图谱、仅转录组读出与分布内基准不足以预测新条件下的细胞行为，评估应转向泛化到未见细胞类型与扰动等生物学标准[14]。这一判断直接挑战了前述多项工作所依赖的留出重建精度：PRnet、PerturbNet、STRAND、AROMA、SCALE都在各自基准上报告SOTA或显著提升，但若按“可信虚拟细胞”的标准，仅转录组读出与分布内基准并不足以支撑决策相关性[14]。值得注意的是，SCALE已引入三供体PBMC实验验证[13]，AROMA公开权重与代码[29]，这些可视为对“实验验证与可复现”要求的局部回应，但整体上领域仍偏重模型规模与数据量，可信度不足[14]。</p>
-<p>从更宏观的愿景看，AI虚拟细胞被设想为多尺度多模态大神经网络模型，基于AI与组学两大革命，主张从数据直接学习细胞行为而无需显式规则，提出预测、生成、可查询三大能力，并对比规则模型及2012年首个全细胞模型（482基因）[30]。其挑战在于多尺度建模、海量互作组件与非线性动力学[30]。这一愿景与前述扰动预测工作在方法论上存在张力：基础模型适配、条件传输、多模态推理都试图用数据驱动方式绕过显式规则，但“可信虚拟细胞”路线图恰恰主张围绕四个经验层与结构化先验组织进展[14]。另一条路径则试图调和二者：提出人类可解释的细胞行为假设语法，将自然语言描述的细胞规则直接翻译为可执行的agent-based模型，既支持专家知识驱动规则，也支持从高通量分子与空间转录组数据参数化，案例涵盖肿瘤生长、侵袭、免疫治疗响应和脑发育，展示可复现、模块化构建虚拟细胞实验室的可行性，但依赖标注细胞状态与规则质量，复杂系统参数化仍具挑战[31]。这与纯数据驱动的AIVC愿景[30]形成鲜明对比：前者强调可解释语法与专家规则，后者强调从数据直接学习；而“可信虚拟细胞”路线图则要求两者都纳入证据链[14]。</p>
-<p>在临床前转化层面，UNAGI以VAE-GAN无监督框架从人类疾病时间序列单细胞数据解析细胞动力学并进行计算机药物扰动筛选，整合疾病特异基因调控信息与CMAP药物数据库，实现细胞嵌入学习与药物筛选的交互反馈，可标记潜在治疗靶点和药物，并以交互式可视化呈现结果，基准对比Seurat、SCANPY、scVI、scGPT、GEARS等，但依赖时间序列数据质量，虚拟扰动仍需实验验证[32]。另一篇综述则系统讨论AI驱动虚拟细胞模型在临床前研究中的技术路径、验证机制和临床转化潜力，强调整合多模态组学与深度生成模型、图神经网络，并采用CRISPR和类器官平台形成闭环验证，指出虚拟细胞可用于个性化药物筛选和疾病建模，但监管接受、数据隐私和模型可解释性仍是障碍[33]。这两项工作把扰动响应预测从“基准分数”推向“闭环验证”：UNAGI的虚拟筛选仍需实验验证[32]，综述则明确要求从计算评估到CRISPR和类器官实验验证的闭环流程[33]。这与SCALE的三供体PBMC实验验证[13]和AROMA的公开权重代码[29]共同构成一种趋势：虚拟细胞的可信度越来越取决于湿实验闭环与可复现性，而非单一基准上的SOTA。</p>
-<p>综合来看，扰动响应与虚拟细胞领域正沿三条轴线分化。第一条是条件注入方式：药物条件适配器微调&lt;1%参数[26]、PRnet的Perturb-adapter/encoder/decoder[27]、STRAND的调控DNA序列条件[28]、AROMA的文本+图拓扑+蛋白序列[29]、SCALE的条件DiT[13]，各自把扰动特异性锚定在不同变量上，尚无统一结论。第二条是监督粒度：PerturbNet强调分布变化而非均值[12]，SCALE以集合级传输回避配对[13]，但两者都承认分布级扰动特异性监督弱[13]，而“可信虚拟细胞”路线图进一步指出仅转录组读出与分布内基准不足[14]。第三条是验证标准：Virtual Cell Challenge提供开放基准[15]，AIVC提出预测、生成、可查询三大能力[30]，可解释语法路线强调模块化与可复现[31]，临床前综述要求CRISPR与类器官闭环[33]，UNAGI则把虚拟筛选与交互式可视化结合[32]。这些工作之间的冲突不在于谁的方法更优，而在于“什么才算虚拟细胞”尚未达成共识：是基础模型的零样本泛化[26]、是分布级传输[13]、是多模态可解释推理[29]，还是可解释语法构建的agent-based模型[31]。在扰动数据仅覆盖数百分子、少数细胞系[26]，而扰动空间巨大、跨细胞类型与组合扰动泛化仍受限[12]的现实下，任何单一基准上的SOTA都不足以宣告虚拟细胞的成立；真正的进展将取决于能否把序列条件[28]、多模态知识[29]、集合级传输[13]与湿实验闭环[33][32]整合进同一套可验证、可复现、可解释的评估体系[14][15]。</p>
+<p>虚拟细胞的核心目标之一，是让模型在从未做过实验的条件下预测细胞对扰动的响应，从而把昂贵的湿实验筛选转化为可计算、可迭代的推断过程。这一目标的可行性最早由<strong>Perturb-seq</strong>类工作奠定：2016年两项背靠背研究分别把单细胞RNA测序与CRISPR扰动结合，一项在约<strong>200,000个免疫细胞和细胞系</strong>中检测复杂转录表型，准确识别扰动靶点、基因signature、细胞状态与遗传互作，并推断出分化、抗病毒反应和线粒体功能相关调控因子[48]；另一项把液滴单细胞RNA-seq与CRISPR扰动条形码结合，在未折叠蛋白反应中通过单基因与组合扰动、两个全基因组CRISPRi筛选鉴定约<strong>100个命中基因</strong>，实现基因高精度功能聚类并解耦三条UPR分支，还发现同一扰动下分支激活的分叉以及转位子与IRE1α的隔离反馈环[49]。紧随其后的<strong>CROP-seq</strong>解决了gRNA在单细胞转录组中如何被稳定读出的工程问题：把gRNA盒插入慢病毒3'LTR使其成为多聚腺苷酸化mRNA，验证显示gRNA插入不影响病毒颗粒形成与嘌呤霉素抗性，编辑效率与indel特征和LentiGuide-Puro高度相似，多数细胞可分配单一gRNA，尽管仍存在少量双联体、gRNA分配率依赖转录组质量[50]。这三项工作共同确立了"扰动—转录组读出"的数据范式，也埋下了后续虚拟细胞建模的根本困难：扰动数据规模有限、细胞级配对在实验中往往不成立、读出维度高而监督信号稀疏。</p>
+<p>在数据规模与扰动覆盖上，2026年的原代T细胞工作把这一范式推到接近全基因组尺度：在<strong>22M原代人类CD4+ T细胞</strong>、4名供体、静息与刺激两种状态下进行全基因组perturb-seq，扰动所有表达基因，绘制免疫通路调控因子图谱，发现未表征的细胞因子产生调控因子，并揭示调控因子和基因程序随刺激条件剧烈变化，进而用于建模群体规模图谱中的T细胞状态并关联自身免疫疾病风险[29]。这项工作的价值不仅在于规模，更在于它把"背景依赖性"变成可测量的事实：同一基因扰动在静息与刺激下的效应显著不同，这与可信虚拟细胞路线图所强调的"背景感知"要求直接呼应[22]。但该研究也暴露了当前扰动图谱的边界——供体数量有限、体外刺激未必代表体内，说明即便在单一细胞类型内，扰动响应的泛化仍受实验设计约束[29]。</p>
+<p>面对扰动数据"覆盖数百分子、少数细胞系"的先天不足，一条主流技术路线是复用预训练单细胞基础模型的表征能力，只做轻量适配。有研究引入<strong>药物条件适配器</strong>，仅微调不到<strong>1%</strong>的参数以保留预训练生物表征，在所有泛化设置下达到SOTA，尤其在新细胞系少样本与零样本泛化上显著优于基线，但其扰动数据集仅覆盖数百分子、少数细胞系，样本有限[20]。与之形成对照的是<strong>Tahoe-x1</strong>所代表的"规模优先"路线：把扰动训练的单细胞基础模型扩展到最高<strong>30亿参数</strong>，在大规模单细胞转录组（含Tahoe-100M扰动图谱）上预训练，采用含药物token的掩码表达生成目标，联合学习基因、细胞和化合物表示，并在基因必需性、癌症标志基因、细胞类型分类和留出情境扰动响应预测四项基准上均达SOTA，计算效率较先前细胞状态模型提升<strong>3–30倍</strong>，同时公开预训练权重、训练代码和评估流程[18]。两条路线之间的张力在2026年的一项跨模态研究中被直接检验：对已发表的Tahoe-x1做跨模态继续预训练，在来自<strong>440项质谱研究的48,843个蛋白质组样本</strong>上训练<strong>70M参数</strong>模型一个epoch，结果在多数原Tahoe-x1评测基准上匹配或超过<strong>1B和3B参数</strong>的RNA-only模型，并提升对held-out蛋白扰动基准的迁移，而RNA-only缩放并未带来同等收益[19]。这构成对"参数规模决定一切"的明确反例：在扰动响应预测这一子问题上，模态多样性与数据策划质量可能比单纯放大模型更有效，但该结论受蛋白质组数据异质性与批次效应影响，泛化边界尚不清晰[19]。</p>
+<p>化学扰动方向的进展提供了另一组可比证据。<strong>PRnet</strong>以化合物SMILES和未扰动转录谱为输入，通过Perturb-adapter、Perturb-encoder和Perturb-decoder实现未见化合物泛化，在约<strong>1亿bulk HTS观测、175,549化合物</strong>以及数千万单细胞HTS、188化合物上训练，可泛化到未实验扰动的新化合物，支持bulk与单细胞水平预测，并捕捉细胞异质性与基因级响应解释，但依赖训练数据覆盖，新化学空间外推仍具挑战[37]。<strong>PerturbNet</strong>则明确把目标定为预测未见化学和遗传扰动的单细胞响应，利用扰动筛选数据学习扰动与细胞状态的联合表征，强调对细胞状态分布变化而非仅均值的建模，与scGen、CPA、chemCPA、GEARS、Biolord等基线相比更关注全新扰动和状态选择性效应，但扰动空间巨大，跨细胞类型与组合扰动泛化仍受限[21]。两者与前述适配器方法[20]的差异在于：前者把泛化压力放在化合物表示与生成解码上，后者把压力放在预训练表征的保留上；共同局限则是外推能力受训练化学空间与细胞系覆盖的约束[37][21]。</p>
+<p>遗传扰动建模中，一个被反复指出的结构性缺陷是"基因级坍缩"：把同一基因不同位点的扰动映射为同一表征。<strong>STRAND</strong>以扰动位点调控DNA序列编码为条件，参数化从对照到扰动细胞状态的条件传输过程，在K562、Jurkat、RPE1上评估，低样本判别分提升达<strong>33%</strong>，在未见基因基准上取得最佳平均排名，新细胞系迁移Pearson提升达<strong>0.14</strong>，基因组覆盖从约<strong>1.5%扩至约95%</strong>，但其输入空间大、序列到转录组映射高度非线性，且依赖序列编码质量[51]。<strong>AROMA</strong>走的是多模态增强推理路线，整合文本证据、图拓扑与蛋白序列特征建模扰动-靶依赖，用两阶段优化训练，构建两个知识图谱与<strong>PerturbReason数据集（&gt;498k样本）</strong>，在多细胞系超越现有方法，在未见细胞系零样本与知识稀疏长尾场景下保持稳健，权重与代码公开，但依赖知识图谱与检索质量，长尾与知识稀疏场景仍受限[52]。两者都把"扰动身份"的表示从基因名扩展到序列或外部知识，区别在于STRAND把序列作为传输模型的条件输入，AROMA把知识检索作为推理增强；它们共同面对的问题是，外部知识或序列编码的质量直接决定泛化上限[51][52]。</p>
+<p>分布级建模则试图绕开"细胞级配对"这一实验上不成立的假设。<strong>SCALE</strong>把细胞视为无序集合，用共享集合感知编码器与条件DiT学习潜在传输，无需细胞级匹配，在遗传、化学、发育、免疫扰动中恢复表达变化与群体结构，在CRISPR数据七项指标上全面超越竞争方法并保持基因靶表征分离，其预测的细胞因子差异经三供体PBMC实验验证；但该方法分布级学习对扰动特异性的监督较弱，且细胞级配对假设在实验中并不成立[34]。<strong>Chreode</strong>则把分布演化从推理时移到训练时，用结构化残差转移算子预测动作条件下的细胞状态转移，采用共享scVI编码器和DiT动力学骨干，在<strong>240万细胞小鼠胚胎图谱（7个数据集）</strong>上预训练，作为微调初始化在Weinreb造血与Veres胰岛分化上改善Sinkhorn距离，作为GEARS可迁移嵌入将Norman Perturb-seq的DE20 MSE从<strong>0.2121降至0.1858（相对提升12.4%）</strong>[36]。SCALE与Chreode都把"传输/转移"作为核心算子，但SCALE强调集合级条件传输与实验验证[34]，Chreode强调一步式世界模型与作为下游模型嵌入的即插即用性[36]；两者的共同争议在于，分布级目标能否真正约束扰动特异性，而非仅拟合群体边缘分布。</p>
+<p>在复杂疾病与多细胞系统场景中，虚拟细胞的边界被进一步拓宽。<strong>UNAGI</strong>基于VAE-GAN，从人类疾病时间序列单细胞数据解析细胞动力学并进行计算机药物扰动筛选，整合疾病特异基因调控信息与CMAP药物数据库，实现细胞嵌入学习与药物筛选的交互反馈，可标记潜在治疗靶点和药物并以交互式可视化呈现，但依赖时间序列数据质量，虚拟扰动仍需实验验证[53]。与之互补的是<strong>细胞行为假设语法</strong>路线：把自然语言描述的细胞规则直接翻译为可执行的agent-based模型，实现文本规则到数学方程的一一映射，既支持专家知识驱动规则，也支持从高通量分子与空间转录组数据（如Allen Brain Atlas）参数化，案例涵盖肿瘤生长、侵袭、免疫治疗响应和脑发育，展示可复现、模块化构建虚拟细胞实验室的可行性，但依赖标注细胞状态与规则质量，复杂系统参数化仍具挑战[54]。这两项工作代表了与"大神经网络端到端预测"不同的哲学：UNAGI用生成模型在疾病时间序列上做无监督动力学与虚拟筛选[53]，语法路线用可解释规则构建多细胞系统模型[54]，二者都强调可解释性与机制假设，而非单纯追求留出集精度。</p>
+<p>围绕"如何评估虚拟细胞"，领域内已出现明确的路线图与基准化努力。<strong>AI虚拟细胞（AIVC）</strong>愿景提出预测、生成、可查询三大能力，主张从数据直接学习细胞行为而无需显式规则，构建多尺度多模态大神经网络模型，并指出多尺度建模、海量互作组件与非线性动力学是主要挑战；其对比对象包括规则模型及2012年首个全细胞模型（<strong>482基因</strong>），并强调组学数据每6个月翻倍的趋势[55]。<strong>虚拟细胞挑战赛</strong>则以开放基准竞赛与评估框架的形式推动扰动响应预测，提供评估框架、专用数据集和竞赛平台，作为开放循环基准加速模型开发，但该文仅为竞赛框架介绍，未给出具体模型结果[23]。<strong>可信虚拟细胞路线图</strong>进一步批评当前工作偏重模型规模与数据量而可信度不足，提出四层经验框架（分子状态、干预、生物背景、正交表型），主张评估超越留出重建精度，转向泛化到未见细胞类型与扰动等生物学标准，并指出静态图谱、仅转录组读出与分布内基准不足以预测新条件下的细胞行为[22]。<strong>NPJ数字医学综述</strong>则从临床前研究角度提出从计算评估到CRISPR和类器官实验验证的闭环流程，强调多模态组学与深度生成模型、图神经网络的整合，可预测药物反应、基因扰动和疾病进展，但监管接受、数据隐私和模型可解释性仍是障碍[56]。这三份框架性文献与前述具体模型之间存在明显张力：模型工作报告的是留出基准上的SOTA[18][34]，而路线图认为分布内基准不足以支撑决策相关性[22]，挑战赛则试图用统一基准来仲裁这种分歧[23]。</p>
+<p>把上述证据放在一起，可以看到扰动响应与虚拟细胞领域正在形成几条相互竞争又互补的路径。其一是<strong>表征复用与轻量适配</strong>，以药物条件适配器为代表，用不到1%参数换取新细胞系零样本泛化[20]；其二是<strong>规模扩展</strong>，以Tahoe-x1的30亿参数与四项SOTA为代表[18]；其三是<strong>模态与知识增强</strong>，以跨模态蛋白质组继续预训练[19]、AROMA的多模态推理[52]和STRAND的序列条件[51]为代表；其四是<strong>分布级传输与世界模型</strong>，以SCALE[34]和Chreode[36]为代表；其五是<strong>机制可解释建模</strong>，以细胞行为假设语法[54]和UNAGI[53]为代表。这些路径之间的关键分歧在于：泛化能力究竟来自参数规模、模态多样性、扰动身份的精细表示，还是来自对分布传输结构的显式建模。跨模态研究给出的反例——70M参数模型匹配或超过1B/3B RNA-only模型[19]——直接挑战了规模优先假设，而Tahoe-x1在四项基准上的SOTA又说明规模在特定任务上仍有效[18]，这一冲突目前尚无统一结论。</p>
+<p>更根本的争议在于评估标准本身。具体模型工作普遍以留出扰动、留出细胞系的预测精度为成功标志[20][21][18]，而可信虚拟细胞路线图明确主张评估应超越留出重建精度，转向未见细胞类型与扰动的生物学泛化[22]；虚拟细胞挑战赛试图用开放基准提供仲裁平台，但尚未给出模型结果[23]；NPJ综述则要求以CRISPR和类器官实验形成闭环验证[56]。SCALE的细胞因子差异经三供体PBMC实验验证[34]和Chreode在Norman Perturb-seq上的可迁移性[36]属于少数把预测推向实验或下游任务验证的例子，但多数工作报告的仍是计算指标。与此同时，扰动数据的固有局限反复出现：覆盖数百分子与少数细胞系[20]、新化学空间外推困难[37]、跨细胞类型与组合扰动泛化受限[21]、供体数量有限与体外刺激代表性不足[29]、蛋白质组数据异质性与批次效应[19]。这些限制共同说明，虚拟细胞从"留出集上的预测器"走向"可指导决策的实验替代品"，仍需在数据覆盖、扰动身份表示、分布级监督和实验闭环验证四个维度同时推进，而当前证据显示这四条线索尚未收敛为统一方案。</p>
 <h3>2.4 机制可解释性与表征分析</h3>
-<p>围绕单细胞基础模型是否真正编码了调控机制，六项工作从稀疏自编码器特征图谱、注意力评估、电路追踪到算法提取，给出了彼此张力明显的证据。最系统的负面结论来自对Geneformer V2-316M与scGPT全人模型各层残差流激活的TopK稀疏自编码器（SAE）分析：该工作分别生成82525与24527个特征，发现99.8%的特征在SVD下不可见，29–59%可注释到通路，但仅3/48（6.2%）转录因子显示调控靶标特异性，多组织对照下也仅10.4% [16]。这意味着模型内部确实内化了有组织的生物学知识，却几乎不含因果调控逻辑，作者据此判断模型表示本身是瓶颈 [16]。与之呼应的是另一项包含37项分析、153个统计检验的系统评估框架：在scGPT与Geneformer、四种细胞类型、两种扰动模态上，平凡基因级基线AUROC达0.81–0.88，反而优于注意力边与相关性边的0.70，成对边分数带来零增量，消融调控头也无退化，唯有CSSI可将GRN恢复提升至多1.85× [17]。两项工作都指向同一争议点——注意力与SAE特征所呈现的"结构"未必等价于调控信号，注意力更多编码共表达而非独特调控信号 [17]。</p>
-<p>但另一些工作表明，这种"共表达而非因果"的判断可能低估了模型内部可被提取的计算结构。因果电路追踪对Geneformer V2-316M与scGPT消融SAE特征并测量下游响应，覆盖4条件、96892条边、80191次前向，发现两模型约53%生物一致性、65–89%抑制主导且不随架构与细胞类型变化，跨模型共识达1142个域对（10.6倍富集），然而CRISPRi基因级验证方向准确率仅56.4%，作者同样结论模型编码共表达而非因果调控 [34]。值得注意的是，该工作与前述SAE图谱在"抑制主导""生物一致性"上提供了正面结构证据，却在因果性上得出与[16]、[17]一致的保守结论，三者构成对"调控逻辑缺失"的相互印证。更激进的正面证据来自对Geneformer L5层4065个SAE特征的穷举电路追踪：它得到1393850条显著下游边，较选择性采样扩27倍，三阶冗余比0.59低于配对0.74且零协同，并发现层位置决定分化方向性——L17特征100%推向成熟，L0/L11为0.00–0.58 [18]。该工作明确批评采样偏差、仅配对交互与观测性轨迹三大局限，其重尾枢纽分布（1.8%特征占大量连接，40%顶级枢纽无注释）说明此前基于选择性采样的结论可能不完整 [18]。在应用层面，从scGPT提取造血流形算法的工作给出更乐观的图景：在Tabula Sapiens 564253细胞与多供体免疫面板上，提取算法伪时间深度排序|ρ|=0.439优于次优0.331，CD4/CD8 AUROC 0.867、单核/巨噬0.951，且比MLP探针快34.5倍、参数少约1000倍 [35]。这提示模型内部存在可被蒸馏为独立算法的有效计算，但其泛化性主要验证于造血系统 [35]。最后，针对GRN推断，有工作观察到scFM因重建式预训练未显式捕获调控信号而表现不佳，现有零样本方法有时甚至不及随机预测，遂提出GRN泛化基准并用虚拟值扰动与梯度轨迹从冻结scFM蒸馏可泛化基因间特征，显著超越现有方法 [36]。综合来看，六项工作在方法（SAE图谱、注意力评估、电路追踪、算法提取、蒸馏）与子问题上分歧明显：SAE与注意力评估强调调控逻辑稀缺甚至基线更优 [16][17]，穷举电路追踪与算法提取则展示出可提取的层依赖结构与高效算法 [18][35]，而因果电路追踪与GRN蒸馏在承认共表达主导的同时，试图通过消融与扰动把可用信号转化为推断能力 [34][36]。核心争议在于：模型编码的是共表达统计还是因果调控，以及这种编码能否支撑通用GRN推断，目前证据尚未收敛。</p>
+<p>围绕单细胞基础模型是否真正编码了调控机制，近两年的可解释性研究呈现出一种耐人寻味的张力：模型内部确实存在有组织的生物学结构，但这种结构在多大程度上对应因果调控逻辑，各研究的回答并不一致。基于TopK稀疏自编码器（SAE）的特征图谱工作，对<strong>Geneformer V2-316M</strong>与<strong>scGPT</strong>全人模型各层残差流激活进行训练，分别生成<strong>82525</strong>与<strong>24527</strong>个特征，发现<strong>99.8%</strong>的特征在SVD下不可见，29–59%可注释到通路；但真正显示调控靶标特异性的转录因子仅<strong>3/48（6.2%）</strong>，多组织对照下也只有10.4%[24]。这一结果指向一个偏悲观的判断：模型表示本身是瓶颈，调控逻辑编码极少。与之呼应，另一项包含<strong>37项分析、153个统计检验</strong>的系统评估框架，在scGPT与Geneformer、四种细胞类型、两种扰动模态上比较注意力边、相关性边与平凡基因级基线，发现基因级基线AUROC达<strong>0.81–0.88</strong>，反而优于注意力/相关性边的0.70，成对边分数带来零增量，消融调控头也无性能退化，尽管CSSI可将GRN恢复提升至多<strong>1.85×</strong>[30]。两项研究从不同方法路径得出相近结论：注意力与SAE特征所捕获的，更接近共表达统计而非独特调控信号。</p>
+<p>不过，另一些工作表明，这种"共表达而非因果"的定性并不意味着模型内部没有可利用的计算结构。因果电路追踪通过消融SAE特征并测量下游响应，在Geneformer V2-316M与scGPT上构建<strong>96,892条边、80,191次前向</strong>的图谱，发现两模型约<strong>53%</strong>生物一致性、<strong>65–89%</strong>抑制主导且不随架构与细胞类型变化，跨模型共识达<strong>1,142</strong>个域对（10.6倍富集）；但CRISPRi基因级验证的方向准确率仅<strong>56.4%</strong>，作者据此同样认为模型编码的是共表达而非因果调控[25]。值得注意的是，该研究与前述SAE图谱工作在"调控逻辑稀缺"上一致，却在"结构是否可跨模型收敛"上提供了更积极的证据——抑制主导与跨模型共识提示存在架构无关的稳定计算模式。更激进的证据来自对Geneformer L5层<strong>4065个SAE特征</strong>的穷举电路追踪：相比选择性采样（30特征/层），L5层得到<strong>1,393,850</strong>条显著下游边，扩大<strong>27倍</strong>；三阶冗余比0.59低于配对0.74且零协同；L17特征<strong>100%</strong>推向成熟，而L0/L11为0.00–0.58[26]。这提示此前的"调控逻辑稀缺"结论可能部分源于采样偏差与仅考察配对交互的方法局限，层位置本身对分化方向性具有因果作用。</p>
+<p>在"能否把内部结构提取为可用算法"这一子问题上，研究分歧进一步展开。从scGPT中提取造血流形算法的工作，基于<strong>Tabula Sapiens 564,253细胞</strong>与多供体免疫面板，通过冻结注意力权重直接算子导出、轻量适配器和任务特定读出三阶段方法，生成无需目标数据重训练的独立算法，在88折供体留出基准中伪时间深度排序<strong>|ρ|=0.439</strong>优于次优0.331，CD4/CD8 AUROC达<strong>0.867</strong>、单核/巨噬0.951，且比MLP探针快<strong>34.5倍</strong>、参数少约<strong>1000倍</strong>[31]。这与其他工作对注意力"无增量价值"的判断形成对照：差异可能在于该研究并非直接用注意力边做预测，而是将其蒸馏为紧凑算法。类似地，针对GRN推断，有研究指出scFM因重建式预训练未显式捕获调控信号而表现不佳，现有零样本方法有时甚至不及随机预测，于是提出GRN泛化基准并用虚拟值扰动与梯度轨迹从冻结scFM蒸馏可泛化基因间特征，显著超越现有方法[32]。而在可解释性与可控性方向，于scGPT、scFoundation、Geneformer隐藏表示上训练的SAE揭示出多样生物与技术信号，不同训练协议与架构编码方式不同；抑制批次特征可改善整合并保留生物信号，激活药物特征能使对照细胞浓度依赖地向药物扰动状态转变[57]。综合来看，争议的核心并非模型内部"有无结构"，而是这种结构在何种读出方式与干预条件下才能转化为机制性、可泛化的调控知识。</p>
 <h3>2.5 形态与图像表型基础模型</h3>
-<p>在形态与图像表型基础模型的构建路径上，一项工作选择将扰动筛选与自监督表征学习直接耦合。CellPaint-POSH 把 Cell Painting 与 pooled 光学 CRISPR 筛选结合，并改造了样本处理流程以兼容原位测序：将线粒体染色替换为 RNA 探针 Mitoprobe，加入 RNase 抑制剂，并将逆转录步骤提前，从而在同一平台上同时获取 Cell Painting 图像与 4 色 ISS 信号，最终得到 163,090 个单细胞的数据 [37]。在此基础上，作者用自监督深度学习学习形态表征，报告自监督机器学习特征在预测性能上高于经典图像分析流程产出的专家形态特征；形态表型能够按已知功能对基因聚类，并且在没有通路报告基因的条件下也能揭示基因关联网络 [37]。这一结果的意义在于把"基因功能从头推断"作为目标，而非仅做已知通路的分类验证。其代价是方法依赖对 Cell Painting 的改造以兼容 ISS，并依赖成像与测序流程的优化，说明该路线的可迁移性受实验平台约束 [37]。</p>
-<p>与上述"端到端自监督+扰动筛选"的路线不同，另一项工作把问题定位为特征空间的适配性评估，而非直接提出新的表征模型。该研究提出在检测开发早期用基于检索的 mAP 框架判断某个 Cell Painting 特征空间是否适配特定生物学场景，方法上复用 Kalinin 的元数据驱动检索框架，在 U2OS 细胞的 JUMP-MOA 参考板上比较多种公开预训练深度模型与经典 CellProfiler 特征 [38]。结果显示 DINO 自监督较 CellProfiler 的 mAP 提升 29%，CLOOME 的 top-10 MoA 准确率为 61.3%，而 CellProfiler 为 24.5% [38]。但作者强调模型选择依赖具体实验条件，需按场景系统评估，且该结论仅基于单一 JUMP-MOA 参考板，未覆盖多细胞系与多实验条件 [38]。这与 CellPaint-POSH 所暗示的"自监督特征普遍更优"形成张力：前者在特定平台上报告自监督优于专家特征，后者则指出这种优势并非无条件成立，而是随场景变化。</p>
-<p>第三篇综述为上述分歧提供了更宽的对照背景。它系统回顾图像表型分析从实验设计、图像采集到特征提取与下游分析的全流程，并比较 CellProfiler、DeepProfiler、DINO、CLOOME 等在 MoA 预测等任务中的表现 [39]。值得注意的是，其汇总的数字呈现出与前述工作不完全一致的图景：MoA 预测中 CellProfiler 的 F1 为 0.41，DeepProfiler 为 0.42，两者接近；同时该综述也引用了 DINO mAP 提升 29% 这一结果 [39]。作者据此指出深度模型常占优但手工特征仍具竞争力，深度与手工特征的优劣仍依场景而定，领域面临可复现性、标准化和跨数据集泛化等新挑战 [39]。综合三篇证据可见，当前形态基础模型的争议焦点并不在"深度是否优于手工"这一简单判断，而在于评估框架、参考数据集与实验条件如何决定结论：CellPaint-POSH 在改造后的 Cell Painting+ISS 平台上支持自监督表征用于基因功能从头推断 [37]，检索式评估在 JUMP-MOA 上给出自监督的显著增益但同时限定其场景依赖性 [38]，而综述层面的 F1 对比又显示手工与深度特征在 MoA 预测上差距有限 [39]。这种冲突提示，形态表型基础模型的"优越性"目前仍是条件性的，标准化评估与跨数据集泛化尚未解决。</p>
+<p>图像表型基础模型的核心问题之一，是如何从显微图像中提取既具判别力又可跨场景迁移的表征。CellPaint-POSH 给出了一个将扰动筛选与自监督学习直接耦合的方案：它把 <strong>Cell Painting</strong> 与 pooled 光学 CRISPR 筛选结合，并改造线粒体染色为 RNA 探针 Mitoprobe、加入 RNase 抑制剂、将逆转录提前以兼容原位测序，从而在 <strong>163,090 个单细胞</strong>（Cell Painting 图像 + 4 色 ISS）上学习形态表征 [58]。其关键结论是自监督机器学习特征在预测性能上高于专家形态特征，且形态表型能按已知功能聚类基因，即使没有通路报告基因也能揭示基因关联网络，实现基因功能的从头推断 [58]。不过该工作的方法学代价明显：必须改造 Cell Painting 以兼容 ISS，并依赖成像与测序流程的优化，这提示其可推广性受实验平台约束 [58]。</p>
+<p>与上述"端到端学习表征"的路线不同，另一项工作把重点放在特征空间的评估方法上。它提出在检测开发早期用基于检索的 mAP 框架判断 Cell Painting 特征空间是否适配特定生物学场景，复用 Kalinin 的元数据驱动检索框架，在 <strong>JUMP-MOA 参考板</strong>（U2OS 细胞）上比较多种公开预训练深度模型与经典 CellProfiler 特征 [59]。结果显示 <strong>DINO 自监督较 CellProfiler 的 mAP 提升 29%</strong>，CLOOME 的 top-10 MoA 准确率为 <strong>61.3%</strong>，而 CellProfiler 仅为 24.5% [59]。但作者强调模型选择依赖具体实验条件，需按场景系统评估，且该研究仅用单一 JUMP-MOA 参考板，未覆盖多细胞系与多实验条件，因此"深度特征更优"的结论有其边界 [59]。这一保留态度与综述的立场一致：在 MoA 预测上 CellProfiler 的 F1=0.41 与 DeepProfiler 的 F1=0.42 几乎持平，尽管 DINO 的 mAP 提升 29%，深度与手工特征的优劣仍依场景而定 [60]。综述进一步指出，领域在实验设计、图像采集、特征提取到下游分析的全流程中，正面临可复现性、标准化与跨数据集泛化等新挑战 [60]。综合来看，三篇证据在"深度自监督特征通常占优"上趋于一致，但在优势幅度与适用条件上存在张力：CellPaint-POSH 展示了自监督特征超越专家特征的潜力，检索评估工作量化了这种优势却同时警告其场景依赖性，而综述则提醒手工特征在部分任务中仍具竞争力，三者共同指向一个尚未解决的争议——形态基础模型的表征优势能否在跨数据集、跨细胞系的标准化评估中稳定成立 [58][59][60]。</p>
 <h2>3 数据与资源</h2>
-<p>单细胞扰动筛选的数据规模与读出维度，构成了虚拟细胞建模最直接的资源基础。基因组规模Perturb-seq在K562与RPE1两个细胞系中，以多重CRISPRi文库结合scRNA-seq测定数千个功能缺失扰动，首次把扰动筛选推进到全基因组尺度，并借此研究RNA剪接、分化、染色体不稳定等多维表型，还通过反转分析聚焦调控网络，发现线粒体基因组存在未预期的应激特异调控[40]。这一工作的方法学意义在于，它把“扰动—转录组”配对数据从数百量级提升到数千量级，为后续基础模型提供了带干预标签的训练语料。但其局限同样明确：仅覆盖两个细胞系，CRISPRi是敲低而非敲除，表型也限于转录组，这意味着由此训练出的模型在细胞类型泛化与功能读出上都会受限[40]。与之形成方法互补的是更早提出的细胞状态流形框架，它同样基于CRISPR介导的pooled Perturb-seq，但重点不在扰动数量，而在如何把每个扰动与遗传互作投射到流形的特定位置，从而实现调控通路的无偏排序和遗传互作的原则性分类[41]。两者的差异值得注意：前者追求扰动覆盖的广度，后者追求表型几何结构的解释力；前者以“首个基因组规模”自居且无直接对比对象，后者则以基于生长增益的功能性遗传互作图谱为基准[40][41]。争议或张力在于，流形方法依赖强遗传互作筛选，未覆盖全基因组互作，因此其“无偏排序”是在特定筛选条件下的无偏，而非全基因组意义上的完备[41]。</p>
-<p>空间维度与图谱整合则把资源问题推向新的子问题：扰动数据能否保留组织与微环境背景，以及分散的细胞图谱能否收敛为统一基础模型。Perturb-FISH将MERFISH与gRNA原位扩增结合，在空间背景下同时解码扰动与转录组，并在LPS刺激巨噬细胞中与匹配的Perturb-seq数据比较，验证了敲除效应与Perturb-seq一致，同时揭示细胞密度与邻居扰动会影响结果，这恰恰是纯scRNA-seq扰动数据难以捕捉的细胞间效应[42]。该工作还结合钙成像功能读出用于ASD风险基因的CRISPRi筛选，并在肿瘤异种移植3D组织中验证，把读出从转录组扩展到功能活动与组织架构[42]。其技术限制也很具体：gRNA仅20bp，无法像mRNA那样平铺，必须依赖原位扩增，这限制了可解码的扰动数量与检测灵敏度[42]。在资源组织层面，Human Cell Atlas的综述提出细胞图谱的五种用途——细胞普查、3D图谱、基因型-表型连接、4D发育图谱及生物学基础模型，并指出其有望统一各层面并变革医学[43]。这与Perturb-FISH形成呼应：前者提供空间扰动读出的技术路径，后者提供把图谱数据整合为基础模型的框架性愿景[42][43]。但需指出，Perturb-FISH验证的是与Perturb-seq的一致性，而非与图谱基础模型的对接；Human Cell Atlas的综述则停留在用途与愿景层面，未给出具体模型性能对比[42][43]。因此，当前资源格局呈现三条并行线索：基因组规模扰动数据提供干预标签的广度，流形分析提供表型几何的解释框架，空间扰动与图谱整合则试图补上微环境与统一表征的缺口，三者尚未在统一基准下被系统比较[40][41][42][43]。</p>
+<p>单细胞与空间组学基础模型的训练高度依赖大规模、系统化、可复用的扰动与图谱资源。从技术路线看，早期资源以<strong>基于CRISPR的pooled Perturb-seq</strong>为核心，将基因型扰动与单细胞转录组读出耦合。一项工作报告了<strong>首个基因组规模Perturb-seq</strong>筛选，采用紧凑多重CRISPRi文库，在<strong>K562与RPE1</strong>两个细胞系中以scRNA-seq测定数千个功能缺失扰动，借此研究RNA剪接、分化、染色体不稳定等多维表型，并通过反转分析聚焦调控网络，揭示线粒体基因组未预期的应激特异调控[41]。与之互补，另一项工作提出从高维单细胞表型构建<strong>细胞状态流形</strong>以映射遗传互作，基于CRISPR介导的pooled Perturb-seq筛选，将每个扰动与遗传互作投射到流形特定位置，发现该流形可实现调控通路无偏排序和遗传互作的系统分类[61]。两者都依赖Perturb-seq，但侧重不同：前者以扰动规模和多样性刻画复杂表型，后者以流形框架做通路排序与互作分类；共同局限是扰动读出仍限于转录组，且前者仅覆盖两个细胞系、CRISPRi为敲低而非敲除[41]，后者依赖强遗传互作筛选、未覆盖全基因组互作[61]。</p>
+<p>空间维度与图谱规模的扩展进一步改变了资源格局。<strong>Perturb-FISH</strong>将MERFISH与gRNA原位扩增结合，在空间背景下同时解码扰动与转录组，在LPS刺激巨噬细胞中与匹配Perturb-seq数据比较，验证敲除效应一致，并揭示细胞密度与邻居扰动的影响；该工作还在ASD风险基因CRISPRi筛选中记录钙活动与基因表达，并在肿瘤异种移植3D组织中验证，但其gRNA仅<strong>20bp</strong>、无法如mRNA般平铺，需原位扩增[62]。在非扰动图谱方向，MERFISH对成年小鼠全脑约<strong>800万细胞</strong>成像<strong>&gt;1100基因</strong>并整合scRNA-seq，生成包含<strong>&gt;5000转录簇、约300主要细胞类型</strong>的全脑图谱，注册到小鼠脑共坐标框架以量化各脑区细胞组成并识别空间模块，局限是仅限小鼠脑且基因面板有限、需整合scRNA-seq[63]。与此同时，Human Cell Atlas被论述为从细胞普查走向统一基础模型，提出细胞图谱作为细胞普查、3D图谱、基因型-表型连接、4D发育图谱及生物学基础模型五种用途[64]。在药物扰动资源上，<strong>Tahoe-100M</strong>以组合条形码与Parse GigaLab构建<strong>100M+细胞</strong>图谱，覆盖<strong>50细胞系、379化合物、3剂量、24h</strong>，约<strong>56,000细胞系-药物-剂量组合</strong>，发现Dabrafenib在非BRAF依赖细胞系中的意外敏感性及CDK抑制剂引起G1或G2/M阻滞，但摘要未提供全文、缺乏模型训练与验证细节[65]。这些资源在物种、尺度与读出上差异明显：小鼠全脑图谱提供空间分辨率但无扰动[63]，Perturb-FISH兼顾扰动与空间但受gRNA长度限制[62]，Tahoe-100M规模最大却证据披露有限[65]，而Human Cell Atlas则提供整合与基础模型演进的框架性论述[64]。</p>
 <h2>4 应用与结果</h2>
-<p>（本节暂无入库证据）</p>
+<p>在肝脏疾病与干预响应预测这一子问题上，现有工作最核心的结论是：<strong>尚无前瞻验证的肝脏模拟器</strong>。该综述将面向肝脏的AI虚拟细胞（AIVC）建模路线归纳为三类——生成模型、动力学/运输模型和预训练/基础模型，并把扰动响应预测作为跨层评估的抓手 [66]。就方法成熟度而言，已发表模型展示的只是单个组件：图谱整合、轨迹推断、可迁移表示以及回顾性响应程序，这些组件各自成立，却未被组装成一个能对干预结果作出可检验预测的完整系统 [66]。换言之，从"能整合图谱"到"能模拟肝脏"之间存在明显断层，而这一断层并非工程细节，而是评估范式的问题。作者据此把现有证据分为四类：直接肝脏验证、含肝脏基准、通用单细胞证据和概念应用 [66]。这一分层本身即是一种判断——真正在肝脏上直接验证的工作数量有限，大量结论实际依赖通用单细胞证据或概念层面的推演，二者与临床可用的干预预测之间距离不同，不应被等量齐观。</p>
+<p>争议与差异集中在评估维度上。该综述明确提出，评估需覆盖<strong>供体、病因、分期、平台</strong>等维度 [66]，这实际上是对当前普遍做法的批评：若模型训练与测试共享同一供体分布、同一病因构成或同一测序平台，其表现无法说明它是否学到了可迁移的疾病机制，而可能只是拟合了批次与个体特征。肝脏单细胞与空间图谱恰恰在供体、病因、分期、平台四个方面高度异质 [66]，因此跨维度的泛化能力才是关键指标，而非单一数据集上的拟合优度。由此产生的分歧在于：生成模型、动力学/运输模型与预训练/基础模型三类路线各自强调不同的能力——前者侧重状态分布的刻画，中者侧重时间演化与空间运输，后者侧重可迁移表示——但综述并未给出哪一类更接近虚拟细胞的定论，只指出三者都还停留在组件层面 [66]。可以确认的共识是，在缺乏前瞻性验证的情况下，任何关于肝脏干预响应的模型主张都只能视为回顾性假设；要推进到虚拟细胞，必须先在供体、病因、分期、平台四个维度上建立可比的评估协议，再谈模型架构的优劣 [66]。</p>
 <h2>5 评测、可复现性与争议</h2>
-<p>单细胞基础模型的评测正面临一场方法论层面的信任危机，其核心争议在于：这些模型在下游任务上的优势究竟来自对细胞生物学的有效表征，还是来自基准数据与预训练语料之间的隐性重叠。scContam 框架为这一问题提供了直接的审计工具，它结合 MinHash 基因集指纹与基于损失的成员推断攻击（MIA-scFM），对四个 scIB 基准和三个单细胞基础模型进行逐细胞污染检测，并以 Genecorpus-30M 作为参照 [19]。结果显示，PBMC 3k 与胰腺胰岛图谱中分别有 80.4% 和 77.0% 的细胞指纹达到 p&lt;0.05 的显著重叠水平，而经过截断处理的 AIDA v2 与 Tahoe-100M 则降至 0%；与此同时，MIA AUROC 随模型容量数据比单调上升，从 0.494 经 0.690 升至 0.881 [19]。这一梯度关系意味着模型越大、训练数据相对越少时，越容易留下可被检测的实例记忆痕迹。该工作也明确指出其局限：生产级 scFM 对实例记忆具有一定抗性，分布层面的污染仍需单独检测 [19]。换言之，指纹审计能捕捉逐细胞级别的重叠，却未必能覆盖语义或分布层面的泄漏，这为后续评测设计留下了尚未闭合的缺口。</p>
-<p>与污染问题相互交织的是另一条更根本的质疑线索：基础模型是否真的必要。一项 2026 年的研究采用仅依赖精细归一化与线性方法的无参数流程，在多个常用 scRNA-seq 基准任务上取得 SOTA 或近 SOTA 表现，并在涉及新细胞类型与未见物种的分布外任务上超越了 TranscriptFormer 等单细胞基础模型 [20]。作者据此提示，基础模型的优势可能被高估，细胞身份生物学或许可由简单线性表示充分捕获 [20]。这一结论在扰动预测领域得到了多条独立证据的呼应。针对 scGPT 与 scFoundation 的基准测试覆盖四个 Perturb-seq 数据集、约 48.5 万细胞，发现两个基础模型普遍不如简单均值基线，而标准机器学习模型大幅超越基础模型；该研究还指出常用数据集样本间方差偏低，会实质性影响评估的区分度 [44]。更严格的评测在 Norman 等 K562 CRISPRa 双扰动数据（224 个扰动、19,264 个基因）上比较 scGPT、scFoundation、GEARS、CPA 与线性基线，结论是所有模型误差均高于加性基线，遗传互作预测也不优于 no change 基线，且模型多预测缓冲型互作，对协同互作的捕捉既少又不准 [45]。值得注意的是，该研究的局限在于仅使用 K562 双扰动数据，结论的外推范围有限 [45]。而覆盖 27 种方法、29 个数据集与 6 类互补指标的综述性基准评测则采取了更为审慎的立场：它系统评估了多种未见细胞背景与扰动场景下的泛化性，指出基础模型表现仍存疑，同时强调细胞上下文嵌入对提升扰动效应预测泛化性的必要性，并提醒大规模与组合扰动筛选依然复杂，方法真实效力需跨未见场景验证 [46]。这几项工作之间的张力值得注意：线性基线研究倾向于否定基础模型的增量价值，而 27 方法评测并未完全否定，而是将问题定位为泛化性验证不足与上下文建模缺失，二者对"基础模型是否有效"给出了程度不同的判断。</p>
-<p>评测争议的另一维度来自任务本身的有效性，即基准所测量的信号是否具有生物学特异性。一项针对小分子生物活性预测的研究发现，许多既往高预测力的 assays 实际上与细胞毒性或增殖相关，简单的细胞计数本身就具有意外强的预测力；在 Tox21 中，37–87% 的活性命中可能由细胞毒性爆发导致，仅 2–14% 为特异 [47]。这意味着若不加区分，模型可能通过捕捉非特异性的细胞健康状态来"预测"活性，从而产生误导性的性能数字，该研究明确强调预测模型需考虑混杂因素并区分特异与非特异活性 [47]。将这一逻辑回溯到单细胞领域，扰动预测基准中低样本间方差的问题 [44] 与污染审计揭示的预训练重叠 [19] 可能共同构成性能虚高的来源。作为对照，较早的图谱级整合基准测试在 13 个整合任务、最多 23 批次与 100 万细胞规模上，用 16 种工具与 14 项指标评估批次去除与生物变异保留，发现 Scanorama 和 scVI 在复杂任务表现良好，有细胞注释时 scGen 和 scANVI 最优，Harmony 和 LIGER 适合 scATAC 数据 [48]。该工作的局限在于部分任务的真实数据 ground truth 依赖预处理注释，可能引入偏差 [48]，这与前述污染和混杂问题形成呼应：无论是整合评测中的注释依赖，还是活性预测中的毒性混杂，抑或基础模型基准中的预训练重叠，评测链条上的每一环都可能将非目标信号误读为模型能力。综合这些证据，当前单细胞与空间组学基础模型的评测尚未建立起能够同时排除污染、控制混杂并验证分布外泛化的统一框架，而可复现性则依赖于代码、审计结果与图表的开源实践 [19]，以及跨数据集、跨场景的独立验证 [46]。</p>
+<p>单细胞与空间组学基础模型的评测正陷入一种结构性困境：基准分数与生物学效用之间的对应关系越来越不可靠，而可复现性问题的根源往往不在模型本身，而在数据、预处理与评估协议。预训练污染审计提供了最直接的证据。<strong>scContam</strong> 结合 MinHash 基因集指纹与基于损失的成员推断攻击（MIA-scFM），对四个 scIB 基准和三个 scFM 进行逐细胞审计，发现 <strong>PBMC 3k 与胰腺胰岛图谱分别有 80.4%、77.0% 的细胞指纹 p&lt;0.05</strong>，而截断后的 AIDA v2 与 Tahoe-100M 为 <strong>0%</strong>；MIA AUROC 随模型容量数据比单调上升，从 0.494 到 0.690 再到 0.881 [33]。这一结果的含义是双重的：一方面，两个高引用基准上的大量性能优势可能来自实例记忆而非泛化；另一方面，作者也指出生产级 scFM 对实例记忆具有抗性，分布层面的污染需要单独检测 [33]。换言之，污染不是「有或无」的问题，而是随基准、模型容量与数据比例连续变化的量，任何跨基准的模型排名若不报告污染审计，其可比性都值得怀疑。</p>
+<p>与污染问题并行的是「基础模型是否必要」这一更根本的质疑。一项无参数线性表示流程仅依赖精细归一化与线性方法，在多个常用基准上取得 SOTA 或近 SOTA，并在涉及新细胞类型与新物种的分布外任务上超越基础模型，作者据此认为细胞身份的生物学可由简单线性表示捕获，基础模型的优势可能被高估 [35]。这一结论在扰动预测领域得到多项独立验证。对 scGPT 与 scFoundation 在四个 Perturb-seq 数据集、约 <strong>48.5 万细胞</strong>上的基准测试显示，基础模型普遍不如简单均值基线，标准 ML 模型大幅领先，且常用数据集样本间方差低，进一步削弱了评估的判别力 [67]。更严格的评测使用 K562 CRISPRa 双扰动数据（224 个扰动、19,264 个基因），比较 scGPT、scFoundation、GEARS、CPA 与加性基线，结论是所有模型误差均高于加性基线，遗传互作预测不优于 no change 基线，且模型多预测缓冲互作，对协同互作既少又不准 [68]。这些结果与 PertEval-scFM 的发现一致：零样本 scFM 嵌入未持续优于基线，尤其在分布偏移下，当前代 scFM 存在局限，需要专用模型与覆盖更广细胞状态的高质量数据 [69]。</p>
+<p>不过，「线性基线胜出」并非在所有任务上成立，任务依赖性是最重要的调节变量。零样本评估 scGPT、SCimilarity、UCE、Transcriptformer 四个模型发现：细胞类型注释中基线在多数数据集最强，蛋白表达预测中基础模型更准（SCimilarity 误差最低、Transcriptformer 相关性最高），数据整合中基础模型表现中等而 scVI 更佳 [70]。低监督条件下的系统评测给出了更细的分解：七种基础模型与三种经典表示对比，<strong>CellPLM 在聚类、注释与批次校正中领先，scMulan 在扰动预测中领先，PCA 在表达重建中领先</strong>；七个基础模型中仅 1 个聚类超过最强经典基线，3 个批次校正、4 个注释、0 个重建、6 个扰动预测超过基线，且跨模型基因关系一致性未超过维度匹配随机投影零假设 [71]。VCBench 把这一图景压缩为可检验的维度：在五个可测维度上，预注册的线性与最近邻基线在 <strong>4 维中追平或超越所有基础模型</strong>，仅 TranscriptFormer 在 RNA 到蛋白预测上以 <strong>53% Pearson</strong> 超过最强基线 [72]。细胞类型分类的专项评测则显示模型间差异极大：scFoundation 持续最佳，Geneformer 表现差甚至不如基线，且好基础模型可用分布外数据微调并保持泛化 [73]。这些结果共同指向一个结论：基础模型的价值高度依赖任务与模态，笼统声称「基础模型优于专用方法」或「基础模型无用」都缺乏证据支持。</p>
+<p>扰动响应预测的评测体系本身也在被重新审视。PerturBench 提出模块化评估平台，发现广泛使用模型存在模式崩溃等局限，秩指标可补充 RMSE，且无单一架构明显占优，简单架构具竞争力并随数据规模良好扩展 [74]。对 27 种方法、29 个数据集、6 类指标的泛化性评测进一步强调，方法选择需谨慎，细胞上下文嵌入对提升扰动效应预测泛化性是必要的 [75]。scArchon 则从工程侧解决可比性问题：容器化运行 trVAE、scGen、CPA、CellOT、SCREEN 等 9 种工具，统一 MSE、Wasserstein 及生物指标并聚合评分排名，解决环境不兼容并支持用户自有数据，但其局限是仅限非遗传扰动，未涵盖基因敲除类方法 [76]。值得注意的是，扰动预测的评测还面临混杂因素的干扰：对小分子生物活性的分析发现，许多既往高预测 assays 与细胞毒性或增殖相关，简单细胞计数本身具有意外强预测力，<strong>Tox21 中 37–87% 的活性命中可能由细胞毒性爆发导致，仅 2–14% 特异</strong> [77]。这提示扰动类基准若不以特异活性为终点，其高分可能只是增殖/毒性信号的代理。</p>
+<p>跨模态与跨任务的统一评测揭示了「上下文依赖的泛化」这一核心现象。对 Nicheformer、CellPLM、scGPT-spatial、GenePT、scELMo、Novae 六个模型的统一基准测试发现，无模型全面领先：表达训练的细胞级 Transformer 擅长细胞身份，空间/图模型保留组织结构，语言嵌入在部分扰动指标有竞争力，排名随模态、预处理、token 化、生物先验、域偏移与指标选择而变化，现有基础模型对域偏移脆弱且可解释性有限 [78]。这一结论与 scEval 框架的早期发现相呼应：在 8 个下游任务上评测 10 个模型，scGPT、Geneformer、CellPLM 表现最佳，但基础模型并非在所有任务上优于任务专用方法，超参数、初始设置与训练稳定性都会影响结论 [79]。生物学驱动的评测进一步用本体信息指标检验零样本嵌入，发现嵌入确实捕捉生物学信息，但预训练基础模型在部分场景未超越 HVG、Seurat、Harmony、scVI 等简单基线，需按任务选择模型 [80]。这些工作共同说明，模型排名不是模型的固有属性，而是模型、数据划分、预处理与指标共同构成的函数。</p>
+<p>可复现性危机在基础设施层面同样突出。BioLLM 指出各模型代码可及性与文档不一致导致集成困难，其标准化框架通过决策树预处理接口、BioTask 执行器与统一模型加载器支持零样本推理与微调，覆盖细胞类型注释与药物响应预测，解决预处理不一致、接口异构与评估指标非标准化三大挑战 [81]。JUMP-lite 则针对数据规模问题：JUMP 数据集达 <strong>115 TB</strong>，其 92.0 GB 子集约缩小 <strong>1250 倍</strong>，通过有损 JPEG XL 压缩覆盖遗传与化合物注释，对 CellProfiler、MorphEM、OpenPhenom、SubCell、DINOv2 五种表征方法基准测试，发现中度压缩基本保留信号，标准化表型活性与一致性指标揭示方法间显著性能差异，但作者也承认有损压缩可能损失信号且仅覆盖遗传与化合物模态 [82]。空间转录组方面，STSOPs+SpatialQM+STP 体系跨三站点比较 Xenium 与 CosMx，建立准确度、精密度、重复性、灵敏度与特异性指标，STP 可实时评估约 <strong>3300 万细胞</strong>数据，SpatialQM 开源、STP 门户公开，但主要覆盖 Xenium/CosMx，组织类型与平台有限 [83]。这些框架的价值在于把「可复现」从口号变成可执行的接口与指标，但其覆盖范围本身也构成新的边界。</p>
+<p>无监督评估与可解释性检验则从另一个角度挑战了标准基准的判别力。基于扰动不变性的框架假设忠实表征应在模拟技术与采样变异下保持邻域结构，对 5 个 scFM、PCA 基线与 39 个数据集测试发现，标准基准判定近乎等价的模型在丢弃 <strong>5% 计数</strong>时局部邻域保持差异近 <strong>2 倍</strong>，且该结构不稳定性具尺度依赖性并被视觉连贯的嵌入掩盖；重采样聚类稳定性与生物保守指标的 Spearman ρ=0.78 [84]。这意味着标准基准上的微小排名差异可能掩盖了鲁棒性上的巨大差异，而嵌入的视觉连贯性会误导人工判断。可解释性方面，两层评估框架在两种架构、四种细胞类型、两种扰动模态下进行 <strong>153 项统计检验</strong>并做因果消融，发现注意力边分数对扰动靶标预测无增量贡献，单变量基因级基线反而更优，TRRUST 头因果消融无行为效应，注意力-相关关系随细胞类型变化且部分场景统计功效不足 [85]。这直接否定了「注意力即解释」的常见假设。</p>
+<p>基因调控网络重建与动态转移的评测则提供了少数基础模型占优的场景。统一基准从六个基础模型中区分 token 嵌入、隐状态与注意力分数三种信号来源，在严格零样本设置下，<strong>scGPT token 嵌入相似度在 STRING 和 ChIP-seq 参考上优于经典基线</strong>，动态转移探测中 scFoundation 整体表现最强，但作者也指出静态 GRN 无法检验基因关系是否预测表达动态 [86]。这一结果与扰动预测领域的负面结论形成有意义的张力：同一批模型在静态网络重建上可以领先，却在扰动效应预测上不如加性基线，说明「基础模型是否有效」必须绑定到具体任务与信号来源，而不能以模型为单元下总体判断。整合任务的经典基准同样显示方法优劣依赖任务结构：16 种工具、13 个任务、最多 23 批次与 100 万细胞的评测中，Scanorama 与 scVI 在复杂任务表现好，有注释时 scGen 与 scANVI 最优，Harmony 与 LIGER 适合 scATAC，但部分任务 ground truth 依赖预处理注释可能引入偏差 [42]。</p>
+<p>综合来看，这一节的证据勾勒出一幅分裂的图景。污染审计表明部分基准的高分不可信，且污染程度可量化、随模型容量数据比上升 [33]；线性与简单基线在多个基准上追平或超越基础模型 [35][72]；扰动预测中基础模型普遍不如加性基线或均值基线 [68][67]；但蛋白表达预测、静态 GRN 重建与部分扰动预测场景中基础模型确有优势 [70][86][71]。争议的核心不在于某一方正确，而在于评测协议本身尚未标准化：预处理、token 化、数据划分、指标选择与污染控制都会改变排名 [78][81]。可复现性建设（容器化、压缩子集、标准化门户、无监督鲁棒性指标）与可解释性检验（因果消融、注意力增量价值）应当被视为与模型开发同等重要的研究方向，否则「虚拟细胞」的能力主张将持续缺乏可信的验证基础 [76][82][83][84][85]。</p>
 <h2>6 空白与趋势</h2>
-<p>围绕“单细胞基础模型是否真正编码了调控机制”，六项工作从稀疏自编码器特征图谱、注意力评估、电路追踪到算法提取，给出了彼此张力明显的证据。最系统的负面结论来自对 Geneformer V2-316M 与 scGPT 全人模型各层残差流激活的 TopK 稀疏自编码器（SAE）分析：该工作分别生成 82525 与 24527 个特征，发现 99.8% 的特征在 SVD 下不可见，29–59% 可注释到通路，但仅 3/48（6.2%）转录因子显示调控靶标特异性，多组织对照下也仅 10.4% [16]。这意味着模型内部确实内化了有组织的生物学知识，却几乎不含因果调控逻辑，作者据此判断模型表示本身是瓶颈 [16]。与之呼应的是另一项包含 37 项分析、153 个统计检验的系统评估框架：在 scGPT 与 Geneformer、四种细胞类型、两种扰动模态上，平凡基因级基线 AUROC 达 0.81–0.88，反而优于注意力边与相关性边的 0.70，成对边分数带来零增量，消融调控头也无退化，唯有 CSSI 可将 GRN 恢复提升至多 1.85× [17]。两项工作都指向同一争议点——注意力与 SAE 特征所呈现的“结构”未必等价于调控信号，注意力更多编码共表达而非独特调控信号 [17]。</p>
-<p>但另一些工作表明，这种“共表达而非因果”的判断可能低估了模型内部可被提取的计算结构。因果电路追踪对 Geneformer V2-316M 与 scGPT 消融 SAE 特征并测量下游响应，覆盖 4 条件、96892 条边、80191 次前向，发现两模型约 53% 生物一致性、65–89% 抑制主导且不随架构与细胞类型变化，跨模型共识达 1142 个域对（10.6 倍富集），然而 CRISPRi 基因级验证方向准确率仅 56.4%，作者同样结论模型编码共表达而非因果调控 [34]。值得注意的是，该工作与前述 SAE 图谱在“抑制主导”“生物一致性”上提供了正面结构证据，却在因果性上得出与 [16]、[17] 一致的保守结论，三者构成对“调控逻辑缺失”的相互印证。更激进的正面证据来自对 Geneformer L5 层 4065 个 SAE 特征的穷举电路追踪：它得到 1393850 条显著下游边，较选择性采样扩 27 倍，三阶冗余比 0.59 低于配对 0.74 且零协同，并发现层位置决定分化方向性——L17 特征 100% 推向成熟，L0/L11 为 0.00–0.58 [18]。该工作明确批评采样偏差、仅配对交互与观测性轨迹三大局限，其重尾枢纽分布（1.8% 特征占大量连接，40% 顶级枢纽无注释）说明此前基于选择性采样的结论可能不完整 [18]。在应用层面，从 scGPT 提取造血流形算法的工作给出更乐观的图景：在 Tabula Sapiens 564253 细胞与多供体免疫面板上，提取算法伪时间深度排序 |ρ|=0.439 优于次优 0.331，CD4/CD8 AUROC 0.867、单核/巨噬 0.951，且比 MLP 探针快 34.5 倍、参数少约 1000 倍 [35]。这提示模型内部存在可被蒸馏为独立算法的有效计算，但其泛化性主要验证于造血系统 [35]。最后，针对 GRN 推断，有工作观察到 scFM 因重建式预训练未显式捕获调控信号而表现不佳，现有零样本方法有时甚至不及随机预测，遂提出 GRN 泛化基准并用虚拟值扰动与梯度轨迹从冻结 scFM 蒸馏可泛化基因间特征，显著超越现有方法 [36]。综合来看，六项工作在方法（SAE 图谱、注意力评估、电路追踪、算法提取、蒸馏）与子问题上分歧明显：SAE 与注意力评估强调调控逻辑稀缺甚至基线更优 [16][17]，穷举电路追踪与算法提取则展示出可提取的层依赖结构与高效算法 [18][35]，而因果电路追踪与 GRN 蒸馏在承认共表达主导的同时，试图通过消融与扰动把可用信号转化为推断能力 [34][36]。核心争议在于：模型编码的是共表达统计还是因果调控，以及这种编码能否支撑通用 GRN 推断，目前证据尚未收敛。</p>
-<p>在形态与图像表型基础模型的构建路径上，一项工作选择将扰动筛选与自监督表征学习直接耦合。CellPaint-POSH 把 Cell Painting 与 pooled 光学 CRISPR 筛选结合，并改造了样本处理流程以兼容原位测序：将线粒体染色替换为 RNA 探针 Mitoprobe，加入 RNase 抑制剂，并将逆转录步骤提前，从而在同一平台上同时获取 Cell Painting 图像与 4 色 ISS 信号，最终得到 163,090 个单细胞的数据 [37]。在此基础上，作者用自监督深度学习学习形态表征，报告自监督机器学习特征在预测性能上高于经典图像分析流程产出的专家形态特征；形态表型能够按已知功能对基因聚类，并且在没有通路报告基因的条件下也能揭示基因关联网络 [37]。这一结果的意义在于把“基因功能从头推断”作为目标，而非仅做已知通路的分类验证。其代价是方法依赖对 Cell Painting 的改造以兼容 ISS，并依赖成像与测序流程的优化，说明该路线的可迁移性受实验平台约束 [37]。</p>
-<p>与上述“端到端自监督+扰动筛选”的路线不同，另一项工作把问题定位为特征空间的适配性评估，而非直接提出新的表征模型。该研究提出在检测开发早期用基于检索的 mAP 框架判断某个 Cell Painting 特征空间是否适配特定生物学场景，方法上复用 Kalinin 的元数据驱动检索框架，在 U2OS 细胞的 JUMP-MOA 参考板上比较多种公开预训练深度模型与经典 CellProfiler 特征 [38]。结果显示 DINO 自监督较 CellProfiler 的 mAP 提升 29%，CLOOME 的 top-10 MoA 准确率为 61.3%，而 CellProfiler 为 24.5% [38]。但作者强调模型选择依赖具体实验条件，需按场景系统评估，且该结论仅基于单一 JUMP-MOA 参考板，未覆盖多细胞系与多实验条件 [38]。这与 CellPaint-POSH 所暗示的“自监督特征普遍更优”形成张力：前者在特定平台上报告自监督优于专家特征，后者则指出这种优势并非无条件成立，而是随场景变化。</p>
-<p>第三篇综述为上述分歧提供了更宽的对照背景。它系统回顾图像表型分析从实验设计、图像采集到特征提取与下游分析的全流程，并比较 CellProfiler、DeepProfiler、DINO、CLOOME 等在 MoA 预测等任务中的表现 [39]。值得注意的是，其汇总的数字呈现出与前述工作不完全一致的图景：MoA 预测中 CellProfiler 的 F1 为 0.41，DeepProfiler 为 0.42，两者接近；同时该综述也引用了 DINO mAP 提升 29% 这一结果 [39]。作者据此指出深度模型常占优但手工特征仍具竞争力，深度与手工特征的优劣仍依场景而定，领域面临可复现性、标准化和跨数据集泛化等新挑战 [39]。综合三篇证据可见，当前形态基础模型的争议焦点并不在“深度是否优于手工”这一简单判断，而在于评估框架、参考数据集与实验条件如何决定结论：CellPaint-POSH 在改造后的 Cell Painting+ISS 平台上支持自监督表征用于基因功能从头推断 [37]，检索式评估在 JUMP-MOA 上给出自监督的显著增益但同时限定其场景依赖性 [38]，而综述层面的 F1 对比又显示手工与深度特征在 MoA 预测上差距有限 [39]。这种冲突提示，形态表型基础模型的“优越性”目前仍是条件性的，标准化评估与跨数据集泛化尚未解决。</p>
-<p>单细胞扰动筛选的数据规模与读出维度，构成了虚拟细胞建模最直接的资源基础。基因组规模 Perturb-seq 在 K562 与 RPE1 两个细胞系中，以多重 CRISPRi 文库结合 scRNA-seq 测定数千个功能缺失扰动，首次把扰动筛选推进到全基因组尺度，并借此研究 RNA 剪接、分化、染色体不稳定等多维表型，还通过反转分析聚焦调控网络，发现线粒体基因组存在未预期的应激特异调控 [40]。这一工作的方法学意义在于，它把“扰动—转录组”配对数据从数百量级提升到数千量级，为后续基础模型提供了带干预标签的训练语料。但其局限同样明确：仅覆盖两个细胞系，CRISPRi 是敲低而非敲除，表型也限于转录组，这意味着由此训练出的模型在细胞类型泛化与功能读出上都会受限 [40]。与之形成方法互补的是更早提出的细胞状态流形框架，它同样基于 CRISPR 介导的 pooled Perturb-seq，但重点不在扰动数量，而在如何把每个扰动与遗传互作投射到流形的特定位置，从而实现调控通路的无偏排序和遗传互作的原则性分类 [41]。两者的差异值得注意：前者追求扰动覆盖的广度，后者追求表型几何结构的解释力；前者以“首个基因组规模”自居且无直接对比对象，后者则以基于生长增益的功能性遗传互作图谱为基准 [40][41]。争议或张力在于，流形方法依赖强遗传互作筛选，未覆盖全基因组互作，因此其“无偏排序”是在特定筛选条件下的无偏，而非全基因组意义上的完备 [41]。</p>
-<p>空间维度与图谱整合则把资源问题推向新的子问题：扰动数据能否保留组织与微环境背景，以及分散的细胞图谱能否收敛为统一基础模型。Perturb-FISH 将 MERFISH 与 gRNA 原位扩增结合，在空间背景下同时解码扰动与转录组，并在 LPS 刺激巨噬细胞中与匹配的 Perturb-seq 数据比较，验证了敲除效应与 Perturb-seq 一致，同时揭示细胞密度与邻居扰动会影响结果，这恰恰是纯 scRNA-seq 扰动数据难以捕捉的细胞间效应 [42]。该工作还结合钙成像功能读出用于 ASD 风险基因的 CRISPRi 筛选，并在肿瘤异种移植 3D 组织中验证，把读出从转录组扩展到功能活动与组织架构 [42]。其技术</p>
+<p>围绕单细胞基础模型是否真正编码了调控机制，近两年的可解释性研究呈现出一种耐人寻味的共识：模型内部确实存在有组织的生物学结构，但这种结构距离因果调控逻辑仍有明显距离。一项包含 <strong>37 项分析、153 个统计检验</strong> 的系统评估框架，专门检验 scGPT 与 Geneformer 的注意力边分数是否提供超出表达统计的机制信息，结论是注意力虽编码分层生物结构，却对扰动预测<strong>无增量价值</strong>，平凡基因级基线反而更优，消融调控头也不影响结果 [30]。这一发现与因果电路追踪的结论高度一致：对 Geneformer V2-316M 与 scGPT 做 SAE 特征消融后测量下游响应，两模型约 <strong>53% 生物一致性、65–89% 抑制主导</strong>且不随架构与细胞类型变化，跨模型共识达 <strong>1,142 域对（10.6 倍富集）</strong>，但 CRISPRi 验证方向准确率仅 <strong>56.4%</strong>，表明模型编码的是共表达而非因果调控 [25]。稀疏自编码器的比较图谱进一步量化了这一点：用 TopK SAE 对两模型各层残差流激活训练后，发现模型内化了有组织的生物学知识，却<strong>几乎不含因果调控逻辑，仅 6.2% 转录因子显示调控靶标特异性响应</strong> [24]。三项独立研究从注意力、因果电路和稀疏特征三个角度得出同向结论，使「共表达而非调控」成为当前对 scFM 机制能力最有力的批判性判断。</p>
+<p>但可解释性研究并不只产出否定性结论，它也揭示了模型内部结构的可利用性。穷举电路追踪发现 Geneformer 存在<strong>重尾枢纽分布</strong>——<strong>1.8% 特征占据大量连接，40% 顶级枢纽无注释</strong>——且冗余随交互阶数单调加深（零协同），层位置决定分化方向性 [26]。这种「大规模冗余 + 少数枢纽」的架构特征，与从 scGPT 中提取造血算法的尝试形成呼应：该研究通过冻结注意力权重直接算子导出、轻量适配器和任务特定读出三阶段方法，生成<strong>无需目标数据重训练</strong>的独立算法，在 <strong>88 折供体留出基准</strong>中取得最强伪时间排序和关键亚型端点表现，且比标准探针更快、参数更少 [31]。这说明模型内部确实存在可提取的、有性能的生物学算法，问题不在于「有没有结构」，而在于这种结构是否对应可干预的调控因果。与此同时，GRN 推断方向的工作承认 scFM 在此任务上表现不佳，原因是<strong>重建式预训练未显式捕获调控信号</strong>，并提出用虚拟值扰动与梯度轨迹从冻结 scFM 蒸馏可泛化的基因间特征，在未见基因/数据集基准上显著超越现有方法 [32]。这条路线与前述批判性结论并不矛盾：它恰恰是在承认「预训练目标不含调控」的前提下，用后处理方式把可泛化的调控知识从模型中「挖」出来。</p>
+<p>评测层面的批判性证据同样在累积，且矛头直指基准本身的有效性。一项工作用<strong>依赖精细归一化与线性方法的简单可解释流程</strong>，在多个常用基准上取得 SOTA 或近 SOTA 性能，并在新细胞类型与未见物种的分布外任务上<strong>超越基础模型</strong>，据此主张细胞身份生物学可由简单线性表示捕获 [35]。这与扰动预测方向的基准结论相互印证：在四个 Perturb-seq 数据集上比较 scGPT 和 scFoundation 与不同复杂度基线，发现<strong>基础模型普遍不如简单均值基线，标准 ML 模型大幅领先</strong>，且常用数据集低样本间方差影响评估 [67]。更严重的是数据污染问题：scContam 逐细胞审计框架结合 MinHash 基因集指纹与基于损失的成员推断攻击（MIA-scFM），应用于四个 scIB 基准和三个 scFM，发现<strong>两个高引用基准存在大量预训练重叠证据</strong>，而截断后数据集无重叠，且 MIA AUROC 随模型容量数据比单调上升 [33]。这意味着部分已报告的 scFM 优势可能部分来自预训练与评测数据的重叠，而非真正的泛化能力。这些证据共同指向一个方法论判断：<strong>当前单细胞基础模型的评测体系尚未排除简单基线、数据污染与任务特异性偏差的干扰，SOTA 声明的可信度需要逐案重估</strong>。</p>
+<p>综合来看，本方向正在形成几条清晰的趋势与若干尚未被填补的空白。<strong>趋势一：从「更大模型」转向「更聪明的表征取用与适配」</strong>——逐层分析显示中间层在轨迹推断中优于最终层达 <strong>31%</strong>、稳定在 <strong>60% 深度</strong>，扰动最优层随 T 细胞激活状态偏移 <strong>0–96%</strong> [9]，药物条件适配器仅微调不到 <strong>1%</strong> 参数即在新细胞系零样本泛化上显著优于基线 [20]，而 70M 参数跨模态模型在多数基准上匹配或超过 1B/3B RNA-only 模型 [19]；这些结果共同削弱了「参数规模决定能力」的默认假设。<strong>趋势二：扰动身份的表示从基因名走向序列、位点与外部知识</strong>——STRAND 以扰动位点调控 DNA 序列为条件，把基因组覆盖从约 <strong>1.5% 扩至约 95%</strong>，低样本判别分提升达 <strong>33%</strong> [51]；AROMA 整合文本证据、图拓扑与蛋白序列，构建 <strong>&gt;498k 样本</strong> 的 PerturbReason 数据集 [52]；这提示「同一基因不同位点坍缩为同一表征」是当前扰动模型的结构性缺陷。<strong>趋势三：分布级传输与世界模型成为绕开细胞级配对假设的主流算子</strong>——SCALE 用集合感知编码器与条件 DiT 学习潜在传输，无需细胞级匹配，CRISPR 七项指标超越竞争方法并经三供体 PBMC 实验验证 [34]；Chreode 用结构化残差转移算子把分布演化移到训练时，将 Norman Perturb-seq 的 DE20 MSE 从 <strong>0.2121 降至 0.1858（相对提升 12.4%）</strong> [36]。<strong>趋势四：评测从留出集精度转向污染审计、简单基线与生物学泛化</strong>——scContam 揭示两个高引用基准存在预训练重叠 [33]，参数无关表示在分布外任务上超越基础模型 [35]，可信虚拟细胞路线图明确要求评估转向未见细胞类型与扰动 [22]。</p>
+<p>与此同时，若干方向仍明显缺位。<strong>空白一：缺少对「共表达 vs 因果调控」这一核心分歧的统一仲裁基准</strong>——三项可解释性研究分别用注意力、因果电路和 SAE 得出同向结论 [30][25][24]，但彼此的分析框架、模型版本与统计口径不同，尚无一个跨模型、跨方法的标准化基准来判定「模型是否编码调控逻辑」这一是非题。<strong>空白二：扰动身份表示与分布级传输尚未合流</strong>——STRAND 与 AROMA 精细化了扰动身份 [51][52]，SCALE 与 Chreode 显式建模分布传输 [34][36]，但<strong>没有工作把位点/序列级扰动条件同时作为分布传输模型的条件输入</strong>，而这恰是「同一基因不同位点效应不同」与「细胞级配对不成立」两个约束的交汇点。<strong>空白三：空间扰动响应预测缺乏配对数据与基准</strong>——Perturb-FISH 已实现 MERFISH 与 gRNA 原位扩增结合，在空间背景下同时解码扰动与转录组，并分析细胞密度与邻居扰动的影响 [62]，但当前虚拟细胞模型几乎全部在非空间 Perturb-seq 上训练与评测，<strong>没有公开权重模型以空间扰动数据为核心训练目标</strong>，空间维度的扰动响应预测仍是空白。<strong>空白四：跨平台、跨模态的泛化评测尚未成为常规</strong>——空间平台基准显示 Stereo-seq、Visium HD、CosMx、Xenium 性能差异显著 [27]，病理基础模型临床基准指出数据与算力是主要瓶颈 [45]，但多数扰动模型仍只在单一平台或单一细胞系上报告结果 [67][21]，<strong>跨平台扰动响应迁移的系统评测尚属缺位</strong>。<strong>空白五：实验闭环验证的规模化仍是个案</strong>——SCALE 的细胞因子差异经三供体 PBMC 验证 [34]、Chreode 在 Norman Perturb-seq 上验证可迁移性 [36]、moscot 实验验证 NEUROD2 调控 epsilon 细胞形成 [40]，但相对于模型数量，<strong>经湿实验验证的虚拟细胞预测仍是极少数</strong>，可信虚拟细胞路线图所要求的「实验验证证据链」 [22] 尚未成为领域常规。这些空白共同指向一个判断：<strong>当前虚拟细胞的核心瓶颈已从「模型能不能跑」转向「预测可不可信、泛化有没有边界、验证是否闭环」，而后者所需的基准、数据与实验基础设施仍远未成熟</strong>。</p>
+<h2>阶段判断与行动建议</h2>
+<table>
+<thead>
+<tr>
+<th>细分方向</th>
+<th>阶段</th>
+<th>依据（引用数字与 [id]）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1 单细胞基础模型</td>
+<td>成熟（方法收敛、增量为主）</td>
+<td><strong>16 篇</strong>、recent_share <strong>0.69</strong>、median_citations <strong>37</strong>、CNS <strong>0.5</strong>；scGPT <strong>1370</strong> 引 [2]、Geneformer <strong>1252</strong> 引 [1] 已成默认基线，但 GenePT 用简单基线即有效 [10]，且 2.4 出现系统性可解释性批判 [30]</td>
+</tr>
+<tr>
+<td>2.2 空间与多模态模型</td>
+<td>朝阳（近两年爆发、CNS 频出、方法未收敛）</td>
+<td><strong>11 篇</strong>、recent_share <strong>0.73</strong>、median_citations <strong>78</strong>、CNS <strong>0.73</strong>；AD 多模态图谱 <strong>386</strong> 引 [28]、MultiVI <strong>299</strong> 引 [38]、moscot <strong>175</strong> 引 [40]、Cell Painting 综述 [47]</td>
+</tr>
+<tr>
+<td>2.3 扰动响应与虚拟细胞</td>
+<td>朝阳（近两年爆发、CNS 频出、方法未收敛）</td>
+<td><strong>19 篇</strong>、recent_share <strong>0.68</strong>、median_citations <strong>21</strong>、CNS <strong>0.47</strong>；Perturb-seq 奠基 <strong>1825</strong> 引 [48]、虚拟细胞路线图 <strong>309</strong> 引 [55]，但 2025 明确"未跑赢基线" [68]</td>
+</tr>
+<tr>
+<td>2.4 机制可解释性与表征分析</td>
+<td>萌芽（少量探索性工作）</td>
+<td><strong>7 篇</strong>、recent_share <strong>1.0</strong>、year_span <strong>2026-2026</strong>、median_citations <strong>0</strong>、CNS <strong>0.0</strong>；稀疏自编码器 [57]、[24]，系统性可解释性评测 [30]，scGPT 流形发现 [31]</td>
+</tr>
+<tr>
+<td>2.5 形态与图像表型基础模型</td>
+<td>萌芽（少量探索性工作）</td>
+<td><strong>3 篇</strong>、recent_share <strong>1.0</strong>、year_span <strong>2025-2026</strong>、median_citations <strong>6</strong>、CNS <strong>0.33</strong>；Cell Painting CRISPR 平台 <strong>12</strong> 引 [58]、图像 profiling 挑战 [60]、检索式评测 [59]</td>
+</tr>
+<tr>
+<td>3 数据与资源</td>
+<td>成熟（方法收敛、增量为主）</td>
+<td><strong>6 篇</strong>、recent_share <strong>0.33</strong>、median_citations <strong>140</strong>、CNS <strong>0.5</strong>；genome-scale Perturb-seq <strong>749</strong> 引 [41]、遗传互作流形 <strong>435</strong> 引 [61]、HCA 走向统一基础模型 [64]</td>
+</tr>
+<tr>
+<td>5 评测、可复现性与争议</td>
+<td>朝阳（近两年爆发、CNS 频出、方法未收敛）</td>
+<td><strong>23 篇</strong>、recent_share <strong>0.83</strong>、median_citations <strong>5</strong>、CNS <strong>0.22</strong>；整合基准 <strong>1286</strong> 引 [42]、扰动预测未超基线 <strong>143</strong> 引 [68]、PerturBench <strong>85</strong> 引 [74]、FM 效用评测 [79]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>整体判断</strong>：这个方向整体处于<strong>朝阳期偏中后段</strong>，但内部严重分化——单细胞基础模型（2.1）与数据资源（3）已进入<strong>成熟/增量</strong>阶段，scGPT、Geneformer 这类工作把"预训练 + 微调"范式做成了默认基线 [2][1]；真正的窗口在<strong>扰动响应/虚拟细胞（2.3）、空间多模态（2.2）、评测（5）与两个萌芽区（2.4、2.5）</strong>。证据库 n_evidence <strong>86</strong>、recent_share <strong>0.74</strong>、CNS <strong>0.4</strong>，2025-2026 年合计 <strong>64</strong> 篇，说明热度仍在上升而非退潮。窗口期估计<strong>还有 12-24 个月</strong>：2.3 的"虚拟细胞"叙事刚被 Cell 路线图定调 [55]，但方法未收敛且已有硬核反证——深度学习扰动预测<strong>尚未跑赢简单基线</strong> [68]，PerturBench 也显示模型泛化受限 [74]。<strong>最大不确定性</strong>是：如果扰动预测在跨细胞类型/跨扰动泛化上持续打不过基线，整个"虚拟细胞"的算法叙事会被压缩成"数据 + 评测"问题；反之，谁先解决 OOD 泛化与可解释性，谁就拿到下一轮定义权。对衰老 + 多模态背景的博后，<strong>不要再去卷通用单细胞 FM 的预训练</strong>，而应切"评测 + 扰动 + 空间/形态多模态"的交叉缝隙。</p>
+<p><strong>接下来怎么做</strong>：</p>
+<ol>
+<li>
+<p><strong>做"衰老扰动"的 OOD 评测基准，而不是再训一个 FM</strong>。切入点：用 Tahoe-100M / genome-scale Perturb-seq [41] 与 PerturBench [74] 的协议，构造"训练年轻/测试衰老""训练一种细胞类型/测试另一种"的 split，系统评测 scGPT [2]、Geneformer [1] 与线性基线。为什么现在：<strong>"未跑赢基线"已被 CNS 级别点名</strong> [68]，但没人做衰老维度的系统评测，这是低成本高可见度的切入点，且能直接复用你合作项目的类器官扰动数据。</p>
+</li>
+<li>
+<p><strong>把"可解释性"做成方法贡献，而不是评论</strong>。切入点：用稀疏自编码器 [57][24] 拆解单细胞 FM 表征，检验其是否编码衰老相关通路/调控关系，并对照 [30] 的负面结论。为什么现在：2.4 是<strong>纯萌芽（7 篇、median_citations 0、CNS 0）</strong>，2026 年才起步，先发优势极大；且你有多模态建模背景，能把"表征可解释性"与"扰动响应"打通，产出方法 + 生物学发现双线。</p>
+</li>
+<li>
+<p><strong>切"空间 + 形态 + 扰动"三模态整合，绑定类器官</strong>。切入点：以 MultiVI [38]、moscot [40] 为方法底座，把 Cell Painting CRISPR 平台 [58] 的形态读出与空间转录组、扰动测序对齐，在类器官上做"形态预测转录组扰动响应"。为什么现在：2.2 CNS <strong>0.73</strong>、2.5 仅 <strong>3 篇</strong>且 recent_share <strong>1.0</strong>，形态基础模型几乎空白 [60][59]；类器官 + 多组学正是你合作项目的现成数据，能做出别人没有的配对模态。</p>
+</li>
+<li>
+<p><strong>用公共数据做"虚拟细胞"的衰老 demo，主打可复现</strong>。切入点：以 HCA 统一基础模型路线 [64] 与 AD 多模态图谱 [28] 为模板，构建"衰老细胞状态生成 + 扰动响应预测"的最小闭环，全部用公开权重与公开数据，附完整评测脚本。为什么现在：领域对"无权重无代码"和"跑不赢基线"高度敏感 [68][79]，一个透明、可复现、带负面结果的 demo 反而比又一个 SOTA 声明更有引用价值。</p>
+</li>
+<li>
+<p><strong>把评测本身产品化：维护一个"虚拟细胞 benchmark"的活榜单</strong>。切入点：整合 PerturBench [74]、FM 效用评测 [79] 与整合基准 [42] 的指标，加入衰老/类器官/空间模态赛道，持续吸收新模型。为什么现在：5 类证据 <strong>23 篇、recent_share 0.83</strong>，是增长最快且 CNS 门槛相对低的板块；榜单类工作能持续获得曝光，并自然把你变成该细分方向的"裁判"，反哺你自己的方法与合作项目。</p>
+</li>
+</ol>
 <h2>参考文献</h2>
 <ol>
 <li>Transfer learning enables predictions in network biology. Nature 2023. https://doi.org/10.1038/s41586-023-06139-9</li>
 <li>scGPT: toward building a foundation model for single-cell multi-omics using generative AI. Nature Methods 2024. https://doi.org/10.1038/s41592-024-02201-0</li>
 <li>CellFM: a large-scale foundation model pre-trained on transcriptomics of 100 million human cells.. Nature communications 2025. https://doi.org/10.1038/s41467-025-59926-5</li>
-<li>A cell atlas foundation model for scalable search of similar human cells.. Nature 2024. https://doi.org/10.1038/s41586-024-08411-y</li>
+<li>scPRINT-2: Towards the next-generation of cell foundation models and benchmarks.  2025. https://doi.org/10.64898/2025.12.11.693702</li>
+<li>A Cross-Species Generative Cell Atlas Across 1.5 Billion Years of Evolution: The TranscriptFormer Single-cell Model. bioRxiv 2025. https://doi.org/10.1101/2025.04.25.650731</li>
+<li>RegFormer: a single-cell foundation model powered by gene regulatory hierarchies.. Nature communications 2026. https://doi.org/10.1038/s41467-026-72198-x</li>
 <li>Evaluating the role of pretraining dataset size and diversity on single-cell foundation model performance.. Nature methods 2026. https://doi.org/10.1038/s41592-026-03120-y</li>
 <li>Zero-shot evaluation reveals limitations of single-cell foundation models.. Genome biology 2025. https://doi.org/10.1186/s13059-025-03574-x</li>
 <li>Intermediate Layers Encode Optimal Biological Representations in Single-Cell Foundation Models.  2026. https://arxiv.org/abs/2604.14838v1</li>
+<li>GenePT: A Simple But Effective Foundation Model for Genes and Cells Built From ChatGPT. bioRxiv 2023. https://doi.org/10.1101/2023.10.16.562533</li>
+<li>PTM-Mamba: a PTM-aware protein language model with bidirectional gated Mamba blocks.. Nature methods 2025. https://doi.org/10.1038/s41592-025-02656-9</li>
+<li>scDifformer: diffusion-based post-training for virtual cell modeling across large-scale single-cell data. Nucleic Acids Research 2026. https://doi.org/10.1093/nar/gkag706</li>
+<li>Deep generative modeling of sample-level heterogeneity in single-cell genomics.. Nature methods 2025. https://doi.org/10.1038/s41592-025-02808-x</li>
+<li>A cell atlas foundation model for scalable search of similar human cells.. Nature 2024. https://doi.org/10.1038/s41586-024-08411-y</li>
 <li>PAST: A multimodal single-cell foundation model for histopathology and spatial transcriptomics in cancer. arXiv.org 2025. https://arxiv.org/abs/2507.06418v1</li>
 <li>A visual-omics foundation model to bridge histopathology with spatial transcriptomics.. Nature methods 2025. https://doi.org/10.1038/s41592-025-02707-1</li>
 <li>CellWorld: From Gene-Level Reconstruction to Latent Cell Prediction in Spatial Transcriptomics Foundation Models.  2026. https://arxiv.org/abs/2608.06659v1</li>
-<li>A multimodal knowledge-enhanced whole-slide pathology foundation model.. Nature communications 2025. https://doi.org/10.1038/s41467-025-66220-x</li>
+<li>Tahoe-x1: Scaling Perturbation-Trained Single-Cell Foundation Models to 3 Billion Parameters. bioRxiv 2025. https://doi.org/10.1101/2025.10.23.683759</li>
+<li>Single-cell foundation models benefit from cross-modal training: adding proteomics data beats parameter scaling. bioRxiv 2026. https://doi.org/10.64898/2026.08.14.744845</li>
+<li>Efficient Fine-Tuning of Single-Cell Foundation Models Enables Zero-Shot Molecular Perturbation Prediction.  2024. https://arxiv.org/abs/2412.13478v2</li>
 <li>PerturbNet predicts single-cell responses to unseen chemical and genetic perturbations.. Molecular systems biology 2025. https://doi.org/10.1038/s44320-025-00131-3</li>
-<li>SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction.  2026. https://arxiv.org/abs/2603.17380v3</li>
 <li>Toward trustworthy virtual cells: a roadmap for perturbation-resolved, context-aware, and experimentally validated cell models. Frontiers in Cell and Developmental Biology 2026. https://doi.org/10.3389/fcell.2026.1900624</li>
 <li>Virtual Cell Challenge: Toward a Turing test for the virtual cell.. Cell 2025. https://doi.org/10.1016/j.cell.2025.06.008</li>
 <li>Sparse autoencoders reveal organized biological knowledge but minimal regulatory logic in single-cell foundation models: a comparative atlas of Geneformer and scGPT.  2026. https://arxiv.org/abs/2603.02952v1</li>
-<li>Systematic Evaluation of Single-Cell Foundation Model Interpretability Reveals Attention Captures Co-Expression Rather Than Unique Regulatory Signal.  2026. https://arxiv.org/abs/2602.17532v1</li>
-<li>Exhaustive Circuit Mapping of a Single-Cell Foundation Model Reveals Massive Redundancy, Heavy-Tailed Hub Architecture, and Layer-Dependent Differentiation Control.  2026. https://arxiv.org/abs/2603.11940v1</li>
-<li>Auditing pretraining contamination in single-cell foundation model benchmarks.  2026. https://arxiv.org/abs/2607.20572v1</li>
-<li>Parameter-free representations outperform single-cell foundation models on downstream benchmarks.  2026. https://arxiv.org/abs/2602.16696v1</li>
-<li>Single-cell foundation models: bringing artificial intelligence into cell biology.. Experimental &amp; molecular medicine 2025. https://doi.org/10.1038/s12276-025-01547-5</li>
-<li>A clinical benchmark of public self-supervised pathology foundation models.. Nature communications 2025. https://doi.org/10.1038/s41467-025-58796-1</li>
-<li>Integrated multimodal cell atlas of Alzheimer's disease.. Nature neuroscience 2024. https://doi.org/10.1038/s41593-024-01774-5</li>
-<li>Mapping cells through time and space with moscot.. Nature 2025. https://doi.org/10.1038/s41586-024-08453-2</li>
-<li>Cell Painting: a decade of discovery and innovation in cellular imaging.. Nature methods 2024. https://doi.org/10.1038/s41592-024-02528-8</li>
-<li>Efficient Fine-Tuning of Single-Cell Foundation Models Enables Zero-Shot Molecular Perturbation Prediction.  2024. https://arxiv.org/abs/2412.13478v2</li>
-<li>Predicting transcriptional responses to novel chemical perturbations using deep generative model for drug discovery.. Nature communications 2024. https://doi.org/10.1038/s41467-024-53457-1</li>
-<li>STRAND: Sequence-Conditioned Transport for Single-Cell Perturbations.  2026. https://arxiv.org/abs/2602.10156v1</li>
-<li>AROMA: Augmented Reasoning Over a Multimodal Architecture for Virtual Cell Genetic Perturbation Modeling.  2026. https://arxiv.org/abs/2604.20263v1</li>
-<li>How to build the virtual cell with artificial intelligence: Priorities and opportunities.. Cell 2024. https://doi.org/10.1016/j.cell.2024.11.015</li>
-<li>Human interpretable grammar encodes multicellular systems biology models to democratize virtual cell laboratories.. Cell 2025. https://doi.org/10.1016/j.cell.2025.06.048</li>
-<li>A deep generative model for deciphering cellular dynamics and in silico drug discovery in complex diseases.. Nature biomedical engineering 2025. https://doi.org/10.1038/s41551-025-01423-7</li>
-<li>AI-driven virtual cell models in preclinical research: technical pathways, validation mechanisms, and clinical translation potential.. NPJ digital medicine 2025. https://doi.org/10.1038/s41746-025-02198-6</li>
 <li>Causal Circuit Tracing Reveals Distinct Computational Architectures in Single-Cell Foundation Models: Inhibitory Dominance, Biological Coherence, and Cross-Model Convergence.  2026. https://arxiv.org/abs/2603.01752v2</li>
+<li>Exhaustive Circuit Mapping of a Single-Cell Foundation Model Reveals Massive Redundancy, Heavy-Tailed Hub Architecture, and Layer-Dependent Differentiation Control.  2026. https://arxiv.org/abs/2603.11940v1</li>
+<li>Systematic benchmarking of high-throughput subcellular spatial transcriptomics platforms across human tumors.. Nature communications 2025. https://doi.org/10.1038/s41467-025-64292-3</li>
+<li>Integrated multimodal cell atlas of Alzheimer's disease.. Nature neuroscience 2024. https://doi.org/10.1038/s41593-024-01774-5</li>
+<li>Genome-scale perturb-seq in primary human CD4+ T cells maps context-specific regulators of T cell programs and human immune traits.. Cell 2026. https://doi.org/10.1016/j.cell.2026.08.002</li>
+<li>Systematic Evaluation of Single-Cell Foundation Model Interpretability Reveals Attention Captures Co-Expression Rather Than Unique Regulatory Signal.  2026. https://arxiv.org/abs/2602.17532v1</li>
 <li>Discovery of a Hematopoietic Manifold in scGPT Yields a Method for Extracting Performant Algorithms from Biological Foundation Model Internals.  2026. https://arxiv.org/abs/2603.10261v1</li>
 <li>Towards Universal Gene Regulatory Network Inference: Unlocking Generalizable Regulatory Knowledge in Single-cell Foundation Models.  2026. https://arxiv.org/abs/2605.08128v1</li>
+<li>Auditing pretraining contamination in single-cell foundation model benchmarks.  2026. https://arxiv.org/abs/2607.20572v1</li>
+<li>SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction.  2026. https://arxiv.org/abs/2603.17380v3</li>
+<li>Parameter-free representations outperform single-cell foundation models on downstream benchmarks.  2026. https://arxiv.org/abs/2602.16696v1</li>
+<li>Chreode: A Cell World Model for One-Step Temporal Dynamics and Perturbation Prediction. arXiv.org 2026. https://doi.org/10.48550/arXiv.2605.28111</li>
+<li>Predicting transcriptional responses to novel chemical perturbations using deep generative model for drug discovery.. Nature communications 2024. https://doi.org/10.1038/s41467-024-53457-1</li>
+<li>MultiVI: deep generative model for the integration of multimodal data. Nature Methods 2023. https://doi.org/10.1038/s41592-023-01909-9</li>
+<li>CLM-X: A multimodal single-cell foundation model with flexible multi-way Transformer for unified scRNA-seq and scATAC-seq analysis. bioRxiv 2026. https://doi.org/10.64898/2026.02.17.704943</li>
+<li>Mapping cells through time and space with moscot.. Nature 2025. https://doi.org/10.1038/s41586-024-08453-2</li>
+<li>Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq. bioRxiv 2021. https://doi.org/10.1016/j.cell.2022.05.013</li>
+<li>Benchmarking atlas-level data integration in single-cell genomics. Nature Methods 2020. https://doi.org/10.1038/s41592-021-01336-8</li>
+<li>Single-cell foundation models: bringing artificial intelligence into cell biology.. Experimental &amp; molecular medicine 2025. https://doi.org/10.1038/s12276-025-01547-5</li>
+<li>Scalable querying of human cell atlases via a foundational model reveals commonalities across fibrosis-associated macrophages. bioRxiv 2023. https://doi.org/10.1101/2023.07.18.549537</li>
+<li>A clinical benchmark of public self-supervised pathology foundation models.. Nature communications 2025. https://doi.org/10.1038/s41467-025-58796-1</li>
+<li>A multimodal knowledge-enhanced whole-slide pathology foundation model.. Nature communications 2025. https://doi.org/10.1038/s41467-025-66220-x</li>
+<li>Cell Painting: a decade of discovery and innovation in cellular imaging.. Nature methods 2024. https://doi.org/10.1038/s41592-024-02528-8</li>
+<li>Perturb-seq: Dissecting molecular circuits with scalable single cell RNA profiling of pooled genetic screens. Cell 2016. https://doi.org/10.1016/j.cell.2016.11.038</li>
+<li>A multiplexed single-cell CRISPR screening platform enables systematic dissection of the unfolded protein response. Cell 2016. https://doi.org/10.1016/j.cell.2016.11.048</li>
+<li>Pooled CRISPR screening with single-cell transcriptome read-out. Nature Methods 2017. https://doi.org/10.1038/nmeth.4177</li>
+<li>STRAND: Sequence-Conditioned Transport for Single-Cell Perturbations.  2026. https://arxiv.org/abs/2602.10156v1</li>
+<li>AROMA: Augmented Reasoning Over a Multimodal Architecture for Virtual Cell Genetic Perturbation Modeling.  2026. https://arxiv.org/abs/2604.20263v1</li>
+<li>A deep generative model for deciphering cellular dynamics and in silico drug discovery in complex diseases.. Nature biomedical engineering 2025. https://doi.org/10.1038/s41551-025-01423-7</li>
+<li>Human interpretable grammar encodes multicellular systems biology models to democratize virtual cell laboratories.. Cell 2025. https://doi.org/10.1016/j.cell.2025.06.048</li>
+<li>How to build the virtual cell with artificial intelligence: Priorities and opportunities.. Cell 2024. https://doi.org/10.1016/j.cell.2024.11.015</li>
+<li>AI-driven virtual cell models in preclinical research: technical pathways, validation mechanisms, and clinical translation potential.. NPJ digital medicine 2025. https://doi.org/10.1038/s41746-025-02198-6</li>
+<li>Sparse Autoencoders Reveal Interpretable Features in Single-Cell Foundation Models. bioRxiv 2026. https://doi.org/10.1101/2025.10.22.681631</li>
 <li>A pooled Cell Painting CRISPR screening platform enables de novo inference of gene function by self-supervised deep learning.. Nature communications 2025. https://doi.org/10.1038/s41467-025-66778-6</li>
 <li>Retrieval-Based Evaluation of Cell Painting Feature Spaces Reveals Differences in the Preservation of Biologically Meaningful Phenotypic Similarity.. International journal of molecular sciences 2026. https://doi.org/10.3390/ijms27135727</li>
 <li>Progress and new challenges in image-based profiling.. Molecular systems biology 2026. https://doi.org/10.1038/s44320-026-00197-7</li>
-<li>Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq. bioRxiv 2021. https://doi.org/10.1016/j.cell.2022.05.013</li>
 <li>Exploring genetic interaction manifolds constructed from rich single-cell phenotypes. Science 2019. https://doi.org/10.1126/science.aax4438</li>
 <li>Simultaneous CRISPR screening and spatial transcriptomics reveal intracellular, intercellular, and functional transcriptional circuits.. Cell 2025. https://doi.org/10.1016/j.cell.2025.02.012</li>
+<li>A molecularly defined and spatially resolved cell atlas of the whole mouse brain. bioRxiv 2023. https://doi.org/10.1101/2023.03.06.531348</li>
 <li>The Human Cell Atlas from a cell census to a unified foundation model.. Nature 2024. https://doi.org/10.1038/s41586-024-08338-4</li>
+<li>Abstract 491: A 100 million cell single cell atlas enabling mechanistic and genotype-specific drug response discovery.. Cancer Research 2026. https://doi.org/10.1158/1538-7445.am2026-491</li>
+<li>Toward AI Virtual Cells for Hepatology: Representation, Generation, Dynamics, and Intervention in Single-Cell Models.. Clinical and Molecular Hepatology 2026. https://doi.org/10.3350/cmh.2026.0820</li>
 <li>Benchmarking foundation cell models for post-perturbation RNA-seq prediction.. BMC genomics 2025. https://doi.org/10.1186/s12864-025-11600-2</li>
 <li>Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines.. Nature methods 2025. https://doi.org/10.1038/s41592-025-02772-6</li>
+<li>PertEval-scFM: Benchmarking Single-Cell Foundation Models for Perturbation Effect Prediction. bioRxiv 2025. https://doi.org/10.1101/2024.10.02.616248</li>
+<li>Benchmarking single-cell foundation models in a zero-shot setting. bioRxiv 2026. https://doi.org/10.64898/2026.08.03.739553</li>
+<li>Task-dependent Performance of Single-cell Foundation Models under Low Supervision. bioRxiv 2026. https://doi.org/10.64898/2026.04.01.714123</li>
+<li>VCBench: A Multi-Dimensional Benchmark for Single-Cell Foundation Models. bioRxiv 2026. https://doi.org/10.64898/2026.06.18.733146</li>
+<li>A Systematic Evaluation of Single-Cell Foundation Models on Cell-Type Classification Task. Web Search and Data Mining 2025. https://doi.org/10.1145/3701551.3708811</li>
+<li>PerturBench: Benchmarking Machine Learning Models for Cellular Perturbation Analysis. Neural Information Processing Systems 2024. https://doi.org/10.48550/arXiv.2408.10609</li>
 <li>Benchmarking algorithms for generalizable single-cell perturbation response prediction.. Nature methods 2025. https://doi.org/10.1038/s41592-025-02980-0</li>
+<li>scArchon: a scalable benchmarking framework for assessing single-cell perturbation models.. Genome biology 2026. https://doi.org/10.1186/s13059-026-04104-z</li>
 <li>Counting cells can accurately predict small-molecule bioactivity benchmarks.. Nature communications 2026. https://doi.org/10.1038/s41467-026-68725-5</li>
-<li>Benchmarking atlas-level data integration in single-cell genomics. Nature Methods 2020. https://doi.org/10.1038/s41592-021-01336-8</li>
+<li>Harmonised benchmarking of foundation models for single-cell and spatial transcriptomics reveals context-dependent generalisation.  2026. https://arxiv.org/abs/2607.17227</li>
+<li>Evaluating the Utilities of Foundation Models in Single‐Cell Data Analysis. bioRxiv 2024. https://doi.org/10.1101/2023.09.08.555192</li>
+<li>Biology-driven insights into the power of single-cell foundation models. Genome Biology 2025. https://doi.org/10.1186/s13059-025-03781-6</li>
+<li>BioLLM: A standardized framework for integrating and benchmarking single-cell foundation models. bioRxiv 2024. https://doi.org/10.1016/j.patter.2025.101326</li>
+<li>JUMP-lite: Compact, reproducible benchmarking of cell representations.  2026. https://arxiv.org/abs/2608.07632</li>
+<li>Standardized metrics for assessment and reproducibility of imaging-based spatial transcriptomics datasets.. Nature biotechnology 2025. https://doi.org/10.1038/s41587-025-02811-9</li>
+<li>Robustness to nuisance perturbations enables unsupervised evaluation of single-cell foundation models. bioRxiv 2026. https://doi.org/10.64898/2026.08.22.746357</li>
+<li>Systematic evaluation of single-cell foundation model interpretability: attention-derived edge scores add no incremental value over gene-level features for perturbation-target prediction. BMC Genomics 2026. https://doi.org/10.1186/s12864-026-12965-8</li>
+<li>Benchmarking Static Gene Regulatory Network Reconstruction and Dynamic Transition Probing in Single-Cell Foundation Models. bioRxiv 2026. https://doi.org/10.64898/2026.05.17.725083</li>
+</ol></div></details>
+<details class="bg"><summary>虚拟细胞与扰动响应预测<span class="cnt">证据 36 篇 · 覆盖度 0.56 · 第 2 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>本次变更</h2>
+<ul>
+<li>新增 [5] scBalFlow: A Staged Flow Matching Framework for Imbalanced Single-Cell Drug Perturbation Prediction.</li>
+<li>新增 [28] Artificial intelligence-enabled multi-scale virtual cell: perspective, challenges, and opportunities.</li>
+<li>新增 [21] Monotherapy cancer drug-blind response prediction is limited to intraclass generalization.</li>
+<li>新增 [10] RegVelo: Gene-regulatory-informed dynamics of single cells.</li>
+</ul>
+<h2>摘要（TL;DR）</h2>
+<ul>
+<li>早期范式由scGen确立，用变分自编码器在潜空间学习扰动向量并做“潜空间算术”，把扰动响应转化为表征空间方向性变换，但全文未提供、方法细节与基准表现难核验[1]。</li>
+<li>scGPT在超过3300万个单细胞RNA测序图谱上预训练生成式Transformer，把扰动预测纳入通用基础模型统一框架，但未针对扰动数据设计归纳偏置，埋下“通用基础模型是否足够”的争论[2]。</li>
+<li>scKITE以179,067个预训练样本、不足先前强模型0.5%的数据量，通过注入细胞注释与GRN监督在多个下游任务上超越Geneformer、scGPT、scFoundation，知识增强训练带来平均28.8%相对提升，与scGPT的大规模无标注预训练路线形成直接张力[3][2]。</li>
+<li>扩散与流匹配技术族内部差异集中在“如何约束生成过程”：D²R²用掩码离散扩散加调控引导排序在Norman19五项指标最优[4]，scBalFlow用两阶段解耦训练缓解药物扰动类别不平衡[5]，SCALE用条件传输模型处理非配对群体问题并在CRISPR数据7项指标领先[6]。</li>
+<li>数据规模与情境多样性成为另一竞争轴线：X-Cell构建含2560万扰动单细胞、16种生物学情境的X-Atlas/Pisces，在Pearson Δ等指标上优于现有最先进模型最高达五倍[7]；PerturbGen训练于超1亿单细胞，把预测目标转向沿细胞轨迹的扰动响应[8]。</li>
+<li>显式建模调控结构的路线主张GRN可作为预测骨架：D-SPIN从数千扰动条件推断机制可解释的GRN[9]，RegVelo联合建模剪接动力学与基因调控互作并验证tfec、elf1[10]，TFActProfiler整合TF-mRNA先验与RNA-seq图谱实现轻量先验整合[11]。</li>
+<li>最简方法在分布外扰动预测上表现强竞争力：知识图谱KNN击败几乎所有方法，RL优化推理LLM调整邻域后在Replogle 2022细胞系上达SOTA，对复杂生成模型构成尖锐质疑[12]；CellFluxRL用七类奖励后训练CellFlux，说明生成质量与生物学正确性之间需额外约束机制弥合[13]。</li>
+<li>应用层面扰动预测正从“预测表达变化”走向“预测可干预的因果结构”：scDEFT把药物视为条件算子在116万细胞IBD图谱上治疗前应答分层AUROC达0.70[14]，UniPert-G2CP用两阶段框架桥接遗传与化学筛选实现跨模态表型迁移[15]。</li>
+<li>细胞世界模型出现定义层、预测层与精炼层三条路线：VCWM框架把虚拟细胞定义为有状态动态系统并写入长程规划能力但未报告任何定量结果[16]，Chreode实现一步式残差转移算子在240万细胞小鼠胚胎图谱预训练、GEARS上DE20 MSE从0.2121降至0.1858但明确不声称规划能力[17]，CellScientist用假设—实现闭环把PCC从0.3416提升至0.4368但依赖LLM代理[18]。</li>
+<li>评测效度面临三重质疑：2220万细胞预训练400个模型、6400次实验发现性能在数据规模远小于现有语料时即达平台期且无明确数据缩放定律[19]；细胞级随机划分会泄漏组内答案，患者队列中的泄漏足以推翻临床结论[20]；药物盲性能显著下降、部分模型完全失败，泛化主要限于同类内[21]。</li>
+<li>领域分歧集中在三个层面：表征与生成之争（scGPT/scKITE对OCOO-T/D²R²/scBalFlow/SCALE，KNN结果质疑复杂生成是否必要）[2][3][22][4][5][6][12]、数据规模与知识注入之争[7][8][3][11]、预测目标之争（静态表达谱、轨迹重塑、状态比例、治疗前分层与跨模态迁移定义不一导致基准难直接比较）[2][8][9][14][15]。</li>
+<li>数据资源呈分层图景：转录组规模已达亿级[23]、蛋白动态达千万级[24]，但原代与体内覆盖仍稀疏[25][26]、空间维度刚起步[27]，如何在异质资源间建立可比的扰动响应表征仍是核心争议。</li>
+<li>AIVC被提出为整合细胞生物学、AI算法与多尺度建模的研究范式，综述梳理VCell、E-Cell、CellML、JCVI-syn3A、scFoundation（1亿参数、5000万+细胞）、GET（覆盖213种人类细胞类型）等模型，但跨尺度整合、泛化性与标准化仍具挑战，现有证据更支持将其视为多路线并行的研究议程而非已完成统一验证的单一系统[28]。</li>
+</ul>
+<h2>1 背景与定义</h2>
+<p>虚拟细胞与扰动响应预测的边界，首先由“扰动”这一操作定义划定：它要求模型预测细胞在遗传干预（CRISPR敲除/敲低/激活）、化学暴露（药物、剂量）或环境刺激下，从对照状态向处理状态的转移，而非仅仅描述静态细胞图谱。这一方向与常规单细胞分析流程的分野在于，前者必须处理<strong>反事实</strong>问题——预测未实际观测的扰动结果，而后者通常只做聚类、注释或差异表达[16]。早期工作把扰动响应压缩为潜空间中的方向性变换[1]，随后预训练-微调范式将其纳入通用基础模型[2]，而2026年前后出现的世界模型框架则进一步主张建模对象应是<strong>细胞系统本身</strong>，使干预效应在演化状态中传播，而非仅优化某个任务端点[16]。这一演化脉络的核心张力在于：扰动响应究竟是一个可以用生成模型拟合的分布转移问题，还是一个需要显式调控结构与因果假设的系统动力学问题。</p>
+<p>从技术族看，当前方法可粗分为三条路线。其一是<strong>端到端生成分布</strong>：SCALE用条件传输模型处理对照与处理细胞非配对的情形，把细胞表示为无序集合、以条件DiT骨干学习潜传输[6]；OCOO-T用普通Transformer直接作用于连续表达谱，把预测建模为连续时间去噪[22]；D²R²用掩码离散扩散做基因级渐进生成，并以对照GRN初始化调控策略模块、经组相对策略优化微调排序[4]；scBalFlow则针对药物扰动中弱响应样本占多数导致的偏向，用两阶段解耦训练与Flow Matching合成高响应样本[5]。其二是<strong>显式调控结构</strong>：D-SPIN从跨数千扰动条件的单细胞数据推断可解释、可生成的基因调控网络模型，通过重构调控相互作用解释状态比例变化[9]；RegVelo联合建模剪接动力学与基因调控互作，在斑马鱼神经嵴发育中预测终态与扰动模拟[10]；TFActProfiler整合TF-mRNA先验与大规模RNA-seq图谱，用聚类正则化回归学习带符号调控系数，无需额外训练即可预测TF扰动转录组响应[11]。其三是<strong>表征预训练加下游适配</strong>：scGPT在超过3300万单细胞图谱上预训练生成式Transformer[2]，scKITE则以不足先前强模型0.5%的样本量、通过注入细胞注释与GRN监督在多个下游任务上超越Geneformer、scGPT等[3]。三条路线的分歧不在于是否使用深度学习，而在于<strong>扰动特异性监督信号从何而来</strong>：生成路线依赖端点对齐或分布匹配，调控路线依赖先验网络，预训练路线依赖观察性图谱的迁移能力。</p>
+<p>这一分歧在评测层面被放大为效度争议。标准化模块化基准在未见细胞情境、未见扰动和跨数据集泛化等场景下评估多种模型，结论是<strong>常用设置高估性能</strong>，严格条件下鲁棒性有限，且不同指标导致模型排名差异显著[29]。系统评测覆盖13个模型与多种简单基线，发现扰动效应幅度强烈影响泛化与双扰动预测，细胞类型迁移中源-目标转录组距离越大准确率越低[30]。更尖锐的证据来自最简方法：利用知识图谱的KNN模型在扰动预测上击败几乎所有方法，经强化学习优化推理LLM调整邻域后在Replogle 2022细胞系上达到SOTA[12]。这直接质疑复杂生成模型的增益究竟来自生成能力还是先验知识。与此同时，预训练规模研究用2220万细胞预训练400个模型、开展6400次实验，发现性能在数据规模远小于现有语料时即达平台期，且<strong>无明确数据缩放定律</strong>[19]；泄漏研究则指出细胞级随机划分会因同克隆或同患者细胞共享标签而泄漏组内答案，患者队列中的泄漏足以推翻临床结论[20]。这些结果共同说明，<strong>“模型很强”的表象可能同时来自容量投入的边际递减与评估划分的信息泄漏</strong>，而非真正的分布外泛化能力。</p>
+<p>数据资源的扩张并未自动解决上述效度问题，反而暴露出覆盖度与生理相关性之间的权衡。Tahoe-100M以1亿转录组、50个癌细胞系、1100种药物-剂量条件构建十亿级药物扰动图谱，用Mosaic平台把遗传背景各异的细胞模型多重化为“细胞村”以压低批次效应[23]；基因组规模Perturb-seq以CRISPRi靶向全部表达基因、覆盖超过250万人类细胞，从转录表型反推功能未知基因并识别非整倍体驱动因素[31]。两者确立了“全基因组×单细胞读出”的范式，但均受限于CRISPRi细胞系，未覆盖体内与激活扰动。原代CD4⁺T细胞工作以4名供体、2200万细胞在静息与刺激两种状态下测量全表达基因扰动效应，发现活跃调控因子及其所控程序随刺激条件剧变[25]；iGOF-Perturb-seq把功能获得性扰动搬入小鼠星形胶质细胞，构建约1000个转录因子的体内功能图谱[26]；SPAC-seq以空间CRISPR筛选把基因扰动与空间表型关联[27]；ProteinTalks则以超过3800万条时序蛋白丰度测量预训练虚拟细胞模型，在药物疗效与协同预测、患者分层及类器官候选药物排序上优于所选基准[24]。这些资源呈现分层图景：转录组规模已达亿级，蛋白动态达千万级，但原代与体内覆盖仍稀疏，空间维度刚起步，<strong>如何在这些异质资源间建立可比的扰动响应表征，仍是尚未解决的核心问题</strong>。</p>
+<p>在评测基准层面，2026年虚拟细胞挑战赛把目标设定为跨多个独立细胞情境的零样本预测，要求参赛者在Arc新数据集上预测未见细胞系中的基因敲低响应[32]；AssayBench基于1920个公开CRISPR筛选、5类表型，把筛选预测建模为基因排序任务并引入调整nDCG指标，发现现有方法远未达性能上限，且零样本通用LLM优于生物学专用LLM和可训练基线[33]；scArchon标准化评估九种工具并提供容器化可复现流程，但明确仅限非遗传扰动[34]。这些基准的共同贡献是把“泛化”从口号变成可操作的压力测试，但其覆盖范围差异明显：挑战赛聚焦基因敲低与细胞情境迁移，AssayBench把任务简化为排序，scArchon排除遗传扰动，系统评测则横跨CRISPR、药物与免疫刺激[32][33][34][30]。<strong>基准之间任务形态与扰动模态的不一致，使得“哪个模型更强”的跨基准比较本身缺乏稳固基础</strong>。</p>
+<p>因果解释与药物盲泛化进一步划定了当前能力的边界。关于反式调控单细胞CRISPR筛选的综述强调，统计方法需附加因果假设，且仅能识别一个基因敲低对另一基因的因果效应，无法直接推断两基因间的因果效应[35]；Perturb-seq流形工作则从高维单细胞转录表型构建细胞状态流形，把每个扰动与遗传互作投影到特定位置，实现通路无偏排序与遗传互作系统分类，但依赖生长表型挖掘的强遗传互作，覆盖有限[36]。在药物方向，一项研究比较混合集、癌症盲与药物盲划分，发现模型通常能做癌症盲预测，但<strong>药物盲性能显著下降</strong>，部分模型完全失败，药物盲泛化主要限于同类内[21]。这些结果与系统评测中“效应幅度影响泛化”的结论方向一致，但前者把失败归因于药物盲这一特定划分，后者则强调扰动类型与细胞类型距离，二者对泛化失败主因的判断并不相同[30][21]。</p>
+<p>细胞世界模型作为该方向的最新框架，把上述问题重新组织为“建模细胞系统本身”而非“优化任务端点”。VCWM框架将虚拟细胞定义为多模态、多尺度、有状态的动态计算系统，引入世界模型以支持动作条件仿真、反事实推理与长程规划，并给出架构、数据框架、训练策略与评估原则[16]。Chreode则把这一理念工程化为一步式残差转移算子，在240万细胞小鼠胚胎图谱上预训练，在造血与胰岛分化微调及GEARS扰动预测上优于PI-SDE、PRESCIENT、GEARS与动态OT等基线，但作者明确表示该模型仅做预测建模、<strong>不声称具备规划或推演能力</strong>[17]。CellScientist关注预测失败难以归因的问题，把高层假设空间与低层可执行实现空间耦合，将执行偏差路由回假设层或实现层的定向更新，形成假设—实现—假设闭环，在形态学与转录组基准及单细胞扰动评估中优于参考基线并产生可审计的精炼轨迹，但其精炼依赖LLM代理、长程工作流仍然脆弱[18]。三者分别覆盖定义层、预测层与精炼层，但彼此尚未形成统一评估：VCWM无实验，Chreode拒绝规划主张，CellScientist的增益来自代理驱动的迭代而非模型本身的动力学能力。<strong>“细胞世界模型是否应具备规划能力”以及“闭环精炼能否替代更强的动力学建模”，仍是悬而未决的争议</strong>[16][17][18]。</p>
+<p>产业与转化层面的证据则把扰动预测推向可干预的因果结构。scDEFT把药物视为细胞表征的条件算子，用特征级线性调制生成药物条件化潜变量，在116万细胞IBD图谱上状态变化预测达headroom的45%、治疗前应答分层AUROC达0.70，而标准预测器仅达随机水平[14]；UniPert-G2CP用两阶段框架统一多模态分子扰动表征并实现遗传到化学的表型迁移学习，联合分析揭示药物响应异质性[15]。两者都把扰动预测推向临床相关决策，但前者强调反事实分层、后者强调跨模态迁移，对“因果”的操作化定义存在差异[14][15]。综合来看，该方向当前的核心问题已从“能否预测扰动响应”转向<strong>“在何种情境、何种扰动模态、何种评估协议下预测才算有效”</strong>：生成模型、调控网络与预训练表征三条路线各有证据支持，但扰动特异性监督、外推验证范围与先验质量仍是共同瓶颈，而基准不一致、数据泄漏与规模收益饱和则使领域内的性能比较需要更严格的效度审查[29][19][20]。</p>
+<h2>2 方法学</h2>
+<h3>2.1 扰动响应生成模型</h3>
+<p>单细胞扰动响应预测的早期范式由<strong>scGen</strong>确立：它用变分自编码器在潜空间中学习一个扰动向量，并通过在潜空间加减该向量实现跨细胞类型与跨物种的响应预测[1]。这一"潜空间算术"思路把扰动响应从逐基因回归问题转化为表征空间中的方向性变换，为后续大量生成式工作提供了概念模板，但其证据全文未提供，方法细节与基准表现难以核验[1]。与之形成对照的是<strong>scGPT</strong>，它把预训练-微调范式引入单细胞领域，在超过<strong>3300万个</strong>单细胞RNA测序图谱上预训练生成式Transformer，再通过迁移学习适配细胞类型注释、多批次与多组学整合、扰动响应预测、基因网络推断等任务[2]。scGPT的意义在于把扰动预测放进一个通用基础模型的统一框架中，但它并未专门针对扰动数据设计归纳偏置，这为后续"通用基础模型是否足够"的争论埋下伏笔[2]。</p>
+<p>围绕"基础模型是否必要"这一子问题，2026年前后出现了明显的路线分化。<strong>scKITE</strong>从缩放律角度提出反论：作者分析发现生物知识（细胞文本注释与基因调控信息）本身构成额外的缩放维度，于是用轻量辅助解码器把细胞注释与GRN监督注入共享转录组Transformer编码器，解码器仅在预训练阶段使用[3]。结果是以<strong>179,067个</strong>预训练样本、不足先前强模型<strong>0.5%</strong>的数据量，在多个下游任务上超越Geneformer、scGPT、scFoundation等强scFM，知识增强训练带来平均<strong>28.8%</strong>的相对提升[3]。这一结果与scGPT所代表的"大规模无标注预训练"路线构成直接张力：前者主张数据规模是主要驱动力，后者主张知识注入可以替代数据规模[2][3]。不过scKITE的辅助解码器在预训练后被丢弃，其知识来源依赖注释与GRN推断质量，这一依赖也限制了结论的普适性[3]。同一时期，<strong>OCOO-T</strong>则从架构极简主义切入，用普通Transformer直接作用于连续基因表达谱，把扰动响应预测建模为连续时间去噪过程，通过自适应层归一化和上下文token整合扰动、剂量与细胞系信息[22]。它在Tahoe100M、Replogle、PBMC上达到最先进性能并可扩展至长转录谱，但作者也承认基于扩散/流匹配的方法学习对照到扰动分布仍具挑战[22]。</p>
+<p>在扩散与流匹配这一技术族内部，方法设计的差异集中在"如何约束生成过程"上。<strong>D²R²</strong>把扰动预测重构为调控引导的基因级渐进生成：用掩码离散扩散以序数token逐步重建表达谱，调控策略模块由对照细胞GRN初始化并经组相对策略优化微调排序[4]。在Norman19上五项指标最优、VCC-H1上具竞争力，消融显示生物先验排序优于随机与不确定性启发式，且优先调控的基因与扰动特异TF相符[4]。这提示离散扩散与调控先验的结合可以同时改善精度与可解释性，但其验证仅限两个数据集，且排序策略依赖推断的GRN质量[4]。<strong>scBalFlow</strong>关注的是另一个被忽视的维度——类别不平衡：药物扰动预测中弱响应样本占多数会导致模型偏向，作者提出两阶段解耦训练，第一阶段预测扰动响应强度并用高斯增强推断GAI缓解不平衡，第二阶段跳过弱响应条件并用Flow Matching合成高响应样本[5]。在SciPlex3、McFarland等大规模基准上，scBalFlow显著优于现有SOTA，尤其能捕捉复杂分布偏移并保持单细胞分布一致性[5]。与之相比，<strong>SCALE</strong>处理的是非配对群体问题：对照与处理细胞并非同一批细胞，作者用条件传输模型把细胞表示为无序集合，共享集合感知编码器与条件DiT骨干学习潜传输，使端点监督直接delta对齐[6]。SCALE在CRISPR数据7项指标上优于竞争方法并保持基因靶表示分离，其预测的细胞因子差异经三名供体PBMC实验验证[6]。SCALE与scBalFlow都承认扰动特异性监督仍是难点，但前者强调非配对假设、后者强调不平衡分布，说明"生成什么"与"如何监督"尚未收敛[6][5]。</p>
+<p>数据规模与情境多样性是另一条竞争轴线。<strong>X-Cell</strong>构建了X-Atlas/Pisces，这是迄今最大全基因组CRISPRi Perturb-seq数据集，含<strong>2560万</strong>扰动单细胞转录组、<strong>16种</strong>生物学情境；模型用扩散语言模型通过交叉注意力整合自然语言、蛋白质语言模型、互作网络等多模态先验[7]。在Pearson Δ等关键指标上，X-Cell优于现有最先进模型最高达<strong>五倍</strong>，并展示零样本预测能力[7]。作者明确指出，现有方法多依赖观察性表达图谱而非干预扰动数据，因而难以外推——这一批评直接指向以scGPT为代表的观察性预训练路线[7][2]。<strong>PerturbGen</strong>同样走大规模路线，训练于超<strong>1亿</strong>单细胞转录组，但把预测目标从静态表达谱转向沿细胞轨迹的扰动响应，预测源状态遗传扰动如何塑造下游状态、改变基因程序与轨迹[8]。在免疫挑战、造血与皮肤发育三套多条件人类数据中，它预测IL1B敲除减弱后续细胞因子-干扰素程序，与IL-1β刺激逆转一致[8]。X-Cell与PerturbGen都把"情境"作为核心变量，但前者强调跨情境的零样本泛化、后者强调轨迹上的时序因果，二者对"扰动响应"的定义并不相同[7][8]。</p>
+<p>与上述端到端生成模型相对，一批工作主张显式建模调控结构。<strong>D-SPIN</strong>从跨数千扰动条件的单细胞mRNA-seq数据推断机制可解释且可生成的基因调控网络模型，通过重构调控相互作用解释扰动如何改变细胞状态比例[9]。在Perturb-seq和药物响应数据上，D-SPIN识别细胞命运关键调控因子、解析药物组合的加性基因程序招募，并模拟未观测剂量组合下的免疫细胞群结构变化[9]。<strong>RegVelo</strong>则针对RNA velocity未显式建模基因调控、GRN推断忽略动态性的问题，提出自下而上、可操作且可解释的深度学习框架，联合建模剪接动力学和基因调控互作[10]。它在斑马鱼神经嵴发育的Smart-seq3及共享表达和染色质可及性数据上预测终态、基因互作和扰动模拟，并结合计算机扰动、CRISPR-Cas9敲除和单细胞Perturb-seq验证，确立tfec为早期驱动因子、elf1为色素细胞命运调控因子[10]。<strong>TFActProfiler</strong>走的是更轻量的先验整合路线：它整合TF-mRNA先验与大规模RNA-seq图谱，通过聚类正则化回归学习带符号定量的调控系数，兼顾覆盖度与精度并提供可靠性度量[11]。在多细胞类型TF敲低基准上，TFActProfiler优于现有TF活性推断方法，且无需额外训练即可预测TF扰动转录组响应[11]。这三项工作共同表明，调控网络不是生成模型的附属产物，而可以作为预测的结构骨架；但它们都依赖先验资源或扰动数据覆盖，外推范围尚未被充分验证[9][10][11]。</p>
+<p>值得注意的是，最简方法在分布外扰动预测上反而表现出强竞争力。有工作证明，利用知识图谱的最简<strong>KNN</strong>模型在扰动预测上击败几乎所有方法，而用强化学习优化推理LLM调整邻域后，在Replogle 2022细胞系上达到当前SOTA水平，RL训练还提升了LLM在差异表达预测上的表现[12]。这一结果对复杂生成模型构成尖锐质疑：如果知识图谱KNN已能击败几乎所有方法，那么扩散、流匹配与语言模型的增益究竟来自生成能力还是来自先验知识[12]？该工作的局限在于依赖知识图谱质量且全文未提供[12]。与之呼应，<strong>CellFluxRL</strong>指出图像型虚拟细胞生成会违反物理与生物约束，于是用强化学习后训练CellFlux，设计生物功能、结构有效性与形态正确性三类共<strong>七个</strong>奖励，通过采样-优化交替提升高奖励样本似然[13]。CellFluxRL在所有奖励上持续优于基线CellFlux，测试时扩展进一步提升性能，实现从视觉逼真到生物学有意义的生成[13]。但奖励为加权线性组合、权重设计依赖人工，且仅验证于CellFlux一种生成框架[13]。这两项工作从不同侧面说明，生成质量与生物学正确性之间的鸿沟需要额外的约束机制来弥合[12][13]。</p>
+<p>在应用层面，扰动预测正从"预测表达变化"走向"预测可干预的因果结构"。<strong>scDEFT</strong>把药物视为细胞表征的条件算子，用特征级线性调制生成药物条件化潜变量，冻结后由两个独立头按转录邻域聚合预测状态变化与应答状态，反向阶段排序潜维度并映射到基因[14]。在<strong>116万</strong>细胞的IBD单细胞图谱（3队列、2类药物、51供体）上，状态变化预测达headroom的<strong>45%</strong>，治疗前应答分层AUROC达<strong>0.70</strong>，而标准预测器仅达随机水平[14]。这一对比说明，把药物作为条件算子而非全局扰动向量，可能是获得治疗前分层能力的关键；但该工作仅在IBD两药类上验证，归因结果仍是待实验验证的假设[14]。<strong>UniPert-G2CP</strong>则试图桥接遗传与化学筛选，用两阶段深度学习框架统一多模态分子扰动表征并实现遗传到化学的表型迁移学习，在大规模遗传与化学筛选数据上实现更高效准确鲁棒的扰动因果空间模拟，联合分析揭示药物响应异质性并为药物作用与耐药机制提供见解[15]。其局限在于依赖筛选数据质量且全文未提供[15]。scDEFT与UniPert-G2CP都把扰动预测推向临床相关决策，但前者强调反事实分层、后者强调跨模态迁移，二者对"因果"的操作化定义存在差异[14][15]。</p>
+<p>综合来看，扰动响应生成模型当前的分歧集中在三个层面。其一是<strong>表征与生成之争</strong>：scGPT与scKITE代表"预训练表征+下游适配"路线，OCOO-T、D²R²、scBalFlow、SCALE代表"端到端生成分布"路线，而知识图谱KNN的结果则质疑复杂生成是否必要[2][3][22][4][5][6][12]。其二是<strong>数据规模与知识注入之争</strong>：X-Cell与PerturbGen以数千万至亿级扰动数据追求覆盖与零样本泛化，scKITE与TFActProfiler则以先验知识在极小数据量下取得增益，D-SPIN与RegVelo进一步把调控网络作为结构骨架[7][8][3][11][9][10]。其三是<strong>预测目标之争</strong>：静态表达谱、轨迹重塑、状态比例、治疗前分层与跨模态迁移被不同工作当作"扰动响应"的定义，导致基准之间难以直接比较[2][8][9][14][15]。多数工作都承认扰动特异性监督、外推验证范围与先验质量是共同瓶颈，而scGen作为奠基工作其全文未提供、CellFluxRL仅验证单一框架、D²R²仅两个数据集等限制，也说明该领域的证据强度仍不均衡[1][13][4]。</p>
+<h3>2.2 细胞世界模型与闭环智能体</h3>
+<p>细胞世界模型的核心主张，是把建模对象从「任务端点」转向「细胞系统本身」。[16] 提出的虚拟细胞世界模型（VCWM）框架，明确将虚拟细胞定义为多模态、多尺度、有状态的动态计算系统，并引入世界模型作为操作框架，以支持动作条件仿真、反事实推理与长程规划。其关键论点在于：模型应当刻画底层细胞系统，使干预效应在演化状态中传播，而不是仅优化某个特定任务的预测精度；为此该文给出了架构、数据框架、训练策略与评估原则。但需要指出，这是一篇愿景性论文，<strong>未报告任何定量结果</strong>，也没有给出数据规模，属综述性框架而非实验验证，因此其主张目前仍是待检验的设计原则，而非已被证实的性能优势。</p>
+<p>与之形成对照的是 Chreode 的工程化落地。[17] 将细胞世界模型实现为一步式残差转移算子，预测动作条件下的细胞状态转移，其关键设计是把分布演化从推理时移到训练时，从而实现单次生成，并保留 Waddington 式分解。该工作在 <strong>240 万细胞小鼠胚胎图谱</strong>、7 个数据集上预训练，在造血与胰岛分化微调及 GEARS 扰动预测上均优于 PI-SDE、PRESCIENT、GEARS 与动态 OT 等基线，其中 GEARS 上 DE20 MSE 从 <strong>0.2121 降至 0.1858</strong>（相对提升 12.4%），在 Weinreb 与 Veres 上 Sinkhorn 距离也优于匹配的从头训练模型。值得注意的是，作者明确表示该模型仅做预测建模，<strong>不声称具备规划或推演能力</strong>——这与 VCWM 所强调的长程规划形成直接张力：一方把「世界模型」限定为可验证的预测器，另一方则把规划能力写进框架定义，二者对「世界模型」一词的用法存在实质分歧。</p>
+<p>第三篇证据把问题推向闭环。CellScientist [18] 关注的不是单次预测精度，而是预测失败难以归因这一痛点：它把高层假设空间与低层可执行实现空间耦合，将执行偏差路由回假设层或实现层的定向更新，形成假设—实现—假设闭环。在形态学与转录组基准及单细胞扰动评估中，所选最终模型在固定划分与评估协议下优于参考基线，案例中 PCC 由 <strong>0.3416 提升至 0.4368</strong>，并产生可审计的精炼轨迹。其局限同样明确：精炼依赖 LLM 代理，长程工作流仍然脆弱。综合来看，三项工作分别覆盖了世界模型的定义层、预测层与精炼层，但彼此尚未形成统一评估：VCWM 无实验，Chreode 拒绝规划主张，CellScientist 的增益来自代理驱动的迭代而非模型本身的动力学能力，因此「细胞世界模型是否应具备规划能力」以及「闭环精炼能否替代更强的动力学建模」仍是悬而未决的争议。</p>
+<h2>3 数据与资源</h2>
+<p>虚拟细胞与扰动响应预测的数据基础，正沿着“规模扩张”与“语境深化”两条轴线同步推进。在规模一端，<strong>Tahoe-100M</strong> 以1亿转录组、50个癌细胞系、1100种药物-剂量条件的体量，构建了十亿级单细胞药物扰动图谱，其Mosaic平台通过将遗传背景各异的细胞模型多重化为“细胞村”，在并行分析中压低批次效应，并系统量化增殖、细胞毒性、谱系特异性脆弱性与细胞周期变化，进而用通路特征对作用机制进行分类并揭示脱靶活性[23]。与之呼应的是基因组规模Perturb-seq，它以CRISPRi靶向全部表达基因、覆盖超过250万人类细胞，从转录表型反推功能未知基因的角色，发现了核糖体生物发生的新调控因子CCDC86、ZNF236、SPATA5L1，转录因子C7orf26及线粒体呼吸因子TMEM242，并系统识别非整倍体的遗传驱动因素与后果[31]。两者共同确立了“全基因组×单细胞读出”的范式，但差异同样明显：前者是药物层面的化学扰动，后者是基因层面的抑制性扰动，且均受限于CRISPRi细胞系，未覆盖体内与激活扰动[31]。这一局限恰好被原代T细胞工作部分填补——针对4名供体的2200万原代人CD4⁺T细胞，探针式perturb-seq在静息与刺激两种状态下测量全表达基因扰动效应，发现活跃调控因子及其所控程序随刺激条件剧变，并将扰动特征关联到自身免疫病风险[25]。然而该研究仅4名供体，供体间异质性可能限制泛化[25]，这与Tahoe-100M虽覆盖50个细胞系却止步于癌系、未及原代或体内的取舍形成对照[23]：一个以广度换语境，一个以语境换广度，二者在“覆盖度—生理相关性”的权衡上并未收敛。</p>
+<p>在语境深化的方向上，扰动筛选进一步向体内、空间与蛋白质动态三个维度延伸。<strong>iGOF-Perturb-seq</strong> 将功能获得性扰动搬入小鼠星形胶质细胞，构建约1000个转录因子的体内功能图谱，识别共功能模块并注释未表征TF，在神经炎症模型中鉴定出Ferd3l为治疗候选，其过表达可缓解小鼠阿尔茨海默病症状[26]；相较现有体外或非细胞类型特异筛选方法，它把“细胞类型特异”与“体内”同时纳入，但仅限小鼠模型与星形胶质细胞，向人类转化仍需验证[26]。SPAC-seq则从另一角度切入，以高通量空间CRISPR筛选平台配合TARDIS统计分析工具，将基因扰动与空间表型和通路关联，应用于肿瘤与CD8⁺T细胞，揭示Icam1缺失经免疫抑制促转移、Cd44调控空间表型、以及转录因子-趋化因子受体轴耦合细胞状态与趋化[27]；它填补了现有空间组学与功能扰动关联工具的空白，但未明确说明平台通量与适用组织范围的限制[27]。真正把扰动响应推向“可预测模型”的是<strong>ProteinTalks</strong>：作者生成超过3800万条时序蛋白丰度测量数据，以时序蛋白质组轨迹预训练虚拟细胞模型，学习可迁移的动态潜表示，在药物疗效与协同预测、耐药相关蛋白发现、患者分层及类器官候选药物排序上普遍优于所选基准，并可迁移至患者类器官与临床活检[24]。值得注意的是，该模型主要基于乳腺癌细胞系，需更多体系验证[24]，这与前述T细胞、星形胶质细胞、空间筛选所强调的语境特异性形成张力：一边是跨体系迁移的通用潜表示承诺，一边是各平台反复暴露的细胞类型与供体局限。数据资源因此呈现出一幅分层图景——转录组规模已达亿级[23]、蛋白动态达千万级[24]，但原代与体内覆盖仍稀疏[25][26]，空间维度刚起步[27]，如何在这些异质资源间建立可比的扰动响应表征，仍是虚拟细胞建模尚未解决的核心争议。</p>
+<h2>4 评测与效度批判</h2>
+<p>虚拟细胞模型的评测正从「同分布拟合」转向「分布外泛化」，但不同基准给出的结论并不一致，争议集中在泛化边界究竟由什么决定。2026年虚拟细胞挑战赛把评测目标设定为跨多个独立细胞情境的零样本预测：参赛者需在Arc生成的新数据集上，预测<strong>未见细胞系</strong>中的基因敲低响应，以检验最优模型能否缩小临床前实验预测与人类生物学之间的差距[32]。与之呼应，一项标准化模块化基准框架在未见细胞情境、未见扰动和跨数据集泛化等场景下评估了scGen、scVI、trVAE、CPA、CellOT、GEARS、Squidiff、scGPT等模型，结论是<strong>常用设置下性能被高估</strong>，严格条件下性能显著下降，且不同指标会导致模型排名差异显著[29]。这两项工作都把「未见细胞情境」当作核心压力测试，但前者以竞赛形式给出统一任务，后者强调评估设置本身的不一致才是性能虚高的根源，二者对「当前模型到底有多强」的判断因此存在张力：挑战赛假设存在可比较的最优模型，而模块化基准则暗示排名本身依赖于指标选择[32][29]。</p>
+<p>在扰动类型与任务形态上，各基准的覆盖范围差异明显，直接影响了结论的可比性。scArchon标准化评估了trVAE、scDisInFact、scVIDR、scPRAM、scGen、SCREEN、CPA、scPreGAN、CellOT九种工具，提供MSE、Wasserstein距离等指标及聚合性能排名，并以容器化可复现流程解决软件环境不兼容问题，但其明确<strong>仅限非遗传扰动</strong>，把基因敲除视为独立问题而未纳入[34]。另一项系统评测则覆盖23个公开加2个自建数据集，横跨CRISPR、药物与免疫刺激，系统比较13个预测模型及多种简单基线，发现<strong>扰动效应幅度强烈影响泛化与双扰动预测</strong>，且在细胞类型迁移中源-目标转录组距离越大准确率越低[30]。两者都做多工具横向比较，但前者把遗传扰动排除在外，后者则把遗传与非遗传扰动放在同一框架下，这意味着scArchon的排名无法直接外推到基因敲除场景，而系统评测关于「效应幅度决定泛化」的结论也未必适用于非遗传扰动[34][30]。AssayBench则把任务形态进一步改写：基于<strong>1920个CRISPR筛选</strong>、5类表型、每筛选约13826个基因，将筛选预测建模为基因排序任务并引入调整nDCG指标以跨异质实验比较，结果显示现有方法远未达经验性能上限，且零样本通用LLM优于生物学专用LLM和可训练基线，微调、集成与提示优化还能进一步提升[33]。这一结果与前述「严格条件下性能显著下降」的悲观判断形成对照，但差异可能来自任务被简化为排序而非表达谱重建，且其限制也承认现有扰动模型多针对特定模态、难以直接适用[33][29]。</p>
+<p>评测效度的另一条争议线是预训练规模与数据泄漏，它们分别质疑「更大模型更好」和「随机划分可信」两个默认假设。一项工作用<strong>2220万细胞</strong>预训练400个单细胞基础模型并开展<strong>6400次实验</strong>，评估零样本与微调任务，发现性能在数据规模远小于现有语料时即达平台期，且<strong>无明确数据缩放定律</strong>，提示应平衡模型容量、数据规模与算力而非盲目扩大[19]。这直接挑战了以语料规模为核心竞争力的路线，也间接解释了为何部分基准上模型排名不稳定。与此同时，泄漏研究指出细胞级随机划分会泄漏组内答案，因为同克隆或同患者细胞共享标签；作者提出从暴露度与可检索性两属性在训练前估计泄漏，并给出leakcheck工具，在谱系条形码与患者数据中，<strong>暴露度决定泄漏通道，可检索性决定分数膨胀</strong>，患者队列中的泄漏足以推翻临床结论[20]。把这两项放在一起看，预训练规模收益的饱和与随机划分带来的分数膨胀可能共同造成「模型很强」的错觉：前者说明容量投入边际递减，后者说明部分高分来自信息泄漏而非泛化能力[19][20]。</p>
+<p>因果解释与药物盲泛化则把效度批判推进到「预测什么才算有意义」的层面。关于反式调控单细胞CRISPR筛选的综述介绍了CRISPRi/dCas9-KRAB与Perturb-seq流程，强调统计方法需附加因果假设，相关性方法难有因果解释，且方法<strong>仅能识别一个基因敲低对另一基因的因果效应</strong>，无法直接推断两基因间的因果效应[35]。更早的Perturb-seq流形工作则展示了另一种路径：从高维单细胞转录表型构建细胞状态流形，把每个扰动与遗传互作投影到特定位置，实现通路无偏排序与遗传互作的系统分类，但其局限是依赖生长表型挖掘的强遗传互作，覆盖有限[36]。两者都处理遗传扰动，但前者强调因果识别的假设负担与识别边界，后者强调表型流形的描述性排序能力，前者会质疑后者结论的因果地位，后者则提供了前者所缺乏的高维表型组织方式[35][36]。在药物扰动方向，一项研究比较混合集、癌症盲与药物盲划分，发现模型通常能做癌症盲预测，但<strong>药物盲性能显著下降</strong>，部分模型完全失败，药物盲泛化主要限于同类内，并指出细胞系与患者相关性存疑、实验噪声影响化学特征学习[21]。这与系统评测中「效应幅度影响泛化」的结论方向一致，但后者覆盖免疫刺激与多能干细胞等更广场景，前者则把失败归因于药物盲这一特定划分，二者对「泛化失败的主因是扰动类型还是评估划分」给出了不同侧重[30][21]。</p>
+<h2>5 产业动态</h2>
+<p>（本节暂无入库证据）</p>
+<h2>6 空白与趋势</h2>
+<p>综合已有证据，虚拟细胞与扰动响应预测领域当前最突出的空白，是<strong>「世界模型」这一概念被不同工作以互不兼容的方式使用，却缺乏统一的评估协议来判定谁的主张成立</strong>。[16] 把世界模型定义为支持动作条件仿真、反事实推理与长程规划的有状态动态系统，但该文未报告任何定量结果；Chreode [17] 实现了动作条件下的状态转移预测，却明确拒绝声称具备规划或推演能力；CellScientist [18] 的闭环增益来自 LLM 代理驱动的迭代精炼，而非模型自身的动力学能力。三者分别覆盖定义层、预测层与精炼层，但没有任何一项工作在同一任务上同时检验「预测精度」与「规划/反事实能力」，因此<strong>「细胞世界模型是否应具备规划能力」目前无法被证据裁决</strong>，这是该方向最需要补齐的评测空白。</p>
+<p>第二个空白在于<strong>扰动响应预测的评测效度批判与模型开发之间存在明显脱节</strong>。批判性证据已经相当密集：模块化基准发现常用设置高估性能、严格条件下鲁棒性有限、不同指标导致排名差异显著[29]；scArchon 明确仅限非遗传扰动，把基因敲除排除在外[34]；系统评测发现扰动效应幅度强烈影响泛化与双扰动预测[30]；泄漏研究证明细胞级随机划分会泄漏组内答案，患者队列中的泄漏足以推翻临床结论[20]；预训练规模研究则发现性能在数据规模远小于现有语料时即达平台期且无明确缩放定律[19]。然而，2026年新提出的模型——SCALE [6]、OCOO-T [22]、D²R² [4]、X-Cell [7]、PerturbGen [8]——大多仍以自身选定指标报告「优于SOTA」，<strong>几乎没有工作在 leakcheck 类工具或严格分布外协议下重新验证</strong>。这意味着当前文献中大量「SOTA」声明的可信度尚未被独立检验，<strong>建立强制性的泄漏审计与跨基准复现流程</strong>是一个明确且紧迫的空白。</p>
+<p>第三个趋势是<strong>最简方法与复杂生成模型之间的张力正在扩大，但尚无工作系统刻画「增益来自何处」</strong>。知识图谱 KNN 在 Replogle 2022 上达到 SOTA，RL 优化推理 LLM 调整邻域后进一步提升[12]；AssayBench 发现零样本通用 LLM 优于生物学专用 LLM 和可训练基线[33]；scKITE 以不足先前强模型 0.5% 的数据量超越 Geneformer、scGPT、scFoundation[3]。这些结果共同指向一个未被回答的问题：扩散、流匹配与语言模型的增益，究竟来自生成能力、先验知识，还是仅仅来自更大的有效数据覆盖？<strong>目前没有任何工作做「先验知识 vs 生成架构」的受控消融</strong>——即在同一数据与同一评测下，把知识图谱 KNN、TFActProfiler [11] 这类轻量先验方法与 OCOO-T、D²R² 这类端到端生成模型放在一起，分解各自增益来源。这是一个方法论上可行、但尚无人做的方向。</p>
+<p>第四个趋势是<strong>扰动数据资源正沿「规模」与「语境」两条轴线分层，但跨资源可比表征尚未建立</strong>。规模端已有 Tahoe-100M 的 1 亿转录组、50 细胞系、1100 药物-剂量条件[23]，X-Atlas/Pisces 的 2560 万扰动单细胞、16 种情境[7]，基因组规模 Perturb-seq 的 250 万细胞[31]，以及 ProteinTalks 的 3800 万条时序蛋白丰度测量[24]。语境端则有原代 CD4⁺T 细胞的 2200 万细胞、4 供体、静息与刺激双状态[25]，iGOF-Perturb-seq 的体内星形胶质细胞约 1000 个 TF 图谱[26]，SPAC-seq 的空间 CRISPR 筛选[27]。<strong>这些资源在扰动模态、读出层次、细胞情境与实验平台上高度异质，目前没有任何工作提出可跨资源对齐的扰动响应表征</strong>，导致模型在一个资源上训练后难以直接迁移到另一个，也使得「扰动响应」这一概念在不同论文中实际指代不同对象。</p>
+<p>第五个趋势是<strong>因果识别的边界正在被明确，但预测模型普遍未把这一边界纳入设计</strong>。反式调控单细胞 CRISPR 筛选的综述强调，统计方法需附加因果假设，且<strong>仅能识别一个基因敲低对另一基因的因果效应，无法直接推断两基因间的因果效应</strong>[35]；药物盲研究则发现模型通常能做癌症盲预测，但药物盲性能显著下降甚至完全失败，泛化主要限于同类内[21]。这两项证据共同划定了当前扰动预测的因果天花板：<strong>跨扰动类别、跨基因对直接因果的外推在原理上就受限</strong>。然而，SCALE [6]、scDEFT [14]、UniPert-G2CP [15] 等以「因果」「反事实」为卖点的工作，大多未明确声明其预测属于哪一级因果主张，也未在药物盲或跨类别协议下检验。<strong>把因果识别边界显式写入模型的能力声明与评测协议</strong>，是一个概念上清晰、但几乎无人执行的方向。</p>
+<p>第六个趋势是<strong>闭环智能体开始出现，但其增益归因与长程可靠性尚未被拆解</strong>。CellScientist 通过假设—实现—假设闭环，在固定协议下把 PCC 由 0.3416 提升至 0.4368，并产生可审计的精炼轨迹，但作者承认精炼依赖 LLM 代理、长程工作流仍然脆弱[18]。CellFluxRL 用七类生物与形态奖励对生成模型做 RL 后训练，在所有奖励上优于基线并支持测试时扩展，但奖励为加权线性组合、权重依赖人工，且仅验证于 CellFlux 一种框架[13]。D²R² 用 GRN 初始化调控策略并经组相对策略优化微调排序，在 Norman19 五项指标最优，但仅两个数据集且依赖推断的 GRN 质量[4]。<strong>这些闭环/RL 工作的增益究竟来自更强的动力学建模、代理的迭代搜索，还是奖励工程本身，目前无法区分</strong>；同时，<strong>没有任何工作报告闭环在长程多步扰动组合下的失败模式</strong>，而这恰恰是「细胞世界模型」若要有实用价值必须回答的问题。</p>
+<h2>7 未归类新证据</h2>
+<p>人工智能虚拟细胞（AIVC）被提出为一种整合细胞生物学、AI算法与多尺度建模的研究范式，其核心价值在于把原本分散的技术路径拼接为从单尺度模拟到全链条动态预测的连续链条。该综述系统梳理了 <strong>VCell、E-Cell、CellML、JCVI-syn3A、scFoundation、GET</strong> 等代表性模型，并比较其训练数据、贡献、输出、覆盖范围与局限[28]。其中，<strong>scFoundation 以 1 亿参数、5000 万+细胞规模进行预训练</strong>，而 <strong>GET 覆盖 213 种人类细胞类型</strong>，二者分别代表了大规模预训练与细胞类型覆盖两条不同的能力扩展路线[28]。值得注意的是，这些模型所依赖的数据横跨多组学、单细胞转录组与染色质可及性等多种模态，说明 AIVC 的构建并非单一数据源可以支撑，而是需要在数据层面就完成跨模态对齐[28]。</p>
+<p>从方法与子问题的组织来看，该综述并未把 AIVC 描述为已经落地的单一系统，而是强调它仍是一个正在成形的整合框架。传统机理模型如 VCell、E-Cell、CellML 与 JCVI-syn3A 偏向于对特定尺度或特定过程的显式建模，而 scFoundation、GET 等则偏向于从大规模细胞图谱中学习表征与泛化能力，两者在输出形式、可解释性与适用边界上存在明显差异[28]。这种差异也构成了当前的主要争议点：一方面，AIVC 被期待实现跨尺度的动态预测；另一方面，<strong>跨尺度整合、泛化性与标准化仍具挑战</strong>，意味着不同模型之间尚缺乏统一的评估与衔接标准[28]。因此，现有证据更支持将 AIVC 视为一个多路线并行的研究议程，而非一个已经完成统一验证的单一系统；其前景取决于能否在保持各尺度模型优势的同时，解决数据、表征与评估标准之间的不一致[28]。</p>
+<h2>阶段判断与行动建议</h2>
+<table>
+<thead>
+<tr>
+<th>细分方向</th>
+<th>阶段</th>
+<th>依据（引用数字与 [id]）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1 扰动响应生成模型</td>
+<td><strong>朝阳</strong></td>
+<td><strong>16 篇</strong>、<strong>recent_share 0.88</strong>、<strong>CNS 0.31</strong>；scGPT [2] 1370 引、scGen [1] 729 引；但 2026 新作 X-Cell [7]、RegVelo [10] 仅 <strong>7 引</strong>，方法未收敛</td>
+</tr>
+<tr>
+<td>2.2 细胞世界模型与闭环智能体</td>
+<td><strong>萌芽</strong></td>
+<td>仅 <strong>3 篇</strong>、<strong>year_span 2026-2026</strong>、<strong>recent_share 1.0</strong>、<strong>median_citations 0</strong>；Chreode [17]、A world model of the virtual cell [16]、CellScientist [18] 均为 2026 年新出</td>
+</tr>
+<tr>
+<td>3 数据与资源</td>
+<td><strong>朝阳</strong></td>
+<td><strong>6 篇</strong>、<strong>recent_share 0.83</strong>、<strong>CNS 0.83</strong>；Perturb-seq 图谱 [31] 749 引；2026 新增空间 CRISPR [27]、星形胶质细胞 TF [26]、扰动蛋白组虚拟细胞 [24]</td>
+</tr>
+<tr>
+<td>4 评测与效度批判</td>
+<td><strong>朝阳</strong></td>
+<td><strong>10 篇</strong>、<strong>recent_share 0.9</strong>、<strong>CNS 0.5</strong>；2026 集中出现 scArchon [34]、系统比较 [30]、预训练规模批判 [19]；早期 [36] 435 引</td>
+</tr>
+<tr>
+<td>5 产业动态</td>
+<td><strong>萌芽（证据空缺）</strong></td>
+<td><strong>n_evidence 0</strong>、<strong>recent_share 0.0</strong>，无可核验技术细节发布，暂不构成可切入方向</td>
+</tr>
+</tbody>
+</table>
+<p><strong>整体判断</strong>：这个方向整体处于<strong>朝阳期偏早</strong>，且内部严重分化——<strong>扰动响应生成模型（2.1）已是拥挤的朝阳赛道</strong>（16 篇、CNS 0.31、scGPT 1370 引），而<strong>细胞世界模型与闭环智能体（2.2）仍是萌芽</strong>（仅 3 篇、全为 2026 年、0 引）。真正被低估的是<strong>评测与效度批判（4）</strong>：<strong>10 篇、recent_share 0.9、CNS 0.5</strong>，且已出现"预训练规模/多样性未必有用" [19] 与系统比较 [30] 这类<strong>否定性证据</strong>，说明领域正从"刷模型"转向"验效度"。窗口期判断：<strong>2.1 的纯方法红利约剩 6-12 个月</strong>（accepted_per_round 从 <strong>37 骤降到 4</strong>，coverage 从 <strong>0.607 降到 0.559</strong>，说明增量方法已难被接收）；<strong>2.2 与 4 的窗口约 12-24 个月</strong>。最大不确定性有三：一是<strong>评测标准未定</strong>——scArchon [34] 与系统比较 [30] 尚未形成共识基准，导致"跑赢基线"结论不稳定；二是<strong>数据效度</strong>——Perturb-seq 图谱 [31] 多为细胞系，与类器官/原代/空间语境 [27] 的迁移性未知；三是<strong>世界模型缺闭环验证</strong>——[17]、[16]、[18] 均无引用积累，尚无法判断是范式还是概念包装。</p>
+<p><strong>接下来怎么做</strong>：</p>
+<ol>
+<li>
+<p><strong>做"效度批判 + 类器官扰动"的评测工作，而非再训一个生成模型。</strong> 切入点：用公共 Perturb-seq 图谱 [31] 与空间 CRISPR 数据 [27] 作训练/测试，把 scArchon [34] 与系统比较框架 [30] 迁移到<strong>类器官 + 多组学</strong>语境，产出"哪些扰动在类器官上可预测、哪些不可预测"的效度地图。为什么现在做：<strong>recent_share 0.9、CNS 0.5</strong> 且已有否定性证据 [19]，领域正缺"跨语境效度"这一块，且直接复用你合作项目的类器官多组学数据，边际成本低。</p>
+</li>
+<li>
+<p><strong>把衰老作为扰动轴，切入"上下文依赖的扰动响应"这一未解问题。</strong> 切入点：以衰老/衰老相关扰动为条件变量，在 X-Cell [7] 或 RegVelo [10] 的因果/调控动力学框架上做条件化扩展，用公共数据做 demo、类器官数据做验证。为什么现在做：2.1 已有 <strong>16 篇</strong>但<strong>方法未收敛</strong>（新作仅 7 引），上下文泛化是公认痛点；衰老轴与你的既有积累直接咬合，是差异化切入点而非正面竞争。</p>
+</li>
+<li>
+<p><strong>抢占 2.2 的萌芽位：做一个"最小闭环"的细胞世界模型验证器。</strong> 切入点：以 Chreode [17] 的单步时序动力学与 CellScientist [18] 的闭环精炼为基线，构建"预测扰动 → 选下一个实验 → 用类器官多组学回验"的小闭环，产出可复现的闭环 benchmark。为什么现在做：2.2 仅 <strong>3 篇、全 2026、0 引</strong>，[16] 刚提出概念但无实证，<strong>先做闭环验证者比再做模型更容易占位</strong>，且天然需要你的湿实验合作方。</p>
+</li>
+<li>
+<p><strong>把多模态（转录组 + 蛋白组 + 空间）作为方法差异点，而非再堆单细胞基础模型。</strong> 切入点：对接扰动蛋白组虚拟细胞 [24] 与空间功能基因组 [27]，做跨模态扰动响应的一致性检验与融合预测，产出"模态互补性"证据。为什么现在做：数据资源段 <strong>CNS 0.83、recent_share 0.83</strong>，多模态扰动数据刚到位而融合方法几乎空白；你的多模态建模背景在此处是稀缺能力。</p>
+</li>
+<li>
+<p><strong>避开纯方法红海与产业叙事，把产出锚定在"可复现基准 + 公开 demo"。</strong> 切入点：不做又一个 flow matching/扩散扰动模型（2.1 已 <strong>16 篇</strong>、scGPT 1370 引 [2] 难以超越），而是把上述评测与闭环工作打包成公开 benchmark + 代码，用公共数据 [31] 做 demo、类器官数据做亮点。为什么现在做：<strong>accepted_per_round 37→4、coverage 0.607→0.559</strong> 表明增量方法论文已难被接收，而评测/资源类工作 [34]、[30] 正处上升期；产业段 <strong>n_evidence 0</strong>，说明此处无短期商业噪音，适合做长期学术占位。</p>
+</li>
+</ol>
+<h2>参考文献</h2>
+<ol>
+<li>scGen predicts single-cell perturbation responses. Nature Methods 2019. https://doi.org/10.1038/s41592-019-0494-8</li>
+<li>scGPT: toward building a foundation model for single-cell multi-omics using generative AI. Nature Methods 2024. https://doi.org/10.1038/s41592-024-02201-0</li>
+<li>Towards a knowledge-enhanced single-cell foundation model.  2026. https://arxiv.org/abs/2609.14970</li>
+<li>$D^{2}R^{2}$: Discrete Diffusion with Regulation Reinforcement for Single-Cell Perturbation Prediction.  2026. https://arxiv.org/abs/2608.15288v1</li>
+<li>scBalFlow: A Staged Flow Matching Framework for Imbalanced Single-Cell Drug Perturbation Prediction.. Bioinformatics (Oxford, England) 2026. https://doi.org/10.1093/bioinformatics/btag682</li>
+<li>SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction.  2026. https://arxiv.org/abs/2603.17380v3</li>
+<li>X-Cell: Scaling Causal Perturbation Prediction Across Diverse Cellular Contexts via Diffusion Language Models.  2026. https://doi.org/10.64898/2026.03.18.712807</li>
+<li>Predicting how perturbations reshape cellular trajectories with PerturbGen.  2026. https://doi.org/10.64898/2026.03.04.709254</li>
+<li>D-SPIN constructs regulatory network models from scRNA-seq that reveal organizing principles of perturbation response.. Cell 2026. https://doi.org/10.1016/j.cell.2026.04.028</li>
+<li>RegVelo: Gene-regulatory-informed dynamics of single cells.. Cell 2026. https://doi.org/10.1016/j.cell.2026.04.022</li>
+<li>A transcription factor regulatory atlas for activity inference and perturbation prediction. Nucleic Acids Research 2026. https://doi.org/10.1093/nar/gkag897</li>
+<li>Knowledge Graphs and Reasoning LLMs for Finding Simple Yet Effective Transcriptomic Perturbation Predictors.  2026. https://arxiv.org/abs/2606.08816v1</li>
+<li>CellFluxRL: Biologically-Constrained Virtual Cell Modeling via Reinforcement Learning.  2026. https://arxiv.org/abs/2603.21743v4</li>
+<li>scDEFT: A deep learning framework for drug-effect prediction and counterfactual reasoning.  2026. https://arxiv.org/abs/2609.10831</li>
+<li>UniPert-G2CP bridges genetic and chemical screens from molecular representation to phenotype modeling.. Cell 2026. https://doi.org/10.1016/j.cell.2026.06.005</li>
+<li>A world model of the virtual cell.. Cell 2026. https://doi.org/10.1016/j.cell.2026.08.042</li>
+<li>Chreode: A Cell World Model for One-Step Temporal Dynamics and Perturbation Prediction.  2026. https://arxiv.org/abs/2605.28111v1</li>
+<li>CellScientist: Dual-Space Hierarchical Orchestration for Closed-Loop Refinement of Virtual Cell Models.  2026. https://arxiv.org/abs/2605.07335v1</li>
+<li>Evaluating the role of pretraining dataset size and diversity on single-cell foundation model performance.. Nature methods 2026. https://doi.org/10.1038/s41592-026-03120-y</li>
+<li>Cell-level random splits leak group-owned answers in single-cell benchmarks. bioRxiv 2026. https://doi.org/10.64898/2026.09.09.750484</li>
+<li>Monotherapy cancer drug-blind response prediction is limited to intraclass generalization.. PLoS computational biology 2026. https://doi.org/10.1371/journal.pcbi.1013232</li>
+<li>OCOO-T : A Simple and Scalable Virtual Cell Model for Transcriptional Perturbation Response Prediction.  2026. https://arxiv.org/abs/2606.12838v2</li>
+<li>Tahoe-100M: Mapping drug-induced molecular phenotypes at single-cell resolution.. Cell 2026. https://doi.org/10.1016/j.cell.2026.08.035</li>
+<li>An operational perturbation proteomics-based virtual cell model.. Nature 2026. https://doi.org/10.1038/s41586-026-11001-9</li>
+<li>Genome-scale perturb-seq in primary human CD4&lt;sup&gt;+&lt;/sup&gt; T cells maps context-specific regulators of T cell programs and human immune traits.. Cell 2026. https://doi.org/10.1016/j.cell.2026.08.002</li>
+<li>Mapping transcription factor functions in astrocytes using in vivo gain-of-function Perturb-seq.. Science (New York, N.Y.) 2026. https://doi.org/10.1126/science.adw2156</li>
+<li>Uncovering spatially resolved functional genomics with CRISPR screen sequencing.. Cell 2026. https://doi.org/10.1016/j.cell.2026.04.049</li>
+<li>Artificial intelligence-enabled multi-scale virtual cell: perspective, challenges, and opportunities.. Briefings in bioinformatics 2026. https://doi.org/10.1093/bib/bbag104</li>
+<li>Benchmarking virtual cell models for in-the-wild perturbation response.  2026. https://arxiv.org/abs/2604.27646v1</li>
+<li>A systematic comparison of single-cell perturbation response prediction models.. Science advances 2026. https://doi.org/10.1126/sciadv.aed3414</li>
+<li>Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq. bioRxiv 2021. https://doi.org/10.1016/j.cell.2022.05.013</li>
+<li>Virtual Cell Challenge 2026: Benchmarking zero-shot generalization across cellular contexts.. Cell 2026. https://doi.org/10.1016/j.cell.2026.08.004</li>
+<li>AssayBench: An Assay-Level Virtual Cell Benchmark for LLMs and Agents.  2026. https://arxiv.org/abs/2605.10876v1</li>
+<li>scArchon: a scalable benchmarking framework for assessing single-cell perturbation models.. Genome biology 2026. https://doi.org/10.1186/s13059-026-04104-z</li>
+<li>Causal effect estimation from trans-regulatory single-cell CRISPR screens.. Cell genomics 2026. https://doi.org/10.1016/j.xgen.2026.101251</li>
+<li>Exploring genetic interaction manifolds constructed from rich single-cell phenotypes. Science 2019. https://doi.org/10.1126/science.aax4438</li>
 </ol></div></details>
 <details class="bg"><summary>世界模型与自监督表征学习<span class="cnt">证据 65 篇 · 覆盖度 0.46 · 第 3 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>

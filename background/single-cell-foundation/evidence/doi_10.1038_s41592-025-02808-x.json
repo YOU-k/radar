@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-025-02808-x",
+  "title": "Deep generative modeling of sample-level heterogeneity in single-cell genomics.",
+  "url": "https://doi.org/10.1038/s41592-025-02808-x",
+  "abstract": "Single-cell genomic studies were recently conducted on hundred of samples exhibiting complex designs. These data have tremendous potential for discovering how sample- or tissue-level phenotypes relate to cellular and molecular composition. However, current analyses are often based on simplified representations of these data by averaging information across cells. We present multi-resolution variational inference (MrVI), a deep generative model designed to realize the potential of cohort studies at the single-cell level. MrVI tackles two fundamental, intertwined problems: stratifying samples into groups and evaluating the cellular and molecular differences between groups, without requiring predefined cell states. Leveraging its single-cell perspective, MrVI detects clinically relevant stratifications of cohorts of people with COVID-19 or inflammatory bowel disease that are manifested in only certain cellular subsets, enabling new discoveries that would otherwise be overlooked. MrVI can de novo identify groups of small molecules with similar biochemical properties and evaluate their effects on cellular composition and gene expression in large-scale perturbation studies. MrVI is an open-source tool at scvi-tools.org .",
+  "authors": "Boyeau P, Hong J, Gayoso A, Kim M, McFaline-Figueroa JL, Jordan MI, Azizi E, Ergen C, Yosef N.",
+  "venue": "Nature methods",
+  "year": 2025,
+  "citations": 27,
+  "found_by": [
+   "eupmc:generative model cell state si"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12615264",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "MrVI深度生成模型处理样本级异质性，方法有实质新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Methods样本级异质性生成模型，单细胞队列分析必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "MrVI层次深度生成模型",
+  "data": "多样本单细胞基因组数据，可扩展至百万细胞",
+  "scenario": "样本级异质性探索与比较分析",
+  "benchmark": "常规整合、DE/DA方法及VAE类方法",
+  "results": "无需先验聚类即可识别样本分组，实现高分辨无注释DE/DA并控制批次，整合性能领先",
+  "availability": "scvi-tools中提供",
+  "limitations": "依赖深度生成模型，效应估计与不确定性建模仍有假设",
+  "summary": "提出MrVI概率框架分析多样本单细胞基因组。基于反事实分析和层次深度生成模型，用交叉注意力建模样本协变量效应。可在无先验聚类下探索样本分组，并高分辨进行无注释差异表达与丰度分析，整合性能优于常用方法。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 5,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.08.004",
+  "title": "Virtual Cell Challenge 2026: Benchmarking zero-shot generalization across cellular contexts.",
+  "url": "https://doi.org/10.1016/j.cell.2026.08.004",
+  "abstract": "The Virtual Cell Challenge returns in 2026 with a more demanding test of biological generalization: zero-shot prediction across multiple independent cellular contexts. Participants will build models to predict gene knockdown responses in a new Arc-generated dataset comprising unseen cell lines. The goal is to determine whether the best models can meaningfully close the gap between preclinical experimental predictions and human biology.",
+  "authors": "Arc Virtual Cell Initiative Team, Goodarzi H.",
+  "venue": "Cell",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Virtual Cell Challenge官方基准，零样本泛化评测，方向核心",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell刊Virtual Cell Challenge基准，零样本泛化评测关键",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "零样本泛化基准挑战赛",
+  "data": "Arc生成的新数据集，含未见细胞系",
+  "scenario": "跨细胞情境零样本预测",
+  "benchmark": "多独立细胞情境下基因敲低响应预测",
+  "results": "",
+  "availability": "",
+  "limitations": "",
+  "summary": "2026年虚拟细胞挑战赛提出更严苛的生物学泛化测试：跨多个独立细胞情境的零样本预测。参赛者需在新Arc数据集上预测未见细胞系中的基因敲低响应。目标是检验最优模型能否缩小临床前实验预测与人类生物学之间的差距。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

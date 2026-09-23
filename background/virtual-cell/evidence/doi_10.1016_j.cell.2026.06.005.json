@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.06.005",
+  "title": "UniPert-G2CP bridges genetic and chemical screens from molecular representation to phenotype modeling.",
+  "url": "https://doi.org/10.1016/j.cell.2026.06.005",
+  "abstract": "Systematically simulating and predicting phenotypic effects of diverse interventions across heterogeneous cellular environments is central to the vision of artificial intelligence virtual cell (AIVC). However, disparities in perturbagen modalities, assay formats, and data production efficiency hinder unified modeling and analysis of genetic and chemical screens. This study presents UniPert-G2CP, a two-stage deep learning framework that bridges genetic and chemical screens by unifying multimodal molecular perturbagen (cause) representations and enabling genetic-to-chemical perturbation phenotype (effect) transfer learning. Validated on large-scale genetic and chemical screening datasets, UniPert-G2CP enables more efficient, accurate, robust, interpretable, and generalizable simulation of multicellular and multidomain perturbation cause-effect spaces. Further joint analysis of these spaces reveals cellular heterogeneity underlying drug responses, providing mechanistic insights into drug action and resistance. Collectively, UniPert-G2CP advances universal biological causal modeling, accelerates AIVC realization, and expands the potential of AI-powered precision medicine.",
+  "authors": "Li Y, Zeng M, Zhu J, Liu L, Wang F, Huang L, Yang F, Li M, Yao J.",
+  "venue": "Cell",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "统一遗传与化学扰动表型预测框架，契合AIVC方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell刊AIVC框架，统一遗传化学扰动预测，有代码",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "UniPert-G2CP：两阶段统一分子表征与表型建模",
+  "data": "大规模遗传与化学筛选数据集",
+  "scenario": "遗传与化学筛选桥接预测",
+  "benchmark": "大规模遗传与化学筛选数据集",
+  "results": "实现更高效准确鲁棒的扰动因果空间模拟，揭示耐药机制",
+  "availability": "",
+  "limitations": "全文未提供，依赖筛选数据质量",
+  "summary": "UniPert-G2CP是两阶段深度学习框架，统一多模态分子扰动表征并实现遗传到化学的表型迁移学习。在大规模遗传与化学筛选数据上验证，实现更高效准确鲁棒的扰动因果空间模拟。联合分析揭示药物响应异质性，为药物作用与耐药机制提供见解。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

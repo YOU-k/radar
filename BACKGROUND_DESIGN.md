@@ -100,15 +100,18 @@ RADAR_LIVE=1 python -m pytest tests/background/test_live.py             # 真 AP
 - 实跑修掉的问题：纯引用排序被通用方法挤占 → 相关性优先；Europe PMC 限流返回空 → 重试；全文 URL 错 → 修正并按 DOI 反查 pmcid；综合节被误挂论文 → 按节名判定并自动摘下；LLM 重复写标题 → 剥离。
 - 边缘案例合理：TransformEHR / Hi-BEHRT 生物专家 yes、媒体专家 no（非生物库级），记录待复审。
 
-### 五个方向现状（2026-09-23）
+### 六个方向现状（2026-09-23 收尾）
 
-| 方向 | 轮 | 证据 | 全文 | 种子命中 | 子题饱和 | 高引覆盖 | 覆盖度 | 报告字数 |
-|---|---|---|---|---|---|---|---|---|
-| population-omics-ai | 7 | 90 | 54 | 1.00 | 0.67 | — | 0.83 | 5.4 万 |
-| aging-multimodal | 2 | 51 | 32 | 1.00 | 0.56 | 0.38 | 0.62 | 4.0 万 |
-| single-cell-foundation | 2 | 48 | 38 | 1.00 | 0.70 | 0.28 | 0.62 | 4.2 万 |
-| world-models-ssl | 3 | 65 | 26 | 0.40 | 0.38 | 0.56 | 0.46 | 3.9 万 |
-| research-agents-rlvr | 3 | 91 | 35 | 0.75 | 0.56 | 0.74 | 0.69 | 6.3 万 |
+| 方向 | 轮 | 证据 | 全文 | 覆盖度 | 报告 | 备注 |
+|---|---|---|---|---|---|---|
+| population-omics-ai | 7 | 90 | 54 | 0.83 | 5.3 万字 | 平台期停 |
+| aging-multimodal | 4 | 71 | — | 0.62 | — | 平台期停；每轮新候选 20 篇左右，检索面已尽 |
+| single-cell-foundation | 5 | 86 | — | 0.65 | — | 平台期停 |
+| virtual-cell（窄主题） | 2 | 36 | — | 0.56 | — | 第 2 轮 60 候选只收 4，检索词需调 |
+| world-models-ssl | 3 | 65 | 26 | 0.46 | — | S2 限速拖累种子 |
+| research-agents-rlvr | 3 | 91 | 35 | 0.69 | — | — |
+
+六份报告都含「阶段判断与行动建议」；`_joint` 联合分析、`_resources` 资源登记（348 项，主表 96）已生成。
 
 多方向实跑后新增的机制：Semantic Scholar 关键词源（ML 方向 EuropePMC 无覆盖、arXiv 本机 406）；S2 429 指数退避 + 可选 `S2_API_KEY`；
 同一篇论文的 DOI / arXiv / PMID 互认（`alt_ids`），种子命中与去重都按此；S2 不通时经 DataCite / Crossref 取标题链接种子；
