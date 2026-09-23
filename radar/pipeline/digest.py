@@ -44,6 +44,8 @@ def write_digest(items: list[Item], day: date) -> Path:
             journal = it.extra.get("journal")
             src = f"{journal} · {it.source}" if journal else it.source
             lines.append(f"  <sub>{src} · {it.published} · {it.authors[:80]}</sub>")
+            if it.extra.get("bg"):
+                lines.append(f"  <sub>定位：{it.extra['bg']}</sub>")
             if it.deepread:
                 body = "\n".join(f"  {l}" for l in it.deepread.splitlines())
                 lines.append(f"  <details markdown=\"1\"><summary>深读</summary>\n\n{body}\n\n  </details>")

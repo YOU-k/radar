@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/nar/gkae1102",
+  "title": "Immunosenescence Inventory-a multi-omics database for immune aging research.",
+  "url": "https://doi.org/10.1093/nar/gkae1102",
+  "abstract": "The immune system is intricately interconnected with all other bodily systems. As individuals age, the immune system undergoes changes known as immunosenescence, increasing susceptibility to disease, and contributing significantly to the morbidity and mortality observed in older populations. Immunosenescence drives systemic aging and therefore represents a key therapeutic target to extend healthy aging. In recent years, the extensive application of omics technologies has broadened our understanding of aging and immunity, necessitating a comprehensive database to encapsulate these advancements and deepen our insights into immune aging in the era of artificial intelligence. The Immunosenescence Inventory is a pioneering database designed to provide a multidimensional and integrative view of the aging immune system. By leveraging cutting-edge omics technologies and analytical tools, Immunosenescence Inventory offers a comprehensive resource for researchers to explore the intricate relationship between immunosenescence and age-related health outcomes. Furthermore, the database, which aids in the creation of diagnostic tools for immune aging conditions, is now publicly available at https://ngdc.cncb.ac.cn/iaa/home.",
+  "authors": "Li H, Zhao W, Yang F, Qiao Q, Ma S, Yang K, Song S, Wang S, Qu J, Liu GH, Bao Y, Zhang W.",
+  "venue": "Nucleic acids research",
+  "year": 2025,
+  "citations": 13,
+  "found_by": [
+   "eupmc:aging multi-omics data resourc"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11701554",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "免疫衰老多组学数据库，公开资源，契合数据图谱",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "免疫衰老多组学数据库，AI时代资源必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建免疫衰老多组学数据库与免疫时钟工具",
+  "data": "单细胞转录组、bulk转录组、表观组、TCR/BCR等多物种数据",
+  "scenario": "免疫衰老研究与免疫时钟计算",
+  "benchmark": "ImmPort、InnateDB、Aging Atlas等既有数据库",
+  "results": "整合知识 curation、多模态数据集和工具；提供免疫细胞识别与免疫时钟计算；覆盖多物种和年龄阶段",
+  "availability": "开放获取",
+  "limitations": "数据库整合依赖已有数据；未提供统一预测性能基准；单细胞免疫衰老覆盖仍有限",
+  "summary": "作者提出Immunosenescence Inventory，一个面向免疫衰老的多组学数据库。它整合单细胞转录组、bulk转录组、表观组和TCR/BCR数据，并提供知识图谱、多模态数据集和工具。工具包括免疫细胞识别和免疫时钟计算，用于评估生物年龄、预测年龄相关疾病和干预影响。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

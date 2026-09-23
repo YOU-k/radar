@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-026-72198-x",
+  "title": "RegFormer: a single-cell foundation model powered by gene regulatory hierarchies.",
+  "url": "https://doi.org/10.1038/s41467-026-72198-x",
+  "abstract": "Single-cell RNA sequencing (scRNA-seq) enables high-resolution profiling of cellular diversity, but current computational models often fail to incorporate regulatory priors, handle data sparsity, or efficiently process long gene sequences. Here, we present RegFormer, a foundation model that integrates gene regulatory networks (GRNs) with Mamba-based state-space modeling, overcoming the scalability and context-length limitations of Transformer architectures. RegFormer encodes each gene through dual embeddings, a value embedding for quantitative expression and a token embedding for regulatory identity, organized within a GRN-guided gene order to capture both expression dynamics and hierarchical regulation. Pretrained on 25 million human single cells spanning 45 tissues and diverse biological contexts, RegFormer achieves superior scalability and biological fidelity. Across comprehensive benchmarks, it consistently outperforms state-of-the-art single-cell foundation models (scGPT, Geneformer, scFoundation, and scBERT), delivering higher clustering accuracy, improved batch integration, and more precise cell type annotation. RegFormer also reconstructs biologically coherent GRNs, accurately models transcriptional responses to genetic perturbations, and enhances drug response prediction across cancer cell lines. By combining regulatory priors with efficient long-sequence Mamba modeling, RegFormer establishes a biologically grounded and scalable framework for single-cell representation learning, enabling deeper mechanistic insight into gene regulation and cellular state transitions.",
+  "authors": "Hu L, Qin H, Zhang Y, Lu Y, Qiu P, Guo Z, Cao L, Jiang W, Shen Y, Chen Q, Shang Y, Xia T, Deng Z, Xu X, Zhao H, Fang S, Li Y, Zhang Y.",
+  "venue": "Nature communications",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "eupmc:spatial transcriptomics founda"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13376892",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "融合基因调控网络的单细胞基础模型，方法有实质新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "整合基因调控网络的单细胞基础模型，Nature子刊，有公开权重",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "RegFormer：融合基因调控层级与Mamba的单细胞基础模型",
+  "data": "2500万人类细胞生成式预训练",
+  "scenario": "单细胞多任务分析",
+  "benchmark": "scGPT、Geneformer等基础模型",
+  "results": "在细胞注释、GRN重建、遗传扰动预测和药物响应建模等基准上持续优于scGPT和Geneformer",
+  "availability": "",
+  "limitations": "序列模型难以捕捉长程依赖和层级结构",
+  "summary": "本文提出RegFormer，一种融合基因调控网络（GRN）先验与Mamba状态空间架构的单细胞基础模型。针对scRNA-seq高维稀疏和无序特性，通过GRN引导的生成式预训练在2500万人类细胞上学习基因表达动态与调控层级。在细胞注释、GRN重建、遗传扰动预测和药物响应建模等基准上持续优于scGPT和Geneformer。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

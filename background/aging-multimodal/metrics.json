@@ -14,5 +14,21 @@
   "score": 0.619,
   "n_evidence": 51,
   "round": 2
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.556,
+  "highcite": 0.4,
+  "score": 0.627,
+  "n_evidence": 64,
+  "round": 3
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.5,
+  "highcite": 0.42,
+  "score": 0.618,
+  "n_evidence": 76,
+  "round": 4
  }
 ]

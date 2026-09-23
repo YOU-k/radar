@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-026-01073-7",
+  "title": "OMICmAge quantifies biological age by integrating multi-omics with electronic medical records.",
+  "url": "https://doi.org/10.1038/s43587-026-01073-7",
+  "abstract": "Biological aging reflects complex cellular and biochemical processes that can be measured across multiple omic layers. Using routine clinical laboratory data from ~31,000 participants in the Mass General Brigham Biobank, we developed EMRAge, a biomarker of mortality risk that can be broadly recapitulated across electronic medical records. Here we show that EMRAge can be modeled using elastic net regression with DNA methylation and multi-omics to generate DNAmEMRAge and OMICmAge, respectively. Both biomarkers are strongly associated with incident and prevalent chronic diseases and mortality, performing comparably or better than current biomarkers across discovery (Massachusetts General Brigham Aging Biobank Cohort, n = 3,451) and validation cohorts (TruDiagnostic, n = 14,213; Generation Scotland, n = 18,672). Importantly, OMICmAge leverages epigenetic biomarker proxies to integrate proteomic, metabolomic and clinical domains while remaining quantifiable from DNA methylation alone. This framework establishes an accessible, scalable measure of biological aging with potential to reveal molecular interconnections that shape healthspan and disease risk.",
+  "authors": "Chen Q, Dwaraka VB, Carreras-Gallo N, Armstrong JF, Sehgal R, Argentieri MA, Richmond A, Aparicio A, Mendez K, Chen Y, Begum S, Kachroo P, Prince N, Guo T, Went H, Mendez T, Lin A, Turner L, Moqri M, Chu SH, Kelly RS, Weiss ST, Rattray NJW, Gladyshev VN, Karlson E, Wheelock CE, Mathé EA, Dahlin A, McGeachie MJ, Marioni RE, Higgins-Chen AT, Smith R, Lasky-Su J.",
+  "venue": "Nature aging",
+  "year": 2026,
+  "citations": 7,
+  "found_by": [
+   "eupmc:proteomic transcriptomic aging"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13004675",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多组学整合衰老时钟，大样本，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging多组学整合时钟，公开系数，跨队列验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "整合多组学与电子病历构建衰老时钟",
+  "data": "MGB约31,264人；多组学子集3,451人；验证14,213/18,672人",
+  "scenario": "生物年龄与慢病死亡风险预测",
+  "benchmark": "EMRAge、DNAmEMRAge、OMICmAge及独立队列",
+  "results": "OMICmAge等与慢病和死亡强相关；MGB开发31,264，验证All of Us 10,769、TruDiagnostic 14,213、Generation Scotland 18,672",
+  "availability": "",
+  "limitations": "依赖电子病历与多组学可得性；跨队列泛化、因果与临床效用仍需验证",
+  "summary": "该研究利用电子病历和多组学数据开发并验证三种生物年龄指标：EMRAge、DNAmEMRAge和OMICmAge。方法上以MGB Biobank约31,000人开发EMRAge，并在多组学子集中训练DNAm和OMICmAge，随后在多个独立队列验证。结果显示这些衰老指标与慢病发生、患病和死亡风险强相关，支持整合多组学信息提升生物年龄评估。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2023.07.18.549537",
+  "title": "Scalable querying of human cell atlases via a foundational model reveals commonalities across fibrosis-associated macrophages",
+  "url": "https://doi.org/10.1101/2023.07.18.549537",
+  "abstract": "Single-cell RNA-seq (scRNA-seq) studies have profiled over 100 million human cells across diseases, developmental stages, and perturbations to date. A singular view of this vast and growing expression landscape could help reveal novel associations between cell states and diseases, discover cell states in unexpected tissue contexts, and relate in vivo cells to in vitro models. However, these require a common, scalable representation of cell profiles from across the body, a general measure of their similarity, and an efficient way to query these data. Here, we present SCimilarity, a metric learning framework to learn and search a unified and interpretable representation that annotates cell types and instantaneously queries for a cell state across tens of millions of profiles. We demonstrate SCimilarity on a 22.7 million cell corpus assembled across 399 published scRNA-seq studies, showing accurate integration, annotation and querying. We experimentally validated SCimilarity by querying across tissues for a macrophage subset originally identified in interstitial lung disease, and showing that cells with similar profiles are found in other fibrotic diseases, tissues, and a 3D hydrogel system, which we then repurposed to yield this cell state in vitro. SCimilarity serves as a foundational model for single cell gene expression data and enables researchers to query for similar cellular states across the entire human body, providing a powerful tool for generating novel biological insights from the growing Human Cell Atlas.",
+  "authors": "Graham Heimberg, Tony Kuo, D. DePianto, Tobias Heigl, N. Diamant, Omar Salem, Gabriele Scalia, Tommaso Biancalani",
+  "venue": "bioRxiv",
+  "year": 2023,
+  "citations": 41,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2024.11.015"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "细胞图谱基础模型，统一表征可查询，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "细胞图谱基础模型，可扩展查询，有公开权重，影响力较高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SCimilarity度量学习基础模型与快速查询",
+  "data": "22.7M细胞，399项已发表scRNA-seq研究",
+  "scenario": "跨组织细胞状态查询与注释",
+  "benchmark": "跨组织细胞类型整合、注释与查询",
+  "results": "实现准确整合、注释和即时查询；验证肺病相关巨噬细胞亚群存在于其他纤维化疾病、组织和3D水凝胶系统",
+  "availability": "",
+  "limitations": "摘要未提供全文，查询性能与稀有细胞状态敏感性未详述",
+  "summary": "作者提出SCimilarity，一个用于学习和搜索统一可解释细胞表示的基础模型。方法上在包含2270万细胞、399项研究的语料上训练度量学习框架，实现细胞类型注释和跨数千万profile的即时细胞状态查询。结果验证了跨组织查询能力，发现最初在间质性肺病中识别的巨噬细胞亚群也存在于其他纤维化疾病、组织和3D水凝胶系统中，并可在体外重现该状态。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

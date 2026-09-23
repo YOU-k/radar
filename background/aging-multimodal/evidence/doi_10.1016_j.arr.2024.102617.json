@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.arr.2024.102617",
+  "title": "Validation Requirements for AI-based Intervention-Evaluation in Aging and Longevity Research and Practice",
+  "url": "https://doi.org/10.1016/j.arr.2024.102617",
+  "abstract": "The field of aging and longevity research is overwhelmed by vast amounts of data, calling for the use of Artificial Intelligence (AI), including Large Language Models (LLMs), for the evaluation of geroprotective interventions. Such evaluations should be correct, useful, comprehensive, explainable, and they should consider causality, interdisciplinarity, adherence to standards, longitudinal data and known aging biology. In particular, comprehensive analyses should go beyond comparing data based on canonical biomedical databases, suggesting the use of AI to interpret changes in biomarkers and outcomes. Our requirements motivate the use of LLMs with Knowledge Graphs and dedicated workflows employing, e.g., Retrieval-Augmented Generation. While naive trust in the responses of AI tools can cause harm, adding our requirements to LLM queries can improve response quality, calling for benchmarking efforts and justifying the informed use of LLMs for advice on longevity interventions.",
+  "authors": "Georg Fuellen, Anton Y Kulaga, Sebastian Lobentanzer, M. Unfried, Roberto Avelar, Daniel Palmer, Brian K. Kennedy",
+  "venue": "Ageing Research Reviews",
+  "year": 2024,
+  "citations": 10,
+  "found_by": [
+   "s2kw:aging clock benchmark foundati"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2408.15264",
+    "pmid:39643211"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI干预评估验证框架，含LLM与知识图谱，契合基准",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "AI干预评估验证标准，衰老AI基准方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出AI干预评估验证要求与LLM知识图谱流程",
+  "data": "衰老与长寿研究数据、生物标志物、纵向数据",
+  "scenario": "AI评估geroprotective干预",
+  "benchmark": "传统生物医学数据库比较与朴素LLM查询",
+  "results": "提出正确、有用、全面、可解释、因果、跨学科、标准、纵向和衰老生物学等要求；建议LLM+知识图谱+RAG并开展基准测试",
+  "availability": "",
+  "limitations": "为观点/要求类论文，未提供具体实验验证或定量结果",
+  "summary": "该文讨论AI和LLM在衰老与长寿干预评估中的验证要求。作者主张评估应正确、有用、全面、可解释，并考虑因果、跨学科、标准、纵向数据和已知衰老生物学。文章建议使用LLM结合知识图谱和检索增强生成，并强调基准测试和避免盲目信任AI。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

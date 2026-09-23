@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.08.14.744845",
+  "title": "Single-cell foundation models benefit from cross-modal training: adding proteomics data beats parameter scaling",
+  "url": "https://doi.org/10.64898/2026.08.14.744845",
+  "abstract": "Leading cellular foundation models have been trained on hundreds of millions of single-cell transcriptomes, with progress increasingly driven by larger datasets and model scaling. Here, we asked whether adding a proteomics modality can improve gene-level and cell-level representations beyond scaling RNA-only models. We introduce cross-modal continued pretraining, fine-tuning a published single-cell model (Tahoe-x1) on a large corpus of proteomic profiles. Training a 70M-parameter Tahoe-x1 model for a single epoch on 48843 proteomic samples from 440 diverse mass-spectrometry studies matched or exceeded 1B- and 3B-parameter RNA-only models across most of the original Tahoe-x1 evaluation benchmarks. This shows that with the right training recipe, heterogeneous proteomics data can improve the learned representations of single-cell RNAseq samples, demonstrating strong out-of-distribution generalization. Cross-modal pretraining also improves transfer to a held-out protein perturbation benchmark, where scaling the RNA-only model does not provide comparable benefits. These results demonstrate that careful targeted curation of proteomics data can provide larger benefits than increasing the model size alone and suggest that multimodal pretraining is a promising path toward more informative biological foundation models.",
+  "authors": "Maximilien Burq, Peter Cimermancic, Charlie Kim, Dejan Štepec",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41592-025-02772-6"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨模态蛋白组预训练提升基础模型，多模态整合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨模态蛋白组预训练提升基础模型，方法有转折意义",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨模态继续预训练：RNA模型加入蛋白质组数据",
+  "data": "48,843个蛋白质组样本，440项质谱研究；Tahoe-x1 70M参数",
+  "scenario": "跨模态表示学习与扰动迁移",
+  "benchmark": "RNA-only 1B和3B参数模型及Tahoe-x1原评测基准",
+  "results": "70M参数模型单epoch跨模态预训练在多数基准上匹配或超过1B/3B RNA-only模型；提升held-out蛋白扰动基准迁移；RNA-only缩放无同等收益",
+  "availability": "",
+  "limitations": "摘要未提供全文，蛋白质组数据异质性与批次效应可能影响泛化",
+  "summary": "作者研究在单细胞基础模型中加入蛋白质组模态是否能优于单纯扩大RNA模型规模。方法上对已发表的Tahoe-x1模型进行跨模态继续预训练，在来自440项质谱研究的48,843个蛋白质组样本上训练70M参数模型一个epoch。结果显示该模型在多数原Tahoe-x1评测基准上匹配或超过1B和3B参数RNA-only模型，并提升对held-out蛋白扰动基准的迁移，表明精心策划的蛋白质组数据可带来比单纯增大模型规模更大的收益。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

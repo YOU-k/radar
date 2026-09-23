@@ -36,6 +36,10 @@ WebWeaver 的"动态大纲 + 按节只喂该节证据"写法、多角色 AND 规
 | 大纲 | `outline.py` | markdown ↔ 节树；LLM 只输出操作（attach/add_section/rename/detach），程序执行；漏挂进「未归类」 | 可选 | `test_outline.py`：编号、往返、操作幂等、未归类兜底、无 LLM 路径 |
 | 编译 | `compile.py` | 每节只喂该节证据 → 节文本（逐句 `[id]`）→ TL;DR → 装配 → 未知引用剔除 → 编号 + 参考文献 | 是 | `test_compile_metrics.py`：幻觉引用被删、编号、节隔离、空节占位、头部统计 |
 | 指标 | `metrics.py` | 覆盖度 = 种子 0.3 + 饱和 0.3 + 高引 0.4；历史；平台期停止 | 否 | 数值、历史追加、停止判据 |
+| 阶段判断 | `stage.py` | 程序算每个子题的近两年占比 / 年份跨度 / 引用中位数 / CNS 占比 / 逐轮新增衰减 → LLM 打 萌芽/朝阳/成熟/夕阳 并给"算法提供方怎么切入" | 是 | `test_stage_joint_resources.py`：统计正确、综合节不计、报告含该节 |
+| 联合分析 | `joint.py` | 各方向报告的 TL;DR + 阶段判断 + 头部文献 → 全景表 / 交叉点 / 联合项目 / 不要做的事 → `background/_joint/report.md` | 是 | 摘要块提取、报告头、跳过无报告方向 |
+| 资源登记 | `resources.py` | 全部证据的 data/availability 字段 → 命名资源（数据集/模型/基准/数据库/工具）→ 按名合并、方向数与证据数投票 → 链接可达性核验 → 分类型表 | 是 | 挖掘过滤非法类型、合并并集、核验 ok/dead/n/a、渲染 |
+| 日报/周报挂靠 | `context.py` | 日报 ≥6 分条目对照方向大纲 → "落在哪个子题 · 相对已有证据的增量"；周报末尾汇总各方向「本次变更」 | 是 | `test_context.py` |
 | 编排 | `runner.py` | `bootstrap(rounds)` / `renew(inbox)`；日志、指标、末轮编译、平台期提前收尾 | — | `test_runner.py`：2 轮 + renew 端到端、平台期仍编译、无 LLM 只采集、注入全文抓取 |
 
 ## 2. 目录与文件（每方向）
@@ -62,6 +66,13 @@ python -m radar.run background compile --topic <slug>                  # 只重�
 python -m pytest                                                        # 40 个离线测试
 RADAR_LIVE=1 python -m pytest tests/background/test_live.py             # 真 API 契约
 ```
+
+## 3b. 站点与工作流（2026-09-23 整理后）
+
+- 站点 tab：方向背景（默认，`_joint` 联合分析置顶）/ 周报 / 日报 / 资源库（只展示核验过的登记表，日报新发现折叠在下）。
+- 专题报告 tab 与 `deepdive` 命令已下架；原「虚拟细胞」专题改为单细胞方向下的窄主题 `background/virtual-cell/`（months 9）。
+- weekly 工作流顺序：renew 全部方向 → resources → joint → weekly 综合（末尾附各方向本周变更）→ 站点。
+- 日报每条带「定位」行：方向 › 子题 · 增量。
 
 ## 4. 与 radar 的接口
 

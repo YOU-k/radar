@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2408.10609",
+  "title": "PerturBench: Benchmarking Machine Learning Models for Cellular Perturbation Analysis",
+  "url": "https://doi.org/10.48550/arXiv.2408.10609",
+  "abstract": "We introduce a comprehensive framework for modeling single cell transcriptomic responses to perturbations, aimed at standardizing benchmarking in this rapidly evolving field. Our approach includes a modular and user-friendly model development and evaluation platform, a collection of diverse perturbational datasets, and a set of metrics designed to fairly compare models and dissect their performance. Through extensive evaluation of both published and baseline models across diverse datasets, we highlight the limitations of widely used models, such as mode collapse. We also demonstrate the importance of rank metrics which complement traditional model fit measures, such as RMSE, for validating model effectiveness. Notably, our results show that while no single model architecture clearly outperforms others, simpler architectures are generally competitive and scale well with larger datasets. Overall, this benchmarking exercise sets new standards for model evaluation, supports robust model development, and furthers the use of these models to simulate genetic and chemical screens for therapeutic discovery.",
+  "authors": "Yan Wu, E. Wershof, Sebastian M. Schmon, Marcel Nassar, Bla.zej Osi'nski, Ridvan Eksi, Kun Zhang, T. Graepel",
+  "venue": "Neural Information Processing Systems",
+  "year": 2024,
+  "citations": 85,
+  "found_by": [
+   "s2:references:doi:10.1038/s41592-025-02772-6"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2408.10609"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "扰动响应预测的系统评测基准，含基线批判性结果",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "扰动预测系统性评测基准，揭示模型局限，方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PerturBench扰动分析基准框架",
+  "data": "多样单细胞转录组扰动数据集",
+  "scenario": "细胞扰动响应建模基准测试",
+  "benchmark": "已发表模型与基线模型",
+  "results": "揭示广泛使用模型的模式崩溃等局限；秩指标补充RMSE；无单一架构明显占优，简单架构具竞争力且随数据规模扩展良好",
+  "availability": "",
+  "limitations": "数据集覆盖有限；指标对某些任务可能不充分",
+  "summary": "提出PerturBench，一个用于建模单细胞转录组扰动响应的综合基准框架，包含模块化开发评估平台、多样扰动数据集与公平比较指标。对已发表与基线模型进行广泛评估。发现广泛使用模型存在模式崩溃等局限，秩指标可补充RMSE，且无单一架构明显占优，简单架构具竞争力并随数据规模良好扩展。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

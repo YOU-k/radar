@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.02.12.703707",
+  "title": "A stem cell aging clock links biological age deviation to clinical outcome in acute myeloid leukemia",
+  "url": "https://doi.org/10.64898/2026.02.12.703707",
+  "abstract": "",
+  "authors": "Hong-Cheng Chen, Pengwei Dong, Jianing Xu, Guanlin Wang",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:proteomic transcriptomic aging"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "干细胞衰老时钟关联AML临床结局，建模方向契合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "干细胞衰老时钟关联AML临床结局，方向契合",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "干细胞衰老时钟预测临床结局",
+  "data": "急性髓系白血病干细胞数据（未给规模）",
+  "scenario": "急性髓系白血病预后评估",
+  "benchmark": "未提",
+  "results": "生物学年龄偏差与临床结局相关（摘要未给具体数值）",
+  "availability": "",
+  "limitations": "仅有标题，无全文；数据规模、验证与公开性不明",
+  "summary": "该研究提出一个干细胞衰老时钟，用于连接生物学年龄偏差与急性髓系白血病临床结局。方法上以干细胞相关衰老特征构建时钟并评估其与临床表型的关联。发现生物学年龄偏差可能反映疾病预后差异，但具体定量结果与验证细节未在提供文本中给出。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

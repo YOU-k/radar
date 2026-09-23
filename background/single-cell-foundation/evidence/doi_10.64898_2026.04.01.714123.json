@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.04.01.714123",
+  "title": "Task-dependent Performance of Single-cell Foundation Models under Low Supervision",
+  "url": "https://doi.org/10.64898/2026.04.01.714123",
+  "abstract": "Single-cell foundation models are trained on millions of cells, but their value when downstream labels are scarce remains uncertain. Here we compare seven such models with three established representations across clustering, batch correction, cell type annotation, gene expression reconstruction and perturbation prediction. Frozen representations are tested directly for clustering and batch correction and with lightweight task heads for few-shot prediction. CellPLM led the aggregate clustering, annotation and batch-correction comparisons, scMulan led perturbation prediction, and principal component analysis led reconstruction. Of the seven foundation models, one exceeded the strongest classical baseline in clustering, three in batch correction, four in annotation, none in reconstruction and six in perturbation prediction. Representation analyses linked reconstruction performance to preservation of linear gene relationships, but cross-model gene-relation agreement did not exceed a dimension-matched random-projection null. These results show that the utility of a cell representation depends on the information required by the downstream task.",
+  "authors": "Yongjie Xu, Yiyun Li, Yue Yuan, Pan-Pan Cui, Hangyao Tu, Feng-Jun Hu, Zelin Zang",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41592-021-01336-8",
+   "s2:citations:doi:10.1016/j.cell.2022.05.013",
+   "s2:citations:doi:10.1038/s41592-025-02772-6"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统评测单细胞基础模型，含未跑赢基线证据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "系统评测单细胞基础模型低监督表现，含批判性结论",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "七种单细胞基础模型低监督任务系统评测",
+  "data": "七种基础模型与三种经典表示，多任务下游数据",
+  "scenario": "低监督下游任务性能评估",
+  "benchmark": "聚类、批次校正、注释、表达重建、扰动预测",
+  "results": "CellPLM在聚类/注释/批次校正领先；scMulan扰动预测领先；PCA重建领先；7个基础模型中仅1个聚类超过最强经典基线，3个批次校正、4个注释、0个重建、6个扰动预测超过基线",
+  "availability": "",
+  "limitations": "摘要未提供全文，任务与数据集覆盖可能有限",
+  "summary": "作者系统比较了七种单细胞基础模型与三种经典表示在低监督下游任务中的表现。方法上直接测试冻结表示用于聚类和批次校正，并用轻量任务头进行少样本预测，覆盖聚类、批次校正、注释、表达重建和扰动预测。结果显示基础模型价值高度依赖任务：CellPLM在聚类、注释和批次校正中领先，scMulan在扰动预测中领先，PCA在重建中领先，且跨模型基因关系一致性未超过维度匹配随机投影零假设。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

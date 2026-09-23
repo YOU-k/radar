@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.04.025",
+  "title": "Multimodal clocks of human aging.",
+  "url": "https://doi.org/10.1016/j.cell.2026.04.025",
+  "abstract": "Human aging is characterized by complex structural and functional decline, but quantifying its heterogeneity and assessing biological age remain challenges. We present the mCAS (multicentric Chinese aging standardized cohort) developed from 2,019 Chinese individuals aged 18-91 years. Integrating high-dimensional clinical, physiological, and molecular-level data, we constructed a three-tiered aging framework: the core capacity clock (CC-clock) to quantify clinical physiological decline, the multimodal clock (MM-clock) with extensive parameter coverage and enhanced predictive precision, and organ-associated aging clocks. Cross-layer analysis demonstrates that plasma protein clocks not only capture chronological age but also serve as efficient proxies for systemic physiological capacity. Leveraging this framework for discovery, we identified the age-dependent accumulation of coagulation factors as a driver of multi-organ senescence and systemic inflammatory activation. This study provides a foundational framework that bridges molecular signatures with functional decline, identifies new biomarkers for aging assessment, and reveals a novel translational driver of aging.",
+  "authors": "Jia-Ming Li, Bei-Er Jiang, Wei Zhang, Jun-Wei Hao, Zhi-Li Liu, Qian-Zhao Ji, Yandong Zheng, Xiao-Yong Lu",
+  "venue": "Cell",
+  "year": 2026,
+  "citations": 16,
+  "found_by": [
+   "s2kw:biological age multimodal inte"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42105758"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Cell多模态衰老时钟，整合临床分子多层，方法新",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell多模态衰老时钟，跨组织框架，方向转折点",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建三层级多模态衰老时钟框架",
+  "data": "2019名中国18-91岁人群临床、生理、分子多模态数据",
+  "scenario": "中国人群多模态衰老评估",
+  "benchmark": "核心能力时钟、多模态时钟、器官相关时钟",
+  "results": "建立mCAS队列；血浆蛋白时钟可代理系统生理能力；发现凝血因子年龄依赖积累驱动多器官衰老和炎症",
+  "availability": "",
+  "limitations": "样本仅2019名中国人，年龄18-91岁；外部验证和跨族群适用性未说明",
+  "summary": "研究基于2019名18-91岁中国人建立mCAS多中心标准化队列，整合临床、生理和分子数据。作者构建三层级衰老框架：核心能力时钟、多模态时钟和器官相关时钟，并进行跨层分析。发现血浆蛋白时钟可代理系统生理能力，且凝血因子年龄依赖积累驱动多器官衰老和系统性炎症。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

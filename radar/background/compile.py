@@ -49,7 +49,8 @@ def write_section(sec: Section, evs: list[Evidence], spec: TopicSpec, llm: LLM) 
         f"请写约 {paras} 段、不少于 {chars} 字的中文，每篇证据都要被实质性地讨论到，不要只点名。\n"
         "只依据下面的证据写，不要引入证据之外的事实。每个具体论断后面用 [id] 标注来源，"
         "id 原样照抄；保留数字；按方法/时间/子问题组织，对比不同工作的差异与争议，"
-        "证据之间冲突要指出。直接从正文开始，不要写「本节」「综上」「以下为」这类套话。\n\n"
+        "证据之间冲突要指出。关键结论、模型/数据集名称、核心数字用 **加粗**（每段 1-3 处，不要通篇加粗）。"
+        "直接从正文开始，不要写「本节」「综上」「以下为」这类套话。\n\n"
         "【证据】\n" + json.dumps(_ev_rows(evs), ensure_ascii=False)))
     try:
         return strip_headings(llm.chat(prompt, task="compile", temperature=0.3, timeout=300))
@@ -68,7 +69,7 @@ def write_synthesis(sec: Section, spec: TopicSpec, body: str, evs: list[Evidence
         f"你在为方向「{spec.name}」写背景报告的综合节：「{sec.title}」。\n{spec.profile_text()}\n\n"
         "依据下面的证据清单与已写正文，写 3-6 段中文：若是背景/定义类，讲清方向边界、演化脉络、"
         "核心问题；若是趋势/空白类，用编号列表指出趋势与没人做的方向，每条给依据。"
-        "只引用清单里的 [id]，不要编造。直接从正文开始，不要写「以下为…」之类的开场白。\n\n"
+        "只引用清单里的 [id]，不要编造。关键判断用 **加粗**。直接从正文开始，不要写「以下为…」之类的开场白。\n\n"
         "【证据清单】\n" + json.dumps(rows, ensure_ascii=False)[:12000] +
         "\n\n【已写正文】\n" + body[:16000]))
     try:
@@ -101,7 +102,8 @@ def number_citations(text: str, order: list[str]) -> str:
 
 
 def assemble(spec: TopicSpec, outline: Outline, evs: list[Evidence], sections_md: dict[str, str],
-             tldr: str, coverage: float, round_no: int, changelog: str = "") -> str:
+             tldr: str, coverage: float, round_no: int, changelog: str = "",
+             extra_sections: list[tuple[str, str]] | None = None) -> str:
     by_id = {e.id: e for e in evs}
     body_parts = []
     def emit(secs: list[Section], level: int):
@@ -109,6 +111,8 @@ def assemble(spec: TopicSpec, outline: Outline, evs: list[Evidence], sections_md
             body_parts.append(f"{'#' * level} {s.id} {s.title}\n\n{sections_md.get(s.id, '')}")
             emit(s.children, level + 1)
     emit(outline.sections, 2)
+    for title, md in (extra_sections or []):
+        body_parts.append(f"## {title}\n\n{md}")
     body = "\n".join(body_parts)
     used, unknown = check_citations(tldr + body, set(by_id))
     if unknown:
@@ -128,7 +132,8 @@ def assemble(spec: TopicSpec, outline: Outline, evs: list[Evidence], sections_md
 
 
 def compile_report(spec: TopicSpec, outline: Outline, evs: list[Evidence], llm: LLM,
-                   coverage: float, round_no: int, changelog: str = "") -> str:
+                   coverage: float, round_no: int, changelog: str = "",
+                   hist: list[dict] | None = None) -> str:
     by_id = {e.id: e for e in evs}
     sections_md = {}
     synth = []
@@ -142,4 +147,6 @@ def compile_report(spec: TopicSpec, outline: Outline, evs: list[Evidence], llm: 
     for s in synth:  # 综合节最后写，能看到全部正文
         sections_md[s.id] = write_synthesis(s, spec, body, evs, llm)
     tldr = write_tldr(spec, body, llm) if evs else ""
-    return assemble(spec, outline, evs, sections_md, tldr, coverage, round_no, changelog)
+    from .stage import stage_section
+    extra = [("阶段判断与行动建议", stage_section(spec, evs, outline, hist or [], llm))] if evs else []
+    return assemble(spec, outline, evs, sections_md, tldr, coverage, round_no, changelog, extra)

@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.08.22.746357",
+  "title": "Robustness to nuisance perturbations enables unsupervised evaluation of single-cell foundation models",
+  "url": "https://doi.org/10.64898/2026.08.22.746357",
+  "abstract": "Single-cell foundation model evaluations have relied almost exclusively on downstream tasks. While these tasks measure whether an embedding recovers annotated cell types, batches, or trajectories, they cannot determine if that structure is reproducible or merely an artifact of a single noisy draw, a key limitation since incomplete sampling is intrinsic to single-cell measurement. Here, we introduce a fully unsupervised evaluation framework grounded in a fundamental principle: a faithful representation must preserve its neighbourhood structure under nuisance perturbations that mimic technical and sampling variation. Across five scFMs, a PCA baseline, and 39 datasets, we show that models ranked as near-equivalent by standard benchmarks differ nearly twofold in local neighbourhood preservation under a perturbation discarding just 5% of counts. This structural instability is scale-dependent and often masked by visually coherent embeddings. Cluster-level stability under resampling tracks established bio-conservation metrics (Spearman ρ=0.78), showing that invariance to nuisance perturbations captures representation quality no benchmark measures directly.",
+  "authors": "Ahmed Sallam, Jesse Gillis",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41592-025-02772-6",
+   "s2:citations:doi:10.1038/s41586-024-08411-y"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "无监督评测框架，批判性评估基础模型鲁棒性",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "无监督评测框架，批判性检验基础模型鲁棒性",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于扰动不变性的无监督评估框架",
+  "data": "5个scFM、PCA基线、39个单细胞数据集",
+  "scenario": "单细胞基础模型无监督评估",
+  "benchmark": "标准下游任务基准、5个scFM与PCA基线",
+  "results": "丢弃5%计数时近等价模型局部邻域保持差异近2倍；重采样聚类稳定性与生物保守指标Spearman ρ=0.78",
+  "availability": "",
+  "limitations": "仅基于邻域结构扰动，未覆盖全部生物学任务；依赖扰动设计",
+  "summary": "提出一个完全无监督的单细胞基础模型评估框架。基于忠实表征应在模拟技术与采样变异的扰动下保持邻域结构这一原则，对5个scFM、PCA基线和39个数据集进行测试。发现标准基准判定近乎等价的模型在丢弃5%计数时局部邻域保持差异近两倍，且该结构不稳定性具尺度依赖性并被视觉连贯的嵌入掩盖。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

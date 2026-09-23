@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.07632",
+  "title": "JUMP-lite: Compact, reproducible benchmarking of cell representations",
+  "url": "https://arxiv.org/abs/2608.07632",
+  "abstract": "Image-based profiling captures rich phenotypic signatures for drug discovery and functional genomics. Large public datasets like JUMP Cell Painting now provide millions of images for systematic study. However, JUMP alone occupies 115 TB, and fragmented evaluation practices make systematic comparisons of representation methods impractical for many researchers. Here we present Nahual, an open-source framework for reproducible model deployment, and JUMP-lite, a 92.0 GB subset of JUMP that is approximately 1,250-fold smaller, selected to cover genetic modalities and compound annotations and reduced via lossy JPEG XL compression. Using these resources, we benchmark five representation methods, including classical features (CellProfiler) and deep learning models (MorphEM, OpenPhenom, SubCell, DINOv2). Moderate compression broadly retains signal relative to uncompressed images. Standardized phenotypic activity and consistency metrics reveal meaningful performance differences across methods. Together, JUMP-lite and Nahual provide a foundation for accessible, reproducible benchmarking of image-based cell representations.",
+  "authors": "Alán F. Muñoz, Johan Fredin Haslum, Runxi Shen, A. Carpenter, Shantanu Singh",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1016/j.cell.2022.05.013"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JUMP-lite压缩基准资源，公开可复用，契合评测基准纳入标准",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell Painting压缩基准，可复用评测资源有价值",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "Nahual框架与JUMP-lite压缩基准",
+  "data": "JUMP Cell Painting图像，92.0 GB子集，约缩小1250倍",
+  "scenario": "图像细胞表征可复现基准测试",
+  "benchmark": "CellProfiler、MorphEM、OpenPhenom、SubCell、DINOv2",
+  "results": "中度压缩基本保留信号；标准化表型活性与一致性指标揭示方法间显著性能差异",
+  "availability": "开源框架与数据集公开",
+  "limitations": "有损压缩可能损失信号；仅覆盖遗传与化合物模态",
+  "summary": "针对JUMP数据集115 TB过大且评估碎片化的问题，提出开源框架Nahual和92.0 GB的JUMP-lite子集。通过有损JPEG XL压缩并覆盖遗传与化合物注释，对五种表征方法进行基准测试。发现中度压缩基本保留信号，标准化指标揭示各方法存在有意义的性能差异。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,52 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-023-01909-9",
+  "title": "MultiVI: deep generative model for the integration of multimodal data",
+  "url": "https://doi.org/10.1038/s41592-023-01909-9",
+  "abstract": "By learning a joint representation using deep generative modeling, MultiVI integrates multimodal and single-modality single-cell datasets, which enhances multiple functionalities. Jointly profiling the transcriptome, chromatin accessibility and other molecular properties of single cells offers a powerful way to study cellular diversity. Here we present MultiVI, a probabilistic model to analyze such multiomic data and leverage it to enhance single-modality datasets. MultiVI creates a joint representation that allows an analysis of all modalities included in the multiomic input data, even for cells for which one or more modalities are missing. It is available at scvi-tools.org .",
+  "authors": "Tal Ashuach, M. Gabitto, Rohan V. Koodli, Giuseppe-Antonio Saldi, Michael I. Jordan, N. Yosef",
+  "venue": "Nature Methods",
+  "year": 2023,
+  "citations": 299,
+  "found_by": [
+   "s2:references:doi:10.1038/s41593-024-01774-5",
+   "s2:references:doi:10.1038/s41586-024-08453-2"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:37386189"
+   ],
+   "pmcid": "PMC10406609"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "MultiVI多模态整合深度生成模型，有公开代码，契合整合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "MultiVI多模态整合代表方法，有公开权重",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "MultiVI深度生成模型多模态整合",
+  "data": "scRNA-seq、scATAC-seq及表面蛋白多模态与单模态数据",
+  "scenario": "多模态单细胞数据整合与缺失模态推断",
+  "benchmark": "Cobolt、scVI、PeakVI、totalVI",
+  "results": "提供校准的不确定性估计；准确估计缺失模态的差异表达/可及性；相关群体存在时可实现样本外预测",
+  "availability": "开源，集成于scvi-tools",
+  "limitations": "依赖相关群体多模态信息；模型复杂度较高",
+  "summary": "提出MultiVI，一个用于多模态数据概率分析的深度生成模型，可整合单模态数据集。基于VAE分别建模基因表达与染色质可及性，通过惩罚使两模态潜空间对齐，并模块化扩展至表面蛋白。实现准确的低维表征与高维信号插补，提供校准的不确定性估计，支持缺失模态的差异表达估计与样本外预测。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

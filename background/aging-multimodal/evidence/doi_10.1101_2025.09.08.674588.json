@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.09.08.674588",
+  "title": "Guided multi-agent AI invents highly accurate, uncertainty-aware transcriptomic aging clocks",
+  "url": "https://doi.org/10.1101/2025.09.08.674588",
+  "abstract": "Scientific discovery has long relied on human creativity, with computation limited to analysis. Here we report an AI-guided system, K-Dense, that accelerates hypothesis testing and delivers robust scientific discoveries. Trained on ARCHS4 (57,584 samples, 28 tissues, 1,039 cohorts, ages 1–114), the unified ensemble clock achieved R2 = 0.854 and MAE = 4.26 years—while uniquely providing calibrated confidence intervals. This self-aware design flags predictions made at transitional or extreme ages, where biological heterogeneity peaks, suggesting clinical utility for uncertainty itself. Development revealed stage-specific markers, including CDKN2A/p16 (senescence), AMPD3 (muscle wasting), MIR29B2CHG (progeroid traits), and SEPTIN3 (neurodegeneration resistance). Sliding-window analysis across 85 overlapping ranges uncovered wave-like shifts in gene importance, showing that transcriptomic aging signatures evolve continuously, not discretely. By transforming biological age assessment from static point estimates to calibrated predictions with explicit uncertainty, this approach establishes reliable and interpretable clocks. Beyond the clock itself, K-Dense demonstrates how guided AI can compress months of exploration into weeks, pointing toward a scalable framework for accelerated scientific discovery.",
+  "authors": "Vinayak Agarwal, O. Li, Christopher A. Petty, T. Kassis, Paul W.K.Rothemund, David A. Sinclair, Ashwin Gopinath",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 2,
+  "found_by": [
+   "s2kw:proteomic transcriptomic aging"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多智能体构建不确定性感知转录组时钟，方法新颖，规模大",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多智能体AI构建不确定性感知转录组时钟",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "K-Dense多智能体AI构建集成转录组时钟",
+  "data": "ARCHS4，57,584样本，28组织，1,039队列，1-114岁",
+  "scenario": "不确定性感知转录组衰老时钟",
+  "benchmark": "统一集成时钟，提供校准置信区间",
+  "results": "R2=0.854，MAE=4.26年；可标记过渡期和极端年龄预测；发现CDKN2A/p16、AMPD3、MIR29B2CHG、SEPTIN3等阶段标志物；85个重叠窗口显示基因重要性波状变化",
+  "availability": "",
+  "limitations": "极端年龄生物异质性高，预测不确定性仍较大",
+  "summary": "利用K-Dense多智能体AI系统开发了高精度、不确定性感知的转录组衰老时钟。在ARCHS4大规模数据上实现R2=0.854、MAE=4.26年，并提供校准置信区间。发现阶段特异性标志物和基因重要性随年龄波状变化，将生物年龄评估从点估计推进为带不确定性的校准预测。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

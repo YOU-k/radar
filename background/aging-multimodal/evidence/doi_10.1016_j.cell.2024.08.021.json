@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2024.08.021",
+  "title": "Metformin decelerates aging clock in male monkeys.",
+  "url": "https://doi.org/10.1016/j.cell.2024.08.021",
+  "abstract": "In a rigorous 40-month study, we evaluated the geroprotective effects of metformin on adult male cynomolgus monkeys, addressing a gap in primate aging research. The study encompassed a comprehensive suite of physiological, imaging, histological, and molecular evaluations, substantiating metformin's influence on delaying age-related phenotypes at the organismal level. Specifically, we leveraged pan-tissue transcriptomics, DNA methylomics, plasma proteomics, and metabolomics to develop innovative monkey aging clocks and applied these to gauge metformin's effects on aging. The results highlighted a significant slowing of aging indicators, notably a roughly 6-year regression in brain aging. Metformin exerts a substantial neuroprotective effect, preserving brain structure and enhancing cognitive ability. The geroprotective effects on primate neurons were partially mediated by the activation of Nrf2, a transcription factor with anti-oxidative capabilities. Our research pioneers the systemic reduction of multi-dimensional biological age in primates through metformin, paving the way for advancing pharmaceutical strategies against human aging.",
+  "authors": "Yuanhan Yang, Xiao-Yong Lu, Ning Liu, Shuai Ma, Hui Zhang, Zhiyi Zhang, Kuan Yang, Mengmeng Jiang",
+  "venue": "Cell",
+  "year": 2024,
+  "citations": 206,
+  "found_by": [
+   "s2kw:proteomic transcriptomic aging"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:39270656"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "猴多组学衰老时钟，多模态建模，Cell发表",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell，灵长类多模态衰老时钟，二甲双胍转折点研究",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "二甲双胍干预食蟹猴，构建多组学衰老时钟",
+  "data": "雄性食蟹猴40个月干预，多组织转录组、DNA甲基化、蛋白、代谢组",
+  "scenario": "灵长类抗衰老干预评估",
+  "benchmark": "未干预对照组，多维猴衰老时钟",
+  "results": "二甲双胍显著延缓衰老指标，脑衰老约回退6年；保护脑结构并增强认知；部分由Nrf2激活介导",
+  "availability": "",
+  "limitations": "仅雄性食蟹猴，样本量未明确，人类转化需进一步验证",
+  "summary": "在40个月研究中评估二甲双胍对成年雄性食蟹猴的延缓衰老作用。利用多组织转录组、DNA甲基化、蛋白和代谢组构建猴衰老时钟。发现二甲双胍显著减缓衰老，脑衰老回退约6年，并部分通过Nrf2激活发挥神经保护作用。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

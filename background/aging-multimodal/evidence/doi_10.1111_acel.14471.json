@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/acel.14471",
+  "title": "DeepQA: A Unified Transcriptome-Based Aging Clock Using Deep Neural Networks.",
+  "url": "https://doi.org/10.1111/acel.14471",
+  "abstract": "Understanding the complex biological process of aging is of great value, especially as it can help develop therapeutics to prolong healthy life. Predicting biological age from gene expression data has shown to be an effective means to quantify aging of a subject, and to identify molecular and cellular biomarkers of aging. A typical approach for estimating biological age, adopted by almost all existing aging clocks, is to train machine learning models only on healthy subjects, but to infer on both healthy and unhealthy subjects. However, the inherent bias in this approach results in inaccurate biological age as shown in this study. Moreover, almost all existing transcriptome-based aging clocks were built around an inefficient procedure of gene selection followed by conventional machine learning models such as elastic nets, linear discriminant analysis etc. To address these limitations, we proposed DeepQA, a unified aging clock based on mixture of experts. Unlike existing methods, DeepQA is equipped with a specially designed Hinge-Mean-Absolute-Error (Hinge-MAE) loss so that it can train on both healthy and unhealthy subjects of multiple cohorts to reduce the bias of inferring biological age of unhealthy subjects. Our experiments showed that DeepQA significantly outperformed existing methods for biological age estimation on both healthy and unhealthy subjects. In addition, our method avoids the inefficient exhaustive search of genes, and provides a novel means to identify genes activated in aging prediction, alternative to such as differential gene expression analysis.",
+  "authors": "Qi H, Zhao H, Li E, Lu X, Yu N, Liu J, Han J.",
+  "venue": "Aging cell",
+  "year": 2025,
+  "citations": 9,
+  "found_by": [
+   "eupmc:proteomic transcriptomic aging"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12074024",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "统一转录组时钟，纠正健康训练偏差，方法有实质新意",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "DeepQA统一转录组时钟，纠正健康训练偏差",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "深度神经网络DeepQA，铰链平均绝对误差损失",
+  "data": "转录组数据，含健康与非健康受试者",
+  "scenario": "转录组衰老时钟构建",
+  "benchmark": "Fleischer MAE=7.7年、Shokhirev RMSE=3.22年、Meyer MAE=6.63年",
+  "results": "提出hinge-MAE损失允许非健康样本参与训练；避免基因选择偏差；深度神经网络无需昂贵基因筛选，提升泛化评估有效性",
+  "availability": "",
+  "limitations": "现有方法多在健康人训练却预测非健康人，存在域差距；基因选择计算昂贵且易偏差",
+  "summary": "提出DeepQA统一转录组衰老时钟，采用深度神经网络和铰链平均绝对误差损失。方法允许非健康受试者参与训练，避免传统基因选择偏差和高计算成本。旨在提升跨健康与非健康人群的年龄预测准确性和泛化能力。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

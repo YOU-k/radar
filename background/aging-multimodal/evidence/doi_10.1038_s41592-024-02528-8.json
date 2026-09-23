@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-024-02528-8",
+  "title": "Cell Painting: a decade of discovery and innovation in cellular imaging.",
+  "url": "https://doi.org/10.1038/s41592-024-02528-8",
+  "abstract": "Modern quantitative image analysis techniques have enabled high-throughput, high-content imaging experiments. Image-based profiling leverages the rich information in images to identify similarities or differences among biological samples, rather than measuring a few features, as in high-content screening. Here, we review a decade of advancements and applications of Cell Painting, a microscopy-based cell-labeling assay aiming to capture a cell's state, introduced in 2013 to optimize and standardize image-based profiling. Cell Painting's ability to capture cellular responses to various perturbations has expanded owing to improvements in the protocol, adaptations for different perturbations, and enhanced methodologies for feature extraction, quality control, and batch-effect correction. Cell Painting is a versatile tool that has been used in various applications, alone or with other -omics data, to decipher the mechanism of action of a compound, its toxicity profile, and other biological effects. Future advances will likely involve computational and experimental techniques, new publicly available datasets, and integration with other high-content data types.",
+  "authors": "Seal S, Trapotsi MA, Spjuth O, Singh S, Carreras-Puigvert J, Greene N, Bender A, Carpenter AE.",
+  "venue": "Nature methods",
+  "year": 2024,
+  "citations": 88,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC11810604",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Cell Painting十年综述，类器官/扰动衰老建模关键方法",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell Painting十年综述，衰老扰动建模必读背景",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述Cell Painting十年进展与应用",
+  "data": "细胞成像、高内涵图像、图像型profiling",
+  "scenario": "细胞状态与扰动响应成像分析",
+  "benchmark": "传统高内涵筛选与少量特征测量",
+  "results": "Cell Painting自2013年提出，已用于机制、毒性等；协议、特征提取、质控和批次校正持续改进",
+  "availability": "",
+  "limitations": "为综述，未提供统一定量基准；依赖公开数据集和计算实验技术进展",
+  "summary": "该文综述Cell Painting十年发展，介绍其作为显微细胞标记 assay 用于捕获细胞状态并优化图像型profiling。文章总结协议改进、不同扰动适配、特征提取、质控和批次效应校正，以及其在机制、毒性和多组学整合中的应用。未来方向包括计算与实验技术、新公开数据集及与其他高内涵数据整合。"
+ },
+ "sections": [
+  "2.5"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

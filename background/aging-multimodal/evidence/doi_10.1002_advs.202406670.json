@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1002/advs.202406670",
+  "title": "A Novel Metabolomic Aging Clock Predicting Health Outcomes and Its Genetic and Modifiable Factors",
+  "url": "https://doi.org/10.1002/advs.202406670",
+  "abstract": "Existing metabolomic clocks exhibit deficiencies in capturing the heterogeneous aging rates among individuals with the same chronological age. Yet, the modifiable and non‐modifiable factors in metabolomic aging have not been systematically studied. Here, a new aging measure—MetaboAgeMort—is developed using metabolomic profiles from 239,291 UK Biobank participants for 10‐year all‐cause mortality prediction. The MetaboAgeMort showed significant associations with all‐cause mortality, cause‐specific mortality, and diverse incident diseases. Adding MetaboAgeMort to a conventional risk factors model improved the predictive ability of 10‐year mortality. A total of 99 modifiable factors across seven categories are identified for MetaboAgeMort. Among these, 16 factors representing pulmonary function, body composition, socioeconomic status, dietary quality, smoking status, alcohol intake, and disease status showed quantitatively stronger associations. The genetic analyses revealed 99 genomic risk loci and 271 genes associated with MetaboAgeMort. The tissue‐enrichment analysis showed significant enrichment in liver. While the external validation of the MetaboAgeMort is required, this study illuminates heterogeneous metabolomic aging across the same age, providing avenues for identifying high‐risk individuals, developing anti‐aging therapies, and personalizing interventions, thus promoting healthy aging and longevity.",
+  "authors": "Xue-Qing Jia, Jiayao Fan, Xu-Cheng Wu, Xing-Qi Cao, Lina Ma, Zeinab Abdelrahman, Fei Zhao, Haitao Zhu",
+  "venue": "Advancement of science",
+  "year": 2024,
+  "citations": 29,
+  "found_by": [
+   "s2kw:aging clock benchmark foundati"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:39331845"
+   ],
+   "pmcid": "PMC11578329"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank代谢组衰老时钟，大样本，预测健康结局",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank大规模代谢组时钟，公开系数预测死亡",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LASSO Cox与Gompertz回归构建MetaboAgeMort",
+  "data": "UK Biobank血浆代谢组，239291人，年龄中位58.3岁",
+  "scenario": "代谢组衰老时钟预测健康结局",
+  "benchmark": "传统风险因素及既往代谢组时钟",
+  "results": "训练167506、测试71785；选185个全因死亡相关代谢标志物；MetaboAgeMort提升10年死亡预测并关联疾病、可调因素和遗传位点",
+  "availability": "",
+  "limitations": "以全因死亡为替代指标；主要欧洲白人样本，外推性受限",
+  "summary": "研究利用UK Biobank 239291名参与者血浆代谢组，以全因死亡为替代指标构建MetaboAgeMort。方法先选185个死亡相关代谢标志物，再用LASSO Cox和Gompertz回归建模，并计算MetaboAgeMortAccel。该指标可预测死亡和疾病，并揭示可调因素与遗传决定因素。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

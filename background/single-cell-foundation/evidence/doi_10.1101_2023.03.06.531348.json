@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2023.03.06.531348",
+  "title": "A molecularly defined and spatially resolved cell atlas of the whole mouse brain",
+  "url": "https://doi.org/10.1101/2023.03.06.531348",
+  "abstract": "In mammalian brains, tens of millions to billions of cells form complex interaction networks to enable a wide range of functions. The enormous diversity and intricate organization of cells in the brain have so far hindered our understanding of the molecular and cellular basis of its functions. Recent advances in spatially resolved single-cell transcriptomics have allowed systematic mapping of the spatial organization of molecularly defined cell types in complex tissues1–3. However, these approaches have only been applied to a few brain regions1–11 and a comprehensive cell atlas of the whole brain is still missing. Here, we imaged a panel of >1,100 genes in ∼8 million cells across the entire adult mouse brain using multiplexed error-robust fluorescence in situ hybridization (MERFISH)12 and performed spatially resolved, single-cell expression profiling at the whole-transcriptome scale by integrating MERFISH and single-cell RNA-sequencing (scRNA-seq) data. Using this approach, we generated a comprehensive cell atlas of >5,000 transcriptionally distinct cell clusters, belonging to ∼300 major cell types, in the whole mouse brain with high molecular and spatial resolution. Registration of the MERFISH images to the common coordinate framework (CCF) of the mouse brain further allowed systematic quantifications of the cell composition and organization in individual brain regions defined in the CCF. We further identified spatial modules characterized by distinct cell-type compositions and spatial gradients featuring gradual changes in the gene-expression profiles of cells. Finally, this high-resolution spatial map of cells, with a transcriptome-wide expression profile associated with each cell, allowed us to infer cell-type-specific interactions between several hundred pairs of molecularly defined cell types and predict potential molecular (ligand-receptor) basis and functional implications of these cell-cell interactions. These results provide rich insights into the molecular and cellular architecture of the brain and a valuable resource for future functional investigations of neural circuits and their dysfunction in diseases.",
+  "authors": "Meng Zhang, Xingjie Pan, Won Jung, Aaron Halpern, Stephen W. Eichhorn, Zhi-Yun Lei, Limor Cohen, Kimberly A. Smith",
+  "venue": "bioRxiv",
+  "year": 2023,
+  "citations": 160,
+  "found_by": [
+   "s2:references:doi:10.1038/s41593-024-01774-5"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:36945367"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "全脑空间细胞图谱大规模数据资源，契合图谱方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "全脑空间细胞图谱，重要数据资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "MERFISH全脑空间单细胞图谱",
+  "data": ">1100基因、约800万细胞、全小鼠脑MERFISH与scRNA-seq",
+  "scenario": "全脑分子与空间细胞图谱构建",
+  "benchmark": "小鼠脑共坐标框架(CCF)",
+  "results": "鉴定>5000转录簇、约300主要细胞类型；量化各脑区细胞组成与组织；识别空间模块",
+  "availability": "",
+  "limitations": "仅小鼠脑；基因面板有限需整合scRNA-seq",
+  "summary": "使用多重误差鲁棒FISH(MERFISH)对成年小鼠全脑约800万细胞成像>1100基因，并整合scRNA-seq实现全转录组尺度空间单细胞表达谱。生成包含>5000转录簇、约300主要细胞类型的全脑细胞图谱，注册到CCF以量化各脑区细胞组成。识别出具有不同细胞类型组成的空间模块。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

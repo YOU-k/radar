@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2023.10.16.562533",
+  "title": "GenePT: A Simple But Effective Foundation Model for Genes and Cells Built From ChatGPT",
+  "url": "https://doi.org/10.1101/2023.10.16.562533",
+  "abstract": "There has been significant recent progress in leveraging large-scale gene expression data to develop foundation models for single-cell biology. Models such as Geneformer and scGPT implicitly learn gene and cellular functions from the gene expression profiles of millions of cells, which requires extensive data curation and resource-intensive training. Here we explore a much simpler alternative by leveraging ChatGPT embeddings of genes based on literature. Our proposal, GenePT, uses NCBI text descriptions of individual genes with GPT-3.5 to generate gene embeddings. From there, GenePT generates single-cell embeddings in two ways: (i) by averaging the gene embeddings, weighted by each gene’s expression level; or (ii) by creating a sentence embedding for each cell, using gene names ordered by the expression level. Without the need for dataset curation and additional pretraining, GenePT is efficient and easy to use. On many downstream tasks used to evaluate recent single-cell foundation models — e.g., classifying gene properties and cell types — GenePT achieves comparable, and often better, performance than Geneformer and other models. GenePT demonstrates that large language model embedding of literature is a simple and effective path for biological foundation models.",
+  "authors": "Yiqun T. Chen, James Zou",
+  "venue": "bioRxiv",
+  "year": 2023,
+  "citations": 146,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2024.11.015"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:37905130"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "GenePT用ChatGPT嵌入构建细胞基础模型，含批判性对比",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "GenePT用LLM嵌入做细胞基础模型，有影响力",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "GenePT：基于ChatGPT嵌入的基础模型",
+  "data": "NCBI基因文本描述，GPT-3.5嵌入，单细胞表达谱",
+  "scenario": "基因与细胞基础模型构建",
+  "benchmark": "Geneformer、scGPT等单细胞基础模型",
+  "results": "在基因属性与细胞类型分类等下游任务上达到相当或更优性能，无需数据策展与预训练",
+  "availability": "",
+  "limitations": "依赖文献文本质量；未充分利用表达数据本身",
+  "summary": "提出GenePT，用GPT-3.5基于NCBI基因文本描述生成基因嵌入，再通过表达加权平均或按表达排序的基因名句子嵌入生成单细胞嵌入。无需数据策展与额外预训练，高效易用。在基因属性与细胞类型分类等下游任务上达到与Geneformer等相当甚至更优的性能。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

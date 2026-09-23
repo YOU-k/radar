@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.neuron.2024.12.007",
+  "title": "Brain aging and rejuvenation at single-cell resolution.",
+  "url": "https://doi.org/10.1016/j.neuron.2024.12.007",
+  "abstract": "Brain aging leads to a decline in cognitive function and a concomitant increase in the susceptibility to neurodegenerative diseases such as Alzheimer's and Parkinson's diseases. A key question is how changes within individual cells of the brain give rise to age-related dysfunction. Developments in single-cell \"omics\" technologies, such as single-cell transcriptomics, have facilitated high-dimensional profiling of individual cells. These technologies have led to new and comprehensive characterizations of brain aging at single-cell resolution. Here, we review insights gleaned from single-cell omics studies of brain aging, starting with a cell-type-centric overview of age-associated changes and followed by a discussion of cell-cell interactions during aging. We highlight how single-cell omics studies provide an unbiased view of different rejuvenation interventions and comment on the promise of combinatorial rejuvenation approaches for the brain. Finally, we propose new directions, including models of brain aging and neural stem cells as a focal point for rejuvenation.",
+  "authors": "Sun ED, Nagvekar R, Pogson AN, Brunet A.",
+  "venue": "Neuron",
+  "year": 2025,
+  "citations": 25,
+  "found_by": [
+   "eupmc:single-cell spatial aging atla"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11842159",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Neuron单细胞脑衰老与年轻化综述，方向高度契合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Neuron单细胞脑衰老与年轻化综述，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "单细胞组学解析脑衰老与 rejuvenation",
+  "data": "单细胞转录组等多组学；综述，无具体规模",
+  "scenario": "脑衰老与年轻化干预",
+  "benchmark": "未提",
+  "results": "总结脑衰老细胞类型变化、细胞互作及 rejuvenation 干预，无定量结果",
+  "availability": "",
+  "limitations": "综述无原始数据；单细胞技术仍受样本、批次和因果推断限制",
+  "summary": "该综述聚焦单细胞分辨率下脑衰老与年轻化研究。文章从细胞类型中心视角总结年龄相关变化，并讨论衰老过程中的细胞间互作。作者进一步评述单细胞组学如何无偏评估年轻化干预，并提出组合干预和神经干细胞等新方向。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

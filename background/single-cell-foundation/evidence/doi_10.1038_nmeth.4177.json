@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/nmeth.4177",
+  "title": "Pooled CRISPR screening with single-cell transcriptome read-out",
+  "url": "https://doi.org/10.1038/nmeth.4177",
+  "abstract": "CRISPR-based genetic screens are accelerating biological discovery, but current methods have inherent limitations. Widely used pooled screens are restricted to simple readouts including cell proliferation and sortable marker proteins. Arrayed screens allow for comprehensive molecular readouts such as transcriptome profiling, but at much lower throughput. Here we combine pooled CRISPR screening with single-cell RNA sequencing into a broadly applicable workflow, directly linking guide RNA expression to transcriptome responses in thousands of individual cells. Our method for CRISPR droplet sequencing (CROP-seq) enables pooled CRISPR screens with single-cell transcriptome resolution, which will facilitate high-throughput functional dissection of complex regulatory mechanisms and heterogeneous cell populations.",
+  "authors": "Paul Datlinger, André F. Rendeiro, Christian Schmidl, Thomas Krausgruber, Peter Traxler, Johanna Klughammer, L. Schuster, Amelie Kuchler",
+  "venue": "Nature Methods",
+  "year": 2017,
+  "citations": 1031,
+  "found_by": [
+   "s2:references:doi:10.1126/science.aax4438"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:28099430"
+   ],
+   "pmcid": "PMC5334791"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "CROP-seq开创单细胞CRISPR筛选，扰动响应预测关键数据来源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "CROP-seq首创pooled CRISPR单细胞读出，方向基石",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CROP-seq：池化CRISPR单细胞转录组读出",
+  "data": "液滴单细胞RNA-seq与gRNA检测，多组CROP-seq实验",
+  "scenario": "池化CRISPR筛选复杂转录组读出",
+  "benchmark": "LentiGuide-Puro、阵列式CRISPR筛选",
+  "results": "gRNA插入3'LTR不影响病毒颗粒形成与嘌呤霉素抗性；编辑效率与indel特征高度相似；多数细胞分配单一gRNA",
+  "availability": "",
+  "limitations": "存在少量细胞双联体；gRNA分配率依赖转录组质量",
+  "summary": "提出CROP-seq，将gRNA盒插入慢病毒3'LTR使其成为多聚腺苷酸化mRNA，从而在单细胞RNA-seq中检测gRNA。结合高通量单细胞RNA-seq、gRNA分配计算流程与转录谱分析，实现池化筛选的单细胞转录组读出。验证显示gRNA插入不影响病毒功能，编辑效率与LentiGuide-Puro高度相似，多数细胞可分配单一gRNA。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

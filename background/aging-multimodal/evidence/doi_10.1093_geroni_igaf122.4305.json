@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/geroni/igaf122.4305",
+  "title": "Universal Single-Cell Transcriptomic Aging Clock powered by LLMs reveals targets to slow cellular aging",
+  "url": "https://doi.org/10.1093/geroni/igaf122.4305",
+  "abstract": "Abstract Large language models such as GPT have shown impressive performance in capturing structure and meaning from natural language. We adapt this capability to biology by representing single-cell transcriptomes as ordered sequences of gene names, analogous to sentences in text. Each cell’s expression profile is converted into a “cell sentence,” enabling pretrained language models to be fine-tuned directly on single-cell data for age prediction. Trained on millions of cells spanning diverse tissues and life stages, the model learns a universal latent representation of aging. It captures both cell-type–specific trajectories and conserved molecular signatures, generalizing across tissues and species. Unlike other foundational models that must be trained from scratch on omics data, our framework leverages already well-validated LLMs, taking advantage of their robust priors while avoiding the cost and instability of building new architectures. The resulting clock achieves state-of-the-art accuracy in predicting biological age at single-cell resolution. Embeddings highlight aging-associated processes such as immune activation, proteostasis decline, and metabolic shifts, aligning with known hallmarks of aging. Importantly, the model can also identify genes whose modulation decreases predicted transcriptional age, nominating candidate targets for therapeutic intervention. These features make the approach valuable both for measuring aging and for prioritizing interventions that may slow or reverse it. This work establishes the first universal, multi-tissue aging clock at single-cell resolution, demonstrating that pretrained language models can be directly adapted to biological data to map, measure, and potentially modify cellular aging.",
+  "authors": "R. Sehgal",
+  "venue": "Innovation in aging",
+  "year": 2025,
+  "citations": 1,
+  "found_by": [
+   "s2kw:proteomic transcriptomic aging"
+  ],
+  "extra": {
+   "pmcid": "PMC12761493"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "LLM单细胞转录组衰老时钟，跨组织泛化，方向契合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "LLM驱动的单细胞泛组织衰老时钟，方法新颖有泛化",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LLM微调单细胞转录组，细胞句子表示",
+  "data": "数百万单细胞，跨组织与生命阶段",
+  "scenario": "单细胞分辨率通用衰老时钟",
+  "benchmark": "其他需从头训练的组学基础模型",
+  "results": "实现单细胞分辨率生物年龄预测的最先进精度；嵌入揭示免疫激活、蛋白稳态下降、代谢转变等衰老标志；可识别调控后降低预测转录年龄的基因",
+  "availability": "",
+  "limitations": "依赖已有LLM先验，跨物种泛化与干预靶点验证尚需实验确认",
+  "summary": "将单细胞转录组表示为基因名序列的“细胞句子”，微调预训练大语言模型构建通用单细胞衰老时钟。模型在数百万细胞上训练，实现单细胞分辨率的最先进年龄预测。嵌入揭示衰老标志，并可提名调控后降低转录年龄的候选干预靶点。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

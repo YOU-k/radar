@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.3350/cmh.2026.0820",
+  "title": "Toward AI Virtual Cells for Hepatology: Representation, Generation, Dynamics, and Intervention in Single-Cell Models.",
+  "url": "https://doi.org/10.3350/cmh.2026.0820",
+  "abstract": "``Single-cell and spatial atlases describe the healthy and diseased liver at high resolution, including lobular hepatocyte zonation, fibrotic macrophage-stellate niches, cholangiocyte reactions, immune remodeling, and hepatocellular carcinoma ecosystems. These maps show where cell states occur but do not, by themselves, predict whether liver injury will progress or how the liver will respond to an untested drug, toxicant, or genetic perturbation. In this review, we organize current approaches toward an AI Virtual Cell (AIVC) for the liver into three complementary modeling routes. Generative models represent cell states, dynamics and transport models infer state transitions, and pretrained or foundation models test whether learned representations transfer across donors, etiologies, disease stages, and platforms. Perturbation-response prediction serves as a cross-cutting assessment of whether these layers can predict responses to untested genetic, chemical, inflammatory, or metabolic interventions. Available evidence can be categorized as direct liver validation, liver-included benchmarks, general single-cell evidence, and conceptual applications. Published models demonstrate individual components, including atlas integration, inferred trajectories, transferable representations, and retrospective response programs. However, these models do not constitute a prospectively validated liver simulator. At minimum, evaluation should include donor-, etiology-, stage-, platform-, and perturbation-level hold-outs. Model performance should be reported using response direction, recovery of differentially expressed genes and rare states, and calibrated uncertainty. Claims about tissue- or function-level prediction additionally require independent spatial, histologic, metabolic, and functional readouts. Near-term use should prioritize experiment selection and hypothesis generation, whereas clinical decision support remains a longer-term objective.",
+  "authors": "Youngseok Choi, I. Koh, Murim Choi, Joon-Yong An",
+  "venue": "Clinical and Molecular Hepatology",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41592-025-02772-6"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42749352"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "肝脏AI虚拟细胞综述，涵盖表征生成动力学与干预",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "虚拟细胞方向综述，梳理建模范式，背景必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述：肝脏AI虚拟细胞的建模路线",
+  "data": "肝脏单细胞与空间图谱（供体、病因、分期、平台）",
+  "scenario": "肝脏疾病与干预响应预测",
+  "benchmark": "直接肝脏验证、含肝脏基准、通用单细胞证据、概念应用",
+  "results": "现有模型仅展示各组件（图谱整合、轨迹推断、可迁移表示、回顾性响应程序），尚无前瞻验证的肝脏模拟器",
+  "availability": "",
+  "limitations": "缺乏前瞻性验证；评估需覆盖供体、病因、分期、平台等",
+  "summary": "本文综述面向肝脏的AI虚拟细胞（AIVC）建模路线，归纳为生成模型、动力学/运输模型和预训练/基础模型三类。以扰动响应预测作为跨层评估，梳理现有证据为直接肝脏验证、含肝脏基准、通用单细胞证据和概念应用四类。指出已发表模型仅展示单个组件，尚不构成前瞻验证的肝脏模拟器，并提出评估应覆盖供体、病因、分期和平台等维度。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

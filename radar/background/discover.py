@@ -18,6 +18,7 @@ from typing import Callable, Protocol
 import requests
 
 from ..collectors.europepmc import _search as eupmc_search, _to_item as eupmc_item
+from ..schema import Item
 from .models import Candidate, DiscoveryPlan, normalize_id
 from .spec import TopicSpec
 
@@ -41,6 +42,40 @@ def _get_json(url: str, params: dict | None = None, timeout: int = 60, retries: 
         r.raise_for_status()
         return r.json()
     return {}
+
+
+ARXIV_API = "https://export.arxiv.org/api/query"
+
+
+def _collect_arxiv(queries: list[str], start: str, end: str) -> list[Item]:
+    or_q = " OR ".join(f'all:"{q.strip(chr(34))}"' for q in queries[:6])
+    d0, d1 = start.replace("-", ""), end.replace("-", "")
+    q = f"({or_q}) AND submittedDate:[{d0}0000 TO {d1}2359]"
+    for attempt in (1, 2):
+        try:
+            r = requests.get(ARXIV_API, params={
+                "search_query": q, "sortBy": "relevance", "max_results": 100,
+            }, timeout=150)
+            r.raise_for_status()
+            break
+        except Exception as exc:
+            print(f"[discover:arxiv] attempt {attempt} failed: {exc}")
+            time.sleep(10)
+    else:
+        return []
+    import feedparser
+    feed = feedparser.parse(r.text)
+    items = []
+    for e in feed.entries:
+        aid = (e.get("id") or "").rsplit("/", 1)[-1]
+        items.append(Item(
+            id=f"arxiv:{aid}", source="arxiv", domain="deepdive",
+            title=" ".join((e.get("title") or "").split()),
+            url=f"https://arxiv.org/abs/{aid}",
+            authors=", ".join(a.get("name", "") for a in e.get("authors", [])[:8]),
+            abstract=" ".join((e.get("summary") or "").split()),
+            published=(e.get("published") or "")[:10]))
+    return items
 
 
 class Source(Protocol):
@@ -125,10 +160,7 @@ class EuropePMCJournal:
 class ArxivKeyword:
     name = "arxiv"
 
-    def __init__(self, collect: Callable | None = None):
-        if collect is None:
-            from ..pipeline.deepdive import _collect_arxiv
-            collect = _collect_arxiv
+    def __init__(self, collect: Callable = _collect_arxiv):
         self.collect = collect
 
     def fetch(self, spec: TopicSpec, plan: DiscoveryPlan) -> list[Candidate]:

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.06.28.25330474",
+  "title": "Transcriptomic age prediction using mixture-of-experts models reveals tissue-specific aging signatures in large-scale human RNA-sequencing data",
+  "url": "https://doi.org/10.1101/2025.06.28.25330474",
+  "abstract": "Transcriptomic age prediction has emerged as a powerful approach for understanding biological aging processes, yet systematic comparisons of large-scale RNA-sequencing datasets remain limited. We developed and validated a mixture-of-experts machine learning model using the ARCHS4 dataset comprising 56,877 human RNA-sequencing samples spanning ages 2-114 years across diverse tissues. Our model achieved superior performance (MAE = 7.58 years) compared to traditional approaches, with tissue-specific variations revealing lung and brain as optimal predictors while liver showed reduced accuracy. Feature importance analysis identified FOSB as the dominant age predictor (importance = 1.00), followed by complement component C4B_2 (0.95), long non-coding RNA PAX8-AS1 (0.85), mitochondrial gene MT-RNR2 (0.64), and glial marker GFAP (0.53), collectively representing stress response, immunosenescence, epigenetic regulation, mitochondrial dysfunction, and neuroinflammation pathways. Residual analysis revealed heteroscedasticity with prediction variance increasing from +-5 years in young adults to +-40 years in centenarians, indicating systematic model limitations at extreme ages. Comparison with David Sinclair's epigenetic clock approaches demonstrates that transcriptomic models achieve comparable accuracy while providing unique insights into tissue-specific aging mechanisms unavailable in blood-based methylation clocks. These findings establish transcriptomic age prediction as a complementary tool to epigenetic clocks, enabling precision aging medicine through identification of accelerated aging signatures and therapeutic targets across the human lifespan.",
+  "authors": "Q. Quill, V. Agarwal, O. Li, A. Patil, T. Kassis, A. Gopinath",
+  "venue": "medRxiv",
+  "year": 2025,
+  "citations": 1,
+  "found_by": [
+   "s2kw:proteomic transcriptomic aging"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "5.7万样本混合专家转录组时钟，跨组织泛化，数据规模大",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "MoE转录组时钟，5.6万样本，组织特异",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "混合专家机器学习模型预测转录组年龄",
+  "data": "ARCHS4，56,877例人类RNA-seq，2-114岁，多组织",
+  "scenario": "跨组织转录组年龄预测",
+  "benchmark": "传统转录组年龄预测方法及Sinclair表观遗传时钟",
+  "results": "MAE=7.58年；肺和脑预测最佳，肝较差；FOSB重要性1.00，C4B_2为0.95，PAX8-AS1为0.85，MT-RNR2为0.64，GFAP为0.53；残差随年龄增大，百岁老人±40年",
+  "availability": "",
+  "limitations": "极端年龄预测方差大，存在异方差性，百岁老人误差达±40年",
+  "summary": "开发了基于混合专家模型的转录组年龄预测方法，并在大规模人类RNA-seq数据上验证。模型在56,877个样本中实现MAE=7.58年，揭示肺和脑为最佳预测组织。发现FOSB等关键基因，并指出极端年龄预测误差显著增大。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2607.17227",
+  "title": "Harmonised benchmarking of foundation models for single-cell and spatial transcriptomics reveals context-dependent generalisation",
+  "url": "https://arxiv.org/abs/2607.17227",
+  "abstract": "Single-cell and spatial foundation models promise transferable biological representations, yet their generality remains largely untested across modalities, biological domains and analytical tasks. We benchmarked six representative models, Nicheformer, CellPLM, scGPT-spatial, GenePT, scELMo and Novae, using a harmonised framework spanning scRNA-seq, spatial transcriptomics and Perturb-seq. We evaluated zero-shot and continually pretrained clustering, supervised annotation, marker-gene concordance and perturbation prediction. Model performance was strongly conditional: expression-trained cell-level transformers best resolved many cell-identity tasks, spatial and graph-aware models better preserved tissue architecture, and language-derived gene embeddings were competitive for selected perturbation-response metrics. No model dominated across tasks, and rankings shifted with modality, preprocessing, tokenisation, biological prior, domain shift and metric choice. This benchmark provides practical guidance for model selection and argues that future models should be judged by biological generalisation, interpretability and perturbation-grounded validity, not by scale or leaderboard performance alone.",
+  "authors": "S. Chen, Roxana Zahedi, Lucy Chhuo, R. Nguyen, Marjan Baghgolshani, A. Beheshti, M. Grosser, Min Yang",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1126/science.aax4438"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "统一基准评测六种单细胞与空间基础模型，含扰动预测，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨模态系统评测基础模型，揭示上下文依赖泛化，方向必读基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "统一框架基准测试6个单细胞/空间基础模型",
+  "data": "scRNA-seq、空间转录组、Perturb-seq多数据集",
+  "scenario": "跨模态跨任务模型评估",
+  "benchmark": "Nicheformer、CellPLM、scGPT-spatial、GenePT、scELMo、Novae",
+  "results": "无模型全面领先；表达训练细胞级Transformer擅长细胞身份，空间/图模型保留组织结构，语言嵌入在部分扰动指标有竞争力；排名随模态、预处理、token化、先验、域偏移和指标变化",
+  "availability": "",
+  "limitations": "现有基础模型对域偏移脆弱、可解释性有限",
+  "summary": "本文对六个代表性单细胞与空间组学基础模型进行统一基准测试。采用兼容各模型的预处理、共享指标，在scRNA-seq、空间转录组和Perturb-seq上评估零样本与持续预训练聚类、监督注释、标记基因一致性和扰动预测。发现模型性能高度依赖上下文，无模型全面占优，排名随模态、预处理、token化、生物先验、域偏移和指标选择而改变。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

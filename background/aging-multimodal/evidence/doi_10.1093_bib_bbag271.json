@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/bib/bbag271",
+  "title": "StackAge: an ensemble-based clock for precise quantification of biological age using multi-omics data.",
+  "url": "https://doi.org/10.1093/bib/bbag271",
+  "abstract": "Accurate quantification of biological age is essential for early risk stratification and intervention of chronic diseases. Here, we present StackAge, an ensemble-based biological aging clock that integrates large-scale plasma proteomic and metabolomic profiles from 30 376 participants in the UK Biobank. StackAge demonstrated high accuracy in age prediction (Pearson r ≈ 0.93 with chronological age) and substantially enhanced risk prediction for 12 chronic diseases, achieving AUCs exceeding 0.90 for type 2 diabetes, Alzheimer's disease, and chronic kidney disease. Notably, the incorporation of estimated aging rates consistently improved disease prediction beyond conventional omics and demographic features. Feature interpretation and pathway enrichment analyses revealed that aging-associated biomarkers were enriched in inflammation, metabolic stress, and extracellular matrix remodeling pathways. Mediation analysis further indicated that modifiable lifestyle factors may accelerate biological aging, thereby increasing susceptibility to cardiovascular, neurological, immune, and musculoskeletal disorders. Together, these findings establish a robust multi-omics framework for quantifying individual aging trajectories and highlight biological age as a clinically actionable indicator for precision prevention and health management of age-related diseases.",
+  "authors": "Jiang Y, Jia L, Fei Y, Li X, Zheng X, Qin Y.",
+  "venue": "Briefings in bioinformatics",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "eupmc:epigenetic clock reproducibili"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13222527",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB三万余人多组学集成时钟，方法新且疾病预测定量强",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 3万人多组学集成时钟，样本大且提升疾病预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "StackAge集成线性与非线性学习器的多组学时钟",
+  "data": "UK Biobank 30,376人，2,923蛋白+251代谢物",
+  "scenario": "多组学生物年龄与疾病风险",
+  "benchmark": "单组学衰老时钟，如Horvath、Hannum、MileAge",
+  "results": "整合蛋白组与代谢组，中位随访11.7年；健康队列16,078人，疾病队列14,298人；训练集80%，独立测试集20%；评估衰老率与多种慢性病关联及生活方式中介效应",
+  "availability": "UK Biobank数据需申请",
+  "limitations": "仅血浆蛋白与代谢组，未整合表观遗传层；横断面基线为主",
+  "summary": "开发了StackAge多组学集成衰老时钟，整合UK Biobank血浆蛋白组与代谢组数据。在30,376名参与者中结合线性与非线性学习器提升预测稳健性。系统评估衰老率与慢性病关联，并通过中介分析探讨生活方式是否通过加速生物衰老影响疾病风险。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.10.22.681631",
+  "title": "Sparse Autoencoders Reveal Interpretable Features in Single-Cell Foundation Models",
+  "url": "https://doi.org/10.1101/2025.10.22.681631",
+  "abstract": "Single-cell foundation models (scFMs) hold promise for applications in cell type annotation, data integration, and prediction of the effects of cell perturbations, but their internal mechanisms remain poorly understood. We investigate the structure of these models by training sparse autoencoders (SAEs) on the hidden representations of three widely used scFMs: scGPT, scFoundation, and Geneformer.The learned features reveal diverse and complex biological and technical signals, which emerge even in pre-trained models. We also observe that the encoding of this information differs between scFMs with distinct training protocols and architectures. Finally, we demonstrate that SAE-derived features are functionally related to model behavior and can be intervened upon. Suppressing batch-associated features reduces unwanted technical variation and improves data integration while preserving the core biological signal. Activating drug-encoding features steers control cells toward drug-perturbed states in a concentration-dependent manner. These findings provide a path toward more interpretable and controllable single-cell foundation models.",
+  "authors": "Flavia Pedrocchi, Florian Barkmann, A. Joudaki, Valentina Boeva",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 8,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41586-024-08411-y"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "用稀疏自编码器解析单细胞基础模型内部特征，方法新颖且可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "scFM可解释性研究，方向必读，社区关注度高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "稀疏自编码器解析单细胞基础模型隐藏表示",
+  "data": "scGPT、scFoundation、Geneformer隐藏表示",
+  "scenario": "模型可解释性与可控性",
+  "benchmark": "三个scFM的预训练表示",
+  "results": "SAE特征揭示多样生物与技术信号；抑制批次特征改善整合并保留生物信号；激活药物特征使对照细胞呈浓度依赖地向药物扰动状态转变",
+  "availability": "",
+  "limitations": "模型内部机制此前理解不足",
+  "summary": "本文通过在scGPT、scFoundation和Geneformer隐藏表示上训练稀疏自编码器（SAE），探究单细胞基础模型的内部机制。学习到的特征揭示多样且复杂的生物与技术信号，且不同训练协议和架构的模型编码方式不同。SAE特征与模型行为功能相关且可干预：抑制批次特征改善数据整合，激活药物特征可浓度依赖地引导细胞向药物扰动状态转变。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

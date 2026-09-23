@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-025-02314-y",
+  "title": "Advancing biological understanding of cellular senescence with computational multiomics.",
+  "url": "https://doi.org/10.1038/s41588-025-02314-y",
+  "abstract": "Cellular senescence is a complex biological process that plays a pathophysiological role in aging and age-related diseases. The biological understanding of senescence at the cellular and tissue levels remains incomplete due to the lack of specific biomarkers as well as the relative rarity of senescent cells, their phenotypic heterogeneity and dynamic features. This Review provides a comprehensive overview of multiomic approaches for the characterization and biological understanding of cellular senescence. The technical capability and challenges of each approach are discussed, and practical guidelines are provided for selecting tools for identifying, characterizing and spatially mapping senescent cells. The importance of computational analyses in multiomics research, including senescent cell identification, signature detection and interactions of senescent cells with microenvironments, is highlighted. Moreover, tissue-specific case studies and experimental design considerations for individual organs are presented. Finally, future directions and the potential impact of multiomic approaches on the biological understanding of cellular senescence are discussed.",
+  "authors": "Li S, Agudelo Garcia PA, Aliferis C, Becich MJ, Calyeca J, Cosgrove BD, Elisseeff J, Farzad N, Fertig EJ, Glass C, Gu L, Hu Q, Ji Z, Königshoff M, LeBrasseur NK, Li D, Ma A, Ma Q, Menon V, Mitchell JT, Mora AL, Nagaraj S, Nelson AC, Niedernhofer LJ, Rojas M, Taha HB, Wang J, Wang S, Wu PH, Xie J, Xu M, Yu M, Zhang X, Zhao Y, Adams PD, Aguayo-Mazzucato C, Baker DJ, Benz C, Bernlohr DA, Bueno M, Chen J, Childs BG, Chuang JH, Chung D, Dileepan M, Ding L, Dong M, Duncan F, Enninful A, Flynn WF, Franco AC, Furman D, Garovic V, Halene S, Herman AB, Hertzel AV, Iwasaki K, Jeon H, Kang JW, Karmakar S, Kirkland JL, Korstanje R, Kummerfeld E, Lee JH, Liu Y, Lu Y, Lugo-Martinez J, Martini H, Melov S, Musi N, Passos JF, Peters ST, Rahman I, Ramasamy R, Rindone AN, Robbins PD, Robson P, Rodriguez-Lopez J, Rosas L, Rosenthal N, Schafer MJ, Schilling B, Schmidt EL, Schneider K, Sengupta K, Shu J, So PTC, Sun L, Tchkonia T, Teneche MG, Vanegas N, Wang J, Xie J, Yin S, Zhang K, Zhu Q, Fan R, SenNet Consortium.",
+  "venue": "Nature genetics",
+  "year": 2025,
+  "citations": 29,
+  "found_by": [
+   "eupmc:single-cell spatial aging atla"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12916282",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Nature Genetics多组学衰老综述，权威且方法学价值高",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Genetics综述，衰老多组学计算必读背景",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多组学计算分析细胞衰老",
+  "data": "多组学数据；综述，无具体规模",
+  "scenario": "细胞衰老识别与空间映射",
+  "benchmark": "未提",
+  "results": "总结多组学可识别衰老细胞、特征及微环境互作，无定量结果",
+  "availability": "",
+  "limitations": "综述无原始数据；缺乏特异性标志物、细胞稀少且异质动态",
+  "summary": "该综述系统讨论如何用计算多组学推进对细胞衰老的生物学理解。文章比较多种多组学技术在衰老细胞识别、特征检测和空间定位中的能力与挑战，并给出工具选择指南。作者强调计算分析在衰老细胞与微环境互作研究中的关键作用，并提出未来方向。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

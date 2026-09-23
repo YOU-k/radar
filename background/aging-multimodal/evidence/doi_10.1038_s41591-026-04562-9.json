@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41591-026-04562-9",
+  "title": "Responsiveness of epigenetic aging biomarkers to longevity interventions in humans.",
+  "url": "https://doi.org/10.1038/s41591-026-04562-9",
+  "abstract": "Aging biomarkers can potentially allow researchers to rapidly monitor the impact of an aging intervention without the need for decade-spanning trials. However, before the use of aging biomarkers, such as epigenetic clocks, as surrogate endpoints, their responsiveness to interventions that target aging must be tested. Here we curate TranslAGE, a harmonized database of 51 public and private longitudinal interventional studies, and calculate a consistent set of 16 prominent epigenetic clocks for each study, along with 94 other DNA methylation (DNAm) biomarkers that can help explain the changes observed for each clock. Using this database, we discover patterns of responsiveness across a variety of interventions and DNAm biomarkers. For example, clocks trained to predict mortality or pace of aging show the strongest responses across all interventions and show consistent results with one another; pharmacological and lifestyle interventions drive the strongest responses from DNAm biomarkers; and the characteristics of the study population and study duration are key factors in determining the responsiveness of DNAm biomarkers to an intervention. Moreover, clocks with multiple subscores (that is 'explainable clocks') provide specificity and greater mechanistic insight into the responsiveness of interventions than single-score clocks. These findings can help to design future clinical trials by guiding the choice of interventions and of specific subsets of DNAm biomarkers to minimize multiple testing, study duration, study population and sample size, with the eventual aim of uncovering DNAm biomarkers that can be used as surrogate aging endpoints.",
+  "authors": "Sehgal R, Borrus D, Armstrong JF, Gonzalez J, Kasamoto J, Markov Y, Priyanka A, Smith R, Carreras-Gallo N, Lasky-Su J, Dwaraka VB, Corley MJ, Higgins-Chen A.",
+  "venue": "Nature medicine",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:epigenetic clock reproducibili"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13577923",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "TranslAGE整合51项干预研究，评估时钟响应性，数据公开",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Medicine，51项干预研究数据库，衰老时钟作为替代终点必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "整合51项干预研究，统一计算16种时钟+94种DNAm标志物",
+  "data": "51项人类干预研究DNAm数据，全血为主",
+  "scenario": "长寿干预对DNAm生物标志物响应性",
+  "benchmark": "16种表观遗传时钟与94种额外DNAm生物标志物",
+  "results": "建立标准化分析流程，统一计算110+ DNAm标志物；通过配对t检验比较干预前后，识别最强且可重复响应的标志物与干预类型",
+  "availability": "GEO、EMBL公开及TruDiagnostic私有数据",
+  "limitations": "文献碎片化、时钟面板不一致，难以直接比较；部分研究未计算全部时钟",
+  "summary": "为评估长寿干预对DNAm生物标志物的响应性，系统整合并统一分析了51项人类干预研究。标准化元数据并计算16种表观遗传时钟和94种额外DNAm标志物，进行配对比较。发现不同干预与时钟响应差异显著，建立了可跨研究比较的生物标志物响应性框架。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

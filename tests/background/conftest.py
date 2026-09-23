@@ -100,6 +100,20 @@ class FakeLLM:
                 return json.dumps(self.outline_ops)
             ids = re.findall(r"^- (doi:\S+|arxiv:\S+)", prompt, re.M)
             return json.dumps([{"op": "attach", "section": "2.1", "ids": ids}])
+        if t == "stage":
+            ids = re.findall(r'"id": "((?:doi|arxiv|pmid):[^"]+)"', prompt)
+            return "| 细分 | 阶段 | 依据 |\n|---|---|---|\n| 2.1 | **朝阳** | 近两年占比高 [" + (ids[0] if ids else "doi:none") + "] |\n\n**整体判断**：上升期。\n\n**接下来怎么做**：\n- 建议一"
+        if t == "joint":
+            return "## 全景\n| 方向 | 阶段 |\n|---|---|\n| A | 朝阳 |\n## 方向间交叉点\n**交叉** x\n## 联合行动建议\n- 项目一\n## 不要做的事\n- 别做"
+        if t == "resources":
+            rows = _payload(prompt)
+            return json.dumps([{"name": "UK Biobank", "kind": "database", "modality": "多组学队列", "scale": "50 万人",
+                                "access": "https://www.ukbiobank.ac.uk", "open": "restricted",
+                                "used_by": [r["id"] for r in rows[:2]], "note": "训练与验证"},
+                               {"name": "scGPT", "kind": "model", "modality": "单细胞", "scale": "3300 万细胞",
+                                "access": "https://github.com/bowang-lab/scGPT", "open": "yes",
+                                "used_by": [rows[0]["id"]], "note": "基线"},
+                               {"name": "some data", "kind": "vague", "used_by": []}])
         if t == "gap":
             return json.dumps({"queries": ["gap query one", "gap query two"], "journals": ["Nature"],
                                "focus": "补生成式疾病轨迹"})

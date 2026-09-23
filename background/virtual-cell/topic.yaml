@@ -1,0 +1,40 @@
+# 方向定义（人改；其余文件由流水线生成）——单细胞方向下的窄主题，替代原「虚拟细胞」专题报告
+name: 虚拟细胞与扰动响应预测
+definition: >
+  以单细胞 / 空间多组学 + 基础模型预测细胞对遗传、药物、环境扰动的响应，并把细胞状态建成可迭代的
+  "细胞世界模型"：扰动响应模型、评测基准与效度批判、扰动数据资源、闭环智能体。
+include:
+  - 扰动响应预测模型（flow matching、扩散、最优传输、因果潜动力学、RL 后训练等），有代码
+  - 虚拟细胞 / 细胞世界模型框架与闭环智能体
+  - 评测基准与批判性结果（含"没跑赢简单基线"的证据）
+  - 大规模扰动数据资源（Tahoe-100M、Perturb-seq 图谱、Virtual Cell Challenge）
+  - 产业动态中有可核验技术细节的发布
+exclude:
+  - 常规单细胞分析流程
+  - 无代码无权重的方法论文
+  - 纯融资 / 营销新闻
+keywords: [virtual cell, perturbation prediction, Perturb-seq, cell world model, perturbation response, Tahoe,
+  Virtual Cell Challenge, single-cell foundation model, CRISPR screen, drug response, counterfactual, benchmark]
+queries:
+  - "virtual cell model"
+  - "perturbation response prediction single-cell"
+  - "Perturb-seq generative model"
+  - "cell world model"
+  - "virtual cell benchmark baseline"
+  - "drug perturbation single-cell prediction"
+journals: [Nature Methods, Nature Biotechnology, Nature, Cell, Science, Cell Systems]
+seeds:
+  - doi:10.1038/s41592-024-02201-0     # scGPT（扰动预测起点之一）
+radar_domain: data_models
+months: 9
+outline:
+  - title: 背景与定义
+  - title: 方法学
+    children:
+      - title: 扰动响应生成模型
+      - title: 细胞世界模型与闭环智能体
+  - title: 数据与资源
+  - title: 评测与效度批判
+  - title: 产业动态
+  - title: 空白与趋势
+budget: {rounds: 6, max_candidates: 80, max_screen: 60, max_extract: 40, stop_delta: 0.02}

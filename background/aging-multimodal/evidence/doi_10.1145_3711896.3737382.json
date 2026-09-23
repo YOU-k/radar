@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1145/3711896.3737382",
+  "title": "ComputAgeBench: Epigenetic Aging Clocks Benchmark",
+  "url": "https://doi.org/10.1145/3711896.3737382",
+  "abstract": "The success of clinical trials of longevity drugs relies heavily on identifying integrative health and aging biomarkers, such as biological age. Epigenetic aging clocks predict the biological age of an individual using their DNA methylation profiles, commonly retrieved from blood samples. However, there is no standardized methodology to validate and compare epigenetic clock models as yet. We propose ComputAgeBench, a unifying framework that comprises such a methodology and a dataset for comprehensive benchmarking of different clinically relevant aging clocks. Our methodology exploits the core idea that reliable aging clocks must be able to distinguish between healthy individuals and those with aging-accelerating conditions. Specifically, we collected and harmonized 66 public datasets of blood DNA methylation, covering 19 such conditions across different ages, and tested 13 published clock models. Additionally, we compiled 46 separate datasets to facilitate the training of new aging clocks. We believe our work will bring the fields of aging biology and machine learning closer together for the research on reliable biomarkers of health and aging. Code https://github.com/ComputationalAgingLab/ComputAge Dataset https://huggingface.co/datasets/computage/computage_bench",
+  "authors": "Dmitrii Kriukov, Evgeniy Efimov, Ekaterina Kuzmina, A. Dudkovskaia, E. Khrameeva, D. Dylov",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 9,
+  "found_by": [
+   "s2kw:aging clock benchmark foundati"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "表观时钟标准化基准与数据集，契合AI基准方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "表观时钟标准化基准，含公开数据集，方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "统一基准框架与数据集，测试13个表观时钟",
+  "data": "血液DNA甲基化，66个公开数据集，19种衰老加速疾病",
+  "scenario": "表观遗传衰老时钟标准化评测",
+  "benchmark": "13个已发表表观遗传时钟模型",
+  "results": "整合66个公开血液DNA甲基化数据集，覆盖19种疾病；另建46个数据集用于训练新时钟",
+  "availability": "代码与数据公开",
+  "limitations": "仅基于血液DNA甲基化，未覆盖其他模态；全文未提供具体模型性能数值",
+  "summary": "该研究提出ComputAgeBench，用于标准化验证和比较表观遗传衰老时钟。其核心假设是可靠时钟应能区分健康个体与衰老加速疾病个体，并整合66个公开血液DNA甲基化数据集、覆盖19种疾病，测试13个已发表模型。研究还提供46个训练数据集，推动衰老生物学与机器学习结合。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

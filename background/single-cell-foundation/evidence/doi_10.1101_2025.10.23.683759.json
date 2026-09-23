@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.10.23.683759",
+  "title": "Tahoe-x1: Scaling Perturbation-Trained Single-Cell Foundation Models to 3 Billion Parameters",
+  "url": "https://doi.org/10.1101/2025.10.23.683759",
+  "abstract": "Foundation models have transformed natural language processing and computer vision, yet their potential in single-cell biology—particularly for complex diseases such as cancer— remains underexplored. We present Tahoe-x1 (Tx1), a family of perturbation-trained single-cell foundation models with up to 3 billion parameters. Tx1 is pretrained on large-scale single-cell transcriptomic datasets, including the Tahoe-100M perturbation compendium, and fine-tuned for cancer-relevant tasks. Through architectural optimizations, data loader refinements, and efficient training strategies, Tx1 achieves 3–30× higher compute efficiency than prior implementations of cell-state models. Tx1 jointly learns representations of genes, cells, and compounds using a masked-expression generative objective that incorporates a drug token, enabling flexible adaptation to diverse downstream applications. We evaluate Tx1 across four key disease-relevant benchmarks: (1) prediction of overall and context-specific gene essentiality, (2) identification of genes contributing to the hallmarks of cancer, (3) cell-type classification, and (4) prediction of perturbation responses in held-out cellular contexts. Tx1 achieves state-of-the-art performance across all tasks. We release pretrained checkpoints, training code, and evaluation workflows to accelerate the development of perturbation-trained single-cell foundation models for applications in precision oncology and beyond.",
+  "authors": "Shreshth Gandhi, Farnoosh Javadi, Valentine Svensson, Umair Khan, Matthew G. Jones, Johnny Yu, Daniele Merico, Hani Goodarzi",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 21,
+  "found_by": [
+   "s2kw:large-scale cell atlas Tahoe-1"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "基于Tahoe-100M的30亿参数扰动预训练基础模型，核心契合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "30亿参数扰动训练基础模型，Tahoe-100M规模化，虚拟细胞里程碑",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "扰动训练的单细胞基础模型，最大30亿参数",
+  "data": "Tahoe-100M扰动图谱等大规模单细胞转录组",
+  "scenario": "癌症精准肿瘤学任务",
+  "benchmark": "四项疾病相关基准：基因必需性、癌症标志基因、细胞类型分类、扰动响应预测",
+  "results": "四项任务均达SOTA；计算效率较先前细胞状态模型提升3–30倍",
+  "availability": "公开预训练权重、训练代码和评估流程",
+  "limitations": "",
+  "summary": "本文提出Tahoe-x1（Tx1）系列扰动训练单细胞基础模型，参数规模最高30亿。模型在大规模单细胞转录组（含Tahoe-100M扰动图谱）上预训练，采用含药物token的掩码表达生成目标，联合学习基因、细胞和化合物表示，并针对癌症任务微调。在基因必需性、癌症标志基因、细胞类型分类和留出情境扰动响应预测四项基准上均达SOTA，并公开权重与代码。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

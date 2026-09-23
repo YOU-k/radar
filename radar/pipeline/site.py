@@ -3,7 +3,7 @@
 GitHub Pages 直接以 main 分支 /docs 发布，零构建、零外部资源。
 日报 md 是本仓库 digest.py 生成的固定格式，这里解析成结构化条目渲染卡片；
 周报是自由 markdown，直接整篇转换。
-顶部 Tab：周报 / 日报，点击切换，默认周报。
+顶部 Tab：方向背景（默认，联合分析置顶）/ 周报 / 日报 / 资源库。
 """
 from __future__ import annotations
 
@@ -31,8 +31,8 @@ a:active{opacity:.7}
 .tabs{display:flex;gap:8px}
 .tab{flex:1;text-align:center;padding:9px 0;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#57606a;font-size:14.5px;font-weight:600;cursor:pointer;user-select:none}
 .tab.on{background:#1f6feb;border-color:#1f6feb;color:#fff}
-#panel-week,#panel-day,#panel-res,#panel-report,#panel-bg{display:none}
-#panel-week.on,#panel-day.on,#panel-res.on,#panel-report.on,#panel-bg.on{display:block}
+#panel-week,#panel-day,#panel-res,#panel-bg{display:none}
+#panel-week.on,#panel-day.on,#panel-res.on,#panel-bg.on{display:block}
 details.bg{background:#fff;border:1px solid #d0d7de;border-radius:12px;margin:0 0 10px;padding:0 16px}
 details.bg>summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:600;font-size:15px}
 details.bg>summary::-webkit-details-marker{display:none}
@@ -46,6 +46,9 @@ details.bg .bgbody ol{padding-left:20px;font-size:13px;color:#4b5563}
 .wk{background:#fff;border:1px solid #d0d7de;border-radius:12px;padding:4px 16px 14px;margin:0 0 10px;font-size:14.5px;box-shadow:0 1px 2px rgba(31,35,40,.04)}
 .wk h2{font-size:15px;color:#1a7f37}
 .wk h3{font-size:14.5px;color:#8250df;margin-bottom:4px}
+.wk table,.bgbody table{border-collapse:collapse;width:100%;font-size:12.5px;display:block;overflow-x:auto}
+.wk th,.wk td,.bgbody th,.bgbody td{border:1px solid #d0d7de;padding:4px 6px;text-align:left;vertical-align:top}
+.wk th,.bgbody th{background:#f6f8fa}
 details.day{margin:0 0 10px}
 details.day>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:11px 4px;border-bottom:1px solid #d0d7de;font-weight:600;font-size:15px}
 details.day>summary::-webkit-details-marker{display:none}
@@ -64,6 +67,7 @@ details.day>.daybody{padding-top:8px}
 .badge.res{background:#ddf4ff;color:#0969da}
 .reason{color:#4b5563;font-size:13.5px;margin-top:5px}
 .meta{color:#57606a;font-size:12px;margin-top:5px}
+.bgline{color:#8250df;font-size:12.5px;margin-top:4px;border-left:3px solid #8250df;padding-left:6px}
 details.deep{margin-top:8px;border-top:1px dashed #d0d7de;padding-top:6px}
 details.deep>summary{cursor:pointer;list-style:none;color:#0969da;font-size:13px}
 details.deep>summary::-webkit-details-marker{display:none}
@@ -109,7 +113,8 @@ ITEM_RE = re.compile(
     r"^- \*\*\[(?P<title>.+?)\]\((?P<url>[^)]+)\)\*\*"
     r" `(?P<score>[0-9.]+)`(?P<tag>〔资源〕)?(?: — (?P<reason>.*))?$")
 SEC_RE = re.compile(r"^## (?P<name>.+?)（\d+ 条）$")
-META_RE = re.compile(r"^  <sub>(?P<meta>.*)</sub>$")
+META_RE = re.compile(r"^  <sub>(?!定位：)(?P<meta>.*)</sub>$")
+BG_RE = re.compile(r"^  <sub>定位：(?P<bg>.*)</sub>$")
 DEEP_RE = re.compile(
     r'^  <details markdown="1"><summary>深读</summary>\n\n(?P<body>.*?)\n\n  </details>$',
     re.DOTALL)
@@ -139,13 +144,18 @@ def _parse_digest(text: str) -> list[tuple[str, list[dict]]]:
             it = {"title": m.group("title"), "url": m.group("url"),
                   "score": float(m.group("score")),
                   "reason": m.group("reason") or "", "meta": "", "deep": "",
-                  "tag": m.group("tag") or ""}
+                  "tag": m.group("tag") or "", "bg": ""}
             cur.append(it)
             i += 1
             if i < len(lines):
                 mm = META_RE.match(lines[i])
                 if mm:
                     it["meta"] = mm.group("meta")
+                    i += 1
+            if i < len(lines):
+                mb = BG_RE.match(lines[i])
+                if mb:
+                    it["bg"] = mb.group("bg")
                     i += 1
             # 深读块跨行，拼起来再匹配
             if i < len(lines) and lines[i].startswith('  <details markdown="1">'):
@@ -193,6 +203,8 @@ def _render_digest(path: Path, first: bool) -> str:
                 parts.append(f'<div class="reason">{html.escape(it["reason"])}</div>')
             if it["meta"]:
                 parts.append(f'<div class="meta">{html.escape(it["meta"])}</div>')
+            if it.get("bg"):
+                parts.append(f'<div class="bgline">{html.escape(it["bg"])}</div>')
             if it["deep"]:
                 parts.append(
                     '<details class="deep"><summary>深读笔记</summary>'
@@ -222,7 +234,7 @@ def _render_background(report: Path) -> str:
     name = m.group("name") if m else report.parent.name
     stats = m.group("stats") if m else ""
     body = text[m.end():] if m else text
-    html_body = markdown.markdown(body, extensions=["extra", "sane_lists"])
+    html_body = markdown.markdown(body, extensions=["extra", "sane_lists", "tables"])
     return (f'<details class="bg"><summary>{html.escape(name)}'
             f'<span class="cnt">{html.escape(stats)}</span></summary>'
             f'<div class="bgbody">{html_body}</div></details>')
@@ -237,17 +249,20 @@ def build_site(today: date | None = None) -> Path:
                  if weeklies else '<div class="empty">暂无周报。</div>')
     day_html = ("\n".join(_render_digest(p, i == 0) for i, p in enumerate(digests))
                 if digests else '<div class="empty">暂无日报。</div>')
-    reports = sorted((ROOT / "reports").glob("*.md"), reverse=True)
-    report_html = ("\n".join(_render_weekly(p) for p in reports)
-                   if reports else '<div class="empty">暂无专题报告。</div>')
     bg_reports = sorted((ROOT / "background").glob("*/report.md"))
     bg_html = ("\n".join(_render_background(p) for p in bg_reports)
                if bg_reports else '<div class="empty">暂无方向背景报告。</div>')
-    res_file = ROOT / "resources.md"
-    res_html = ('<div class="wk">'
-                + markdown.markdown(res_file.read_text(encoding="utf-8"),
-                                    extensions=["extra", "sane_lists"])
-                + "</div>") if res_file.exists() else '<div class="empty">暂无资源条目。</div>'
+    res_parts = []
+    reg = ROOT / "background" / "_resources" / "resources.md"
+    if reg.exists():
+        res_parts.append('<div class="wk">' + markdown.markdown(
+            reg.read_text(encoding="utf-8"), extensions=["extra", "sane_lists", "tables"]) + "</div>")
+    daily_res = ROOT / "resources.md"
+    if daily_res.exists():
+        res_parts.append('<details class="bg"><summary>日报新发现的资源（未核验）</summary><div class="bgbody">'
+                         + markdown.markdown(daily_res.read_text(encoding="utf-8"), extensions=["extra", "sane_lists"])
+                         + "</div></details>")
+    res_html = "\n".join(res_parts) or '<div class="empty">暂无资源条目。</div>'
 
     parts = [
         "<!doctype html><html lang=zh><head>",
@@ -256,21 +271,18 @@ def build_site(today: date | None = None) -> Path:
         f"<style>{CSS}</style></head><body><main>",
         '<div class="top"><h1>radar · 科研情报</h1>',
         f'<div class="meta">更新至 {today.isoformat()} · '
-        f'{len(digests)} 份日报 / {len(weeklies)} 份周报 / {len(reports)} 份专题 / '
-        f'{len(bg_reports)} 个方向背景</div>',
+        f'{len(bg_reports)} 个方向背景 / {len(weeklies)} 份周报 / {len(digests)} 份日报</div>',
         '<div class="tabs">'
-        '<div class="tab on" data-tab="week">周报</div>'
+        '<div class="tab on" data-tab="bg">方向背景</div>'
+        '<div class="tab" data-tab="week">周报</div>'
         '<div class="tab" data-tab="day">日报</div>'
-        '<div class="tab" data-tab="bg">方向背景</div>'
-        '<div class="tab" data-tab="report">专题报告</div>'
         '<div class="tab" data-tab="res">资源库</div>'
         "</div></div>",
-        f'<div id="panel-week" class="on">{week_html}</div>',
+        f'<div id="panel-bg" class="on">{bg_html}</div>',
+        f'<div id="panel-week">{week_html}</div>',
         '<div id="panel-day">',
         '<input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">',
         f"{day_html}</div>",
-        f'<div id="panel-bg">{bg_html}</div>',
-        f'<div id="panel-report">{report_html}</div>',
         f'<div id="panel-res">{res_html}</div>',
         f"<script>{JS}</script></main></body></html>",
     ]

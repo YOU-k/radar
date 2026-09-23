@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2023.09.08.555192",
+  "title": "Evaluating the Utilities of Foundation Models in Single‐Cell Data Analysis",
+  "url": "https://doi.org/10.1101/2023.09.08.555192",
+  "abstract": "Foundation Models (FMs) have made significant strides in both industrial and scientific domains. In this paper, we evaluate the performance of FMs for single-cell sequencing data analysis through comprehensive experiments across eight downstream tasks pertinent to single-cell data. Overall, the top FMs include scGPT, Geneformer, and CellPLM by considering model performances and user accessibility among ten single-cell FMs. However, by comparing these FMs with task-specific methods, we found that single-cell FMs may not consistently excel than task-specific methods in all tasks, which challenges the necessity of developing foundation models for single-cell analysis. In addition, we evaluated the effects of hyper-parameters, initial settings, and stability for training single-cell FMs based on a proposed scEval framework, and provide guidelines for pre-training and fine-tuning, to enhance the performances of single-cell FMs. Our work summarizes the current state of single-cell FMs, points to their constraints and avenues for future development, and offers a freely available evaluation pipeline to benchmark new models and improve method development.",
+  "authors": "Tianyu Liu, Kexing Li, Yuge Wang, Hongyu Li, Hongyu Zhao",
+  "venue": "bioRxiv",
+  "year": 2024,
+  "citations": 66,
+  "found_by": [
+   "s2:references:doi:10.1038/s41592-025-02772-6"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41869863"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统评测单细胞基础模型，含未跑赢基线的批判证据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "系统评测单细胞基础模型，质疑其必要性，批判性必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出scEval框架，系统评测10个单细胞基础模型",
+  "data": "单细胞测序数据，8个下游任务",
+  "scenario": "单细胞数据分析评测",
+  "benchmark": "与任务专用方法对比；10个单细胞基础模型",
+  "results": "最佳模型为scGPT、Geneformer、CellPLM；基础模型并非在所有任务上优于任务专用方法",
+  "availability": "公开评测流程",
+  "limitations": "基础模型并非一致优于任务专用方法，挑战其必要性",
+  "summary": "本文系统评估了单细胞基础模型在单细胞测序数据分析中的效用。作者提出scEval框架，在8个下游任务上对10个单细胞基础模型进行综合实验，并与任务专用方法对比，同时分析超参数、初始设置和训练稳定性的影响。结果显示scGPT、Geneformer和CellPLM表现最佳，但基础模型并非在所有任务上都优于任务专用方法，作者据此给出预训练与微调指南并公开评测流程。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

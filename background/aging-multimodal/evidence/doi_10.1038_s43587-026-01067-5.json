@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-026-01067-5",
+  "title": "Aging clocks delineate neuron types vulnerable or resilient to neurodegeneration and identify neuroprotective interventions.",
+  "url": "https://doi.org/10.1038/s43587-026-01067-5",
+  "abstract": "Different neuron types show distinct susceptibility to age-dependent degeneration, yet the underlying mechanisms are poorly understood. Here we applied aging clocks to single neuron types in Caenorhabditis elegans and found that distinct neurons differ in their biological age. Ciliated sensory neurons with high neuropeptide and protein biosynthesis gene expression show accelerated aging and degeneration, correlating with loss of function, which could be prevented by pharmacological inhibition of translation. We show that the C. elegans neuronal aging transcriptomes correlate with human brain aging patterns and anticorrelate with geroprotective interventions. We performed an in silico drug screen to identify potentially neuroprotective small molecules. We show that the natural occurring plant metabolite syringic acid and the piperazine derivative vanoxerine delay neuronal degeneration, and propose these compounds as neuroprotective interventions. Furthermore, we identify neurotoxins that accelerate neurodegeneration, indicating that distinguishing aging trajectories between neuron types can inform on protective interventions as well as risk factors.",
+  "authors": "Gallrein C, Meyer DH, Woitzat Y, Ramirez-Ramirez V, Vuong-Brender T, Kirstein J, Schumacher B.",
+  "venue": "Nature aging",
+  "year": 2026,
+  "citations": 6,
+  "found_by": [
+   "eupmc:single-cell spatial aging atla"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13099438",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞衰老时钟，跨物种并识别干预，方法扎实",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging单细胞衰老时钟，跨物种，神经保护干预。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BitAge与Stochastic Clock预测神经元类型生物年龄",
+  "data": "线虫128种神经元类型RNA-seq，CeNGEN晚期L4数据",
+  "scenario": "神经元类型衰老易感性与干预筛选",
+  "benchmark": "BitAge、Stochastic Clock及人鼠脑衰老转录模式",
+  "results": "128种神经元预测年龄约98h至177h，近2倍差异；两时钟相关Pearson 0.65，P=5.5×10−17；丁香酸和vanoxerine保护神经元",
+  "availability": "",
+  "limitations": "主要基于线虫，人类相关性需进一步验证；神经元类型年龄预测依赖转录组时钟",
+  "summary": "研究用BitAge和Stochastic Clock预测线虫128种神经元类型的生物年龄，发现同一 chronological age 下预测年龄可从约98h到177h，近2倍差异。较老神经元更易早期退化，较年轻神经元更易保留，翻译是驱动因素。作者据此筛选并验证丁香酸和vanoxerine可防止神经退化。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

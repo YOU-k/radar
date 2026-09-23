@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2016.11.048",
+  "title": "A multiplexed single-cell CRISPR screening platform enables systematic dissection of the unfolded protein response",
+  "url": "https://doi.org/10.1016/j.cell.2016.11.048",
+  "abstract": "SUMMARY Functional genomics efforts face tradeoffs between number of perturbations examined and complexity of phenotypes measured. We bridge this gap with Perturb-seq, which combines droplet-based single-cell RNA-seq with a strategy for barcoding CRISPR-mediated perturbations, allowing many perturbations to be profiled in pooled format. We applied Perturb-seq to dissect the mammalian unfolded protein response (UPR) using single and combinatorial CRISPR perturbations. Two genome-scale CRISPR interference (CRISPRi) screens identified genes whose repression perturbs ER homeostasis. Subjecting ~100 hits to Perturb-seq enabled high-precision functional clustering of genes. Single-cell analyses decoupled the three UPR branches, revealed bifurcated UPR branch activation among cells subject to the same perturbation, and uncovered differential activation of the branches across hits, including an isolated feedback loop between the translocon and IRE1α. These studies provide insight into how the three sensors of ER homeostasis monitor distinct types of stress and highlight the ability of Perturb-seq to dissect complex cellular responses.",
+  "authors": "Britt Adamson, Thomas M. Norman, M. Jost, Cho Y. Min, J. K. Nuñez, Yuwen Chen, Jacqueline E. Villalta, Luke A. Gilbert",
+  "venue": "Cell",
+  "year": 2016,
+  "citations": 1139,
+  "found_by": [
+   "s2:references:doi:10.1126/science.aax4438",
+   "s2:references:doi:10.1038/s41592-025-02772-6"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:27984733"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Perturb-seq奠基工作，扰动测序数据资源，契合虚拟细胞方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Perturb-seq开创性工作，扰动组学奠基，必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Perturb-seq：单细胞CRISPR筛选",
+  "data": "液滴单细胞RNA-seq与CRISPR扰动条形码，约100个命中基因",
+  "scenario": "未折叠蛋白反应(UPR)功能解剖",
+  "benchmark": "两个全基因组CRISPRi筛选",
+  "results": "高精度功能聚类基因；解耦三条UPR分支；发现同一扰动下分支激活分叉及转位子与IRE1α反馈环",
+  "availability": "",
+  "limitations": "组合扰动规模有限；依赖液滴scRNA-seq灵敏度",
+  "summary": "提出Perturb-seq，将液滴单细胞RNA-seq与CRISPR扰动条形码结合，实现池化格式下多扰动并行分析。应用于哺乳动物未折叠蛋白反应，用单基因与组合CRISPR扰动，两个全基因组CRISPRi筛选鉴定约100个命中基因。实现基因高精度功能聚类，解耦三条UPR分支，揭示同一扰动下分支激活分叉及转位子与IRE1α的隔离反馈环。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

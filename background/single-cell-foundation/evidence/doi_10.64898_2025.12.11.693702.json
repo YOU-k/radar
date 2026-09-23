@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2025.12.11.693702",
+  "title": "scPRINT-2: Towards the next-generation of cell foundation models and benchmarks",
+  "url": "https://doi.org/10.64898/2025.12.11.693702",
+  "abstract": "Cell biology has been booming with foundation models trained on large single-cell RNA-seq databases, but benchmarks and capabilities remain unclear. We propose an additive benchmark across a gymnasium of tasks to discover which features improve performance. From these findings, we present scPRINT-2, a single-cell Foundation Model pre-trained across 350 million cells and 16 organisms. Our contributions in pre-training tasks, tokenization, and losses made scPRINT-2 state-of-the-art in expression denoising, cell embedding, and cell type prediction. Furthermore, with our cell-level architecture, scPRINT-2 becomes generative, as demonstrated by our expression imputation and counterfactual reasoning results. Finally, thanks to our pre-training database, we uncover generalization to unseen modalities and organisms. These studies, together with improved abilities in gene embeddings and gene network inference, place scPRINT-2 as a next-generation cell foundation model.",
+  "authors": "Kalfon J, Peyré G, Cantini L.",
+  "venue": "",
+  "year": 2025,
+  "citations": 1,
+  "found_by": [
+   "eupmc:large-scale cell atlas Tahoe-1"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "新一代细胞基础模型及基准，3.5亿细胞预训练",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "新一代细胞基础模型与基准，3.5亿细胞预训练",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "scPRINT-2：350M细胞预训练单细胞基础模型",
+  "data": "350M细胞，16个物种",
+  "scenario": "表达去噪、嵌入、注释与生成",
+  "benchmark": "表达去噪、细胞嵌入、细胞类型预测、表达插补、反事实推理",
+  "results": "在表达去噪、细胞嵌入和细胞类型预测上达到SOTA；具备生成能力，可进行表达插补和反事实推理；泛化到未见模态和物种",
+  "availability": "",
+  "limitations": "摘要未提供全文，基准任务与真实应用差距未详述",
+  "summary": "作者提出scPRINT-2，一个在3.5亿细胞和16个物种上预训练的单细胞基础模型。方法上通过改进预训练任务、tokenization和损失函数，并采用细胞级架构，使模型具备生成能力。结果显示其在表达去噪、细胞嵌入和细胞类型预测上达到SOTA，并在表达插补、反事实推理、未见模态与物种泛化、基因嵌入和基因网络推断方面表现增强。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

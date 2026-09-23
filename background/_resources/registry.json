@@ -1,0 +1,5723 @@
+{
+ "longevitybench": {
+  "name": "LongevityBench",
+  "kind": "benchmark",
+  "modality": "多组学衰老数据",
+  "scale": "17项任务/5个数据域",
+  "access": "https://doi.org/10.1016/j.cell.2026.08.026",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.cell.2026.08.026"
+  ],
+  "note": "用于评估AI系统理解衰老生物学异构数据能力的公开基准。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "longevity llm": {
+  "name": "Longevity-LLM",
+  "kind": "model",
+  "modality": "DNA甲基化/蛋白组/临床/RNA",
+  "scale": "0.6B-9B参数/5个模型",
+  "access": "https://doi.org/10.1016/j.cell.2026.08.026",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.cell.2026.08.026",
+   "doi:10.64898/2026.03.28.714980"
+  ],
+  "note": "在Longevity Bench任务中排名较高，表观年龄预测MAE达4.34年。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "longevity claw": {
+  "name": "Longevity Claw",
+  "kind": "tool",
+  "modality": "代理研究界面",
+  "scale": "未明确",
+  "access": "https://doi.org/10.1016/j.cell.2026.08.026",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.cell.2026.08.026"
+  ],
+  "note": "公开的代理研究界面，用于支持衰老生物学AI研究。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "teapee": {
+  "name": "TEAPEE",
+  "kind": "database",
+  "modality": "表观遗传年龄加速关联",
+  "scale": "1050个EAA-因素关联/53种时钟",
+  "access": "TEAPEE交互网页",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.arr.2024.102552"
+  ],
+  "note": "交互式资源，用于查询表观遗传年龄加速与多种因素的关联。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "medicine": {
+  "name": "MEDICINE",
+  "kind": "database",
+  "modality": "代谢组生物年龄模型与结果",
+  "scale": "UKBB 274,247人/107种代谢物",
+  "access": "MEDICINE门户",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41467-025-59964-z"
+  ],
+  "note": "公开多器官代谢组生物年龄时钟模型与结果的门户。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "uk biobank": {
+  "name": "UK Biobank",
+  "kind": "dataset",
+  "modality": "多模态人群队列（影像/蛋白/基因）",
+  "scale": "30,376人，2,923蛋白+251代谢物",
+  "access": "https://www.ukbiobank.ac.uk/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41467-025-59964-z",
+   "doi:10.1038/s41591-024-03164-7",
+   "doi:10.1038/s41591-025-03798-1",
+   "doi:10.1038/s43587-025-00928-9",
+   "doi:10.1038/s43587-025-01016-8",
+   "doi:10.1111/acel.14195",
+   "doi:10.1002/advs.202501765",
+   "doi:10.1038/s41591-025-03999-8",
+   "doi:10.1073/pnas.2414086122",
+   "doi:10.1111/acel.70636",
+   "doi:10.1093/bib/bbag271",
+   "doi:10.1002/advs.202406670",
+   "doi:10.1016/j.cell.2024.10.045",
+   "doi:10.1038/s41467-024-54357-0",
+   "doi:10.1038/s41467-025-56695-z",
+   "doi:10.1038/s41586-018-0579-z",
+   "doi:10.1038/s41586-025-09272-9",
+   "doi:10.1038/s41586-025-09529-3",
+   "doi:10.1038/s41586-026-10780-5",
+   "doi:10.1038/s41588-023-01522-8",
+   "doi:10.1038/s41588-024-01898-1",
+   "doi:10.1038/s41588-025-02335-7",
+   "doi:10.1038/s41591-024-03483-9",
+   "doi:10.1038/s41591-025-03827-z",
+   "doi:10.1038/s43588-026-01026-5",
+   "doi:10.1101/2022.06.16.22276246",
+   "doi:10.1101/2023.11.03.23298055",
+   "doi:10.1126/sciadv.adr3757",
+   "doi:10.1214/22-aoas1658",
+   "doi:10.1371/journal.pmed.1001779",
+   "doi:10.1001/jamacardio.2025.1182",
+   "doi:10.1002/ejhf.70041",
+   "doi:10.1016/j.xgen.2022.100168",
+   "doi:10.1016/j.xgen.2024.100506",
+   "doi:10.1038/s41467-023-36231-7",
+   "doi:10.1038/s41467-025-58152-3",
+   "doi:10.1038/s41467-025-58724-3",
+   "doi:10.1038/s41586-021-03855-y",
+   "doi:10.1038/s41586-021-04103-z",
+   "doi:10.1038/s41586-023-06547-x",
+   "doi:10.1038/s41586-023-06592-6",
+   "doi:10.1038/s41588-026-02734-4",
+   "doi:10.1093/jamia/ocae182",
+   "doi:10.1101/2024.03.13.24303864",
+   "doi:10.1161/jaha.125.047248",
+   "doi:10.1186/s12933-025-03035-6",
+   "doi:10.7554/elife.43657",
+   "doi:10.1038/s41467-018-06540-3",
+   "doi:10.1038/s41586-020-2853-0",
+   "doi:10.1111/dom.71112",
+   "doi:10.1016/j.ajhg.2019.07.001",
+   "doi:10.1038/s41467-019-11953-9",
+   "doi:10.1038/s41467-025-59034-4",
+   "doi:10.1038/s41514-025-00318-w",
+   "doi:10.1186/s12916-024-03769-2",
+   "doi:10.1371/journal.pgen.1009141",
+   "doi:10.1038/s41467-026-71434-8",
+   "doi:10.1038/s41467-025-56669-1",
+   "doi:10.1186/s44342-025-00040-9",
+   "doi:10.1038/s43587-026-01085-3",
+   "doi:10.1212/nxg.0000000000200226",
+   "doi:10.1038/s41586-025-09350-y",
+   "doi:10.1038/s41588-018-0144-6",
+   "doi:10.1038/s41588-018-0248-z",
+   "doi:10.1038/s41588-020-00757-z",
+   "doi:10.1038/s41588-020-0622-5",
+   "doi:10.1038/s41588-021-00885-0",
+   "doi:10.1038/s41588-025-02085-6",
+   "doi:10.1038/s41597-023-01949-y",
+   "doi:10.1093/ije/dyx204",
+   "doi:10.1096/fj.202600647r"
+  ],
+  "note": "作为核心人群队列用于血浆蛋白组关联、代谢组风险评分、多基因风险蛋白组分析、WGS资源构建及疾病自然史生成模型训练。",
+  "topics": [
+   "多模态衰老时钟与生物年龄",
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "china kadoorie biobank": {
+  "name": "China Kadoorie Biobank",
+  "kind": "dataset",
+  "modality": "血浆蛋白组/Olink",
+  "scale": "3,977人",
+  "access": "https://www.ckbiobank.org",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41591-024-03164-7",
+   "doi:10.1038/s43587-025-01016-8"
+  ],
+  "note": "用于独立验证蛋白质组年龄时钟的跨人群队列。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "blocked"
+ },
+ "finngen": {
+  "name": "FinnGen",
+  "kind": "dataset",
+  "modality": "血浆蛋白质组/遗传",
+  "scale": "176,899芬兰人；2,444疾病表型",
+  "access": "https://www.finngen.fi/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41591-024-03164-7",
+   "doi:10.1038/s41586-022-05473-8",
+   "doi:10.1038/s41586-022-05420-7",
+   "doi:10.1038/s41467-026-71434-8"
+  ],
+  "note": "芬兰隔离人群遗传资源，用于GWAS和精细定位发现低频变异关联。",
+  "topics": [
+   "多模态衰老时钟与生物年龄",
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "pasta": {
+  "name": "Pasta",
+  "kind": "model",
+  "modality": "转录组衰老时钟",
+  "scale": "多组织/多平台",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1002/advs.76740"
+  ],
+  "note": "跨组织和实验平台通用的转录组衰老时钟，用于化学和遗传扰动分析。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "metbag": {
+  "name": "MetBAG",
+  "kind": "model",
+  "modality": "血浆代谢组生物年龄",
+  "scale": "5个器官特异时钟",
+  "access": "MEDICINE门户",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41467-025-59964-z"
+  ],
+  "note": "基于血浆代谢组的多器官生物年龄时钟，用于关联心脏代谢状况和死亡风险。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "sc immuaging": {
+  "name": "sc-ImmuAging",
+  "kind": "model",
+  "modality": "单细胞转录组免疫时钟",
+  "scale": "约130万细胞/5类免疫细胞",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-025-00819-z"
+  ],
+  "note": "细胞类型特异的单细胞转录组免疫衰老时钟，用于揭示感染和疫苗接种中的异质性。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "damage": {
+  "name": "DamAge",
+  "kind": "model",
+  "modality": "DNA甲基化表观时钟",
+  "scale": "全基因组CpG",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-023-00557-0"
+  ],
+  "note": "追踪损伤性甲基化变化的表观遗传时钟，与死亡等不良结局相关。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "adaptage": {
+  "name": "AdaptAge",
+  "kind": "model",
+  "modality": "DNA甲基化表观时钟",
+  "scale": "全基因组CpG",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-023-00557-0"
+  ],
+  "note": "追踪适应性甲基化变化的表观遗传时钟，与有益适应相关。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "inspire t cohort": {
+  "name": "INSPIRE-T cohort",
+  "kind": "dataset",
+  "modality": "血液DNA甲基化",
+  "scale": "933人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-025-00883-5"
+  ],
+  "note": "用于训练内在能力表观时钟（91 CpG）的发现队列。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "framingham heart study": {
+  "name": "Framingham Heart Study (FHS)",
+  "kind": "dataset",
+  "modality": "血液DNA甲基化",
+  "scale": "大型纵向家系队列",
+  "access": "dbGaP",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s43587-025-00883-5"
+  ],
+  "note": "用于验证内在能力表观时钟的独立队列。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "nurses health study": {
+  "name": "Nurses' Health Study (NHS)",
+  "kind": "dataset",
+  "modality": "血浆蛋白组/Olink",
+  "scale": "800人",
+  "access": "https://www.nurseshealthstudy.org",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s43587-025-01016-8"
+  ],
+  "note": "作为器官特异蛋白组衰老时钟的外部验证队列。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "dead"
+ },
+ "biolearn": {
+  "name": "Biolearn",
+  "kind": "tool",
+  "modality": "衰老生物标志物/多组学",
+  "scale": "多公开数据集整合",
+  "access": "https://Bio-Learn.github.io",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s43587-025-00987-y"
+  ],
+  "note": "开源库，用于衰老生物标志物的统一整理、协调与评估。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "lothian birth cohort 1936": {
+  "name": "Lothian Birth Cohort 1936",
+  "kind": "dataset",
+  "modality": "血液DNA甲基化",
+  "scale": "920/299/273人三波",
+  "access": "EGA EGAS00001000910",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1093/ije/dyu277"
+  ],
+  "note": "用于分析表观遗传时钟与晚年体能和认知健康的关系。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "gse67752": {
+  "name": "GSE67752",
+  "kind": "dataset",
+  "modality": "DNA甲基化",
+  "scale": "HIV感染甲基化数据",
+  "access": "GEO GSE67752",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1093/infdis/jiv277"
+  ],
+  "note": "用于检验HIV感染与表观年龄加速的关系。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "clockbase agent": {
+  "name": "ClockBase Agent",
+  "kind": "tool",
+  "modality": "甲基化/RNA-seq/衰老时钟",
+  "scale": "40+时钟，43,602干预比较",
+  "access": "ClockBase Agent公开平台",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1101/2023.02.28.530532"
+  ],
+  "note": "自主AI代理平台，用于再分析海量分子数据中的衰老干预效应。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "horvath dnam age clock": {
+  "name": "Horvath DNAm age clock (353 CpG)",
+  "kind": "model",
+  "modality": "DNA甲基化",
+  "scale": "353 CpG，误差约3.6年",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1186/gb-2013-14-10-r115",
+   "doi:10.18632/aging.101020"
+  ],
+  "note": "跨组织DNA甲基化年龄预测器，用于评估表观年龄加速。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "hannum dnam age clock": {
+  "name": "Hannum DNAm age clock",
+  "kind": "model",
+  "modality": "血液DNA甲基化",
+  "scale": "血液表观年龄预测器",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.18632/aging.101020"
+  ],
+  "note": "用于与Horvath时钟比较死亡风险预测能力。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "nhanes": {
+  "name": "NHANES",
+  "kind": "dataset",
+  "modality": "临床/生物标志物",
+  "scale": "全国代表性人群",
+  "access": "https://www.cdc.gov/nchs/nhanes",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1002/advs.202501765"
+  ],
+  "note": "作为外部验证队列验证GOLD BioAge对死亡风险的预测能力。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "blocked"
+ },
+ "dnam phenoage": {
+  "name": "DNAm PhenoAge",
+  "kind": "model",
+  "modality": "全血DNA甲基化",
+  "scale": "513个CpG位点",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.18632/aging.101414"
+  ],
+  "note": "表观遗传衰老生物标志物，用于预测寿命、健康寿命及多种疾病风险。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "gold bioage": {
+  "name": "GOLD BioAge",
+  "kind": "model",
+  "modality": "临床生物标志物",
+  "scale": "线性Gompertz模型",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1002/advs.202501765"
+  ],
+  "note": "基于Gompertz定律的轻量生物年龄测量，捕捉发病与死亡风险。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "pathwayage": {
+  "name": "PathwayAge",
+  "kind": "model",
+  "modality": "DNA甲基化",
+  "scale": "通路级时钟",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1016/j.ebiom.2025.105829"
+  ],
+  "note": "通路级表观遗传衰老时钟，揭示疾病特异性衰老机制。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "ctba": {
+  "name": "CTBA (CT-based Biological Age)",
+  "kind": "model",
+  "modality": "腹部CT影像",
+  "scale": "123,281名成人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-025-56741-w"
+  ],
+  "note": "基于腹部CT心脏代谢标志物的生物年龄模型，预测长寿表型。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "senepy": {
+  "name": "SenePy",
+  "kind": "tool",
+  "modality": "单细胞转录组",
+  "scale": "小鼠328K/人1.6M细胞",
+  "access": "https://github.com/jaleesr/senepy",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41467-025-57047-7"
+  ],
+  "note": "识别细胞类型特异体内细胞衰老景观并映射衰老动力学。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "generation scotland": {
+  "name": "Generation Scotland",
+  "kind": "dataset",
+  "modality": "DNA甲基化/临床",
+  "scale": "18,859人",
+  "access": "https://www.generationscotland.org",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41467-025-66106-y"
+  ],
+  "note": "用于系统比较14种表观遗传时钟与174种新发疾病的关联。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "dead"
+ },
+ "linage2": {
+  "name": "LinAge2",
+  "kind": "model",
+  "modality": "表观遗传/临床",
+  "scale": "n=631–2036",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41514-025-00221-4"
+  ],
+  "note": "表观遗传衰老时钟，提供可操作洞察并与现有时钟基准比较。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "cz cellxgene discover": {
+  "name": "CZ CELLxGENE Discover",
+  "kind": "database",
+  "modality": "单细胞转录组",
+  "scale": "超7000万细胞",
+  "access": "https://cellxgene.cziscience.com",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41514-026-00379-5"
+  ],
+  "note": "用于训练scAgeClock单细胞转录组人类衰老时钟模型。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "scageclock": {
+  "name": "scAgeClock",
+  "kind": "model",
+  "modality": "单细胞转录组",
+  "scale": "门控多头注意力网络",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41514-026-00379-5"
+  ],
+  "note": "基于单细胞转录组的人类衰老时钟，在单细胞水平估计生物学年龄。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "medicine portal": {
+  "name": "MEDICINE portal",
+  "kind": "tool",
+  "modality": "MRI器官衰老时钟模型与结果",
+  "scale": "274247人 / 107代谢物",
+  "access": "MEDICINE门户",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41591-025-03999-8",
+   "doi:10.1038/s41467-025-59964-z"
+  ],
+  "note": "公开多器官代谢组生物年龄模型、预训练模型及相关结果。",
+  "topics": [
+   "多模态衰老时钟与生物年龄",
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "israel 10k project": {
+  "name": "Israel 10K Project",
+  "kind": "dataset",
+  "modality": "深度表型纵向队列（临床/多组学）",
+  "scale": "1万人，随访25年",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-024-00734-9"
+  ],
+  "note": "用于训练实际年龄模型并计算多系统生物衰老评分，分析性别特异衰老动态。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "husi": {
+  "name": "hUSI (human universal senescence index)",
+  "kind": "model",
+  "modality": "转录组衰老指数",
+  "scale": "73项RNA-seq研究",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-025-00886-2"
+  ],
+  "note": "基于One-Class Logistic Regression的通用细胞衰老预测指数，用于bulk和单细胞数据。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "hps": {
+  "name": "HPS (Healthspan Proteomic Score)",
+  "kind": "model",
+  "modality": "血浆蛋白组健康寿命评分",
+  "scale": "53,018人，2,920蛋白",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1073/pnas.2414086122"
+  ],
+  "note": "基于UK Biobank血浆蛋白组预测无重大慢性病的健康年限。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "tfmethyl clock": {
+  "name": "TFMethyl Clock",
+  "kind": "model",
+  "modality": "DNA甲基化表观时钟",
+  "scale": "7,803样本",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1093/nar/gkag661"
+  ],
+  "note": "基于转录因子结合位点内衰老相关CpG构建的调控型表观时钟。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "gtex": {
+  "name": "GTEx",
+  "kind": "dataset",
+  "modality": "多组织RNA-seq与基因型",
+  "scale": "全血581样本",
+  "access": "https://gtexportal.org/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1093/nar/gkag661"
+  ],
+  "note": "用于分析TFMethyl Clock靶基因在血液中的表达。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "senskin": {
+  "name": "SenSkin",
+  "kind": "model",
+  "modality": "皮肤特异衰老基因集",
+  "scale": "表皮与真皮细胞类型",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1111/acel.14358"
+  ],
+  "note": "皮肤特异衰老基因集，用于绘制人皮肤衰老细胞图谱。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "somascan": {
+  "name": "SomaScan",
+  "kind": "tool",
+  "modality": "血浆蛋白组检测平台",
+  "scale": "约7,000蛋白",
+  "access": "https://somalogic.com/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1111/acel.70474"
+  ],
+  "note": "用于检测循环基质体蛋白并构建ECM衰老时钟。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "mskage mskagemort": {
+  "name": "MSKAge / MSKAgeMort",
+  "kind": "model",
+  "modality": "血浆蛋白组肌肉骨骼生物年龄",
+  "scale": "21,070人，39蛋白",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1111/acel.70636"
+  ],
+  "note": "基于UK Biobank血浆蛋白构建的肌肉骨骼生物年龄及死亡风险模型。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "livage": {
+  "name": "LivAge",
+  "kind": "tool",
+  "modality": "小鼠肝脏转录组衰老时钟",
+  "scale": "小鼠肝脏RNA-seq",
+  "access": "在线工具",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1111/acel.70677"
+  ],
+  "note": "在线小鼠转录组衰老时钟，用于估计生物学年龄和评估抗衰老干预。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "archs4": {
+  "name": "ARCHS4",
+  "kind": "database",
+  "modality": "人类RNA-seq转录组",
+  "scale": "约5.7万样本，28组织，1-114岁",
+  "access": "https://maayanlab.cloud/archs4/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1101/2025.06.28.25330474",
+   "doi:10.1101/2025.09.08.674588"
+  ],
+  "note": "用于训练和验证转录组年龄预测模型及不确定性感知衰老时钟。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "mgb biobank": {
+  "name": "MGB Biobank",
+  "kind": "dataset",
+  "modality": "电子病历+多组学",
+  "scale": "约31,264人，多组学子集3,451人",
+  "access": "",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s43587-026-01073-7"
+  ],
+  "note": "用于开发EMRAge、DNAmEMRAge和OMICmAge生物年龄指标。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "gene expression omnibus": {
+  "name": "GEO",
+  "kind": "database",
+  "modality": "DNA甲基化等组学数据",
+  "scale": "51项人类干预研究",
+  "access": "https://www.ncbi.nlm.nih.gov/geo/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41591-026-04562-9"
+  ],
+  "note": "提供表观遗传衰老生物标志物响应性分析所用的公开DNAm数据。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "embl ebi arrayexpress": {
+  "name": "EMBL-EBI ArrayExpress",
+  "kind": "database",
+  "modality": "DNA甲基化等组学数据",
+  "scale": "51项人类干预研究",
+  "access": "https://www.ebi.ac.uk/biostudies/arrayexpress",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41591-026-04562-9"
+  ],
+  "note": "提供表观遗传衰老生物标志物响应性分析所用的公开DNAm数据。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "trudiagnostic": {
+  "name": "TruDiagnostic",
+  "kind": "dataset",
+  "modality": "DNA甲基化",
+  "scale": "私有DNAm数据",
+  "access": "",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41591-026-04562-9"
+  ],
+  "note": "作为私有DNAm数据来源之一，用于评估长寿干预对表观遗传时钟的响应性。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "horvath clock": {
+  "name": "Horvath clock",
+  "kind": "model",
+  "modality": "DNA甲基化",
+  "scale": "多组织泛用表观遗传时钟",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1214/26-aoas2136"
+  ],
+  "note": "作为现有表观遗传时钟，在墨西哥儿童青少年队列中评估其泛化性并用于迁移学习校准。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "pedbe clock": {
+  "name": "PedBE clock",
+  "kind": "model",
+  "modality": "DNA甲基化",
+  "scale": "儿童表观遗传时钟",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1214/26-aoas2136"
+  ],
+  "note": "作为儿童表观遗传时钟，在目标队列中评估其预测准确性并用于迁移学习校准。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "stackage": {
+  "name": "StackAge",
+  "kind": "model",
+  "modality": "蛋白组+代谢组",
+  "scale": "UK Biobank 30,376人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1093/bib/bbag271"
+  ],
+  "note": "多组学集成衰老时钟，用于精确量化生物年龄并评估衰老率与慢性病关联。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "omicmage": {
+  "name": "OMICmAge",
+  "kind": "model",
+  "modality": "多组学+电子病历",
+  "scale": "MGB约31,264人开发，多队列验证",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-026-01073-7"
+  ],
+  "note": "整合多组学与电子病历的生物年龄指标，用于评估慢病和死亡风险。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "emrage": {
+  "name": "EMRAge",
+  "kind": "model",
+  "modality": "电子病历",
+  "scale": "MGB Biobank约31,264人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-026-01073-7"
+  ],
+  "note": "基于电子病历开发的生物年龄指标，用于预测慢病发生、患病和死亡风险。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "dnamemrage": {
+  "name": "DNAmEMRAge",
+  "kind": "model",
+  "modality": "DNA甲基化+电子病历",
+  "scale": "MGB多组学子集3,451人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-026-01073-7"
+  ],
+  "note": "结合DNA甲基化与电子病历的生物年龄指标，用于多队列验证和风险关联分析。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "k dense": {
+  "name": "K-Dense",
+  "kind": "tool",
+  "modality": "多智能体AI系统",
+  "scale": "用于转录组衰老时钟开发",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1101/2025.09.08.674588"
+  ],
+  "note": "多智能体AI系统，用于发明高精度、不确定性感知的转录组衰老时钟。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "translage": {
+  "name": "TranslAGE",
+  "kind": "tool",
+  "modality": "DNA甲基化芯片分析平台",
+  "scale": "18种表观遗传时钟",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1111/acel.70635"
+  ],
+  "note": "用于在EPIC与450K芯片上重复检测并评估表观遗传时钟的技术与生物学可靠性。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "mcas": {
+  "name": "mCAS",
+  "kind": "dataset",
+  "modality": "临床/生理/分子多模态",
+  "scale": "2019名中国18-91岁人群",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1016/j.cell.2026.04.025"
+  ],
+  "note": "多中心标准化队列，用于构建核心能力、多模态与器官相关三层级衰老时钟。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "cengen": {
+  "name": "CeNGEN",
+  "kind": "dataset",
+  "modality": "线虫神经元RNA-seq",
+  "scale": "128种神经元类型",
+  "access": "https://www.cengen.org/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s43587-026-01067-5"
+  ],
+  "note": "提供晚期L4线虫神经元转录组数据，用于BitAge和Stochastic Clock预测神经元生物年龄。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "ok"
+ },
+ "bitage": {
+  "name": "BitAge",
+  "kind": "model",
+  "modality": "转录组衰老时钟",
+  "scale": "线虫神经元类型",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-026-01067-5"
+  ],
+  "note": "用于预测线虫128种神经元类型的生物年龄并识别易退化神经元。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "stochastic clock": {
+  "name": "Stochastic Clock",
+  "kind": "model",
+  "modality": "转录组衰老时钟",
+  "scale": "线虫神经元类型",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43587-026-01067-5"
+  ],
+  "note": "与BitAge并行用于预测线虫神经元生物年龄并筛选神经保护干预。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "immunosenescence inventory": {
+  "name": "Immunosenescence Inventory",
+  "kind": "database",
+  "modality": "单细胞/bulk转录组、表观组、TCR/BCR",
+  "scale": "多物种免疫衰老多组学",
+  "access": "https://doi.org/10.1093/nar/gkae1102",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1093/nar/gkae1102"
+  ],
+  "note": "整合免疫衰老多组学数据并提供免疫细胞识别与免疫时钟计算工具。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "blocked"
+ },
+ "computagebench": {
+  "name": "ComputAgeBench",
+  "kind": "benchmark",
+  "modality": "血液DNA甲基化",
+  "scale": "66个数据集/19种疾病/13个模型",
+  "access": "https://doi.org/10.1145/3711896.3737382",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1145/3711896.3737382"
+  ],
+  "note": "标准化验证和比较表观遗传衰老时钟，区分健康与衰老加速疾病个体。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "blocked"
+ },
+ "longevity bench": {
+  "name": "Longevity Bench",
+  "kind": "benchmark",
+  "modality": "多模态衰老与长寿任务",
+  "scale": "多模态衰老推理任务",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.64898/2026.03.28.714980"
+  ],
+  "note": "用于评估Longevity-LLM v0.1在衰老与长寿推理任务中的表现。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "horvath multi tissue clock": {
+  "name": "Horvath multi-tissue clock",
+  "kind": "model",
+  "modality": "DNA甲基化衰老时钟",
+  "scale": "多组织",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.64898/2026.03.28.714980"
+  ],
+  "note": "作为表观年龄预测基线，被Longevity-LLM v0.1超越。",
+  "topics": [
+   "多模态衰老时钟与生物年龄"
+  ],
+  "verified": "n/a"
+ },
+ "cell painting": {
+  "name": "Cell Painting",
+  "kind": "tool",
+  "modality": "高内涵细胞成像",
+  "scale": "十年积累的公开图像profiling数据集",
+  "access": "https://doi.org/10.1038/s41592-024-02528-8",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41592-024-02528-8",
+   "doi:10.1038/s41467-025-66778-6"
+  ],
+  "note": "基于多荧光标记的细胞形态学profiling检测，用于解析化合物作用机制、毒性及基因功能推断。",
+  "topics": [
+   "多模态衰老时钟与生物年龄",
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "uk biobank whole genome sequencing": {
+  "name": "UK Biobank Whole-Genome Sequencing",
+  "kind": "dataset",
+  "modality": "全基因组测序",
+  "scale": "490,640人，平均32.5×，约15亿变异",
+  "access": "https://www.ukbiobank.ac.uk/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41586-025-09272-9"
+  ],
+  "note": "提供大规模深度表型WGS资源，用于检测SNP、indel和结构变异并支持疾病机制与药物发现。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "uk biobank pharma proteomics project": {
+  "name": "UK Biobank Pharma Proteomics Project (UKB-PPP)",
+  "kind": "dataset",
+  "modality": "血浆蛋白质组",
+  "scale": "53,026人，2,920种蛋白",
+  "access": "https://www.ukbiobank.ac.uk/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1016/j.cell.2024.10.045",
+   "doi:10.1038/s41467-025-56695-z",
+   "doi:10.1038/s41586-023-06592-6",
+   "doi:10.1038/s41586-023-06547-x",
+   "doi:10.1016/j.xgen.2024.100506"
+  ],
+  "note": "用于构建血浆蛋白组-疾病-性状关联图谱及解析2型糖尿病多基因风险的蛋白标志物。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "proteome phenome atlas": {
+  "name": "Proteome-Phenome Atlas",
+  "kind": "database",
+  "modality": "血浆蛋白组-疾病关联",
+  "scale": "53,026人，2,920蛋白，406+660疾病",
+  "access": "https://proteome-phenome-atlas.com",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.cell.2024.10.045"
+  ],
+  "note": "开放获取的血浆蛋白组-疾病-性状关联图谱门户，支持蛋白-疾病关联查询。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "mimic": {
+  "name": "MIMIC",
+  "kind": "dataset",
+  "modality": "EHR、影像、时序、文本",
+  "scale": "559M事件，299,000患者",
+  "access": "https://physionet.org/content/mimiciv/",
+  "open": "restricted",
+  "used_by": [
+   "arxiv:2609.09140"
+  ],
+  "note": "用于训练NOAH多模态时间感知患者旅程表示与预测模型。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "foresight": {
+  "name": "Foresight",
+  "kind": "model",
+  "modality": "EHR自由文本与结构化数据",
+  "scale": "生成式预训练Transformer",
+  "access": "网页应用公开",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/s2589-7500(24)00025-6"
+  ],
+  "note": "从EHR预测患者未来疾病和生物医学概念，支持患者旅程模拟与因果推断。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "foresight england": {
+  "name": "Foresight-England",
+  "kind": "model",
+  "modality": "国家级EHR生成式基础模型",
+  "scale": "243M参数，约6100万人EHR",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2608.16273"
+  ],
+  "note": "基于NHS England纵向EHR自回归训练，用于零样本预测约4万医学词表事件。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "noah": {
+  "name": "NOAH",
+  "kind": "model",
+  "modality": "多模态患者旅程生成式Transformer",
+  "scale": "559M事件，299,000患者",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2609.09140"
+  ],
+  "note": "时间感知、任务无关模型，用于表示和预测完整多模态患者旅程。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "delphi 2m": {
+  "name": "Delphi-2M",
+  "kind": "model",
+  "modality": "疾病自然史生成式Transformer",
+  "scale": ">1000 ICD-10病种",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41586-025-09529-3"
+  ],
+  "note": "在UK Biobank训练、丹麦登记验证，用于预测多病共存轨迹和终身健康轨迹。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "msgene": {
+  "name": "MSGene",
+  "kind": "model",
+  "modality": "多状态遗传风险+EHR模型",
+  "scale": "年龄特异终身风险",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-024-49296-9"
+  ],
+  "note": "整合遗传风险和EHR估计冠心病终身风险，指导他汀治疗启动。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "icd 8 to icd 10 mapping": {
+  "name": "ICD-8 to ICD-10 Mapping",
+  "kind": "tool",
+  "modality": "疾病编码映射表",
+  "scale": "完整ICD及丹麦本地扩展",
+  "access": "映射表公开",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1007/s10654-023-01027-y"
+  ],
+  "note": "单向映射ICD-8到ICD-10，支持丹麦自1965年以来疾病轨迹纵向分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "estonian biobank": {
+  "name": "Estonian Biobank",
+  "kind": "dataset",
+  "modality": "NMR代谢组与临床随访",
+  "scale": "参与三国生物库共700,217人",
+  "access": "https://genomics.ut.ee/en",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41467-024-54357-0"
+  ],
+  "note": "用于训练和验证12种高DALY疾病的代谢组风险评分。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "thl biobank": {
+  "name": "THL Biobank",
+  "kind": "dataset",
+  "modality": "NMR代谢组与临床随访",
+  "scale": "参与三国生物库共700,217人",
+  "access": "https://thl.fi/en/web/thl-biobank",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41467-024-54357-0",
+   "doi:10.1038/s41467-023-36231-7"
+  ],
+  "note": "用于训练和验证12种高DALY疾病的代谢组风险评分。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "dead"
+ },
+ "all of us research program": {
+  "name": "All of Us Research Program",
+  "kind": "dataset",
+  "modality": "EHR/生物标志物/基因组",
+  "scale": "245,388全基因组序列；393,590参与者",
+  "access": "https://www.researchallofus.org/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41586-026-10780-5",
+   "doi:10.1038/s41588-023-01522-8",
+   "doi:10.1056/nejmsr1809937",
+   "arxiv:2608.21589",
+   "doi:10.1001/jama.2024.23784",
+   "doi:10.1001/jamacardio.2025.1182",
+   "doi:10.1038/s41588-026-02734-4",
+   "doi:10.1038/s44482-026-00032-8",
+   "doi:10.1038/s41586-025-09350-y",
+   "doi:10.1186/s44342-025-00040-9",
+   "doi:10.1038/s41467-025-58152-3"
+  ],
+  "note": "用于生物标志物轨迹预测功能衰退、冠心病PRS一致性评估及PAD多基因评分验证。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "mass general brigham biobank": {
+  "name": "Mass General Brigham Biobank",
+  "kind": "dataset",
+  "modality": "EHR、遗传数据",
+  "scale": "未明确",
+  "access": "",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41586-026-10780-5"
+  ],
+  "note": "作为三个生物库之一用于纵向EHR与遗传发现。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "danish national patient registry": {
+  "name": "Danish National Patient Registry",
+  "kind": "dataset",
+  "modality": "EHR疾病轨迹",
+  "scale": "860万患者",
+  "access": "",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41591-023-02332-5"
+  ],
+  "note": "用于训练胰腺癌风险预测深度学习模型。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "us veterans affairs ehr": {
+  "name": "US Veterans Affairs EHR",
+  "kind": "dataset",
+  "modality": "EHR疾病轨迹",
+  "scale": "未明确",
+  "access": "",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41591-023-02332-5"
+  ],
+  "note": "用于验证胰腺癌风险预测模型。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "giant": {
+  "name": "GIANT",
+  "kind": "dataset",
+  "modality": "GWAS汇总统计",
+  "scale": ">510万人",
+  "access": "https://www.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41591-025-03827-z"
+  ],
+  "note": "提供BMI GWAS用于构建多祖源PGS。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "23andme": {
+  "name": "23andMe",
+  "kind": "dataset",
+  "modality": "GWAS汇总统计",
+  "scale": "最多697,815人（含多队列）",
+  "access": "https://www.23andme.com/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41591-025-03827-z",
+   "doi:10.1038/s41467-018-06540-3"
+  ],
+  "note": "作为疾病不可知大队列之一，用于PheWAS药物靶点验证。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "nhgri ebi gwas catalog": {
+  "name": "NHGRI-EBI GWAS Catalog",
+  "kind": "database",
+  "modality": "GWAS关联与汇总统计",
+  "scale": "625,113关联、>85K数据集",
+  "access": "https://www.ebi.ac.uk/gwas/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1093/nar/gkae1070"
+  ],
+  "note": "标准化收集人类GWAS关联和汇总统计，支持可复用研究。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "pgs catalog": {
+  "name": "PGS Catalog",
+  "kind": "database",
+  "modality": "多基因评分",
+  "scale": "未明确",
+  "access": "https://www.pgscatalog.org/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1093/nar/gkae1070"
+  ],
+  "note": "与GWAS Catalog互链，提供多基因评分资源。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "behrt": {
+  "name": "BEHRT",
+  "kind": "model",
+  "modality": "EHR诊断序列",
+  "scale": "百万级患者",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41598-020-62922-y"
+  ],
+  "note": "基于Transformer的EHR表示模型，用于未来诊断预测。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "med bert": {
+  "name": "Med-BERT",
+  "kind": "model",
+  "modality": "ICD诊断序列",
+  "scale": "千万级患者就诊",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41746-021-00455-y"
+  ],
+  "note": "在结构化EHR上预训练的BERT模型，用于疾病预测。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "aladynoulli": {
+  "name": "ALADYNOULLI",
+  "kind": "model",
+  "modality": "纵向EHR与遗传",
+  "scale": ">68.3万人、348种疾病",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41586-026-10780-5"
+  ],
+  "note": "贝叶斯生成框架，联合建模纵向EHR诊断、年龄和多基因风险。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "atm": {
+  "name": "ATM",
+  "kind": "model",
+  "modality": "EHR共病纵向记录",
+  "scale": "UKB 282,957样本",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41588-023-01522-8"
+  ],
+  "note": "年龄依赖主题模型，用于共病低秩表示和疾病亚型识别。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "milton": {
+  "name": "MILTON",
+  "kind": "model",
+  "modality": "多组学与生物标志物",
+  "scale": "3,213种疾病",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41588-024-01898-1"
+  ],
+  "note": "用临床生物标志物、血浆蛋白和定量性状预测疾病状态并扩充病例队列。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "pulse": {
+  "name": "PULSE",
+  "kind": "model",
+  "modality": "纵向多模态临床数据",
+  "scale": "UK Biobank",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s43588-026-01026-5"
+  ],
+  "note": "纵向自监督框架，从稀疏血检生成代谢组和蛋白质组谱用于疾病预测。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "uk biobank polygenic risk score release": {
+  "name": "UK Biobank Polygenic Risk Score Release",
+  "kind": "model",
+  "modality": "多基因风险评分（PRS）",
+  "scale": "53种疾病/数量性状",
+  "access": "https://doi.org/10.1101/2022.06.16.22276246",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1101/2022.06.16.22276246"
+  ],
+  "note": "发布覆盖28种疾病和25种数量性状的优化PRS及基准测试软件，用于系统性评估与跨队列验证。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "framingham offspring study": {
+  "name": "Framingham Offspring Study (FOS)",
+  "kind": "dataset",
+  "modality": "纵向队列，临床/基因组",
+  "scale": "3,588人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1101/2023.11.03.23298055"
+  ],
+  "note": "用于评估基因组与临床风险因素对冠心病风险的时变重要性。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "phecodes": {
+  "name": "Phecodes",
+  "kind": "tool",
+  "modality": "基于ICD编码的高通量表型",
+  "scale": "ICD编码映射表型体系",
+  "access": "https://phewascatalog.org/phecodes",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1146/annurev-biodatasci-122320-112352"
+  ],
+  "note": "作为EHR高通量表型工具，用于PheWAS和表型风险评分（PheRS）等研究。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "mimic-iii": {
+  "name": "MIMIC-III",
+  "kind": "dataset",
+  "modality": "ICU电子健康记录",
+  "scale": "重症监护EHR数据库",
+  "access": "https://physionet.org/content/mimiciii/",
+  "open": "restricted",
+  "used_by": [
+   "arxiv:2608.06430"
+  ],
+  "note": "作为MiGHT-EHR多任务图Transformer的评测数据集之一。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "mimic-iv": {
+  "name": "MIMIC-IV",
+  "kind": "dataset",
+  "modality": "ICU电子健康记录",
+  "scale": "重症监护EHR数据库",
+  "access": "https://physionet.org/content/mimiciv/",
+  "open": "restricted",
+  "used_by": [
+   "arxiv:2608.06430"
+  ],
+  "note": "作为MiGHT-EHR多任务图Transformer的评测数据集之一。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "penn medicine biobank": {
+  "name": "Penn Medicine BioBank (PMBB)",
+  "kind": "dataset",
+  "modality": "生物样本库，EHR/基因组",
+  "scale": "本研究所用队列",
+  "access": "",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1001/jama.2024.23784"
+  ],
+  "note": "用于评估48个冠心病PRS在群体与个体层面的一致性。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "ucla biobank": {
+  "name": "UCLA Biobank",
+  "kind": "dataset",
+  "modality": "生物样本库，EHR/基因组",
+  "scale": "本研究所用队列",
+  "access": "",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1001/jama.2024.23784"
+  ],
+  "note": "用于评估48个冠心病PRS在群体与个体层面的一致性。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "mass general brigham": {
+  "name": "Mass General Brigham (MGBB)",
+  "kind": "dataset",
+  "modality": "多中心ICU/EHR队列",
+  "scale": "8家医院ICU脓毒症队列",
+  "access": "",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.48550/arxiv.2607.08793",
+   "doi:10.1001/jamacardio.2025.1182"
+  ],
+  "note": "用于脓毒症治疗推理时控制（EHR-MPC）评估及PAD多基因评分验证。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "prs pad": {
+  "name": "PRS-PAD",
+  "kind": "model",
+  "modality": "外周动脉疾病多基因评分",
+  "scale": "整合多祖源PRS",
+  "access": "https://doi.org/10.1001/jamacardio.2025.1182",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1001/jamacardio.2025.1182"
+  ],
+  "note": "整合多祖源的外周动脉疾病多基因评分，用于PAD及主要肢体不良事件风险预测。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "ukb exome sequencing": {
+  "name": "UKB Exome Sequencing",
+  "kind": "dataset",
+  "modality": "全外显子测序",
+  "scale": "454,787人，12.3M变异",
+  "access": "https://www.ukbiobank.ac.uk/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41586-021-04103-z",
+   "doi:10.1038/s41586-021-03855-y",
+   "doi:10.1016/j.xgen.2022.100168"
+  ],
+  "note": "用于罕见变异关联分析，揭示编码变异对复杂疾病的贡献。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "ukb nmr metabolomics": {
+  "name": "UKB NMR Metabolomics",
+  "kind": "dataset",
+  "modality": "血浆NMR代谢组",
+  "scale": "118,461人，249指标",
+  "access": "https://www.ukbiobank.ac.uk/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41467-023-36231-7"
+  ],
+  "note": "构建血浆NMR代谢标志物与疾病关联图谱，支持标志物发现。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "ukb mdrmf": {
+  "name": "UKB-MDRMF",
+  "kind": "tool",
+  "modality": "多模态风险建模",
+  "scale": "1,560种疾病",
+  "access": "交互平台（论文提供）",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-025-58724-3"
+  ],
+  "note": "整合UKB六类数据，提供多疾病风险与共病预测的交互平台。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "saige gene": {
+  "name": "SAIGE-GENE",
+  "kind": "tool",
+  "modality": "罕见变异关联分析",
+  "scale": "基因负荷/SKAT检验",
+  "access": "https://github.com/weizhouUMICH/SAIGE",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.xgen.2022.100168"
+  ],
+  "note": "用于单变异及基因负荷、SKAT、SKAT-O关联检验。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "regenie": {
+  "name": "REGENIE",
+  "kind": "tool",
+  "modality": "全基因组关联分析",
+  "scale": "支持大规模WES",
+  "access": "https://github.com/rgcgithub/regenie",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41586-021-04103-z"
+  ],
+  "note": "用于罕见pLOF和有害错义变异与健康表型的关联分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "gatk": {
+  "name": "GATK",
+  "kind": "tool",
+  "modality": "变异调用流程",
+  "scale": "外显子联合调用",
+  "access": "https://gatk.broadinstitute.org/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.xgen.2022.100168"
+  ],
+  "note": "用于UKB外显子数据的变异联合调用流程。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "hail": {
+  "name": "Hail",
+  "kind": "tool",
+  "modality": "大规模遗传数据分析",
+  "scale": "支持百万级变异",
+  "access": "https://hail.is/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.xgen.2022.100168"
+  ],
+  "note": "用于大规模外显子变异数据的处理与关联分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "phemime": {
+  "name": "PheMIME",
+  "kind": "tool",
+  "modality": "EHR表型组多病共病",
+  "scale": "3大EHR系统汇总统计",
+  "access": "https://prod.tbilab.org/PheMIME/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1093/jamia/ocae182"
+  ],
+  "note": "交互式网页应用与知识库，用于跨机构多病共病网络可视化与疾病聚类推断。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "dead"
+ },
+ "global biobank meta analysis initiative": {
+  "name": "Global Biobank Meta-analysis Initiative (GBMI)",
+  "kind": "dataset",
+  "modality": "GWAS汇总统计",
+  "scale": "23个生物样本库；220万人；14疾病终点",
+  "access": "https://www.globalbiobankmeta.org/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1101/2021.11.18.21266545",
+   "doi:10.1016/j.xgen.2022.100192"
+  ],
+  "note": "用于跨祖源PRS方法评估及跨人群疾病遗传发现的荟萃分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "pan uk biobank gwas": {
+  "name": "Pan-UK Biobank GWAS",
+  "kind": "dataset",
+  "modality": "GWAS汇总统计",
+  "scale": "7,271表型；多祖源",
+  "access": "https://pan.ukbb.broadinstitute.org/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1101/2024.03.13.24303864"
+  ],
+  "note": "提供跨群体GWAS与荟萃分析汇总统计，用于遗传结构解析与祖源富集效应发现。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "finrisk": {
+  "name": "FINRISK",
+  "kind": "dataset",
+  "modality": "流行病学队列表型",
+  "scale": "多队列合计最多697,815人",
+  "access": "https://thl.fi/en/web/thlfi-en/research-and-development/research-and-projects/finrisk-studies",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41467-018-06540-3"
+  ],
+  "note": "作为疾病不可知队列之一，用于跨表型关联与药物靶点验证。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "dead"
+ },
+ "chop": {
+  "name": "CHOP",
+  "kind": "dataset",
+  "modality": "儿科EHR表型",
+  "scale": "多队列合计最多697,815人",
+  "access": "https://www.chop.edu/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41467-018-06540-3"
+  ],
+  "note": "作为疾病不可知队列之一，用于PheWAS跨表型关联分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "taiwan precision medicine initiative": {
+  "name": "Taiwan Precision Medicine Initiative (TPMI)",
+  "kind": "dataset",
+  "modality": "基因组+电子病历",
+  "scale": "463,447汉族人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41586-025-09350-y"
+  ],
+  "note": "用于汉族人群全表型GWAS、遗传力估计与人群特异PRS建模。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "taiwan biobank": {
+  "name": "Taiwan Biobank (TWB)",
+  "kind": "dataset",
+  "modality": "基因组+表型",
+  "scale": "",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41586-025-09350-y"
+  ],
+  "note": "作为汉族PRS的外部验证队列。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "bolt lmm": {
+  "name": "BOLT-LMM",
+  "kind": "tool",
+  "modality": "GWAS统计软件",
+  "scale": "支持生物样本库规模",
+  "access": "https://alkesgroup.broadinstitute.org/BOLT-LMM/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41588-018-0144-6"
+  ],
+  "note": "贝叶斯混合模型关联工具，用于UKB大规模GWAS。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "dead"
+ },
+ "geneatlas": {
+  "name": "GeneATLAS",
+  "kind": "database",
+  "modality": "GWAS汇总统计",
+  "scale": "778性状/911万变异",
+  "access": "http://geneatlas.roslin.ed.ac.uk",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41588-018-0248-z"
+  ],
+  "note": "UK Biobank遗传关联图谱的统一查询数据库。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "pheweb": {
+  "name": "PheWeb",
+  "kind": "tool",
+  "modality": "GWAS/PheWAS可视化",
+  "scale": "支持大规模结果",
+  "access": "https://pheweb.org",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41588-020-0622-5"
+  ],
+  "note": "开源网页工具，用于可视化与共享GWAS/PheWAS结果。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "uk biobank exome sequencing consortium": {
+  "name": "UK Biobank Exome Sequencing Consortium (UKB-ESC)",
+  "kind": "dataset",
+  "modality": "全外显子测序",
+  "scale": "200,643人/约1000万变异",
+  "access": "https://www.ukbiobank.ac.uk",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41588-021-00885-0"
+  ],
+  "note": "提供大规模编码变异数据用于罕见变异与药物靶点研究。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "atherosclerosis risk in communities study": {
+  "name": "Atherosclerosis Risk in Communities (ARIC) Study",
+  "kind": "dataset",
+  "modality": "血浆蛋白组+基因组",
+  "scale": "7,213欧裔+1,871非裔",
+  "access": "https://aric.cscc.unc.edu",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41588-022-01051-w"
+  ],
+  "note": "用于cis-pQTL定位与蛋白组预测模型构建。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "jackson heart study": {
+  "name": "Jackson Heart Study (AASK)",
+  "kind": "dataset",
+  "modality": "血浆蛋白组+基因组",
+  "scale": "",
+  "access": "https://jacksonheartstudy.org",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41588-022-01051-w"
+  ],
+  "note": "非裔队列，用于cis-pQTL验证与人群特异位点分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "mexico city prospective study": {
+  "name": "Mexico City Prospective Study (MCPS)",
+  "kind": "dataset",
+  "modality": "全外显子测序",
+  "scale": "136,401人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41588-025-02085-6"
+  ],
+  "note": "用于克隆性造血的祖先特异性效应比较分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "epic norfolk": {
+  "name": "EPIC-Norfolk",
+  "kind": "dataset",
+  "modality": "血浆代谢组+随访",
+  "scale": ">11,000人/219,415人年",
+  "access": "https://www.epic-norfolk.org.uk",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41591-021-01266-0"
+  ],
+  "note": "用于代谢物-疾病关联与多病共存通路分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "ukbnmr": {
+  "name": "ukbnmr",
+  "kind": "tool",
+  "modality": "NMR代谢组质控",
+  "scale": "约12万人/168标志物",
+  "access": "https://github.com/MRCIEU/ukbnmr",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41597-023-01949-y"
+  ],
+  "note": "R包，用于去除UKB NMR代谢标志物数据的技术变异。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "dead"
+ },
+ "phesant": {
+  "name": "PHESANT",
+  "kind": "tool",
+  "modality": "自动化表型扫描",
+  "scale": "UKB全表型",
+  "access": "https://github.com/MRCIEU/PHESANT",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1093/ije/dyx204"
+  ],
+  "note": "R工具，用于UK Biobank自动化phenome scan。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "metabohealth": {
+  "name": "MetaboHealth",
+  "kind": "model",
+  "modality": "代谢组学风险评分",
+  "scale": "基于UKB 26.9万/24.1万人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1111/dom.71112"
+  ],
+  "note": "作为代谢健康评分评估心肾代谢多病共存发病风险。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "metabolic vulnerability index": {
+  "name": "Metabolic Vulnerability Index (MVX)",
+  "kind": "model",
+  "modality": "代谢组学风险评分",
+  "scale": "基于UKB 26.9万/24.1万人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1111/dom.71112"
+  ],
+  "note": "作为代谢脆弱性评分预测心肾代谢多病共存风险。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "degas": {
+  "name": "DeGAs",
+  "kind": "tool",
+  "modality": "遗传关联潜在成分分析",
+  "scale": "2138表型，235907变异",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-019-11953-9"
+  ],
+  "note": "用于解析UK Biobank跨表型遗传关联的潜在结构和脂肪细胞生物学。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "fenland": {
+  "name": "Fenland",
+  "kind": "dataset",
+  "modality": "血浆蛋白组/流行病学",
+  "scale": "8348人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-025-59034-4"
+  ],
+  "note": "用于血浆蛋白组遗传调控性别差异分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "somalogic": {
+  "name": "SomaLogic",
+  "kind": "tool",
+  "modality": "血浆蛋白组检测平台",
+  "scale": "5823蛋白",
+  "access": "https://somalogic.com/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41467-025-59034-4"
+  ],
+  "note": "提供血浆蛋白组数据用于性别分层遗传调控分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "olink": {
+  "name": "Olink",
+  "kind": "tool",
+  "modality": "血浆蛋白组检测平台",
+  "scale": "5823蛋白",
+  "access": "https://www.olink.com/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41467-025-59034-4"
+  ],
+  "note": "提供血浆蛋白组数据用于性别分层遗传调控分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "protagegap": {
+  "name": "ProtAgeGap",
+  "kind": "model",
+  "modality": "蛋白组衰老评分",
+  "scale": "UKB 45438人",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41514-025-00318-w"
+  ],
+  "note": "用于评估运动与蛋白组衰老及T2D风险的关系。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "aric": {
+  "name": "ARIC",
+  "kind": "dataset",
+  "modality": "纵向蛋白组/流行病学",
+  "scale": "2954人，多次访视",
+  "access": "https://aric.cscc.unc.edu/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1111/acel.70317"
+  ],
+  "note": "用于训练纵向蛋白组衰老指数LPAI。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "mesa": {
+  "name": "MESA",
+  "kind": "dataset",
+  "modality": "纵向蛋白组/流行病学",
+  "scale": "3726人",
+  "access": "https://www.mesa-nhlbi.org/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1111/acel.70317"
+  ],
+  "note": "用于验证纵向蛋白组衰老指数LPAI。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "longitudinal proteomic aging index": {
+  "name": "Longitudinal Proteomic Aging Index (LPAI)",
+  "kind": "model",
+  "modality": "纵向蛋白组衰老指数",
+  "scale": "ARIC 2954人训练，MESA 3726人验证",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1111/acel.70317"
+  ],
+  "note": "预测老年人死亡、多病和衰弱。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "physiological aging index": {
+  "name": "Physiological Aging Index (PAI)",
+  "kind": "model",
+  "modality": "临床生物标志物衰老指数",
+  "scale": "36项临床指标",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1186/s12916-024-03769-2"
+  ],
+  "note": "基于常规临床指标预测死亡、心血管病及慢性病风险。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "dftj": {
+  "name": "DFTJ",
+  "kind": "dataset",
+  "modality": "临床生物标志物/队列",
+  "scale": "中国老年人队列",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1186/s12916-024-03769-2"
+  ],
+  "note": "用于构建和验证生理衰老指数PAI。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "basil": {
+  "name": "BASIL",
+  "kind": "tool",
+  "modality": "高维稀疏回归框架",
+  "scale": "约50万人，>80万SNP",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1371/journal.pgen.1009141"
+  ],
+  "note": "用于UK Biobank超大规模高维稀疏回归分析。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "grasp": {
+  "name": "GRASP",
+  "kind": "model",
+  "modality": "EHR语义嵌入预测框架",
+  "scale": "三国超100万人，21种病",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41746-026-02363-5"
+  ],
+  "note": "利用LLM语义嵌入提升EHR疾病预测跨国家跨编码系统迁移性。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "survivehr": {
+  "name": "SurvivEHR",
+  "kind": "model",
+  "modality": "EHR时间事件基础模型",
+  "scale": "2300万患者，76亿事件",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1101/2025.08.04.25332916"
+  ],
+  "note": "用于多长期病症共病竞争风险时间事件预测。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "biobank japan": {
+  "name": "Biobank Japan",
+  "kind": "dataset",
+  "modality": "基因组与临床队列",
+  "scale": "约20万人以上",
+  "access": "https://biobankjp.org/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1186/s44342-025-00040-9"
+  ],
+  "note": "作为国家生物样本库WGS项目案例，用于比较人群基因组学研究经验。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "ok"
+ },
+ "precise": {
+  "name": "PRECISE",
+  "kind": "dataset",
+  "modality": "国家WGS队列",
+  "scale": "数十万人级",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1186/s44342-025-00040-9"
+  ],
+  "note": "作为国家生物样本库WGS项目案例，用于比较项目设计与挑战。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "npbbd korea": {
+  "name": "NPBBD-Korea",
+  "kind": "dataset",
+  "modality": "国家生物样本库WGS",
+  "scale": "数十万人级",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1186/s44342-025-00040-9"
+  ],
+  "note": "作为国家生物样本库WGS项目案例，用于比较项目设计与挑战。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "n/a"
+ },
+ "cprd aurum": {
+  "name": "CPRD Aurum",
+  "kind": "database",
+  "modality": "纵向电子健康记录",
+  "scale": "英国全科医疗EHR",
+  "access": "https://www.cprd.com/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s43587-026-01085-3"
+  ],
+  "note": "用于阿尔茨海默病和帕金森病的纵向EHR亚型划分与内部验证。",
+  "topics": [
+   "人群健康与多组学 AI"
+  ],
+  "verified": "blocked"
+ },
+ "hotpotqa": {
+  "name": "HotpotQA",
+  "kind": "dataset",
+  "modality": "多跳问答文本",
+  "scale": "约11万问答对",
+  "access": "https://hotpotqa.github.io/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2210.03629"
+  ],
+  "note": "用于评测ReAct在知识密集型多跳问答中的推理与检索能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "fever": {
+  "name": "FEVER",
+  "kind": "dataset",
+  "modality": "事实验证文本",
+  "scale": "约18万条声明",
+  "access": "https://fever.ai/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2210.03629"
+  ],
+  "note": "用于评测ReAct在事实核查任务中的推理与证据检索。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "alfworld": {
+  "name": "ALFWorld",
+  "kind": "benchmark",
+  "modality": "文本交互式具身任务",
+  "scale": "6类任务、数千回合",
+  "access": "https://alfworld.github.io/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2210.03629",
+   "arxiv:2502.10325",
+   "doi:10.48550/arxiv.2602.21158",
+   "doi:10.48550/arxiv.2607.05297"
+  ],
+  "note": "作为SELAUR智能体强化学习框架的评测环境之一，衡量任务成功率。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "webshop": {
+  "name": "WebShop",
+  "kind": "benchmark",
+  "modality": "网页购物交互任务",
+  "scale": "118万商品、1.2万指令",
+  "access": "https://webshop-pnlp.github.io/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2210.03629",
+   "doi:10.48550/arxiv.2602.21158"
+  ],
+  "note": "作为SELAUR智能体强化学习框架的评测环境之一，衡量任务成功率。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "prm800k": {
+  "name": "PRM800K",
+  "kind": "dataset",
+  "modality": "数学推理步级标注",
+  "scale": "80万步级标签",
+  "access": "https://github.com/openai/prm800k",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2504.15275"
+  ],
+  "note": "用于训练过程奖励模型PURE的步级监督数据。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "qwen2 5 7b": {
+  "name": "Qwen2.5-7B",
+  "kind": "model",
+  "modality": "语言模型",
+  "scale": "70亿参数",
+  "access": "https://huggingface.co/Qwen/Qwen2.5-7B",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2504.15275"
+  ],
+  "note": "作为PURE方法验证的基座模型之一。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "qwen2 5 math 7b": {
+  "name": "Qwen2.5-Math-7B",
+  "kind": "model",
+  "modality": "数学推理语言模型",
+  "scale": "70亿参数",
+  "access": "https://huggingface.co/Qwen/Qwen2.5-Math-7B",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2504.15275",
+   "arxiv:2512.03244"
+  ],
+  "note": "作为PURE与ScalePRM的基座模型，用于数学推理RL训练。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "qwen2 5 math 1 5b": {
+  "name": "Qwen2.5-Math-1.5B",
+  "kind": "model",
+  "modality": "数学推理语言模型",
+  "scale": "15亿参数",
+  "access": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2504.15275"
+  ],
+  "note": "作为PURE方法验证的轻量基座模型。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "socratic prmbench": {
+  "name": "Socratic-PRMBench",
+  "kind": "benchmark",
+  "modality": "推理过程错误检测",
+  "scale": "2995条缺陷路径、平均8.7步",
+  "access": "https://github.com/Xiang-Li-oss/Socratic-PRMBench",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2505.23474"
+  ],
+  "note": "用于系统评测PRM在六种推理模式下的过程错误检测能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "gsm plus": {
+  "name": "GSM-Plus",
+  "kind": "dataset",
+  "modality": "数学应用题",
+  "scale": "约1万题",
+  "access": "https://huggingface.co/datasets/qintongli/GSM-Plus",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2508.01682"
+  ],
+  "note": "用于评测BiPRM在解级数学推理上的表现。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "math500": {
+  "name": "MATH500",
+  "kind": "dataset",
+  "modality": "数学竞赛题",
+  "scale": "500题",
+  "access": "https://huggingface.co/datasets/HuggingFaceH4/MATH-500",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2508.01682"
+  ],
+  "note": "用于评测BiPRM在解级数学推理上的表现。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "processbench": {
+  "name": "ProcessBench",
+  "kind": "benchmark",
+  "modality": "推理步级错误检测",
+  "scale": "3400条推理路径",
+  "access": "https://huggingface.co/datasets/Qwen/ProcessBench",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2508.01682",
+   "arxiv:2512.03244"
+  ],
+  "note": "用于评测BiPRM与ScalePRM的步级错误检测能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "gsm8k": {
+  "name": "GSM8K",
+  "kind": "dataset",
+  "modality": "小学数学应用题",
+  "scale": "8.5K道小学数学题",
+  "access": "https://huggingface.co/datasets/openai/gsm8k",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2510.24803",
+   "arxiv:2606.00091"
+  ],
+  "note": "用于评测MASPRM在多智能体推理中的表现。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习",
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "math": {
+  "name": "MATH",
+  "kind": "dataset",
+  "modality": "数学竞赛题",
+  "scale": "1.25万题",
+  "access": "https://huggingface.co/datasets/hendrycks/competition_math",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2510.24803",
+   "doi:10.18653/v1/2026.findings-acl.524",
+   "doi:10.48550/arxiv.2402.03300"
+  ],
+  "note": "评估数学推理能力，DeepSeekMath达51.7%。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "mmlu": {
+  "name": "MMLU",
+  "kind": "benchmark",
+  "modality": "多学科知识问答",
+  "scale": "1.4万题、57学科",
+  "access": "https://huggingface.co/datasets/cais/mmlu",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2510.24803",
+   "arxiv:2606.00091"
+  ],
+  "note": "用于评测MASPRM在多学科推理任务中的表现。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习",
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "logiqa": {
+  "name": "LOGIQA",
+  "kind": "benchmark",
+  "modality": "逻辑推理问答",
+  "scale": "约1万题",
+  "access": "https://huggingface.co/datasets/lucasmccabe/logiqa",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2510.24803"
+  ],
+  "note": "用于评测MASPRM在逻辑推理任务中的表现。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "amc23": {
+  "name": "AMC23",
+  "kind": "dataset",
+  "modality": "数学竞赛题",
+  "scale": "40题",
+  "access": "https://huggingface.co/datasets/AI-MO/aimo-validation-amc",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2504.15275",
+   "doi:10.18653/v1/2026.findings-acl.524"
+  ],
+  "note": "用于评测PURE在数学推理上的准确率。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "faithrl": {
+  "name": "FaithRL",
+  "kind": "tool",
+  "modality": "推理链步级奖励代码",
+  "scale": "代码库（未标规模）",
+  "access": "https://github.com/Easy195/FaithRL",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2602.05897"
+  ],
+  "note": "提供小推理模型步级忠实度奖励与截断重采样的实现代码。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "medprmbench": {
+  "name": "MedPRMBench",
+  "kind": "benchmark",
+  "modality": "医学QA推理链步级标签",
+  "scale": "6500题/13000链/113910步标签",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2604.17282"
+  ],
+  "note": "首个医学领域过程级奖励模型基准，含14种错误类型与4级严重度。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "sciprm70k": {
+  "name": "SCIPRM70K",
+  "kind": "dataset",
+  "modality": "科学工具调用推理轨迹",
+  "scale": "70K条Chain-of-Tool轨迹",
+  "access": "GitHub（论文称代码公开）",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2606.04579"
+  ],
+  "note": "含交错推理与科学工具执行的轨迹，用于训练Sci-PRM。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "sci prm": {
+  "name": "Sci-PRM",
+  "kind": "model",
+  "modality": "科学推理过程奖励模型",
+  "scale": "未标参数量",
+  "access": "GitHub（论文称代码公开）",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2606.04579"
+  ],
+  "note": "对工具选择、执行准确性与结果解读提供细粒度监督的过程奖励模型。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "truthinsightbench": {
+  "name": "TruthInsightBench",
+  "kind": "benchmark",
+  "modality": "开放式科学发现任务与评分",
+  "scale": "40个盲任务/10领域/40篇研究",
+  "access": "https://github.com/TruthInsight-stack/TruthInsightBench",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2609.05079"
+  ],
+  "note": "评测开放式科学发现智能体，含6维度29个证据锚定评分项。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "memcalib": {
+  "name": "MemCalib",
+  "kind": "benchmark",
+  "modality": "智能体记忆使用评测数据",
+  "scale": "15000例（13500训练+1500测试）",
+  "access": "https://github.com/Quark-Medical/memcalib",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2609.24259"
+  ],
+  "note": "评测模型对记忆的忽略/限定/控制三级影响，覆盖健康、通用助手与编程。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "dead"
+ },
+ "deepseek r1": {
+  "name": "DeepSeek-R1",
+  "kind": "model",
+  "modality": "推理大语言模型",
+  "scale": "基于DeepSeek-V3 Base（未标参数量）",
+  "access": "公开R1-Zero、R1、数据样本与蒸馏模型",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41586-025-09422-z"
+  ],
+  "note": "用GRPO仅以答案正确性为奖励训练，涌现验证、反思、探索等长链推理行为。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "deepseek r1 zero": {
+  "name": "DeepSeek-R1-Zero",
+  "kind": "model",
+  "modality": "推理大语言模型",
+  "scale": "基于DeepSeek-V3 Base（未标参数量）",
+  "access": "公开R1-Zero、R1、数据样本与蒸馏模型",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41586-025-09422-z"
+  ],
+  "note": "跳过SFT直接RL训练的推理模型，用于验证纯RL可激发推理能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "co scientist": {
+  "name": "Co-Scientist",
+  "kind": "model",
+  "modality": "多智能体科学假设生成系统",
+  "scale": "基于Gemini的多智能体系统",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41586-026-10644-y"
+  ],
+  "note": "由生成、反思、排序、进化等智能体组成，在三个生物医学问题上生成经实验验证的假设。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "cellpuzzles": {
+  "name": "CellPuzzles",
+  "kind": "benchmark",
+  "modality": "单细胞RNA测序批级推理任务",
+  "scale": "跨组织/疾病/供体（未标具体规模）",
+  "access": "GitHub（论文称代码与数据公开）",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1093/bioinformatics/btag208"
+  ],
+  "note": "将细胞类型注释重构为批级推理任务的基准。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "cell o1": {
+  "name": "Cell-o1",
+  "kind": "model",
+  "modality": "单细胞推理大语言模型",
+  "scale": "7B参数",
+  "access": "GitHub（论文称代码与数据公开）",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1093/bioinformatics/btag208"
+  ],
+  "note": "用蒸馏推理轨迹SFT加批级奖励RL训练，用于单细胞类型注释推理。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "medqa": {
+  "name": "MedQA",
+  "kind": "benchmark",
+  "modality": "医学多选题问答",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.18653/v1/2026.findings-acl.524"
+  ],
+  "note": "作为分布内基准评估TEMPO的医学推理性能。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "medmcqa": {
+  "name": "MedMCQA",
+  "kind": "benchmark",
+  "modality": "医学多选题问答",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.18653/v1/2026.findings-acl.524"
+  ],
+  "note": "作为分布外基准评估TEMPO的泛化能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "mmlu medical": {
+  "name": "MMLU-Medical",
+  "kind": "benchmark",
+  "modality": "医学知识多选题",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.18653/v1/2026.findings-acl.524"
+  ],
+  "note": "作为分布外医学知识基准评估TEMPO。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "gsm hard": {
+  "name": "GSM-HARD",
+  "kind": "benchmark",
+  "modality": "数学应用题",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.18653/v1/2026.findings-acl.524"
+  ],
+  "note": "作为分布外数学推理基准评估TEMPO。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "qwen2 vl 2b": {
+  "name": "Qwen2-VL-2B",
+  "kind": "model",
+  "modality": "视觉语言模型",
+  "scale": "20亿参数",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/tmi.2026.3661001"
+  ],
+  "note": "作为Med-R1的基线模型，RL后准确率提升29.94%。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "qwen2 vl 72b": {
+  "name": "Qwen2-VL-72B",
+  "kind": "model",
+  "modality": "视觉语言模型",
+  "scale": "720亿参数",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/tmi.2026.3661001"
+  ],
+  "note": "作为对比基线，Med-R1超越该36倍参数量模型。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "qwen3 1 7b": {
+  "name": "Qwen3-1.7B",
+  "kind": "model",
+  "modality": "文本大语言模型",
+  "scale": "1.7B参数",
+  "access": "Hugging Face (Qwen/Qwen3-1.7B)",
+  "open": "yes",
+  "used_by": [
+   "doi:10.18653/v1/2026.findings-acl.524",
+   "doi:10.48550/arxiv.2605.05965"
+  ],
+  "note": "作为S-trace选择性资格迹方法的实验基座模型之一，评测推理任务pass@16。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "qwen3 4b": {
+  "name": "Qwen3-4B",
+  "kind": "model",
+  "modality": "文本大语言模型",
+  "scale": "40亿参数",
+  "access": "Hugging Face (Qwen/Qwen3-4B)",
+  "open": "yes",
+  "used_by": [
+   "doi:10.18653/v1/2026.findings-acl.524",
+   "doi:10.48550/arxiv.2605.05965",
+   "doi:10.48550/arxiv.2605.11853"
+  ],
+  "note": "作为S-trace与GEAR方法的实验基座模型，评测数学推理与工具使用任务。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "deepseekmath 7b": {
+  "name": "DeepSeekMath 7B",
+  "kind": "model",
+  "modality": "数学推理语言模型",
+  "scale": "70亿参数",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2402.03300"
+  ],
+  "note": "通过继续预训练与GRPO提升数学推理，MATH达51.7%。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "genotex": {
+  "name": "GenoTEX",
+  "kind": "benchmark",
+  "modality": "基因表达数据分析",
+  "scale": "含专家标注代码与结果",
+  "access": "https://github.com/Liu-Hy/GenoTEX",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2406.15341"
+  ],
+  "note": "评估LLM智能体自动化基因表达分析流程的基准。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "genoagent": {
+  "name": "GenoAgent",
+  "kind": "model",
+  "modality": "多智能体基因分析",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2406.15341"
+  ],
+  "note": "GenoTEX基准上的多智能体基线方法。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "bird": {
+  "name": "BIRD",
+  "kind": "benchmark",
+  "modality": "text-to-SQL",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2608.00017"
+  ],
+  "note": "用于评估LUCID去膨胀算法，执行准确率提升至56.9%。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "skillmisevo gym": {
+  "name": "SKILLMISEVO-GYM",
+  "kind": "benchmark",
+  "modality": "智能体技能演化测试台",
+  "scale": "25种配置，各525任务、25回合",
+  "access": "https://github.com/henrymao2004/misevolve",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.12851"
+  ],
+  "note": "生命周期感知测试台，用于研究技能误演化。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "skillmisevo bench": {
+  "name": "SKILLMISEVO-BENCH",
+  "kind": "benchmark",
+  "modality": "智能体技能安全基准",
+  "scale": "未明确",
+  "access": "https://github.com/henrymao2004/misevolve",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.12851"
+  ],
+  "note": "冻结基准，用于评估技能误演化与安全修复。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "safeevolve": {
+  "name": "SAFEEVOLVE",
+  "kind": "tool",
+  "modality": "智能体安全修复包装",
+  "scale": "未明确",
+  "access": "https://github.com/henrymao2004/misevolve",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.12851"
+  ],
+  "note": "修复包装，显著降低不安全技能检索与新会话危害。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "proteingym": {
+  "name": "ProteinGym",
+  "kind": "benchmark",
+  "modality": "蛋白质适应度预测",
+  "scale": "217个DMS assay",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.16951"
+  ],
+  "note": "零样本排行榜评估Delta V集成校准策略，五项指标第一。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "encode": {
+  "name": "ENCODE",
+  "kind": "database",
+  "modality": "转录因子结合数据",
+  "scale": "132个转录因子",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.16951"
+  ],
+  "note": "用于DNA基序发现，DALE平均AUROC 0.842优于STREME。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "streme": {
+  "name": "STREME",
+  "kind": "tool",
+  "modality": "DNA基序发现",
+  "scale": "未明确",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.16951"
+  ],
+  "note": "作为DNA基序发现基线，DALE优于其0.803 AUROC且快11倍。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "venusrem": {
+  "name": "VenusREM",
+  "kind": "model",
+  "modality": "蛋白质适应度预测",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2608.16951"
+  ],
+  "note": "作为蛋白质适应度预测基线，Delta V平均Spearman超其0.033。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "r judge": {
+  "name": "R-Judge",
+  "kind": "benchmark",
+  "modality": "多轮智能体交互文本",
+  "scale": "569条交互记录，27类风险场景",
+  "access": "https://github.com/Lordog/R-Judge",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2401.10019"
+  ],
+  "note": "用于评测LLM智能体在交互环境中的安全风险意识。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "biokgbench": {
+  "name": "BioKGBench",
+  "kind": "benchmark",
+  "modality": "生物医学文献与知识图谱",
+  "scale": "2000+原子任务，225条智能体标注",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2407.00466"
+  ],
+  "note": "用于评测生物医学智能体的科学论断验证与知识图谱问答能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "toolmaker benchmark": {
+  "name": "ToolMaker Benchmark",
+  "kind": "benchmark",
+  "modality": "代码与单元测试",
+  "scale": "15个计算任务，100+单元测试",
+  "access": "GitHub（论文公开代码与基准）",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2502.11705"
+  ],
+  "note": "用于评测智能体将论文代码自动转化为LLM兼容工具的能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "lmr bench": {
+  "name": "LMR-BENCH",
+  "kind": "benchmark",
+  "modality": "NLP论文与代码库",
+  "scale": "28个复现任务，源自23篇论文",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2506.17335"
+  ],
+  "note": "用于评测LLM智能体从研究论文复现代码的能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "swe bench verified": {
+  "name": "SWE Bench Verified",
+  "kind": "benchmark",
+  "modality": "软件工程代码任务",
+  "scale": "随机子集（规模未明确）",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2504.15228"
+  ],
+  "note": "用于评测自改进编码智能体的软件工程任务表现。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "livecodebench": {
+  "name": "LiveCodeBench",
+  "kind": "benchmark",
+  "modality": "代码生成任务",
+  "scale": "",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2504.15228"
+  ],
+  "note": "用于评测自改进编码智能体的代码生成能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "kimi k1 5": {
+  "name": "Kimi k1.5",
+  "kind": "model",
+  "modality": "多模态文本与图像",
+  "scale": "参数量未披露",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2501.12599"
+  ],
+  "note": "通过强化学习训练的多模态LLM，用于验证RL扩展与long2short方法。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "nkibench": {
+  "name": "NKIBench",
+  "kind": "benchmark",
+  "modality": "AI加速器内核代码",
+  "scale": "来自真实LLM工作负载的Trainium内核，复杂度不一",
+  "access": "https://github.com/zhang677/AccelOpt",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2511.15915"
+  ],
+  "note": "用于评测LLM智能体自主优化AWS Trainium AI加速器内核的性能。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "gaia2": {
+  "name": "Gaia2",
+  "kind": "benchmark",
+  "modality": "智能体任务轨迹",
+  "scale": "未在文中明确规模",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2603.24639"
+  ],
+  "note": "用于评测经验反思学习（ERL）框架的智能体任务成功率，对比ReAct等方法。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "sciintegrity bench": {
+  "name": "SciIntegrity-Bench",
+  "kind": "benchmark",
+  "modality": "学术诚信两难场景",
+  "scale": "33个场景、11类陷阱、231次评测、7个LLM",
+  "access": "GitHub（代码公开）",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2605.10246"
+  ],
+  "note": "首个针对AI科学家系统学术诚信的基准，用于评测LLM在数据缺失等情境下的诚信表现。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "qwen3 8b": {
+  "name": "Qwen3-8B",
+  "kind": "model",
+  "modality": "文本大语言模型",
+  "scale": "8B参数",
+  "access": "Hugging Face (Qwen/Qwen3-8B)",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2605.05965",
+   "doi:10.48550/arxiv.2605.11853"
+  ],
+  "note": "作为S-trace与GEAR方法的实验基座模型，评测数学推理与工具使用任务。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "soundnessbench": {
+  "name": "SoundnessBench",
+  "kind": "benchmark",
+  "modality": "ML研究提案文本",
+  "scale": "1099个提案",
+  "access": "https://doi.org/10.48550/arXiv.2605.30329",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2605.30329"
+  ],
+  "note": "评测LLM判断研究想法方法可行性的基准，源自ICLR投稿重建。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "seagym": {
+  "name": "SEAGym",
+  "kind": "benchmark",
+  "modality": "智能体自进化任务",
+  "scale": "Terminal-Bench 2.0与HLE任务",
+  "access": "https://doi.org/10.48550/arXiv.2606.17546",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2606.17546"
+  ],
+  "note": "评估自进化LLM智能体的环境，含训练/验证/测试/回放/成本记录。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "terminal bench 2 0": {
+  "name": "Terminal-Bench 2.0",
+  "kind": "benchmark",
+  "modality": "终端智能体任务",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2606.17546"
+  ],
+  "note": "SEAGym中用于自进化智能体评估的Harbor兼容基准之一。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "hle": {
+  "name": "HLE",
+  "kind": "benchmark",
+  "modality": "专家级问答推理",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2606.17546"
+  ],
+  "note": "SEAGym中用于自进化智能体评估的基准之一。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "the ai scientist": {
+  "name": "The AI Scientist",
+  "kind": "tool",
+  "modality": "全自动科研框架",
+  "scale": "3个ML子领域",
+  "access": "GitHub: SakanaAI/AI-Scientist",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2408.06292"
+  ],
+  "note": "LLM独立完成构思、编码、实验、写作与评审的全自动科研框架。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "gepa": {
+  "name": "GEPA",
+  "kind": "tool",
+  "modality": "提示进化优化",
+  "scale": "六类任务",
+  "access": "github.com/gepa-ai/gepa",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2507.19457"
+  ],
+  "note": "用自然语言反思与多目标进化搜索优化复合AI系统提示。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "ai4ai bench": {
+  "name": "AI4AI-Bench",
+  "kind": "benchmark",
+  "modality": "算法设计智能体任务",
+  "scale": "10仓库×29配置×6系统×10任务",
+  "access": "https://arxiv.org/abs/2608.20318",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.20318"
+  ],
+  "note": "评测LLM智能体在递归自我改进中算法设计能力的隔离基准。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "ok"
+ },
+ "biodatalab": {
+  "name": "BioDataLab",
+  "kind": "benchmark",
+  "modality": "生物数据库策展任务",
+  "scale": "100个任务，源自57篇论文",
+  "access": "https://doi.org/10.1145/3770855.3817556",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1145/3770855.3817556"
+  ],
+  "note": "评测LLM智能体在真实生物数据库策展中的多步工具编排能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "blocked"
+ },
+ "streambench": {
+  "name": "StreamBench",
+  "kind": "benchmark",
+  "modality": "输入-反馈序列，在线学习环境",
+  "scale": "未明确规模",
+  "access": "github.com/stream-bench/stream-bench",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2406.08747"
+  ],
+  "note": "评估LLM智能体在连续反馈流中的持续改进能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "blade": {
+  "name": "BLADE",
+  "kind": "benchmark",
+  "modality": "12个数据集与研究问题，专家真值",
+  "scale": "12个数据集与研究问题",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2408.09667"
+  ],
+  "note": "自动评估语言模型智能体对开放式科研问题的多面分析方法。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "scienceagentbench": {
+  "name": "ScienceAgentBench",
+  "kind": "benchmark",
+  "modality": "102个任务，来自44篇论文，4个学科",
+  "scale": "102个任务，44篇论文，4学科",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2410.05080"
+  ],
+  "note": "严格评估语言智能体在数据驱动科学发现中的能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "intuitor": {
+  "name": "Intuitor",
+  "kind": "model",
+  "modality": "数学推理与代码生成，无标注数据",
+  "scale": "未明确参数量",
+  "access": "github.com/sunblaze-ucb/Intuitor",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2505.19590"
+  ],
+  "note": "用模型自身置信度self-certainty作为唯一奖励信号的无监督RL方法。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "rose": {
+  "name": "ROSE",
+  "kind": "model",
+  "modality": "数学推理基准，Qwen与Llama模型",
+  "scale": "未明确参数量",
+  "access": "GitHub链接（文中提及）",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2601.05053"
+  ],
+  "note": "基于语义熵分支策略和ε探索机制增强RLVR推理探索多样性。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "evoscientist": {
+  "name": "EvoScientist",
+  "kind": "model",
+  "modality": "多智能体端到端科学发现",
+  "scale": "未提及具体规模",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2603.08127"
+  ],
+  "note": "三个专门智能体加两个持久记忆模块，持续提炼可复用知识。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "matclaw": {
+  "name": "MatClaw",
+  "kind": "model",
+  "modality": "代码优先LLM智能体，材料探索",
+  "scale": "铁电CuInP2S6三个端到端演示任务",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2604.02688"
+  ],
+  "note": "直接编写执行Python，组合领域库在HPC集群编排多代码工作流。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "discoverphysics": {
+  "name": "DiscoverPhysics",
+  "kind": "benchmark",
+  "modality": "模拟物理世界轨迹",
+  "scale": "22个模拟世界",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2605.26087"
+  ],
+  "note": "交互式基准，评估LLM智能体发现偏离真实物理的模拟世界运动定律的能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "abc bench": {
+  "name": "ABC-Bench",
+  "kind": "benchmark",
+  "modality": "生物双用途任务",
+  "scale": "3项任务，3个湿实验验证",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2606.11150"
+  ],
+  "note": "衡量LLM智能体与生物安全相关的代理能力，含液体处理机器人编程、DNA设计等任务。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "officeqa": {
+  "name": "OfficeQA",
+  "kind": "benchmark",
+  "modality": "智能体任务问答",
+  "scale": "",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2607.05297"
+  ],
+  "note": "用于评估MetaSkill-Evolve框架的智能体基准之一。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "sealqa": {
+  "name": "SealQA",
+  "kind": "benchmark",
+  "modality": "智能体任务问答",
+  "scale": "",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2607.05297"
+  ],
+  "note": "用于评估MetaSkill-Evolve框架的智能体基准之一。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "rsibench data": {
+  "name": "RSIBench-Data",
+  "kind": "benchmark",
+  "modality": "数据中心研究任务",
+  "scale": "6个基准，4个前沿智能体",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2607.25886"
+  ],
+  "note": "受控基准，隔离评估智能体的数据中心研究能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "humaneval": {
+  "name": "HumanEval",
+  "kind": "benchmark",
+  "modality": "代码生成",
+  "scale": "164个编程问题",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "doi:10.52202/075280-0377"
+  ],
+  "note": "用于评估Reflexion框架的编码基准，pass@1达91%。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "biomnibench da": {
+  "name": "BiomniBench-DA",
+  "kind": "benchmark",
+  "modality": "生物医学数据分析",
+  "scale": "100个任务，17种类型，5个疾病领域",
+  "access": "HuggingFace",
+  "open": "yes",
+  "used_by": [
+   "doi:10.64898/2026.05.12.724604"
+  ],
+  "note": "过程级评估LLM智能体在真实生物医学研究中的数据分析能力。",
+  "topics": [
+   "LLM 科研智能体与可验证奖励强化学习"
+  ],
+  "verified": "n/a"
+ },
+ "scgpt": {
+  "name": "scGPT",
+  "kind": "model",
+  "modality": "单细胞转录组基础模型",
+  "scale": "3300万+细胞预训练",
+  "access": "https://doi.org/10.1038/s41592-024-02201-0",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2602.17532",
+   "arxiv:2603.01752",
+   "arxiv:2603.02952",
+   "arxiv:2603.10261",
+   "doi:10.1038/s41592-024-02201-0",
+   "doi:10.1186/s12864-025-11600-2",
+   "doi:10.1038/s41592-025-02772-6",
+   "doi:10.1186/s13059-025-03574-x"
+  ],
+  "note": "生成式预训练Transformer单细胞基础模型，用于细胞类型注释、扰动预测等下游任务，并被用作扰动后RNA-seq预测基准的对比模型。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "geneformer": {
+  "name": "Geneformer",
+  "kind": "model",
+  "modality": "单细胞转录组基础模型",
+  "scale": "约3000万细胞预训练",
+  "access": "https://doi.org/10.1038/s41586-023-06139-9",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2602.17532",
+   "arxiv:2603.01752",
+   "arxiv:2603.02952",
+   "arxiv:2603.11940",
+   "doi:10.1038/s41586-023-06139-9",
+   "doi:10.1186/s13059-025-03574-x"
+  ],
+  "note": "作为被评估/被解释的单细胞基础模型，用于注意力可解释性、SAE 图谱与电路追踪研究。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "tabula sapiens": {
+  "name": "Tabula Sapiens",
+  "kind": "dataset",
+  "modality": "单细胞转录组",
+  "scale": "564,253 细胞",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2603.10261"
+  ],
+  "note": "用于从 scGPT 中提取造血流形算法并做供体留出伪时间基准评估。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "tahoe x1": {
+  "name": "Tahoe-X1",
+  "kind": "model",
+  "modality": "单细胞转录组",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2604.14838"
+  ],
+  "note": "作为单细胞基础模型，用于逐层表征在轨迹推断与扰动预测中的评估。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "scfoundation": {
+  "name": "scFoundation",
+  "kind": "model",
+  "modality": "单细胞转录组基础模型",
+  "scale": "大规模单细胞预训练模型",
+  "access": "https://doi.org/10.1186/s12864-025-11600-2",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2604.14838",
+   "doi:10.1186/s12864-025-11600-2",
+   "doi:10.1038/s41592-025-02772-6"
+  ],
+  "note": "Transformer单细胞基础模型，在扰动后RNA-seq预测基准中与scGPT一同被评估。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "perturbreason": {
+  "name": "PerturbReason",
+  "kind": "dataset",
+  "modality": "遗传扰动多模态",
+  "scale": ">498k 样本",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2604.20263"
+  ],
+  "note": "用于训练与评估 AROMA 虚拟细胞遗传扰动建模。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "past": {
+  "name": "PAST",
+  "kind": "model",
+  "modality": "病理图像+空间转录组",
+  "scale": "2000万配对样本",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2507.06418"
+  ],
+  "note": "泛癌多模态单细胞基础模型，用于基因表达预测、虚拟染色与生存分析。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "strand": {
+  "name": "STRAND",
+  "kind": "model",
+  "modality": "CRISPR 扰动单细胞",
+  "scale": "K562/Jurkat/RPE1",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2602.10156"
+  ],
+  "note": "序列条件传输模型，用于单细胞基因扰动预测。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "scale": {
+  "name": "SCALE",
+  "kind": "model",
+  "modality": "扰动单细胞转录组",
+  "scale": "CRISPR/化学/发育/免疫",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2603.17380"
+  ],
+  "note": "条件传输模型，用于虚拟细胞扰动预测。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "aroma": {
+  "name": "AROMA",
+  "kind": "model",
+  "modality": "多模态遗传扰动",
+  "scale": ">498k 样本",
+  "access": "HuggingFace/GitHub",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2604.20263"
+  ],
+  "note": "多模态增强推理架构，用于虚拟细胞遗传扰动建模。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "sccontam": {
+  "name": "scContam",
+  "kind": "tool",
+  "modality": "单细胞转录组",
+  "scale": "4个scIB基准、3个scFM",
+  "access": "开源代码与审计结果（论文声明）",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2607.20572"
+  ],
+  "note": "逐细胞审计单细胞基础模型基准的预训练污染，结合MinHash指纹与成员推断攻击。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "scib": {
+  "name": "scIB",
+  "kind": "benchmark",
+  "modality": "scRNA/scATAC整合",
+  "scale": "13个整合任务，最多23批次、100万细胞",
+  "access": "https://doi.org/10.1038/s41592-021-01336-8",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2607.20572",
+   "doi:10.1038/s41592-021-01336-8"
+  ],
+  "note": "单细胞数据整合工具的标准基准，用于评估批次去除与生物变异保留。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "genecorpus 30m": {
+  "name": "GeneCorpus-30M",
+  "kind": "dataset",
+  "modality": "单细胞转录组",
+  "scale": "约3000万细胞",
+  "access": "论文/门户（Genecorpus-30M）",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2607.20572",
+   "doi:10.1038/s41586-023-06139-9"
+  ],
+  "note": "用于预训练Geneformer等单细胞基础模型的大规模单细胞转录组语料。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "cellworld": {
+  "name": "CellWorld",
+  "kind": "model",
+  "modality": "空间转录组",
+  "scale": "4600万细胞，4变体5.74M–94.56M参数",
+  "access": "GitHub（论文声明代码公开）",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.06659"
+  ],
+  "note": "空间转录组基础模型，预测被掩码细胞的潜在表征而非基因重建。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "perturb seq genome scale screen": {
+  "name": "Perturb-seq genome-scale screen",
+  "kind": "dataset",
+  "modality": "CRISPRi扰动scRNA-seq",
+  "scale": "K562与RPE1，数千个敲低扰动",
+  "access": "https://doi.org/10.1016/j.cell.2022.05.013",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.cell.2022.05.013"
+  ],
+  "note": "首个基因组规模Perturb-seq筛选，用于研究基因功能与调控网络。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "perturb fish": {
+  "name": "Perturb-FISH",
+  "kind": "tool",
+  "modality": "空间转录组+CRISPR扰动",
+  "scale": "THP1巨噬细胞、肿瘤3D组织",
+  "access": "https://doi.org/10.1016/j.cell.2025.02.012",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1016/j.cell.2025.02.012"
+  ],
+  "note": "结合MERFISH与gRNA原位扩增，在空间背景下同时解码扰动与转录组。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "virtual cell challenge": {
+  "name": "Virtual Cell Challenge",
+  "kind": "benchmark",
+  "modality": "扰动响应单细胞数据",
+  "scale": "专用扰动数据集（规模未明）",
+  "access": "https://doi.org/10.1016/j.cell.2025.06.008",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.cell.2025.06.008"
+  ],
+  "note": "虚拟细胞挑战赛，提供评估框架与数据集以预测扰动响应。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "human cell atlas": {
+  "name": "Human Cell Atlas",
+  "kind": "database",
+  "modality": "多模态单细胞图谱",
+  "scale": "全球细胞图谱计划",
+  "access": "https://doi.org/10.1038/s41586-024-08338-4",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41586-024-08338-4",
+   "doi:10.1038/s41586-024-08411-y"
+  ],
+  "note": "细胞图谱计划，作为细胞普查、3D图谱与基础模型的数据基础。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "scimilarity": {
+  "name": "SCimilarity",
+  "kind": "model",
+  "modality": "单细胞转录组",
+  "scale": "2340万细胞，412项研究",
+  "access": "https://doi.org/10.1038/s41586-024-08411-y",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41586-024-08411-y"
+  ],
+  "note": "深度度量学习基础模型，实现跨组织疾病的相似细胞可扩展搜索。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "st bank": {
+  "name": "ST-bank",
+  "kind": "dataset",
+  "modality": "空间转录组-组织图像配对",
+  "scale": "220万组织patch，1007样本，32器官",
+  "access": "公开（论文声明）",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41592-025-02707-1"
+  ],
+  "note": "用于训练OmiCLIP视觉-组学基础模型的图像-基因表达配对patch数据集。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "omiclip": {
+  "name": "OmiCLIP",
+  "kind": "model",
+  "modality": "组织病理图像+空间转录组",
+  "scale": "基于220万配对patch训练",
+  "access": "https://doi.org/10.1038/s41592-025-02707-1",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41592-025-02707-1"
+  ],
+  "note": "转录组-图像双编码器基础模型，通过CLIP对比学习对齐图像与基因句子表示。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "loki": {
+  "name": "Loki",
+  "kind": "tool",
+  "modality": "空间转录组+组织图像",
+  "scale": "5项功能（对齐、注释、分解、检索、表达预测）",
+  "access": "https://doi.org/10.1038/s41592-025-02707-1",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41592-025-02707-1"
+  ],
+  "note": "基于OmiCLIP的视觉-组学平台，提供组织对齐、注释、细胞分解、检索与基因表达预测功能。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "perturb seq": {
+  "name": "Perturb-seq",
+  "kind": "dataset",
+  "modality": "CRISPR扰动单细胞转录组",
+  "scale": "4个数据集，约48.5万细胞",
+  "access": "GEO（文中引用数据集）",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1126/science.aax4438",
+   "doi:10.1186/s12864-025-11600-2"
+  ],
+  "note": "CRISPR介导的pooled扰动单细胞RNA测序数据，用于构建遗传互作流形及基准测试基础模型扰动预测能力。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "allen brain atlas": {
+  "name": "Allen Brain Atlas",
+  "kind": "database",
+  "modality": "空间转录组/脑图谱",
+  "scale": "全脑多区域空间转录组图谱",
+  "access": "https://portal.brain-map.org/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1016/j.cell.2025.06.048"
+  ],
+  "note": "提供脑发育空间转录组数据，用于参数化可解释细胞行为语法构建的agent-based虚拟细胞模型。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "prnet": {
+  "name": "PRnet",
+  "kind": "model",
+  "modality": "化学扰动转录响应",
+  "scale": "约1亿bulk观测、175,549化合物；数千万单细胞、188化合物",
+  "access": "https://doi.org/10.1038/s41467-024-53457-1",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41467-024-53457-1"
+  ],
+  "note": "扰动条件深度生成模型，以化合物SMILES和未扰动转录谱预测新化学扰动的bulk与单细胞转录响应。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "cellfm": {
+  "name": "CellFM",
+  "kind": "model",
+  "modality": "人类单细胞转录组",
+  "scale": "1亿人类细胞预训练",
+  "access": "代码与权重公开（论文声明）",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41467-025-59926-5"
+  ],
+  "note": "面向人类单细胞转录组的大规模基础模型，通过自监督学习获得通用细胞与基因表征。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "mstar": {
+  "name": "mSTAR",
+  "kind": "model",
+  "modality": "全切片病理图像+报告+基因表达",
+  "scale": "26,169切片-模态对，10,275患者，32癌种，1.16亿patch",
+  "access": "https://doi.org/10.1038/s41467-025-66220-x",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-025-66220-x"
+  ],
+  "note": "整合病理切片、病理报告和基因表达的多模态全切片病理基础模型，用于分子预测与报告生成等临床任务。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "cellpaint posh": {
+  "name": "CellPaint-POSH",
+  "kind": "tool",
+  "modality": "Cell Painting图像+光学CRISPR筛选",
+  "scale": "163,090个单细胞",
+  "access": "https://doi.org/10.1038/s41467-025-66778-6",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-025-66778-6"
+  ],
+  "note": "将Cell Painting与pooled光学CRISPR筛选结合的平台，配合自监督深度学习实现基因功能的无偏推断。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "ok"
+ },
+ "jump cell painting consortium data": {
+  "name": "JUMP Cell Painting Consortium data",
+  "kind": "dataset",
+  "modality": "Cell Painting 显微图像",
+  "scale": "U2OS 细胞，JUMP-MOA 参考板",
+  "access": "JUMP 门户",
+  "open": "yes",
+  "used_by": [
+   "doi:10.3390/ijms27135727"
+  ],
+  "note": "用于在 JUMP-MOA 参考板上评估 Cell Painting 特征空间的检索式 mAP 表现。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "copairs": {
+  "name": "copairs",
+  "kind": "tool",
+  "modality": "图像表型特征分析",
+  "scale": "开源 Python 库",
+  "access": "公开代码库",
+  "open": "yes",
+  "used_by": [
+   "doi:10.3390/ijms27135727"
+  ],
+  "note": "提供元数据驱动的检索式 mAP 评估框架，用于比较 Cell Painting 特征空间。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "cellprofiler": {
+  "name": "CellProfiler",
+  "kind": "tool",
+  "modality": "显微图像特征提取",
+  "scale": "开源图像分析软件",
+  "access": "cellprofiler.org",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s44320-026-00197-7",
+   "doi:10.3390/ijms27135727"
+  ],
+  "note": "作为经典手工图像特征提取基线，与深度学习特征在 MoA 预测等任务中比较。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "sea ad": {
+  "name": "SEA-AD",
+  "kind": "dataset",
+  "modality": "snRNA/snATAC/MERFISH 多模态",
+  "scale": "340 万核，84 供体",
+  "access": "SEA-AD 门户",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41593-024-01774-5"
+  ],
+  "note": "阿尔茨海默病中颞回多模态整合细胞图谱，用于映射 139 种细胞类型及疾病进展。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "moscot": {
+  "name": "moscot",
+  "kind": "tool",
+  "modality": "单细胞/空间/多模态最优传输",
+  "scale": "170 万细胞小鼠胚胎等",
+  "access": "moscot-tools.org",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41586-024-08453-2"
+  ],
+  "note": "统一最优传输框架，用于单细胞时序、空间和时空映射及多模态图谱对齐。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "unagi": {
+  "name": "UNAGI",
+  "kind": "model",
+  "modality": "时间序列 scRNA-seq 生成模型",
+  "scale": "VAE-GAN 框架",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41551-025-01423-7"
+  ],
+  "note": "无监督深度生成框架，从疾病时间序列单细胞数据解析细胞动力学并进行药物扰动筛选。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "cmap": {
+  "name": "CMAP",
+  "kind": "database",
+  "modality": "药物扰动转录组",
+  "scale": "大规模药物扰动谱",
+  "access": "clue.io",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.1038/s41551-025-01423-7"
+  ],
+  "note": "提供药物扰动转录组参考，用于 UNAGI 的计算机药物筛选。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "perturbnet": {
+  "name": "PerturbNet",
+  "kind": "model",
+  "modality": "化学与遗传扰动 scRNA-seq",
+  "scale": "扰动-细胞状态联合表征",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s44320-025-00131-3"
+  ],
+  "note": "预测细胞对未见化学和遗传扰动的单细胞转录响应，支持虚拟扰动筛选。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "gears": {
+  "name": "GEARS",
+  "kind": "model",
+  "modality": "基因扰动响应预测",
+  "scale": "图神经网络模型",
+  "access": "GitHub",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41592-025-02772-6"
+  ],
+  "note": "作为扰动效应预测方法基线，与线性基线比较遗传互作预测表现。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "cpa": {
+  "name": "CPA",
+  "kind": "model",
+  "modality": "扰动响应预测",
+  "scale": "组合扰动自编码器",
+  "access": "GitHub",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41592-025-02772-6"
+  ],
+  "note": "作为扰动效应预测方法基线，被评测基因扰动预测能力。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "norman k562 crispra dataset": {
+  "name": "Norman K562 CRISPRa dataset",
+  "kind": "dataset",
+  "modality": "CRISPRa 双扰动 scRNA-seq",
+  "scale": "224 扰动，19,264 基因",
+  "access": "GEO",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41592-025-02772-6"
+  ],
+  "note": "用于评测深度学习模型预测基因扰动效应的 K562 CRISPRa 双扰动数据。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "harmony": {
+  "name": "Harmony",
+  "kind": "tool",
+  "modality": "单细胞批次校正",
+  "scale": "开源算法",
+  "access": "GitHub",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1186/s13059-025-03574-x"
+  ],
+  "note": "作为批次校正基线，与单细胞基础模型零样本嵌入比较。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "scvi": {
+  "name": "scVI",
+  "kind": "model",
+  "modality": "单细胞变分推断",
+  "scale": "开源概率模型",
+  "access": "GitHub",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1186/s13059-025-03574-x"
+  ],
+  "note": "作为细胞嵌入基线，与单细胞基础模型零样本表现比较。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "tox21": {
+  "name": "Tox21",
+  "kind": "dataset",
+  "modality": "小分子毒性活性数据",
+  "scale": "多 assay 活性基准",
+  "access": "tox21.gov",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1038/s41467-026-68725-5"
+  ],
+  "note": "用于分析小分子活性预测中细胞计数与细胞毒性爆发对基准性能的影响。",
+  "topics": [
+   "单细胞与空间组学基础模型与虚拟细胞"
+  ],
+  "verified": "n/a"
+ },
+ "audioset": {
+  "name": "AudioSet",
+  "kind": "dataset",
+  "modality": "音频（10s片段，32kHz）",
+  "scale": "无标签片段（规模未列）",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2507.02915"
+  ],
+  "note": "用于Audio-JEPA的无标签预训练音频数据。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "x ares": {
+  "name": "X-ARES",
+  "kind": "benchmark",
+  "modality": "音频（语音/音乐/环境声）",
+  "scale": "多任务音频评估套件",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2507.02915"
+  ],
+  "note": "用于评估Audio-JEPA在语音、音乐和环境声任务上的表现。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "wav2vec 2 0": {
+  "name": "wav2vec 2.0",
+  "kind": "model",
+  "modality": "音频自监督表征",
+  "scale": "预训练语音模型",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2507.02915"
+  ],
+  "note": "作为Audio-JEPA的对比基线。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "data2vec": {
+  "name": "data2vec",
+  "kind": "model",
+  "modality": "多模态自监督表征",
+  "scale": "通用自监督模型",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2507.02915"
+  ],
+  "note": "作为Audio-JEPA的对比基线。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "jepa dna": {
+  "name": "JEPA-DNA",
+  "kind": "model",
+  "modality": "基因组DNA序列",
+  "scale": "多物种基因组基础模型",
+  "access": "github.com/NVIDIA-Digital-Bio/JEPA-DNA",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2602.17162"
+  ],
+  "note": "将JEPA融入基因组基础模型训练，用于17项基因组基准任务。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "mnist": {
+  "name": "MNIST",
+  "kind": "dataset",
+  "modality": "手写数字图像",
+  "scale": "7万张图像",
+  "access": "http://yann.lecun.com/exdb/mnist/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2603.00049"
+  ],
+  "note": "用于BiJEPA的双向表征学习实验。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "lorenz attractor": {
+  "name": "Lorenz attractor",
+  "kind": "dataset",
+  "modality": "混沌时间序列",
+  "scale": "合成轨迹",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2603.00049"
+  ],
+  "note": "用于BiJEPA捕获混沌系统语义结构的实验。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "sentinel 2": {
+  "name": "Sentinel-2",
+  "kind": "dataset",
+  "modality": "多光谱光学遥感影像",
+  "scale": "全球覆盖",
+  "access": "https://dataspace.copernicus.eu/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2605.14120"
+  ],
+  "note": "作为Mini-JEPA舰队中光学传感器模型的训练数据。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "sentinel 1": {
+  "name": "Sentinel-1",
+  "kind": "dataset",
+  "modality": "SAR遥感影像",
+  "scale": "全球覆盖",
+  "access": "https://dataspace.copernicus.eu/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2605.14120"
+  ],
+  "note": "作为Mini-JEPA舰队中SAR传感器模型的训练数据。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "modis": {
+  "name": "MODIS",
+  "kind": "dataset",
+  "modality": "热红外遥感影像",
+  "scale": "全球覆盖",
+  "access": "https://modis.gsfc.nasa.gov/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2605.14120"
+  ],
+  "note": "作为Mini-JEPA舰队中热红外传感器模型的训练数据。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "alphaearth": {
+  "name": "AlphaEarth",
+  "kind": "model",
+  "modality": "地球观测基础模型",
+  "scale": "遥感基础模型",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2605.14120"
+  ],
+  "note": "作为Mini-JEPA舰队在物理匹配问题上的对比基线。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "wikitext": {
+  "name": "Wikitext",
+  "kind": "dataset",
+  "modality": "维基百科文本",
+  "scale": "1亿+词",
+  "access": "https://huggingface.co/datasets/wikitext",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2606.00091"
+  ],
+  "note": "用于评估DLLM-JEPA的语言建模能力。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "dead"
+ },
+ "pusht": {
+  "name": "PushT",
+  "kind": "benchmark",
+  "modality": "机器人操作轨迹",
+  "scale": "推T形块任务",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2609.24749"
+  ],
+  "note": "用于评估D-JEPA在机器人操作任务上的动作选择成功率。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "robotwin": {
+  "name": "RoboTwin",
+  "kind": "benchmark",
+  "modality": "机器人操作轨迹",
+  "scale": "双臂操作任务集",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2609.24749"
+  ],
+  "note": "用于评估D-JEPA在机器人操作任务上的表现。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "cae": {
+  "name": "CAE (Context Autoencoder)",
+  "kind": "model",
+  "modality": "图像",
+  "scale": "ViT骨干，未列参数量",
+  "access": "GitHub（论文声明将公开）",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1007/s11263-023-01852-4"
+  ],
+  "note": "在编码表征空间做掩码预测的自监督预训练模型，用于分割/检测/分类迁移。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "ctranspath": {
+  "name": "CTransPath",
+  "kind": "model",
+  "modality": "病理WSI瓦片",
+  "scale": "未列参数量",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-025-58796-1"
+  ],
+  "note": "作为公开自监督病理基础模型之一被纳入临床基准评测。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "phikon": {
+  "name": "Phikon",
+  "kind": "model",
+  "modality": "病理WSI瓦片",
+  "scale": "未列参数量",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-025-58796-1"
+  ],
+  "note": "作为公开自监督病理基础模型之一被纳入临床基准评测。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "uni": {
+  "name": "UNI",
+  "kind": "model",
+  "modality": "病理WSI瓦片",
+  "scale": "未列参数量",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-025-58796-1"
+  ],
+  "note": "作为公开自监督病理基础模型之一被纳入临床基准评测。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "virchow": {
+  "name": "Virchow",
+  "kind": "model",
+  "modality": "病理WSI瓦片",
+  "scale": "未列参数量",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-025-58796-1"
+  ],
+  "note": "作为公开自监督病理基础模型之一被纳入临床基准评测。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "videomae": {
+  "name": "VideoMAE",
+  "kind": "model",
+  "modality": "视频",
+  "scale": "ViT骨干，3k-4k视频预训练",
+  "access": "GitHub",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2203.12602"
+  ],
+  "note": "高比例管状掩码的视频自监督预训练模型，用于视频下游任务。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "nerf mae": {
+  "name": "NeRF-MAE",
+  "kind": "model",
+  "modality": "带位姿RGB图像/NeRF体素",
+  "scale": "180万+图像预训练",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2404.01300"
+  ],
+  "note": "对NeRF辐射与密度网格做掩码自编码预训练，用于3D迁移学习。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "3d jepa": {
+  "name": "3D-JEPA",
+  "kind": "model",
+  "modality": "3D点云",
+  "scale": "未列参数量",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2409.15803"
+  ],
+  "note": "非生成式3D自监督表征学习框架，用于点云下游任务。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "modelnet40": {
+  "name": "ModelNet40",
+  "kind": "dataset",
+  "modality": "3D点云/CAD模型",
+  "scale": "12,311模型，40类",
+  "access": "https://modelnet.cs.princeton.edu/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2409.15803",
+   "doi:10.1109/wacv61041.2025.00714",
+   "doi:10.48550/arxiv.2203.06604",
+   "doi:10.48550/arxiv.2511.18424"
+  ],
+  "note": "用于评估点云自监督方法（Point-JEPA、Point-MAE）的分类与少样本学习性能。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "dinov2": {
+  "name": "DINOv2",
+  "kind": "model",
+  "modality": "图像",
+  "scale": "ViT骨干，未列参数量",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2411.04983"
+  ],
+  "note": "提供预训练块特征，作为DINO-WM世界模型的特征编码器。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "dino wm": {
+  "name": "DINO-WM",
+  "kind": "model",
+  "modality": "离线行为轨迹/图像",
+  "scale": "三维操作任务",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2411.04983",
+   "arxiv:2609.21740"
+  ],
+  "note": "作为冻结的预训练世界模型，用于验证Sandwich-Residuals在三维操作任务上的测试时自适应效果。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "unified world models": {
+  "name": "Unified World Models (UWM)",
+  "kind": "model",
+  "modality": "机器人轨迹/视频",
+  "scale": "大规模多任务机器人数据",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2504.02792"
+  ],
+  "note": "统一Transformer耦合动作与视频扩散，用于机器人策略预训练。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "jetparticle jepa": {
+  "name": "JetParticle-JEPA (JP-JEPA)",
+  "kind": "model",
+  "modality": "粒子云/喷注数据",
+  "scale": "Particle Transformer骨干",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2606.14813"
+  ],
+  "note": "从连续粒子云学习喷注表征的自监督JEPA方法，用于喷注标记。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "jetclass": {
+  "name": "JetClass",
+  "kind": "dataset",
+  "modality": "高能物理喷注粒子云",
+  "scale": "大规模喷注模拟数据集",
+  "access": "项目网站公开",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2606.14813",
+   "doi:10.48550/arxiv.2502.03933"
+  ],
+  "note": "用于预训练HEP-JEPA高能物理基础模型并评估top tagging等下游任务。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "plan2explore": {
+  "name": "Plan2Explore",
+  "kind": "model",
+  "modality": "高维图像控制轨迹",
+  "scale": "未列参数量",
+  "access": "代码与视频公开",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2005.05960"
+  ],
+  "note": "基于集成动力学新颖性的自监督探索与世界模型规划方法。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "graphcl": {
+  "name": "GraphCL",
+  "kind": "model",
+  "modality": "图数据",
+  "scale": "未列参数量",
+  "access": "代码公开",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2010.13902"
+  ],
+  "note": "图对比学习框架，通过图增强学习无监督图表征。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "flow jepa": {
+  "name": "Flow-JEPA",
+  "kind": "model",
+  "modality": "像素级环境轨迹",
+  "scale": "四个环境",
+  "access": "代码公开",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.29029"
+  ],
+  "note": "用条件流匹配生成未来潜状态序列的JEPA世界模型。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "point lewm": {
+  "name": "Point-LeWM",
+  "kind": "model",
+  "modality": "3D点云观测",
+  "scale": "未列参数量",
+  "access": "GitHub",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.29434"
+  ],
+  "note": "将LeWM类JEPA世界模型提升到点云观测的基线模型。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "point delta jepa": {
+  "name": "Point-Delta-JEPA",
+  "kind": "model",
+  "modality": "3D点云观测",
+  "scale": "未列参数量",
+  "access": "GitHub",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2608.29434"
+  ],
+  "note": "动作敏感JEPA设计，在几何移动场景下表现最强的点云世界模型。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "adajepa": {
+  "name": "AdaJEPA",
+  "kind": "benchmark",
+  "modality": "世界模型规划任务",
+  "scale": "21种条件",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2609.21740"
+  ],
+  "note": "用于评估世界模型测试时自适应方法在多种分布偏移条件下的规划成功率。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "librispeech": {
+  "name": "Librispeech",
+  "kind": "dataset",
+  "modality": "语音音频",
+  "scale": "960小时",
+  "access": "https://www.openslr.org/12",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/taslp.2021.3122291"
+  ],
+  "note": "用于微调和评估HuBERT语音表征在下游语音识别任务上的性能。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "libri light": {
+  "name": "Libri-light",
+  "kind": "dataset",
+  "modality": "语音音频",
+  "scale": "60000小时",
+  "access": "https://github.com/facebookresearch/libri-light",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/taslp.2021.3122291"
+  ],
+  "note": "用于大规模无标注语音自监督预训练及多规模微调评估HuBERT。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "hubert": {
+  "name": "HuBERT",
+  "kind": "model",
+  "modality": "语音表征",
+  "scale": "最大1B参数",
+  "access": "https://github.com/facebookresearch/fairseq/tree/main/examples/hubert",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/taslp.2021.3122291"
+  ],
+  "note": "提出并发布的语音自监督预训练模型，通过掩码预测隐藏单元学习语音表征。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "point jepa": {
+  "name": "Point-JEPA",
+  "kind": "model",
+  "modality": "三维点云",
+  "scale": "",
+  "access": "https://github.com/Ayumu-J-S/Point-JEPA",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/wacv61041.2025.00714"
+  ],
+  "note": "面向点云的联合嵌入预测架构自监督模型，代码公开可复用。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "scanobjectnn": {
+  "name": "ScanObjectNN",
+  "kind": "dataset",
+  "modality": "三维点云",
+  "scale": "15类、约2902个样本",
+  "access": "https://hkust-vgd.github.io/scanobjectnn/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2203.06604",
+   "doi:10.48550/arxiv.2511.18424"
+  ],
+  "note": "用于评估点云掩码自编码器在真实扫描物体分类任务上的下游泛化能力。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "audio mae": {
+  "name": "Audio-MAE",
+  "kind": "model",
+  "modality": "音频频谱图",
+  "scale": "",
+  "access": "https://github.com/facebookresearch/AudioMAE",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2207.06405"
+  ],
+  "note": "将MAE扩展至音频频谱图的自监督预训练模型，用于六个音频与语音分类任务。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "graph jepa": {
+  "name": "Graph-JEPA",
+  "kind": "model",
+  "modality": "图结构数据",
+  "scale": "",
+  "access": "https://github.com/geriskenderi/graph-jepa",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2309.16014"
+  ],
+  "note": "面向图级表征学习的联合嵌入预测架构模型，代码公开可复用。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "hep jepa": {
+  "name": "HEP-JEPA",
+  "kind": "model",
+  "modality": "粒子物理喷注",
+  "scale": "Transformer基础模型",
+  "access": "项目网站公开",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2502.03933"
+  ],
+  "note": "基于JEPA自监督预训练的高能物理基础模型，用于喷注表征与下游分类。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "v jepa 2": {
+  "name": "V-JEPA 2",
+  "kind": "model",
+  "modality": "互联网视频与图像",
+  "scale": "超100万小时视频",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2506.09985"
+  ],
+  "note": "动作无关JEPA视频基础模型，用于视频理解、预测与规划。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "v jepa 2 ac": {
+  "name": "V-JEPA 2-AC",
+  "kind": "model",
+  "modality": "机器人视频",
+  "scale": "少于62小时Droid视频",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2506.09985"
+  ],
+  "note": "基于V-JEPA 2后训练的动作条件世界模型，用于Franka机械臂零样本抓取放置规划。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "droid": {
+  "name": "Droid",
+  "kind": "dataset",
+  "modality": "机器人操作视频",
+  "scale": "少于62小时",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2506.09985"
+  ],
+  "note": "用于后训练V-JEPA 2-AC世界模型。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "imagenet 1k": {
+  "name": "ImageNet-1K",
+  "kind": "dataset",
+  "modality": "自然图像分类",
+  "scale": "约128万训练图像，1000类",
+  "access": "https://www.image-net.org/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2511.08544",
+   "doi:10.48550/arxiv.2603.15553",
+   "arxiv:2608.27395",
+   "doi:10.1109/cvpr52688.2022.01553",
+   "doi:10.1109/cvpr52729.2023.01499",
+   "doi:10.1109/iccv48922.2021.00951",
+   "doi:10.1109/tpami.2023.3336525",
+   "doi:10.48550/arxiv.2408.02615"
+  ],
+  "note": "用于线性评估、冻结探针分类及视频预训练模型评估。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "lejepa": {
+  "name": "LeJEPA",
+  "kind": "model",
+  "modality": "图像",
+  "scale": "ViT-H/14，约50行代码",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2511.08544"
+  ],
+  "note": "可扩展无启发式JEPA自监督学习目标，用于图像表征预训练。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "crossjepa": {
+  "name": "CrossJEPA",
+  "kind": "model",
+  "modality": "2D图像与3D点云",
+  "scale": "跨模态JEPA架构",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2511.18424"
+  ],
+  "note": "利用2D图像基础模型知识进行高效3D表征学习。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "inaturalist 21": {
+  "name": "iNaturalist-21",
+  "kind": "dataset",
+  "modality": "自然图像",
+  "scale": "21类物种图像",
+  "access": "https://github.com/visipedia/inat_comp",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2603.15553"
+  ],
+  "note": "用于Bootleg冻结探针分类评估。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "vtab": {
+  "name": "VTAB",
+  "kind": "benchmark",
+  "modality": "视觉任务集合",
+  "scale": "19个视觉任务",
+  "access": "https://github.com/google-research/task_adaptation",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2603.15553"
+  ],
+  "note": "用于Bootleg冻结探针分类评估。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "ade20k": {
+  "name": "ADE20K",
+  "kind": "dataset",
+  "modality": "场景图像分割",
+  "scale": "2万余张图像",
+  "access": "https://groups.csail.mit.edu/vision/datasets/ADE20K/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2603.15553"
+  ],
+  "note": "用于Bootleg语义分割评估。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "cityscapes": {
+  "name": "Cityscapes",
+  "kind": "dataset",
+  "modality": "城市街景分割",
+  "scale": "5000张精细标注图像",
+  "access": "https://www.cityscapes-dataset.com/",
+  "open": "restricted",
+  "used_by": [
+   "doi:10.48550/arxiv.2603.15553"
+  ],
+  "note": "用于Bootleg语义分割评估。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "coco stuff": {
+  "name": "COCO-Stuff",
+  "kind": "dataset",
+  "modality": "图像语义分割",
+  "scale": "含stuff类别标注",
+  "access": "https://github.com/nightrome/cocostuff",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2603.15553"
+  ],
+  "note": "用于Bootleg语义分割评估。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "bootleg": {
+  "name": "Bootleg",
+  "kind": "model",
+  "modality": "图像",
+  "scale": "自蒸馏自监督模型",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2603.15553"
+  ],
+  "note": "通过预测教师多个隐藏层潜表征连接生成式与预测式自监督学习。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "siamjepa": {
+  "name": "SiamJEPA",
+  "kind": "model",
+  "modality": "图像",
+  "scale": "孪生编码器JEPA",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2607.04044"
+  ],
+  "note": "研究孪生学生编码器在JEPA中的作用，用于图像表征学习。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "music jepa": {
+  "name": "Music-JEPA",
+  "kind": "model",
+  "modality": "音频与pianoroll",
+  "scale": "动作条件世界模型",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2607.22000"
+  ],
+  "note": "将音乐建模为动作条件系统，用于节拍跟踪、作曲家识别、调性估计与钢琴转录。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "screp": {
+  "name": "scRep",
+  "kind": "model",
+  "modality": "单细胞转录组",
+  "scale": "约3072万细胞",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.64898/2026.08.31.747784"
+  ],
+  "note": "潜空间自蒸馏单细胞基础模型，用于单细胞表征学习与冻结基准评估。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "simclr": {
+  "name": "SimCLR",
+  "kind": "model",
+  "modality": "自然图像",
+  "scale": "ResNet-50对比学习框架",
+  "access": "https://github.com/google-research/simclr",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2002.05709"
+  ],
+  "note": "无需专用架构或记忆库的对比学习框架，用于图像自监督表征学习。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "imagenet ilsvrc 2012": {
+  "name": "ImageNet ILSVRC-2012",
+  "kind": "dataset",
+  "modality": "自然图像",
+  "scale": "1000类约128万图像",
+  "access": "https://www.image-net.org/challenges/LSVRC/2012/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2002.05709"
+  ],
+  "note": "用于SimCLR线性评估与半监督微调评估。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "byol": {
+  "name": "BYOL",
+  "kind": "model",
+  "modality": "自然图像",
+  "scale": "ResNet-50/更大ResNet",
+  "access": "https://github.com/deepmind/deepmind-research/tree/master/byol",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2006.07733"
+  ],
+  "note": "不依赖负样本的自监督图像表征学习方法，用于ImageNet线性评估与迁移。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "levjepa": {
+  "name": "LeVJEPA",
+  "kind": "model",
+  "modality": "视频",
+  "scale": "ViT-S/B/L视频编码器",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2608.27395"
+  ],
+  "note": "用LeJEPA无坍缩目标训练的高效可扩展视频预训练编码器。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "glam": {
+  "name": "GLAM",
+  "kind": "model",
+  "modality": "导航与地图表征",
+  "scale": "潜世界模型",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2609.14561"
+  ],
+  "note": "基于全局时空记忆的目标条件潜世界模型，用于主动探索与导航。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "glam nav": {
+  "name": "GLAM NAV",
+  "kind": "model",
+  "modality": "导航系统",
+  "scale": "基于GLAM的导航系统",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "arxiv:2609.14561"
+  ],
+  "note": "基于GLAM潜世界模型构建的导航系统，用于ObjectNav任务。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "hm3d": {
+  "name": "HM3D v0.2",
+  "kind": "dataset",
+  "modality": "3D室内场景",
+  "scale": "Habitat ObjectNav场景",
+  "access": "https://aihabitat.org/datasets/hm3d/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2609.14561"
+  ],
+  "note": "用于GLAM NAV在Habitat中ObjectNav子集的训练与评估。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "habitat": {
+  "name": "Habitat",
+  "kind": "tool",
+  "modality": "具身AI仿真平台",
+  "scale": "导航与交互仿真",
+  "access": "https://aihabitat.org/",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2609.14561"
+  ],
+  "note": "用于GLAM NAV的ObjectNav训练与评估仿真环境。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "pascal voc": {
+  "name": "PASCAL VOC",
+  "kind": "benchmark",
+  "modality": "图像检测与分割",
+  "scale": "约1.1万图像，20类",
+  "access": "http://host.robots.ox.ac.uk/pascal/VOC/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/cvpr42600.2020.00975"
+  ],
+  "note": "用于评估无监督预训练表征的检测/分割迁移性能。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "coco": {
+  "name": "COCO",
+  "kind": "dataset",
+  "modality": "图像检测/分割/字幕",
+  "scale": "约33万图像，80类",
+  "access": "https://cocodataset.org/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/cvpr42600.2020.00975",
+   "doi:10.1109/cvpr52729.2023.00212"
+  ],
+  "note": "用于评估自监督表征在检测与分割任务上的迁移能力。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "lvis": {
+  "name": "LVIS",
+  "kind": "dataset",
+  "modality": "大规模实例分割",
+  "scale": "约12万图像，1200+类",
+  "access": "https://www.lvisdataset.org/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/cvpr52729.2023.00212"
+  ],
+  "note": "用于评估SiameseIM表征的实例分割迁移性能。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "moco": {
+  "name": "MoCo",
+  "kind": "model",
+  "modality": "视觉对比学习表征",
+  "scale": "ResNet-50骨干，ImageNet预训练",
+  "access": "https://github.com/facebookresearch/moco",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/cvpr42600.2020.00975"
+  ],
+  "note": "提出队列与动量编码器构建动态字典的对比学习模型。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "mae": {
+  "name": "MAE",
+  "kind": "model",
+  "modality": "掩码图像自编码表征",
+  "scale": "ViT-Huge，ImageNet-1K达87.8%",
+  "access": "https://github.com/facebookresearch/mae",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/cvpr52688.2022.01553"
+  ],
+  "note": "掩码自编码器，用于可扩展视觉自监督预训练。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "siameseim": {
+  "name": "SiameseIM",
+  "kind": "model",
+  "modality": "孪生图像建模表征",
+  "scale": "ImageNet预训练，多下游任务",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1109/cvpr52729.2023.00212"
+  ],
+  "note": "通过预测另一视图稠密表征同时获得语义与空间敏感性。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "i jepa": {
+  "name": "I-JEPA",
+  "kind": "model",
+  "modality": "联合嵌入预测表征",
+  "scale": "ViT-Huge/14，16×A100训练<72h",
+  "access": "https://github.com/facebookresearch/ijepa",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/cvpr52729.2023.01499"
+  ],
+  "note": "不依赖数据增强的图像联合嵌入预测自监督模型。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "dino": {
+  "name": "DINO",
+  "kind": "model",
+  "modality": "自蒸馏视觉Transformer",
+  "scale": "ViT-Base线性评估80.1%",
+  "access": "https://github.com/facebookresearch/dino",
+  "open": "yes",
+  "used_by": [
+   "doi:10.1109/iccv48922.2021.00951"
+  ],
+  "note": "无标签自蒸馏自监督方法，赋予ViT语义分割特性。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "cmae": {
+  "name": "CMAE",
+  "kind": "model",
+  "modality": "对比+掩码视觉表征",
+  "scale": "ImageNet预训练，多基准迁移",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1109/tpami.2023.3336525"
+  ],
+  "note": "统一对比学习与掩码图像建模的视觉表征模型。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "lamamba diff": {
+  "name": "LaMamba-Diff",
+  "kind": "model",
+  "modality": "扩散生成模型",
+  "scale": "ImageNet 256/512，线性复杂度",
+  "access": "https://github.com/",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2408.02615"
+  ],
+  "note": "融合局部注意力与Mamba的高效高保真扩散生成模型。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "regformer": {
+  "name": "RegFormer",
+  "kind": "model",
+  "modality": "单细胞基因表达表征",
+  "scale": "2500万人类细胞预训练",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.1038/s41467-026-72198-x"
+  ],
+  "note": "结合基因调控层级与Mamba的单细胞基础模型。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "jepa anything": {
+  "name": "JEPA-Anything",
+  "kind": "model",
+  "modality": "跨域世界模型",
+  "scale": "七领域10个动力学任务",
+  "access": "",
+  "open": "yes",
+  "used_by": [
+   "arxiv:2609.20800"
+  ],
+  "note": "基于正交预测因子分解的域无关世界模型框架。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "sana wm": {
+  "name": "SANA-WM",
+  "kind": "model",
+  "modality": "视频生成/世界模型",
+  "scale": "2.6B参数",
+  "access": "https://doi.org/10.48550/arXiv.2605.15178",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2605.15178"
+  ],
+  "note": "开源世界模型，支持一分钟720p视频生成与相机控制。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "ok"
+ },
+ "baba in wonderland": {
+  "name": "Baba in Wonderland",
+  "kind": "benchmark",
+  "modality": "交互轨迹/游戏环境",
+  "scale": "未明确",
+  "access": "",
+  "open": "unknown",
+  "used_by": [
+   "doi:10.48550/arxiv.2605.16725"
+  ],
+  "note": "用于评估在线自监督可执行世界模型学习的替换语义标签环境。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "robomimic": {
+  "name": "Robomimic",
+  "kind": "dataset",
+  "modality": "机器人离线轨迹",
+  "scale": "未明确",
+  "access": "robomimic.github.io",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2605.25620"
+  ],
+  "note": "用于训练和评估任务中心世界模型与精确控制。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "d4rl": {
+  "name": "D4RL",
+  "kind": "benchmark",
+  "modality": "离线强化学习轨迹",
+  "scale": "未明确",
+  "access": "github.com/Farama-Foundation/D4RL",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2605.25620"
+  ],
+  "note": "用于评估任务中心世界模型在离线控制任务上的表现。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "audioset 20k": {
+  "name": "AudioSet-20K",
+  "kind": "dataset",
+  "modality": "音频-视觉",
+  "scale": "20K",
+  "access": "research.google.com/audioset",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2606.25225"
+  ],
+  "note": "用于评估冻结ViT-g的音视频联合嵌入预测性能。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "esc 50": {
+  "name": "ESC-50",
+  "kind": "dataset",
+  "modality": "环境声音音频",
+  "scale": "2000样本/50类",
+  "access": "github.com/karolpiczak/ESC-50",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2606.25225"
+  ],
+  "note": "用于评估音视频联合嵌入模型在音频分类上的表现。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ },
+ "fsd50k": {
+  "name": "FSD50K",
+  "kind": "dataset",
+  "modality": "音频事件",
+  "scale": "约5.1万片段/200类",
+  "access": "zenodo.org/record/4060432",
+  "open": "yes",
+  "used_by": [
+   "doi:10.48550/arxiv.2606.25225"
+  ],
+  "note": "用于评估音视频联合嵌入模型在音频事件分类上的表现。",
+  "topics": [
+   "世界模型与自监督表征学习"
+  ],
+  "verified": "n/a"
+ }
+}

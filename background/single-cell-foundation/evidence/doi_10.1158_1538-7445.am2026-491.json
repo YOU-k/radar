@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1158/1538-7445.am2026-491",
+  "title": "Abstract 491: A 100 million cell single cell atlas enabling mechanistic and genotype-specific drug response discovery.",
+  "url": "https://doi.org/10.1158/1538-7445.am2026-491",
+  "abstract": "\n Machine learning promises major advances in drug discovery, but training effective models requires large, well-controlled datasets capturing how diverse compounds affect human cells. Traditional perturbation studies are limited by batch effects and experimental variability. Recent advances in combinatorial barcoding now allow tens of millions of transcriptomes to be profiled in unified workflows, greatly reducing technical noise.We created Tahoe-100M, a single cell atlas of more than 100 million cells spanning 50 human cell lines and 379 compounds. Mixed cell lines (Tahoe Therapeutics) were grown as 3D spheroids, treated for 24 hours across three doses, fixed, and processed in pooled batches of ∼10 million cells using the Parse Biosciences GigaLab platform. Sequencing on the UG100 followed by Demuxlet assignment produced high quality transcriptomes at unprecedented scale.Tahoe-100M covers ∼56,000 line-drug-dose combinations and reveals thousands of dose-dependent expression changes. Stratification by genotype uncovers lineage- and mutation-specific responses, including unexpected Dabrafenib sensitivity in additional cell lines not typically classified as BRAF-dependent. Cell cycle analysis exposes compound-specific effects, such as G1 or G2/M arrest by CDK inhibitors and G2/M accumulation after microtubule inhibition.The atlas also enables mechanistic discovery. For example, transcriptional similarity mapping shows that Saquinavir induces an adrenoceptor-agonist-like program, resembling Vilanterol and Norepinephrine, providing a molecular explanation for its known cardiovascular effects. Exploratory analyses further identify compounds that up-regulate MHC-I pathways, highlighting candidates that may enhance tumor immunogenicity.By processing fixed cells in massive pooled batches, we minimized batch effects and enabled direct comparison across the entire perturbation space. Tahoe-100M establishes a new benchmark for large scale drug response mapping and provides a foundation for AI-driven discovery across human cell models.\n \n \n Aisling Sinclair, Joey Pangallo, Vuong Tran, Efthymia Papalexi, Simone Marrujo, Bryan Hariadi, Crina Curca, Olivia Kaplan, Sarah Schroeder, Ajay Sapre, Guillermo Gallareta Olivares, Maria Nigos, Oliver Sanderson, Hoai Hguyen, Alec Salvino, John Thompson, Ryan Koehler, Sam You, Gokhan Demirkan, Charles Roco, Alexander Rosenberg. A 100 million cell single cell atlas enabling mechanistic and genotype-specific drug response discovery [abstract]. In: Proceedings of the American Association for Cancer Research Annual Meeting 2026; Part 1 (Regular Abstracts); 2026 Apr 17-22; San Diego, CA. Philadelphia (PA): AACR; Cancer Res 2026;86(7 Suppl):Abstract nr 491.\n",
+  "authors": "Aisling Sinclair, Joey Pangallo, Vuong K. Tran, Efthymia Papalexi, Simone R. Marrujo, Bryan Hariadi, Crina Curca, Olivia Kaplan",
+  "venue": "Cancer Research",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:large-scale cell atlas Tahoe-1"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Tahoe-100M大规模扰动图谱资源，纳入标准明确列出",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Tahoe-100M大规模扰动图谱，关键数据资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "组合条形码+Parse GigaLab大规模单细胞图谱构建",
+  "data": "100M+细胞，50细胞系，379化合物，3剂量，24h",
+  "scenario": "药物响应与机制发现",
+  "benchmark": "传统扰动研究（受批次效应与实验变异限制）",
+  "results": "覆盖约56,000细胞系-药物-剂量组合；发现Dabrafenib在非BRAF依赖细胞系中的意外敏感性；CDK抑制剂引起G1或G2/M阻滞",
+  "availability": "",
+  "limitations": "摘要未提供全文，缺乏模型训练与验证细节",
+  "summary": "作者构建了Tahoe-100M，一个超过1亿细胞、覆盖50个细胞系和379种化合物的单细胞药物扰动图谱。方法上采用3D球状体混合细胞系、24小时三剂量处理，并用Parse Biosciences GigaLab平台与Demuxlet进行池化测序和分配。结果揭示了数千个剂量依赖表达变化、基因型特异的药物响应以及细胞周期相关化合物效应，支持机制和基因型特异药物响应发现。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

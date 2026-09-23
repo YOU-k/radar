@@ -126,8 +126,9 @@ class Pipeline:
     def compile_only(self, changelog: str = "") -> Path:
         outline = self.load_outline()
         cov = metrics_mod.coverage(self.spec, self.store, outline, self.top_cited(), self.round_no())
+        hist = json.loads(self.spec.metrics_path.read_text(encoding="utf-8")) if self.spec.metrics_path.exists() else []
         report = compile_report(self.spec, outline, self.store.all(), self.llm, cov.score,
-                                self.round_no(), changelog)
+                                self.round_no(), changelog, hist)
         self.spec.report_path.write_text(report, encoding="utf-8")
         return self.spec.report_path
 
@@ -195,7 +196,7 @@ class Pipeline:
         if compile_now and self.llm is not None:
             changelog = "\n".join(f"- 新增 [{e.id}] {e.candidate.title}" for e in accepted) or "- 无新增"
             report = compile_report(self.spec, outline, self.store.all(), self.llm,
-                                    cov.score, round_no, changelog)
+                                    cov.score, round_no, changelog, hist)
             self.spec.report_path.write_text(report, encoding="utf-8")
             report_path = self.spec.report_path
         return RoundResult(log=log, accepted=accepted, report_path=report_path)

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.03.28.714980",
+  "title": "The End of Aging Clocks: Training Foundation Models to Reason in Aging and Longevity",
+  "url": "https://doi.org/10.64898/2026.03.28.714980",
+  "abstract": "The aging clock paradigm has yielded dozens of specialist models that can estimate chronological age or mortality from virtually any biodata type. Yet each such model operates within a fixed modality, relies on a predetermined feature set, and produces limited biological interpretation. Here, we report Longevity-LLM v0.1, a Qwen3-14B model fine-tuned through supervised and reinforcement learning regimes on DNA methylation, proteomics, clinical biomarker, and RNA expression data. Longevity-LLM achieves high ranks in the recently announced Longevity Bench, including such tasks as cancer survival and RNA- or proteome-based age prediction. After reinforcement fine-tuning, the model achieved a 4.34-year MAE in epigenetic age prediction, surpassing the Horvath multi-tissue clock. In addition to age prediction, Longevity-LLM can carry out numerous other tasks, including proteomic profile generation, for which it significantly outperforms all frontier LLMs. These results demonstrate that a single modestly sized LLM can match or replace purpose-built aging clocks across data modalities. This work constitutes an interim report from the initial sprint of our Multi-Modal AI Gym for Science (MMAI), an initiative dedicated to building foundation models for drug discovery and aging research.",
+  "authors": "Alex Zhavoronkov, V. Aladinskiy, A. Aliper, Zulfat Miftakhutdinov, Mathieu Reymond, Vladimir Naumov, D. Zagirova, Stefan Pushkov",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:aging clock benchmark foundati"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多模态衰老基础模型，含LongevityBench评测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "衰老LLM基础模型，多模态推理，代表范式转折。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Qwen3-14B监督与强化微调为Longevity-LLM",
+  "data": "DNA甲基化、蛋白质组、临床生物标志物、RNA表达",
+  "scenario": "跨模态衰老与长寿推理",
+  "benchmark": "Horvath多组织时钟、前沿LLM、Longevity Bench",
+  "results": "强化微调后表观年龄预测MAE为4.34年，超过Horvath多组织时钟；蛋白质组谱生成显著优于所有前沿LLM",
+  "availability": "",
+  "limitations": "为初期阶段性报告；模型规模有限；未说明数据规模与公开情况",
+  "summary": "作者开发Longevity-LLM v0.1，将Qwen3-14B在DNA甲基化、蛋白质组、临床生物标志物和RNA表达数据上微调。模型在Longevity Bench任务中排名较高，并在表观年龄预测中达到4.34年MAE，超过Horvath多组织时钟。结果表明单一中等规模LLM可匹配或替代跨模态专用衰老时钟。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

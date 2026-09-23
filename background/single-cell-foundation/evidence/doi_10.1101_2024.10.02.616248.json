@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2024.10.02.616248",
+  "title": "PertEval-scFM: Benchmarking Single-Cell Foundation Models for Perturbation Effect Prediction",
+  "url": "https://doi.org/10.1101/2024.10.02.616248",
+  "abstract": "In silico modeling of transcriptional responses to perturbations is crucial for advancing our understanding of cellular processes and disease mechanisms. We present PertEval-scFM, a standardized framework designed to evaluate models for perturbation effect prediction. We apply PertEval-scFM to benchmark zero-shot single-cell foundation model (scFM) embeddings against base-line models to assess whether these contextualized representations enhance perturbation effect prediction. Our results show that scFM embeddings do not provide consistent improvements over baseline models, especially under distribution shift. Overall, this study provides a systematic evaluation of zero-shot scFM embeddings for perturbation effect prediction, highlighting the challenges of this task and revealing the limitations of current-generation scFMs. Our findings underscore the need for specialized models and high-quality datasets that capture a broader range of cellular states. Source code and documentation can be found at: https://github.com/aaronwtr/PertEval.",
+  "authors": "Aaron Wenteler, Martina Occhetta, Nikhil Branson, Victor Curean, Magdalena Huebner, William Dee, Will Connell, Pui-Chung Siu",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 47,
+  "found_by": [
+   "s2:references:doi:10.1038/s41592-025-02772-6"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "扰动效应预测基准，揭示基础模型未跑赢基线，批判性证据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "扰动预测系统基准，揭示scFM未超基线，批判性必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PertEval-scFM标准化扰动效应预测评估框架",
+  "data": "零样本单细胞基础模型嵌入与基线模型对比数据",
+  "scenario": "扰动效应预测基准测试",
+  "benchmark": "零样本scFM嵌入 vs 基线模型",
+  "results": "scFM嵌入未持续优于基线，尤其在分布偏移下；揭示当前scFM局限",
+  "availability": "代码与文档公开于GitHub",
+  "limitations": "当前scFM能力有限，需专用模型和更高质量数据",
+  "summary": "本文提出PertEval-scFM标准化框架，用于评估扰动效应预测模型。将零样本单细胞基础模型嵌入与基线模型对比，测试其是否提升扰动效应预测。结果显示scFM嵌入未持续优于基线，尤其在分布偏移下，表明当前代scFM存在局限，需专用模型和覆盖更广细胞状态的高质量数据集。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

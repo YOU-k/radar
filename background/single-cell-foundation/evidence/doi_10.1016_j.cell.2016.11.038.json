@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2016.11.038",
+  "title": "Perturb-seq: Dissecting molecular circuits with scalable single cell RNA profiling of pooled genetic screens",
+  "url": "https://doi.org/10.1016/j.cell.2016.11.038",
+  "abstract": "SUMMARY Genetic screens help infer gene function in mammalian cells, but it has remained difficult to assay complex phenotypes – such as transcriptional profiles – at scale. Here, we develop Perturb-seq, combining single cell RNA-seq and CRISPR based perturbations to perform many such assays in a pool. We demonstrate Perturb-seq by analyzing 200,000 cells in immune cells and cell lines, focusing on transcription factors regulating the response of dendritic cells to lipopolysaccharide (LPS). Perturb-seq accurately identifies individual gene targets, gene signatures, and cell states affected by individual perturbations and their genetic interactions. We posit new functions for regulators of differentiation, the anti-viral response, and mitochondrial function during immune activation. By decomposing many high content measurements into the effects of perturbations, their interactions, and diverse cell metadata, Perturb-seq dramatically increases the scope of pooled genomic assays.",
+  "authors": "Atray C Dixit, Oren Parnas, Bi-Yu Li, Jenny Chen, Charles P. Fulco, Livnat Jerby-Arnon, Nemanja Marjanović, Danielle Dionne",
+  "venue": "Cell",
+  "year": 2016,
+  "citations": 1825,
+  "found_by": [
+   "s2:references:doi:10.1126/science.aax4438"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:27984732"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Perturb-seq奠基工作，扰动预测方向必读",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Perturb-seq奠基性工作，虚拟细胞方向必读源头",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "Perturb-seq：单细胞RNA-seq结合CRISPR混合筛选",
+  "data": "约200,000个免疫细胞和细胞系",
+  "scenario": "基因功能与转录表型大规模解析",
+  "benchmark": "传统遗传筛选难以规模化检测复杂转录表型",
+  "results": "准确识别单个基因靶点、基因signature、细胞状态及遗传互作；揭示分化、抗病毒反应和线粒体功能调控因子",
+  "availability": "",
+  "limitations": "摘要未提供全文，早期技术通量与多模态覆盖有限",
+  "summary": "作者开发了Perturb-seq，将单细胞RNA-seq与CRISPR扰动结合，在混合池中大规模检测复杂转录表型。方法上分析约20万个免疫细胞和细胞系，重点研究树突状细胞对LPS响应中的转录因子。结果准确识别了扰动靶点、基因signature、细胞状态和遗传互作，并推断出分化、抗病毒反应和线粒体功能相关调控因子的新功能。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}
