@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.xgen.2022.100168",
+  "title": "Systematic single-variant and gene-based association testing of thousands of phenotypes in 394,841 UK Biobank exomes",
+  "url": "https://doi.org/10.1016/j.xgen.2022.100168",
+  "abstract": "Summary Genome-wide association studies have successfully discovered thousands of common variants associated with human diseases and traits, but the landscape of rare variations in human disease has not been explored at scale. Exome-sequencing studies of population biobanks provide an opportunity to systematically evaluate the impact of rare coding variations across a wide range of phenotypes to discover genes and allelic series relevant to human health and disease. Here, we present results from systematic association analyses of 4,529 phenotypes using single-variant and gene tests of 394,841 individuals in the UK Biobank with exome-sequence data. We find that the discovery of genetic associations is tightly linked to frequency and is correlated with metrics of deleteriousness and natural selection. We highlight biological findings elucidated by these data and release the dataset as a public resource alongside the Genebass browser for rapidly exploring rare-variant association results.",
+  "authors": "K. Karczewski, M. Solomonson, Katherine R. Chao, K. Julia, Goodrich, G. Tiao, Wen-Qing Lu, B. Riley-Gillis",
+  "venue": "Cell Genomics",
+  "year": 2022,
+  "citations": 261,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2024.10.045"
+  ],
+  "extra": {
+   "pmcid": "PMC9903662"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 39万人外显子组跨4529表型关联，大规模公开资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 39万人外显子组跨4529表型关联图谱，人群遗传学必读资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "外显子罕见变异关联：单变异+基因负荷/SKAT-O",
+  "data": "UKB外显子394841欧洲裔；4529表型",
+  "scenario": "罕见编码变异-表型关联发现",
+  "benchmark": "SAIGE-GENE混合模型；随机表型控制I类错误",
+  "results": "测试8074878单变异和75767基因-注释组×4529表型；释放全summary statistics浏览器",
+  "availability": "summary statistics结果浏览器公开",
+  "limitations": "主要欧洲裔；非欧洲样本分辨率低；仅编码区",
+  "summary": "研究对UKB外显子开展系统罕见变异关联分析。用GATK/Hail流程联合调用变异，SAIGE-GENE做单变异及基因负荷、SKAT、SKAT-O检验，覆盖4529个表型。释放全summary statistics并探讨自然选择和等位频率对罕见变异关联的影响。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

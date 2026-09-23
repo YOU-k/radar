@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-025-02085-6",
+  "title": "Comparative analysis of the Mexico City Prospective Study and the UK Biobank identifies ancestry-specific effects on clonal hematopoiesis.",
+  "url": "https://doi.org/10.1038/s41588-025-02085-6",
+  "abstract": "The impact of genetic ancestry on the development of clonal hematopoiesis (CH) remains largely unexplored. Here, we compared CH in 136,401 participants from the Mexico City Prospective Study (MCPS) to 416,118 individuals from the UK Biobank (UKB) and observed CH to be significantly less common in MCPS compared to UKB (adjusted odds ratio = 0.59, 95% confidence interval (CI) = [0.57, 0.61], P = 7.31 × 10 -185 ). Among MCPS participants, CH frequency was positively correlated with the percentage of European ancestry (adjusted beta = 0.84, 95% CI = [0.66, 1.03], P = 7.35 × 10 -19 ). Genome-wide and exome-wide association analyses in MCPS identified ancestry-specific variants in the TCL1B locus with opposing effects on DNMT3A-CH versus non-DNMT3A-CH. Meta-analysis of MCPS and UKB identified five novel loci associated with CH, including polymorphisms at PARP11/CCND2, MEIS1 and MYCN. Our CH study, the largest in a non-European population to date, demonstrates the power of cross-ancestry comparisons to derive novel insights into CH pathogenesis.",
+  "authors": "Wen S, Kuri-Morales P, Hu F, Nag A, Tachmazidou I, Deevi SVV, Taiy H, Smith KR, Loesch DP, Burren OS, Dhindsa RS, Wasilewski S, Alegre-Díaz J, Berumen J, Emberson J, Torres JM, Collins R, Carss K, Wang Q, Petrovski S, Tapia-Conyer R, Fabre MA, Harper AR, Vassiliou GS, Mitchell J.",
+  "venue": "Nature genetics",
+  "year": 2025,
+  "citations": 16,
+  "found_by": [
+   "eupmc:cross-cohort replication polyg"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11906367",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨队列克隆造血比较，大规模队列多组学，含祖源特异性发现",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨队列祖源特异性克隆造血，Nature Genetics，人群多组学必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "WES检测CH+跨祖先GWAS荟萃分析",
+  "data": "WES：MCPS 136,401人+UKB 416,118人",
+  "scenario": "克隆性造血遗传易感性",
+  "benchmark": "UKB欧洲人群 vs MCPS混合美洲人群",
+  "results": "MCPS检出4,678变异/4,249人，UKB 22,161/20,488；发现祖先特异风险变异及新位点",
+  "availability": "",
+  "limitations": "仅限15个已知CH驱动基因，WES深度有限，罕见变异检测受限",
+  "summary": "比较墨西哥城前瞻队列与UKB的克隆性造血差异。用WES在15个CH驱动基因中检测体细胞突变，并进行单变异与基因水平关联及跨祖先荟萃分析。发现CH频率随年龄升高，识别出祖先特异性风险变异和UKB+MCPS联合分析的新风险位点。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

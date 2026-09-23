@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-023-06592-6",
+  "title": "Plasma proteomic associations with genetics and health in the UK Biobank",
+  "url": "https://doi.org/10.1038/s41586-023-06592-6",
+  "abstract": "The Pharma Proteomics Project generates the largest open-access plasma proteomics dataset to date, offering insights into trans protein quantitative trait loci across multiple biological domains, and highlighting genetic influences on ligand–receptor interactions and pathway perturbations across a diverse collection of cytokines and complement networks. The Pharma Proteomics Project is a precompetitive biopharmaceutical consortium characterizing the plasma proteomic profiles of 54,219 UK Biobank participants. Here we provide a detailed summary of this initiative, including technical and biological validations, insights into proteomic disease signatures, and prediction modelling for various demographic and health indicators. We present comprehensive protein quantitative trait locus (pQTL) mapping of 2,923 proteins that identifies 14,287 primary genetic associations, of which 81% are previously undescribed, alongside ancestry-specific pQTL mapping in non-European individuals. The study provides an updated characterization of the genetic architecture of the plasma proteome, contextualized with projected pQTL discovery rates as sample sizes and proteomic assay coverages increase over time. We offer extensive insights into trans pQTLs across multiple biological domains, highlight genetic influences on ligand–receptor interactions and pathway perturbations across a diverse collection of cytokines and complement networks, and illustrate long-range epistatic effects of ABO blood group and FUT2 secretor status on proteins with gastrointestinal tissue-enriched expression. We demonstrate the utility of these data for drug discovery by extending the genetic proxied effects of protein targets, such as PCSK9, on additional endpoints, and disentangle specific genes and proteins perturbed at loci associated with COVID-19 susceptibility. This public–private partnership provides the scientific community with an open-access proteomics resource of considerable breadth and depth to help to elucidate the biological mechanisms underlying proteo-genomic discoveries and accelerate the development of biomarkers, predictive models and therapeutics^ 1 .",
+  "authors": "Benjamin B. Sun, Joshua Chiou, M. Traylor, C. Benner, Yi-Hsiang Hsu, T. G. Richardson, P. Surendran, A. Mahajan",
+  "venue": "Nature",
+  "year": 2023,
+  "citations": 1547,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2024.10.045"
+  ],
+  "extra": {
+   "pmcid": "PMC10567551"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB 5.4万人血浆蛋白组pQTL图谱，公开数据资源契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB血浆蛋白组pQTL图谱，领域必读资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Olink PEA血浆蛋白组+遗传关联分析",
+  "data": "54,219名UKB参与者，2,941个血浆蛋白分析物",
+  "scenario": "血浆蛋白pQTL与药物靶点发现",
+  "benchmark": "既往大规模pQTL研究（约12,000个独立关联）",
+  "results": "测量2,941个蛋白分析物、2,923个独特蛋白；建立大规模pQTL资源，支持生物标志物和药物发现",
+  "availability": "数据开放获取（UKB-PPP）",
+  "limitations": "基于抗体PEA面板，蛋白覆盖有限；样本以UKB参与者为主",
+  "summary": "UKB-PPP联盟对54,219名UK Biobank参与者血浆样本进行Olink Explore 3072 PEA检测，测量2,941个蛋白分析物。研究描述蛋白测量、处理和下游遗传关联分析流程，构建大规模血浆蛋白组资源。该资源扩展pQTL数据库，支持生物标志物、诊断和药物靶点发现。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

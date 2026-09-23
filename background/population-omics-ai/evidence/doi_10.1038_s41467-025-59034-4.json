@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-59034-4",
+  "title": "Sex differences in the genetic regulation of the human plasma proteome.",
+  "url": "https://doi.org/10.1038/s41467-025-59034-4",
+  "abstract": "Mechanisms underlying sex differences in the development and prognosis of many diseases remain largely elusive. Here, we systematically investigated sex differences in the genetic regulation of plasma proteome (>5800 protein targets) across two cohorts (30,307 females; 26,058 males). Plasma levels of two-thirds of protein targets differ significantly by sex. In contrast, genetic effects on protein targets are remarkably similar across sexes, with only 103 sex-differential protein quantitative loci (sd-pQTLs; for 2.9% and 0.3% of protein targets from antibody- and aptamer-based platforms, respectively). A third of those show evidence of sexual discordance, i.e., effects observed in one sex only (n = 30) or opposite effect directions (n = 1 for CDH15). Phenome-wide analyses of 365 outcomes in UK Biobank did not provide evidence that the identified sd-pQTLs accounted for sex-differential disease risk. Our results demonstrate similarities in the genetic regulation of protein levels by sex with important implications for genetically-guided drug target discovery and validation.",
+  "authors": "Koprulu M, Wheeler E, Kerrison ND, Denaxas S, Carrasco-Zanini J, Orkin CM, Hemingway H, Wareham NJ, Pietzner M, Langenberg C.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 23,
+  "found_by": [
+   "eupmc:pQTL proteome-wide association"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12075630",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "两队列5.6万人血浆蛋白组性别差异pQTL图谱",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature子刊跨队列血浆蛋白组性别差异pQTL图谱",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "性别分层蛋白QTL与差异丰度分析",
+  "data": "Fenland 8,348人；UKB 48,017人；5,823蛋白",
+  "scenario": "血浆蛋白组性别差异",
+  "benchmark": "性别合并与性别分层QTL比较",
+  "results": "69.1%蛋白有性别差异；男性偏高占62.1%/63.8%；激素和BMI等仅解释15.3%/20.5%",
+  "availability": "",
+  "limitations": "仅欧洲人群；性别与性别认同未区分；两平台蛋白覆盖不完全一致",
+  "summary": "系统研究人血浆蛋白组遗传调控的性别差异。整合Fenland和UK Biobank的SomaLogic与Olink蛋白数据，进行性别分层和差异丰度分析。发现69.1%蛋白存在性别差异，部分由性激素、体成分和心血管标志物驱动，提示性别特异药物靶点研究必要性。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

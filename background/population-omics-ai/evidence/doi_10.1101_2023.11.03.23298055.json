@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2023.11.03.23298055",
+  "title": "Dynamic Importance of Genomic and Clinical Risk for Coronary Artery Disease Over the Life Course",
+  "url": "https://doi.org/10.1101/2023.11.03.23298055",
+  "abstract": "Importance Earlier identification of high coronary artery disease (CAD) risk individuals may enable more effective prevention strategies. However, existing 10-year risk frameworks are ineffective at earlier identification. Understanding the variable importance of genomic and clinical factors across life stages may significantly improve lifelong CAD event prediction. Objective To assess the time-varying significance of genomic and clinical risk factors in CAD risk estimation across various age groups. Design, Setting, and Participants A longitudinal study was performed using data from two cohort studies: the Framingham Offspring Study (FOS) with 3,588 participants aged 19-57 years and the UK Biobank (UKB) with 327,837 participants aged 40-70 years. A total of 134,765 and 3,831,734 person-time years were observed in FOS and UKB, respectively. Main Outcomes and Measures Hazard ratios (HR) for CAD were calculated for polygenic risk scores (PRS) and clinical risk factors at each age of enrollment. The relative importance of PRS and Pooled Cohort Equations (PCE) in predicting CAD events was also evaluated by age groups. Results The importance of CAD PRS diminished over the life course, with an HR of 3.58 (95% CI 1.39-9.19) at age 19 in FOS and an HR of 1.51 (95% CI 1.48-1.54) by age 70 in UKB. Clinical risk factors exhibited similar age-dependent trends. PRS significantly outperformed PCE in identifying subsequent CAD events in the 40-45-year age group, with 3.2-fold more appropriately identified events. The mean age of CAD events occurred 1.8 years earlier for those at high genomic risk but 9.6 years later for those at high clinical risk (p<0.001). Overall, adding PRS improved the area under the receiving operating curve of the PCE by an average of +5.1% (95% CI 4.9-5.2%) across all age groups; among individuals <55 years, PRS augmented the AUC-ROC of the PCE by 6.5% (95% CI 5.5-7.5%, p<0.001). Conclusions and Relevance Genomic and clinical risk factors for CAD display time-varying importance across the lifespan. The study underscores the added value of CAD PRS, particularly among individuals younger than 55 years, for enhancing early risk prediction and prevention strategies.",
+  "authors": "S. Urbut, S. Cho, Kaavya Paruchuri, B. Truong, S. Haidermota, G. Peloso, W. Hornsby, Anthony A. Philippakis",
+  "venue": "medRxiv",
+  "year": 2023,
+  "citations": 9,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-026-10780-5"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank+FOS队列，遗传与临床风险跨生命历程建模。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank+FOS跨生命历程CAD风险建模。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "纵向队列中PRS与临床风险时变分析",
+  "data": "FOS 3,588人；UKB 327,837人",
+  "scenario": "冠心病终生风险预测",
+  "benchmark": "Pooled Cohort Equations (PCE)",
+  "results": "PRS风险比从19岁3.58降至70岁1.51；40-45岁PRS显著优于PCE，多3.2倍适宜",
+  "availability": "",
+  "limitations": "两队列年龄范围有限，未涵盖全生命周期",
+  "summary": "评估基因组与临床风险因素在冠心病风险估计中的时变重要性。利用FOS和UK Biobank两个纵向队列，按入组年龄计算PRS和临床风险因素的冠心病风险比，并比较PRS与PCE的预测价值。发现PRS重要性随年龄下降（HR 3.58→1.51），在40-45岁组PRS显著优于PCE。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

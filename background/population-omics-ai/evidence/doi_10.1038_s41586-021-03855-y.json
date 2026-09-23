@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-021-03855-y",
+  "title": "Rare variant contribution to human disease in 281,104 UK Biobank exomes",
+  "url": "https://doi.org/10.1038/s41586-021-03855-y",
+  "abstract": "Genome-wide association studies have uncovered thousands of common variants associated with human disease, but the contribution of rare variants to common disease remains relatively unexplored. The UK Biobank contains detailed phenotypic data linked to medical records for approximately 500,000 participants, offering an unprecedented opportunity to evaluate the effect of rare variation on a broad collection of traits1,2. Here we study the relationships between rare protein-coding variants and 17,361 binary and 1,419 quantitative phenotypes using exome sequencing data from 269,171 UK Biobank participants of European ancestry. Gene-based collapsing analyses revealed 1,703 statistically significant gene–phenotype associations for binary traits, with a median odds ratio of 12.4. Furthermore, 83% of these associations were undetectable via single-variant association tests, emphasizing the power of gene-based collapsing analysis in the setting of high allelic heterogeneity. Gene–phenotype associations were also significantly enriched for loss-of-function-mediated traits and approved drug targets. Finally, we performed ancestry-specific and pan-ancestry collapsing analyses using exome sequencing data from 11,933 UK Biobank participants of African, East Asian or South Asian ancestry. Our results highlight a significant contribution of rare variants to common disease. Summary statistics are publicly available through an interactive portal (http://azphewas.com/). The authors analyse rare protein-coding genetic variants for association with 18,780 traits in the UK Biobank cohort.",
+  "authors": "Quanli Wang, R. Dhindsa, K. Carss, A. Harper, A. Nag, I. Tachmazidou, D. Vitsios, S. Deevi",
+  "venue": "Nature",
+  "year": 2021,
+  "citations": 531,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2024.10.045"
+  ],
+  "extra": {
+   "pmcid": "PMC8458098"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank外显子罕见变异与疾病，大规模队列遗传",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB外显子罕见变异图谱，人群遗传资源必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "外显子PheWAS：变异级+基因级collapsing",
+  "data": "UKB外显子281104人；17361二分类+1419定量表型",
+  "scenario": "罕见编码变异-疾病关联",
+  "benchmark": "既往5万外显子研究；PEACOK表型处理",
+  "results": "632个全基因组显著ExWAS变异；PTV携带谱：96%基因有杂合PTV，20%有纯合/半合PTV",
+  "availability": "未提",
+  "limitations": "约95%欧洲裔；非欧洲分辨率低；仅蛋白编码变异",
+  "summary": "研究用UKB 281104人外显子评估罕见蛋白编码变异对复杂疾病的贡献。对17361二分类和1419定量表型做变异级和基因级关联及collapsing分析，并纳入非欧洲裔做泛 ancestry 分析。识别632个显著ExWAS变异，刻画PTV携带谱，系统揭示罕见变异在疾病遗传结构中的作用。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

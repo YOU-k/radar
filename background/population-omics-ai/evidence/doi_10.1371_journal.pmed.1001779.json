@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1371/journal.pmed.1001779",
+  "title": "UK Biobank: An Open Access Resource for Identifying the Causes of a Wide Range of Complex Diseases of Middle and Old Age",
+  "url": "https://doi.org/10.1371/journal.pmed.1001779",
+  "abstract": "Cathie Sudlow and colleagues describe the UK Biobank, a large population-based prospective study, established to allow investigation of the genetic and non-genetic determinants of the diseases of middle and old age.",
+  "authors": "C. Sudlow, J. Gallacher, N. Allen, V. Beral, Paul R. Burton, J. Danesh, P. Downey, P. Elliott",
+  "venue": "PLoS Medicine",
+  "year": 2015,
+  "citations": 11473,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-026-10780-5"
+  ],
+  "extra": {
+   "pmcid": "PMC4380465"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank核心资源描述，属公开大规模队列数据资源。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB核心资源奠基文献，该方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "UK Biobank大型前瞻队列资源建设",
+  "data": ">50万40-69岁参与者，问卷、样本、影像、基因",
+  "scenario": "复杂疾病病因与风险研究",
+  "benchmark": "既往病例对照及小型前瞻研究",
+  "results": "预计20年随访积累糖尿病68,000、冠心病47,000、阿尔茨海默30,000等病例",
+  "availability": "开放申请，需bona fide研究者",
+  "limitations": "健康志愿者偏倚、年龄范围有限、随访期内病例累积需时间",
+  "summary": "介绍UK Biobank作为50万人前瞻队列，2006-2010招募并持续采集表型、样本、影像、基因和健康结局。设计基于统计功效，支持多种中老年复杂疾病的前瞻研究。资源开放给合格研究者，预计20年随访可积累大量常见病病例。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

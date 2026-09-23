@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-018-0144-6",
+  "title": "Mixed model association for biobank-scale data sets",
+  "url": "https://doi.org/10.1038/s41588-018-0144-6",
+  "abstract": "Biobank-based genome-wide association studies are enabling exciting insights in complex trait genetics, but much uncertainty remains over best practices for optimizing statistical power and computational efficiency in GWAS while controlling confounders. Here, we introduce a much faster version of our BOLT-LMM Bayesian mixed model association method— capable of running analyses of the full UK Biobank cohort in a few days on a single compute node—and show that it produces highly powered, robust test statistics when run on all 459K European samples (retaining related individuals). When used to conduct a GWAS for height in UK Biobank, BOLT-LMM achieved power equivalent to linear regression on 650K samples—a 93% increase in effective sample size versus the common practice of analyzing unrelated British samples using linear regression (UK Biobank documentation; Bycroft et al. bioRxiv). Across a broader set of 23 highly heritable traits, the total number of independent GWAS loci detected increased from 5,839 to 10,759, an 84% increase. We recommend the use of BOLT-LMM (retaining related individuals) for biobank-scale analyses, and we have publicly released BOLT-LMM summary association statistics for the 23 traits analyzed as a resource for all researchers.",
+  "authors": "Po-Ru Loh, Gleb Kichaev, S. Gazal, A. Schoech, Alkes L. Price",
+  "venue": "Nature Genetics",
+  "year": 2018,
+  "citations": 761,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-021-03855-y"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "BOLT-LMM生物样本库级GWAS方法，公开工具，方法学新意强",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "BOLT-LMM生物样本库级GWAS方法，领域必读工具",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BOLT-LMM贝叶斯混合模型关联",
+  "data": "UKB 459K欧洲样本，23个高遗传度性状",
+  "scenario": "生物样本库规模GWAS",
+  "benchmark": "线性回归（无关英国样本）",
+  "results": "身高功效等同650K样本(有效样本+93%)；独立位点5,839增至10,759(+84%)",
+  "availability": "BOLT-LMM软件及23性状汇总统计公开",
+  "limitations": "主要基于欧洲样本，跨祖先适用性未验证",
+  "summary": "提出更快版本的BOLT-LMM贝叶斯混合模型关联方法用于生物样本库规模GWAS。在UKB全部459K欧洲样本上运行并保留相关个体，与线性回归对比。发现其统计功效显著提升，身高等效650K样本，23性状独立位点增加84%，并公开软件与汇总统计。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

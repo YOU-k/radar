@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s44342-025-00040-9",
+  "title": "Lessons from national biobank projects utilizing whole-genome sequencing for population-scale genomics.",
+  "url": "https://doi.org/10.1186/s44342-025-00040-9",
+  "abstract": "Large-scale national biobank projects utilizing whole-genome sequencing have emerged as transformative resources for understanding human genetic variation and its relationship to health and disease. These initiatives, which include the UK Biobank, All of Us Research Program, Singapore's PRECISE, Biobank Japan, and the National Project of Bio-Big Data of Korea, are generating unprecedented volumes of high-resolution genomic data integrated with comprehensive phenotypic, environmental, and clinical information. This review examines the methodologies, contributions, and challenges of major WGS-based national genome projects worldwide. We first discuss the landscape of national biobank initiatives, highlighting their distinct approaches to data collection, participant recruitment, and phenotype characterization. We then introduce recent technological advances that enable efficient processing and analysis of large-scale WGS data, including improvements in variant calling algorithms, innovative methods for creating multi-sample VCFs, optimized data storage formats, and cloud-based computing solutions. The review synthesizes key discoveries from these projects, particularly in identifying expression quantitative trait loci and rare variants associated with complex diseases. Our review introduces the latest findings from the National Project of Bio-Big Data of Korea, which has advanced our understanding of population-specific genetic variation and rare diseases in Korean and East Asian populations. Finally, we discuss future directions and challenges in maximizing the impact of these resources on precision medicine and global health equity. This comprehensive examination demonstrates how large-scale national genome projects are revolutionizing genetic research and healthcare delivery while highlighting the importance of continued investment in diverse, population-specific genomic resources.",
+  "authors": "Lee H, Kim W, Kwon N, Kim C, Kim S, An JY.",
+  "venue": "Genomics & informatics",
+  "year": 2025,
+  "citations": 12,
+  "found_by": [
+   "eupmc:polygenic risk score multi-omi"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11887102",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "国家生物样本库WGS资源综述，契合数据资源方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "国家生物样本库WGS资源综述，覆盖UKB/All of Us等必读背景",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述国家生物样本库WGS方法、贡献与挑战",
+  "data": "多国国家生物样本库WGS队列，规模达数十万至百万级",
+  "scenario": "群体规模基因组学与精准医学",
+  "benchmark": "UK Biobank、All of Us、PRECISE、Biobank Japan、NPBBD-Korea",
+  "results": "WGS可发现罕见变异、结构变异和调控元件；促进多样人群与临床转化",
+  "availability": "",
+  "limitations": "计算基础设施、隐私伦理、临床整合和祖先多样性不足仍是挑战",
+  "summary": "综述利用全基因组测序开展国家生物样本库项目的全球经验。文章比较UK Biobank、All of Us、PRECISE、Biobank Japan和NPBBD-Korea等项目的设计、技术、发现与挑战。指出WGS推动罕见变异和疾病机制研究，但需解决计算、伦理、临床转化和全球健康公平问题。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 6,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1002/ejhf.70041",
+  "title": "Deep phenotyping of heart failure with preserved ejection fraction through multi-omics integration.",
+  "url": "https://doi.org/10.1002/ejhf.70041",
+  "abstract": "Aims Heart failure with preserved ejection fraction (HFpEF) has become the predominant form of heart failure and a leading cause of global cardiovascular morbidity and mortality. Due to its heterogeneous nature, HFpEF presents substantial challenges in diagnosis and management. Given the limited treatment options and lifestyle-associated comorbidities, early identification is crucial for establishing effective preventive strategies. Here, we introduce and validate a machine learning-based multi-omics approach that integrates clinical and molecular data to detect and characterize HFpEF. Methods and results A supervised classifier was trained on a stratified subset of UK Biobank participants (n = 401 917) to identify phenotypic profiles associated with subsequent symptom-defined HFpEF during longitudinal follow-up. Model performance was validated in a non-overlapping hold-out subset from all 22 UK Biobank assessment centres (n = 100 446; 6726 HFpEF cases; 7394 with multi-omics data). The classifier demonstrated robust discriminatory performance, with a receiver operating characteristic area under the curve (ROC AUC) of 0.931 (95% confidence interval [CI] 0.930-0.931), a sensitivity of 0.857 (95% CI 0.855-0.860) and a specificity of 0.847 (95% CI 0.846-0.847). It identified individuals who subsequently developed HFpEF an average of 6.3 ± 3.9 years before symptom onset in asymptomatic individuals. Similarity network fusion (SNF) identified distinct subgroups, including a high-risk cluster characterized by elevated mortality and dysregulated inflammatory pathways, which was distinguishable with high accuracy (ROC AUC 0.988; 95% CI 0.985-0.990). Conclusions We identified HFpEF phenotypes at an early stage, often several years before the onset of clinical symptoms, when the disease trajectory may still be amenable to modification. The molecular characterization provides novel insights into the underlying disease complexity and enables more refined risk stratification.",
+  "authors": "Versnjak J, Kuehne T, Fahjen P, Jovanovic N, Löber U, Schiattarella GG, Wilck N, Gerhardt H, Müller DN, Edelmann F, Mertins P, Eils R, Gotthardt M, Forslund SK, Wild B, Kelm M.",
+  "venue": "European journal of heart failure",
+  "year": 2025,
+  "citations": 13,
+  "found_by": [
+   "eupmc:biobank multi-omics benchmark "
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12803610"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank万人级多组学整合，方法可复用，契合方向",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank多组学整合识别HFpEF亚型，契合方向。",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "监督机器学习+无监督聚类+XAI",
+  "data": "UKB多组学：蛋白/代谢/影像/EHR，HFpEF 33480例",
+  "scenario": "HFpEF早期识别与风险分层",
+  "benchmark": "独立多中心UKB 80/20验证队列；H2FPEF评分",
+  "results": "训练识别症状性HFpEF风险；无监督聚类分出多组学亚型；XAI+去混杂+通路分析揭示分子异质性",
+  "availability": "UKB数据需申请；代码未提",
+  "limitations": "HFpEF定义依赖多阶段规则；影像/NT-proBNP缺失者用替代标准；欧洲人群为主",
+  "summary": "研究用UKB多组学数据提升HFpEF早期检测与风险分层。训练监督分类器识别症状性HFpEF风险并在独立多中心队列验证，同时用无监督聚类按多组学划分亚型。结合可解释AI、去混杂和通路分析，揭示HFpEF分子异质性。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

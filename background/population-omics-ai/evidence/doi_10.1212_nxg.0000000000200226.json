@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1212/nxg.0000000000200226",
+  "title": "UK Biobank-A Unique Resource for Discovery and Translation Research on Genetics and Neurologic Disease.",
+  "url": "https://doi.org/10.1212/nxg.0000000000200226",
+  "abstract": "UK Biobank is a large-scale prospective study with extensive genetic and phenotypic data from half a million adults. Participants, aged 40 to 69, were recruited from the general UK population between 2006 and 2010. During recruitment, participants completed questionnaires covering lifestyle and medical history, underwent physical measurements, and provided biological samples for long-term storage. Whole-cohort assays have been conducted, including biochemical markers, genotyping, whole-exome and whole-genome sequencing, as well as proteomics and metabolomics in large subsets of the cohort, with potential for additional assays in the future. Participants consented to link their data to electronic health records, enabling the identification of health outcomes over time. Research studies using UK Biobank data have already enhanced our understanding of the role of genetic variation in neurologic disease, offering insights into potential therapeutic approaches. The integration of genetic and imaging data has led to significant discoveries regarding the relationship between genetic variants and brain structure and function, particularly in Alzheimer disease and Parkinson disease. Genetic data have also allowed Mendelian randomization analyses to be performed, enabling further investigation into the causality of associations between behavioral and physiologic factors-such as diet and blood pressure-and neurologic outcomes. Furthermore, genetic and proteomic data have been particularly useful in identifying new drug targets for neurologic disease and in enhancing risk prediction algorithms that are increasingly applied in clinical practice to identify those at higher risk. As UK Biobank continues to be enhanced, and the cases of neurologic disease accrue over time, the study will become increasingly valuable for both discovery and translational research on genetics and neurologic disease.",
+  "authors": "Taylor H, Lewins M, Foody MGB, Gray O, Bešević J, Conroy MC, Collins R, Lacey B, Allen N, Burkitt-Gray L.",
+  "venue": "Neurology. Genetics",
+  "year": 2025,
+  "citations": 6,
+  "found_by": [
+   "eupmc:proteomic metabolomic integrat"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11796045",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank多组学资源综述，契合公开队列数据资源方向",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank多组学资源综述，属公开大规模队列数据资源",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "综述UK Biobank设计与神经疾病研究",
+  "data": "UK Biobank 50万人队列，遗传/影像/健康记录",
+  "scenario": "神经疾病遗传与转化研究",
+  "benchmark": "",
+  "results": "UK Biobank已超8000机构使用、8000余篇论文；遗传证据药物获批概率高2倍以上",
+  "availability": "数据可申请访问",
+  "limitations": "队列以40-69岁为主，存在健康志愿者偏倚；部分神经疾病病例仍有限",
+  "summary": "该文综述UK Biobank作为神经疾病遗传与转化研究资源的设计、扩展和应用。UK Biobank纳入50万成年人，收集问卷、体格测量、生物样本、影像、遗传和健康记录链接数据，并持续增加重复评估、加速度计和影像随访。文章指出大规模长期随访和遗传数据可提高神经疾病风险因素与结局关联的精确度，并强调人类遗传证据可显著提高药物研发成功率。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 7,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-025-09529-3",
+  "title": "Learning the natural history of human disease with generative transformers.",
+  "url": "https://doi.org/10.1038/s41586-025-09529-3",
+  "abstract": "Decision-making in healthcare relies on understanding patients’ past and current health states to predict and, ultimately, change their future course1, 2–3. Artificial intelligence (AI) methods promise to aid this task by learning patterns of disease progression from large corpora of health records4,5. However, their potential has not been fully investigated at scale. Here we modify the GPT6 (generative pretrained transformer) architecture to model the progression and competing nature of human diseases. We train this model, Delphi-2M, on data from 0.4 million UK Biobank participants and validate it using external data from 1.9 million Danish individuals with no change in parameters. Delphi-2M predicts the rates of more than 1,000 diseases, conditional on each individual’s past disease history, with accuracy comparable to that of existing single-disease models. Delphi-2M’s generative nature also enables sampling of synthetic future health trajectories, providing meaningful estimates of potential disease burden for up to 20 years, and enabling the training of AI models that have never seen actual data. Explainable AI methods7 provide insights into Delphi-2M’s predictions, revealing clusters of co-morbidities within and across disease chapters and their time-dependent consequences on future health, but also highlight biases learnt from training data. In summary, transformer-based models appear to be well suited for predictive and generative health-related tasks, are applicable to population-scale datasets and provide insights into temporal dependencies between disease events, potentially improving the understanding of personalized health risks and informing precision medicine approaches. Delphi-2M forecasts a person’s future health, covering more than 1,000 diseases, provides insights into co-morbidity dynamics and generates synthetic data for the training of AI models that have never seen actual data.",
+  "authors": "Shmatko A, Jung AW, Gaurav K, Brunak S, Mortensen LH, Birney E, Fitzgerald T, Gerstung M.",
+  "venue": "Nature",
+  "year": 2025,
+  "citations": 78,
+  "found_by": [
+   "eupmc:electronic health records gene",
+   "eupmc:medical foundation model longi",
+   "eupmc:multimorbidity trajectories po",
+   "journal-retro",
+   "seed",
+   "s2:references:doi:10.1038/s41586-026-10780-5"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12589094"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "生成式Transformer建模疾病轨迹，UKB训练丹麦队列外部验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature，Delphi-2M生成式Transformer建模疾病轨迹，跨UKB与丹麦队列复现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "生成式Transformer学习疾病自然史",
+  "data": "UK Biobank训练，丹麦登记验证，>1000 ICD-10病种",
+  "scenario": "多病共存终身轨迹预测",
+  "benchmark": "BERT类EHR预测模型",
+  "results": "可同时预测1000+疾病，纳入性别、BMI、吸烟、饮酒和死亡，并评估公平性",
+  "availability": "",
+  "limitations": "依赖登记编码，可能存在人群与数据偏倚",
+  "summary": "研究提出Delphi-2M，一个基于注意力Transformer的生成模型，用于学习人类疾病自然史并预测多病共存轨迹。模型在UK Biobank上训练，在丹麦人群登记中验证，词汇包括ICD-10顶层诊断、性别、BMI、吸烟、饮酒和死亡。结果显示模型可同时预测1000多种疾病未来发生率，模拟个体终身健康轨迹，并分析过去数据对后续疾病率的影响及人口亚组公平性。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-023-36231-7",
+  "title": "Atlas of plasma NMR biomarkers for health and disease in 118,461 individuals from the UK Biobank",
+  "url": "https://doi.org/10.1038/s41467-023-36231-7",
+  "abstract": "The authors report a systematic analyses of blood biomarkers for metabolism against the whole spectrum of diseases in 100,000 individuals and reveals a prominent role of numerous metabolic biomarkers as risk markers beyond heart disease and diabetes. Blood lipids and metabolites are markers of current health and future disease risk. Here, we describe plasma nuclear magnetic resonance (NMR) biomarker data for 118,461 participants in the UK Biobank. The biomarkers cover 249 measures of lipoprotein lipids, fatty acids, and small molecules such as amino acids, ketones, and glycolysis metabolites. We provide an atlas of associations of these biomarkers to prevalence, incidence, and mortality of over 700 common diseases ( nightingalehealth.com/atlas ). The results reveal a plethora of biomarker associations, including susceptibility to infectious diseases and risk of various cancers, joint disorders, and mental health outcomes, indicating that abundant circulating lipids and metabolites are risk markers beyond cardiometabolic diseases. Clustering analyses indicate similar biomarker association patterns across different disease types, suggesting latent systemic connectivity in the susceptibility to a diverse set of diseases. This work highlights the value of NMR based metabolic biomarker profiling in large biobanks for public health research and translation.",
+  "authors": "H. Julkunen, A. Cichońska, M. Tiainen, H. Koskela, K. Nybo, Valtteri Mäkelä, Jussi Nokso-Koivisto, K. Kristiansson",
+  "venue": "Nature Communications",
+  "year": 2023,
+  "citations": 432,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2024.10.045"
+  ],
+  "extra": {
+   "pmcid": "PMC9898515"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank血浆NMR代谢组疾病图谱，人群多组学",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "11万人血浆NMR代谢组疾病图谱，人群多组学标杆",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "NMR代谢组学+疾病关联图谱",
+  "data": "UKB血浆NMR 249指标，118461人",
+  "scenario": "血浆代谢标志物-疾病关联",
+  "benchmark": "THL Biobank 5队列3万余人重复验证",
+  "results": "249代谢指标×700+疾病患病/发病/死亡关联图谱；重复队列验证",
+  "availability": "数据经UKB Showcase公开；图谱网站公开",
+  "limitations": "NMR主要测高丰度分子；横断面为主；欧洲裔为主",
+  "summary": "研究构建UKB血浆NMR代谢标志物与疾病的关联图谱。对118461人249个脂质/代谢指标系统分析其与700多种疾病患病、发病和死亡的关系。在THL Biobank 3万余人重复验证，并提供在线图谱支持标志物发现与疾病特征比较。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

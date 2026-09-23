@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1001/jamacardio.2025.1182",
+  "title": "Polygenic Prediction of Peripheral Artery Disease and Major Adverse Limb Events.",
+  "url": "https://doi.org/10.1001/jamacardio.2025.1182",
+  "abstract": "Importance Peripheral artery disease (PAD) is a heritable atherosclerotic condition associated with functional decline and high risk for limb loss. With growing knowledge of the genetic basis for PAD and related risk factors, there is potential opportunity to identify individuals at high risk using polygenic risk scores (PRSs). Objective To develop a novel integrated, multiancestry polygenic score for PAD (PRS-PAD) and evaluate its risk estimation for PAD and major adverse limb events in 3 populations. Design, setting, and participants This longitudinal cohort study was conducted among individuals with genotyping and electronic health record data in the UK Biobank (2006-2021), All of Us (AoU, 2018-2022), and the Mass General Brigham Biobank (MGBB, 2010-2023). Data were analyzed from July 2023 to February 2025. Exposures PRS-PAD, previously published PAD polygenic scores, and clinical risk factors. Main outcomes and measures The primary outcomes were PAD and major adverse limb events, defined as a surrogate of major amputation and acute limb ischemia. Results The study populations included 400 533 individuals from the UK Biobank (median [IQR] age, 58.2 [45.0-71.4] years; 216 215 female participants [53.9%]), 218 500 from AoU (median [IQR] age, 53.6 [37.7-65.0] years; 132 647 female participants [60.7%]), and 32 982 from MGBB (median [IQR] age, 56.0 [32.0-80.0] years; 18 277 female participants [55.4%]). In the UK Biobank validation cohort, PRS-PAD was associated with an odds ratio [OR] per SD increase of 1.63 (95% CI, 1.60-1.68; P  Conclusions and relevance This cohort study develops a new PRS that stratifies risk of PAD and adverse limb outcomes. Incorporating polygenic risk into PAD care warrants further investigation to guide screening and tailor management to prevent major adverse limb events.",
+  "authors": "Flores AM, Ruan Y, Misra A, Cho SMJ, Selvaraj MS, Bellomo TR, Nakao T, Rosenfield K, Eagleton M, Hornsby W, Patel AP, Natarajan P.",
+  "venue": "JAMA cardiology",
+  "year": 2025,
+  "citations": 10,
+  "found_by": [
+   "eupmc:polygenic risk score electroni"
+  ],
+  "extra": {
+   "journal_watch": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank与All of Us多祖先PRS，队列级遗传预测，契合方向",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB与All of Us多祖源PRS跨队列验证，人群遗传预测代表工作",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "多祖源整合多基因风险评分(PRS-PAD)",
+  "data": "UKB 400,533、AoU 218,500、MGBB 32,982人",
+  "scenario": "外周动脉疾病及肢体不良事件风险预测",
+  "benchmark": "既往PAD多基因评分与临床风险因素",
+  "results": "PRS-PAD与PAD及主要肢体不良事件显著关联，三队列验证风险分层",
+  "availability": "",
+  "limitations": "摘要截断，缺乏完整AUC/OR数值；队列以欧美为主",
+  "summary": "研究开发了整合多祖源的外周动脉疾病多基因评分PRS-PAD，并在三个生物样本库中评估其风险预测能力。方法上结合既往PAD多基因评分与临床风险因素，在UKB、All of Us和MGBB中进行纵向队列验证。结果显示PRS-PAD与PAD及主要肢体不良事件风险显著相关，支持其用于高危个体识别。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

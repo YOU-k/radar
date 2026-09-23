@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1146/annurev-biodatasci-122320-112352",
+  "title": "Using Phecodes for Research with the Electronic Health Record: From PheWAS to PheRS",
+  "url": "https://doi.org/10.1146/annurev-biodatasci-122320-112352",
+  "abstract": "Electronic health records (EHRs) are a rich source of data for researchers, but extracting meaningful information out of this highly complex data source is challenging. Phecodes represent one strategy for defining phenotypes for research using EHR data. They are a high-throughput phenotyping tool based on ICD (International Classification of Diseases) codes that can be used to rapidly define the case/control status of thousands of clinically meaningful diseases and conditions. Phecodes were originally developed to conduct phenome-wide association studies to scan for phenotypic associations with common genetic variants. Since then, phecodes have been used to support a wide range of EHR-based phenotyping methods, including the phenotype risk score. This review aims to comprehensively describe the development, validation, and applications of phecodes and suggest some future directions for phecodes and high-throughput phenotyping.",
+  "authors": "L. Bastarache",
+  "venue": "Annual Review of Biomedical Data Science",
+  "year": 2021,
+  "citations": 192,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-026-10780-5"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Phecodes EHR表型方法综述，PheWAS/PheRS基准工具。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Phecodes标准EHR表型方法，PheWAS领域必读综述",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Phecodes高通量表型定义与PheRS",
+  "data": "基于ICD编码的EHR数据",
+  "scenario": "EHR高通量表型与遗传关联",
+  "benchmark": "",
+  "results": "可快速定义数千种临床有意义疾病和状况的病例/对照状态；支持PheWAS和表型风险评分",
+  "availability": "",
+  "limitations": "依赖ICD编码，可能存在编码误差和表型异质性",
+  "summary": "综述Phecodes作为基于ICD编码的高通量表型工具，用于EHR研究。Phecodes最初用于PheWAS扫描常见遗传变异与表型关联，后扩展到表型风险评分等多种EHR表型方法。文章全面描述其开发、验证和应用，并提出高通量表型未来方向。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/dom.71112",
+  "title": "MetaboHealth and Metabolic Vulnerability Index as Risk Factors for Cardio-Renal-Metabolic Multimorbidity: A Large-Scale Prospective Cohort Study.",
+  "url": "https://doi.org/10.1111/dom.71112",
+  "abstract": "BACKGROUND\nCardio-renal-metabolic (CRM) multimorbidity is an increasing public health challenge in aging populations. Metabolomics-based composite scores may capture dimensions of systemic metabolic burden that are not fully reflected by conventional risk factors.\n\n\nMETHODS\nThis population-based cohort study included UK Biobank participants with available metabolomics data. Cross-sectional analyses among 269 530 participants examined associations of the Metabolic Vulnerability Index (MVX) and the MetaboHealth score with baseline CRM disease status. Among 240 576 participants free of any CRM component disease at baseline, Cox and Fine-Grey models were used to assess incident CRM multimorbidity. Mutual adjustment, joint stratification and apparent 10-year prediction performance analyses were further performed. Multistate models were used to evaluate sequential CRM transition pathways.\n\n\nRESULTS\nIn cross-sectional analyses, the MetaboHealth score, but not MVX, was associated with prevalent CRM multimorbidity after full adjustment. During follow-up, 8876 participants developed CRM multimorbidity. In fully adjusted Cox models, each 1-SD increment in MVX and the MetaboHealth score was associated with a higher risk of incident CRM multimorbidity, with HRs of 1.213 (95% CI 1.186-1.241, p < 0.001) and 1.503 (95% CI 1.469-1.538, p < 0.001), respectively. Fine-Grey competing risk models and multiple sensitivity analyses yielded broadly consistent findings. The association for MVX was attenuated after mutual adjustment, whereas the MetaboHealth score remained associated with incident CRM multimorbidity and showed greater incremental improvement in apparent 10-year prediction performance. In multistate models, both scores were associated with transitions from a disease-free state to a first CRM component disease, direct transition to CRM multimorbidity and subsequent progression from a first CRM component disease to CRM multimorbidity.\n\n\nCONCLUSIONS\nMVX and the MetaboHealth score were associated with incident CRM multimorbidity and CRM disease progression, with more consistent findings observed for the MetaboHealth score.",
+  "authors": "Jiaxing Ke, Yang Zhang, Xin-Yi Shao, Zhao-Fu Tan, Gen-Long Bai, Jian-Jie Ju, Hai-Feng Chen, Zi-Ming Wang",
+  "venue": "Diabetes, obesity and metabolism",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41467-023-36231-7"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank大队列代谢组评分预测多病共病，契合人群多组学方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank大队列代谢组学评分预测共病，契合人群多组学方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Cox/Fine-Grey及多状态模型前瞻队列",
+  "data": "UKB代谢组学：269,530横断面/240,576随访",
+  "scenario": "心肾代谢多病共存风险",
+  "benchmark": "传统风险因素及相互调整模型",
+  "results": "MVX每1-SD HR=1.213，MetaboHealth HR=1.503；随访8,876人发病",
+  "availability": "",
+  "limitations": "观察性设计，残余混杂，代谢组学单时点测量",
+  "summary": "评估MetaboHealth与MVX评分对心肾代谢多病共存的预测价值。在UKB中用横断面、Cox、Fine-Grey竞争风险及多状态模型分析基线状态与发病风险。发现两评分均与发病风险升高相关，MetaboHealth与现患相关更强，提示代谢负担可补充传统风险因素。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

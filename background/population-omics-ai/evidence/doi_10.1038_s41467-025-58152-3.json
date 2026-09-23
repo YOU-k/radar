@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-58152-3",
+  "title": "Leveraging large-scale biobank EHRs to enhance pharmacogenetics of cardiometabolic disease medications.",
+  "url": "https://doi.org/10.1038/s41467-025-58152-3",
+  "abstract": "Electronic health records (EHRs) coupled with large-scale biobanks offer great promises to unravel the genetic underpinnings of treatment efficacy. However, medication-induced biomarker trajectories stemming from such records remain poorly studied. Here, we extract clinical and medication prescription data from EHRs and conduct GWAS and rare variant burden tests in the UK Biobank (discovery) and the All of Us program (replication) on ten cardiometabolic drug response outcomes including lipid response to statins, HbA1c response to metformin and blood pressure response to antihypertensives (N = 932-28,880). Our discovery analyses in participants of European ancestry recover previously reported pharmacogenetic signals at genome-wide significance level (APOE, LPA and SLCO1B1) and a novel rare variant association in GIMAP5 with HbA1c response to metformin. Importantly, these associations are treatment-specific and not associated with biomarker progression in medication-naive individuals. We also found polygenic risk scores to predict drug response, though they explained less than 2% of the variance. In summary, we present an EHR-based framework to study the genetics of drug response and systematically investigated the common and rare pharmacogenetic contribution to cardiometabolic drug response phenotypes in 41,732 UK Biobank and 14,277 All of Us participants.",
+  "authors": "Sadler MC, Apostolov A, Cevallos C, Auwerx C, Ribeiro DM, Altman RB, Kutalik Z.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 16,
+  "found_by": [
+   "eupmc:polygenic risk score electroni"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11937416"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB与All of Us跨队列EHR药物基因组GWAS，含纵向生物标志物轨迹。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB+All of Us跨队列EHR药物基因组学，方法可复现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "药物反应PGx GWAS+罕见变异负荷",
+  "data": "UKB与All of Us EHR用药/生物标志物纵向",
+  "scenario": "心血管代谢药效遗传预测",
+  "benchmark": "RCT/观察性PGx GWAS；未用药者纵向变化",
+  "results": "10个药物-表型对（他汀LDL-C、二甲双胍HbA1c、降压药SBP等）GWAS；PRS可预测药效",
+  "availability": "未提",
+  "limitations": "EHR用药与检测时点不齐；依从性/适应证混杂；纵向表型分析陷阱多",
+  "summary": "研究利用UKB和All of Us的EHR纵向用药与生物标志物数据开展心血管代谢药效PGx分析。对10个药物-表型对做常见变异GWAS和罕见变异负荷检验，并在All of Us重复。比较RCT/观察数据，剖析疾病与药物特异成分，并证明疾病PRS可预测药效。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

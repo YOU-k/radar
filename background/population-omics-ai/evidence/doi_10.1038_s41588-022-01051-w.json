@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-022-01051-w",
+  "title": "Plasma proteome analyses in individuals of European and African ancestry identify cis-pQTLs and models for proteome-wide association studies",
+  "url": "https://doi.org/10.1038/s41588-022-01051-w",
+  "abstract": "Improved understanding of genetic regulation of the proteome can facilitate identification of the causal mechanisms for complex traits. We analyzed data on 4,657 plasma proteins from 7,213 European American (EA) and 1,871 African American (AA) individuals from the Atherosclerosis Risk in Communities study, and further replicated findings on 467 AA individuals from the African American Study of Kidney Disease and Hypertension study. Here, we identified 2,004 proteins in EA and 1,618 in AA, with most overlapping, which showed associations with common variants in cis-regions. Availability of AA samples led to smaller credible sets and notable number of population-specific cis-protein quantitative trait loci. Elastic Net produced powerful models for protein prediction in both populations. An application of proteome-wide association studies to serum urate and gout implicated several proteins, including IL1RN, revealing the promise of the drug anakinra to treat acute gout flares. Our study demonstrates the value of large and diverse ancestry study to investigate the genetic mechanisms of molecular phenotypes and their relationship with complex traits. Analyses of cis-genetic regulation of the plasma proteome in European and African American populations lead to the identification of shared and unique cis-protein quantitative trait loci and models for proteome-wide association studies of complex traits.",
+  "authors": "Jing-Ning Zhang, Diptavo Dutta, A. Köttgen, A. Tin, P. Schlosser, M. Grams, Benjamin Harvey, Bing Yu",
+  "venue": "Nature Genetics",
+  "year": 2022,
+  "citations": 319,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-023-06592-6"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨族裔cis-pQTL图谱与PWAS模型，蛋白组遗传整合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨族裔血浆蛋白pQTL图谱，蛋白组遗传整合必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "cis-pQTL定位与Elastic Net蛋白预测",
+  "data": "ARIC 7,213欧裔+1,871非裔，4,657蛋白",
+  "scenario": "血浆蛋白组遗传调控",
+  "benchmark": "欧裔与非裔cis-pQTL对比",
+  "results": "EA 2,004、AA 1,618蛋白有cis关联；非裔样本缩小可信集并发现人群特异pQTL",
+  "availability": "",
+  "limitations": "样本量中等，仅cis区域，需更多祖先验证",
+  "summary": "分析欧裔与非裔美国人血浆蛋白组的顺式遗传调控。在ARIC及AASK中用4,657蛋白做cis-pQTL定位并用Elastic Net构建预测模型。发现多数cis-pQTL共享但存在人群特异位点，非裔样本缩小可信集，并将模型应用于血清尿酸与痛风提示IL1RN等靶点。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

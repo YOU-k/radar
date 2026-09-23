@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-025-02335-7",
+  "title": "Pan-UK Biobank genome-wide association analyses enhance discovery and resolution of ancestry-enriched effects.",
+  "url": "https://doi.org/10.1038/s41588-025-02335-7",
+  "abstract": "Large biobanks, such as the UK Biobank (UKB), enable massive phenome by genome-wide association studies that elucidate genetic etiology of complex traits. However, people from diverse genetic ancestry groups are often excluded from association analyses due to concerns about population structure introducing false positive associations. Here we generate mixed model associations and meta-analyses across genetic ancestry groups, inclusive of a larger fraction of the UK Biobank than previous efforts, to produce freely available summary statistics for 7,266 traits. We build a quality control and analysis framework informed by genetic architecture. Overall, we identify 14,676 significant loci (P  -8 ) in the meta-analysis that were not found in the EUR genetic ancestry group alone, including new associations, for example between CAMK2D and triglycerides. We also highlight associations from ancestry-enriched variation, including a known pleiotropic missense variant in G6PD associated with several biomarker traits. We release these results publicly alongside frequently asked questions that describe caveats for interpretation of results, enhancing available resources for interpretation of risk variants across diverse populations.",
+  "authors": "Karczewski KJ, Gupta R, Kanai M, Lu W, Tsuo K, Wang Y, Walters RK, Turley P, Callier S, Shah NN, Baya N, Palmer DS, Goldstein JI, Sarma G, Solomonson M, Cheng N, Bryant S, Churchhouse C, Cusick CM, Poterba T, Compitello J, King D, Zhou W, Seed C, Finucane HK, Daly MJ, Neale BM, Atkinson EG, Martin AR.",
+  "venue": "Nature genetics",
+  "year": 2025,
+  "citations": 135,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "泛UKB跨祖源GWAS资源，公开汇总统计，契合队列遗传。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "泛UKB跨祖源GWAS资源，人群遗传学重要基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "混合模型GWAS与跨祖源荟萃分析",
+  "data": "UK Biobank，7,266个性状，多遗传祖源",
+  "scenario": "跨祖源遗传关联发现",
+  "benchmark": "仅欧洲祖源GWAS结果",
+  "results": "发现14,676个显著位点；如CAMK2D与甘油三酯、G6PD多效错义变异；公开汇总统计",
+  "availability": "汇总统计公开",
+  "limitations": "多数关联仍主要见于欧洲祖源；解释需注意人群结构等 caveats",
+  "summary": "对UK Biobank多遗传祖源人群开展混合模型关联和荟萃分析，覆盖比以往更大比例样本。生成7,266个性状的自由可用汇总统计，并建立受遗传结构启发的质控分析框架。发现14,676个仅欧洲祖源分析未发现的显著位点，并公开结果及解释注意事项。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

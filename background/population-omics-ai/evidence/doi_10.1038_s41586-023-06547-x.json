@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-023-06547-x",
+  "title": "Rare variant associations with plasma protein levels in the UK Biobank",
+  "url": "https://doi.org/10.1038/s41586-023-06547-x",
+  "abstract": "Integrating human genomics and proteomics can help elucidate disease mechanisms, identify clinical biomarkers and discover drug targets^ 1 – 4 . Because previous proteogenomic studies have focused on common variation via genome-wide association studies, the contribution of rare variants to the plasma proteome remains largely unknown. Here we identify associations between rare protein-coding variants and 2,923 plasma protein abundances measured in 49,736 UK Biobank individuals. Our variant-level exome-wide association study identified 5,433 rare genotype–protein associations, of which 81% were undetected in a previous genome-wide association study of the same cohort^ 5 . We then looked at aggregate signals using gene-level collapsing analysis, which revealed 1,962 gene–protein associations. Of the 691 gene-level signals from protein-truncating variants, 99.4% were associated with decreased protein levels. STAB1 and STAB2 , encoding scavenger receptors involved in plasma protein clearance, emerged as pleiotropic loci, with 77 and 41 protein associations, respectively. We demonstrate the utility of our publicly accessible resource through several applications. These include detailing an allelic series in NLRC4 , identifying potential biomarkers for a fatty liver disease-associated variant in HSD17B13 and bolstering phenome-wide association studies by integrating protein quantitative trait loci with protein-truncating variants in collapsing analyses. Finally, we uncover distinct proteomic consequences of clonal haematopoiesis (CH), including an association between TET2- CH and increased FLT3 levels. Our results highlight a considerable role for rare variation in plasma protein abundance and the value of proteogenomics in therapeutic discovery. A set of three papers in Nature reports a new proteomics resource from the UK Biobank and initial analysis of common and rare genetic variant associations with plasma protein levels.",
+  "authors": "R. Dhindsa, O. Burren, Benjamin B. Sun, Bram P. Prins, D. Matelska, Eleanor Wheeler, J. Mitchell, E. Oerton",
+  "venue": "Nature",
+  "year": 2023,
+  "citations": 166,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2024.10.045"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB近5万人罕见变异-血浆蛋白关联，pQTL图谱重要资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "罕见变异-蛋白组关联，pQTL图谱重要补充",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "罕见编码变异与血浆蛋白的exome-wide关联及基因水平塌陷分析",
+  "data": "UK Biobank 49,736人，2,923种血浆蛋白",
+  "scenario": "罕见变异对血浆蛋白组的影响",
+  "benchmark": "同队列既往GWAS",
+  "results": "变异水平鉴定5,433个罕见基因型-蛋白关联(81%既往GWAS未检出)；基因水平1,962个关联；STAB1/STAB2为多效位点(77和41个蛋白关联)；PTV信号99.4%与蛋白降低相关",
+  "availability": "公开资源",
+  "limitations": "仅UK Biobank；罕见变异检测效能受限",
+  "summary": "研究识别罕见蛋白编码变异与血浆蛋白丰度的关联。在49,736名UK Biobank个体中对2,923种蛋白做变异水平exome-wide关联和基因水平塌陷分析。发现5,433个罕见关联(81%为新)和1,962个基因水平关联，STAB1/STAB2为多效位点，并展示NLRC4等位系列等应用。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41591-024-03483-9",
+  "title": "Integrating the environmental and genetic architectures of aging and mortality.",
+  "url": "https://doi.org/10.1038/s41591-024-03483-9",
+  "abstract": "Both environmental exposures and genetics are known to play important roles in shaping human aging. Here we aimed to quantify the relative contributions of environment (referred to as the exposome) and genetics to aging and premature mortality. To systematically identify environmental exposures associated with aging in the UK Biobank, we first conducted an exposome-wide analysis of all-cause mortality (n = 492,567) and then assessed the associations of these exposures with a proteomic age clock (n = 45,441), identifying 25 independent exposures associated with mortality and proteomic aging. These exposures were also associated with incident age-related multimorbidity, aging biomarkers and major disease risk factors. Compared with information on age and sex, polygenic risk scores for 22 major diseases explained less than 2 percentage points of additional mortality variation, whereas the exposome explained an additional 17 percentage points. Polygenic risk explained a greater proportion of variation (10.3-26.2%) compared with the exposome for incidence of dementias and breast, prostate and colorectal cancers, whereas the exposome explained a greater proportion of variation (5.5-49.4%) compared with polygenic risk for incidence of diseases of the lung, heart and liver. Our findings provide a comprehensive map of the contributions of environment and genetics to mortality and incidence of common age-related diseases, suggesting that the exposome shapes distinct patterns of disease and mortality risk, irrespective of polygenic disease risk.",
+  "authors": "Argentieri MA, Amin N, Nevado-Holgado AJ, Sproviero W, Collister JA, Keestra SM, Kuilman MM, Ginos BNR, Ghanbari M, Doherty A, Hunter DJ, Alvergne A, van Duijn CM.",
+  "venue": "Nature medicine",
+  "year": 2025,
+  "citations": 176,
+  "found_by": [
+   "eupmc:biobank plasma proteomics dise",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11922759"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank大队列整合暴露组与蛋白组衰老时钟，定量支撑强。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank暴露组+蛋白组衰老时钟，Nature Medicine转折性",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "暴露组全关联与蛋白组衰老时钟整合分析",
+  "data": "UKB 492,567人；蛋白组子集45,441人",
+  "scenario": "衰老、死亡与年龄相关病",
+  "benchmark": "多基因风险与年龄性别模型",
+  "results": "识别独立环境暴露；量化暴露组对死亡和25种年龄相关病贡献，常高于基因组",
+  "availability": "UKB需申请；代码未提",
+  "limitations": "观察性残余混杂、暴露测量误差、UKB代表性有限",
+  "summary": "在UKB开展暴露组全关联研究，系统识别与早死独立相关的环境暴露。通过PheWAS、蛋白组衰老时钟和层次聚类去除反向因果、误测和相关性偏倚。发现环境暴露广泛关联25种年龄相关病和生化标志，且对死亡与疾病解释度常高于基因组。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

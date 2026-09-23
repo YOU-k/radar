@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-021-04103-z",
+  "title": "Exome sequencing and analysis of 454,787 UK Biobank participants",
+  "url": "https://doi.org/10.1038/s41586-021-04103-z",
+  "abstract": "A major goal in human genetics is to use natural variation to understand the phenotypic consequences of altering each protein-coding gene in the genome. Here we used exome sequencing1 to explore protein-altering variants and their consequences in 454,787 participants in the UK Biobank study2. We identified 12 million coding variants, including around 1 million loss-of-function and around 1.8 million deleterious missense variants. When these were tested for association with 3,994 health-related traits, we found 564 genes with trait associations at P ≤ 2.18 × 10−11. Rare variant associations were enriched in loci from genome-wide association studies (GWAS), but most (91%) were independent of common variant signals. We discovered several risk-increasing associations with traits related to liver disease, eye disease and cancer, among others, as well as risk-lowering associations for hypertension (SLC9A3R2), diabetes (MAP3K15, FAM234A) and asthma (SLC27A3). Six genes were associated with brain imaging phenotypes, including two involved in neural development (GBE1, PLD1). Of the signals available and powered for replication in an independent cohort, 81% were confirmed; furthermore, association signals were generally consistent across individuals of European, Asian and African ancestry. We illustrate the ability of exome sequencing to identify gene–trait associations, elucidate gene function and pinpoint effector genes that underlie GWAS signals at scale. Whole-exome sequencing analysis of 454,787 individuals in the UK Biobank is used to examine the association of protein-coding variants with nearly 4,000 health-related traits, identifying 564 distinct genes with significant trait associations.",
+  "authors": "J. Backman, Alexander Li, A. Marcketta, Dylan Sun, J. Mbatchou, M. D. Kessler, C. Benner, Daren Liu",
+  "venue": "Nature",
+  "year": 2021,
+  "citations": 822,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2024.10.045"
+  ],
+  "extra": {
+   "pmcid": "PMC8596853"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB 45万人外显子测序资源，大规模队列数据资源契合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB外显子组大规模资源，领域基础必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "全外显子测序+REGENIE基因负荷关联分析",
+  "data": "454,787人WES，12.3M变异，3,994个健康表型",
+  "scenario": "人群基因功能与疾病关联",
+  "benchmark": "TOPMed+gnomAD（9.5M变异）、UKB插补（1.6M）",
+  "results": "发现8,865个显著关联，涉及564基因、492表型、2,283基因-表型对；91%不能由常见变异LD解释；81%可复制",
+  "availability": "",
+  "limitations": "主要基于欧洲 ancestry（约95%），其他人群代表性有限",
+  "summary": "研究对UK Biobank 454,787名参与者进行全外显子测序，构建大规模编码变异目录。采用REGENIE对罕见pLOF和有害错义变异与3,994个健康表型做个体和基因负荷关联分析。发现8,865个显著关联，涉及564个基因，且多数不能由常见变异LD解释，81%可在独立队列复制。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

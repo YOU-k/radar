@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-018-0579-z",
+  "title": "The UK Biobank resource with deep phenotyping and genomic data",
+  "url": "https://doi.org/10.1038/s41586-018-0579-z",
+  "abstract": "The UK Biobank project is a prospective cohort study with deep genetic and phenotypic data collected on approximately 500,000 individuals from across the United Kingdom, aged between 40 and 69 at recruitment. The open resource is unique in its size and scope. A rich variety of phenotypic and health-related information is available on each participant, including biological measurements, lifestyle indicators, biomarkers in blood and urine, and imaging of the body and brain. Follow-up information is provided by linking health and medical records. Genome-wide genotype data have been collected on all participants, providing many opportunities for the discovery of new genetic associations and the genetic bases of complex traits. Here we describe the centralized analysis of the genetic data, including genotype quality, properties of population structure and relatedness of the genetic data, and efficient phasing and genotype imputation that increases the number of testable variants to around 96 million. Classical allelic variation at 11 human leukocyte antigen genes was imputed, resulting in the recovery of signals with known associations between human leukocyte antigen alleles and many diseases. Deep phenotype and genome-wide genetic data from 500,000 individuals from the UK Biobank, describing population structure and relatedness in the cohort, and imputation to increase the number of testable variants to 96 million.",
+  "authors": "C. Bycroft, C. Freeman, D. Petkova, G. Band, Lloyd T. Elliott, K. Sharp, A. Motyer, Damjan Vukcevic",
+  "venue": "Nature",
+  "year": 2018,
+  "citations": 8002,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-026-10780-5"
+  ],
+  "extra": {
+   "pmcid": "PMC6786975"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB深度表型与基因组数据资源，方向基础性数据文献。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB深度表型基因组资源，Nature必读基石",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "UK Biobank深度表型与基因组资源描述",
+  "data": "约50万人表型、基因型及96M变异插补",
+  "scenario": "人群队列遗传资源",
+  "benchmark": "既往15万人 interim 基因型释放",
+  "results": "完成50万人基因型质控、单倍型估计和约9600万变异插补，复制HLA-疾病关联",
+  "availability": "资源对研究者开放",
+  "limitations": "参与者相对健康，欧洲 ancestry 为主",
+  "summary": "该文描述UK Biobank约50万参与者的深度表型和全基因组遗传数据资源。研究对全部参与者进行基因型质控、群体结构和亲缘关系分析，并估计单倍型、插补约9600万变异及11个HLA基因经典等位变异。通过身高GWAS和HLA-疾病关联复制验证数据质量，并提供高效GWAS和PheWAS工具及压缩文件格式。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

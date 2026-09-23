@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41591-023-02332-5",
+  "title": "A deep learning algorithm to predict risk of pancreatic cancer from disease trajectories",
+  "url": "https://doi.org/10.1038/s41591-023-02332-5",
+  "abstract": "A deep learning algorithm using electronic health records from two large cohorts of patients predicts the risk of pancreatic cancer from pre-cancer disease trajectories up to 3 years in advance, showing promising performance in retrospective validation. Pancreatic cancer is an aggressive disease that typically presents late with poor outcomes, indicating a pronounced need for early detection. In this study, we applied artificial intelligence methods to clinical data from 6 million patients (24,000 pancreatic cancer cases) in Denmark (Danish National Patient Registry (DNPR)) and from 3 million patients (3,900 cases) in the United States (US Veterans Affairs (US-VA)). We trained machine learning models on the sequence of disease codes in clinical histories and tested prediction of cancer occurrence within incremental time windows (CancerRiskNet). For cancer occurrence within 36 months, the performance of the best DNPR model has area under the receiver operating characteristic (AUROC) curve = 0.88 and decreases to AUROC (3m) = 0.83 when disease events within 3 months before cancer diagnosis are excluded from training, with an estimated relative risk of 59 for 1,000 highest-risk patients older than age 50 years. Cross-application of the Danish model to US-VA data had lower performance (AUROC = 0.71), and retraining was needed to improve performance (AUROC = 0.78, AUROC (3m) = 0.76). These results improve the ability to design realistic surveillance programs for patients at elevated risk, potentially benefiting lifespan and quality of life by early detection of this aggressive cancer.",
+  "authors": "D. Placido, Bo Yuan, J. Hjaltelin, Chunlei Zheng, A. D. Haue, P. Chmura, C. Yuan, Jihye Kim",
+  "venue": "Nature Medicine",
+  "year": 2023,
+  "citations": 311,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {
+   "pmcid": "PMC10202814"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "丹麦与美国百万级EHR队列深度学习预测疾病轨迹，方法可复现。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "丹麦+美国百万级EHR深度学习预测胰腺癌，轨迹建模代表工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度学习基于疾病轨迹预测胰腺癌风险",
+  "data": "丹麦DNPR 860万患者1977-2018及美国VA EHR",
+  "scenario": "胰腺癌早期风险筛查",
+  "benchmark": "多种ML方法及仅疾病编码模型",
+  "results": "可识别高风险人群；模型提供分时间间隔风险，支持监测项目设计",
+  "availability": "数据受限；代码未提",
+  "limitations": "回顾性登记数据、外推有限、筛查成本与假阳性需权衡",
+  "summary": "利用丹麦国家患者登记和美国退伍军人EHR的纵向疾病轨迹，构建AI模型预测胰腺癌风险。模型不仅预测是否发病，还输出不同时间间隔的增量风险，并分析最具信息量的诊断码。结果显示可从真实世界噪声序列中识别中等数量高风险患者，为可负担早期监测提供依据。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

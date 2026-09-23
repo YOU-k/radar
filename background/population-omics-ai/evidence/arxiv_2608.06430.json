@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.06430",
+  "title": "MiGHT-EHR: A Multi-task Graph Transformer for Heterogeneous Temporal Electronic Health Records",
+  "url": "https://arxiv.org/abs/2608.06430",
+  "abstract": "Learning from Electronic Health Records (EHRs) has gained significant attention due to its potential to improve clinical prediction. However, effective learning remains challenging because EHRs encode heterogeneous, temporally ordered clinical interactions. In particular, EHRs contain: (i) heterogeneous clinical entities, including patients, visits, diagnoses, prescriptions, and procedures, together with their heterogeneous interactions, (ii) longitudinal patient trajectories across hospital visits and (iii) shared statistical dependencies across related clinical prediction tasks. Existing EHR learning methods capture only a subset of these properties. To bridge this gap, we propose Multi-task Graph transformer for Heterogeneous Temporal EHRs (MiGHT-EHR), which jointly models all three within a unified representation learning method. MiGHT-EHR constructs a heterogeneous graph from EHRs in which nodes represent clinical entities and edges connect statistically associated entities identified via normalized point-wise mutual information. Across MIMIC-III and MIMIC-IV datasets, MiGHT-EHR outperforms state-of-the-art methods on average across four tasks: drug recommendation, prediction of length-of-stay, mortality, and readmission, with particularly strong improvements in mortality and readmission prediction. Furthermore, a post-hoc analysis of the learned representations reveals that patient neighborhoods are organized by clinical outcomes, salient medical concepts are recoverable as linear directions in the representation space, and task probabilities are well calibrated. Collectively, these findings demonstrate that MiGHT-EHR representations support diverse prediction tasks while preserving clinically interpretable structure.",
+  "authors": "Anirudh Rayas, Yuan Wang, P. Turaga",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41746-021-00455-y"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "EHR多任务图Transformer，方法学新意契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHR多任务图Transformer，纵向轨迹建模方法学新意",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多任务异构图Transformer+时序注意力",
+  "data": "EHR异构图；MIMIC-III与MIMIC-IV",
+  "scenario": "临床多任务预测",
+  "benchmark": "现有EHR学习方法（SOTA）",
+  "results": "四任务平均超越SOTA，死亡率与再入院提升尤为显著；表征按结局聚类、医学概念可线性恢复、概率校准良好",
+  "availability": "",
+  "limitations": "仅用MIMIC两个数据集，未提外部验证与泛化性",
+  "summary": "提出MiGHT-EHR，统一建模EHR的异质实体、纵向轨迹与多任务共享依赖。基于归一化PMI构建异质时序图，用带时序注意力的图Transformer自监督预训练，并以双平衡多任务学习训练。在MIMIC-III/IV四任务上平均超越SOTA，且表征具临床可解释结构。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

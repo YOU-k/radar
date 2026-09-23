@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.xgen.2024.100506",
+  "title": "Genetic associations with ratios between protein levels detect new pQTLs and reveal protein-protein interactions",
+  "url": "https://doi.org/10.1016/j.xgen.2024.100506",
+  "abstract": "Protein quantitative trait loci (pQTLs) are an invaluable source of information for drug target development as they provide genetic evidence to support protein function, suggest relationships between cis- and trans-associated proteins, and link proteins to disease where they collocate with genetic risk loci for clinical endpoints. Using the recently released Olink proteomics data for 1,463 proteins measured in over 54,000 samples of the UK Biobank we identified and replicated 4,248 associations with 2,821 ratios between protein levels (rQTLs) where the strengths of association at known pQTL loci increased by up to several hundred orders of magnitude. We attribute this increase in statistical power (p-gain) to accounting for genetic and non-genetic variance shared by the two proteins in the ratio pair. Protein pairs with a significant p-gain were 7.6-fold enriched in known protein-protein interactions, suggesting that their ratios reflect biological links between the implicated proteins. We then conducted a GWAS on the 2,821 ratios and identified 2,527 novel rQTLs, increasing the number of discovered genetic signals compared to the original protein-only GWAS by 24.7%. At examples we demonstrate that this approach can identify novel loci of clinical relevance, support causal gene identification, and reveal complex networks of interacting proteins. Taken together, our study adds significant value to the genetic insights that can be derived from the UKB proteomics data and motivates the wider use of ratios in large scale GWAS.",
+  "authors": "K. Suhre",
+  "venue": "bioRxiv",
+  "year": 2023,
+  "citations": 53,
+  "found_by": [
+   "s2:references:doi:10.1093/nar/gkae1070"
+  ],
+  "extra": {
+   "pmcid": "PMC10943581"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB 5.4万人蛋白组pQTL图谱，多组学机制发现",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB 5.4万人蛋白组pQTL图谱，人群多组学整合代表工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "蛋白比值GWAS（rQTL，p-gain筛选）",
+  "data": "UKB PPP Olink 1536蛋白，54000样本",
+  "scenario": "pQTL发现与蛋白互作推断",
+  "benchmark": "UKB PPP标准单蛋白GWAS pQTL",
+  "results": "在已知pQTL位点用部分相关蛋白比值发现标准GWAS未检出的pQTL，并揭示蛋白-蛋白互作",
+  "availability": "Olink数据经UKB RAP公开",
+  "limitations": "未做全对全比值GWAS（成本高）；仅测部分相关蛋白对；样本以欧洲裔为主",
+  "summary": "研究提出用蛋白水平比值增强pQTL发现与解释。对UKB PPP中部分相关蛋白对计算比值，在已知pQTL位点做GWAS并以p-gain筛选显著rQTL。发现标准单蛋白GWAS未检出的pQTL，并揭示基于共享遗传/非遗传方差的蛋白互作。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

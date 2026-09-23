@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-024-49296-9",
+  "title": "MSGene: a multistate model using genetic risk and the electronic health record applied to lifetime risk of coronary artery disease",
+  "url": "https://doi.org/10.1038/s41467-024-49296-9",
+  "abstract": "Coronary artery disease (CAD) is the leading cause of death among adults worldwide. Accurate risk stratification can support optimal lifetime prevention. Current methods lack the ability to incorporate new information throughout the life course or to combine innate genetic risk factors with acquired lifetime risk. We designed a general multistate model (MSGene) to estimate age-specific transitions across 10 cardiometabolic states, dependent on clinical covariates and a CAD polygenic risk score. This model is designed to handle longitudinal data over the lifetime to address this unmet need and support clinical decision-making. We analyze longitudinal data from 480,638 UK Biobank participants and compared predicted lifetime risk with the 30-year Framingham risk score. MSGene improves discrimination (C-index 0.71 vs 0.66), age of high-risk detection (C-index 0.73 vs 0.52), and overall prediction (RMSE 1.1% vs 10.9%), in held-out data. We also use MSGene to refine estimates of lifetime absolute risk reduction from statin initiation. Our findings underscore our multistate model’s potential public health value for accurate lifetime CAD risk estimation using clinical factors and increasingly available genetics toward earlier more effective prevention. Coronary artery disease is the leading cause of death among adults worldwide, however current risk stratification methods lack the ability to incorporate new information throughout the life-course or to combine innate genetic risk factors with acquired lifetime risk. Here the authors introduce a multistate model to address these limitations.",
+  "authors": "S. Urbut, M. Yeung, S. Khurshid, S. J. Cho, A. Schuermans, J. German, K. Taraszka, Kaavya Paruchuri",
+  "venue": "Nature Communications",
+  "year": 2024,
+  "citations": 16,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-026-10780-5"
+  ],
+  "extra": {
+   "pmcid": "PMC11161589"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多状态模型整合遗传风险与EHR，纵向疾病轨迹建模。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多状态模型整合PRS与EHR，纵向疾病轨迹建模代表",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "时间依赖多状态模型预测CAD终身风险",
+  "data": "EHR、遗传风险评分及传统风险因素",
+  "scenario": "冠心病终身风险预测",
+  "benchmark": "Framingham 30年风险、PCE 10年风险",
+  "results": "可动态估计年龄特异状态转移，并评估他汀治疗获益",
+  "availability": "",
+  "limitations": "依赖可用风险因素与EHR，外推需验证",
+  "summary": "研究开发MSGene多状态模型，用于整合遗传风险和电子健康记录估计冠心病终身风险。模型以年龄为时间尺度，允许状态间转移随年龄变化，并纳入性别、CAD-PRS、吸烟、降压药和他汀等时间不变及时间依赖协变量。相比Framingham 30年和PCE 10年模型，MSGene可提供动态、年龄特异的终身风险，并用于指导他汀治疗启动。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

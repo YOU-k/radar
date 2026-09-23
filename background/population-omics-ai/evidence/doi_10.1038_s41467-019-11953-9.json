@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-019-11953-9",
+  "title": "Components of genetic associations across 2,138 phenotypes in the UK Biobank highlight adipocyte biology",
+  "url": "https://doi.org/10.1038/s41467-019-11953-9",
+  "abstract": "Population-based biobanks with genomic and dense phenotype data provide opportunities for generating effective therapeutic hypotheses and understanding the genomic role in disease predisposition. To characterize latent components of genetic associations, we apply truncated singular value decomposition (DeGAs) to matrices of summary statistics derived from genome-wide association analyses across 2,138 phenotypes measured in 337,199 White British individuals in the UK Biobank study. We systematically identify key components of genetic associations and the contributions of variants, genes, and phenotypes to each component. As an illustration of the utility of the approach to inform downstream experiments, we report putative loss of function variants, rs114285050 (GPR151) and rs150090666 (PDE3B), that substantially contribute to obesity-related traits and experimentally demonstrate the role of these genes in adipocyte biology. Our approach to dissect components of genetic associations across the human phenome will accelerate biomedical hypothesis generation by providing insights on previously unexplored latent structures. While many pleiotropic genetic loci have been identified, how they contribute to phenotypes across traits and diseases is unclear. Here, the authors propose decomposition of genetic associations (DeGAs), which uses singular value decomposition, to characterize the underlying latent structure of genetic associations of 2,138 phenotypes.",
+  "authors": "Yosuke Tanigawa, Jie-Han Li, J. Justesen, Heiko Horn, Matthew Aguirre, Christopher M. DeBoever, Christopher J. Chang, B. Narasimhan",
+  "venue": "Nature Communications",
+  "year": 2019,
+  "citations": 82,
+  "found_by": [
+   "s2:references:doi:10.1038/s41588-020-00757-z"
+  ],
+  "extra": {
+   "pmcid": "PMC6731283"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 2138表型遗传关联矩阵分解，人群多组学机制发现。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 2138表型遗传组分分解，方法学与资源价值高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "DeGAs截断SVD分解遗传关联",
+  "data": "UK Biobank 2,138表型，235,907变异",
+  "scenario": "跨表型遗传关联结构",
+  "benchmark": "全变异、编码变异、PTV三组比较",
+  "results": "100个成分解释41.9%/62.8%/75.5%方差；PTV富集肥胖性状，突出脂肪细胞生物学",
+  "availability": "",
+  "limitations": "主要基于欧洲白人；依赖GWAS汇总统计；功能实验仅限候选基因",
+  "summary": "提出DeGAs方法解析跨2,138个UK Biobank表型的遗传关联潜在结构。对全变异、编码变异和蛋白截断变异汇总统计矩阵做截断SVD，得到100个潜在成分。发现PTV强关联肥胖相关性状，PheWAS揭示脂肪沉积区域特异调控，并优先验证脂肪细胞生物学。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

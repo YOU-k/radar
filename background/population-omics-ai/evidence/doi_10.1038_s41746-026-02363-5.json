@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41746-026-02363-5",
+  "title": "Large language models improve transferability of electronic health record-based predictions across countries and coding systems.",
+  "url": "https://doi.org/10.1038/s41746-026-02363-5",
+  "abstract": "Variation in medical practices and reporting standards across healthcare systems limits the transferability of prediction models based on structured electronic health record data. Prior studies have demonstrated that embedding medical codes into a shared semantic space can help address these discrepancies, but real-world applications remain limited. Here, we show that leveraging embeddings from a large language model alongside a transformer-based prediction model provides an effective and scalable solution to enhance generalizability. We call this approach GRASP and apply it to predict the onset of 21 diseases and all-cause mortality in over one million individuals. Trained on the UK Biobank (UK) and evaluated in FinnGen (Finland) and Mount Sinai (USA), GRASP achieved an average ΔC-index that was 88% and 47% higher than language-unaware models, respectively. GRASP also showed significantly higher correlations with polygenic risk scores for 62% of diseases, and maintained robust performance even when datasets were not harmonized to the same data model.",
+  "authors": "Kirchler M, Ferro M, Lorenzini V, van de Water RP, FinnGen, Lippert C, Ganna A.",
+  "venue": "NPJ digital medicine",
+  "year": 2026,
+  "citations": 6,
+  "found_by": [
+   "eupmc:EHR deep learning disease risk"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12916935",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "EHR基础模型跨国家跨编码系统迁移，方法新且可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "LLM嵌入提升EHR预测跨国跨编码迁移，方法学有传播价值。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LLM语义嵌入+Transformer风险预测(GRASP)",
+  "data": "EHR数据，三国超100万人，预测21种病及全因死亡",
+  "scenario": "跨国家跨编码系统疾病风险预测",
+  "benchmark": "XGBoost及OMOP-CDM标准化模型",
+  "results": "跨医疗系统迁移性显著优于XGBoost；无需编码协调即可泛化；更少训练数据达同等性能；遗传高风险识别更准",
+  "availability": "",
+  "limitations": "LLM嵌入依赖预训练词表，罕见概念嵌入质量受限；未直接暴露患者数据但泛化仍受本地实践影响",
+  "summary": "研究评估LLM语义嵌入能否提升EHR疾病预测模型跨国家跨编码系统的迁移性。提出GRASP框架，用LLM将医疗编码映射到统一语义空间，再由Transformer处理病史预测风险。在英芬美三国超100万人21种病上，迁移性显著优于XGBoost，且更省数据、能识别遗传高风险人群。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 5,
+ "added_on": "2026-09-23"
+}

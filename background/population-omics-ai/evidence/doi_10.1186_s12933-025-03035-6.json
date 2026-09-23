@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s12933-025-03035-6",
+  "title": "Proteomics mediates the effects of biological aging on the progression of cardio-renal-metabolic comorbidity: a UK biobank cohort study.",
+  "url": "https://doi.org/10.1186/s12933-025-03035-6",
+  "abstract": "Background Cardio-renal-metabolic (CRM) comorbidity, including cardiovascular disease, chronic kidney disease, and type 2 diabetes mellitus, is prevalent in the population and closely associated with biological aging. However, longitudinal evidence and potential proteomics mediator remain limited. Methods We studied 330,177 UK Biobank participants free of CRM diseases at baseline. Biological aging was measured by KDM-BA, PhenoAge, their accelerations, and frailty status, and its effects on CRM progression, including no CRM disease to first, double, and triple CRM diseases, were evaluated using multistate proportional hazards model. In the subpopulation with proteomics data (n = 35,118), 2911 plasma proteins were profiled, and mediation analyses were performed to identify potential mediators. Results All five biological aging indicators significantly predicted CRM progression. For example, each standard deviation increase in PhenoAge was associated with hazard ratios of 1.42 [95% confidence interval (CI) 1.40-1.44], 1.26 (95% CI 1.22-1.31), and 1.24 (95% CI 1.12-1.37) for the transitions to first, double, and triple CRM disease, respectively. Mediation analyses identified nine circulating key proteins that statistically mediated the associations between biological aging and CKM progression, with GDF15, ADM, and HAVCR1 showing the largest mediated proportion (13.10-43.23%). The neutralizing antibody ponsegroumab for GDF15 is currently undergoing clinical evaluation. Conclusion Biological aging was strongly associated with the progression of CRM comorbidity, and these associations were partly accounted for by specific circulating proteins. These findings highlight the potential of aging-centered strategies and proteomic biomarkers for improving the risk prediction of CRM health and identifying therapeutic targets.",
+  "authors": "Lin Z, Wang C, Lin Z, Lin K, Guo Y.",
+  "venue": "Cardiovascular diabetology",
+  "year": 2025,
+  "citations": 1,
+  "found_by": [
+   "eupmc:multimorbidity comorbidity net"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12802307"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB蛋白组介导衰老与共病进展，大队列纵向多组学机制发现。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB蛋白组介导衰老与共病进展，人群多组学纵向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多状态模型+蛋白组中介分析",
+  "data": "330,177名UKB参与者，2,911个血浆蛋白",
+  "scenario": "心肾代谢共病进展与衰老",
+  "benchmark": "单病横断面/单病关联研究",
+  "results": "生物衰老可预测CRM共病进展；识别关键中介血浆蛋白，提示衰老蛋白标志物用于CRM风险预测和抗衰老干预靶点",
+  "availability": "",
+  "limitations": "观察性队列，残余混杂和中介推断因果性有限",
+  "summary": "研究基于330,177名UK Biobank参与者和2,911个血浆蛋白，评估生物衰老对心肾代谢共病进展的预测价值。使用多状态模型刻画CRM疾病轨迹，并整合蛋白组识别中介蛋白。发现生物衰老与CRM进展相关，关键循环蛋白可能作为风险预测标志物和抗衰老干预靶点。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/jamia/ocae182",
+  "title": "PheMIME: an interactive web app and knowledge base for phenome-wide, multi-institutional multimorbidity analysis.",
+  "url": "https://doi.org/10.1093/jamia/ocae182",
+  "abstract": "Objectives To address the need for interactive visualization tools and databases in characterizing multimorbidity patterns across different populations, we developed the Phenome-wide Multi-Institutional Multimorbidity Explorer (PheMIME). This tool leverages three large-scale EHR systems to facilitate efficient analysis and visualization of disease multimorbidity, aiming to reveal both robust and novel disease associations that are consistent across different systems and to provide insight for enhancing personalized healthcare strategies. Materials and methods PheMIME integrates summary statistics from phenome-wide analyses of disease multimorbidities, utilizing data from Vanderbilt University Medical Center, Mass General Brigham, and the UK Biobank. It offers interactive and multifaceted visualizations for exploring multimorbidity. Incorporating an enhanced version of associationSubgraphs, PheMIME also enables dynamic analysis and inference of disease clusters, promoting the discovery of complex multimorbidity patterns. A case study on schizophrenia demonstrates its capability for generating interactive visualizations of multimorbidity networks within and across multiple systems. Additionally, PheMIME supports diverse multimorbidity-based discoveries, detailed further in online case studies. Results The PheMIME is accessible at https://prod.tbilab.org/PheMIME/. A comprehensive tutorial and multiple case studies for demonstration are available at https://prod.tbilab.org/PheMIME_supplementary_materials/. The source code can be downloaded from https://github.com/tbilab/PheMIME. Discussion PheMIME represents a significant advancement in medical informatics, offering an efficient solution for accessing, analyzing, and interpreting the complex and noisy real-world patient data in electronic health records. Conclusion PheMIME provides an extensive multimorbidity knowledge base that consolidates data from three EHR systems, and it is a novel interactive tool designed to analyze and visualize multimorbidities across multiple EHR datasets. It stands out as the first of its kind to offer extensive multimorbidity knowledge integration with substantial support for efficient online analysis and interactive visualization.",
+  "authors": "Zhang S, Strayer N, Vessels T, Choi K, Wang GW, Li Y, Bejan CA, Hsi RS, Bick AG, Velez Edwards DR, Savona MR, Phillips EJ, Pulley JM, Self WH, Hopkins WC, Roden DM, Smoller JW, Ruderfer DM, Xu Y.",
+  "venue": "Journal of the American Medical Informatics Association : JAMIA",
+  "year": 2024,
+  "citations": 7,
+  "found_by": [
+   "eupmc:multimorbidity comorbidity net"
+  ],
+  "extra": {
+   "journal_watch": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多机构EHR共病分析工具与知识库，跨系统复现，资源公开。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多机构EHR共病可视化知识库，跨系统复现资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "整合多机构EHR表型组关联统计构建交互式可视化工具",
+  "data": "VUMC、Mass General Brigham、UK Biobank三大EHR系统表型组多病共病汇总统计",
+  "scenario": "跨机构多病共病分析与可视化",
+  "benchmark": "增强版associationSubgraphs；精神分裂症案例研究",
+  "results": "开发PheMIME网络应用与知识库，支持跨系统多病共病网络交互可视化与疾病聚类动态推断",
+  "availability": "公开：https://prod.tbilab.org/PheMIME/",
+  "limitations": "依赖已有汇总统计；未提样本量与统计效能细节",
+  "summary": "研究开发了PheMIME工具以刻画跨人群多病共病模式。整合三大EHR系统的表型组多病共病汇总统计，结合增强版associationSubgraphs实现交互可视化与疾病聚类推断。以精神分裂症为例展示其生成跨系统多病共病网络的能力。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

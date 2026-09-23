@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.7554/elife.43657",
+  "title": "An atlas of polygenic risk score associations to highlight putative causal relationships across the human phenome",
+  "url": "https://doi.org/10.7554/eLife.43657",
+  "abstract": "The age of large-scale genome-wide association studies (GWAS) has provided us with an unprecedented opportunity to evaluate the genetic liability of complex disease using polygenic risk scores (PRS). In this study, we have analysed 162 PRS (P<5×l0 05) derived from GWAS and 551 heritable traits from the UK Biobank study (N=334,398). Findings can be investigated using a web application (http://mrcieu.mrsoftware.org/PRS_atlas/), which we envisage will help uncover both known and novel mechanisms which contribute towards disease susceptibility. To demonstrate this, we have investigated the results from a phenome-wide evaluation of schizophrenia genetic liability. Amongst findings were inverse associations with measures of cognitive function which extensive follow-up analyses using Mendelian randomization (MR) provided evidence of a causal relationship. We have also investigated the effect of multiple risk factors on disease using mediation and multivariable MR frameworks. Our atlas provides a resource for future endeavours seeking to unravel the causal determinants of complex disease.",
+  "authors": "T. Richardson, S. Harrison, G. Hemani, G. Davey Smith",
+  "venue": "bioRxiv",
+  "year": 2018,
+  "citations": 177,
+  "found_by": [
+   "s2:references:doi:10.1101/2022.06.16.22276246"
+  ],
+  "extra": {
+   "pmcid": "PMC6400585"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 33万人PRS全表型图谱，含公开网页工具，可复用。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 33万人PRS-全表型组图谱，公开工具，被广泛引用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PRS全表型关联+MR敏感性分析",
+  "data": "UKB最多334,398人；162个PRS，551个复杂表型",
+  "scenario": "PRS跨人类表型组因果提示",
+  "benchmark": "IVW孟德尔随机化；89,262次PRS-表型检验",
+  "results": "构建162个PRS与551个表型关联图谱；PRS检测因果效力更高但水平多效性导致假阳性；用MR敏感性分析辅助判别",
+  "availability": "网页应用公开",
+  "limitations": "PRS受水平多效性影响，关联不等于因果，需敏感性分析",
+  "summary": "研究构建162个多基因风险评分并评估其与UK Biobank中551个复杂表型的关联，形成人类表型组PRS关联图谱。通过89,262次检验并开发网页应用展示结果，同时用MR敏感性分析区分因果与多效性。发现PRS关联可提示潜在因果关系，但受水平多效性影响，需谨慎解释。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

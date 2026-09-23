@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-56669-1",
+  "title": "SPA<sub>GRM</sub>: effectively controlling for sample relatedness in large-scale genome-wide association studies of longitudinal traits.",
+  "url": "https://doi.org/10.1038/s41467-025-56669-1",
+  "abstract": "Sample relatedness is a major confounder in genome-wide association studies (GWAS), potentially leading to inflated type I error rates if not appropriately controlled. A common strategy is to incorporate a random effect related to genetic relatedness matrix (GRM) into regression models. However, this approach is challenging for large-scale GWAS of complex traits, such as longitudinal traits. Here we propose a scalable and accurate analysis framework, SPA GRM , which controls for sample relatedness via a precise approximation of the joint distribution of genotypes. SPA GRM  can utilize GRM-free models and thus is applicable to various trait types and statistical methods, including linear mixed models and generalized estimation equations for longitudinal traits. A hybrid strategy incorporating saddlepoint approximation greatly increases the accuracy to analyze low-frequency and rare genetic variants, especially in unbalanced phenotypic distributions. We also introduce SPA GRM(CCT)  to aggregate the results following different models via Cauchy combination test. Extensive simulations and real data analyses demonstrated that SPA GRM  maintains well-controlled type I error rates and SPA GRM(CCT)  can serve as a broadly effective method. Applying SPA GRM  to 79 longitudinal traits extracted from UK Biobank primary care data, we identified 7,463 genetic loci, making a pioneering attempt to conduct GWAS for these traits as longitudinal traits.",
+  "authors": "Xu H, Ma Y, Xu LL, Li Y, Liu Y, Li Y, Zhou XJ, Zhou W, Lee S, Zhang P, Yue W, Bi W.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 9,
+  "found_by": [
+   "eupmc:biobank foundation model elect"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11803118",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "纵向GWAS样本亲缘校正新方法，可扩展至生物样本库队列。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature子刊，纵向GWAS大规模关联分析方法学，可扩展至生物样本库",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SPA_GRM：基于GRM的回顾性SPA关联检验，CCT整合多模型",
+  "data": "UK Biobank纵向性状79个，含重复测量EHR数据",
+  "scenario": "大规模纵向性状GWAS",
+  "benchmark": "TrajGWAS、REGENIE、ROADTRIP、MASTOR、L-GATOR",
+  "results": "控制I型错误；识别7463个遗传位点；SPA_GRM(CCT)稳健且有效",
+  "availability": "",
+  "limitations": "依赖IBD共享概率与Chow-Liu近似；复杂纵向模型下计算与建模仍具挑战",
+  "summary": "提出SPA_GRM用于大规模纵向性状GWAS中控制样本亲缘关系。该方法通过回顾性策略将相关个体基因型视为多元随机变量，并用SPA估计score统计量零分布，结合CCT整合多模型结果。模拟和UK Biobank 79个纵向性状分析显示I型错误控制良好，并识别7463个遗传位点。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 6,
+ "added_on": "2026-09-23"
+}

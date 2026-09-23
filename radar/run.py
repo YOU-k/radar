@@ -12,7 +12,7 @@ from .pipeline.dedup import filter_new
 from .pipeline.deepdive import run_deepdive
 from .pipeline.deepread import deepread_top
 from .pipeline.digest import write_digest
-from .pipeline.resources import append_resources
+from .pipeline.resources import append_resources, mine_infrastructure
 from .pipeline.score import score_items
 from .pipeline.site import build_site
 
@@ -80,6 +80,9 @@ def cmd_weekly(use_llm: bool) -> None:
         body = _weekly_fallback(texts)
     out.write_text(header + body, encoding="utf-8")
     print(f"[weekly] wrote {out}")
+    if use_llm:
+        n = mine_infrastructure(extract.load_since(30), today)
+        print(f"[weekly] infrastructure resources: {n}")
 
 
 def cmd_landscape(use_llm: bool) -> None:
@@ -130,6 +133,8 @@ def _weekly_llm(texts: list[str]) -> str | None:
     labels = {d["name"]: d.get("label_zh", d["name"]) for d in cfg.get("domains", [])}
     by_dom: dict[str, list[dict]] = {}
     for r in extract.load_since(7):
+        if r.get("domain", "").startswith("deepdive"):
+            continue  # 专题报告的记录不进周报（不是本周新闻）
         r = {k: v for k, v in r.items() if k != "date" and v}
         by_dom.setdefault(labels.get(r.get("domain", ""), r.get("domain", "")), []).append(r)
     material = json.dumps(by_dom, ensure_ascii=False)[:16000]
@@ -170,6 +175,31 @@ def cmd_deepdive(topic: str, months: int) -> None:
     run_deepdive(topic, months)
 
 
+def cmd_background(args) -> None:
+    from .background import llmio
+    from .background.spec import init_topic, load_spec
+    if args.action == "init":
+        p = init_topic(args.topic, args.name or args.topic)
+        print(f"[background] wrote {p}，填好 topic.yaml 再跑 bootstrap")
+        return
+    from .background.runner import Pipeline
+    spec = load_spec(args.topic)
+    llm = llmio.RadarLLM() if (llmio.available() and not args.no_llm) else None
+    if llm is None:
+        print("[background] 无 LLM key：只做检索/去重，不评审、不编译")
+    pipe = Pipeline(spec, llm, fetch_text=not args.no_fulltext)
+    if args.action == "bootstrap":
+        for res in pipe.bootstrap(args.rounds or None):
+            print(res.log.to_markdown())
+    elif args.action == "renew":
+        res = pipe.renew(ROOT / "data" / "extractions.jsonl")
+        print(res.log.to_markdown())
+    elif args.action == "refetch":
+        print(f"[background] refetched {pipe.refetch()}")
+    elif args.action == "compile":
+        print(f"[background] wrote {pipe.compile_only()}")
+
+
 def main() -> None:
     load_local_env()  # 本机运行时注入 /data3/yy/key.env（不打印、不覆盖已有变量）
     ap = argparse.ArgumentParser(prog="radar")
@@ -181,6 +211,13 @@ def main() -> None:
     p = sub.add_parser("deepdive")
     p.add_argument("--topic", required=True)
     p.add_argument("--months", type=int, default=6)
+    p = sub.add_parser("background", help="方向背景库：init / bootstrap / renew / compile")
+    p.add_argument("action", choices=["init", "bootstrap", "renew", "compile", "refetch"])
+    p.add_argument("--topic", required=True, help="slug，如 population-omics-ai")
+    p.add_argument("--name", default="", help="init 用：方向中文名")
+    p.add_argument("--rounds", type=int, default=0, help="bootstrap 轮数，0 = topic.yaml 的 budget.rounds")
+    p.add_argument("--no-fulltext", action="store_true")
+    p.add_argument("--no-llm", action="store_true", help="只检索/去重，不评审不编译（冒烟用）")
     sub.add_parser("site")
     args = ap.parse_args()
     use_llm = not getattr(args, "no_llm", False)
@@ -190,6 +227,8 @@ def main() -> None:
         cmd_weekly(use_llm)
     elif args.cmd == "landscape":
         cmd_landscape(use_llm)
+    elif args.cmd == "background":
+        cmd_background(args)
     elif args.cmd == "deepdive":
         cmd_deepdive(args.topic, args.months)
     else:

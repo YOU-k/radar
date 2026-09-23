@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.xgen.2022.100192",
+  "title": "Global Biobank Meta-analysis Initiative: Powering genetic discovery across human disease",
+  "url": "https://doi.org/10.1016/j.xgen.2022.100192",
+  "abstract": "Summary Biobanks facilitate genome-wide association studies (GWASs), which have mapped genomic loci across a range of human diseases and traits. However, most biobanks are primarily composed of individuals of European ancestry. We introduce the Global Biobank Meta-analysis Initiative (GBMI)—a collaborative network of 23 biobanks from 4 continents representing more than 2.2 million consented individuals with genetic data linked to electronic health records. GBMI meta-analyzes summary statistics from GWASs generated using harmonized genotypes and phenotypes from member biobanks for 14 exemplar diseases and endpoints. This strategy validates that GWASs conducted in diverse biobanks can be integrated despite heterogeneity in case definitions, recruitment strategies, and baseline characteristics. This collaborative effort improves GWAS power for diseases, benefits understudied diseases, and improves risk prediction while also enabling the nomination of disease genes and drug candidates by incorporating gene and protein expression data and providing insight into the underlying biology of human diseases and traits.",
+  "authors": "Wei Zhou",
+  "venue": "Cell Genomics",
+  "year": 2022,
+  "citations": 380,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-022-05473-8"
+  ],
+  "extra": {
+   "pmcid": "PMC9903716"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "GBMI跨23个生物样本库EHR遗传荟萃，跨队列复现典范",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "GBMI跨生物样本库EHR遗传meta分析，里程碑式资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨生物样本库GWAS荟萃分析",
+  "data": "23个生物样本库，220万人，14个疾病终点",
+  "scenario": "多疾病遗传发现与跨祖先",
+  "benchmark": "单队列GWAS及既往研究",
+  "results": "覆盖6大祖先(欧1.4M、东亚415K等)，统一表型与QC提升发现能力",
+  "availability": "汇总统计可申请获取",
+  "limitations": "祖先代表性仍不均，部分疾病样本量小",
+  "summary": "建立全球生物样本库荟萃分析计划(GBMI)以推动跨人群疾病遗传发现。统一表型定义、分析方法和质控，对18个生物样本库14个疾病终点进行荟萃分析并用5个库复制。发现聚合多样祖先生物样本库可提升常见与罕见病GWAS功效并促进跨库验证。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

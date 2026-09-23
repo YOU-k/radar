@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-56625-z",
+  "title": "Deep representation learning for clustering longitudinal survival data from electronic health records.",
+  "url": "https://doi.org/10.1038/s41467-025-56625-z",
+  "abstract": "Precision medicine requires accurate identification of clinically relevant patient subgroups. Electronic health records provide major opportunities for leveraging machine learning approaches to uncover novel patient subgroups. However, many existing approaches fail to adequately capture complex interactions between diagnosis trajectories and disease-relevant risk events, leading to subgroups that can still display great heterogeneity in event risk and underlying molecular mechanisms. To address this challenge, we implemented VaDeSC-EHR, a transformer-based variational autoencoder for clustering longitudinal survival data as extracted from electronic health records. We show that VaDeSC-EHR outperforms baseline methods on both synthetic and real-world benchmark datasets with known ground-truth cluster labels. In an application to Crohn's disease, VaDeSC-EHR successfully identifies four distinct subgroups with divergent diagnosis trajectories and risk profiles, revealing clinically and genetically relevant factors in Crohn's disease. Our results show that VaDeSC-EHR can be a powerful tool for discovering novel patient subgroups in the development of precision medicine approaches.",
+  "authors": "Qiu J, Hu Y, Li L, Erzurumluoglu AM, Braenne I, Whitehurst C, Schmitz J, Arora J, Bartholdy BA, Gandhi S, Khoueiry P, Mueller S, Noyvert B, Ding Z, Jensen JN, de Jong J.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 16,
+  "found_by": [
+   "eupmc:EHR deep learning disease traj"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11909183"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "EHR纵向生存聚类深度表征，方法新且可复现。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature子刊，EHR纵向轨迹深度聚类新方法",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度生存聚类（VAE+Weibull混合）",
+  "data": "纵向EHR生存数据（诊断/用药/检验）",
+  "scenario": "EHR患者聚类与风险事件分型",
+  "benchmark": "VaDeSC及既往聚类/风险模型",
+  "results": "整合风险建模与聚类，识别兼具不同诊断轨迹和生存结局的患者亚群",
+  "availability": "未提",
+  "limitations": "EHR数据异质与缺失；聚类数需预设；外部验证有限",
+  "summary": "研究探索从纵向EHR学习聚类化患者表征以支持疾病分型。基于变分自编码器与Weibull混合生存分布，将风险建模与聚类直接整合。相比先聚类或先分层的方法，能识别兼具不同诊断轨迹和时间-事件特征的患者亚群。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

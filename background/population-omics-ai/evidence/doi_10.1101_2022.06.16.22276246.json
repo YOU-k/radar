@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2022.06.16.22276246",
+  "title": "UK Biobank release and systematic evaluation of optimised polygenic risk scores for 53 diseases and quantitative traits",
+  "url": "https://doi.org/10.1101/2022.06.16.22276246",
+  "abstract": "We present and assess the UK Biobank (UKB) Polygenic Risk Score (PRS) Release, a set of PRSs for 28 diseases and 25 quantitative traits being made available on the individuals in UKB. We also release a benchmarking software tool to enable like-for-like performance evaluation for different PRSs for the same disease or trait. Extensive benchmarking shows the PRSs in the UKB Release to outperform a broad set of 81 published PRSs. For many of the diseases and traits we also validate the PRSs in other cohorts. The availability of PRSs for 53 traits on the same set of individuals also allows a systematic assessment of their properties, and the increased power of these PRSs increases the evidence for their potential clinical benefit.",
+  "authors": "D. Thompson, D. Wells, S. Selzam, I. Peneva, R. Moore, K. Sharp, W. A. Tarran, E. J. Beard",
+  "venue": "medRxiv",
+  "year": 2022,
+  "citations": 229,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-026-10780-5"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB发布53种疾病PRS及基准评测工具，资源可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB官方PRS发布与基准评测，53种疾病，被广泛引用为必读资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "UKB PRS Release，优化多基因风险评分及基准测试工具",
+  "data": "UK Biobank个体，53种疾病和数量性状",
+  "scenario": "多基因风险评分发布与性能评估",
+  "benchmark": "81个已发表PRS",
+  "results": "UKB Release PRS在广泛基准测试中优于81个已发表PRS，并在其他队列验证",
+  "availability": "公开（UKB PRS Release及基准测试软件）",
+  "limitations": "主要基于UK Biobank人群，跨种族适用性有限",
+  "summary": "发布UK Biobank多基因风险评分（PRS）Release，涵盖28种疾病和25种数量性状，并提供基准测试软件。广泛基准测试显示其PRS优于81个已发表PRS，并在其他队列中验证。同一批个体的53种性状PRS支持系统性评估，增强临床获益证据。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

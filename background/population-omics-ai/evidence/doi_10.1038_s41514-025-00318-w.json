@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41514-025-00318-w",
+  "title": "Reversal of proteomic aging with exercise-results from the UK biobank and a 12-week intervention study.",
+  "url": "https://doi.org/10.1038/s41514-025-00318-w",
+  "abstract": "Biological aging varies between individuals and may be influenced by health behaviors. Using data from 45,438 UK Biobank participants, we found that a higher proteomic aging score (ProtAgeGap) was linked to lower physical activity and increased risk of type 2 diabetes. The UK Biobank cohort included both men and women. In a 12-week supervised exercise study (MyoGlu) in 26 men, ProtAgeGap decreased by the equivalent of 10 months. While most of the 204 proteins in the score remained stable, some, like CLEC14A, changed with exercise and were linked to improved insulin sensitivity. Transcriptomic data from muscle and fat tissue supported these protein-level changes, highlighting pathways, such as PI3K-Akt and MAPk signaling, involved in tissue remodeling and metabolism. Our findings suggest that while proteomic aging is mostly stable, it can be modestly reversed by exercise. Specific proteins within the signature may act as sensitive indicators of metabolic adaptation, supporting the idea that proteomic aging is a modifiable marker linked to lifestyle and disease risk. Clinical trial number: clinicaltrials.gov: NCT01803568 registered 2013-02-26.",
+  "authors": "Lee-Ødegård S, Austin Argentieri M, Norheim F, Drevon CA, Birkeland KI.",
+  "venue": "npj aging",
+  "year": 2025,
+  "citations": 3,
+  "found_by": [
+   "eupmc:proteomic aging clock mortalit"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12855293",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank蛋白组衰老评分及干预验证，契合组学衰老时钟。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank蛋白组衰老评分及运动干预验证，交叉衰老方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "蛋白组衰老时钟与运动干预分析",
+  "data": "UKB 45,438人血浆蛋白；12周运动干预队列",
+  "scenario": "运动逆转蛋白组衰老",
+  "benchmark": "ProtAgeGap、IPAQ活动组、T2D风险模型",
+  "results": "活动越高ProtAgeGap越低；ProtAgeGap与T2D HR=1.06；高活动交互HR=1.05",
+  "availability": "",
+  "limitations": "观察性关联为主；干预样本量小；蛋白组时钟机制未完全明确",
+  "summary": "研究运动是否可降低蛋白组衰老并影响代谢健康。在UK Biobank分析ProtAgeGap与体力活动、体成分和T2D关联，并进行12周运动干预及肌肉/脂肪转录组整合。发现高体力活动与较低ProtAgeGap相关，且高活动可修饰ProtAgeGap对T2D风险的影响。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2024.10.045",
+  "title": "Atlas of the plasma proteome in health and disease in 53,026 adults.",
+  "url": "https://doi.org/10.1016/j.cell.2024.10.045",
+  "abstract": "Large-scale proteomics studies can refine our understanding of health and disease and enable precision medicine. Here, we provide a detailed atlas of 2,920 plasma proteins linking to diseases (406 prevalent and 660 incident) and 986 health-related traits in 53,026 individuals (median follow-up: 14.8 years) from the UK Biobank, representing the most comprehensive proteome profiles to date. This atlas revealed 168,100 protein-disease associations and 554,488 protein-trait associations. Over 650 proteins were shared among at least 50 diseases, and over 1,000 showed sex and age heterogeneity. Furthermore, proteins demonstrated promising potential in disease discrimination (area under the curve [AUC] > 0.80 in 183 diseases). Finally, integrating protein quantitative trait locus data determined 474 causal proteins, providing 37 drug-repurposing opportunities and 26 promising targets with favorable safety profiles. These results provide an open-access comprehensive proteome-phenome resource (https://proteome-phenome-atlas.com/) to help elucidate the biological mechanisms of diseases and accelerate the development of disease biomarkers, prediction models, and therapeutic targets.",
+  "authors": "Deng YT, You J, He Y, Zhang Y, Li HY, Wu XR, Cheng JY, Guo Y, Long ZW, Chen YL, Li ZY, Yang L, Zhang YR, Chen SD, Ge YJ, Huang YY, Shi LM, Dong Q, Mao Y, Feng JF, Cheng W, Yu JT.",
+  "venue": "Cell",
+  "year": 2024,
+  "citations": 227,
+  "found_by": [
+   "eupmc:biobank plasma proteomics dise"
+  ],
+  "extra": {
+   "journal_watch": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank五万人血浆蛋白组图谱，公开数据，人群多组学资源。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 5万人血浆蛋白组图谱，Cell，人群多组学必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "大规模血浆蛋白组关联图谱分析",
+  "data": "UK Biobank 53,026人，2,920种血浆蛋白",
+  "scenario": "疾病与健康性状关联",
+  "benchmark": "既往最大规模蛋白组图谱",
+  "results": "168,100蛋白-疾病关联，554,488蛋白-性状关联；183种疾病AUC>0.80；474个因果蛋白",
+  "availability": "开放获取：proteome-phenome-atlas.com",
+  "limitations": "仅UK Biobank人群，随访中位14.8年，缺乏外部验证",
+  "summary": "构建了迄今最全面的血浆蛋白组-疾病-性状关联图谱。基于UK Biobank 53,026人的2,920种血浆蛋白，关联406种现患和660种新发疾病及986种健康性状。发现大量蛋白-疾病/性状关联，蛋白在183种疾病中判别AUC>0.80，并通过pQTL确定474个因果蛋白及37个药物重定位机会。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

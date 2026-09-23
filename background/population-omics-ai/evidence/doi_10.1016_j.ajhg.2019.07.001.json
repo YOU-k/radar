@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.ajhg.2019.07.001",
+  "title": "Phenome-wide Burden of Copy Number Variation in the UK Biobank.",
+  "url": "https://doi.org/10.1016/j.ajhg.2019.07.001",
+  "abstract": "Copy number variations (CNVs) represent a significant proportion of the genetic differences between individuals and many CNVs associate causally with syndromic disease and clinical outcomes. Here, we characterize the landscape of copy number variation and their phenome-wide effects in a sample of 472,228 array-genotyped individuals from the UK Biobank. In addition to population-level selection effects against genic loci conferring high mortality, we describe genetic burden from potentially pathogenic and previously uncharacterized CNV loci across more than 3,000 quantitative and dichotomous traits, with separate analyses for common and rare classes of variation. Specifically, we highlight the effects of CNVs at two well-known syndromic loci 16p11.2 and 22q11.2, previously uncharacterized variation at 9p23, and several genic associations in the context of acute coronary artery disease and high body mass index. Our data constitute a deeply contextualized portrait of population-wide burden of copy number variation, as well as a series of dosage-mediated genic associations across the medical phenome.",
+  "authors": "Matthew Aguirre, M. Rivas, J. Priest",
+  "venue": "American Journal of Human Genetics",
+  "year": 2019,
+  "citations": 58,
+  "found_by": [
+   "s2:references:doi:10.1038/s41588-020-00757-z"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 47万人CNV全表型组图谱，数据资源可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 47万人CNV全表型图谱，人群遗传资源必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CNV负荷与全表型关联分析",
+  "data": "UK Biobank 472,228人芯片基因型，>3,000性状",
+  "scenario": "人群CNV全表型负担",
+  "benchmark": "常见与罕见CNV分类比较",
+  "results": "发现16p11.2、22q11.2、9p23等位点关联；急性冠心病与高BMI相关基因关联",
+  "availability": "",
+  "limitations": "仅芯片基因型，CNV检测分辨率有限；未含全序列验证",
+  "summary": "刻画UK Biobank中拷贝数变异的人群负担。基于472,228人芯片基因型，对>3,000个定量和二分类性状做全表型关联，区分常见与罕见CNV。发现致病及未表征CNV位点效应，包括16p11.2、22q11.2、9p23及冠心病、高BMI相关基因关联。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

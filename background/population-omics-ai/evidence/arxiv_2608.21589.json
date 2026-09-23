@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.21589",
+  "title": "Predicting Early Functional Decline from Longitudinal Laboratory and Vital Sign Trajectories: A Large-Scale Study Using the All of Us Research Program",
+  "url": "https://arxiv.org/abs/2608.21589",
+  "abstract": "Functional decline in older adults is typically recognized only after falls or observable gait impairment, closing the window for prevention. We investigated whether temporal trajectories of routine biomarkers, already recorded but rarely analyzed longitudinally, can identify patients in the pre-clinical phase of mobility decline. Using the All of Us Research Program (N = 297,861; 11.1% cases), we derived trajectory features (slope, variability, delta, mean) for twelve biomarkers over a three-year pre-index window. LightGBM models incorporating trajectories significantly outperformed static laboratory summaries (AUROC 0.797 vs. 0.755; DeLong p<0.001; AUPRC 0.380 vs. 0.304). A 1:1 age- and sex-matched analysis confirmed an independent trajectory signal (AUROC 0.727 vs. demographics-only 0.680). A horizon analysis demonstrated sustained prediction 3-12 months before decline onset (AUROC 0.768-0.740). Because the model uses only measurements already ordered in routine care, it supports passive, zero-burden EHR integration for early detection of pre-clinical functional decline.",
+  "authors": "Rashmita Kudamala, Aravind V. Kuruvikkattil, Lalitha Pranathi Pulavarthy, Saptarshi Purkayastha",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1056/nejmsr1809937"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "All of Us大队列纵向轨迹建模，方法有量化对比",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "All of Us近30万人纵向轨迹预测功能衰退，队列级方法有价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LightGBM基于生物标志物轨迹特征预测",
+  "data": "All of Us 297,861人，12项生物标志物3年轨迹",
+  "scenario": "临床前功能衰退早期预警",
+  "benchmark": "静态实验室汇总及人口学模型",
+  "results": "AUROC 0.797 vs 0.755(P<0.001)；匹配分析0.727 vs 0.680；提前3-12月AUROC 0.768-0.740",
+  "availability": "",
+  "limitations": "仅用常规实验室数据，缺乏外部队列验证",
+  "summary": "研究探讨常规生物标志物的时间轨迹能否在临床前阶段识别功能衰退患者。方法上基于All of Us 297,861人，提取12项生物标志物3年轨迹特征(斜率、变异性等)，用LightGBM建模并与静态汇总比较。结果显示轨迹模型AUROC 0.797显著优于静态0.755，匹配分析证实独立信号，并可提前3-12个月持续预测。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

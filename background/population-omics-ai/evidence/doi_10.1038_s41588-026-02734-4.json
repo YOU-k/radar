@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-026-02734-4",
+  "title": "All of Us diversity and scale yield context-dependent improvements in polygenic prediction.",
+  "url": "https://doi.org/10.1038/s41588-026-02734-4",
+  "abstract": "Polygenic risk scores (PRSs) trained on multiancestry data can improve prediction in under-represented groups, but large linked genetic and health datasets capturing broad human diversity remain limited. Using 245,388 whole-genome sequences from the All of Us research program (AoU) together with UK Biobank data, we developed multiancestry PRSs for 32 traits and diseases. We evaluated how ancestry, methodology and genetic architecture influenced PRS performance across ancestrally diverse AoU participants. Increased diversity in the AoU improved PRS accuracy for several traits, especially in under-represented populations. However, maximizing sample size by meta-analyzing AoU and UK Biobank was not universally optimal: for less polygenic traits, AoU-only training performed best in African ancestry participants, consistent with ancestry-enriched effects. Individual PRS accuracy declined linearly with increasing ancestry divergence from the discovery GWAS, but this decay was attenuated using multiancestry training data. These findings underscore the value of more representative biobanks for equitable PRS performance.",
+  "authors": "K. Tsuo, Zhuozheng Shi, Tian Ge, R. Mandla, K. Hou, Yi Ding, B. Pasaniuc, Ying Wang",
+  "venue": "Nature Genetics",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41586-018-0579-z"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "All of Us与UKB多祖源PRS，大队列方法学与跨队列复现契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "All of Us大队列多祖先PRS，代表多样性转折点",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多血统PRS训练与跨血统性能评估",
+  "data": "All of Us 245,388全基因组序列+UK Biobank，32个性状疾病",
+  "scenario": "多血统多基因风险评分预测",
+  "benchmark": "AoU-only、AoU+UKB元分析及单血统训练",
+  "results": "AoU多样性提升部分性状PRS精度，尤其代表性不足人群；非多基因性状AoU-only在非洲血统最佳；PRS精度随血统分歧线性下降，多血统训练可减缓",
+  "availability": "",
+  "limitations": "元分析增大样本并非普遍最优；部分性状仍受限",
+  "summary": "研究利用All of Us与UK Biobank数据开发32个性状的多血统PRS并评估性能。比较不同血统、方法与遗传结构对PRS的影响。发现增加多样性提升部分性状精度，但最大化样本量并非普遍最优，多血统训练可减缓随血统分歧的精度衰减。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

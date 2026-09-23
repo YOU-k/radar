@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/acel.70317",
+  "title": "A Novel Longitudinal Proteomic Aging Index Predicts Mortality, Multimorbidity, and Frailty in Older Adults.",
+  "url": "https://doi.org/10.1111/acel.70317",
+  "abstract": "Previous studies have developed proteomic aging clocks to estimate biological age and predict mortality and age-related diseases. However, these earlier clocks were based on cross-sectional data, capturing only the cumulative aging burden at a single time point but were unable to reflect the dynamic trajectory of biological aging over time. We constructed a longitudinal proteomic aging index (LPAI) using data from 4684 plasma proteins measured by the SomaScan 5K Array across three visits in the Atherosclerosis Risk in Communities (ARIC) study (ages 67-90 at last visit). Our two-step approach applied functional principal component analysis (FPCA) to capture protein-level change patterns over time, followed by elastic net penalized Cox regression for protein selection. LPAI was constructed in a randomly selected training set of ARIC participants (N = 2954), tested among the remaining ARIC participants (N = 1267), and validated externally in Multi-Ethnic Study of Atherosclerosis (MESA) participants (N = 3726, ages 53-94 at last exam). Using Cox proportional hazards model, higher LPAI was associated with increased all-cause mortality (HR = 2.50, 95% CI: [2.15, 2.92] per SD), CVD mortality (HR = 1.79, 95% CI: [1.34, 2.39] per SD), and cancer mortality (HR = 1.96, 95% CI: [1.45, 2.64] per SD) risk in ARIC, with statistically significant and directionally consistent associations also observed in MESA. Additionally, higher LPAI was associated with increased multimorbidity and frailty. This study demonstrates the feasibility of developing biological aging measures from longitudinal proteomics data and supports LPAI as a biomarker for aging-related health risks.",
+  "authors": "Rao Z, Wang S, Li A, Blaha MJ, Coresh J, Ganz P, Marshall CH, Pankow JS, Platz EA, Post W, Sedaghat S, Rotter JI, Whelton SP, Prizment A, Guan W.",
+  "venue": "Aging cell",
+  "year": 2025,
+  "citations": 3,
+  "found_by": [
+   "eupmc:proteomic aging clock mortalit"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12741248",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "纵向蛋白组衰老指数预测死亡共病，ARIC大队列多组学。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "纵向蛋白组衰老指数预测死亡共病，ARIC大队列方法新颖",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "FPCA+Cox弹性网构建纵向蛋白衰老指数",
+  "data": "ARIC 2,954人训练；MESA 3,726人验证；多次蛋白组",
+  "scenario": "纵向蛋白组衰老预测",
+  "benchmark": "横断面蛋白衰老时钟、表观时钟",
+  "results": "LPAI预测全因死亡、多病共存和衰弱；捕捉衰老累积负担与速度",
+  "availability": "",
+  "limitations": "训练与验证队列有限；蛋白平台差异；纵向随访间隔较长",
+  "summary": "构建纵向蛋白组衰老指数LPAI以预测老年人死亡、多病和衰弱。对ARIC三次访视蛋白数据用FPCA提取纵向成分，再用Cox弹性网训练死亡风险模型，并在MESA验证。LPAI同时捕捉衰老累积负担和变化速度，较单时点蛋白时钟提供额外预测信息。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

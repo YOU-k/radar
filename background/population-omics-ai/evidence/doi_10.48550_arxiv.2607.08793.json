@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2607.08793",
+  "title": "EHR-MPC: Inference-Time Control for Sepsis Treatment with Generative Patient Digital Twins",
+  "url": "https://doi.org/10.48550/arXiv.2607.08793",
+  "abstract": "Sepsis is a leading cause of mortality, yet optimal treatment policies remain contested. Existing reinforcement learning (RL) approaches learn fixed strategies for sepsis treatment, limiting adaptability to changing clinical objectives during inference. We propose EHRMPC, a framework that decouples learning patient dynamics from optimizing treatment by training a patient digital twin in the form of a generative electronic health record (EHR) model. The digital twin predicts clinical trajectories under interventions and enables model predictive control (MPC) to optimize treatments via inference-time planning over simulations. We evaluate EHR-MPC on a multicenter ICU sepsis cohort spanning 8 hospitals in the Mass General Brigham health system using both off-policy importance sampling and on-policy simulation-based evaluation. Relative to RL baselines, EHR-MPC achieves comparable off-policy performance and improved simulation performance. Unlike RL, this work frames sepsis treatment optimization as inference-time control over learned patient dynamics, establishing a general framework for decision making with generative clinical models.",
+  "authors": "Joshua Pickard, Weiyu Qi, Na Li, A. Woolley, L. Cosimi, Roy Kishony, Deborah T. Hung",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "生成式EHR数字孪生，ICU轨迹预测与治疗控制。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "生成式EHR数字孪生，多中心ICU队列。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "生成式数字孪生+模型预测控制",
+  "data": "8家医院多中心ICU脓毒症队列",
+  "scenario": "脓毒症治疗策略优化",
+  "benchmark": "强化学习(RL)基线",
+  "results": "离线策略性能与RL相当，模拟性能更优",
+  "availability": "",
+  "limitations": "依赖离线数据，仿真评估可能与真实临床有差距",
+  "summary": "提出EHR-MPC框架，将脓毒症治疗优化转化为推理时控制问题。训练生成式EHR患者数字孪生预测干预下临床轨迹，再用模型预测控制在推理时规划治疗。在Mass General Brigham 8家医院ICU脓毒症队列上，离线策略性能与RL相当，模拟性能更优。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

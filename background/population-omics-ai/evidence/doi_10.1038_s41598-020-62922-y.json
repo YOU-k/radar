@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41598-020-62922-y",
+  "title": "BEHRT: Transformer for Electronic Health Records",
+  "url": "https://doi.org/10.1038/s41598-020-62922-y",
+  "abstract": "Today, despite decades of developments in medicine and the growing interest in precision healthcare, vast majority of diagnoses happen once patients begin to show noticeable signs of illness. Early indication and detection of diseases, however, can provide patients and carers with the chance of early intervention, better disease management, and efficient allocation of healthcare resources. The latest developments in machine learning (including deep learning) provides a great opportunity to address this unmet need. In this study, we introduce BEHRT: A deep neural sequence transduction model for electronic health records (EHR), capable of simultaneously predicting the likelihood of 301 conditions in one’s future visits. When trained and evaluated on the data from nearly 1.6 million individuals, BEHRT shows a striking improvement of 8.0–13.2% (in terms of average precision scores for different tasks), over the existing state-of-the-art deep EHR models. In addition to its scalability and superior accuracy, BEHRT enables personalised interpretation of its predictions; its flexible architecture enables it to incorporate multiple heterogeneous concepts (e.g., diagnosis, medication, measurements, and more) to further improve the accuracy of its predictions; its (pre-)training results in disease and patient representations can be useful for future studies (i.e., transfer learning).",
+  "authors": "Yikuan Li, Shishir Rao, J. R. A. Solares, A. Hassaine, R. Ramakrishnan, D. Canoy, Yajie Zhu, K. Rahimi",
+  "venue": "Scientific Reports",
+  "year": 2019,
+  "citations": 729,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {
+   "pmcid": "PMC7189231"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "BEHRT为EHR基础模型开创工作，契合EHR建模方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHR Transformer奠基工作，医学基础模型必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BEHRT Transformer建模电子健康记录序列",
+  "data": "大规模EHR诊断序列，百万级患者",
+  "scenario": "未来疾病诊断预测",
+  "benchmark": "Deepr、RNN、LSTM、RETAIN等",
+  "results": "在多种未来诊断预测任务中优于既往序列模型，AUC提升",
+  "availability": "代码未提；数据受限",
+  "limitations": "依赖编码质量、跨机构泛化未充分验证、解释性有限",
+  "summary": "提出BEHRT，将Transformer用于结构化EHR，把患者历史视为医学概念序列。模型利用就诊位置、年龄和事件顺序学习个体表示，用于预测未来诊断。实验显示其在多项诊断预测任务中优于Deepr、RNN、LSTM和RETAIN等基线。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

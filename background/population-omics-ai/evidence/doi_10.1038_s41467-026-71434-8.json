@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-026-71434-8",
+  "title": "GWAS of extended prescription analgesic use identifies genetic loci in chronic pain.",
+  "url": "https://doi.org/10.1038/s41467-026-71434-8",
+  "abstract": "Pain-related conditions are the leading cause of disability worldwide. Existing GWAS for chronic pain have mainly focused on individual pain-related disorders, which may not optimally capture the phenotype. Here, we define chronic pain based on prescription analgesic use ( ≥ 90 days) in two large biobanks (UK Biobank and FinnGen). GWAS meta-analyses of 11 prescription-based pain phenotypes identify 140 associations with chronic pain, including 78 novel (e.g. ARPP21, CNTNAP2) and 62 previously reported (e.g. SLC39A8, DCC, TRPM8) associations. Integrating these genetic associations with functional data including transcriptome-wide association studies, cell-type and pathway enrichment, and gene enrichment in mouse phenotypes identifies potential mechanisms involved in chronic pain, implicating oligodendrocyte differentiation, neuronal guidance, endolysosomal function and post-synaptic endosome recycling. Our study showcases how the use of prescription data to identify and characterize pain can provide insights into pain genetics and its underlying biology.",
+  "authors": "Harlow CE, Uzochukwu E, Fernando HA, Mordaunt CE, Hughey JM, Eicher JD, Robinson L, Bowker N, Howe L, Liu J, Cortes A, Wilson P, Gungabissoon U, Benson VS, Nash A, Young G, Addis L, Xu CF, Webber C, Davitte J, Cader MZ.",
+  "venue": "Nature communications",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "eupmc:comorbidity network structure "
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13402304",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank与FinnGen跨队列GWAS，处方表型，多队列可复现。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB与FinnGen双队列处方镇痛药GWAS，跨队列复现，pQTL方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于处方镇痛药的GWAS及荟萃分析",
+  "data": "UK Biobank与FinnGen，各约50万人，WGS数据",
+  "scenario": "慢性疼痛遗传位点识别",
+  "benchmark": "既往疼痛相关GWAS及诊断定义",
+  "results": "识别140个全基因组关联，78个为新发现；定义11种慢性疼痛表型，样本量23547–692039",
+  "availability": "",
+  "limitations": "仅欧洲血统人群；处方定义可能受处方行为偏倚；合并表型或致假性多效性",
+  "summary": "研究用扩展镇痛药处方(≥90天)定义慢性疼痛并开展GWAS。在UK Biobank与FinnGen各约50万人中构建11种疼痛表型，进行GWAS及荟萃分析，并做罕见变异基因测试与多组学整合。识别140个全基因组关联，其中78个为新发现，揭示跨疼痛病因共享的生物学通路。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 5,
+ "added_on": "2026-09-23"
+}

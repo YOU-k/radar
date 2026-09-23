@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-026-01085-3",
+  "title": "Subtyping Alzheimer's disease and Parkinson's disease using longitudinal electronic health records.",
+  "url": "https://doi.org/10.1038/s43587-026-01085-3",
+  "abstract": "Neurodegenerative diseases such as Alzheimer's disease (AD) and Parkinson's disease (PD) are clinically heterogeneous, hampering the success of nonselective treatment strategies. Here we apply a transformer-based unsupervised clustering framework to longitudinal electronic health record data from over 100,000 patients across two UK cohorts, Clinical Practice Research Datalink Aurum and UK Biobank, to identify, validate and characterize subtypes of AD and PD. We uncover five reproducible subtypes for each condition, characterized by distinct comorbidity patterns, symptom trajectories, outcomes and genetic profiles. These include a high-mortality AD subtype with motor and cardiovascular features, and a genetically susceptible but clinically resilient PD subtype. We also identify metabolic-inflammatory and vascular-psychiatric phenotypes shared across AD and PD, suggesting cross-disease mechanisms. By integrating routinely collected electronic health record data with genetic analyses, our study provides a scalable framework for early, biologically informed subtyping, laying the groundwork for future targeted interventions in neurodegenerative diseases.",
+  "authors": "Lian J, Fan Z, Petrazzini BO, Fan W, Rao S, Yang Q, Zeng G, Ahmed N, Tabassi Mofrad F, Wamil M, Rahimi K.",
+  "venue": "Nature aging",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "eupmc:EHR foundation model benchmark"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13004679",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "10万人双队列EHR，transformer亚型识别并跨队列复现，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging，10万+跨队列EHR子型，可复现，方法学新",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Transformer深度学习+K-means聚类亚型",
+  "data": "CPRD Aurum纵向EHR，UK Biobank外部验证",
+  "scenario": "AD/PD诊断前亚型划分",
+  "benchmark": "内部80/20验证+UK Biobank外部验证",
+  "results": "识别AD和PD数据驱动亚型，5年随访显示亚型间死亡和住院预后差异，并与基因型关联",
+  "availability": "",
+  "limitations": "依赖EHR记录质量；外部验证仅UK Biobank；亚型生物学机制仍需验证",
+  "summary": "研究利用纵向电子健康记录对阿尔茨海默病和帕金森病进行数据驱动亚型划分。方法是将诊断前时间戳EHR按就诊、年龄和日历年标记化，用Transformer模型生成患者嵌入，再以K-means聚类识别亚型，并在CPRD内部验证和UK Biobank外部验证。研究发现亚型在5年死亡和住院预后、共病、症状轨迹及遗传背景上存在差异，支持基于常规临床数据的神经退行性疾病精准分型。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 7,
+ "added_on": "2026-09-23"
+}

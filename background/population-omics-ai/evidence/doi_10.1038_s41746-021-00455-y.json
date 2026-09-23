@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41746-021-00455-y",
+  "title": "Med-BERT: pretrained contextualized embeddings on large-scale structured electronic health records for disease prediction",
+  "url": "https://doi.org/10.1038/s41746-021-00455-y",
+  "abstract": "Deep learning (DL)-based predictive models from electronic health records (EHRs) deliver impressive performance in many clinical tasks. Large training cohorts, however, are often required by these models to achieve high accuracy, hindering the adoption of DL-based models in scenarios with limited training data. Recently, bidirectional encoder representations from transformers (BERT) and related models have achieved tremendous successes in the natural language processing domain. The pretraining of BERT on a very large training corpus generates contextualized embeddings that can boost the performance of models trained on smaller datasets. Inspired by BERT, we propose Med-BERT, which adapts the BERT framework originally developed for the text domain to the structured EHR domain. Med-BERT is a contextualized embedding model pretrained on a structured EHR dataset of 28,490,650 patients. Fine-tuning experiments showed that Med-BERT substantially improves the prediction accuracy, boosting the area under the receiver operating characteristics curve (AUC) by 1.21–6.14% in two disease prediction tasks from two clinical databases. In particular, pretrained Med-BERT obtains promising performances on tasks with small fine-tuning training sets and can boost the AUC by more than 20% or obtain an AUC as high as a model trained on a training set ten times larger, compared with deep learning models without Med-BERT. We believe that Med-BERT will benefit disease prediction studies with small local training datasets, reduce data collection expenses, and accelerate the pace of artificial intelligence aided healthcare.",
+  "authors": "L. Rasmy, Yang Xiang, Ziqian Xie, Cui Tao, Degui Zhi",
+  "venue": "npj Digital Medicine",
+  "year": 2020,
+  "citations": 1085,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {
+   "pmcid": "PMC8137882"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "EHR基础模型Med-BERT，疾病预测，方法学奠基。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHR基础模型奠基作，高被引，医学基础模型必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Med-BERT预训练结构化EHR疾病预测",
+  "data": "大规模ICD诊断序列，千万级患者就诊",
+  "scenario": "疾病预测与迁移学习",
+  "benchmark": "BEHRT、G-BERT及任务内训练模型",
+  "results": "预训练后微调提升糖尿病/心衰等预测；小样本任务AUC提高",
+  "availability": "代码/权重未提；数据受限",
+  "limitations": "仅用诊断码、未含药物检验、跨机构泛化待验证",
+  "summary": "提出Med-BERT，将BERT迁移到结构化EHR诊断序列，先在大规模ICD数据自监督预训练。再针对糖尿病、心衰等疾病预测任务微调，并与BEHRT、G-BERT和任务内训练模型比较。结果显示预训练可提升预测性能，尤其在标注样本有限时。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

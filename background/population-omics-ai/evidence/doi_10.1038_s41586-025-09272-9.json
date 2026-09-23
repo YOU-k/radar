@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-025-09272-9",
+  "title": "Whole-genome sequencing of 490,640 UK Biobank participants.",
+  "url": "https://doi.org/10.1038/s41586-025-09272-9",
+  "abstract": "Whole-genome sequencing provides an unbiased and complete view of the human genome and enables the discovery of genetic variation without the technical limitations of other genotyping technologies. Here we report on whole-genome sequencing of 490,640 UK Biobank participants, building on previous genotyping effort 1 . This advance deepens our understanding of how genetics associates with disease biology and further enhances the value of this open resource for the study of human biology and health. Coupling this dataset with rich phenotypic data, we surveyed within- and cross-ancestry genomic associations and identified novel genetic and clinical insights. Although most associations with disease traits were primarily observed in individuals of European ancestries, strong or novel signals were also identified in individuals of African and Asian ancestries. With the improved ability to accurately genotype structural variants and exonic variation in both coding and UTR sequences, we strengthened and revealed novel insights relative to whole-exome sequencing 2,3  analyses. This dataset, representing a large collection of whole-genome sequencing data that is available to the UK Biobank research community, will enable advances of our understanding of the human genome, facilitate the discovery of diagnostics and therapeutics with higher efficacy and improved safety profile, and enable precision medicine strategies with the potential to improve global health.",
+  "authors": "UK Biobank Whole-Genome Sequencing Consortium.",
+  "venue": "Nature",
+  "year": 2025,
+  "citations": 128,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC12443626"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB 49万人全基因组测序，公开大队列资源，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature发表49万人全基因组测序，生物样本库里程碑资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "UK Biobank全基因组测序资源构建",
+  "data": "490,640人WGS，平均32.5×，约15亿变异",
+  "scenario": "人群基因组变异资源",
+  "benchmark": "芯片插补、全外显子测序、gnomAD等",
+  "results": "发现约15亿变异，较插补芯片增18.8倍，较WES增>40倍；93.5%为非芬兰欧洲 ancestry",
+  "availability": "数据对获批研究者开放",
+  "limitations": "以欧洲 ancestry 为主，非欧洲样本仍有限",
+  "summary": "研究完成UK Biobank 490,640名参与者的全基因组测序，构建大规模深度表型基因组资源。测序平均覆盖32.5×，使用GraphTyper和DRAGEN识别约15亿SNP、indel和结构变异，并定义五个 ancestry 队列。结果显示WGS较芯片插补和WES显著增加可检测变异，尤其改善非编码和罕见变异检测，为疾病机制和药物发现提供资源。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1371/journal.pgen.1009141",
+  "title": "A fast and scalable framework for large-scale and ultrahigh-dimensional sparse regression with application to the UK Biobank",
+  "url": "https://doi.org/10.1371/journal.pgen.1009141",
+  "abstract": "The UK Biobank (Bycroft et al., 2018) is a very large, prospective population-based cohort study across the United Kingdom. It provides unprecedented opportunities for researchers to investigate the relationship between genotypic information and phenotypes of interest. Multiple regression methods, compared with GWAS, have already been showed to greatly improve the prediction performance for a variety of phenotypes. In the high-dimensional settings, the lasso (Tibshirani, 1996), since its first proposal in statistics, has been proved to be an effective method for simultaneous variable selection and estimation. However, the large scale and ultrahigh dimension seen in the UK Biobank pose new challenges for applying the lasso method, as many existing algorithms and their implementations are not scalable to large applications. In this paper, we propose a computational framework called batch screening iterative lasso (BASIL) that can take advantage of any existing lasso solver and easily build a scalable solution for very large data, including those that are larger than the memory size. We introduce snpnet, an R package that implements the proposed algorithm on top of glmnet (Friedman et al., 2010a) and optimizes for single nucleotide polymorphism (SNP) datasets. It currently supports ℓ1-penalized linear model, logistic regression, Cox model, and also extends to the elastic net with ℓ1/ℓ2 penalty. We demonstrate results on the UK Biobank dataset, where we achieve superior predictive performance on quantitative and qualitative traits including height, body mass index, asthma and high cholesterol. Author Summary With the advent and evolution of large-scale and comprehensive biobanks, there come up unprecedented opportunities for researchers to further uncover the complex landscape of human genetics. One major direction that attracts long-standing interest is the investigation of the relationships between genotypes and phenotypes. This includes but doesn’t limit to the identification of genotypes that are significantly associated with the phenotypes, and the prediction of phenotypic values based on the genotypic information. Genome-wide association studies (GWAS) is a very powerful and widely used framework for the former task, having produced a number of very impactful discoveries. However, when it comes to the latter, its performance is fairly limited by the univariate nature. To address this, multiple regression methods have been suggested to fill in the gap. That said, challenges emerge as the dimension and the size of datasets both become large nowadays. In this paper, we present a novel computational framework that enables us to solve efficiently the entire lasso or elastic-net solution path on large-scale and ultrahigh-dimensional data, and therefore make simultaneous variable selection and prediction. Our approach can build on any existing lasso solver for small or moderate-sized problems, scale it up to a big-data solution, and incorporate other extensions easily. We provide a package snpnet that extends the glmnet package in R and optimizes for large phenotype-genotype data. On the UK Biobank, we observe improved prediction performance on height, body mass index (BMI), asthma and high cholesterol by the lasso over other univariate and multiple regression methods. That said, the scope of our approach goes beyond genetic studies. It can be applied to general sparse regression problems and build scalable solution for a variety of distribution families based on existing solvers.",
+  "authors": "Junyang Qian, Yosuke Tanigawa, Wenfei Du, Matthew Aguirre, Christopher J. Chang, R. Tibshirani, M. Rivas, T. Hastie",
+  "venue": "bioRxiv",
+  "year": 2019,
+  "citations": 114,
+  "found_by": [
+   "s2:references:doi:10.1038/s41588-020-00757-z"
+  ],
+  "extra": {
+   "pmcid": "PMC7641476"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank超高通量稀疏回归可扩展框架，方法学贡献",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank超高通量稀疏回归框架，被广泛复用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BASIL批量筛选迭代Lasso",
+  "data": "UK Biobank约50万人、>80万SNP/indel",
+  "scenario": "超大规模稀疏回归",
+  "benchmark": "glmnet、ncvreg等Lasso求解器",
+  "results": "支持大于内存数据，计算完整Lasso路径并精确求解；可扩展至TB级基因型矩阵",
+  "availability": "",
+  "limitations": "依赖磁盘I/O；需调参和筛选步骤；未展示具体UKB预测增益",
+  "summary": "提出可扩展Lasso框架BASIL以处理超大规模高维稀疏回归。采用screen-solve-check迭代，在自适应筛选变量子集上求解并验证完整Lasso解。面向UK Biobank约50万人和>80万SNP数据，解决内存与效率瓶颈，保证最终解精确。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

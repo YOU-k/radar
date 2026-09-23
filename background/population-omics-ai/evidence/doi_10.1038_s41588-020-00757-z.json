@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-020-00757-z",
+  "title": "Genetics of 35 blood and urine biomarkers in the UK Biobank",
+  "url": "https://doi.org/10.1038/s41588-020-00757-z",
+  "abstract": "Clinical laboratory tests are a critical component of the continuum of care. We evaluate the genetic basis of 35 blood and urine laboratory measurements in the UK Biobank (n = 363,228 individuals). We identify 5,794 independent loci associated with at least one trait (p < 5 × 10−9), containing 3,374 fine-mapped associations and additional sets of large-effect (>0.1 s.d.) protein-altering, human leukocyte antigen (HLA) and copy number variant (CNV) associations. Through Mendelian randomization (MR) analysis, we discover 51 causal relationships, including previously known agonistic effects of urate on gout and cystatin C on stroke. Finally, we develop polygenic risk scores (PRSs) for each biomarker and build ‘multi-PRS’ models for diseases using 35 PRSs simultaneously, which improved chronic kidney disease, type 2 diabetes, gout and alcoholic cirrhosis genetic risk stratification in an independent dataset (FinnGen; n = 135,500) relative to single-disease PRSs. Together, our results delineate the genetic basis of biomarkers and their causal influences on diseases and improve genetic risk stratification for common diseases. Genetic analysis of 35 blood and urine laboratory measurements from 363,228 individuals identifies 1,857 loci associated with at least one laboratory value.",
+  "authors": "Nicholas A. Sinnott-Armstrong, Yosuke Tanigawa, D. Amar, N. Mars, Matthew Aguirre, G. Venkataraman, Michael Wainberg, H. Ollila",
+  "venue": "Nature Genetics",
+  "year": 2021,
+  "citations": 690,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-021-03855-y",
+   "s2:references:doi:10.1038/s41467-023-36231-7"
+  ],
+  "extra": {
+   "pmcid": "PMC7867639"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank大规模血液尿液标志物遗传图谱，含pQTL与PRS资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB 36万人血液尿液标志物GWAS+PRS，该方向必读资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "GWAS+精细定位+PheWAS+孟德尔随机化+PRS建模",
+  "data": "UK Biobank 363,228人，35项血尿生物标志物，SNP/CNV/HLA",
+  "scenario": "血尿生物标志物遗传解析",
+  "benchmark": "42个既往队列、25项生物标志物效应量比较",
+  "results": ">10,000显著关联；58个PTV、1,323个PAV关联；常见SNP遗传度0.6%–23.9%(LDSC)、3.2%–57%(HESS)",
+  "availability": "",
+  "limitations": "主要基于欧洲人群；LDSC与HESS遗传度估计差异较大；部分标志物多基因性低",
+  "summary": "系统解析UK Biobank 35项血尿生物标志物的遗传结构并构建多基因预测模型。对363,228人开展SNP、CNV、HLA关联分析、精细定位、PheWAS、因果推断与PRS建模。发现逾万显著关联及大量蛋白截短/改变变异，揭示标志物遗传度与多基因性差异，并支持治疗靶点优先排序。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

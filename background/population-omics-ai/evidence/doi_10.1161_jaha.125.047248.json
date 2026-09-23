@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/jaha.125.047248",
+  "title": "Machine Learning‐Driven Prediction of Coronary Artery Disease Risk Based on UK Biobank Plasma Proteomics",
+  "url": "https://doi.org/10.1161/JAHA.125.047248",
+  "abstract": "Background Coronary artery disease (CAD) is a leading global cause of mortality, yet the predictive accuracy of conventional risk models is limited. Here, we integrate conventional risk factors, polygenic risk scores, and large‐scale proteomics to develop a unified model for enhanced CAD risk prediction. Methods Using data from UK Biobank, participants with plasma proteomics and genetic risk data were included after excluding prevalent CAD. Participants from England were split into training (n=32 330) and internal validation (n=13 857) sets, and Scotland/Wales participants formed an external validation set (n=5775). Incident CAD was ascertained from linked health records. A 202‐protein proteomic risk score was derived by least absolute shrinkage and selection operator Cox regression, and CatBoost models were trained using conventional risk factors alone and with incremental addition of polygenic risk scores and protein proteomic risk scores; Shapley Additive Explanations‐guided forward selection identified a compact protein panel. Results Across cohorts, the median age was 58 years and ∼45% were men. Protein proteomic risk score was dose‐dependently associated with CAD risk. Compared with conventional risk factors alone, integrating polygenic risk scores and protein proteomic risk scores improved discrimination, with the area under the curve increasing from 0.750 (95% CI, 0.732–0.767) to 0.789 (95% CI, 0.772–0.805) in internal validation and from 0.717 (95% CI, 0.683–0.750) to 0.762 (95% CI, 0.732–0.791) in external validation. A 9‐protein panel (GDF15 [growth differentiation factor 15], MMP12 [matrix metalloproteinase 12], NPPB [natriuretic peptide B], PGF [placental growth factor], REN [renin], ADGRG2 [adhesion G‐protein coupled receptor], ACE2 [angiotensin‐converting enzyme 2], CDCP1 [CUB domain‐containing protein 1], CXCL17 [C‐X‐C motif chemokine ligand 17)]) captured most proteomic predictive information. Conclusions Our findings demonstrate that integrating conventional risk factors, polygenic risk scores, and proteomic data improves CAD risk prediction. This study highlights the utility of proteomics in precision cardiovascular medicine and simplified risk stratification tools.",
+  "authors": "Yue-Zhong Huang, Xiao-li Chen, Hao Zhang, Zhanpei Bai, Yi-Fan Shen, Daishan Zheng, L. Fang, Hong-Zi Song",
+  "venue": "Journal of the American Heart Association : Cardiovascular and Cerebrovascular Disease",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1101/2022.06.16.22276246"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank蛋白组+PRS整合建模，含外部验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank蛋白组+PRS整合CAD预测，人群多组学代表",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LASSO Cox蛋白评分+CatBoost整合模型",
+  "data": "UK Biobank血浆蛋白组+基因；约5.2万人",
+  "scenario": "冠心病风险预测",
+  "benchmark": "传统风险因素模型",
+  "results": "AUC由0.750升至0.789（内部验证），外部验证由0.717提升；202蛋白评分剂量依赖关联CAD",
+  "availability": "",
+  "limitations": "全文缺失，外部验证结果不完整，人群以欧洲为主",
+  "summary": "整合传统风险因素、多基因风险评分与大规模血浆蛋白组，构建冠心病风险预测统一模型。用LASSO Cox推导202蛋白风险评分，CatBoost逐步加入PRS与蛋白评分，SHAP前向选择精简蛋白面板。内部验证AUC从0.750升至0.789，外部验证从0.717提升，蛋白评分与CAD风险剂量依赖相关。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

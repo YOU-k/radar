@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.09140",
+  "title": "NOAH: Learning the Full Patient Journey. A Longitudinal Multimodal Time-Aware Model for Representation and Forecasting",
+  "url": "https://arxiv.org/abs/2609.09140",
+  "abstract": "The digitization of healthcare has generated vast, longitudinal, and multimodal patient records over a lifetime, yet fully exploiting these data to represent and predict patient state trajectories remains a critical challenge. Current AI models often struggle to capture the complex, irregular temporal dynamics and inherent stochasticity of real-world multimodal patient data. Existing AI approaches for modeling longitudinal patient records are predominantly discriminative, limited to a few modalities, constrained by closed categorical vocabularies, treating time as a monotonic inductive bias, or they are limited in forecasting future patient states. We introduce NOAH, a time-aware, task-agnostic, generative transformer model representing and forecasting the full multimodal patient journey. NOAH features a novel bidirectional time integration and a variational latent space to capture the continuous evolution of patient states and the stochasticity of clinical trajectories. Built from over 559 million clinical events from 431,000 hospital visits of 299,000 patients across the MIMIC dataset family, NOAH natively processes medical images, time-series and numeric signals, categorical events, as well as structured and unstructured clinical records. NOAH is the first truly holistic generative model in its field, enabling autoregressive forecasting with optional time control, zero-shot classification, and counterfactual intervention simulation. It generates highly informative and predictive patient state representations that demonstrate strong performance in probing for clinical outcomes, 15 ICD chapters, and 29 comorbidities, as well as in time-to-event prediction. Seamlessly handling diverse modalities and complex temporal dynamics, NOAH provides a versatile, task-agnostic, scalable foundation for intelligent predictive systems in personalized clinical care and digital medicine.",
+  "authors": "Tobias Susetzky, R. Rehms, Dmitrii Seletkov, Özgün Turgut, Michelle Espranita Liman, L. Steinhelfer, Rickmer Braren, D. Rueckert",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "纵向多模态患者轨迹基础模型，任务无关表示与预测。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "纵向多模态患者旅程基础模型，任务无关。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "时间感知多模态生成式Transformer",
+  "data": "MIMIC家族，559M事件，299,000患者",
+  "scenario": "患者全程轨迹表示与预测",
+  "benchmark": "现有纵向患者建模AI方法",
+  "results": "支持自回归预测、零样本分类、反事实干预模拟",
+  "availability": "",
+  "limitations": "主要基于MIMIC数据集，外部泛化待验证",
+  "summary": "提出NOAH，一个时间感知、任务无关的生成式Transformer模型，用于表示和预测完整多模态患者旅程。模型采用双向时间整合和变分隐空间，基于MIMIC家族559M临床事件、299,000患者训练，原生处理图像、时序、分类及文本记录。支持自回归预测、零样本分类和反事实干预模拟。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

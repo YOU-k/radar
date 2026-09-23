@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.tig.2026.08.002",
+  "title": "Trends in large-scale human population cohorts.",
+  "url": "https://doi.org/10.1016/j.tig.2026.08.002",
+  "abstract": "As a foundational infrastructure of biomedical research, large-scale human population cohorts have undergone rapid progress over the past decades. Driven by advances in high-throughput omics technologies, widespread adoption of electronic health records, and the emergence of artificial intelligence, these cohorts now integrate deep molecular profiling with longitudinal real-world data at an unprecedented scale. This transformation has shifted cohort research from primarily descriptive association studies toward mechanistic discovery, refined risk stratification, and genetically informed therapeutic development. In parallel, cohort initiatives are expanding globally beyond Western populations, accompanied by increasingly diverse funding, governance, and data-sharing models. Here, we review the major transformative trends shaping large-scale human population cohorts and discuss how these resources are redefining disease biology, translational research, and the future of precision medicine.",
+  "authors": "Xiaoxi Jing, Ze-Qi Yan, Shuo Zhang, Yajie Zhao",
+  "venue": "Trends in Genetics",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "综述大规模人群队列多组学与EHR整合趋势，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "综述大型人群队列趋势，AI与组学整合，方向必读背景",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述：大型人群队列发展趋势分析",
+  "data": "综述，无原始数据",
+  "scenario": "人群队列与精准医学研究",
+  "benchmark": "",
+  "results": "",
+  "availability": "",
+  "limitations": "为综述性文章，无实证数据",
+  "summary": "本文综述了大型人群队列在组学技术、电子健康记录与AI推动下的发展趋势。通过梳理全球队列在分子 profiling、纵向真实世界数据整合及治理共享模式上的变化。指出队列研究正从描述性关联转向机制发现、精细风险分层与遗传导向的治疗开发，并日益全球化与多样化。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

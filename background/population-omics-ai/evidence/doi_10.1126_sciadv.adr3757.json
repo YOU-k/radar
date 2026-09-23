@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/sciadv.adr3757",
+  "title": "Genetically supported targets and drug repurposing for brain aging: A systematic study in the UK Biobank.",
+  "url": "https://doi.org/10.1126/sciadv.adr3757",
+  "abstract": "Brain age gap (BAG), the deviation between estimated brain age and chronological age, is a promising marker of brain health. However, the genetic architecture and reliable targets for brain aging remains poorly understood. In this study, we estimate magnetic resonance imaging (MRI)-based brain age using deep learning models trained on the UK Biobank and validated with three external datasets. A genome-wide association study for BAG identified two unreported loci and seven previously reported loci. By integrating Mendelian Randomization (MR) and colocalization analysis on eQTL and pQTL data, we prioritized seven genetically supported druggable genes, including  MAPT ,  TNFSF12 ,  GZMB ,  SIRPB1 ,  GNLY ,  NMB , and  C1RL , as promising targets for brain aging. We rediscovered 13 potential drugs with evidence from clinical trials of aging and prioritized several drugs with strong genetic support. Our study provides insights into the genetic basis of brain aging, potentially facilitating drug development for brain aging to extend the health span.",
+  "authors": "Yi F, Yuan J, Somekh J, Peleg M, Zhu YC, Jia Z, Wu F, Huang Z.",
+  "venue": "Science advances",
+  "year": 2025,
+  "citations": 28,
+  "found_by": [
+   "eupmc:biobank plasma proteomics dise"
+  ],
+  "extra": {
+   "journal_watch": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB脑龄深度学习+pQTL/eQTL整合，符合多组学与衰老交叉。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB脑龄深度学习+pQTL整合，多组学人群健康代表",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度学习估计脑龄，结合GWAS、MR和共定位分析",
+  "data": "UK Biobank MRI数据，三个外部数据集验证",
+  "scenario": "脑老化遗传基础与药物靶点发现",
+  "benchmark": "未明确对比对象",
+  "results": "GWAS发现2个新位点和7个已知位点；优先7个可成药基因；重发现13种潜在药物",
+  "availability": "",
+  "limitations": "基于观察性数据，因果推断依赖MR假设；药物需临床试验验证",
+  "summary": "利用深度学习模型在UK Biobank上估计MRI脑龄，并在三个外部数据集验证，计算脑龄差（BAG）。对BAG进行GWAS发现2个新位点和7个已知位点，整合MR和共定位分析优先7个可成药基因。重发现13种有临床试验证据的潜在药物，为脑老化药物开发提供遗传学依据。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

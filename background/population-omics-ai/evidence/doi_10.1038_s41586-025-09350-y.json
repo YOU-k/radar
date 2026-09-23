@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-025-09350-y",
+  "title": "Population-specific polygenic risk scores for people of Han Chinese ancestry.",
+  "url": "https://doi.org/10.1038/s41586-025-09350-y",
+  "abstract": "Predicting complex disease risks on the basis of individual genomic profiles is an advancing field in human genetics 1,2 . However, most genetic studies have focused on populations of European ancestry, creating a global imbalance in precision medicine and underscoring the need for genomic research in non-European groups 3,4 . The Taiwan Precision Medicine Initiative recruited more than half a million Taiwanese residents, providing a large dataset of genetic profiles and electronic medical record data for people with Han Chinese ancestry. Using extensive phenotypic data, we conducted comprehensive genomic analyses across the medical phenome with individuals genetically similar to Han Chinese reference populations. These analyses identified population-specific genetic risk variants and new findings for various complex traits. We developed polygenic risk scores, demonstrating strong predictive performance for conditions such as cardiometabolic diseases, autoimmune disorders, cancers and infectious diseases. We observed consistent findings in an independent dataset, Taiwan Biobank, and among people of East Asian ancestry in the UK Biobank and the All of Us Project. The identified genetic risks accounted for up to 10.3% of the overall health variation in the Taiwan Precision Medicine Initiative cohort. Our approach of characterizing the phenome-wide genomic landscape, developing population-specific risk-prediction models, assessing their performance and identifying the genetic effect on health serves as a model for similar studies in other diverse study populations.",
+  "authors": "Chen HH, Chen CH, Hou MC, Fu YC, Li LH, Chou CY, Yeh EC, Tsai MF, Chen CH, Yang HC, Huang YT, Liu YM, Wei CY, Su JP, Lin WJ, Wang EHF, Chiang CL, Jiang JK, Lee IH, Liang KH, Chen WS, Tsai HC, Lin SY, Chang FP, Ho HL, Yeh YC, Tseng WC, Lin MH, Chang HT, Tseng LM, Liang WY, Chen PC, Hsieh YC, Chen YM, Hsiao TH, Lin CH, Chen YJ, Chen IC, Mao CL, Chang SJ, Chang YL, Liao YJ, Lai CH, Lee WJ, Tung H, Yen TT, Yen HC, Chen MY, Lin YC, Kao YT, Kao BZ, Lee JE, Chung CL, Liu JC, Chan P, Lin CH, Chen CH, Wu IC, Lin LC, Wang JW, Shih SL, Hsieh SW, Hung CH, Li WM, Yang CJ, Yang CS, Weng RH, Chen YC, Chang CP, Wu TH, Lin YC, Sheen YJ, Wang SH, Chen SP, Raben T, Widen E, Hsu S, Hsieh FJ, Ho DR, Huang YH, Yang CH, Huang YS, Chen YF, Wu HM, Tsai PH, Huang KG, Chien CY, Ho YL, Wu MS, Kao JH, Liu YB, Juang JJ, Lin MH, Lin YH, Lee JY, Lu HJ, Lu CH, Feng AC, Liu JS, Chiang CP, Chu NF, Lin JC, Yeh YW, Meng E, Huang CY, Li CC, Wang TF, Su KY, Wang JK, Chen MH, Chen HF, Ma GC, Chang TY, Chiang FT, Chang HJ, Kao KJ, Hung CF, Tsai CY, Chen PY, Tsui K, Chen YT, Kwok PY, Sheu WH, Yang SF, Liou JM, Wang JY, Chiou JF, Wu JY, Fann CSJ.",
+  "venue": "Nature",
+  "year": 2025,
+  "citations": 20,
+  "found_by": [
+   "eupmc:cross-cohort replication polyg"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12675292",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "台湾50万人队列EHR+遗传PRS，跨族裔人群多组学资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "台湾50万人汉族PRS+EHR，跨族群转折性资源，Nature发表",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "全表型GWAS+遗传力+PRS建模与外部验证",
+  "data": "TPMI 463,447汉族人，695 phecode+24定量性状",
+  "scenario": "汉族人群疾病风险预测",
+  "benchmark": "TWB、UKB、All of Us外部验证",
+  "results": "发现人群特异风险变异/基因与多效性；提升汉族PRS预测性能",
+  "availability": "",
+  "limitations": "医院来源设计可能漏掉轻症常见病；部分性状样本量有限",
+  "summary": "针对东亚汉族人群构建人群特异多基因风险评分。利用TPMI 463,447人开展全表型GWAS、遗传力估计和PRS建模，并在TWB、UKB、All of Us验证。发现大量人群特异风险位点与多效性，证明汉族特异PRS优于欧洲为主模型。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

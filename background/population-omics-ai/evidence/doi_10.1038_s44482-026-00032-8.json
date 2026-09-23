@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s44482-026-00032-8",
+  "title": "Robust replication of associations across patient-mediated and provider-sourced EHR data in the All of Us research program",
+  "url": "https://doi.org/10.1038/s44482-026-00032-8",
+  "abstract": "The All of Us Research Program is assembling a nationwide cohort with electronic health record (EHR) resources through two complementary pathways: healthcare provider organization (HPO)-sourced EHRs and patient-mediated EHR (PME) contributed through patient portal linkages. The comparative research utility of these two data sources has not been systematically evaluated. Here, we compared PME and HPO EHRs with respect to disease prevalence, phenotype–phenotype associations, and replication of established genotype-phenotype associations using data from 19,703 PME and 373,887 HPO participants. We benchmarked disease prevalence against national estimates, conducted phenome-wide association studies for 10 commonly studied diseases, and tested replication of more than 5000 established genotype-phenotype associations across multiple ancestral groups. Disease prevalence was consistently lower in PME than in HPO, although prevalence of most diseases in both cohorts exceeded national estimates. Both data sources reproduced known phenotype–phenotype associations and showed moderate-to-strong concordance in effect sizes across the phenome. The overall genotype-phenotype replication rate was 49.1% (5399/10,999) in HPO and 5.9% (381/6482) in PME across ancestral groups, with effect sizes strongly correlated among well-powered associations (R = 0.84, P < 0.001). To disentangle the impact of sample size from data quality, we performed 1:1 propensity score matching. After matching, the replication gap in genotype-phenotype associations narrowed from 8.3-fold to 1.3-fold, with equivalent replication rates among adequately powered associations and strongly concordant effect sizes; comorbidity patterns were also consistent across all 10 diseases tested. These findings demonstrate that both data sources are valuable for clinical and genomic research and can inform other cohorts integrating provider-derived and patient-mediated EHRs.",
+  "authors": "C. Zeng, B. Waxse, J. Denny",
+  "venue": "npj Digital Public Health",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1056/nejmsr1809937",
+   "s2:citations:doi:10.1146/annurev-biodatasci-122320-112352"
+  ],
+  "extra": {
+   "pmcid": "PMC13549936"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "All of Us两种EHR来源跨队列复现评测，方法学与资源价值高。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "All of Us两类EHR复现性基准，队列数据资源价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PME与HPO EHR数据PheWAS及关联复制比较",
+  "data": "393,590名All of Us参与者；PME 19,703，HPO 373,887",
+  "scenario": "EHR数据来源研究效用比较",
+  "benchmark": "全国统计、10个表型PheWAS、5,000+已知基因型-表型关联",
+  "results": "PME更白、更女性、更多保险、随访更长；WGS更少（35.2% vs 83.2%）；系统比较疾病患病率、表型关联和复制率",
+  "availability": "",
+  "limitations": "PME样本量小且人群构成差异大，可能影响泛化和比较",
+  "summary": "研究在All of Us中系统比较患者介导EHR（PME-FHIR）与提供者来源EHR（HPO）的研究效用。对393,590名参与者比较疾病患病率、10个表型PheWAS及5,000多个已知基因型-表型关联复制率，并进行1:1倾向评分匹配。发现两种EHR来源在人群特征、测序覆盖和关联复制上存在差异，为PME数据研究使用提供指导。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

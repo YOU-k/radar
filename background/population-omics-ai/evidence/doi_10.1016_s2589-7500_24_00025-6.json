@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/s2589-7500(24)00025-6",
+  "title": "Foresight—a generative pretrained transformer for modelling of patient timelines using electronic health records: a retrospective modelling study",
+  "url": "https://doi.org/10.1016/s2589-7500(24)00025-6",
+  "abstract": "Summary Background An electronic health record (EHR) holds detailed longitudinal information about a patient's health status and general clinical history, a large portion of which is stored as unstructured, free text. Existing approaches to model a patient's trajectory focus mostly on structured data and a subset of single-domain outcomes. This study aims to evaluate the effectiveness of Foresight, a generative transformer in temporal modelling of patient data, integrating both free text and structured formats, to predict a diverse array of future medical outcomes, such as disorders, substances (eg, to do with medicines, allergies, or poisonings), procedures, and findings (eg, relating to observations, judgements, or assessments). Methods Foresight is a novel transformer-based pipeline that uses named entity recognition and linking tools to convert EHR document text into structured, coded concepts, followed by providing probabilistic forecasts for future medical events, such as disorders, substances, procedures, and findings. The Foresight pipeline has four main components: (1) CogStack (data retrieval and preprocessing); (2) the Medical Concept Annotation Toolkit (structuring of the free-text information from EHRs); (3) Foresight Core (deep-learning model for biomedical concept modelling); and (4) the Foresight web application. We processed the entire free-text portion from three different hospital datasets (King's College Hospital [KCH], South London and Maudsley [SLaM], and the US Medical Information Mart for Intensive Care III [MIMIC-III]), resulting in information from 811 336 patients and covering both physical and mental health institutions. We measured the performance of models using custom metrics derived from precision and recall. Findings Foresight achieved a precision@10 (ie, of 10 forecasted candidates, at least one is correct) of 0·68 (SD 0·0027) for the KCH dataset, 0·76 (0·0032) for the SLaM dataset, and 0·88 (0·0018) for the MIMIC-III dataset, for forecasting the next new disorder in a patient timeline. Foresight also achieved a precision@10 value of 0·80 (0·0013) for the KCH dataset, 0·81 (0·0026) for the SLaM dataset, and 0·91 (0·0011) for the MIMIC-III dataset, for forecasting the next new biomedical concept. In addition, Foresight was validated on 34 synthetic patient timelines by five clinicians and achieved a relevancy of 33 (97% [95% CI 91–100]) of 34 for the top forecasted candidate disorder. As a generative model, Foresight can forecast follow-on biomedical concepts for as many steps as required. Interpretation Foresight is a general-purpose model for biomedical concept modelling that can be used for real-world risk forecasting, virtual trials, and clinical research to study the progression of disorders, to simulate interventions and counterfactuals, and for educational purposes. Funding National Health Service Artificial Intelligence Laboratory, National Institute for Health and Care Research Biomedical Research Centre, and Health Data Research UK.",
+  "authors": "Zeljko Kraljevic, Dan Bean, Anthony Shek, R. Bendayan, Harry Hemingway, Joshua Au Yeung, Alexander Deng, Alfie Baston",
+  "venue": "The Lancet Digital Health",
+  "year": 2024,
+  "citations": 135,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {
+   "pmcid": "PMC11220626"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Foresight生成式EHR基础模型，纵向轨迹预测契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "生成式EHR基础模型，纵向健康轨迹代表工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "生成式预训练Transformer预测患者时间线",
+  "data": "三家医院EHR自由文本与结构化数据",
+  "scenario": "患者疾病轨迹预测",
+  "benchmark": "BEHRT、G-BERT、Med-BERT、LM-LSTM",
+  "results": "覆盖18类SNOMED概念，可跨日/周/月预测，支持死亡前全程模拟",
+  "availability": "模型通过网页应用公开",
+  "limitations": "基于历史实践，不适用于当前临床决策支持",
+  "summary": "研究提出Foresight，一个基于生成式预训练Transformer的模型，用于从电子健康记录预测患者未来疾病和生物医学概念。模型利用结构化数据及占约80%的自由文本，支持不同时间分辨率，并在三家医院、躯体和精神健康数据上测试。结果显示其可广泛预测18类SNOMED概念，并支持患者旅程模拟、医学教育和因果推断，但作者强调当前形式不宜直接用于临床决策支持。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

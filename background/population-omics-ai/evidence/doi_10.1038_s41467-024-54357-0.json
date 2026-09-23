@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-024-54357-0",
+  "title": "Metabolomic and genomic prediction of common diseases in 700,217 participants in three national biobanks.",
+  "url": "https://doi.org/10.1038/s41467-024-54357-0",
+  "abstract": "Identifying individuals at high risk of chronic diseases via easily measured biomarkers could enhance efforts to prevent avoidable illness and death. Using 'omic data can stratify risk for many diseases simultaneously from a single measurement that captures multiple molecular predictors of risk. Here we present nuclear magnetic resonance metabolomics in blood samples from 700,217 participants in three national biobanks. We built metabolomic scores that identify high-risk groups for diseases that cause the most morbidity in high-income countries and show consistent cross-biobank replication of the relative risk of disease for these groups. We show that these metabolomic scores are more strongly associated with disease onset than polygenic scores for most of these diseases. In a subset of 18,709 individuals with metabolomic biomarkers measured at two time points we show that people whose scores change have different risk of disease, suggesting that repeat measurements capture changes both to health status and disease risk possibly due to treatment, lifestyle changes or other factors. Lastly, we assessed the incremental predictive value of metabolomic scores over existing clinical risk scores for multiple diseases and found modest improvements in discrimination for several diseases whose clinical utility, while promising, remains to be determined.",
+  "authors": "Nightingale Health Biobank Collaborative Group.",
+  "venue": "Nature communications",
+  "year": 2024,
+  "citations": 42,
+  "found_by": [
+   "eupmc:biobank plasma proteomics dise"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11582662"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "三国家生物库70万人代谢组评分，跨队列复现疾病风险。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "三大国家生物库70万人代谢组+基因组疾病预测，跨库复现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "代谢组评分与PGS预测常见疾病",
+  "data": "三国生物库700,217人NMR代谢组与临床随访",
+  "scenario": "常见疾病风险预测",
+  "benchmark": "PGS、临床风险评分",
+  "results": "训练12种疾病Cox模型，多数纳入>半数36个代谢标志物，跨三库重复",
+  "availability": "",
+  "limitations": "主要北欧人群，部分疾病事件数较少",
+  "summary": "研究在UK Biobank、爱沙尼亚生物库和芬兰THL生物库共700,217名参与者中，利用NMR代谢组数据训练12种高DALY疾病的代谢组风险评分。方法使用Cox比例风险模型和Lasso选择36个临床验证代谢标志物，并与PGS及临床评分比较。结果显示代谢组评分可跨三国生物库重复，并可用于评估不同疾病和时间尺度上的风险预测价值。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

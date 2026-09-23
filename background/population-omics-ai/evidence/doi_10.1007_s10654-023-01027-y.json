@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1007/s10654-023-01027-y",
+  "title": "A unidirectional mapping of ICD-8 to ICD-10 codes, for harmonized longitudinal analysis of diseases",
+  "url": "https://doi.org/10.1007/s10654-023-01027-y",
+  "abstract": "Periodic revisions of the international classification of diseases (ICD) ensure that the classification reflects new practices and knowledge; however, this complicates retrospective research as diagnoses are coded in different versions. For longitudinal disease trajectory studies, a crosswalk is an essential tool and a comprehensive mapping between ICD-8 and ICD-10 has until now been lacking. In this study, we map all ICD-8 morbidity codes to ICD-10 in the expanded Danish ICD version. We mapped ICD-8 codes to ICD-10, using a many-to-one system inspired by general equivalence mappings such that each ICD-8 code maps to a single ICD-10 code. Each ICD-8 code was manually and unidirectionally mapped to a single ICD-10 code based on medical setting and context. Each match was assigned a score (1 of 4 levels) reflecting the quality of the match and, if applicable, a “flag” signalling choices made in the mapping. We provide the first complete mapping of the 8596 ICD-8 morbidity codes to ICD-10 codes. All Danish ICD-8 codes representing diseases were mapped and 5106 (59.4%) achieved the highest consistency score. Only 334 (3.9%) of the ICD-8 codes received the lowest mapping consistency score. The mapping provides a scaffold for translation of ICD-8 to ICD-10, which enable longitudinal disease studies back to and 1969 in Denmark and to 1965 internationally with further adaption.",
+  "authors": "M. K. Pedersen, R. Eriksson, R. Reguant, C. Collin, H. Pedersen, F. Sørup, Christian Simon, A. Birch",
+  "venue": "European Journal of Epidemiology",
+  "year": 2023,
+  "citations": 17,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {
+   "pmcid": "PMC10570238"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "ICD-8到ICD-10映射工具，支撑纵向疾病轨迹研究。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "丹麦登记ICD映射工具，纵向轨迹研究基础设施。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建ICD-8到ICD-10单向映射表",
+  "data": "丹麦ICD-8/10分类及国家患者登记数据",
+  "scenario": "跨版本疾病编码统一",
+  "benchmark": "WHO及丹麦官方ICD-8/ICD-10分类",
+  "results": "覆盖完整ICD及丹麦本地扩展，可连接1965年以来超半世纪医疗数据",
+  "availability": "映射表公开",
+  "limitations": "仅单向映射，未提供ICD-10回映射ICD-8",
+  "summary": "研究构建了ICD-8到ICD-10的单向映射，以支持跨版本长期疾病数据分析。方法基于丹麦官方ICD分类、WHO补充材料及丹麦国家患者登记编码频率，覆盖完整ICD及丹麦本地扩展。该映射可桥接ICD-8与ICD-10，使丹麦自1965年以来的高粒度医疗数据可进行纵向和跨代疾病轨迹研究。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

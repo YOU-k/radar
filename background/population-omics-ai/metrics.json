@@ -1,0 +1,58 @@
+[
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.5,
+  "highcite": 0.467,
+  "score": 0.637,
+  "n_evidence": 32,
+  "round": 1
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.5,
+  "highcite": 0.533,
+  "score": 0.663,
+  "n_evidence": 56,
+  "round": 2
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.5,
+  "highcite": 0.567,
+  "score": 0.677,
+  "n_evidence": 73,
+  "round": 3
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.556,
+  "highcite": 0.6,
+  "score": 0.707,
+  "n_evidence": 81,
+  "round": 4
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.667,
+  "highcite": 0.567,
+  "score": 0.727,
+  "n_evidence": 85,
+  "round": 5
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.667,
+  "highcite": 0.567,
+  "score": 0.727,
+  "n_evidence": 88,
+  "round": 6
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.667,
+  "highcite": 0.533,
+  "score": 0.713,
+  "n_evidence": 90,
+  "round": 7
+ }
+]

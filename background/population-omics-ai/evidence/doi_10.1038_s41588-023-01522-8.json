@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-023-01522-8",
+  "title": "Age-dependent topic modelling of comorbidities in UK Biobank identifies disease subtypes with differential genetic risk",
+  "url": "https://doi.org/10.1038/s41588-023-01522-8",
+  "abstract": "Age-dependent topic modeling provides a low-rank representation of longitudinal disease records and identifies diseases with heterogeneous comorbidity profiles, defining subtypes that exhibit distinct genome-wide and locus-specific association patterns. The analysis of longitudinal data from electronic health records (EHRs) has the potential to improve clinical diagnoses and enable personalized medicine, motivating efforts to identify disease subtypes from patient comorbidity information. Here we introduce an age-dependent topic modeling (ATM) method that provides a low-rank representation of longitudinal records of hundreds of distinct diseases in large EHR datasets. We applied ATM to 282,957 UK Biobank samples, identifying 52 diseases with heterogeneous comorbidity profiles; analyses of 211,908 All of Us samples produced concordant results. We defined subtypes of the 52 heterogeneous diseases based on their comorbidity profiles and compared genetic risk across disease subtypes using polygenic risk scores (PRSs), identifying 18 disease subtypes whose PRS differed significantly from other subtypes of the same disease. We further identified specific genetic variants with subtype-dependent effects on disease risk. In conclusion, ATM identifies disease subtypes with differential genome-wide and locus-specific genetic risk profiles.",
+  "authors": "Xi-Lin Jiang, M. J. Zhang, Yidong Zhang, Arun Durvasula, M. Inouye, C. Holmes, Alkes L. Price, G. McVean",
+  "venue": "Nature Genetics",
+  "year": 2023,
+  "citations": 16,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-026-10780-5"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "年龄依赖主题模型发现共病亚型及遗传风险差异",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Genetics，年龄依赖主题模型发现共病亚型及遗传异质性",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "年龄依赖主题模型（ATM）低秩表示纵向疾病记录",
+  "data": "UK Biobank 282,957样本，All of Us 211,908样本",
+  "scenario": "共病异质性疾病的亚型与遗传风险分析",
+  "benchmark": "其他亚型同疾病PRS比较",
+  "results": "识别52种异质性共病疾病，定义亚型；18个亚型PRS显著异于同病其他亚型",
+  "availability": "",
+  "limitations": "基于EHR共病信息，未纳入多组学数据；亚型临床意义需进一步验证",
+  "summary": "提出年龄依赖主题模型ATM，对大规模EHR中数百种疾病的纵向记录进行低秩表示。应用于UK Biobank 282,957样本，识别52种共病异质性疾病，并在All of Us 211,908样本中验证。基于共病谱定义亚型，发现18个亚型PRS显著异于同病其他亚型，并识别亚型依赖性遗传变异。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

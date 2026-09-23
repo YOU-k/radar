@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-020-0622-5",
+  "title": "Exploring and visualizing large-scale genetic associations using PheWeb",
+  "url": "https://doi.org/10.1038/s41588-020-0622-5",
+  "abstract": "To the Editor — Advances in genotyping and sequencing technologies, the growing availability of electronic health records for research use and the emergence of population-scale cohorts are enabling large studies to collect copious amounts of both phenotype and genotype data. Studies can collect thousands of traits measured across hundreds of thousands of individuals, each assessed at millions of genetic variants. These resources enable genomeand phenome-wide association studies (GWAS and PheWAS, respectively) at increasing scales and can generate high-dimensional results that can provide insights into many aspects of human genetics and biology. However, navigating these association results can be challenging and cumbersome. To aid in generating and testing hypotheses for the mechanisms underlying complex traits, these results should be organized in an intuitive, easily navigable manner. The current standards in the field are to use Manhattan1 and LocusZoom2 plots to review single-trait results and to use PheWAS3,4 plots to summarize results across many traits. The ability of investigators to explore their own data by alternating between these two view types, is an increasingly common feature of large-scale association analyses. Therefore, we developed PheWeb, an easy-to-use open-source web-based tool for visualizing, navigating and sharing GWAS and PheWAS results. We have used PheWeb to explore association results for large datasets such as the UK Biobank5 (http://pheweb.org/ MGI-freeze2/) and the Michigan Genomics Initiative (MGI; http://pheweb.sph.umich. edu/MGI-freeze2). The PheWeb instance populated with the UK Biobank summary statistics displays 28 million genetic markers assessed across 1,403 binary traits for 408,961 white British participants6 (Supplementary Note). Others have used PheWeb to explore large sets of association results, such as the Oxford Brain Imaging Genetics Project (http://big.stats.ox.ac.uk) and the new computationally efficient association tool fastGWA (http://fastgwa. info/ukbimp). PheWeb provides automated data processing and an interactive web interface for exploratory analysis. The data-processing pipeline loads and harmonizes association summary statistics (recipes are provided for the output of many common tools; Supplementary Note); organizes relationships between traits on the basis of pairwise genetic correlations; and annotates the variants. The web interface provides intuitive visualizations at three levels of granularity: genome-wide summaries at the trait level, and regional (LocusZoom)2 and phenome-wide summaries at the variant level (Supplementary Note and Supplementary Fig. 1). PheWeb links to relevant public databases (for example, the NHGRI-EBI GWAS Catalog7 and ClinVar8) to provide further information on a particular variant. Association results can be queried by trait, variant or gene. To facilitate collaboration, PheWeb visualizations can be shared through the URLs, and we are exploring the opportunity to enable collaborative annotation on each results page. PheWeb can help make meaningful discoveries. To illustrate this potential, Fig. 1 and Supplementary Figs. 2 and 3 illustrate different views of genetic association signals and key variants for bladder cancer in the UK Biobank association results in PheWeb. From the Manhattan plot (Fig. 1a), the strongest association on chromosome 5 is at rs4975616 (P = 9.9 × 10−11), which is located near the CLPTM1L gene. The regional view (Supplementary Fig. 4) highlights that rs4975616 and several of its proxies are in the GWAS Catalog and are associated with various cancers (for example, lung cancer, pancreatic cancer and basal cell carcinoma), thus suggesting a broad role of the locus in cancer susceptibility. The PheWAS view (Supplementary Fig. 5) further supports the association of the locus with a variety of cancers, including cancers of the skin and lung, and it links to multiple PubMed entries supporting the potential role of rs4975616 in lung and other cancers9. Interestingly, for the other top loci (both on chromosome 8), the regional and PheWAS views (rs2976384 in JRK and PSCA, Fig. 1b,c; rs10094872 near MYC, Supplementary Figs. 6 and 7) distinctly convey that these loci are not associated with skin and lung cancers, but are instead associated with gastric and urinary traits such as duodenal ulcer, urinary tract infection and pancreatic cancer. The quantile–quantile plot (Supplementary Fig. 2) shows that the significant associations for bladder cancer are driven by common (minor allele frequency >2%) variants. To help make connections among traits, PheWeb optionally displays pairwise genetic correlations across traits (Supplementary Fig. 3). For example, bladder cancer shows the strongest genetic correlation with cancer of urinary organs (r = 0.84, P = 7.6 × 10−7 from cross-trait linkage-disequilibrium-score regression10) and weaker correlations with tobacco-use disorder (r = 0.39, P = 0.006), an observation consistent with the role of smoking as a major risk factor for bladder cancer11. In our view, describing the spectrum of traits at each locus helps to identify loci that influence disease through similar mechanisms and to expose connections among traits, whether expected or unexpected. Clearly, further research is needed to make conclusive statements regarding the roles of these or any loci, including fine-mapping and colocalization approaches as well as refinement of phenotype definitions for the traits. To this end, PheWeb is designed to allow for gradual updating of result sets as new analyses are completed and refined. Although we believe that making data explorations and large sets of results broadly accessible and intuitive is extremely valuable, doing so does not obviate the need for further analysis, experimentation and biological follow-up. Thus, PheWeb is as useful as the data and results behind it, but we expect that these results will be much more useful when they are accessible. When interpreting the visualizations, users must consider existing biases in the underlying GWAS data, including but not limited to analyses conducted in restricted (ancestry) sets of individuals and suboptimal phenotype definitions. We welcome user feedback and feature requests through the PheWeb GitHub repository (https://github.com/statgen/ pheweb), which helps us enhance and tailor PheWeb to meet the needs of the research community. This repository includes a walk-through demonstration and easy-to-follow instructions for creating a PheWeb for one’s own data. The PheWeb codebase is not exclusive to displaying variant–trait associations, and it can be used to display other types of genome-wide",
+  "authors": "S. G. Gagliano Taliun, Peter Vandehaar, Andrew P. Boughton, R. Welch, D. Taliun, Ellen M. Schmidt, Wei Zhou, J. Nielsen",
+  "venue": "Nature Genetics",
+  "year": 2020,
+  "citations": 226,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-022-05473-8"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PheWeb大规模遗传关联可视化工具，公开可复用资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "PheWeb大规模遗传关联可视化工具，被广泛引用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PheWeb开源GWAS/PheWAS可视化工具",
+  "data": "UKB等大规模GWAS/PheWAS结果",
+  "scenario": "大规模遗传关联结果浏览",
+  "benchmark": "Manhattan、LocusZoom、PheWAS图",
+  "results": "支持在单性状与多性状视图间切换，已用于UKB等数据集",
+  "availability": "开源工具公开(pheweb.org)",
+  "limitations": "仅可视化与共享，不含统计建模功能",
+  "summary": "开发PheWeb开源网页工具用于可视化、导航和共享GWAS与PheWAS结果。整合Manhattan、LocusZoom和PheWAS视图，支持在单性状与多性状间切换。已用于UKB等大型数据集，便于研究者生成和检验复杂性状机制假设。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

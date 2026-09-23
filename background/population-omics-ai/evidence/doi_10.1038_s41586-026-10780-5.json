@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-026-10780-5",
+  "title": "A Bayesian framework for longitudinal EHR and genetic discovery",
+  "url": "https://doi.org/10.1038/s41586-026-10780-5",
+  "abstract": "Electronic health records (EHRs) provide rich longitudinal disease histories, but existing methods for analysing these data typically treat diseases in isolation1 and rarely integrate germline genetics. Here we present ALADYNOULLI, a Bayesian generative framework that jointly models longitudinal EHR diagnoses, age and polygenic risk to recover latent time-varying disease signatures and patient-specific signature loadings; the model is formulated as a mixture of probabilities rather than a probability of a mixture2, correctly accommodating simultaneous and chronic conditions. Applied to three independent biobanks (UK Biobank3, Mass General Brigham4 and All of Us; total n > 683,000) spanning up to 52 years of follow-up and 348 diseases, the model recovers 21 replicable signatures with high cross-cohort composition preservation (median of 80%) and reveals biological subtypes within diagnostic categories (Cohen’s d up to 4.25; P ≤ 1 × 10−8 for 95% of comparisons). Signatures are concordant with established disease biology: carriers of familial hypercholesterolaemia5 enrich in the cardiovascular signature; carriers of clonal haematopoiesis of indeterminate potential6 in the inflammation signature; and a rare variant burden in LDLR, TTN and BRCA2 (refs. 7,8) aligns with disease specificities. A signature-based genome-wide association study identifies 151 genome-wide significant loci including cardiovascular associations missed by single-trait analyses. An explicit likelihood enables inverse probability weighting for selection bias9 while preserving biological signal. For disease prediction, ALADYNOULLI outperforms Pooled Cohort Equation (PCE), PREVENT and Gail at 1-year and 10-year horizons; disease-level (PheCode) predictions complement code-level foundation models such as Delphi-2M (ref. 10). A Bayesian generative framework that integrates longitudinal electronic health records with genetic data to identify latent disease signatures is presented.",
+  "authors": "S. Urbut, Yi Ding, T. Nakao, S. Koyama, A. Misra, Xi-Lin Jiang, Achyutha Harish, L. Gaffney",
+  "venue": "Nature",
+  "year": 2026,
+  "citations": 4,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41586-025-09529-3",
+   "seed"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "贝叶斯生成框架整合纵向EHR与多基因风险，跨三大生物库验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature，贝叶斯生成框架整合纵向EHR与多基因风险，跨三大生物样本库68万人",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "ALADYNOULLI贝叶斯生成框架，联合建模纵向EHR与多基因风险",
+  "data": "3个生物库EHR+遗传数据，n>683,000，随访52年，348种疾病",
+  "scenario": "纵向EHR疾病亚型与遗传发现",
+  "benchmark": "单病种分析、单性状GWAS",
+  "results": "识别21个可复制特征，跨队列组成保留中位80%；亚型Cohen's d达4.25，95%比较P≤1×10−8；GWAS发现151个全基因组显著位点",
+  "availability": "",
+  "limitations": "依赖EHR诊断编码，可能存在记录偏倚；仅纳入三个生物库人群",
+  "summary": "提出ALADYNOULLI贝叶斯生成框架，联合建模纵向EHR诊断、年龄和多基因风险，以概率混合形式处理共病与慢性病。应用于UK Biobank、Mass General Brigham和All of Us共68.3万余人、348种疾病。识别出21个可复制疾病特征并揭示诊断类别内生物学亚型，基于特征的GWAS发现151个位点，包括单性状分析遗漏的心血管关联。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

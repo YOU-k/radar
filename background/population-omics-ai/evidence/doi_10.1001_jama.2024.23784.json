@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1001/jama.2024.23784",
+  "title": "Evaluating Performance and Agreement of Coronary Heart Disease Polygenic Risk Scores.",
+  "url": "https://doi.org/10.1001/jama.2024.23784",
+  "abstract": "Importance Polygenic risk scores (PRSs) for coronary heart disease (CHD) are a growing clinical and commercial reality. Whether existing scores provide similar individual-level assessments of disease susceptibility remains incompletely characterized. Objective To characterize the individual-level agreement of CHD PRSs that perform similarly at the population level. Design, setting, and participants Cross-sectional study of participants from diverse backgrounds enrolled in the All of Us Research Program (AOU), Penn Medicine BioBank (PMBB), and University of California, Los Angeles (UCLA) ATLAS Precision Health Biobank with electronic health record and genotyping data. Exposures Polygenic risk for CHD from published PRSs and new PRSs developed separately from testing samples. Main outcomes and measures PRSs that performed population-level prediction similarly were identified by comparing calibration and discrimination of models of prevalent CHD. Individual-level agreement was tested with intraclass correlation coefficient (ICC) and Light κ. Results A total of 48 PRSs were calculated for 171 095 AOU participants. The mean (SD) age was 56.4 (16.8) years. A total of 104 947 participants (61.3%) were female. A total of 35 590 participants (20.8%) were most genetically similar to an African reference population, 29 801 (17.4%) to an admixed American reference population, 100 493 (58.7%) to a European reference population, and the remaining to Central/South Asian, East Asian, and Middle Eastern reference populations. There were 17 589 participants (10.3%) with and 153 506 participants without (89.7%) CHD. When included in a model of prevalent CHD, 46 scores had practically equivalent Brier scores and area under the receiver operator curves (region of practical equivalence ±0.02). Twenty percent of participants had at least 1 score in both the top and bottom 5% of risk. Continuous agreement of individual predictions was poor (ICC, 0.373 [95% CI, 0.372-0.375]). Light κ, used to evaluate consistency of risk assignment, did not exceed 0.56. Analysis among 41 193 PMBB and 53 092 ATLAS participants yielded different sets of equivalent scores, which also lacked individual-level agreement. Conclusions and relevance CHD PRSs that performed similarly at the population level demonstrated highly variable individual-level estimates of risk. Recognizing that CHD PRSs may generate incongruent individual-level risk estimates, effective clinical implementation will require refined statistical methods to quantify uncertainty and new strategies to communicate this uncertainty to patients and clinicians.",
+  "authors": "Abramowitz SA, Boulier K, Keat K, Cardone KM, Shivakumar M, DePaolo J, Judy R, Bermudez F, Mimouni N, Neylan C, Kim D, Rader DJ, Ritchie MD, Voight BF, Pasaniuc B, Levin MG, Damrauer SM, Penn Medicine BioBank.",
+  "venue": "JAMA",
+  "year": 2025,
+  "citations": 51,
+  "found_by": [
+   "eupmc:electronic health record found"
+  ],
+  "extra": {
+   "journal_watch": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "All of Us等多队列PRS个体一致性评估，跨队列复现",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "All of Us等多队列PRS一致性评估，JAMA，跨队列复现关键",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多PRS校准、区分度与个体一致性评估",
+  "data": "AOU/PMBB/UCLA生物库；171,095人，48个PRS",
+  "scenario": "冠心病PRS个体级一致性",
+  "benchmark": "48个已发表及新建CHD PRS",
+  "results": "群体水平表现相似的PRS在个体层面一致性差（ICC与Light κ低）",
+  "availability": "",
+  "limitations": "横断面设计，未评估纵向预测与临床效用",
+  "summary": "评估冠心病多基因风险评分在群体与个体层面的一致性。在All of Us、Penn Medicine与UCLA生物库中计算48个PRS，比较校准与区分度，并用ICC与Light κ检验个体一致性。发现群体预测表现相似的PRS在个体层面评估差异明显，提示临床使用需谨慎。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

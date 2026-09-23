@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41591-021-01266-0",
+  "title": "Plasma metabolites to profile pathways in noncommunicable disease multimorbidity",
+  "url": "https://doi.org/10.1038/s41591-021-01266-0",
+  "abstract": "Multimorbidity, the simultaneous presence of multiple chronic conditions, is an increasing global health problem and research into its determinants is of high priority. We used baseline untargeted plasma metabolomics profiling covering >1,000 metabolites as a comprehensive readout of human physiology to characterize pathways associated with and across 27 incident noncommunicable diseases (NCDs) assessed using electronic health record hospitalization and cancer registry data from over 11,000 participants (219,415 person years). We identified 420 metabolites shared between at least 2 NCDs, representing 65.5% of all 640 significant metabolite–disease associations. We integrated baseline data on over 50 diverse clinical risk factors and characteristics to identify actionable shared pathways represented by those metabolites. Our study highlights liver and kidney function, lipid and glucose metabolism, low-grade inflammation, surrogates of gut microbial diversity and specific health-related behaviors as antecedents of common NCD multimorbidity with potential for early prevention. We integrated results into an open-access webserver (https://omicscience.org/apps/mwasdisease/) to facilitate future research and meta-analyses. Untargeted metabolomics profiling coupled with analysis of electronic health records in over 11,000 participants in the EPIC-Norfolk cohort reveals shared pathways that contribute to multimorbidity of noncommunicable diseases.",
+  "authors": "M. Pietzner, I. Stewart, Johannes Raffler, K. Khaw, G. Michelotti, G. Kastenmüller, N. Wareham, C. Langenberg",
+  "venue": "Nature Medicine",
+  "year": 2021,
+  "citations": 200,
+  "found_by": [
+   "s2:references:doi:10.1038/s41467-023-36231-7"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "血浆代谢组刻画多病共病通路，EHR关联，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "血浆代谢组刻画多病共病通路，Nature Medicine高影响",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "非靶向血浆代谢组学+EHR关联分析",
+  "data": "EPIC-Norfolk >11,000人，>1,000代谢物，219,415人年",
+  "scenario": "非传染性疾病多病共存",
+  "benchmark": "27种发病NCD及50余项临床风险因素",
+  "results": "640个显著代谢物-疾病关联，420个(65.5%)跨≥2种NCD共享",
+  "availability": "开放访问网络服务器公开",
+  "limitations": "观察性、单一队列，代谢组学单时点",
+  "summary": "用基线非靶向血浆代谢组学刻画27种新发非传染性疾病的多病共存通路。在EPIC-Norfolk中结合EHR住院与癌症登记数据做代谢物-疾病关联并整合50余项临床风险因素。发现420个代谢物在至少两种NCD间共享，涉及肝肾功能、脂糖代谢、低度炎症和肠道微生物等可干预通路，并上线开放网络服务器。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-018-0248-z",
+  "title": "An atlas of genetic associations in UK Biobank",
+  "url": "https://doi.org/10.1038/s41588-018-0248-z",
+  "abstract": "Genome-wide association studies (GWAS) have identified many loci contributing to variation in complex traits, yet the majority of loci that contribute to the heritability of complex traits remain elusive. Large study populations with sufficient statistical power are required to detect the small effect sizes of the yet unidentified genetic variants. However, the analysis of huge cohorts, like UK Biobank, is challenging. Here, we present an atlas of genetic associations for 118 non-binary and 660 binary traits of 452,264 UK Biobank participants of European ancestry. Results are compiled in a publicly accessible database that allows querying genome-wide association results for 9,113,133 genetic variants, as well as downloading GWAS summary statistics for over 30 million imputed genetic variants (>23 billion phenotype–genotype pairs). Our atlas of associations (GeneATLAS, http://geneatlas.roslin.ed.ac.uk) will help researchers to query UK Biobank results in an easy and uniform way without the need to incur high computational costs. GeneATLAS is a web resource that presents genetic association results for 118 non-binary and 660 binary traits using UK Biobank data. This atlas allows researchers to query these results without incurring high computational costs.",
+  "authors": "O. Canela-Xandri, K. Rawlik, A. Tenesa",
+  "venue": "Nature Genetics",
+  "year": 2017,
+  "citations": 604,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-021-03855-y"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 45万人GWAS图谱公开数据库，基准资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB 45万人GWAS图谱公开数据库，领域基础性必读资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "UK Biobank全表型GWAS图谱构建",
+  "data": "UKB 452,264欧洲裔，118连续+660二分类性状，9,113,133变异",
+  "scenario": "遗传关联结果查询",
+  "benchmark": "公开数据库GeneATLAS，30M+插补变异汇总统计",
+  "results": "覆盖>230亿表型-基因型对，可在线查询并下载GWAS汇总统计",
+  "availability": "GeneATLAS公开",
+  "limitations": "仅欧洲裔；主要为UKB单队列；部分性状统计功效有限",
+  "summary": "构建UK Biobank大规模遗传关联图谱以便统一查询。对452,264名欧洲裔参与者的778个性状进行GWAS并汇总为GeneATLAS数据库。提供9,113,133个变异结果及超3000万插补变异汇总统计，降低重复计算成本。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-020-2853-0",
+  "title": "Exome sequencing and characterization of 49,960 individuals in the UK Biobank",
+  "url": "https://doi.org/10.1038/s41586-020-2853-0",
+  "abstract": "The UK Biobank is a prospective study of 502,543 individuals, combining extensive phenotypic and genotypic data with streamlined access for researchers around the world1. Here we describe the release of exome-sequence data for the first 49,960 study participants, revealing approximately 4 million coding variants (of which around 98.6% have a frequency of less than 1%). The data include 198,269 autosomal predicted loss-of-function (LOF) variants, a more than 14-fold increase compared to the imputed sequence. Nearly all genes (more than 97%) had at least one carrier with a LOF variant, and most genes (more than 69%) had at least ten carriers with a LOF variant. We illustrate the power of characterizing LOF variants in this population through association analyses across 1,730 phenotypes. In addition to replicating established associations, we found novel LOF variants with large effects on disease traits, including PIEZO1 on varicose veins, COL6A1 on corneal resistance, MEPE on bone density, and IQGAP2 and GMPR on blood cell traits. We further demonstrate the value of exome sequencing by surveying the prevalence of pathogenic variants of clinical importance, and show that 2% of this population has a medically actionable variant. Furthermore, we characterize the penetrance of cancer in carriers of pathogenic BRCA1 and BRCA2 variants. Exome sequences from the first 49,960 participants highlight the promise of genome sequencing in large population-based studies and are now accessible to the scientific community. Exome sequences from the first 49,960 participants in the UK Biobank highlight the promise of genome sequencing in large population-based studies and are now accessible to the scientific community.",
+  "authors": "C. V. van Hout, I. Tachmazidou, J. Backman, Joshua D. Hoffman, Daren Liu, A. Pandey, C. Gonzaga-Jauregui, S. Khalid",
+  "venue": "Nature",
+  "year": 2020,
+  "citations": 465,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-021-04103-z",
+   "s2:references:doi:10.1038/s41586-021-03855-y"
+  ],
+  "extra": {
+   "pmcid": "PMC7759458"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank外显子测序大规模数据资源，公开可复用。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank外显子测序里程碑资源，被广泛引用，必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "UKB 49,960人全外显子测序及LOF负荷测试",
+  "data": "UKB 49,960人WES，1,730表型，主要为欧洲裔",
+  "scenario": "罕见编码变异与表型关联",
+  "benchmark": "UKB 502,543总体人群代表性比较",
+  "results": "测序者与总体年龄性别 ancestry 相似；哮喘富集16.5% vs 13.5%",
+  "availability": "UKB Data Showcase申请获取",
+  "limitations": "样本以欧洲裔为主；仅约5万人；哮喘富集影响代表性",
+  "summary": "发布并刻画UK Biobank首批49,960人全外显子测序资源。对蛋白改变变异和预测LOF进行注释，并对1,730个表型开展负荷测试。测序人群总体代表UKB，但富集哮喘和增强表型，为罕见编码变异与靶点发现提供资源。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

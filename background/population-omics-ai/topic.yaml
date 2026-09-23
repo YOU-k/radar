@@ -1,0 +1,51 @@
+# 方向定义（人改；其余文件由流水线生成）
+name: 人群健康与多组学 AI
+definition: >
+  大规模人群队列 / 生物样本库（UK Biobank、All of Us、FinnGen、丹麦国家登记等）上的 AI 建模：
+  用电子健康记录（EHR，即诊断/就诊时间序列）、胚系遗传、血浆蛋白组/代谢组/甲基化等多组学，
+  做疾病风险与轨迹的生成式预测、共病结构发现、疾病亚型识别与队列间可复现性。
+include:
+  - 生物样本库级别（≥万人）队列上的深度学习 / 生成式 / 基础模型，如 Delphi、ALADYNOULLI
+  - 人群多组学（蛋白组、代谢组、甲基化）与遗传整合的疾病预测或机制发现，含 pQTL 图谱
+  - 医学 / EHR 基础模型、纵向健康轨迹建模、多病共病结构、跨队列复现
+  - 组学衰老时钟在人群健康结局上的验证（与衰老方向交叉）
+  - 公开的大规模队列数据资源、基准与评测框架
+exclude:
+  - 单中心小样本（<1000 人）的关联研究
+  - 无公开数据也无代码的纯预测模型
+  - 单病种临床评分改良，无方法学新意
+  - 纯影像 AI（除非与组学/EHR 联合）
+keywords: [UK Biobank, biobank, electronic health record, EHR, disease trajectory, disease trajectories,
+  polygenic, population cohort, plasma proteome, proteomic profiling, metabolomics, GWAS, longitudinal,
+  health trajectory, medical foundation model, generative model, All of Us, FinnGen, multi-omics,
+  phenome-wide, comorbidity, multimorbidity, pQTL]
+queries:
+  - "UK Biobank deep learning"
+  - "electronic health records generative model disease trajectories"
+  - "biobank plasma proteomics disease prediction"
+  - "polygenic risk deep learning multi-omics"
+  - "medical foundation model longitudinal health records"
+  - "multimorbidity trajectories population cohort"
+journals: [Nature, Nature Medicine, Nature Genetics, Cell Genomics, Nature Machine Intelligence, Science]
+seeds:
+  - doi:10.1038/s41586-025-09529-3     # Delphi: 生成式 Transformer 学 EHR 预测疾病轨迹（Nature 2025）
+  - doi:10.1038/s41586-026-10780-5     # ALADYNOULLI: 纵向 EHR + 遗传的贝叶斯生成模型（Nature 2026）
+radar_domain: population_omics_ai
+months: 24
+outline:
+  - title: 背景与定义
+  - title: 方法学
+    children:
+      - title: 生成式疾病轨迹模型
+      - title: 多组学与遗传整合
+      - title: 医学 / EHR 基础模型
+  - title: 数据与资源
+  - title: 应用与结果
+  - title: 评测、可复现性与争议
+  - title: 空白与趋势
+budget:
+  rounds: 8
+  max_candidates: 80
+  max_screen: 60
+  max_extract: 40
+  stop_delta: 0.02

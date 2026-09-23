@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-018-06540-3",
+  "title": "Phenome-wide association studies across large population cohorts support drug target validation",
+  "url": "https://doi.org/10.1038/s41467-018-06540-3",
+  "abstract": "Phenome-wide association studies (PheWAS) have been proposed as a possible aid in drug development through elucidating mechanisms of action, identifying alternative indications, or predicting adverse drug events (ADEs). Here, we select 25 single nucleotide polymorphisms (SNPs) linked through genome-wide association studies (GWAS) to 19 candidate drug targets for common disease indications. We interrogate these SNPs by PheWAS in four large cohorts with extensive health information (23andMe, UK Biobank, FINRISK, CHOP) for association with 1683 binary endpoints in up to 697,815 individuals and conduct meta-analyses for 145 mapped disease endpoints. Our analyses replicate 75% of known GWAS associations (P < 0.05) and identify nine study-wide significant novel associations (of 71 with FDR < 0.1). We describe associations that may predict ADEs, e.g., acne, high cholesterol, gout, and gallstones with rs738409 (p.I148M) in PNPLA3 and asthma with rs1990760 (p.T946A) in IFIH1. Our results demonstrate PheWAS as a powerful addition to the toolkit for drug discovery. Testing the association between genetic variants and a range of phenotypes can assist drug development. Here, in a phenome-wide association study in up to 697,815 individuals, Diogo et al. identify genotype–phenotype associations predicting efficacy, alternative indications or adverse drug effects.",
+  "authors": "D. Diogo, C. Tian, C. Franklin, Mervi Alanne-Kinnunen, Michael E. March, C. Spencer, Ciara Vangjeli, M. Weale",
+  "venue": "Nature Communications",
+  "year": 2018,
+  "citations": 157,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-021-03855-y"
+  ],
+  "extra": {
+   "pmcid": "PMC6191429"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨四个大型队列PheWAS药物靶点验证，公开可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨四大队列PheWAS药物靶点验证，方法学与转化价值高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨队列PheWAS+条件分析+共定位",
+  "data": "23andMe、UKB、FINRISK、CHOP，最多697,815人",
+  "scenario": "药物靶点验证",
+  "benchmark": "UKB扩展队列337,199人验证；19个候选靶点",
+  "results": "验证top关联并识别真实多效性，用于预测疗效或安全性信号",
+  "availability": "",
+  "limitations": "PheWAS存在局限；靶点选择基于已有GWAS证据；部分表型覆盖有限",
+  "summary": "检验PheWAS能否在药物发现早期支持靶点验证。选取19个GWAS支持的候选药物靶点，在四个疾病不可知大队列中做跨表型关联并在UKB扩展队列验证。结果显示PheWAS可识别多效性并提示疗效或安全性信号，但仍有局限。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

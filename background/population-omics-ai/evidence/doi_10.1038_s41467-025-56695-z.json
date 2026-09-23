@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-56695-z",
+  "title": "Identification of plasma proteomic markers underlying polygenic risk of type 2 diabetes and related comorbidities.",
+  "url": "https://doi.org/10.1038/s41467-025-56695-z",
+  "abstract": "Genomics can provide insight into the etiology of type 2 diabetes and its comorbidities, but assigning functionality to non-coding variants remains challenging. Polygenic scores, which aggregate variant effects, can uncover mechanisms when paired with molecular data. Here, we test polygenic scores for type 2 diabetes and cardiometabolic comorbidities for associations with 2,922 circulating proteins in the UK Biobank. The genome-wide type 2 diabetes polygenic score associates with 617 proteins, of which 75% also associate with another cardiometabolic score. Partitioned type 2 diabetes scores, which capture distinct disease biology, associate with 342 proteins (20% unique). In this work, we identify key pathways (e.g., complement cascade), potential therapeutic targets (e.g., FAM3D in type 2 diabetes), and biomarkers of diabetic comorbidities (e.g., EFEMP1 and IGFBP2) through causal inference, pathway enrichment, and Cox regression of clinical trial outcomes. Our results are available via an interactive portal ( https://public.cgr.astrazeneca.com/t2d-pgs/v1/ ).",
+  "authors": "Loesch DP, Garg M, Matelska D, Vitsios D, Jiang X, Ritchie SC, Sun BB, Runz H, Whelan CD, Holman RR, Mentz RJ, Moura FA, Wiviott SD, Sabatine MS, Udler MS, Gause-Nilsson IA, Petrovski S, Oscarsson J, Nag A, Paul DS, Inouye M.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 30,
+  "found_by": [
+   "eupmc:biobank plasma proteomics dise"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11876343"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank多基因评分与血浆蛋白组整合，揭示共病机制。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank多基因评分与血浆蛋白组整合，揭示共病机制",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PGS-蛋白质组关联与因果推断",
+  "data": "UKB-PPP蛋白质组、PGS及两项RCT数据",
+  "scenario": "2型糖尿病及并发症机制",
+  "benchmark": "全基因组T2D PGS与分区PGS",
+  "results": "全基因组T2D PGS关联648蛋白，617个复制；分区PGS关联不同蛋白",
+  "availability": "",
+  "limitations": "主要欧洲人群，因果推断依赖假设",
+  "summary": "研究利用UK Biobank Pharma Proteomics Project及两项心血管结局试验，探索2型糖尿病及相关心脏代谢多基因风险如何影响血浆蛋白质组。方法测试全基因组和五个分区T2D PGS及CAD、CKD、BMI PGS与循环蛋白关联，并进行因果推断和心肾结局生存分析。结果发现全基因组T2D PGS关联648个蛋白，其中617个复制，分区PGS可揭示不同生物过程相关蛋白，为T2D并发症机制和潜在靶点提供线索。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

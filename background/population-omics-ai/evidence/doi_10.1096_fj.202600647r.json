@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1096/fj.202600647r",
+  "title": "Explainable Plasma Proteomics–Based Machine Learning for Osteoporosis Diagnosis, Prognosis, and Protein Biomarker Discovery in the UK Biobank",
+  "url": "https://doi.org/10.1096/fj.202600647R",
+  "abstract": "Osteoporosis (OP) is often underdiagnosed, highlighting the need for tools that can both detect existing disease and predict future risk; large‐scale plasma proteomics combined with explainable machine learning enables integrated diagnostic and prognostic modeling while prioritizing clinically relevant protein markers. This study aims to develop and validate an explainable plasma proteomics machine‐learning framework for osteoporosis diagnosis, future risk prediction, and biomarker discovery. We further tested whether a combined marker panel could distinguish normal, prevalent OP, and future incident OP states from baseline samples. Using UK Biobank plasma proteomic data, we established SPX‐OP, which separately models prevalent OP and incident OP based on Extreme Gradient Boosting (XGBoost) and SHapley Additive exPlanations (SHAP), and then evaluates whether the union of diagnostic and prognostic markers supports integrated baseline stratification. In the experiments, both the diagnostic and prognostic XGBoost models showed robust discrimination for osteoporosis status and future risk, respectively. SHAP‐derived protein markers, including FSHB, ADIPOQ, SOST, COL9A1, and CHAD, were linked to osteoporosis and enriched in bone‐related pathways involving bone development and remodeling, extracellular matrix organization, and inflammatory processes. Using only these SHAP‐selected protein markers, the XGBoost model outperformed the full‐proteome models and provided robust, simultaneous diagnostic and prognostic prediction of osteoporosis. In summary, this work transforms high‐dimensional proteomic data into interpretable marker sets, paving the way for improved risk stratification and further validation of plasma protein biomarkers in osteoporosis.",
+  "authors": "Wen-Xiang Zhang, Wen-Jing Zhang, Hanwen Cheng, Wei-Jie Gong, Yuhui Kou, Bao-Guo Jiang",
+  "venue": "The FASEB Journal",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41467-023-36231-7"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB血浆蛋白组可解释ML做骨质疏松诊断预后，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank血浆蛋白组+可解释ML做骨质疏松诊断预后，契合方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "XGBoost+SHAP可解释血浆蛋白组学",
+  "data": "UK Biobank血浆蛋白组学数据",
+  "scenario": "骨质疏松诊断与预后",
+  "benchmark": "全蛋白组模型对比",
+  "results": "SHAP筛选标志物(FSHB、ADIPOQ、SOST、COL9A1、CHAD)模型优于全蛋白组",
+  "availability": "",
+  "limitations": "全文未获取，外部验证与样本规模细节不明",
+  "summary": "开发可解释血浆蛋白组学机器学习框架用于骨质疏松诊断、风险预测和标志物发现。基于UKB蛋白组数据用XGBoost建模并用SHAP解释，构建SPX-OP模型。发现少数SHAP筛选蛋白标志物即可区分正常、现患与未来发病，且优于全蛋白组模型。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

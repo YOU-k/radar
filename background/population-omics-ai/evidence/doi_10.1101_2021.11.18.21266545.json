@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2021.11.18.21266545",
+  "title": "Global biobank analyses provide lessons for computing polygenic risk scores across diverse cohorts",
+  "url": "https://doi.org/10.1101/2021.11.18.21266545",
+  "abstract": "With the increasing availability of biobank-scale datasets that incorporate both genomic data and electronic health records, many associations between genetic variants and phenotypes of interest have been discovered. Polygenic risk scores (PRS), which are being widely explored in precision medicine, use the results of association studies to predict the genetic component of disease risk by accumulating risk alleles weighted by their effect sizes. However, limited studies have thoroughly investigated best practices for PRS in global populations across different diseases. In this study, we utilize data from the Global-Biobank Meta-analysis Initiative (GBMI), which consists of individuals from diverse ancestries and across continents, to explore methodological considerations and PRS prediction performance in 9 different biobanks for 14 disease endpoints. Specifically, we constructed PRS using heuristic (pruning and thresholding, P+T) and Bayesian (PRS-CS) methods. We found that the genetic architecture, such as SNP-based heritability and polygenicity, varied greatly among endpoints. For both PRS construction methods, using a European ancestry LD reference panel resulted in comparable or higher prediction accuracy compared to several other non-European based panels; this is largely attributable to European descent populations still comprising the majority of GBMI participants. PRS-CS overall outperformed the classic P+T method, especially for endpoints with higher SNP-based heritability. For example, substantial improvements are observed in East-Asian ancestry (EAS) using PRS-CS compared to P+T for heart failure (HF) and chronic obstructive pulmonary disease (COPD). Notably, prediction accuracy is heterogeneous across endpoints, biobanks, and ancestries, especially for asthma which has known variation in disease prevalence across global populations. Overall, we provide lessons for PRS construction, evaluation, and interpretation using the GBMI and highlight the importance of best practices for PRS in the biobank-scale genomics era.",
+  "authors": "Y. Wang, S. Namba, E. Lopera-Maya, S. Kerminen, K. Tsuo, K. Lall, M. Kanai, W. Zhou",
+  "venue": "medRxiv",
+  "year": 2021,
+  "citations": 19,
+  "found_by": [
+   "s2:references:doi:10.1101/2022.06.16.22276246"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "GBMI跨队列PRS最佳实践，生物样本库级方法学基准。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "GBMI跨队列PRS最佳实践，全球生物样本库基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "P+T与PRS-CS多基因评分构建比较",
+  "data": "GBMI 9个生物样本库，14个疾病终点",
+  "scenario": "跨祖源PRS预测性能评估",
+  "benchmark": "不同LD参考面板与P+T/PRS-CS方法",
+  "results": "PRS-CS总体优于P+T；欧洲LD面板预测精度相当或更高",
+  "availability": "",
+  "limitations": "GBMI仍以欧洲祖源为主，非欧面板样本不足",
+  "summary": "研究利用全球生物样本库联盟(GBMI)数据，系统评估跨祖源多基因风险评分的构建方法与预测性能。方法上比较启发式P+T与贝叶斯PRS-CS，并测试不同LD参考面板在9个生物样本库14个疾病终点中的表现。发现PRS-CS总体优于P+T，且欧洲LD面板预测精度相当或更高，主要因GBMI参与者仍以欧洲祖源为主。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

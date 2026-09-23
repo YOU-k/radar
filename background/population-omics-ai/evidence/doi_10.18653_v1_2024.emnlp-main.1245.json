@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.18653/v1/2024.emnlp-main.1245",
+  "title": "EHRAgent: Code Empowers Large Language Models for Few-shot Complex Tabular Reasoning on Electronic Health Records.",
+  "url": "https://doi.org/10.18653/v1/2024.emnlp-main.1245",
+  "abstract": "Clinicians often rely on data engineers to retrieve complex patient information from electronic health record (EHR) systems, a process that is both inefficient and time-consuming. We propose EHRAgent, a large language model (LLM) agent empowered with accumulative domain knowledge and robust coding capability. EHRAgent enables autonomous code generation and execution to facilitate clinicians in directly interacting with EHRs using natural language. Specifically, we formulate a multi-tabular reasoning task based on EHRs as a tool-use planning process, efficiently decomposing a complex task into a sequence of manageable actions with external toolsets. We first inject relevant medical information to enable EHRAgent to effectively reason about the given query, identifying and extracting the required records from the appropriate tables. By integrating interactive coding and execution feedback, EHRAgent then effectively learns from error messages and iteratively improves its originally generated code. Experiments on three real-world EHR datasets show that EHRAgent outperforms the strongest baseline by up to 29.6% in success rate, verifying its strong capacity to tackle complex clinical tasks with minimal demonstrations.",
+  "authors": "Shi W, Xu R, Zhuang Y, Yu Y, Zhang J, Wu H, Zhu Y, Ho J, Yang C, Wang MD.",
+  "venue": "Proceedings of the Conference on Empirical Methods in Natural Language Processing. Conference on Empirical Methods in Natural Language Processing",
+  "year": 2024,
+  "citations": 15,
+  "found_by": [
+   "eupmc:electronic health record found"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11867733",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "EHR上的LLM智能体代码推理，属医学EHR基础模型方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "LLM智能体自主代码查询EHR，方法学新，EHR基础模型方向有传播价值。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LLM智能体自主代码生成与执行(EHRAgent)",
+  "data": "三个真实世界EHR数据集，多表表格推理",
+  "scenario": "临床自然语言查询EHR复杂推理",
+  "benchmark": "最强基线模型",
+  "results": "成功率最高超最强基线29.6%，少样本即可完成复杂临床任务",
+  "availability": "",
+  "limitations": "依赖代码执行反馈迭代，复杂任务可能需多轮；仅三数据集验证",
+  "summary": "为解决临床医生检索EHR信息低效问题，提出EHRAgent。将多表EHR推理形式化为工具使用规划，注入医学信息并借助交互式代码执行反馈迭代改进生成代码。在三个真实EHR数据集上成功率超最强基线29.6%，少样本即可处理复杂临床任务。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 5,
+ "added_on": "2026-09-23"
+}

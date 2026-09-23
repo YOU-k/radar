@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1140/epjs/s11734-026-02571-w",
+  "title": "From data to knowledge: artificial intelligence methods for studying comorbidity in electronic health records",
+  "url": "https://doi.org/10.1140/epjs/s11734-026-02571-w",
+  "abstract": "",
+  "authors": "Daria Lukianenko, Ainur Ragimova, Anna K. Mukhorina, Tatiana Tyukina, D. Zakharov",
+  "venue": "The European Physical Journal Special Topics",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "EHR共病结构AI方法综述，契合共病发现方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHR共病AI方法综述，切合共病结构方向。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "AI方法综述（电子健康记录共病研究）",
+  "data": "电子健康记录文献综述",
+  "scenario": "共病研究",
+  "benchmark": "",
+  "results": "",
+  "availability": "",
+  "limitations": "仅摘要信息，无具体方法细节",
+  "summary": "综述了用于研究电子健康记录中共病的AI方法。文章从数据到知识的角度，梳理电子健康记录中共病研究的AI方法。因仅有标题信息，具体方法与结果不详。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-022-05420-7",
+  "title": "Mono- and biallelic variant effects on disease at biobank scale",
+  "url": "https://doi.org/10.1038/s41586-022-05420-7",
+  "abstract": "Identifying causal factors for Mendelian and common diseases is an ongoing challenge in medical genetics^ 1 . Population bottleneck events, such as those that occurred in the history of the Finnish population, enrich some homozygous variants to higher frequencies, which facilitates the identification of variants that cause diseases with recessive inheritance^ 2 , 3 . Here we examine the homozygous and heterozygous effects of 44,370 coding variants on 2,444 disease phenotypes using data from the nationwide electronic health records of 176,899 Finnish individuals. We find associations for homozygous genotypes across a broad spectrum of phenotypes, including known associations with retinal dystrophy and novel associations with adult-onset cataract and female infertility. Of the recessive disease associations that we identify, 13 out of 20 would have been missed by the additive model that is typically used in genome-wide association studies. We use these results to find many known Mendelian variants whose inheritance cannot be adequately described by a conventional definition of dominant or recessive. In particular, we find variants that are known to cause diseases with recessive inheritance with significant heterozygous phenotypic effects. Similarly, we find presumed benign variants with disease effects. Our results show how biobanks, particularly in founder populations, can broaden our understanding of complex dosage effects of Mendelian variants on disease. An analysis of biobank data from the FinnGen project examines dosage effects of genetic variants on disease, andidentifies a benefit when considering more complex inheritance in the genetics of common as well as Mendelian diseases.",
+  "authors": "H. Heyne, J. Karjalainen, K. Karczewski, S. Lemmelä, W. Zhou, A. Havulinna, M. Kurki, H. Rehm",
+  "venue": "Nature",
+  "year": 2023,
+  "citations": 83,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-022-05473-8"
+  ],
+  "extra": {
+   "pmcid": "PMC9849130"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "FinnGen全国EHR双等位基因变异疾病效应，生物样本库规模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "FinnGen生物样本库变异-疾病关联，全国EHR规模",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "加性GWAS+隐性关联扫描编码变异",
+  "data": "FinnGen电子健康记录，176,899芬兰人，2,444疾病表型",
+  "scenario": "人群疾病遗传关联研究",
+  "benchmark": "标准加性GWAS模型",
+  "results": "系统搜索隐性关联，揭示单等位与双等位变异对疾病的差异化效应，芬兰人群纯合子富集提升隐性致病变异检出",
+  "availability": "",
+  "limitations": "仅限芬兰人群，编码变异为主，非编码及结构变异未覆盖",
+  "summary": "本研究利用FinnGen项目176,899名芬兰人的全国电子健康记录，系统分析了编码变异对2,444种疾病表型的单等位和双等位效应。在标准加性GWAS基础上，额外进行隐性关联扫描，以评估隐性模型在GWAS中的增益。研究发现芬兰人群瓶颈效应导致的纯合子富集可提升隐性致病变异的统计检出效力，并揭示同一变异在杂合与纯合状态下可呈现不同疾病表型，提示现有孟德尔遗传命名需更精确描述。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

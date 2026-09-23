@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41597-023-01949-y",
+  "title": "Quality control and removal of technical variation of NMR metabolic biomarker data in ~120,000 UK Biobank participants",
+  "url": "https://doi.org/10.1038/s41597-023-01949-y",
+  "abstract": "Metabolic biomarker data quantified by nuclear magnetic resonance (NMR) spectroscopy in approximately 121,000 UK Biobank participants has recently been released as a community resource, comprising absolute concentrations and ratios of 249 circulating metabolites, lipids, and lipoprotein sub-fractions. Here we identify and characterise additional sources of unwanted technical variation influencing individual biomarkers in the data available to download from UK Biobank. These included sample preparation time, shipping plate well, spectrometer batch effects, drift over time within spectrometer, and outlier shipping plates. We developed a procedure for removing this unwanted technical variation, and demonstrate that it increases signal for genetic and epidemiological studies of the NMR metabolic biomarker data in UK Biobank. We subsequently developed an R package, ukbnmr, which we make available to the wider research community to enhance the utility of the UK Biobank NMR metabolic biomarker data and to facilitate rapid analysis.",
+  "authors": "S. Ritchie, P. Surendran, Savita Karthikeyan, Samuel A. Lambert, T. Bolton, L. Pennells, J. Danesh, E. di Angelantonio",
+  "venue": "Scientific Data",
+  "year": 2021,
+  "citations": 159,
+  "found_by": [
+   "s2:references:doi:10.1038/s41467-023-36231-7"
+  ],
+  "extra": {
+   "pmcid": "PMC9887579"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "12万人NMR代谢组QC方法，公开数据资源。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "12万人NMR代谢组QC资源，人群多组学基础数据必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "NMR代谢标志物QC与去技术变异",
+  "data": "UKB约121,657人，168标志物+81比值，3,169盲重复",
+  "scenario": "NMR代谢组数据清洗",
+  "benchmark": "原始Nightingale数据；盲重复CV%和R²",
+  "results": "多数标志物技术因素中位解释1.5%；盲重复中位CV 4.55%、R² 0.928",
+  "availability": "R包ukbnmr公开",
+  "limitations": "仅覆盖约三分之一UKB参与者；基于已校准浓度非原始谱",
+  "summary": "针对UK Biobank NMR代谢标志物数据建立额外质控流程以去除技术变异。分析运输批次、板、孔位、机器人、光谱仪等协变量，并在3,169个盲重复中评估。发布ukbnmr R包，显著降低技术方差并提升数据可重复性。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

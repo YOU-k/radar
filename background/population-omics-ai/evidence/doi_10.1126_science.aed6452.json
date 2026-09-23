@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/science.aed6452",
+  "title": "Longitudinal dynamics of gene expression and metabolomics in an aging population cohort.",
+  "url": "https://doi.org/10.1126/science.aed6452",
+  "abstract": "Multiomic profiling provides a comprehensive physiological overview at the molecular level, but understanding of its spatiotemporal dynamics remains limited in human populations. We profiled longitudinal whole-blood gene expression and metabolite levels in 335 females over 8 years. Levels of 5061 genes and 181 metabolites changed over time, with individual trajectories often diverging from population-level trends. Longitudinally variable genes showed cell type specificity and enrichment for aging-relevant pathways, including cardiometabolic and neurodegenerative disorders. Longitudinal trajectories were further shaped by genetics, circadian rhythm, seasonality, and environmental pollutant exposures. Integrative analyses revealed extensive static and time-variable cross-omic connectivity. Longitudinal profiling offers insight into the temporal evolution of age-related conditions at the molecular level, and understanding individual variation within these longitudinal patterns will be essential for future precision medicine approaches.",
+  "authors": "J. E. El-sayed Moustafa, Anna Ramisch, Yasrab N. Raza, G. Leday, Yunlong Jiao, Dong-Meng Wang, Michael Stevens, A. Roberts",
+  "venue": "Science",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41588-020-00757-z"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "纵向多组学衰老队列，但样本335人偏小，仍具轨迹价值",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Science队列纵向转录组代谢组衰老动态，代表转折",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "纵向多组学轨迹与整合分析",
+  "data": "335名女性，8年纵向全血基因表达和代谢组",
+  "scenario": "衰老纵向分子动态",
+  "benchmark": "群体水平趋势与个体轨迹比较",
+  "results": "5,061个基因和181个代谢物随时间变化；受遗传、昼夜节律、季节和污染物影响",
+  "availability": "",
+  "limitations": "仅335名女性；样本量和性别代表性有限；随访8年",
+  "summary": "刻画人群队列中基因表达和代谢组的纵向衰老动态。对335名女性8年全血样本进行纵向多组学分析，并与遗传、昼夜节律、季节和暴露因素关联。发现5,061个基因和181个代谢物随时间变化，个体轨迹常偏离群体趋势，并揭示跨组学动态连接。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}

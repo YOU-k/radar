@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43588-026-01026-5",
+  "title": "Longitudinal alignments and syntheses of multimodal clinical data for personalized medicine with the PULSE framework",
+  "url": "https://doi.org/10.1038/s43588-026-01026-5",
+  "abstract": "Multimodal models capable of imputing diverse data used in single-cell biology studies provide potential foundational opportunities in clinical practice. However, patient data uniquely comprise longitudinal mosaic measurements that reflect underlying physiological dynamics and exhibit temporal covariation, demanding a specialized approach. Here we present Patient Unified Longitudinal Signal Engine (PULSE), a longitudinal self-supervised framework that explicitly encodes personalized past states (historical paired modalities) to reconstruct full profiles from subsequent unpaired measurements, thus enhancing current visit multimodal alignment and generation. Applied to the UK Biobank, PULSE accurately generates metabolomic profiles and proteomic profiles from sparse routine blood tests. Compared with the ground truth metabolomic data (251 biomarkers), PULSE-generated profiles outperformed all benchmark methods. Furthermore, the framework accommodates incorporation of retinal images, electronic health records and blood markers with disease prediction: models trained on the generated proteomic profiles achieved areas under the curve of 0.72–0.83 for six common diseases, comparable to that using ground-truth proteomic data. The PULSE framework demonstrates that cross-modal alignment captures the continuous spectrum of disease physiology and extracts robust features that transcend the limitations of traditional binary case–controls. PULSE is an AI framework that uses patients’ longitudinal electronic health records to accurately generate within- and cross-modal data from routine clinical laboratory tests, enabling cost-effective precision medicine across diverse biomedical settings.",
+  "authors": "Wei Wu, Gen Li, Kai Wang, Hui Xu, Hao-Di Xiao, Changxi Hu, Sian Liu, Cheng Tang",
+  "venue": "Nature Computational Science",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB多模态纵向自监督框架，生成式对齐建模。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Comput Sci纵向多模态自监督框架，EHR基础模型方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PULSE纵向自监督多模态框架",
+  "data": "UK Biobank纵向多模态临床数据",
+  "scenario": "个性化医学多模态补全与预测",
+  "benchmark": "所有基准方法；真实蛋白质组数据",
+  "results": "生成代谢组251标志物优于基准；生成蛋白质组预测6种常见病AUC 0.72–0.83，接近真实蛋白质组",
+  "availability": "",
+  "limitations": "基于UK Biobank；生成数据用于临床决策仍需验证",
+  "summary": "提出PULSE，一种纵向自监督框架，显式编码个体过去状态，从后续未配对测量重建完整多模态谱。应用于UK Biobank，从稀疏常规血检生成代谢组和蛋白质组谱，并可纳入视网膜图像、EHR和血液标志物进行疾病预测。生成代谢组优于所有基准方法，生成蛋白质组对6种常见病AUC达0.72–0.83，接近真实蛋白质组数据。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.16273",
+  "title": "Foresight-England: Development of a National-Scale Generative AI Model of Electronic Health Records for Medical Event Prediction across the COVID-19 Pandemic",
+  "url": "https://arxiv.org/abs/2608.16273",
+  "abstract": "Foresight-England (Foresight-E) is the first national-scale generative foundation model of electronic health records (EHRs), developed as a research pilot strictly for COVID-19 research. We evaluated its ability to model the direct and indirect effects of the pandemic. Trained from scratch entirely within the NHS England Secure Data Environment, Foresight-E is a 243-million-parameter transformer decoder. It was trained and evaluated on de-identified, longitudinal EHRs of approximately 61 million individuals, integrating primary/secondary care, death registrations, and COVID-19 data. Training and validation used a 90% subset (54.9 million) spanning November 2018 to December 2022; the remaining 10% (6.1 million) was held out for evaluation. Foresight-E models patient timelines autoregressively, predicting the next medical event given their prior history. At inference, it operates zero-shot, predicting any concept in its ~40,000-code vocabulary without task-specific training. Our tokenisation scheme retains the clinical granularity of ICD-10, OPCS-4, and SNOMED CT codes, jointly representing absolute and relative timing. We designed an evaluation framework for 30-day COVID-19 hospitalisation and mortality, including subgroup analyses by demographic factors and vaccination status. To assess generalisation to unseen future data and the pandemic's indirect effects, we tested the model on medical events from 2023 (beyond its training period), benchmarking against logistic regression and XGBoost. As detailed in the Project Status section, NHS England has paused access to data for the Foresight-E project, meaning quantitative results are currently unavailable. Instead, we share our strategy for tokenisation, architecture, training, inference, and evaluation as a methodological template and case study in the challenges of building population-scale EHR foundation models.",
+  "authors": "S. Ellershaw, Christopher Tomlinson, Zeljko Kraljevic, Spiros C. Denaxas, Harry Hemingway, C. Sudlow, Angela M. Wood, A. Shah",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "NHS全国6100万人EHR生成式基础模型，事件预测。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "NHS 6100万人EHR生成式基础模型，国家级规模转折点",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "243M参数Transformer EHR生成式基础模型",
+  "data": "NHS England约6100万人纵向EHR，ICD-10/OPCS-4/SNOMED CT约4万码",
+  "scenario": "COVID-19住院与死亡预测",
+  "benchmark": "逻辑回归、XGBoost",
+  "results": "因NHS England暂停数据访问，定量结果暂不可得；设计30天COVID-19住院与死亡评估，用Brier、AUROC、AUPRC，并按年龄、族裔、性别、疫苗接种分层",
+  "availability": "",
+  "limitations": "数据访问被暂停，无定量结果；仅限COVID-19研究试点",
+  "summary": "研究开发了首个国家级EHR生成式基础模型Foresight-England用于预测医疗事件。模型为243M参数Transformer解码器，在NHS安全环境中基于约6100万人纵向EHR自回归训练，零样本预测约4万码医学词表事件。因数据访问暂停，定量结果暂缺，论文转为分享分词、架构、训练与评估方法模板。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

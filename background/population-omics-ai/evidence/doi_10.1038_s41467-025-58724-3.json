@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-58724-3",
+  "title": "UKB-MDRMF: a multi-disease risk and multimorbidity framework based on UK biobank data.",
+  "url": "https://doi.org/10.1038/s41467-025-58724-3",
+  "abstract": "The rapid accumulation of biomedical cohort data presents opportunities to explore disease mechanisms, risk factors, and prognostic markers. However, current research often has a narrow focus, limiting the exploration of risk factors and inter-disease correlations. Additionally, fragmented processes and time constraints can hinder comprehensive analysis of the disease landscape. Our work addresses these challenges by integrating multimodal data from the UK Biobank, including basic, lifestyle, measurement, environment, genetic, and imaging data. We propose UKB-MDRMF, a comprehensive framework for predicting and assessing health risks across 1560 diseases. Unlike single disease models, UKB-MDRMF incorporates multimorbidity mechanisms, resulting in superior predictive accuracy, with all disease types showing improved performance in risk assessment. By jointly predicting and assessing multiple diseases, UKB-MDRMF uncovers shared and distinctive connections among risk factors and diseases, offering a broader perspective on health and multimorbidity mechanisms.",
+  "authors": "Jiang Y, Zhao B, Wang X, Tang B, Peng H, Luo Z, Shen Y, Wang Z, Jiang Z, Wang J, Ye J, Wang X, Zhu H.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 9,
+  "found_by": [
+   "eupmc:multimorbidity comorbidity net"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12015417"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB多模态多病风险框架，覆盖1560疾病，方法学新意明确。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB多模态多病风险框架，1560病种，方法学新意",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多模态多疾病风险与共病框架",
+  "data": "UKB六类多模态数据；1560种疾病",
+  "scenario": "个体多疾病预测与共病风险评估",
+  "benchmark": "单类别疾病风险评估",
+  "results": "覆盖1560种疾病的联合预测优于单类别评估；揭示风险因素-疾病及共病关联",
+  "availability": "交互平台公开；代码未提",
+  "limitations": "依赖UKB人群；缺失值插补；遗传/影像覆盖不全",
+  "summary": "研究提出UKB-MDRMF多疾病风险与共病框架。整合UKB基本、生活方式、测量、环境、遗传和影像六类数据，经标准化预处理后联合建模1560种疾病。模型优于单类别评估，揭示风险因素与疾病及共病关联，并提供交互平台展示预测、变量重要性和共病结果。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

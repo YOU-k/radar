@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-022-05473-8",
+  "title": "FinnGen provides genetic insights from a well-phenotyped isolated population",
+  "url": "https://doi.org/10.1038/s41586-022-05473-8",
+  "abstract": "Genome-wide association studies of individuals from an isolated population (data from the Finnish biobank study FinnGen) and consequent meta-analyses facilitate the identification of previously unknown coding variant associations for both rare and common diseases. Population isolates such as those in Finland benefit genetic research because deleterious alleles are often concentrated on a small number of low-frequency variants (0.1% ≤ minor allele frequency < 5%). These variants survived the founding bottleneck rather than being distributed over a large number of ultrarare variants. Although this effect is well established in Mendelian genetics, its value in common disease genetics is less explored^ 1 , 2 . FinnGen aims to study the genome and national health register data of 500,000 Finnish individuals. Given the relatively high median age of participants (63 years) and the substantial fraction of hospital-based recruitment, FinnGen is enriched for disease end points. Here we analyse data from 224,737 participants from FinnGen and study 15 diseases that have previously been investigated in large genome-wide association studies (GWASs). We also include meta-analyses of biobank data from Estonia and the United Kingdom. We identified 30 new associations, primarily low-frequency variants, enriched in the Finnish population. A GWAS of 1,932 diseases also identified 2,733 genome-wide significant associations (893 phenome-wide significant (PWS), P  < 2.6 × 10^–11) at 2,496 (771 PWS) independent loci with 807 (247 PWS) end points. Among these, fine-mapping implicated 148 (73 PWS) coding variants associated with 83 (42 PWS) end points. Moreover, 91 (47 PWS) had an allele frequency of <5% in non-Finnish European individuals, of which 62 (32 PWS) were enriched by more than twofold in Finland. These findings demonstrate the power of bottlenecked populations to find entry points into the biology of common diseases through low-frequency, high impact variants.",
+  "authors": "M. Kurki, J. Karjalainen, P. Palta, Timo P. Sipilä, K. Kristiansson, K. Donner, M. Reeve, H. Laivuori",
+  "venue": "Nature",
+  "year": 2023,
+  "citations": 3781,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2024.10.045"
+  ],
+  "extra": {
+   "pmcid": "PMC9849126"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "FinnGen大队列遗传资源，符合生物样本库方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "FinnGen旗舰队列资源，遗传发现里程碑，必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "全国登记表型+插补基因型GWAS与精细定位",
+  "data": "FinnGen R5，224,737人，1,932个终点，2,800+表型",
+  "scenario": "隔离人群疾病遗传发现",
+  "benchmark": "15种既往常见病GWAS、其他欧洲人群",
+  "results": "隔离人群低频有害等位更常见；在既往研究充分疾病中发现新低频变异关联；精细定位可识别低频可能因果编码变异",
+  "availability": "",
+  "limitations": "芬兰隔离人群遗传结构特殊，结果外推至其他人群受限",
+  "summary": "FinnGen整合9个芬兰生物库样本与全国健康登记数据，构建大规模疾病遗传资源。基于224,737人插补基因型和1,932个终点进行GWAS及统计精细定位。发现芬兰隔离人群富集低频有害等位，可在既往充分研究疾病中识别新的低频变异关联和可能因果编码变异。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

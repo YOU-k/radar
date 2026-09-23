@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-024-01898-1",
+  "title": "Disease prediction with multi-omics and biomarkers empowers case–control genetic discoveries in the UK Biobank",
+  "url": "https://doi.org/10.1038/s41588-024-01898-1",
+  "abstract": "The emergence of biobank-level datasets offers new opportunities to discover novel biomarkers and develop predictive algorithms for human disease. Here, we present an ensemble machine-learning framework (machine learning with phenotype associations, MILTON) utilizing a range of biomarkers to predict 3,213 diseases in the UK Biobank. Leveraging the UK Biobank’s longitudinal health record data, MILTON predicts incident disease cases undiagnosed at time of recruitment, largely outperforming available polygenic risk scores. We further demonstrate the utility of MILTON in augmenting genetic association analyses in a phenome-wide association study of 484,230 genome-sequenced samples, along with 46,327 samples with matched plasma proteomics data. This resulted in improved signals for 88 known (P < 1 × 10−8) gene–disease relationships alongside 182 gene–disease relationships that did not achieve genome-wide significance in the nonaugmented baseline cohorts. We validated these discoveries in the FinnGen biobank alongside two orthogonal machine-learning methods built for gene–disease prioritization. All extracted gene–disease associations and incident disease predictive biomarkers are publicly available (http://milton.public.cgr.astrazeneca.com). MILTON uses phenotype information in the UK Biobank to identify clinical biomarkers and other quantitative traits that characterize diseases. It then constructs augmented cohorts by predicting undiagnosed individuals, improving power to discover gene–disease relationships.",
+  "authors": "M. Garg, M. Karpinski, D. Matelska, Lawrence Middleton, O. Burren, F. Hu, Eleanor Wheeler, Katherine R. Smith",
+  "venue": "Nature Genetics",
+  "year": 2024,
+  "citations": 97,
+  "found_by": [
+   "s2:references:doi:10.1038/s41586-025-09529-3"
+  ],
+  "extra": {
+   "pmcid": "PMC11390475"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多组学集成预测3213种疾病并增强GWAS发现，UKB大队列",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Genetics，MILTON多组学集成预测3213种疾病并增强GWAS发现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "MILTON机器学习用生物标志物预测疾病并扩充病例",
+  "data": "UKB 484,230基因组、3,213表型、血浆蛋白等",
+  "scenario": "疾病风险预测与PheWAS",
+  "benchmark": "基线病例对照PheWAS及传统风险工具",
+  "results": "预测多种疾病高准确度；扩充后PheWAS发现多个基线未显著的新基因-表型关联",
+  "availability": "UKB需申请；代码未提",
+  "limitations": "依赖UKB、诊断编码误分类、时间滞后与缺失诊断影响",
+  "summary": "提出MILTON，用常规临床生物标志物、血浆蛋白和定量性状预测3,213种疾病状态。先学习已诊断病例的疾病特异标志物特征，再在对照中识别隐性病例并扩充病例队列。扩充后PheWAS发现多个基线未达显著的新基因-表型关联，证明可增强病例对照遗传发现。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

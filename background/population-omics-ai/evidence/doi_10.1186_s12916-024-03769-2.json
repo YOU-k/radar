@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s12916-024-03769-2",
+  "title": "Estimation of physiological aging based on routine clinical biomarkers: a prospective cohort study in elderly Chinese and the UK Biobank.",
+  "url": "https://doi.org/10.1186/s12916-024-03769-2",
+  "abstract": "Background Chronological age (CA) does not reflect individual variation in the aging process. However, existing biological age predictors are mostly based on European populations and overlook the widespread nonlinear effects of clinical biomarkers. Methods Using data from the prospective Dongfeng-Tongji (DFTJ) cohort of elderly Chinese, we propose a physiological aging index (PAI) based on 36 routine clinical biomarkers to measure aging progress. We first determined the optimal level of each biomarker by restricted cubic spline Cox models. For biomarkers with a U-shaped relationship with mortality, we derived new variables to model their distinct effects below and above the optimal levels. We defined PAI as a weighted sum of variables predictive of mortality selected by a LASSO Cox model. To measure aging acceleration, we defined ΔPAI as the residual of PAI after regressing on CA. We evaluated the predictive value of ΔPAI on cardiovascular diseases (CVD) in the DFTJ cohort, as well as nine major chronic diseases in the UK Biobank (UKB). Results In the DFTJ training set (n = 12,769, median follow-up: 10.38 years), we identified 25 biomarkers with significant nonlinear associations with mortality, of which 11 showed insignificant linear associations. By incorporating nonlinear effects, we selected CA and 17 clinical biomarkers to calculate PAI. In the DFTJ testing set (n = 15,904, 5.87 years), PAI predict mortality with a concordance index (C-index) of 0.816 (95% confidence interval, [0.796, 0.837]), better than CA (C-index = 0.771 [0.755, 0.788]) and PhenoAge (0.799 [0.784, 0.814]). ΔPAI was predictive of incident CVD and its subtypes, independent of traditional risk factors. In the external validation set of UKB (n = 296,931, 12.80 years), PAI achieved a C-index of 0.749 (0.746, 0.752) to predict mortality, remaining better than CA (0.706 [0.702, 0.709]) and PhenoAge (0.743 [0.739, 0.746]). In both DFTJ and UKB, PAI calibrated better than PhenoAge when comparing the predicted and observed survival probabilities. Furthermore, ΔPAI outperformed any single biomarker to predict incident risks of eight age-related chronic diseases. Conclusions Our results highlight the potential of PAI and ΔPAI as integrative biomarkers to evaluate aging acceleration and facilitate the development of targeted intervention strategies for healthy aging.",
+  "authors": "Zhu Z, Lyu J, Hao X, Guo H, Zhang X, He M, Cheng X, Cheng S, Wang C.",
+  "venue": "BMC medicine",
+  "year": 2024,
+  "citations": 11,
+  "found_by": [
+   "eupmc:proteomic aging clock mortalit"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11583456",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨队列生理衰老指数，UK Biobank验证，契合衰老时钟方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "临床生物标志物衰老指数，跨中英队列验证，人群健康相关",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "限制立方样条Cox构建生理衰老指数",
+  "data": "DFTJ中国老年人；UK Biobank验证；36项临床指标",
+  "scenario": "生理衰老与死亡/CVD风险",
+  "benchmark": "KDM-BA、PhenoAge等衰老指标",
+  "results": "PAI/ΔPAI预测死亡和CVD；UKB中关联死亡及9种慢性病；捕捉U型关系",
+  "availability": "",
+  "limitations": "训练主要中国老年人；欧洲验证外推有限；临床指标可受药物影响",
+  "summary": "构建基于常规临床生物标志物的生理衰老指数PAI。用DFTJ队列36项临床指标，通过RCS Cox捕捉U型关系并定义PAI和ΔPAI。在DFTJ和UK Biobank中验证其预测死亡、心血管病及9种慢性病风险，优于仅以年龄为标签的模型。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/population-omics-ai/cache",
+ "added_round": 4,
+ "added_on": "2026-09-23"
+}
