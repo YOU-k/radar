@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import time
 from datetime import date, timedelta
 
@@ -14,7 +15,8 @@ FIELDS = "title,abstract,year,url,externalIds,publicationDate,authors"
 def _get(path: str, **params) -> dict:
     for attempt in (1, 2):
         try:
-            r = requests.get(f"{API}{path}", params=params, timeout=60)
+            headers = {"x-api-key": os.environ["S2_API_KEY"]} if os.environ.get("S2_API_KEY") else {}
+            r = requests.get(f"{API}{path}", params=params, timeout=60, headers=headers)
             if r.status_code == 429 and attempt == 1:
                 time.sleep(10)
                 continue

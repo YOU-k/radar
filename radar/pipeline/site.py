@@ -31,8 +31,16 @@ a:active{opacity:.7}
 .tabs{display:flex;gap:8px}
 .tab{flex:1;text-align:center;padding:9px 0;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#57606a;font-size:14.5px;font-weight:600;cursor:pointer;user-select:none}
 .tab.on{background:#1f6feb;border-color:#1f6feb;color:#fff}
-#panel-week,#panel-day,#panel-res,#panel-report{display:none}
-#panel-week.on,#panel-day.on,#panel-res.on,#panel-report.on{display:block}
+#panel-week,#panel-day,#panel-res,#panel-report,#panel-bg{display:none}
+#panel-week.on,#panel-day.on,#panel-res.on,#panel-report.on,#panel-bg.on{display:block}
+details.bg{background:#fff;border:1px solid #d0d7de;border-radius:12px;margin:0 0 10px;padding:0 16px}
+details.bg>summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:600;font-size:15px}
+details.bg>summary::-webkit-details-marker{display:none}
+details.bg>summary .cnt{display:block;font-weight:400;color:#57606a;font-size:12px;margin-top:2px}
+details.bg .bgbody{font-size:14.5px;padding-bottom:14px}
+details.bg .bgbody h2{font-size:15px;color:#1a7f37}
+details.bg .bgbody h3{font-size:14.5px;color:#8250df;margin-bottom:4px}
+details.bg .bgbody ol{padding-left:20px;font-size:13px;color:#4b5563}
 #q{width:100%;padding:9px 14px;border:1px solid #d0d7de;border-radius:20px;background:#fff;color:#1f2328;font-size:14px;outline:none;margin-bottom:12px}
 #q:focus{border-color:#0969da}
 .wk{background:#fff;border:1px solid #d0d7de;border-radius:12px;padding:4px 16px 14px;margin:0 0 10px;font-size:14.5px;box-shadow:0 1px 2px rgba(31,35,40,.04)}
@@ -204,6 +212,22 @@ def _render_weekly(path: Path) -> str:
     return f'<div class="wk"><h3>{html.escape(path.stem)}</h3>{body}</div>'
 
 
+BG_HEAD_RE = re.compile(r"^# (?P<name>.+?) · 方向背景报告\n+(?P<stats>[^\n]+)", re.M)
+
+
+def _render_background(report: Path) -> str:
+    """background/<slug>/report.md → 折叠卡片；标题行取方向名，副行取统计行。"""
+    text = report.read_text(encoding="utf-8")
+    m = BG_HEAD_RE.match(text)
+    name = m.group("name") if m else report.parent.name
+    stats = m.group("stats") if m else ""
+    body = text[m.end():] if m else text
+    html_body = markdown.markdown(body, extensions=["extra", "sane_lists"])
+    return (f'<details class="bg"><summary>{html.escape(name)}'
+            f'<span class="cnt">{html.escape(stats)}</span></summary>'
+            f'<div class="bgbody">{html_body}</div></details>')
+
+
 def build_site(today: date | None = None) -> Path:
     today = today or date.today()
     digests = sorted((ROOT / "digests").glob("*.md"), reverse=True)
@@ -216,6 +240,9 @@ def build_site(today: date | None = None) -> Path:
     reports = sorted((ROOT / "reports").glob("*.md"), reverse=True)
     report_html = ("\n".join(_render_weekly(p) for p in reports)
                    if reports else '<div class="empty">暂无专题报告。</div>')
+    bg_reports = sorted((ROOT / "background").glob("*/report.md"))
+    bg_html = ("\n".join(_render_background(p) for p in bg_reports)
+               if bg_reports else '<div class="empty">暂无方向背景报告。</div>')
     res_file = ROOT / "resources.md"
     res_html = ('<div class="wk">'
                 + markdown.markdown(res_file.read_text(encoding="utf-8"),
@@ -229,10 +256,12 @@ def build_site(today: date | None = None) -> Path:
         f"<style>{CSS}</style></head><body><main>",
         '<div class="top"><h1>radar · 科研情报</h1>',
         f'<div class="meta">更新至 {today.isoformat()} · '
-        f'{len(digests)} 份日报 / {len(weeklies)} 份周报 / {len(reports)} 份专题</div>',
+        f'{len(digests)} 份日报 / {len(weeklies)} 份周报 / {len(reports)} 份专题 / '
+        f'{len(bg_reports)} 个方向背景</div>',
         '<div class="tabs">'
         '<div class="tab on" data-tab="week">周报</div>'
         '<div class="tab" data-tab="day">日报</div>'
+        '<div class="tab" data-tab="bg">方向背景</div>'
         '<div class="tab" data-tab="report">专题报告</div>'
         '<div class="tab" data-tab="res">资源库</div>'
         "</div></div>",
@@ -240,6 +269,7 @@ def build_site(today: date | None = None) -> Path:
         '<div id="panel-day">',
         '<input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">',
         f"{day_html}</div>",
+        f'<div id="panel-bg">{bg_html}</div>',
         f'<div id="panel-report">{report_html}</div>',
         f'<div id="panel-res">{res_html}</div>',
         f"<script>{JS}</script></main></body></html>",

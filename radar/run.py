@@ -213,7 +213,7 @@ def main() -> None:
     p.add_argument("--months", type=int, default=6)
     p = sub.add_parser("background", help="方向背景库：init / bootstrap / renew / compile")
     p.add_argument("action", choices=["init", "bootstrap", "renew", "compile", "refetch"])
-    p.add_argument("--topic", required=True, help="slug，如 population-omics-ai")
+    p.add_argument("--topic", required=True, help="slug，如 population-omics-ai；all = 全部方向")
     p.add_argument("--name", default="", help="init 用：方向中文名")
     p.add_argument("--rounds", type=int, default=0, help="bootstrap 轮数，0 = topic.yaml 的 budget.rounds")
     p.add_argument("--no-fulltext", action="store_true")
