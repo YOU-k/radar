@@ -1,6 +1,6 @@
 # radar — 个人科研情报系统
 
-跨 4 个领域（衰老多模态 / 数据库与模型 / ML 底层算法 / Agent 进展）自动抓取信息，
+跨 5 个领域（衰老多模态 / 数据库与模型 / 人群健康与多组学 AI / ML 底层算法 / Agent 进展）自动抓取信息，
 按 `config/profile.md` 里的研究画像用 LLM 打分，高分论文自动深读全文，
 生成中文 digest，并发布成一个手机友好的可浏览站点。
 
@@ -107,3 +107,7 @@ registry/         长期知识库（人工维护）
 - GitHub 搜索未认证限 10 req/min；workflow 里已注入 GITHUB_TOKEN 提速
 - arXiv 请求间隔 3s，daily 全量约 4-6 分钟，正常
 - RSS 源个别会失效，日志里会有 `[rss] ... returned no entries`，换掉即可
+- EuropePMC 每日采集按 `CREATION_DATE`（记录入库日）取窗，不能用 `FIRST_PDATE`（发表日）：
+  CNS 正刊进 PubMed 索引滞后 3-20 天，按发表日取 1 天窗口几乎抓不到 Nature/Science/Cell 新文
+  （实测 1 条 vs 17 条）。deepdive 回溯调研仍按发表日取存量
+- 整刊订阅条目最多 40 条/天直通 LLM，超额按全领域关键词分截断（Nature 周三、Science 周四发刊日会超）

@@ -1,4 +1,4 @@
-# 信息源定义。按 4 个领域分组。
+# 信息源定义。按 5 个领域分组。
 # 新增来源：在对应 domain 下加关键词 / query / feed 即可，collector 会自动拾取。
 # 节奏：每个源可标 cadence: daily(默认) / weekly(周日收) / monthly(每月1号收)。
 #   论文类保持 daily；格局型源（github/hf/blog）建议 weekly 或 monthly 降噪。
@@ -8,8 +8,8 @@
 domains:
   - name: aging_multimodal
     label_zh: 衰老与多模态健康模型
-    keywords_zh: [衰老时钟, 表观遗传时钟, 蛋白质组年龄, 多模态衰老, 类器官衰老, 生物年龄, 衰老生物标志物, 转录组年龄, 甲基化年龄, 扰动响应]
-    keywords_en: [aging clock, epigenetic clock, proteomic age, multimodal aging, organoid aging, biological age, biological age prediction, aging biomarker, DNA methylation age, transcriptomic age, perturbation response, cell painting aging, omics age]
+    keywords_zh: [衰老时钟, 表观遗传时钟, 蛋白质组年龄, 多模态衰老, 类器官衰老, 生物年龄, 衰老生物标志物, 转录组年龄, 甲基化年龄, 扰动响应, 长寿, 衰老基准]
+    keywords_en: [aging clock, epigenetic clock, proteomic age, multimodal aging, organoid aging, biological age, biological age prediction, aging biomarker, DNA methylation age, transcriptomic age, perturbation response, cell painting aging, omics age, longevity, aging biology, aging research, geroscience, senescence, lifespan, healthspan, benchmark]
     arxiv:
       categories: [q-bio.QM, q-bio.GN, q-bio.CB]
       queries:
@@ -21,7 +21,9 @@ domains:
         - "biological age prediction"
         - "DNA methylation age"
         - "cell painting aging"
-    europepmc_query: '(aging clock OR biological age OR epigenetic age OR methylation age OR "transcriptomic age" OR "proteomic age" OR "aging biomarker") AND (multimodal OR proteomic OR methylation OR organoid OR single-cell OR "spatial transcriptomics")'
+        - "aging biology language model"
+        - "longevity benchmark"
+    europepmc_query: '(aging clock OR biological age OR epigenetic age OR methylation age OR "transcriptomic age" OR "proteomic age" OR "aging biomarker" OR longevity OR "aging research" OR geroscience) AND (multimodal OR proteomic OR methylation OR organoid OR single-cell OR "spatial transcriptomics" OR "language model" OR "foundation model" OR benchmark OR "deep learning")'
     # 整刊订阅：新文全收（不限关键词），相关性交给 LLM 从严打分。
     # CNS 正刊全学科、量大，先经关键词粗筛（含 aging 等词才进 top40），
     # 所以只放aging 领域，不污染其他领域配额。
@@ -83,6 +85,43 @@ domains:
       - cell painting
       - protein language model
     hf_cadence: weekly
+
+  - name: population_omics_ai
+    label_zh: 人群健康与多组学 AI
+    # 2026-09 新增：Delphi（Nature 2025，生成式 Transformer 学 UKB+丹麦 EHR 预测 1000+ 疾病轨迹）、
+    # ALADYNOULLI（Nature 2026，贝叶斯生成模型 EHR+胚系遗传，348 病 21 个可复现特征谱）这一类：
+    # 大规模队列 / 生物样本库 / EHR 的生成式建模、疾病轨迹预测、人群多组学（血浆蛋白组、代谢组、甲基化）+ 遗传整合。
+    keywords_zh: [生物样本库, 电子健康记录, 疾病轨迹, 疾病风险预测, 多基因风险, 人群队列, 血浆蛋白组, 代谢组, 全基因组关联, 纵向队列, 健康轨迹, 医学基础模型]
+    keywords_en: [UK Biobank, biobank, electronic health record, EHR, disease trajectory, disease risk prediction, polygenic, population cohort, plasma proteome, proteomic profiling, metabolomics, GWAS, longitudinal, health trajectory, medical foundation model, generative model, All of Us, FinnGen, multi-omics cohort, phenome-wide, comorbidity]
+    arxiv:
+      categories: [cs.LG, stat.ML, q-bio.QM, stat.AP]
+      queries:
+        - "electronic health records foundation model"
+        - "disease trajectory"
+        - "UK Biobank"
+        - "biobank deep learning"
+        - "multi-omics cohort"
+        - "polygenic risk deep learning"
+        - "generative model patient trajectories"
+    europepmc_query: '("UK Biobank" OR biobank OR "electronic health records" OR "disease trajectory" OR "disease trajectories" OR polygenic OR "population-scale" OR "All of Us" OR FinnGen) AND ("deep learning" OR "generative model" OR transformer OR "foundation model" OR "machine learning" OR "multi-omics" OR multiomics OR "plasma proteome" OR proteomic OR metabolomic OR "language model")'
+    # 整刊订阅（CREATION_DATE 实测周量：Nat Med ~19、Nat Genet ~7、Cell Genom ~3、Nat Mach Intell ~1）。
+    # Nature Communications 周量 240，噪声太大，不整刊订阅，靠上方关键词 query 覆盖。
+    journals:
+      - Nature Medicine
+      - Nature Genetics
+      - Cell Genomics
+      - Nature Machine Intelligence
+    rss: []
+    github_queries:
+      - uk-biobank
+      - electronic-health-records
+      - disease-trajectory
+      - polygenic-risk
+    github_cadence: weekly
+    hf_queries:
+      - electronic health records
+      - biobank
+    hf_cadence: monthly
 
   - name: ml_algorithms
     label_zh: ML / AI 底层算法
@@ -157,6 +196,9 @@ seed_papers:
   - DOI:10.1038/s41586-023-06139-9     # Geneformer (Nature 2023)
   - DOI:10.1038/s41592-024-02201-0     # scGPT (Nature Methods 2024)
   - DOI:10.1186/gb-2013-14-10-r115     # Horvath 2013 pan-tissue 甲基化时钟
+  - DOI:10.1038/s41586-025-09529-3     # Delphi: 生成式 Transformer 学 EHR 预测疾病轨迹 (Nature 2025)
+  - DOI:10.1038/s41586-026-10780-5     # ALADYNOULLI: 纵向 EHR + 遗传的贝叶斯生成模型 (Nature 2026)
+  - DOI:10.1016/j.cell.2026.08.026     # LongevityBench / aging-biology LLM benchmark (Cell 2026)
   # imAgeScore (cell painting aging) 是 bioRxiv preprint，S2 未收录 DOI，
   # 可在 semanticscholar.org 搜到后改用其 40 位 paper id 加在这里。
 

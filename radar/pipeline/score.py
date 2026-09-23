@@ -11,11 +11,15 @@ PREFILTER_TOP = 40
 BATCH = 20
 
 
-def keyword_score(item: Item, cfg: dict) -> float:
-    dom = next((d for d in cfg.get("domains", []) if d["name"] == item.domain), None)
+def keyword_score(item: Item, cfg: dict, all_domains: bool = False) -> float:
+    """all_domains=True：用全部领域的关键词打分。整刊订阅条目挂在某个 domain 下，
+    但 CNS 正刊什么都发，只用本领域词表会把跨领域的好文章排到零分。"""
+    doms = cfg.get("domains", [])
+    if not all_domains:
+        doms = [d for d in doms if d["name"] == item.domain]
     kws = []
-    if dom:
-        kws = (dom.get("keywords_en") or []) + (dom.get("keywords_zh") or [])
+    for dom in doms:
+        kws += (dom.get("keywords_en") or []) + (dom.get("keywords_zh") or [])
     title, abstract = item.title.lower(), (item.abstract or "").lower()
     score = 0.0
     for kw in kws:
@@ -36,11 +40,21 @@ def prefilter(items: list[Item], cfg: dict) -> list[Item]:
     return items[:PREFILTER_TOP]
 
 
-JOURNAL_SLOT = 20  # 整刊订阅条目直通 LLM：关键词表永远追不上期刊新发，靠 LLM 筛
+JOURNAL_SLOT = 40  # 整刊订阅条目直通 LLM：关键词表永远追不上期刊新发，靠 LLM 筛
+# 实测整刊订阅日均 ~17 条，Nature 周三 / Science 周四发刊日可到 40+。
+# 超额时按全领域关键词分排序截断，而不是按采集顺序随机截断——
+# 被截掉的条目已写进 seen.json，永远不会再出现，所以截断必须有理由。
 
 
 def score_items(items: list[Item], cfg: dict, use_llm: bool = True) -> list[Item]:
-    watch = [it for it in items if it.extra.get("journal_watch")][:JOURNAL_SLOT]
+    watch = [it for it in items if it.extra.get("journal_watch")]
+    for it in watch:
+        it.score = keyword_score(it, cfg, all_domains=True)
+    watch.sort(key=lambda x: x.score, reverse=True)
+    if len(watch) > JOURNAL_SLOT:
+        print(f"[score] journal watch {len(watch)} > slot {JOURNAL_SLOT}, "
+              f"dropped {len(watch) - JOURNAL_SLOT} lowest-keyword items")
+    watch = watch[:JOURNAL_SLOT]
     rest = [it for it in items if not it.extra.get("journal_watch")]
     items = prefilter(rest, cfg) + watch
     if use_llm:
@@ -66,7 +80,8 @@ def llm_rerank(items: list[Item]) -> bool:
             "下面是某研究者的兴趣画像和一批新条目。"
             "请对每条打分 0-10（10=必须马上读，0=完全无关）、标类型、用一句中文说明理由（不超过40字）。\n"
             "打分从严，宁低勿高：无公开数据/代码的纯关联研究、小作坊项目一律 ≤4 分；"
-            "7 分以上只给能直接拿来用的数据集/模型/方法。"
+            "「思路可迁移/可借鉴/有参考价值」不算价值，这类条目一律 ≤5 分；"
+            "≥6 分必须有硬通货：大规模数据/资源、强定量基准结论、能直接用的工具、或 CNS 及子刊的重要综述。"
             "综述原则上 ≤5 分，但 journal 字段为知名期刊（Nature/Cell/Science 及其子刊）的高质量综述正常评估，可到 6-7 分。\n"
             "类型 type 五选一：paper（论文/新闻）/ dataset（数据集/数据库）/ model（模型）/ tool（软件工具）/ other。\n"
             "dataset/model 的认定从严：必须有真实存在、公开可获取的产物（公开下载链接、GEO/Zenodo 编号、"
