@@ -104,12 +104,12 @@ RADAR_LIVE=1 python -m pytest tests/background/test_live.py             # 真 AP
 
 | 方向 | 轮 | 证据 | 全文 | 覆盖度 | 报告 | 备注 |
 |---|---|---|---|---|---|---|
-| population-omics-ai | 7 | 90 | 54 | 0.83 | 5.3 万字 | 平台期停 |
-| aging-multimodal | 4 | 71 | — | 0.62 | — | 平台期停；每轮新候选 20 篇左右，检索面已尽 |
-| single-cell-foundation | 5 | 86 | — | 0.65 | — | 平台期停 |
-| virtual-cell（窄主题） | 2 | 36 | — | 0.56 | — | 第 2 轮 60 候选只收 4，检索词需调 |
-| world-models-ssl | 3 | 65 | 26 | 0.46 | — | S2 限速拖累种子 |
-| research-agents-rlvr | 3 | 91 | 35 | 0.69 | — | — |
+| population-omics-ai | 7 | 90 | 54 | 0.71 | 5.3 万字 | 平台期停 |
+| aging-multimodal | 4 | 71 | 39 | 0.62 | 4.0 万字 | 平台期停；每轮新候选 20 篇左右，检索面已尽 |
+| single-cell-foundation | 5 | 86 | 51 | 0.65 | 4.6 万字 | 平台期停 |
+| virtual-cell（窄主题） | 2 | 36 | 16 | 0.56 | 2.6 万字 | 第 2 轮 60 候选只收 4，检索词需调 |
+| world-models-ssl | 3 | 65 | 26 | 0.34 | 3.9 万字 | S2 限速拖累种子 |
+| research-agents-rlvr | 3 | 91 | 35 | 0.61 | 5.6 万字 | — |
 
 六份报告都含「阶段判断与行动建议」；`_joint` 联合分析、`_resources` 资源登记（348 项，主表 96）已生成。
 
