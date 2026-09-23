@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.29029",
+  "title": "Flow-JEPA: Flow Matching for Robust Latent Dynamics in JEPA World Models",
+  "url": "https://arxiv.org/abs/2608.29029",
+  "abstract": "Joint-Embedding Predictive Architectures (JEPAs) have shown strong potential for learning compact predictive representations, and LeWorldModel (LeWM) extends this paradigm to reconstruction-free latent world modeling from pixels. However, its deterministic autoregressive predictor generates future states through repeated one-step transitions, which can accumulate errors and remain sensitive to task-irrelevant visual perturbations. In this work, we propose Flow-JEPA (F-JEPA), a conditional flow matching dynamics model that jointly generates a sequence of future latent states conditioned on the current observation and actions. A Gaussian distribution serves as the flow source, exposing the vector field to perturbed latent trajectories as it learns to transport them toward clean future representations. This formulation retains the reconstruction-free JEPA framework while replacing point-wise transition regression with stochastic trajectory-level prediction. F-JEPA raises mean success from $86\\%$ to $92\\%$ under clean observations and from $67\\%$ to $86\\%$ under noisy conditions, suggesting that conditional flow matching provides a promising alternative to deterministic autoregressive dynamics in JEPA world models.",
+  "authors": "Yan-Chen Huo, Zi-Ying Song, Yadan Luo",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2411.04983"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "流匹配增强JEPA潜空间动力学，核心方向方法创新",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "流匹配改进JEPA潜动力学，直击误差累积痛点",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Flow-JEPA：条件流匹配生成未来潜轨迹",
+  "data": "像素级无奖励环境轨迹，四个环境",
+  "scenario": "JEPA世界模型潜动力学",
+  "benchmark": "Two-Room、Reacher、OGBench-Cube、Push-T，对比LeWM",
+  "results": "干净观测平均成功率86%→92%，噪声下67%→86%",
+  "availability": "代码公开",
+  "limitations": "工作进展中；未报告更大规模或更长时域泛化",
+  "summary": "针对LeWM确定性自回归预测的误差累积和对视觉扰动敏感问题，提出Flow-JEPA。用条件流匹配以高斯源轨迹生成未来潜状态序列，替代逐点一步转移回归，保持无重建JEPA框架。在四个环境上干净观测成功率86%→92%，噪声下67%→86%。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

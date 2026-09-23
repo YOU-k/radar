@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.3389/fcell.2026.1900624",
+  "title": "Toward trustworthy virtual cells: a roadmap for perturbation-resolved, context-aware, and experimentally validated cell models",
+  "url": "https://doi.org/10.3389/fcell.2026.1900624",
+  "abstract": "\n Single-cell perturbation technologies, multimodal omics, spatial profiling, and generative modeling are transforming the virtual cell from a theoretical concept into a practical objective for cell biology. Yet current efforts often emphasize model scale, data volume, or predictive breadth, while the trustworthiness required for scientific and translational use remains insufficiently addressed. We argue that virtual-cell models become decision-relevant only when the evidential chain connecting data, model design, benchmarking, and experimental validation is made explicit. We introduce the trustworthy virtual cell, a perturbation-resolved, context-aware, and experimentally validated system capable of supporting biological inference, experimental design, and preclinical decision-making. We organize recent progress around four empirical layers, namely, molecular cell state, intervention, biological context, and orthogonal phenotype, complemented by structured priors. This framework explains why static atlases, transcriptome-only readouts, and in-distribution benchmarks are insufficient for predicting cellular behavior under new conditions. Across mechanistic, deep generative, foundation, and hybrid models, we discuss trade-offs among interpretability, scalability, and extrapolation. We further argue that evaluation should move beyond held-out reconstruction accuracy toward biologically meaningful criteria, including generalization to unseen cell types and perturbations, dose, time, and combination response extrapolation, uncertainty calibration, and mechanistic consistency. We then propose a closed-loop validation ladder connecting\n in silico\n predictions to CRISPR perturbation, imaging, organoid, and tissue-level assays. Our aim is to review what current models can and cannot yet do, and to set out an evidential framework specifying what a virtual cell must demonstrate before its outputs are acted upon, noting which requirements are attainable today and which remain longer-term goals.\n",
+  "authors": "Wang-Shu Li, Aziz ur Rehman Aziz, Bo-Wen Xu, Jingsha Xu, Xiao-Hui Yu, Da-Qing Wang, Chunfang Ha",
+  "venue": "Frontiers in Cell and Developmental Biology",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41586-023-06139-9",
+   "s2:citations:doi:10.1038/s41592-024-02201-0"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "虚拟细胞可信路线图，方向定义契合。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "虚拟细胞可信路线图，系统性框架，方向纲领性文献。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "可信虚拟细胞路线图（框架性综述）",
+  "data": "单细胞扰动、多模态组学、空间图谱",
+  "scenario": "虚拟细胞建模与验证",
+  "benchmark": "静态图谱、仅转录组读出、分布内基准",
+  "results": "提出四层经验框架（分子状态、干预、生物背景、正交表型）；主张评估超越留出重建精度",
+  "availability": "",
+  "limitations": "当前工作偏重模型规模与数据量，可信度不足",
+  "summary": "论证虚拟细胞模型需明确数据、设计、基准与实验验证的证据链才具决策相关性。提出“可信虚拟细胞”概念，围绕四个经验层与结构化先验组织进展。指出静态图谱、仅转录组读出与分布内基准不足以预测新条件下的细胞行为，评估应转向泛化到未见细胞类型与扰动等生物学标准。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

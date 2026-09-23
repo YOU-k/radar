@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2505.23474",
+  "title": "Socratic-PRMBench: Benchmarking Process Reward Models with Systematic Reasoning Patterns",
+  "url": "https://arxiv.org/abs/2505.23474v1",
+  "abstract": "Process Reward Models (PRMs) are crucial in complex reasoning and problem-solving tasks (e.g., LLM agents with long-horizon decision-making) by verifying the correctness of each intermediate reasoning step. In real-world scenarios, LLMs may apply various reasoning patterns (e.g., decomposition) to solve a problem, potentially suffering from errors under various reasoning patterns. Therefore, PRMs are required to identify errors under various reasoning patterns during the reasoning process. However, existing benchmarks mainly focus on evaluating PRMs with stepwise correctness, ignoring a systematic evaluation of PRMs under various reasoning patterns. To mitigate this gap, we introduce Socratic-PRMBench, a new benchmark to evaluate PRMs systematically under six reasoning patterns, including Transformation, Decomposition, Regather, Deduction, Verification, and Integration. Socratic-PRMBench}comprises 2995 reasoning paths with flaws within the aforementioned six reasoning patterns. Through our experiments on both PRMs and LLMs prompted as critic models, we identify notable deficiencies in existing PRMs. These observations underscore the significant weakness of current PRMs in conducting evaluations on reasoning steps under various reasoning patterns. We hope Socratic-PRMBench can serve as a comprehensive testbed for systematic evaluation of PRMs under diverse reasoning patterns and pave the way for future development of PRMs.",
+  "authors": "Xiang Li, Haiyang Yu, Xinghua Zhang, Ziyang Huang, Shizhu He, Kang Liu, Jun Zhao, Fei Huang",
+  "venue": "",
+  "year": 2025,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PRM 推理模式评测基准，契合过程奖励与评测方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "PRM系统性推理模式评测基准，填补空白，可复现。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Socratic-PRMBench：六类推理模式的过程奖励评测基准",
+  "data": "2995条含缺陷推理路径，平均8.7步，合成+人工标注",
+  "scenario": "PRM过程错误检测评测",
+  "benchmark": "对比ProcessBench、PRMBench等；评测PRM与LLM critic",
+  "results": "现有PRM在多种推理模式下存在明显缺陷，尤其分解等模式错误检测不足",
+  "availability": "代码与数据公开：https://github.com/Xiang-Li-oss/Socratic-PRMBench",
+  "limitations": "基准为合成+人工构造，可能不完全覆盖真实推理分布；仅评测错误检测",
+  "summary": "论文提出Socratic-PRMBench，系统评测PRM在六种推理模式下的过程错误检测能力。基准包含2995条带缺陷推理路径，覆盖Transformation、Decomposition、Regather、Deduction、Verification、Integration。实验发现现有PRM和LLM critic在多样推理模式下仍有显著不足。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

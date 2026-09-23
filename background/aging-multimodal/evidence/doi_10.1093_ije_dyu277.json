@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/ije/dyu277",
+  "title": "The epigenetic clock is correlated with physical and cognitive fitness in the Lothian Birth Cohort 1936",
+  "url": "https://doi.org/10.1093/ije/dyu277",
+  "abstract": "Background: The DNA methylation-based ‘epigenetic clock’ correlates strongly with chronological age, but it is currently unclear what drives individual differences. We examine cross-sectional and longitudinal associations between the epigenetic clock and four mortality-linked markers of physical and mental fitness: lung function, walking speed, grip strength and cognitive ability. Methods: DNA methylation-based age acceleration (residuals of the epigenetic clock estimate regressed on chronological age) were estimated in the Lothian Birth Cohort 1936 at ages 70 (n = 920), 73 (n = 299) and 76 (n = 273) years. General cognitive ability, walking speed, lung function and grip strength were measured concurrently. Cross-sectional correlations between age acceleration and the fitness variables were calculated. Longitudinal change in the epigenetic clock estimates and the fitness variables were assessed via linear mixed models and latent growth curves. Epigenetic age acceleration at age 70 was used as a predictor of longitudinal change in fitness. Epigenome-wide association studies (EWASs) were conducted on the four fitness measures. Results: Cross-sectional correlations were significant between greater age acceleration and poorer performance on the lung function, cognition and grip strength measures (r range: −0.07 to −0.05, P range: 9.7 x 10−3 to 0.024). All of the fitness variables declined over time but age acceleration did not correlate with subsequent change over 6 years. There were no EWAS hits for the fitness traits. Conclusions: Markers of physical and mental fitness are associated with the epigenetic clock (lower abilities associated with age acceleration). However, age acceleration does not associate with decline in these measures, at least over a relatively short follow-up.",
+  "authors": "R. Marioni, Sonia H. Shah, A. McRae, S. Ritchie, G. Muniz-Terrera, Sarah E. Harris, J. Gibson, P. Redmond",
+  "venue": "International Journal of Epidemiology",
+  "year": 2015,
+  "citations": 524,
+  "found_by": [
+   "s2:references:doi:10.18632/aging.101414"
+  ],
+  "extra": {
+   "pmcid": "PMC4588858"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "表观时钟与体能认知关联，队列数据可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "表观时钟与体能认知关联经典队列研究",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "表观遗传时钟与体能认知纵向关联分析",
+  "data": "Lothian Birth Cohort 1936，920/299/273人三波",
+  "scenario": "老年体能认知与衰老时钟",
+  "benchmark": "步行速度、握力、肺功能、认知功能",
+  "results": "表观年龄加速与70岁体能认知横断面相关；不预测70-76岁下降",
+  "availability": "EGA EGAS00001000910",
+  "limitations": "样本限于1936苏格兰队列；纵向波次样本减少；观察性设计",
+  "summary": "研究分析表观遗传时钟与晚年体能和认知健康的关系。作者在Lothian Birth Cohort 1936中于70、73、76岁测量DNA甲基化年龄及步行速度、握力、肺功能和认知能力。发现表观年龄加速与70岁体能认知横断面相关，但不预测70至76岁间的功能下降。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

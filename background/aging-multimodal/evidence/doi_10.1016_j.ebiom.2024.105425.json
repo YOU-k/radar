@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.ebiom.2024.105425",
+  "title": "Characterising developmental dynamics of adult epigenetic clock sites.",
+  "url": "https://doi.org/10.1016/j.ebiom.2024.105425",
+  "abstract": "Background DNA methylation (DNAm), an epigenetic mechanism that regulates gene activity in response to genetic and environmental influences, changes as we age. DNAm at specific sites on the genome can be used to calculate 'epigenetic clocks', which are powerful biomarkers of age, as well as of ageing. However, little is known about how these clock sites 'behave' during development and what factors influence their variability in early life. This knowledge could be used to optimise healthy ageing well before the onset of age-related conditions. Methods We leveraged results from two longitudinal population-based cohorts (N = 5019 samples from 2348 individuals) to characterise trajectories of adult clock sites from birth to early adulthood. To explore what factors may drive early individual differences at these clock sites, we also tested for enrichment of genetic factors and prenatal exposures based on existing epigenome-wide association meta-analyses. Findings We find that clock sites (i) diverge widely in their developmental trajectories, often showing non-linear change over time; (ii) are substantially more likely than non-clock sites to vary between individuals already from birth, differences that are predictive of DNAm variation at later ages; and (iii) show enrichment for genetic influences and prenatal environmental exposures, including prenatal smoking, diet and maternal physical health conditions. Interpretation These results suggests that age(ing)-related epigenetic processes might originate-and differ between individuals-already very early in development. Understanding what drives these differences may in future help us to devise better strategies to promote healthy ageing. Funding This research was conducted while C.A.M.C. was a Hevolution/AFAR New Investigator Awardee in Aging Biology and Geroscience Research. Full personal funding details, as well as cohort funding details, can be found in the Acknowledgements.",
+  "authors": "Mulder RH, Neumann A, Felix JF, Suderman M, Cecil CAM.",
+  "venue": "EBioMedicine",
+  "year": 2024,
+  "citations": 10,
+  "found_by": [
+   "eupmc:aging clock benchmark foundati"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11550723",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "表观时钟位点发育动态，纵向大队列数据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "表观时钟位点发育动态，大规模纵向队列",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "纵向队列解析成人表观遗传时钟位点发育动态",
+  "data": "两个大型纵向儿童DNA甲基化队列",
+  "scenario": "生命早期表观遗传衰老起源研究",
+  "benchmark": "非时钟DNAm位点",
+  "results": "时钟位点发育轨迹高度异质且非线性；超三分之一位点自出生即存在个体差异，高于非时钟位点；出生变异与遗传和产前暴露相关",
+  "availability": "",
+  "limitations": "聚焦生命早期，成人疾病结局未直接验证，队列人群有限",
+  "summary": "研究将成人表观遗传时钟分解为单个CpG位点，表征其在生命前二十年的发育动态。利用全球最大纵向儿童DNA甲基化队列，分析第一至第三代时钟位点的轨迹和变异。结果显示时钟位点发育轨迹异质且非线性，超过三分之一自出生即有个体差异，并与遗传背景和产前暴露相关，支持表观遗传衰老的早期起源假说。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

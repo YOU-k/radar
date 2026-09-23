@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-024-08453-2",
+  "title": "Mapping cells through time and space with moscot.",
+  "url": "https://doi.org/10.1038/s41586-024-08453-2",
+  "abstract": "Single-cell genomic technologies enable the multimodal profiling of millions of cells across temporal and spatial dimensions. However, experimental limitations hinder the comprehensive measurement of cells under native temporal dynamics and in their native spatial tissue niche. Optimal transport has emerged as a powerful tool to address these constraints and has facilitated the recovery of the original cellular context 1-4 . Yet, most optimal transport applications are unable to incorporate multimodal information or scale to single-cell atlases. Here we introduce multi-omics single-cell optimal transport (moscot), a scalable framework for optimal transport in single-cell genomics that supports multimodality across all applications. We demonstrate the capability of moscot to efficiently reconstruct developmental trajectories of 1.7 million cells from mouse embryos across 20 time points. To illustrate the capability of moscot in space, we enrich spatial transcriptomic datasets by mapping multimodal information from single-cell profiles in a mouse liver sample and align multiple coronal sections of the mouse brain. We present moscot.spatiotemporal, an approach that leverages gene-expression data across both spatial and temporal dimensions to uncover the spatiotemporal dynamics of mouse embryogenesis. We also resolve endocrine-lineage relationships of delta and epsilon cells in a previously unpublished mouse, time-resolved pancreas development dataset using paired measurements of gene expression and chromatin accessibility. Our findings are confirmed through experimental validation of NEUROD2 as a regulator of epsilon progenitor cells in a model of human induced pluripotent stem cell islet cell differentiation. Moscot is available as open-source software, accompanied by extensive documentation.",
+  "authors": "Klein D, Palla G, Lange M, Klein M, Piran Z, Gander M, Meng-Papaxanthos L, Sterr M, Saber L, Jing C, Bastidas-Ponce A, Cota P, Tarquis-Medina M, Parikh S, Gold I, Lickert H, Bakhti M, Nitzan M, Cuturi M, Theis FJ.",
+  "venue": "Nature",
+  "year": 2025,
+  "citations": 175,
+  "found_by": [
+   "eupmc:single-cell foundation model b",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11864987",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "可扩展最优传输框架，支持多模态单细胞图谱整合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "可扩展多组学最优传输框架，空间与时间映射核心工具。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "最优传输OT框架moscot，统一W/GW/FGW",
+  "data": "单细胞/空间/多模态，170万细胞小鼠胚胎等",
+  "scenario": "时序、空间、时空细胞映射对齐",
+  "benchmark": "既往OT单细胞工具，如SPATEO等",
+  "results": "计算时间与内存较既往OT降数个数量级；验证NEUROD2调控epsilon细胞形成",
+  "availability": "代码与文档公开于moscot-tools.org",
+  "limitations": "依赖OT假设与先验知识；复杂映射仍需调参",
+  "summary": "moscot提出统一最优传输框架，用于单细胞时序、空间和时空映射。它将生物映射任务转化为W、GW或FGW型OT问题，并支持多模态与图谱规模数据。研究在170万细胞小鼠胚胎等数据中实现高效对齐，并实验验证NEUROD2调控epsilon细胞形成。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

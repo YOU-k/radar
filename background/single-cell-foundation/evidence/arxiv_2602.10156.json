@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2602.10156",
+  "title": "STRAND: Sequence-Conditioned Transport for Single-Cell Perturbations",
+  "url": "https://arxiv.org/abs/2602.10156v1",
+  "abstract": "Predicting how genetic perturbations change cellular state is a core problem for building controllable models of gene regulation. Perturbations targeting the same gene can produce different transcriptional responses depending on their genomic locus, including different transcription start sites and regulatory elements. Gene-level perturbation models collapse these distinct interventions into the same representation. We introduce STRAND, a generative model that predicts single-cell transcriptional responses by conditioning on regulatory DNA sequence. STRAND represents a perturbation by encoding the sequence at its genomic locus and uses this representation to parameterize a conditional transport process from control to perturbed cell states. Representing perturbations by sequence, rather than by a fixed set of gene identifiers, supports zero-shot inference at loci not seen during training and expands inference-time genomic coverage from ~1.5% for gene-level single-cell foundation models to ~95% of the genome. We evaluate STRAND on CRISPR perturbation datasets in K562, Jurkat, and RPE1 cells. STRAND improves discrimination scores by up to 33% in low-sample regimes, achieves the best average rank on unseen gene perturbation benchmarks, and improves transfer to novel cell lines by up to 0.14 in Pearson correlation. Ablations isolate the gains to sequence conditioning and transport, and case studies show that STRAND resolves functionally alternative transcription start sites missed by gene-level models.",
+  "authors": "Boyang Fu, George Dasoulas, Sameer Gabbita, Xiang Lin, Shanghua Gao, Xiaorui Su, Soumya Ghosh, Marinka Zitnik",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "序列条件扰动预测，生成模型，虚拟细胞方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "序列条件扰动预测生成模型，区分位点效应，虚拟细胞核心问题。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "序列条件传输（调控DNA序列编码+条件传输）",
+  "data": "K562、Jurkat、RPE1 CRISPR扰动数据集",
+  "scenario": "单细胞扰动响应预测",
+  "benchmark": "未见基因扰动基准，对比基因级基础模型",
+  "results": "低样本判别分提升达33%，未见基因基准最佳平均排名，新细胞系迁移Pearson提升达0.14；基因组覆盖从约1.5%扩至约95%",
+  "availability": "",
+  "limitations": "输入空间大、序列到转录组映射高度非线性；依赖序列编码质量",
+  "summary": "针对基因级模型将同一基因不同位点扰动坍缩为同一表征的问题，提出STRAND，以扰动位点调控DNA序列编码为条件，参数化从对照到扰动细胞状态的条件传输过程。在K562、Jurkat、RPE1上评估，低样本判别分提升达33%，未见基因基准最佳平均排名，新细胞系迁移提升达0.14，基因组覆盖从约1.5%扩至约95%。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2605.16725",
+  "title": "Baba in Wonderland: Online Self-Supervised Dynamics Discovery for Executable World Models",
+  "url": "https://doi.org/10.48550/arXiv.2605.16725",
+  "abstract": "Executable world models can be read, edited, executed, and reused for planning, but only if the program captures the environment's transition law rather than semantic shortcuts in its surface vocabulary. We study online executable world-model learning under prior misalignment, where an agent must induce state-dependent dynamics from interaction evidence alone, without rule descriptions, reward signals, or trustworthy lexical priors. We introduce Alice, a closed-loop system that treats failed candidate updates as structural signal: when a candidate explains a new transition but loses previously explained ones, the preservation conflict reveals dynamics that the current program had conflated. Alice refines these conflicts into hypothesis classes that both provide compact, class-stratified preservation counterexamples for update and guide frontier exploration toward transitions that are novel and underrepresented with respect to the current program. We evaluate Alice on Baba in Wonderland, a prior-misaligned variant of Baba Is You that preserves simulator dynamics while replacing semantically meaningful rule-property labels with unrelated words. Experiments show that Alice substantially improves executable world-model learning under prior misalignment, and ablations show that both class refinement and class-aware exploration contribute.",
+  "authors": "Seung-hun Seo, Dong-qin Han, SeongRae Noh, HyeongYeop Kang",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:arxiv:2005.05960"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "在线自监督可执行世界模型，隐空间动力学发现新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "在线自监督可执行世界模型，属世界模型核心议题",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "闭环系统Alice，将失败候选更新转为结构信号并精炼假设类",
+  "data": "交互轨迹（Baba in Wonderland环境）",
+  "scenario": "先验错位下在线可执行世界模型学习",
+  "benchmark": "Baba in Wonderland（Baba Is You变体）",
+  "results": "在先验错位下显著提升可执行世界模型学习，消融显示类精炼与类感知探索均有贡献",
+  "availability": "",
+  "limitations": "仅单一游戏环境验证，未提代码公开",
+  "summary": "研究先验错位下仅靠交互证据在线归纳可执行世界模型。Alice把失败候选更新视为结构信号，将保留冲突精炼为假设类，并引导探索新颖且欠表示的转移。在替换语义标签的Baba in Wonderland上显著提升学习效果，消融证明类精炼与类感知探索均有效。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2022.05.013",
+  "title": "Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq",
+  "url": "https://doi.org/10.1016/j.cell.2022.05.013",
+  "abstract": "A central goal of genetics is to define the relationships between genotypes and phenotypes. High-content phenotypic screens such as Perturb-seq (pooled CRISPR-based screens with single-cell RNA-sequencing readouts) enable massively parallel functional genomic mapping but, to date, have been used at limited scales. Here, we perform genome-scale Perturb-seq targeting all expressed genes with CRISPR interference (CRISPRi) across >2.5 million human cells and present a framework to power biological discovery with the resulting genotype-phenotype map. We use transcriptional phenotypes to predict the function of poorly-characterized genes, uncovering new regulators of ribosome biogenesis (including CCDC86, ZNF236, and SPATA5L1), transcription (C7orf26), and mitochondrial respiration (TMEM242). In addition to assigning gene function, single-cell transcriptional phenotypes allow for in-depth dissection of complex cellular phenomena – from RNA processing to differentiation. We leverage this ability to systematically identify the genetic drivers and consequences of aneuploidy and to discover an unanticipated layer of stress-specific regulation of the mitochondrial genome. Our information-rich genotype-phenotype map reveals a multidimensional portrait of gene function and cellular behavior.",
+  "authors": "J. Replogle, R. Saunders, Angela N. Pogson, Jeffrey A. Hussmann, A. LeNail, Alina Guna, Lauren G. Mascibroda, E. Wagner",
+  "venue": "bioRxiv",
+  "year": 2021,
+  "citations": 749,
+  "found_by": [
+   "s2:references:doi:10.1038/s41592-024-02201-0"
+  ],
+  "extra": {
+   "pmcid": "PMC9380471"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "基因组规模Perturb-seq扰动图谱，虚拟细胞关键数据资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "基因组规模Perturb-seq图谱，扰动预测核心数据资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基因组规模Perturb-seq（多重CRISPRi+scRNA-seq）",
+  "data": "K562与RPE1细胞系，数千个CRISPRi敲低扰动",
+  "scenario": "基因型-表型图谱绘制",
+  "benchmark": "首个基因组规模Perturb-seq，无直接对比对象",
+  "results": "揭示RNA剪接、分化、染色体不稳定等多维表型，发现线粒体基因组应激特异调控",
+  "availability": "",
+  "limitations": "仅两个细胞系；CRISPRi为敲低非敲除；表型限于转录组",
+  "summary": "报告首个基因组规模Perturb-seq筛选，用紧凑多重CRISPRi文库在K562与RPE1中以scRNA-seq测定数千个功能缺失扰动。利用扰动规模与多样性研究RNA剪接、分化、染色体不稳定等复杂表型并发现基因功能。反转分析聚焦调控网络，揭示线粒体基因组未预期的应激特异调控。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

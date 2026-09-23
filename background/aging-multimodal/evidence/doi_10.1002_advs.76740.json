@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1002/advs.76740",
+  "title": "Pasta, a Versatile Transcriptomic Clock, Maps the Chemical and Genetic Determinants of Aging and Rejuvenation",
+  "url": "https://doi.org/10.1002/advs.76740",
+  "abstract": "With the growing burden of age-related diseases, understanding and modulating the aging process has become a priority. Transcriptomic aging clocks (TACs) can track biological age but remain limited by platform dependence, tissue specificity, or restricted accessibility. To address this, we developed Pasta, a robust and broadly applicable human TAC built using a novel ‘age-shift’ learning framework. Pasta accurately predicted relative age across diverse tissues, data types, including bulk and single-cell RNA-Seq as well as microarray data, and species. Its predictions aligned with senescent and stem-like cellular states, with model coefficients enriched for p53 and DNA damage response pathways. Pasta’s age scores correlated with tumor grade and patient survival in several cancer types, indicating potential clinical relevance. Applied to the Connectivity Map L1000 dataset, Pasta identified both established and previously unrecognized age-modulatory compounds and genetic perturbations, highlighting mitochondrial translation and mRNA splicing as key determinants of cellular propensity for aging and rejuvenation, respectively. Experimental validation confirmed pralatrexate as a potent senescence inducer and piperlongumine as a rejuvenating agent. Together, these findings establish Pasta as a versatile and accessible tool for aging research and therapeutic discovery.",
+  "authors": "Jérôme Salignon, Maria Tsiokou, Patricia Marqués, Enriqueta Rodríguez-Diaz, H. Ang, Federico Pietrocola, Christian G. Riedel",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 3,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2026.08.026"
+  ],
+  "extra": {
+   "pmcid": "PMC13403736"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Pasta转录组时钟，跨组织跨物种，方法有新意。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Pasta转录组时钟，跨组织跨物种，公开框架",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建跨组织转录组衰老时钟Pasta",
+  "data": "多组织/多平台转录组；含CMAP L1000等扰动数据",
+  "scenario": "跨组织/平台年龄预测与扰动筛选",
+  "benchmark": "MultiTIMER、tAge、RNAAgeCalc等现有多组织转录组时钟",
+  "results": "Pasta优于MultiTIMER和tAge；可区分衰老、静息和干细胞；可分层肿瘤分级和生存；p53相关基因贡献显著",
+  "availability": "未明确；文中批评部分时钟无可用软件",
+  "limitations": "转录组噪声和批次效应；跨平台泛化仍受限；部分验证依赖公开扰动数据",
+  "summary": "研究提出Pasta，一种可跨组织和实验平台使用的转录组衰老时钟。作者针对现有多组织转录组时钟泛化差、可用性低的问题，训练并验证Pasta，并将其应用于化学和遗传扰动数据。结果显示Pasta优于MultiTIMER和tAge，能区分衰老/静息/干细胞状态，揭示p53相关基因贡献，并可分层肿瘤分级和生存。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

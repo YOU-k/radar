@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s44320-025-00131-3",
+  "title": "PerturbNet predicts single-cell responses to unseen chemical and genetic perturbations.",
+  "url": "https://doi.org/10.1038/s44320-025-00131-3",
+  "abstract": "Chemical and genetic perturbations, such as those induced by small molecules and CRISPR, effect complex changes in the molecular states of cells. Despite advances in high-throughput single-cell perturbation screening technology, the space of possible perturbations is far too large to measure exhaustively. Here, we introduce PerturbNet, a flexible deep generative model designed to predict the distribution of cell states induced by unseen chemical or genetic perturbations. PerturbNet accurately predicts gene expression changes in response to unseen small molecules based on their chemical structures while also accounting for key covariates such as dosage and cell type. Moreover, PerturbNet accurately predicts the distribution of single-cell gene expression states following CRISPR activation or CRISPR interference by leveraging gene functional annotations. Our approach significantly outperforms previous methods, particularly for predicting the effects of perturbing completely unseen genes. Finally, we demonstrate for the first time that amino acid sequence embeddings can be used to predict gene expression changes induced by missense mutations. We use PerturbNet to predict the effects of all point mutations in GATA1 and nominate variants that significantly impact the cell state distribution of human hematopoietic stem cells. Using a crystal structure of GATA1 bound to DNA, we validate that these large-effect variants occur in the core DNA-contact region of GATA1 and tend to involve large changes in amino acid side-chain volume.",
+  "authors": "Yu H, Qian W, Song Y, Welch JD.",
+  "venue": "Molecular systems biology",
+  "year": 2025,
+  "citations": 21,
+  "found_by": [
+   "eupmc:Perturb-seq CRISPR screen deep"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12322087",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "深度生成模型预测未见扰动细胞状态，属虚拟细胞核心",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "虚拟细胞扰动响应预测，泛化到未见化学/遗传扰动",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PerturbNet预测未见扰动单细胞响应",
+  "data": "化学与遗传扰动scRNA-seq；Perturb-seq等",
+  "scenario": "扰动响应预测与虚拟筛选",
+  "benchmark": "scGen、CPA、chemCPA、GEARS、Biolord",
+  "results": "可预测未见化学和遗传扰动；捕捉细胞状态分布变化而非仅均值",
+  "availability": "文中未明确提及",
+  "limitations": "扰动空间巨大；跨细胞类型与组合扰动泛化仍受限",
+  "summary": "PerturbNet旨在预测细胞对未见化学和遗传扰动的单细胞转录响应。方法利用扰动筛选数据学习扰动与细胞状态的联合表征，并预测扰动引起的细胞状态分布变化。相比仅预测均值或新组合的既有方法，它强调对全新扰动和状态选择性效应的建模，为虚拟扰动筛选提供通用框架。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

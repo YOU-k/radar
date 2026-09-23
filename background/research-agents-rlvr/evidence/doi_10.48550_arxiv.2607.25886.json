@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2607.25886",
+  "title": "RSIBench-Data: Benchmarking Data-Centric Research for Recursive Self-Improvement",
+  "url": "https://doi.org/10.48550/arXiv.2607.25886",
+  "abstract": "Recursive self-improvement requires turning evidence of model failures into better models. Data-centric post-training research entails diagnosing capability gaps, designing and validating training-data strategies, and learning from checkpoint feedback. Can LLM agents automate this loop? Existing benchmarks entangle research decisions with optimization, serving, evaluation, and systems implementation, obscuring agents'research capability. We introduce RSIBench-Data, a controlled benchmark of LLM agents as data-centric researchers with a fixed post-training stack. Agents iteratively revise training-data strategies for a fixed target model; training and serving use Tinker-backed services, official evaluation runs through Harbor and E2B sandboxes, and budgets are fixed across agents. We evaluate four frontier agents on six benchmarks across software engineering, terminal use, scientific question answering, and mathematics. Agents demonstrate core data-centric research capabilities: in 58.33\\% of settings, they improve upon the first valid attempt by refining strategies from feedback. However, improvement is inconsistent. Among searches continuing after the best observed score, 78.26\\% end with a lower-scoring final attempt, while the rest only recover the same peak. A strong candidate may therefore appear early or midway through a run even as later revisions fail. Trajectory analysis identifies four patterns in stronger runs: accurate hypotheses, validation-grounded supervision, behavior-aligned data, and preservation of strong checkpoints. These findings suggest that current agents can make useful data-centric discoveries but cannot yet translate feedback into consistent improvements. RSIBench-Data provides a measurable, auditable testbed for the research capabilities required for recursive self-improvement. We open-source our code at https://github.com/evolvent-ai/RSIBench-Data.",
+  "authors": "Fanqing Meng, Lingxiao Du, Qiguang Chen, Ziqi Zhao, Haocheng Lu, Mengkang Hu, M. Shieh",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 9,
+  "found_by": [
+   "s2kw:recursive self-improvement LLM"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2607.25886"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "数据中心递归自改进基准，固定栈控制变量，契合。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "数据中心RSI受控基准，隔离研究能力",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "RSIBench-Data：固定后训练栈的数据中心研究基准",
+  "data": "6个基准（软件工程、终端、科学问答、数学）；4个前沿智能体",
+  "scenario": "数据中心后训练研究自动化",
+  "benchmark": "Tinker训练服务、Harbor与E2B沙箱官方评测",
+  "results": "58.33%设置中智能体通过反馈改进首次有效尝试；78.26%继续搜索以更低分收尾",
+  "availability": "",
+  "limitations": "改进不一致；多数继续搜索反而降低最终得分",
+  "summary": "为隔离智能体的数据中心研究能力，提出RSIBench-Data受控基准。方法为固定后训练栈，智能体迭代修改训练数据策略，训练服务与评测沙箱及预算均固定。评测4个前沿智能体在6个基准上，58.33%设置能改进首次尝试，但78.26%的继续搜索以更低分收尾，改进不稳定。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

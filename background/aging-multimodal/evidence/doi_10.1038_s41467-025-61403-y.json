@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-61403-y",
+  "title": "Multiomics and cellular senescence profiling of aging human skeletal muscle uncovers Maraviroc as a senotherapeutic approach for sarcopenia.",
+  "url": "https://doi.org/10.1038/s41467-025-61403-y",
+  "abstract": "Cellular senescence is a hallmark of organismal aging but how it drives aging in human tissues is not fully understood. Here we leverage single nucleus multiomics to profile senescence in mononucleated cells of human skeletal muscle and provide the first senescence atlas. We demonstrate the intra- and inter-populational transcriptomic and epigenomic heterogeneity and dynamics of cellular senescence. We also identify commonalities and variations in senescence-associated secretory phenotypes (SASPs) among the cells and elucidate SASP mediated cellular interactions and niche deregulation. Furthermore, we identify targetable SASPs and demonstrate the possibility of using Maraviroc as a pharmacological senotherapeutic for treating age-associated sarcopenia. Lastly, we define transcription factors that govern senescence state and SASP induction in aging muscle and elucidate the key function and mechanism of JUNB in SASP activation. Altogether, our findings demonstrate the prevalence and function of cellular senescence in skeletal muscle and identify a novel pharmacological intervention for sarcopenia.",
+  "authors": "Li Y, Li C, Zhou Q, Liu X, Qiao Y, Xie T, Sun H, Ong MT, Wang H.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 30,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC12228793",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "人骨骼肌单核多组学衰老图谱，含公开数据，契合单细胞衰老建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单核多组学衰老图谱，含公开数据，可支撑多模态时钟",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "单核RNA+ATAC多组学解析肌肉衰老",
+  "data": "人骨骼肌单核RNA-seq+ATAC-seq，年轻/年老",
+  "scenario": "肌少症衰老细胞图谱",
+  "benchmark": "既往小鼠/人肌肉衰老研究",
+  "results": "构建首个衰老人肌衰老细胞图谱；揭示SASP异质性与动态；提出Maraviroc作为senotherapeutic",
+  "availability": "",
+  "limitations": "人肌肉SnC/SASP信息稀疏，既往证据冲突",
+  "summary": "研究对人年轻和年老骨骼肌新鲜单核细胞进行单核RNA-seq与ATAC-seq联合图谱分析。整合分析构建衰老人肌衰老细胞图谱，解析SASP异质性和动态，并评估衰老肌卫星细胞通过SASP调控微环境。发现Maraviroc可作为肌少症衰老治疗候选策略。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.02817",
+  "title": "Cliff: Learning Process Rewards from the First Mistake",
+  "url": "https://arxiv.org/abs/2609.02817",
+  "abstract": "Reinforcement learning with verifiable rewards (RLVR) has emerged as a powerful paradigm for large language model (LLM) post-training, but its reliance on coarse outcome rewards leads to limited guidance on intermediate reasoning processes. Existing approaches such as process reward modeling and on-policy distillation introduce additional constraints, such as reliance on a specialized reward model or assuming identical reasoning patterns between teacher and student. Nevertheless, we observe that once a reasoning process first goes wrong, evaluating the subsequent reasoning provides limited additional information, as it is already conditioned on an invalid prefix. Therefore, we propose Cliff, a reward shaping strategy that utilizes an off-the-shelf LLM as a teacher to identify the first mistake in each rollout. As a result, the rollout is naturally decomposed into two parts: a correct prefix and an incorrect suffix. Cliff then converts this signal into token-level advantages, assigning positive advantages for the correct prefix and negative feedback afterward. Experiments across 12 different scenarios demonstrate that Cliff consistently improves reasoning performance, outperforming on-policy distillation by 15% and standard GRPO by 7%, even with teachers of modest capability. Furthermore, we analyse the role of ``ground truth''in Cliff and investigate its training dynamics. These results establish Cliff as a simple, general and effective approach for improving RLVR with richer, fine-grained supervision.",
+  "authors": "Peixuan Han, Runnan Wang, Ketan Ramaneti, Jie Hao, Gerald Friedland, Chris Kong",
+  "venue": "",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2501.12599"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "从首个错误学习过程奖励，RLVR新方法有定量支撑",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "从首个错误学习过程奖励，RLVR过程奖励新方法有定量结果",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "用现成LLM教师定位首个错误，将轨迹分为正确前缀与错误后缀并转为token级优势（Cliff）",
+  "data": "12个不同场景的推理任务",
+  "scenario": "LLM推理RLVR过程奖励塑造",
+  "benchmark": "对比on-policy distillation与标准GRPO",
+  "results": "在12个场景中一致提升推理性能，优于on-policy distillation 15%、优于标准GRPO 7%，即使教师能力一般",
+  "availability": "",
+  "limitations": "依赖教师模型定位首个错误，未讨论教师错误的影响",
+  "summary": "本文观察到推理过程一旦首次出错，后续评估提供的信息有限，据此提出Cliff奖励塑造策略。Cliff用现成LLM教师识别每次rollout中的首个错误，将轨迹分解为正确前缀与错误后缀，并转换为token级优势，对正确前缀给正优势、之后给负反馈。在12个场景中Cliff一致提升推理性能，优于on-policy distillation 15%、优于标准GRPO 7%，即使教师能力一般也有效。"
+ },
+ "sections": [
+  "7"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2605.28388",
+  "title": "Mechanistically Interpreting the Role of Sample Difficulty in RLVR for LLMs",
+  "url": "https://doi.org/10.48550/arXiv.2605.28388",
+  "abstract": "Reinforcement Learning with Verifiable Reward (RLVR) is empirically shown to notably enhance the reasoning performance of large language models (LLMs), particularly in mathematics and programming. However, the mechanistic role of Sample Difficulty in RLVR remains poorly understood. In this paper, we investigate RLVR through the lens of difficulty-wise and one-sample analysis. We find that sample difficulty has a non-monotonic effect on RLVR: easy and medium-difficulty problems yield the strongest and most stable reasoning improvements, whereas overly hard problems often provide weak learning signals, induce degenerate behaviors such as answer repetition or skipping necessary computation, and can ultimately degrade the model's pre-existing capabilities. Beyond the obverse of response, we further analyze the model's internal feature dynamics using Temporal Sparse Autoencoders (T-SAE). Easy problems mainly reinforce direct-answer and basic-computation features while suppressing deliberative-reasoning features; hard problems activate reasoning-related features but become useful only when successful trajectories are sampled; medium-difficulty problems provide a more balanced signal, strengthening both computation and multi-step reasoning features. Motivated by these findings, we propose difficulty-adaptive strategies for hard-sample utilization, using backward-reasoning reformulation and T-SAE-guided training signals to improve reward density and credit assignment during RLVR. Overall, our results identify sample difficulty as a key factor governing both the optimization dynamics and representation evolution of RLVR.",
+  "authors": "Yue Cheng, Jia-Jun Zhang, Xiao-Hui Gao, Weiwei Xing, Zheng Wang, Zhanxing Zhu",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2502.19634"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2605.28388"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "机制性分析RLVR样本难度，非单调效应有实证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "机制性解释RLVR样本难度作用，对训练范式有指导意义",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "难度分层与单样本分析，结合时序稀疏自编码器（T-SAE）",
+  "data": "数学与编程推理任务，难度分层样本",
+  "scenario": "RLVR样本难度机制分析",
+  "benchmark": "不同难度样本的RLVR训练对比",
+  "results": "样本难度对RLVR呈非单调影响：易与中等难度提升最强最稳定，过难问题学习信号弱、诱发退化行为并可能损害原有能力",
+  "availability": "",
+  "limitations": "未给出具体量化提升数值与模型规模",
+  "summary": "本文从难度分层与单样本分析视角研究RLVR中样本难度的机制作用。发现样本难度对RLVR呈非单调影响：易与中等难度问题带来最强最稳定的推理提升，过难问题学习信号弱、诱发答案重复或跳过必要计算等退化行为并可能损害模型原有能力。用T-SAE分析内部特征动态发现易题强化直接作答与基础计算特征、抑制审慎推理特征，难题激活推理特征但仅在采样到成功轨迹时有用，中等难度提供更平衡信号，据此提出难度自适应策略。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

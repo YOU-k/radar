@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1109/cvpr52729.2023.01499",
+  "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+  "url": "https://doi.org/10.1109/CVPR52729.2023.01499",
+  "abstract": "This paper demonstrates an approach for learning highly semantic image representations without relying on hand-crafted data-augmentations. We introduce the Image-based Joint-Embedding Predictive Architecture (I-JEPA), a non-generative approach for self-supervised learning from images. The idea behind I-JEPA is simple: from a single context block, predict the representations of various target blocks in the same image. A core design choice to guide I-JEPA towards producing semantic representations is the masking strategy; specifically, it is crucial to (a) sample target blocks with sufficiently large scale (semantic), and to (b) use a sufficiently informative (spatially distributed) context block. Empirically, when combined with Vision Transformers, we find I-JEPA to be highly scalable. For instance, we train a ViT-Huge/14 on ImageNet using 16 A100 GPUs in under 72 hours to achieve strong downstream performance across a wide range of tasks, from linear classification to object counting and depth prediction.",
+  "authors": "Mahmoud Assran, Quentin Duval, Ishan Misra, Piotr Bojanowski, Pascal Vincent, Michael G. Rabbat, Yann LeCun, Nicolas Ballas",
+  "venue": "Computer Vision and Pattern Recognition",
+  "year": 2023,
+  "citations": 1253,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2411.04983"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2301.08243"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "I-JEPA 核心工作，隐空间预测，有开源代码，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "I-JEPA奠基性工作，高引且开源，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "I-JEPA：联合嵌入预测架构，预测同图目标块表征",
+  "data": "图像数据，ImageNet；ViT-Huge/14训练",
+  "scenario": "图像自监督语义表征学习",
+  "benchmark": "ImageNet及下游任务：线性分类、物体计数、深度预测",
+  "results": "16张A100训练ViT-Huge/14少于72小时，下游任务表现强",
+  "availability": "未提及",
+  "limitations": "未明确讨论局限；依赖目标块尺度与上下文块信息量等掩码策略",
+  "summary": "本文提出I-JEPA，一种不依赖手工数据增强的图像自监督学习方法。它从单个上下文块预测同一图像中多个目标块的表征，并通过采样大尺度目标块和空间分布充分的上下文块引导语义表征。发现结合Vision Transformer后高度可扩展，用16张A100在ImageNet训练ViT-Huge/14少于72小时，在线性分类、物体计数和深度预测等下游任务表现强。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

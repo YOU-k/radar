@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/science.aax4438",
+  "title": "Exploring genetic interaction manifolds constructed from rich single-cell phenotypes",
+  "url": "https://doi.org/10.1126/science.aax4438",
+  "abstract": "Manifold destiny Mapping of genetic interactions (GIs) is usually based on cell fitness as the phenotypic readout, which obscures the mechanistic origin of interactions. Norman et al. developed a framework for mapping and understanding GIs. This approach leverages high-dimensional single-cell RNA sequencing data gathered from CRISPR-mediated, pooled perturbation screens. Diverse transcriptomic phenotypes construct a “manifold” representing all possible states of the cell. Each perturbation and GI projects the cell state to a particular position on this manifold, enabling unbiased ordering of genes in pathways and systematic classifications of GIs. Science, this issue p. 786 Rich phenotyping with single-cell RNA sequencing reveals principles and mechanisms of genetic interactions in mammalian cells. How cellular and organismal complexity emerges from combinatorial expression of genes is a central question in biology. High-content phenotyping approaches such as Perturb-seq (single-cell RNA-sequencing pooled CRISPR screens) present an opportunity for exploring such genetic interactions (GIs) at scale. Here, we present an analytical framework for interpreting high-dimensional landscapes of cell states (manifolds) constructed from transcriptional phenotypes. We applied this approach to Perturb-seq profiling of strong GIs mined from a growth-based, gain-of-function GI map. Exploration of this manifold enabled ordering of regulatory pathways, principled classification of GIs (e.g., identifying suppressors), and mechanistic elucidation of synergistic interactions, including an unexpected synergy between CBL and CNN1 driving erythroid differentiation. Finally, we applied recommender system machine learning to predict interactions, facilitating exploration of vastly larger GI manifolds.",
+  "authors": "Thomas M. Norman, Max A. Horlbeck, J. Replogle, Alex Y. Ge, Albert Xu, M. Jost, Luke A. Gilbert, J. Weissman",
+  "venue": "Science",
+  "year": 2019,
+  "citations": 435,
+  "found_by": [
+   "s2:references:doi:10.1038/s41592-024-02201-0"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞扰动表型流形框架，扰动响应预测奠基性工作",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞表型流形刻画遗传互作，扰动建模奠基工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Perturb-seq高维表型构建细胞状态流形分析框架",
+  "data": "CRISPR扰动筛选scRNA-seq，哺乳动物细胞",
+  "scenario": "遗传互作映射与通路排序",
+  "benchmark": "基于生长增益功能GI图谱",
+  "results": "流形实现调控通路排序与GI原则性分类，揭示遗传互作机制",
+  "availability": "",
+  "limitations": "依赖强GI筛选，未覆盖全基因组互作",
+  "summary": "作者提出从高维单细胞表型构建细胞状态流形以映射遗传互作。方法基于CRISPR介导的pooled Perturb-seq筛选，将每个扰动与GI投射到流形特定位置。发现该流形可实现调控通路无偏排序和GI的系统分类，揭示哺乳动物细胞遗传互作原理。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

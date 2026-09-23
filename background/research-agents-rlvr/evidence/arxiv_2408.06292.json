@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "arxiv:2408.06292",
+  "title": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery",
+  "url": "https://arxiv.org/abs/2408.06292",
+  "abstract": "One of the grand challenges of artificial general intelligence is developing agents capable of conducting scientific research and discovering new knowledge. While frontier models have already been used as aides to human scientists, e.g. for brainstorming ideas, writing code, or prediction tasks, they still conduct only a small part of the scientific process. This paper presents the first comprehensive framework for fully automatic scientific discovery, enabling frontier large language models to perform research independently and communicate their findings. We introduce The AI Scientist, which generates novel research ideas, writes code, executes experiments, visualizes results, describes its findings by writing a full scientific paper, and then runs a simulated review process for evaluation. In principle, this process can be repeated to iteratively develop ideas in an open-ended fashion, acting like the human scientific community. We demonstrate its versatility by applying it to three distinct subfields of machine learning: diffusion modeling, transformer-based language modeling, and learning dynamics. Each idea is implemented and developed into a full paper at a cost of less than $15 per paper. To evaluate the generated papers, we design and validate an automated reviewer, which we show achieves near-human performance in evaluating paper scores. The AI Scientist can produce papers that exceed the acceptance threshold at a top machine learning conference as judged by our automated reviewer. This approach signifies the beginning of a new era in scientific discovery in machine learning: bringing the transformative benefits of AI agents to the entire research process of AI itself, and taking us closer to a world where endless affordable creativity and innovation can be unleashed on the world's most challenging problems. Our code is open-sourced at https://github.com/SakanaAI/AI-Scientist",
+  "authors": "Chris Lu, Cong Lu, R. Lange, J. Foerster, Jeff Clune, David Ha",
+  "venue": "arXiv.org",
+  "year": 2024,
+  "citations": 1151,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2409.11363",
+   "s2:references:doi:10.48550/arxiv.2503.00096"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "首个端到端自动科研智能体框架，代码开源，影响力大。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "首个端到端自动科研框架，引用超千，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "全自动LLM科研流水线（构思-编码-实验-写作-评审）",
+  "data": "3个ML子领域（扩散模型、Transformer语言建模、学习动力学）",
+  "scenario": "端到端自动科研发现",
+  "benchmark": "自研自动评审器（近人类评分）；顶会接收阈值",
+  "results": "每篇论文成本<15美元；生成论文可超过顶会接收阈值；自动评审达近人类水平",
+  "availability": "代码开源（GitHub: SakanaAI/AI-Scientist）",
+  "limitations": "仅在ML三个子领域验证；依赖自动评审器，未含真实同行评审",
+  "summary": "提出首个全自动科研框架The AI Scientist，让LLM独立完成从构思到发表的全流程。方法上由LLM生成想法、写代码、跑实验、可视化、撰写完整论文，并用模拟评审自动打分。在扩散模型、语言建模、学习动力学三领域验证，每篇成本低于15美元，自动评审接近人类水平，论文可超顶会接收阈值。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

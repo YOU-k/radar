@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2605.26087",
+  "title": "DiscoverPhysics: Benchmarking LLMs for Out-of-the-Box Scientific Thinking",
+  "url": "https://doi.org/10.48550/arXiv.2605.26087",
+  "abstract": "Frontier LLMs now perform strongly across a wide range of physics evaluations, but it is hard to disentangle genuine reasoning from recall of established science. We introduce DiscoverPhysics, an interactive benchmark that asks a LLM agent to discover the laws of motion of a simulated world whose physics deliberately deviates from our own. We construct 22 worlds governed by, among others, screened and fractional-power gravity, multi-species couplings, hidden dark-matter-like particles, non-coordinate-free physics, and time-varying interactions. Each world is generated on demand by an N-body simulator, for which the agent proposes several rounds of experiments, observes raw trajectory data, and ultimately submits both a natural-language explanation of the world's physics and a Python implementation of the inferred law. Because solving a world requires the agent to design informative experiments and revise its hypotheses, the benchmark probes long-horizon reasoning over an experimental history. We evaluate submissions along two complementary axes: trajectory MSE on held-out particles and an LLM-judged explanation score following an expert-written rubric assessing conceptual understanding of each world. Across eleven frontier models, we find that the strongest agents pass only half of the worlds and consistently fail on those where latent structure must be uncovered. Open-source models lag substantially behind commercial models, both in their ability to design informative experiments and in extracting conclusions from the data. We further find that good predictive accuracy does not guarantee high explanation quality and that conceptual understanding depends on hypothesis refinement through well-chosen experiments.",
+  "authors": "M. Wiemann, Lindsay M. Smith, Peter Melchior, S. Mishra-Sharma, A. Wilson, P. Izmailov, C. Cuesta-Lázaro",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 6,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2503.00096"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2605.26087"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "交互式基准测LLM科学发现能力，避免记忆干扰",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "DiscoverPhysics评测科学发现而非记忆，契合科研智能体",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "交互式N体模拟世界，智能体设计实验并推断运动定律",
+  "data": "22个偏离真实物理的模拟世界，N体模拟器按需生成",
+  "scenario": "LLM科学发现与物理推理评估",
+  "benchmark": "DiscoverPhysics，11个前沿模型对比",
+  "results": "最强智能体仅通过半数世界，在需揭示潜在结构的世界持续失败；开源模型显著落后于商业模型",
+  "availability": "",
+  "limitations": "未说明开源模型具体表现数值与失败细节",
+  "summary": "本文提出DiscoverPhysics，一个交互式基准，要求LLM智能体发现刻意偏离真实物理的模拟世界的运动定律。构建22个世界，涵盖屏蔽引力、分数幂引力、多物种耦合、隐藏暗物质粒子等，智能体需多轮设计实验、观察原始轨迹数据并提交自然语言解释与Python实现。评估11个前沿模型发现最强智能体仅通过半数世界，在需揭示潜在结构的世界持续失败，开源模型显著落后于商业模型。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2310.07033",
+  "title": "Computational Pathology at Health System Scale - Self-Supervised Foundation Models from Three Billion Images",
+  "url": "https://doi.org/10.48550/arXiv.2310.07033",
+  "abstract": "Recent breakthroughs in self-supervised learning have enabled the use of large unlabeled datasets to train visual foundation models that can generalize to a variety of downstream tasks. While this training paradigm is well suited for the medical domain where annotations are scarce, large-scale pre-training in the medical domain, and in particular pathology, has not been extensively studied. Previous work in self-supervised learning in pathology has leveraged smaller datasets for both pre-training and evaluating downstream performance. The aim of this project is to train the largest academic foundation model and benchmark the most prominent self-supervised learning algorithms by pre-training and evaluating downstream performance on large clinical pathology datasets. We collected the largest pathology dataset to date, consisting of over 3 billion images from over 423 thousand microscopy slides. We compared pre-training of visual transformer models using the masked autoencoder (MAE) and DINO algorithms. We evaluated performance on six clinically relevant tasks from three anatomic sites and two institutions: breast cancer detection, inflammatory bowel disease detection, breast cancer estrogen receptor prediction, lung adenocarcinoma EGFR mutation prediction, and lung cancer immunotherapy response prediction. Our results demonstrate that pre-training on pathology data is beneficial for downstream performance compared to pre-training on natural images. Additionally, the DINO algorithm achieved better generalization performance across all tasks tested. The presented results signify a phase change in computational pathology research, paving the way into a new era of more performant models based on large-scale, parallel pre-training at the billion-image scale.",
+  "authors": "Gabriele Campanella, Ricky Kwan, Eugene Fluder, Jennifer Zeng, Aryeh Stock, Brandon Veremis, A. Polydorides, C. Hedvat",
+  "venue": "arXiv.org",
+  "year": 2023,
+  "citations": 46,
+  "found_by": [
+   "s2:references:doi:10.1038/s41467-025-58796-1"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "病理三亿图像自监督基础模型，科学数据迁移且系统评测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "30亿图像病理基础模型，规模里程碑，被广泛引用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "MAE与DINO自监督预训练ViT",
+  "data": "病理图像，30亿张图、42.3万张切片",
+  "scenario": "计算病理基础模型",
+  "benchmark": "自然图像预训练对比；6项临床任务",
+  "results": "病理数据预训练优于自然图像；DINO算法表现更佳",
+  "availability": "",
+  "limitations": "仅对比MAE与DINO，未覆盖更多SSL算法",
+  "summary": "该工作构建了迄今最大病理数据集，含30亿张图像、42.3万张切片。采用MAE和DINO两种自监督算法预训练视觉Transformer，并在乳腺癌检测、炎症性肠病检测、雌激素受体预测、EGFR突变预测和免疫治疗响应预测等六项临床任务上评估。结果显示病理数据预训练优于自然图像预训练，且DINO算法表现更佳。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

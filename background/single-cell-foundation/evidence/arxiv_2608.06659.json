@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.06659",
+  "title": "CellWorld: From Gene-Level Reconstruction to Latent Cell Prediction in Spatial Transcriptomics Foundation Models",
+  "url": "https://arxiv.org/abs/2608.06659v1",
+  "abstract": "This paper shows that latent-space predictive pretraining can provide a scalable route to foundation models for spatial transcriptomics. Existing spatial transcriptomics foundation models primarily reconstruct masked gene identities or expression values, potentially encouraging the reproduction of assay-specific technical variation and limiting representation transferability. To avoid directly reconstructing such variation, we shift the prediction target from observed gene measurements to latent cell representations and introduce CellWorld, which predicts the latent representations of masked cells from visible spatial context and a limited partial-expression hint. We pretrain four CellWorld variants, spanning 5.74M to 94.56M trainable parameters, on a corpus of 46 million human cells. Our controlled scaling experiments show that performance improves with model capacity, particularly on spatial tasks, while spatial transfer depends more on sufficient optimization and broad biological source diversity than on cell count alone. Across four held-out datasets, even CellWorld-Small, with 5.74M trainable parameters, outperforms every baseline on all 11 linear-probe benchmarks and all seven fine-tuned spatial benchmarks. Most notably, a frozen CellWorld-Large pretrained on only 5\\% of the corpus with broad biological source coverage outperforms every fully fine-tuned baseline across all seven spatial benchmarks. Code is available at https://github.com/UoM-HealthAI/CellWorld.",
+  "authors": "Haiping Liu, Qian Zhao, Lijing Lin, Jingyuan Sun, Hongpeng Zhou",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "空间转录组基础模型，潜空间预测预训练，方法有新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "空间转录组基础模型，潜空间预测新范式，具方法创新",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "潜在细胞表征预测预训练（JEPA式）",
+  "data": "4600万人细胞，3平台11器官，4个模型变体",
+  "scenario": "空间转录组基础模型",
+  "benchmark": "11个线性探针+7个空间微调基准，对比现有ST基础模型",
+  "results": "CellWorld-Small(5.74M)在全部11个线性探针和7个空间基准超越所有基线；仅用5%语料的冻结Large在7个空间基准超越全部微调基线",
+  "availability": "代码公开（GitHub）",
+  "limitations": "空间迁移依赖生物来源多样性与充分优化，而非细胞数量；细胞级目标歧义需部分表达提示",
+  "summary": "提出CellWorld，将预测目标从基因测量转向潜在细胞表征，避免重建测定特异技术变异。用空间Transformer建模细胞交互，以可见上下文加部分表达提示预测被掩码细胞的潜在表征，预训练4个变体（5.74M–94.56M参数）。发现性能随容量提升，空间迁移更依赖生物来源多样性与优化，小模型即超越所有基线。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

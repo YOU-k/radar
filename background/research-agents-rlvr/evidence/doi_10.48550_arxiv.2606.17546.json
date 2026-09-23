@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2606.17546",
+  "title": "SEAGym: An Evaluation Environment for Self-Evolving LLM Agents",
+  "url": "https://doi.org/10.48550/arXiv.2606.17546",
+  "abstract": "Self-evolving LLM-based agents improve mainly by changing their agent harness: the structured execution layer around a base model, including prompts, memory, tools, middleware, runtime state, and the model-tool interaction loop. Existing evaluations often reduce this process to isolated task scores or a single sequential curve, obscuring whether an update produces reusable improvement, overfits recent tasks, increases cost, or harms older behavior. We introduce SEAGym, an evaluation environment for measuring agent harness updates across training, validation, test, replay, and cost records. SEAGym turns Harbor-compatible benchmarks into dynamic self-evolution task sources with train batches, frozen update-validation, held-out ID and OOD transfer views, replay diagnostics, and saved snapshot and metric records. Instantiating SEAGym on Terminal-Bench 2.0 and HLE, we compare ACE, TF-GRPO, and AHE under a shared epoch/batch protocol. The results show that these evaluation views provide complementary signals about the evolution process: frequent updates may fail to improve held-out performance, useful intermediate snapshots may collapse later, and source diversity and model backend can affect harness reliability.",
+  "authors": "Cong-Jie Zheng, Chuanyi Xue, Bin Liang, Jun Yang, Changshui Zhang",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 5,
+  "found_by": [
+   "s2:citations:arxiv:2502.10325"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "自进化智能体评测环境，契合自我改进与评测基准",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "自进化智能体评测环境，填补基准空白，可复现评测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SEAGym自进化智能体评估环境，多视图记录harness更新",
+  "data": "Terminal-Bench 2.0与HLE上的训练/验证/测试/回放/成本记录",
+  "scenario": "自进化LLM智能体harness评估",
+  "benchmark": "Terminal-Bench 2.0、HLE；对比ACE、TF-GRPO、AHE",
+  "results": "频繁更新未必提升留出性能，有用中间快照可能后期崩溃，源多样性与模型后端影响harness可靠性",
+  "availability": "",
+  "limitations": "仅实例化两个基准，未覆盖更广任务与长期演化",
+  "summary": "本文指出现有评估将智能体harness自进化简化为孤立分数或单条曲线，掩盖了可复用性、过拟合与成本等问题。作者提出SEAGym评估环境，将Harbor兼容基准转为动态自进化任务源，包含训练批次、冻结验证、ID/OOD迁移、回放诊断与快照记录。在Terminal-Bench 2.0和HLE上对比ACE、TF-GRPO、AHE发现，频繁更新未必改善留出性能，中间快照可能后期崩溃，源多样性与模型后端会影响可靠性。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

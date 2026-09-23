@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41514-026-00379-5",
+  "title": "scAgeClock: a single-cell transcriptome-based human aging clock model using gated multi-head attention neural networks.",
+  "url": "https://doi.org/10.1038/s41514-026-00379-5",
+  "abstract": "Aging clock models have emerged as a crucial tool for measuring biological age, with significant implications for anti-aging interventions and disease risk assessment. However, human aging clock models that offer single-cell resolution and account for cell and tissue heterogeneities remain underdeveloped. This study introduces scAgeClock, a novel gated multi-head attention neural network-based single-cell aging clock model. Leveraging a large-scale dataset of over 16 million single-cell transcriptome profiles from more than 40 human tissues and 400 cell types, scAgeClock demonstrates improved age prediction accuracy compared to baseline methods. Nearly half of the tissue-level cell types exhibit mean absolute errors of <10 years, with substantial variability in prediction accuracy observed across different cell types. Feature importance analysis reveals enrichment of aging clock genes related to ribosome, translation, defense response, viral life cycle, programmed cell death, and COVID-19 disease. A novel metric, the aging deviation index proposed by this study, revealed deceleration of ages in cells with higher differentiation potencies and tumor cells in higher phases or under metastasis, while acceleration of ages was observed in skin cells. Furthermore, scAgeClock is publicly available to facilitate future research and potential implementations.",
+  "authors": "Xie G.",
+  "venue": "npj aging",
+  "year": 2026,
+  "citations": 3,
+  "found_by": [
+   "eupmc:aging clock benchmark foundati"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13230536",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞转录组衰老时钟，1600万细胞，方法新且数据规模大",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞转录组衰老时钟，1600万细胞规模，方法有创新",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "门控多头注意力神经网络构建单细胞衰老时钟",
+  "data": "CZ CELLxGENE单细胞转录组，超7000万细胞",
+  "scenario": "单细胞水平生物学年龄预测",
+  "benchmark": "偏最小二乘、弹性网等基线模型",
+  "results": "scAgeClock精度高于基线方法，支持单细胞水平转录组年龄预测",
+  "availability": "",
+  "limitations": "主要依赖公共数据，组织覆盖仍偏血液，外部验证有限",
+  "summary": "研究提出scAgeClock，一种基于门控多头注意力神经网络的单细胞转录组人类衰老时钟。利用CZ CELLxGENE Discover大规模单细胞数据训练，并与多种基线方法比较。结果显示scAgeClock预测精度更高，可在单细胞水平估计转录组生物学年龄。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

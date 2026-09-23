@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-024-53457-1",
+  "title": "Predicting transcriptional responses to novel chemical perturbations using deep generative model for drug discovery.",
+  "url": "https://doi.org/10.1038/s41467-024-53457-1",
+  "abstract": "Understanding transcriptional responses to chemical perturbations is central to drug discovery, but exhaustive experimental screening of disease-compound combinations is unfeasible. To overcome this limitation, here we introduce PRnet, a perturbation-conditioned deep generative model that predicts transcriptional responses to novel chemical perturbations that have never experimentally perturbed at bulk and single-cell levels. Evaluations indicate that PRnet outperforms alternative methods in predicting responses across novel compounds, pathways, and cell lines. PRnet enables gene-level response interpretation and in-silico drug screening for diseases based on gene signatures. PRnet further identifies and experimentally validates novel compound candidates against small cell lung cancer and colorectal cancer. Lastly, PRnet generates a large-scale integration atlas of perturbation profiles, covering 88 cell lines, 52 tissues, and various compound libraries. PRnet provides a robust and scalable candidate recommendation workflow and successfully recommends drug candidates for 233 diseases. Overall, PRnet is an effective and valuable tool for gene-based therapeutics screening.",
+  "authors": "Qi X, Zhao L, Tian C, Li Y, Chen ZL, Huo P, Chen R, Liu X, Wan B, Yang S, Zhao Y.",
+  "venue": "Nature communications",
+  "year": 2024,
+  "citations": 49,
+  "found_by": [
+   "eupmc:virtual cell perturbation resp"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11513139",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PRnet 扰动条件生成模型，预测新化合物转录响应",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "PRnet 扰动响应生成模型，公开代码，虚拟细胞代表工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PRnet：扰动条件深度生成模型预测化学扰动转录响应",
+  "data": "约1亿bulk HTS观测、175,549化合物；数千万单细胞HTS、188化合物",
+  "scenario": "新化合物转录响应预测",
+  "benchmark": "CPA、chemCPA、scGen、Biolord、CellOT等",
+  "results": "PRnet可泛化到未实验扰动的新化合物，支持bulk和单细胞水平预测，并捕捉细胞异质性与基因级响应解释",
+  "availability": "",
+  "limitations": "依赖训练数据覆盖；新化学空间外推仍具挑战",
+  "summary": "作者提出PRnet，一种扰动条件深度生成模型，用于预测新化学扰动在bulk和单细胞水平的转录响应。模型以化合物SMILES和未扰动转录谱为输入，通过Perturb-adapter、Perturb-encoder和Perturb-decoder实现未见化合物泛化。PRnet在近1亿bulk观测和数千万单细胞观测上训练，可解释基因级响应并捕捉细胞异质性。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

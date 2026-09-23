@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2607.20572",
+  "title": "Auditing pretraining contamination in single-cell foundation model benchmarks",
+  "url": "https://arxiv.org/abs/2607.20572v1",
+  "abstract": "Single-cell foundation models (scFMs) such as Geneformer, scGPT, and Universal Cell Embeddings (UCE) are pretrained on tens of millions of cells drawn from public repositories. The same repositories underlie widely used integration benchmarks, creating an unmeasured risk that zero-shot benchmark performance reflects pretraining exposure rather than genuine generalization. We introduce \\textbf{scContam}, a per-cell audit framework that combines a MinHash-based gene-set fingerprint signal against the explicit pretraining corpus with a loss-based membership inference attack (MIA-scFM). Applied to four scIB benchmarks and three scFMs, we find that two of the most-cited benchmarks, PBMC 3k and the CELLxGENE human pancreatic islet atlas, contain extensive pretraining-overlap evidence ($80.4\\%$ and $77.0\\%$ of cells with fingerprint $p < 0.05$ against Genecorpus-30M), whereas the post-cutoff datasets AIDA v2 and Tahoe-100M show no overlap evidence ($0\\%$). A controlled re-pretraining experiment establishes that MIA-scFM AUROC scales monotonically with the model's capacity-to-data ratio (AUROC $0.494 \\to 0.690 \\to 0.881$ across properly-regularized, mildly-overfit, and aggressively-overfit regimes), demonstrating that production scFMs resist instance-level memorization but distributional contamination must be detected separately. A donor-matched, within-cell-type analysis with three architectures shows that contaminated cells embed measurably more tightly than donor-matched clean cells (permutation $p = 0.030, 0.014, < 0.002$, respectively), with a perfectly null AIDA negative control. Pretraining audits are tractable and should accompany scFM benchmark reporting.",
+  "authors": "Sarwan Ali",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "审计预训练污染，批判性基准，契合评测方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "揭示预训练污染，批判性基准审计，对评测可信度关键。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "scContam：MinHash指纹+MIA-scFM审计框架",
+  "data": "四个scIB基准、三个scFM，Genecorpus-30M",
+  "scenario": "预训练污染审计",
+  "benchmark": "PBMC 3k、胰腺胰岛图谱、AIDA v2、Tahoe-100M",
+  "results": "PBMC 3k与胰岛图谱分别80.4%、77.0%细胞指纹p<0.05；AIDA v2与Tahoe-100M为0%；MIA AUROC 0.494→0.690→0.881",
+  "availability": "代码、审计结果与图表开源",
+  "limitations": "生产级scFM抗实例记忆，分布污染需单独检测",
+  "summary": "提出scContam逐细胞审计框架，检测单细胞基础模型基准的预训练污染。结合MinHash基因集指纹与基于损失的成员推断攻击（MIA-scFM），应用于四个scIB基准和三个scFM。发现两个高引用基准存在大量预训练重叠证据，而截断后数据集无重叠，且MIA AUROC随模型容量数据比单调上升。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

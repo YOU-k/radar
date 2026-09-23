@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-59964-z",
+  "title": "Multi-organ metabolome biological age implicates cardiometabolic conditions and mortality risk.",
+  "url": "https://doi.org/10.1038/s41467-025-59964-z",
+  "abstract": "Multi-organ biological aging clocks across different organ systems have been shown to predict human disease and mortality. Here, we extend this multi-organ framework to plasma metabolomics, developing five organ-specific metabolome-based biological age gaps (MetBAGs) using 107 plasma non-derivatized metabolites from 274,247 UK Biobank participants. Our age prediction models achieve a mean absolute error of approximately 6 years (0.25 -8 /5). Using SBayesS, we estimate the SNP-based heritability (0.09< hSNP2  < 0.18), negative selection signatures (-0.93 < S < -0.76), and polygenicity (0.001<Pi < 0.003) for the 5 MetBAGs. Genetic correlation and Mendelian randomization analyses reveal potential causal links between the 5 MetBAGs and cardiometabolic conditions (e.g., metabolic disorders and hypertension). Integrating multi-organ and multi-omics features improves disease category and mortality predictions. The 5 MetBAGs extend existing biological aging clocks to study human aging and disease across multiple biological scales. All results are publicly available at https://labs-laboratory.com/medicine/ .",
+  "authors": "MULTI consortium, Anagnostakis F, Ko S, Saadatinia M, Wang J, Davatzikos C, Wen J.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 17,
+  "found_by": [
+   "eupmc:proteomic aging clock plasma"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12106725",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank多器官代谢组时钟，公开大队列定量建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "27万人多器官代谢组时钟，公开数据，泛化强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Lasso回归与神经网络构建5个器官MetBAG",
+  "data": "UKBB 274,247人血浆107种非衍生代谢物",
+  "scenario": "多器官代谢组衰老时钟",
+  "benchmark": "PhenoBAG、脑MRI BAG、ProtBAG及Lasso/NN模型对比",
+  "results": "独立测试集Pearson r为0.25<r<0.42；关联525个疾病终点，预测14类疾病与死亡",
+  "availability": "模型与结果公开于MEDICINE门户",
+  "limitations": "代谢组动态且受饮食、微生物、环境等影响；预测相关性仅中等",
+  "summary": "研究开发了基于血浆代谢组的多器官生物年龄时钟MetBAG。作者用UKBB 274,247人的107种血浆非衍生代谢物，通过Lasso回归和神经网络构建消化、肝、免疫、内分泌和代谢5个器官特异MetBAG，并进行遗传结构、遗传相关和因果分析。结果显示5个MetBAG在独立测试集中与年龄呈中等相关，并与心脏代谢状况、525个疾病终点及死亡风险相关。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

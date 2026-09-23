@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.14561",
+  "title": "GLAM: Training a latent world model over global spatiotemporal memory for active exploration and navigation",
+  "url": "https://arxiv.org/abs/2609.14561",
+  "abstract": "Active exploration and semantic navigation require an embodied agent to build memory from partial observations, predict how the evolution of observed spatial memory may support future motion, and convert that prediction into actionable plans. We present GLAM, a goal-conditioned latent world model trained over global spatiotemporal memory, and GLAM NAV, the complete navigation system built around it. Given historical map tokens, a navigation goal, and the current robot pose, GLAM jointly predicts future map representations and robot-centric waypoint latents, allowing future spatial context and navigation intent to be inferred in a shared representation space. The model follows a JEPA-like latent prediction paradigm, operates directly on map-level latent tokens rather than RGB reconstruction, and uses a pretrained waypoint encoder-decoder to supervise and decode navigation plans within GLAM NAV. Training data are collected by replaying ObjectNav expert trajectories in Habitat over HM3D v0.2 scene assets and slicing them into multi-timescale prediction samples. On a controlled HM3D-ObjectNav subset reproduction setting, GLAM NAV improves over a reproduced BSC-Nav baseline in both success rate and success weighted by path length.",
+  "authors": "I-Tak Ieong, Rui-Zhi Feng, Zhao-Yang Lu, Yi-Fei Cao, Jia-Yao Zhao, Leo Li, Sen-Hua Zhu, Wen-Bo Ding",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2411.04983"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA式全局时空记忆隐世界模型，契合世界模型方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA式全局时空记忆隐世界模型，导航探索核心",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "GLAM：JEPA式目标条件潜世界模型，联合预测未来地图与路点潜变量",
+  "data": "Habitat中HM3D v0.2的ObjectNav专家轨迹，多时间尺度样本",
+  "scenario": "主动探索与物体目标导航",
+  "benchmark": "复现的BSC-Nav基线，HM3D-ObjectNav子集",
+  "results": "在成功率与SPL上均优于复现的BSC-Nav基线",
+  "availability": "",
+  "limitations": "仅预测专家数据中的未来观测与计划，非任意动作反事实",
+  "summary": "提出GLAM，基于全局时空记忆的目标条件潜世界模型，并构建GLAM NAV导航系统。模型以JEPA式潜预测在地图级token上联合预测未来地图表示与机器人中心路点潜变量，用预训练路点编解码器监督解码。在Habitat/HM3D的ObjectNav子集上，成功率与SPL均优于复现的BSC-Nav基线。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

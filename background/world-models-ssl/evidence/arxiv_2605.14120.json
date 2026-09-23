@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2605.14120",
+  "title": "Mini-JEPA Foundation Model Fleet Enables Agentic Hydrologic Intelligence",
+  "url": "https://arxiv.org/abs/2605.14120v1",
+  "abstract": "Geospatial foundation models compress multispectral observations into dense embeddings increasingly used in natural-language environmental reasoning systems. A single planetary-scale model, e.g. Google AlphaEarth, handles broad characterization well but may compromise on specialized hydrologic signals. Such generalist models are also often inaccessible, expensive, and require large-scale compute. We propose Mini-JEPAs: a fleet of small sensor-specialized Joint Embedding Predictive Architecture (JEPA) foundation models consulted by a routing agent for specialized questions. We pretrained five 22M-parameter Mini-JEPAs sharing an identical Vision Transformer backbone, JEPA recipe, and 64-d output space, using Sentinel-2 optical, Sentinel-1 SAR, MODIS thermal, multi-temporal Sentinel-2 phenology, and a topography-soil stack. Each Mini-JEPA reconstructs the variable matched to its sensor, with cross-validated $R^2$ reaching 0.97 for elevation, 0.97 for temperature, and 0.81 for precipitation. The five manifolds differ in geometric structure, with global participation ratios from 8.9 to 20.2 and local intrinsic dimensionalities from 2.3 to 9.0. Joint topography-soil and phenology models add predictive value beyond AlphaEarth alone for soil moisture, aridity, and precipitation ($ΔR^2$ up to 0.031). A router LLM reads per-modality references and selects appropriate sensors with a perfect hit rate over a curated question set. In paired LLM-as-Judge evaluation, dual retrieval over AlphaEarth and the routed fleet outperforms AlphaEarth alone on physics-matched questions (Cohen's $d = 1.10$, $p = 0.031$). Locally-trained Mini-JEPAs can be operationalized for hydrologic intelligence with modest compute.",
+  "authors": "Mashrekur Rahman",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "小型JEPA基础模型舰队，科学数据迁移，契合方向定义。",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "小型JEPA舰队迁移科学数据，开源思路有传播价值",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "Mini-JEPA：传感器专用小型JEPA模型舰队",
+  "data": "Sentinel-2光学、Sentinel-1 SAR、MODIS热红外、物候与地形土壤影像",
+  "scenario": "水文智能与地理空间推理",
+  "benchmark": "Google AlphaEarth基础模型、LLM-as-Judge评估",
+  "results": "各模型预测匹配变量R²达0.97（高程/温度）、0.81（降水）；联合模型对土壤湿度等ΔR²达0.031；路由命中率完美，d=1.10,p=0.031",
+  "availability": "",
+  "limitations": "总体问题类型聚合增益有限；路由LLM依赖闭源模型",
+  "summary": "提出由五个22M参数传感器专用Mini-JEPA组成的模型舰队，共享ViT骨干与JEPA训练配方。每个模型重建与其传感器物理匹配的环境变量，并由路由LLM选择合适传感器。各模型最佳预测变量即其传感器所观测变量，路由舰队在物理匹配问题上媲美AlphaEarth，联合检索在单传感器问题上显著优于AlphaEarth。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

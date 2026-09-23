@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2511.15915",
+  "title": "AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization",
+  "url": "https://doi.org/10.48550/arXiv.2511.15915",
+  "abstract": "We present AccelOpt, a self-improving large language model (LLM) agentic system that autonomously optimizes kernels for emerging AI acclerators, eliminating the need for expert-provided hardware-specific optimization knowledge. AccelOpt explores the kernel optimization space through iterative generation, informed by an optimization memory that curates experiences and insights from previously encountered slow-fast kernel pairs. We build NKIBench, a new benchmark suite of AWS Trainium accelerator kernels with varying complexity extracted from real-world LLM workloads to evaluate the effectiveness of AccelOpt. Our evaluation confirms that AccelOpt's capability improves over time, boosting the average percentage of peak throughput from $49\\%$ to $61\\%$ on Trainium 1 and from $45\\%$ to $59\\%$ on Trainium 2 for NKIBench kernels. Moreover, AccelOpt is highly cost-effective: using open-source models, it matches the kernel improvements of Claude Sonnet 4 while being $26\\times$ cheaper. The code is open-sourced at https://github.com/zhang677/AccelOpt.",
+  "authors": "Genghan Zhang, Shaowei Zhu, Anjiang Wei, Zhenyu Song, Allen Nie, Zhen Jia, N. Vijaykumar, Yida Wang",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 20,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "自改进智能体优化加速器内核，含NKIBench基准与定量提升",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "自改进智能体优化AI加速器内核，含新基准与定量结果",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出自改进LLM智能体系统AccelOpt，用优化记忆迭代优化内核",
+  "data": "NKIBench：来自真实LLM工作负载的AWS Trainium内核，复杂度不一",
+  "scenario": "AI加速器内核优化",
+  "benchmark": "NKIBench；对比Claude Sonnet 4",
+  "results": "Trainium 1峰值吞吐均值从49%升至61%，Trainium 2从45%升至59%；开源模型达Claude Sonnet 4水平且便宜26倍",
+  "availability": "代码开源：https://github.com/zhang677/AccelOpt",
+  "limitations": "未在片段中明确说明",
+  "summary": "本文提出AccelOpt，一个无需专家硬件知识即可自主优化AI加速器内核的自改进LLM智能体系统。它通过迭代生成并借助优化记忆整理慢-快内核对经验来探索优化空间，并构建NKIBench评测。结果显示其在Trainium 1/2上显著提升峰值吞吐，且用开源模型可低成本匹配Claude Sonnet 4。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

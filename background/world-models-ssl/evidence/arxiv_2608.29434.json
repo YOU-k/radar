@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.29434",
+  "title": "Does Latent Planning Survive Point Clouds? Action-Conditioned JEPA World Models for Geometric Observations",
+  "url": "https://arxiv.org/abs/2608.29434",
+  "abstract": "JEPA world models make latent-space planning a practical route to control, but they are built almost exclusively on images. Whether latent prediction survives geometric observations is unclear: point clouds are sparse, unordered, and self-occluded, and with 0.3-15% of scene points moving, the slow-feature optimum of latent prediction compounds with the geometric shortcut of 3D self-supervision. We lift three canonical JEPA designs to point clouds, frozen-encoder, distribution-prior, and action-sensitive, and re-sense the stable-worldmodel benchmark so that only the observation differs from the image baselines. All three plan without collapse: the distribution-prior model is statistically equivalent to its re-evaluated image counterpart on every benchmark, and the action-sensitive model attains the strongest result in our controlled comparison where the most geometry moves. Probing explains why: object positions are almost perfectly linearly decodable and attention falls on the few moving points. Planning withstands heavy dropout never seen in training, though range noise defeats the thinnest scene. Geometry finally makes a commanded 3D target a natural goal interface: we construct the goal latent from the target and the current latent, at no cost in success rate, without a goal observation.",
+  "authors": "F. F. Oberweger, Michael Schwingshackl",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2411.04983"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "点云JEPA世界模型系统评测，契合方向定义",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "系统检验 JEPA 潜空间规划在点云几何观测下的可行性。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "点云JEPA世界模型（三种设计）",
+  "data": "点云观测，0.3–15%场景点移动",
+  "scenario": "几何观测下的机器人规划",
+  "benchmark": "stable-worldmodel基准（TwoRoom、Reacher、Push-T、Cube）",
+  "results": "Point-LeWM与图像基线统计等价；Point-Delta-JEPA在几何移动最多时最强",
+  "availability": "代码公开（GitHub）",
+  "limitations": "距离噪声会破坏最稀疏场景；仅仿真验证",
+  "summary": "将三种典型JEPA设计（冻结编码器、分布先验、动作敏感）提升到点云观测，重新感知stable-worldmodel基准使仅观测模态不同。所有设计均无坍缩，Point-LeWM与图像基线统计等价，Point-Delta-JEPA在几何移动最多时表现最强。还提出从当前潜在和目标3D位姿构造目标潜在，无需目标观测即可规划。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

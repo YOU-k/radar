@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.24259",
+  "title": "MemCalib: Benchmarking and Optimizing Memory Use in LLM Agents",
+  "url": "https://arxiv.org/abs/2609.24259",
+  "abstract": "The effectiveness of agent memory ultimately depends on whether the underlying LLM gives each memory in context an appropriate degree of influence over its response. Yet this capability has remained largely overlooked. To assess this capability, we introduce MemCalib, a benchmark grounded in realistic memory-system scenarios for evaluating memory use and advancing optimization algorithms. Results on the MemCalib test set reveal that frontier open- and closed-source models struggle to use memory appropriately. They frequently over-use or under-use memory rather than matching each proposition's actual use to its target level, leading to biased, low-quality responses. Experiments with common post-training algorithms, including group relative policy optimization and on-policy self-distillation, further reveal a clear directional skew: trained models improve in one direction while deteriorating in the other. We therefore propose MemCalib-RL, an ordered bidirectional counterfactual credit-assignment algorithm that separates over- and under-use signals and localizes their credit to response tokens through exact atom ablation. Results across model families and scales (Qwen3-8B, Ministral-3-8B-Instruct, and Qwen3.5-35B-A3B) show that MemCalib-RL achieves the best overall performance while better balancing over-use and under-use, with gains generalizing beyond MemCalib in external benchmark evaluation. Further experiments support its design choices and robustness and provide insight into its training dynamics.",
+  "authors": "Rui-Ke Cao, Fan-Yu Zhao, Fu-Gen Yao, Liang Dong, Jian Xu, Guan-Jun Jiang, Yi-Fei Zhao, Han Zhang",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:arxiv:2402.03300"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "智能体记忆使用评测基准，含优化算法，契合评测方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "智能体记忆使用评测基准，填补空白，可复现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "有序双向反事实信用分配MemCalib-RL",
+  "data": "15000例：13500训练+1500测试，覆盖健康/通用助手/编程",
+  "scenario": "LLM智能体记忆使用校准",
+  "benchmark": "MemCalib基准；对比GRPO、OPSD；模型含Qwen3-8B、Ministral-3-8B-Instruct、Qwen3.5-35B-A3B",
+  "results": "MemCalib-RL总体表现最佳，更好平衡过度使用与使用不足，增益可泛化到外部基准",
+  "availability": "代码与数据：https://github.com/Quark-Medical/memcalib",
+  "limitations": "未明确说明；主要聚焦记忆使用校准",
+  "summary": "论文指出智能体记忆效果取决于LLM对每条记忆赋予恰当影响，但该能力被忽视，因而提出MemCalib基准。基准含15000例，覆盖健康、通用助手与编程，评测模型对原子命题的忽略/限定/控制三级影响。实验发现前沿模型常过度或不足使用记忆，GRPO与OPSD存在方向性偏斜；提出的MemCalib-RL通过有序双向反事实信用分配取得最佳总体表现并更好平衡两类错误。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

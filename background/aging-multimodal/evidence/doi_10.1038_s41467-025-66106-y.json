@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-66106-y",
+  "title": "An unbiased comparison of 14 epigenetic clocks in relation to 174 incident disease outcomes.",
+  "url": "https://doi.org/10.1038/s41467-025-66106-y",
+  "abstract": "Epigenetic Clocks have been trained to predict chronological age, healthspan and lifespan. Such clocks are often analysed in relation to disease outcomes - typically using small datasets and a limited number of clocks. Here, we present a large-scale (n = 18,859), unbiased comparison of 14 widely used clocks as predictors of 174 incident disease outcomes and all-cause mortality over 10-years of follow up. Second- and third-generation clocks significantly outperform first-generation clocks, which have limited applications in disease settings. Of the 176 Bonferroni significant (P  1%. However, there is minimal evidence for interactions between the clocks and sex or smoking (ever/never) status. Second- and third-generation epigenetic clocks show promise for disease risk prediction, particularly in relation to respiratory and liver-based conditions.",
+  "authors": "Mavrommatis C, Belsky DW, Ying K, Moqri M, Campbell A, Richmond A, Gladyshev VN, Chandra T, McCartney DL, Marioni RE.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 24,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC12708718",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "1.8万人14种表观时钟系统比较，数据公开",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "14种表观时钟大规模头对头比较，必读基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "系统比较14种表观遗传时钟与174种疾病关联",
+  "data": "Generation Scotland DNA甲基化队列，18,859人",
+  "scenario": "疾病风险预测与时钟临床效用评估",
+  "benchmark": "14种第一至第三代表观遗传时钟",
+  "results": "完全校正模型下13种时钟与57种疾病共176个Bonferroni显著关联；GrimAge v2和DunedinPACE各72个显著关联",
+  "availability": "R Shiny应用公开",
+  "limitations": "以欧洲裔为主，观察性设计，部分时钟与协变量信息重叠",
+  "summary": "研究对14种表观遗传时钟与174种新发疾病进行了无偏系统比较。基于Generation Scotland队列18,859人，采用Cox和逻辑回归分析10年疾病发生。结果显示第三代和第二代时钟（如GrimAge v2、DunedinPACE）疾病预测关联最强，第一代时钟关联较少。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

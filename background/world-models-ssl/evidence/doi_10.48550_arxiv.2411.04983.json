@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2411.04983",
+  "title": "DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning",
+  "url": "https://doi.org/10.48550/arXiv.2411.04983",
+  "abstract": "The ability to predict future outcomes given control actions is fundamental for physical reasoning. However, such predictive models, often called world models, remains challenging to learn and are typically developed for task-specific solutions with online policy learning. To unlock world models' true potential, we argue that they should 1) be trainable on offline, pre-collected trajectories, 2) support test-time behavior optimization, and 3) facilitate task-agnostic reasoning. To this end, we present DINO World Model (DINO-WM), a new method to model visual dynamics without reconstructing the visual world. DINO-WM leverages spatial patch features pre-trained with DINOv2, enabling it to learn from offline behavioral trajectories by predicting future patch features. This allows DINO-WM to achieve observational goals through action sequence optimization, facilitating task-agnostic planning by treating goal features as prediction targets. We demonstrate that DINO-WM achieves zero-shot behavioral solutions at test time on six environments without expert demonstrations, reward modeling, or pre-learned inverse models, outperforming prior state-of-the-art work across diverse task families such as arbitrarily configured mazes, push manipulation with varied object shapes, and multi-particle scenarios.",
+  "authors": "Gaoyue Zhou, Hengkai Pan, Yann LeCun, Lerrel Pinto",
+  "venue": "International Conference on Machine Learning",
+  "year": 2024,
+  "citations": 368,
+  "found_by": [
+   "s2:references:arxiv:2506.09985"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "DINO-WM基于预训练特征的世界模型，零样本规划开源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "DINO-WM零样本规划，世界模型代表工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "DINO-WM，基于DINOv2特征的隐空间世界模型",
+  "data": "离线行为轨迹；六个环境",
+  "scenario": "零样本视觉规划与操作",
+  "benchmark": "先前SOTA世界模型方法",
+  "results": "在六个环境零样本测试时行为求解，无需专家演示、奖励建模或逆模型，超越先前SOTA",
+  "availability": "",
+  "limitations": "依赖预训练DINOv2特征，未验证其他特征或真实机器人",
+  "summary": "论文提出DINO-WM，利用DINOv2预训练的块特征预测未来块特征，从而在不重建视觉世界的情况下建模视觉动态。方法在离线轨迹上训练，通过动作序列优化实现目标达成，将目标特征作为预测目标支持任务无关规划。实验在六个环境上实现零样本行为求解，无需专家演示或奖励建模，超越先前SOTA。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

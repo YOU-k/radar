@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2512.16912",
+  "title": "Exploration vs Exploitation: Rethinking RLVR through Clipping, Entropy, and Spurious Reward",
+  "url": "https://doi.org/10.48550/arXiv.2512.16912",
+  "abstract": "This paper examines the exploration-exploitation trade-off in reinforcement learning with verifiable rewards (RLVR), a framework for improving the reasoning of Large Language Models (LLMs). Recent studies suggest that RLVR can elicit strong mathematical reasoning in LLMs through two seemingly paradoxical mechanisms: spurious rewards, which suppress exploitation by rewarding outcomes unrelated to the ground truth, and entropy minimization, which suppresses exploration by pushing the model toward more confident and deterministic outputs, highlighting a puzzling dynamic: both discouraging exploitation and discouraging exploration improve reasoning performance, yet the underlying principles that reconcile these effects remain poorly understood. We focus on two fundamental questions: (i) how policy entropy relates to performance, and (ii) whether spurious rewards yield gains, potentially through the interplay of clipping bias and model contamination. Our results show that clipping bias under spurious rewards reduces policy entropy, leading to more confident and deterministic outputs, while entropy minimization alone is insufficient for improvement. We further propose a reward-misalignment model explaining why spurious rewards can enhance performance beyond contaminated settings. Our findings clarify the mechanisms behind spurious-reward benefits and provide principles for more effective RLVR training.",
+  "authors": "Peter Chen, Xiaopeng Li, Ziniu Li, Wo-Tao Yin, Xi Chen, Tian-Yi Lin",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 26,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2507.10532"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2512.16912"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "剖析RLVR探索利用权衡与伪奖励机制，有实质分析",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "RLVR探索-利用权衡机制分析，方向关键理论工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "分析裁剪偏差、熵最小化与虚假奖励的交互机制",
+  "data": "LLM数学推理任务（未给具体规模）",
+  "scenario": "RLVR训练机制分析",
+  "benchmark": "虚假奖励、熵最小化等RLVR机制对比",
+  "results": "裁剪偏差在虚假奖励下降低策略熵，产生更确定输出；仅熵最小化不足以提升性能",
+  "availability": "",
+  "limitations": "未给出具体实验规模与量化提升数据",
+  "summary": "本文研究RLVR中探索与利用的权衡，聚焦策略熵与性能的关系以及虚假奖励是否带来增益。作者分析裁剪偏差与模型污染的交互，并提出奖励错配模型解释虚假奖励为何能提升性能。结果发现裁剪偏差在虚假奖励下降低策略熵使输出更确定，而单纯熵最小化不足以改善推理。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

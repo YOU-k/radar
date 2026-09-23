@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s12276-025-01547-5",
+  "title": "Single-cell foundation models: bringing artificial intelligence into cell biology.",
+  "url": "https://doi.org/10.1038/s12276-025-01547-5",
+  "abstract": "A foundation model, a large-scale deep learning model pretrained on vast datasets, has revolutionized data interpretation through self-supervised learning with capacity for various downstream tasks. Concurrently, single-cell genomics is in urgent need of unified frameworks capable of integrating and comprehensively analyzing the rapidly expanding data repositories. Inspired by advances in foundation models, researchers have extended these techniques to single-cell analysis, giving rise to single-cell foundation models (scFMs). Typically, these models use transformer architectures to incorporate diverse omics data and extract latent patterns at both cell and gene/feature levels for the analysis of cellular heterogeneity and complex regulatory networks. Despite their promise, scFMs face challenges including the nonsequential nature of omics data, inconsistency in data quality and the computational intensity required for training and fine-tuning. Furthermore, interpreting the biological relevance of latent embeddings and model representations remains nontrivial. Here we provide an overview of scFMs, highlighting their key concepts and applications across downstream tasks. We critically assess the current limitations and propose future directions aimed at enhancing the robustness, interpretability and scalability of scFMs. Ultimately, addressing these challenges will be crucial for establishing scFMs as pivotal tools in advancing single-cell genomics and unlocking deeper insights into cellular function and disease mechanisms.",
+  "authors": "Baek S, Song K, Lee I.",
+  "venue": "Experimental & molecular medicine",
+  "year": 2025,
+  "citations": 22,
+  "found_by": [
+   "eupmc:virtual cell perturbation resp"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12586647",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞基础模型综述，契合方向定义，可作背景报告。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞基础模型综述，方向必读入门背景。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述单细胞基础模型概念、架构与应用",
+  "data": "数千万至超1亿单细胞组学数据，含scRNA-seq、scATAC-seq、多组学、空间和蛋白",
+  "scenario": "单细胞数据分析与注释",
+  "benchmark": "",
+  "results": "总结scFMs以细胞为句子、基因为词元，通过自监督学习通用表征；可适配细胞类型注释等多种下游任务",
+  "availability": "",
+  "limitations": "当前模型仍有限制，需改进性能与生物学实用性",
+  "summary": "该综述总结单细胞基础模型的核心概念、架构和开发路径，强调其受NLP和视觉基础模型启发。文章介绍scFMs将细胞类比句子、基因类比词元，利用大规模单细胞数据自监督预训练并适配下游任务。作者还讨论当前局限，并提出提升性能和生物学应用价值的未来方向。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

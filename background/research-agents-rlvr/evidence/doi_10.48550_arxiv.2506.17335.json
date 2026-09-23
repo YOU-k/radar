@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2506.17335",
+  "title": "LMR-BENCH: Evaluating LLM Agent's Ability on Reproducing Language Modeling Research",
+  "url": "https://doi.org/10.48550/arXiv.2506.17335",
+  "abstract": "Large language model (LLM) agents have demonstrated remarkable potential in advancing scientific discovery. However, their capability in the fundamental yet crucial task of reproducing code from research papers, especially in the NLP domain, remains underexplored. This task includes unique complex reasoning challenges in the intellectual synthesis of abstract concepts and the comprehension of code repositories with interdependent files. Motivated by this gap, we present LMR-BENCH, a benchmark designed to systematically evaluate the capability of LLM agents on code reproduction from Language Modeling Research. It consists of 28 code reproduction tasks derived from 23 research papers published in top-tier NLP venues over the past five years, spanning nine fundamental categories. Models are provided with a research paper, a code repository containing one or more masked functions, and instructions for implementing these functions. We conduct extensive experiments in standard prompting and LLM agent settings with state-of-the-art LLMs, evaluating the accuracy of unit tests and performing LLM-based evaluation of code correctness. Experimental results reveal that even the most advanced models still exhibit persistent limitations in scientific reasoning and code synthesis, highlighting critical gaps in LLM agents'ability to autonomously reproduce scientific research",
+  "authors": "Shuo Yan, Ruochen Li, Ziming Luo, Zimu Wang, Daoyang Li, Liqiang Jing, Kaiyu He, Peilin Wu",
+  "venue": "Conference on Empirical Methods in Natural Language Processing",
+  "year": 2025,
+  "citations": 30,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "LLM智能体复现研究代码的基准，评测明确可复用。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EMNLP基准，系统评测智能体复现NLP研究能力，方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建代码复现基准，标准提示与智能体设置评测",
+  "data": "28个代码复现任务，源自23篇NLP论文",
+  "scenario": "LLM智能体复现语言模型研究",
+  "benchmark": "单元测试准确率与LLM代码正确性评估，SOTA LLM",
+  "results": "最先进模型仍存在持续局限，科学推理与代码合成存在关键差距",
+  "availability": "",
+  "limitations": "仅限NLP领域，任务数量有限",
+  "summary": "论文提出LMR-BENCH，系统评测LLM智能体从研究论文复现代码的能力。基准含28个任务，源自近五年顶级NLP会议的23篇论文，覆盖九大类别，提供论文、含掩码函数的代码库和实现说明。实验表明即使最先进模型在科学推理和代码合成上仍有持续局限，凸显自主复现科研的关键差距。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

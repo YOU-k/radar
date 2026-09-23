@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s13059-015-0584-6",
+  "title": "DNA methylation age of blood predicts all-cause mortality in later life",
+  "url": "https://doi.org/10.1186/s13059-015-0584-6",
+  "abstract": "DNA methylation levels change with age. Recent studies have identified biomarkers of chronological age based on DNA methylation levels. It is not yet known whether DNA methylation age captures aspects of biological age. Here we test whether differences between people’s chronological ages and estimated ages, DNA methylation age, predict all-cause mortality in later life. The difference between DNA methylation age and chronological age (Δage) was calculated in four longitudinal cohorts of older people. Meta-analysis of proportional hazards models from the four cohorts was used to determine the association between Δage and mortality. A 5-year higher Δage is associated with a 21% higher mortality risk, adjusting for age and sex. After further adjustments for childhood IQ, education, social class, hypertension, diabetes, cardiovascular disease, and APOE e4 status, there is a 16% increased mortality risk for those with a 5-year higher Δage. A pedigree-based heritability analysis of Δage was conducted in a separate cohort. The heritability of Δage was 0.43. DNA methylation-derived measures of accelerated aging are heritable traits that predict mortality independently of health status, lifestyle factors, and known genetic factors.",
+  "authors": "R. Marioni, Sonia H. Shah, A. McRae, Brian H. Chen, E. Colicino, S. Harris, J. Gibson, A. Henders",
+  "venue": "Genome Biology",
+  "year": 2015,
+  "citations": 1150,
+  "found_by": [
+   "s2:references:doi:10.18632/aging.101414"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "DNA甲基化年龄预测死亡经典研究，公开数据，奠基性工作",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "DNA甲基化年龄预测死亡奠基之作，千次引用，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "DNA甲基化年龄差Δage与死亡风险关联分析",
+  "data": "四个老年人纵向队列，血液DNA甲基化",
+  "scenario": "晚年全因死亡风险预测",
+  "benchmark": "chronological age及健康、生活方式、APOE",
+  "results": "Δage每高5年死亡风险增21%，校正后增16%；Δage遗传度0.43",
+  "availability": "",
+  "limitations": "仅老年队列，甲基化芯片与人群有限",
+  "summary": "研究检验DNA甲基化年龄与实际年龄差是否预测晚年死亡。在四个老年人纵向队列中计算Δage并做比例风险模型荟萃分析。发现Δage每高5年死亡风险增加21%，校正健康、生活方式和遗传因素后仍增16%，且Δage具中等遗传度。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

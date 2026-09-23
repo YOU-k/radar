@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2507.02915",
+  "title": "Audio-JEPA: Joint-Embedding Predictive Architecture for Audio Representation Learning",
+  "url": "https://arxiv.org/abs/2507.02915v1",
+  "abstract": "Building on the Joint-Embedding Predictive Architecture (JEPA) paradigm, a recent self-supervised learning framework that predicts latent representations of masked regions in high-level feature spaces, we propose Audio-JEPA (Audio Joint-Embedding Predictive Architecture), tailored specifically for audio data. Audio-JEPA uses a simple Vision Transformer backbone to predict latent representations of masked spectrogram patches rather than reconstructing raw audio. We pre-train on unlabeled AudioSet clips (10s, 32kHz) with random patch masking on mel-spectrograms. We evaluate on the X-ARES suite covering speech, music, and environmental sound tasks. Although our implementation is a straightforward translation of the original model to audio, the results still show comparable performance to wav2vec 2.0 and data2vec while using less than one-fifth of their training data and with no hyper-parameter tuning. All code and pretrained checkpoints will be released on GitHub.",
+  "authors": "Ludovic Tuncay, Etienne Labbé, Emmanouil Benetos, Thomas Pellegrini",
+  "venue": "",
+  "year": 2025,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA迁移到音频，含开源实现，符合自监督跨模态迁移方向。",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA迁移至音频，方法清晰，契合自监督表征方向",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "Audio-JEPA，音频掩码隐表征预测",
+  "data": "无标签AudioSet片段（10s，32kHz）",
+  "scenario": "音频自监督表征学习",
+  "benchmark": "X-ARES套件；wav2vec 2.0、data2vec",
+  "results": "性能与wav2vec 2.0和data2vec相当，训练数据不足其五分之一，且无需调参",
+  "availability": "代码与预训练权重将公开（GitHub）",
+  "limitations": "仅将原模型直接迁移到音频，未做超参调优",
+  "summary": "论文提出Audio-JEPA，将JEPA范式适配到音频，用ViT骨干预测掩码梅尔频谱块的隐表征而非重建原始音频。方法在无标签AudioSet上随机块掩码预训练，在X-ARES套件上评估语音、音乐和环境声任务。结果显示其性能与wav2vec 2.0和data2vec相当，但训练数据不足其五分之一且无需调参。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

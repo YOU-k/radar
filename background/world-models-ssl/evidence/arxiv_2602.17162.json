@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2602.17162",
+  "title": "JEPA-DNA: Grounding Genomic Foundation Models through Joint-Embedding Predictive Architectures",
+  "url": "https://arxiv.org/abs/2602.17162v3",
+  "abstract": "Genomic Foundation Models (GFMs) typically rely on Masked Language Modeling (MLM) or Next-Token Prediction (NTP) to learn the \"Laws of Nature\". While effective at capturing local syntax, these generative paradigms prioritize token-level reconstruction over high-level functional context. We introduce JEPA-DNA, a model-agnostic continual training framework that integrates a Joint-Embedding Predictive Architecture (JEPA) with traditional generative objectives. By supervising global sequence embeddings in a latent space, JEPA-DNA forces models to predict the functional representations of masked genomic segments, shifting the learning signal from token recovery to semantic alignment. We evaluate JEPA-DNA on 17 diverse genomic benchmark tasks, demonstrating consistent gains in linear probing and zero-shot performance regardless of the underlying GFM architecture or generative objective. Our framework establishes a new state-of-the-art for GFMs, surpassing the best existing models by bridging generative precision with latent semantic grounding. Through extensive ablation studies, we further characterize the synergistic interplay between generative and latent objectives. Our code is publicly available at https://github.com/NVIDIA-Digital-Bio/JEPA-DNA.",
+  "authors": "Ariel Larey, Elay Dahan, Amit Bleiweiss, Raizy Kellerman, Guy Leib, Omri Nayshool, Dan Ofer, Tal Zinger",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA用于基因组基础模型，契合生物多模态迁移",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA迁移到基因组基础模型，代表自监督向科学数据的关键转向。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "JEPA-DNA：JEPA与生成目标结合的持续训练框架",
+  "data": "多物种基因组DNA序列，17项基因组基准任务",
+  "scenario": "基因组序列表征学习",
+  "benchmark": "DNABERT-2、NTv3、HyenaDNA及MLM/NTP基线",
+  "results": "线性探测与零样本性能一致提升，监督线性探测达新SOTA，超越最佳现有模型",
+  "availability": "代码公开：github.com/NVIDIA-Digital-Bio/JEPA-DNA",
+  "limitations": "仅作为持续预训练阶段，需依赖已有GFM；未明确跨物种泛化边界",
+  "summary": "提出JEPA-DNA，将联合嵌入预测架构融入基因组基础模型训练。通过在潜空间监督全局序列嵌入，预测被掩码基因组片段的功能表征，并结合传统生成目标进行持续训练。在17项基准上线性探测与零样本性能一致提升，证明潜语义对齐优于纯token重建。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

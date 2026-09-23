@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41551-025-01423-7",
+  "title": "A deep generative model for deciphering cellular dynamics and in silico drug discovery in complex diseases.",
+  "url": "https://doi.org/10.1038/s41551-025-01423-7",
+  "abstract": "Human diseases are characterized by intricate cellular dynamics. Single-cell transcriptomics provides critical insights, yet a persistent gap remains in computational tools for detailed disease progression analysis and targeted in silico drug interventions. Here we introduce UNAGI, a deep generative neural network tailored to analyse time-series single-cell transcriptomic data. This tool captures the complex cellular dynamics underlying disease progression, enhancing drug perturbation modelling and screening. When applied to a dataset from patients with idiopathic pulmonary fibrosis, UNAGI learns disease-informed cell embeddings that sharpen our understanding of disease progression, leading to the identification of potential therapeutic drug candidates. Validation using proteomics reveals the accuracy of UNAGI's cellular dynamics analysis, and the use of the fibrotic cocktail-treated human precision-cut lung slices confirms UNAGI's predictions that nifedipine, an antihypertensive drug, may have anti-fibrotic effects on human tissues. UNAGI's versatility extends to other diseases, including COVID, demonstrating adaptability and confirming its broader applicability in decoding complex cellular dynamics beyond idiopathic pulmonary fibrosis, amplifying its use in the quest for therapeutic solutions across diverse pathological landscapes.",
+  "authors": "Zheng Y, Schupp JC, Adams T, Clair G, Justet A, Ahangari F, Yan X, Hansen P, Carlon M, Cortesi E, Vermant M, Vos R, De Sadeleer LJ, Rosas IO, Pineda R, Sembrat J, Königshoff M, McDonough JE, Vanaudenaerde BM, Wuyts WA, Kaminski N, Ding J.",
+  "venue": "Nature biomedical engineering",
+  "year": 2025,
+  "citations": 24,
+  "found_by": [
+   "eupmc:virtual cell perturbation resp"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12705450",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "深度生成模型解析细胞动态并做in silico药物发现，契合虚拟细胞。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "深度生成模型做细胞动态与in silico药物发现，虚拟细胞框架。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "VAE-GAN无监督细胞动力学与药物筛选",
+  "data": "疾病时间序列scRNA-seq；CMAP药物数据库",
+  "scenario": "复杂疾病虚拟药物发现",
+  "benchmark": "Seurat、SCANPY、scVI、scGPT、GEARS等",
+  "results": "可从时间序列数据解析细胞动力学并虚拟筛选药物；输出交互式可视化",
+  "availability": "文中未明确提及",
+  "limitations": "依赖时间序列数据质量；虚拟扰动仍需实验验证",
+  "summary": "UNAGI是一个无监督深度生成框架，用于从人类疾病时间序列单细胞数据解析细胞动力学并进行计算机药物扰动筛选。模型基于VAE-GAN，整合疾病特异基因调控信息与CMAP药物数据库，实现细胞嵌入学习与药物筛选的交互反馈。该框架可标记潜在治疗靶点和药物，并以交互式可视化呈现结果。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

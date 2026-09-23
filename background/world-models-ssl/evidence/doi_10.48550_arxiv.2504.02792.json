@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2504.02792",
+  "title": "Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets",
+  "url": "https://doi.org/10.48550/arXiv.2504.02792",
+  "abstract": "Imitation learning has emerged as a promising approach towards building generalist robots. However, scaling imitation learning for large robot foundation models remains challenging due to its reliance on high-quality expert demonstrations. Meanwhile, large amounts of video data depicting a wide range of environments and diverse behaviors are readily available. This data provides a rich source of information about real-world dynamics and agent-environment interactions. Leveraging this data directly for imitation learning, however, has proven difficult due to the lack of action annotation. In this work, we present Unified World Models (UWM), a framework that allows for leveraging both video and action data for policy learning. Specifically, a UWM integrates an action diffusion process and a video diffusion process within a unified transformer architecture, where independent diffusion timesteps govern each modality. By controlling each diffusion timestep, UWM can flexibly represent a policy, a forward dynamics, an inverse dynamics, and a video generator. Through simulated and real-world experiments, we show that: (1) UWM enables effective pretraining on large-scale multitask robot datasets with both dynamics and action predictions, resulting in more generalizable and robust policies than imitation learning, (2) UWM naturally facilitates learning from action-free video data through independent control of modality-specific diffusion timesteps, further improving the performance of finetuned policies. Our results suggest that UWM offers a promising step toward harnessing large, heterogeneous datasets for scalable robot learning, and provides a simple unification between the often disparate paradigms of imitation learning and world modeling. Videos and code are available at https://weirdlabuw.github.io/uwm/.",
+  "authors": "Chu-Ning Zhu, Raymond Yu, Siyuan Feng, B. Burchfiel, Paarth Shah, Abhishek Gupta",
+  "venue": "Robotics",
+  "year": 2025,
+  "citations": 229,
+  "found_by": [
+   "s2:references:arxiv:2506.09985"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "统一世界模型耦合视频与动作扩散，有代码，契合世界模型方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "统一视频与动作扩散世界模型，机器人预训练，引用高代表转折",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "UWM：统一Transformer中耦合动作与视频扩散",
+  "data": "大规模多任务机器人数据集与无动作视频",
+  "scenario": "机器人模仿学习与策略预训练",
+  "benchmark": "模仿学习基线",
+  "results": "预训练策略比模仿学习更泛化鲁棒，并可从无动作视频学习进一步提升性能",
+  "availability": "",
+  "limitations": "未明确给出定量指标与真实世界任务规模细节",
+  "summary": "提出Unified World Models（UWM），在统一Transformer中集成动作扩散与视频扩散过程，各模态由独立扩散时间步控制。通过控制扩散时间步，UWM可灵活表示策略、前向动态、逆向动态与视频生成器。实验表明其预训练策略比模仿学习更泛化鲁棒，并能利用无动作视频数据进一步提升性能。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

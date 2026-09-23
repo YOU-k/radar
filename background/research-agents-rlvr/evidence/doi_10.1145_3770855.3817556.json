@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1145/3770855.3817556",
+  "title": "Benchmarking LLM Agents on Real-World Biological Database Curation for Data-Driven Scientific Discovery",
+  "url": "https://doi.org/10.1145/3770855.3817556",
+  "abstract": "High-quality biological databases are the bedrock of data-driven scientific discovery. However, the construction of these resources remains a labor-intensive bottleneck, particularly for emerging research frontiers where structured data is non-existent. While LLM-based agents have catalyzed progress in downstream scientific modeling, their potential to automate the critical upstream challenge of database curation remains largely untapped. To bridge this gap, we introduce BioDataLab, a rigorous benchmark comprising 100 tasks meticulously derived from 57 high-impact database publications. BioDataLab evaluates the capability of autonomous agents to transform raw, heterogeneous biological resources into structured, analysis-ready databases. Unlike static evaluations, BioDataLab provides a fully interactive environment encompassing data retrieval, extraction, annotation, and integration, featuring process-oriented curation targets and contamination-control checks. We benchmark 11 state-of-the-art LLMs (including Gemini-3.0, GPT-5.2, and Claude-4.5) under different agent frameworks, revealing a substantial capability gap: the top-performing model achieves only a 40% success rate. Further error analysis identifies significant bottlenecks in multi-step tool orchestration and adherence to complex biological data formats. These findings underscore that while LLMs are proficient in downstream reasoning, autonomous upstream curation remains a formidable frontier. All data and codes are available at GitHub.",
+  "authors": "Jiaxian Yan, Xi Fang, Jintao Zhu, Chenmin Wu, Yu-Hang Yang, Chenxi Du, Meijing Fang, Kai Zhang",
+  "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2503.00096"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "生物数据库策展智能体基准，含100任务，可复现。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "生物数据库策展智能体基准，KDD，填补上游空白",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BioDataLab：生物数据库策展智能体基准",
+  "data": "100个任务，源自57篇高影响力数据库论文",
+  "scenario": "上游生物数据库自动策展",
+  "benchmark": "11个SOTA LLM（Gemini-3.0、GPT-5.2、Claude-4.5等）多框架",
+  "results": "最佳模型成功率仅40%；瓶颈为多步工具编排与复杂生物数据格式遵循",
+  "availability": "数据与代码公开",
+  "limitations": "上游策展仍是艰巨前沿；多步工具编排与格式遵循不足",
+  "summary": "针对生物数据库策展这一劳动密集瓶颈，提出BioDataLab基准。方法为100个源自57篇高影响力论文的任务，提供含检索、抽取、标注、整合的交互环境及污染控制检查。评测11个SOTA LLM发现最佳仅40%成功率，主要瓶颈在多步工具编排与复杂生物数据格式遵循。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-025-02980-0",
+  "title": "Benchmarking algorithms for generalizable single-cell perturbation response prediction.",
+  "url": "https://doi.org/10.1038/s41592-025-02980-0",
+  "abstract": "Single-cell perturbation technologies enable systematic investigation of gene functions and regulatory networks with single-cell resolution. However, performing large-scale and combinatorial perturbation screens poses notable challenges due to their exponentially increased complexity. Computational methods, including foundation models, have been developed to predict perturbation effects. Yet despite claims of promising performance, concerns remain about their true efficacy, particularly when evaluated across diverse and previously unseen cellular contexts and perturbation scenarios. Here, we present a comprehensive benchmark of 27 methods for single-cell perturbation response prediction, evaluated across 29 datasets using 6 complementary performance metrics. By evaluating them under multiple scenarios, we systematically assess their generalizability, including that of emerging foundation models. Our results provide practical guidance for method selection and underscore the need for cellular context embedding approaches to enhance the generalizability of perturbation effect prediction in single-cell research.",
+  "authors": "Wei Z, Wang Y, Gao Y, Wang S, Li P, Si D, Gao Y, Wu S, Li D, Dong K, Yang X, Tang C, Fu S, Chen X, Li W, You Y, Zhang C, Liang A, Chuai G, Liu Q.",
+  "venue": "Nature methods",
+  "year": 2025,
+  "citations": 38,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "27 种扰动响应预测方法系统基准，含泛化性批判",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "27 种扰动预测方法系统基准，含未跑赢基线证据",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基准评测27种单细胞扰动响应预测方法",
+  "data": "29个数据集，6类互补性能指标",
+  "scenario": "扰动响应预测泛化性评估",
+  "benchmark": "27种方法，包括基础模型",
+  "results": "系统评估多种场景下的泛化性，发现基础模型表现仍存疑；强调细胞上下文嵌入对提升泛化性的必要性",
+  "availability": "",
+  "limitations": "大规模和组合扰动筛选仍复杂；方法真实效力需跨未见场景验证",
+  "summary": "作者对27种单细胞扰动响应预测方法进行综合基准评测，覆盖29个数据集和6类指标。他们在多种未见细胞背景和扰动场景下评估泛化性，包括新兴基础模型。结果表明方法选择需谨慎，并强调细胞上下文嵌入对提升扰动效应预测泛化性的重要性。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

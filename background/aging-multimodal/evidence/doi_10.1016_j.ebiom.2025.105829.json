@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.ebiom.2025.105829",
+  "title": "Decoding disease-specific ageing mechanisms through pathway-level epigenetic clock: insights from multi-cohort validation.",
+  "url": "https://doi.org/10.1016/j.ebiom.2025.105829",
+  "abstract": "Background Ageing is a multifactorial process closely associated with increased risk of chronic diseases. While epigenetic clocks have advanced ageing research, most rely on isolated CpG sites, limiting biological interpretability. We developed PathwayAge, a biologically informed model that captures coordinated methylation changes at the pathway level, providing interpretable insights into ageing biology and disease mechanisms. Methods We conducted a cross-sectional study using genome-wide DNA methylation data from 10,615 individuals across 19 cohorts and 3413 Han Chinese participants, along with transcriptomic data from 3384 samples. A two-stage machine learning model aggregated CpG sites into GO or KEGG pathway-level features to predict chronological age. Model accuracy was assessed using mean absolute error (MAE) and Pearson correlation (Rho). Age acceleration residuals (AgeAcc) were computed and tested for associations with nine diseases using non-parametric statistics. Findings PathwayAge achieved high predictive accuracy (Rho = 0.977, MAE = 2.350) in cross-validation and across 15 independent blood-based validation cohorts (Rho = 0.677-0.979, MAE = 2.113-6.837), including a Chinese population (Rho = 0.972, MAE = 2.302). Compared to established clocks, PathwayAge showed improved performance in both age estimation and disease association analyses. Significant AgeAcc differences were observed across nine diseases, with disease-specific pathways confirmed by permutation tests (P  Interpretation PathwayAge represents an interpretable, biologically grounded framework for estimating epigenetic age. By integrating pathway-level methylation signals, it uncovers mechanistic links between ageing and disease, with potential applications in biomarker development and precision ageing medicine. Funding This research was supported by the Greater Bay Area Institute of Precision Medicine (Grant No. I0007), the National Social Science Foundation of China (Grant No. 32370639), and was further supported by the Shanghai Key Laboratory of Psychotic Disorders Open Grant (Grant No: 21-K01). ES received funding from the Hector II Foundation and the German Federal Ministry of Education and Research (BEST project, Grant No: 01EK2101B), and was endorsed by the German Center for Mental Health (DZPG). ES received speaker fees from bfd Buchholz-Fachinformationsdienst GmbH and editorial fees from the Lundbeck Foundation. SW received funding from the Strategic Priority Research Program of the Chinese Academy of Sciences (Grant no. XDB38020400), CAS Young Team Program for Stable Support of Basic Research (YSBR-077), CAS Interdisciplinary Innovation Team, Shanghai Municipal Science and Technology Major Project (Grant No. 2017SHZDZX01 to SW), the National Natural Science Foundation of China (32325013 and 92249302), the National Key Research and Development Project (2018YFC0910403), Shanghai Science and Technology Commission Excellent Academic Leaders Program (22XD1424700).",
+  "authors": "Li P, Zhu J, Wang S, Zhuang H, Zhang S, Huang Z, Cai F, Song Z, Liu Y, Liu W, Freidel S, Wang S, Schwarz E, Chen J.",
+  "venue": "EBioMedicine",
+  "year": 2025,
+  "citations": 11,
+  "found_by": [
+   "eupmc:aging biomarker healthspan val"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12272452",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PathwayAge通路级表观时钟，多队列万余人验证，可解释性强",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "通路级表观时钟，多队列验证，方法有创新性。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "整合GO/KEGG通路级DNA甲基化的PathwayAge时钟",
+  "data": "多队列DNA甲基化数据，含外周血、CD8+ T细胞及疾病组织",
+  "scenario": "疾病特异性衰老机制解析",
+  "benchmark": "Horvath、Hannum、PhenoAge、GrimAge等表观时钟",
+  "results": "PathwayAge在多数据集具强预测与泛化性，识别神经退行、免疫失调、代谢病相关通路",
+  "availability": "",
+  "limitations": "主要基于DNA甲基化，通路级解释仍受组织特异性和队列差异限制",
+  "summary": "研究开发PathwayAge，用通路级生物信息构建表观遗传衰老时钟。方法整合GO和KEGG通路而非单个CpG位点，并在多队列和疾病组织中验证。发现其能预测年龄并揭示疾病特异性衰老通路，提升机制解释与精准医学潜力。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

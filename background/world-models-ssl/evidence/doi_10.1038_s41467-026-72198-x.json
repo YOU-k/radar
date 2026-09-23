@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-026-72198-x",
+  "title": "RegFormer: a single-cell foundation model powered by gene regulatory hierarchies.",
+  "url": "https://doi.org/10.1038/s41467-026-72198-x",
+  "abstract": "Single-cell RNA sequencing (scRNA-seq) enables high-resolution profiling of cellular diversity, but current computational models often fail to incorporate regulatory priors, handle data sparsity, or efficiently process long gene sequences. Here, we present RegFormer, a foundation model that integrates gene regulatory networks (GRNs) with Mamba-based state-space modeling, overcoming the scalability and context-length limitations of Transformer architectures. RegFormer encodes each gene through dual embeddings, a value embedding for quantitative expression and a token embedding for regulatory identity, organized within a GRN-guided gene order to capture both expression dynamics and hierarchical regulation. Pretrained on 25 million human single cells spanning 45 tissues and diverse biological contexts, RegFormer achieves superior scalability and biological fidelity. Across comprehensive benchmarks, it consistently outperforms state-of-the-art single-cell foundation models (scGPT, Geneformer, scFoundation, and scBERT), delivering higher clustering accuracy, improved batch integration, and more precise cell type annotation. RegFormer also reconstructs biologically coherent GRNs, accurately models transcriptional responses to genetic perturbations, and enhances drug response prediction across cancer cell lines. By combining regulatory priors with efficient long-sequence Mamba modeling, RegFormer establishes a biologically grounded and scalable framework for single-cell representation learning, enabling deeper mechanistic insight into gene regulation and cellular state transitions.",
+  "authors": "Hu L, Qin H, Zhang Y, Lu Y, Qiu P, Guo Z, Cao L, Jiang W, Shen Y, Chen Q, Shang Y, Xia T, Deng Z, Xu X, Zhao H, Fang S, Li Y, Zhang Y.",
+  "venue": "Nature communications",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "eupmc:Mamba architecture self-superv"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13376892",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Mamba状态空间+基因调控先验的单细胞基础模型，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Mamba状态空间建模用于单细胞基础模型，架构迁移有价值。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于基因调控层级与Mamba的单细胞基础模型",
+  "data": "2500万人类细胞scRNA-seq数据",
+  "scenario": "单细胞转录组分析",
+  "benchmark": "scGPT、Geneformer等基础模型",
+  "results": "在细胞注释、GRN重建、遗传扰动预测、药物响应建模等基准上持续超越scGPT与Geneformer",
+  "availability": "",
+  "limitations": "未明确讨论跨物种与跨组织泛化能力",
+  "summary": "提出RegFormer，将基因调控网络先验与Mamba状态空间架构结合的单细胞基础模型。通过2500万人类细胞生成式预训练学习基因表达动态与调控层级。发现在细胞注释、GRN重建、扰动预测与药物响应等任务上持续优于现有基础模型。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

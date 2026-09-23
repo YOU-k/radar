@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "arxiv:2006.07733",
+  "title": "Bootstrap Your Own Latent: A New Approach to Self-Supervised Learning",
+  "url": "https://arxiv.org/abs/2006.07733",
+  "abstract": "We introduce Bootstrap Your Own Latent (BYOL), a new approach to self-supervised image representation learning. BYOL relies on two neural networks, referred to as online and target networks, that interact and learn from each other. From an augmented view of an image, we train the online network to predict the target network representation of the same image under a different augmented view. At the same time, we update the target network with a slow-moving average of the online network. While state-of-the art methods rely on negative pairs, BYOL achieves a new state of the art without them. BYOL reaches $74.3\\%$ top-1 classification accuracy on ImageNet using a linear evaluation with a ResNet-50 architecture and $79.6\\%$ with a larger ResNet. We show that BYOL performs on par or better than the current state of the art on both transfer and semi-supervised benchmarks. Our implementation and pretrained models are given on GitHub.",
+  "authors": "Jean-Bastien Grill, Florian Strub, Florent Altch'e, Corentin Tallec, Pierre H. Richemond, Elena Buchatskaya, Carl Doersch, B. '. Pires",
+  "venue": "Neural Information Processing Systems",
+  "year": 2020,
+  "citations": 9079,
+  "found_by": [
+   "s2:references:doi:10.1109/taslp.2021.3122291",
+   "s2:references:doi:10.48550/arxiv.2203.06604"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "BYOL自蒸馏无负样本奠基，方向核心",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "BYOL无负样本自蒸馏奠基，必读经典",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BYOL：在线网络预测目标网络表征，无负样本",
+  "data": "图像数据，ImageNet",
+  "scenario": "图像自监督表征学习",
+  "benchmark": "ImageNet线性评估、半监督与迁移基准，对比SimCLR等",
+  "results": "ResNet-50达74.3% top-1；更大ResNet达79.6% top-1；迁移/半监督持平或更优",
+  "availability": "代码与预训练模型公开于GitHub",
+  "limitations": "目标函数存在坍缩解；依赖预测器和慢速移动平均避免坍缩",
+  "summary": "本文提出BYOL，一种不依赖负样本的自监督图像表征学习方法。它使用在线网络和目标网络，在线网络从一幅图像的一种增强视图预测目标网络对同一图像另一增强视图的表征，目标网络用在线参数的慢速移动平均更新。发现BYOL在ImageNet线性评估下ResNet-50达74.3%、更大ResNet达79.6%，并在迁移和半监督基准上持平或优于当时最先进方法。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

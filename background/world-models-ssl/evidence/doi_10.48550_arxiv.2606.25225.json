@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2606.25225",
+  "title": "MJEPA: A Simple and Scalable Joint-Embedding Predictive Architecture for Audio-Visual Learning",
+  "url": "https://doi.org/10.48550/arXiv.2606.25225",
+  "abstract": "Self-supervised learning from large-scale video data has emerged as a dominant paradigm for visual representation learning. Since audio and visual streams naturally co-occur in video data, extending this success to jointly learn from both modalities is a natural next step, yet it remains challenging. Existing audio-visual self-supervised methods rely on modality-specific encoders and complex combinations of contrastive or reconstruction objectives, limiting cross-modal synergy and scalability. Joint Embedding Predictive Architectures (JEPAs) offer a simple, modality-agnostic alternative, but have to date been applied primarily to individual modalities. We introduce MJEPA, a joint-embedding predictive architecture for audio-visual learning that uses a single, unified encoder for both modalities. Our approach uses only a single predictive objective, applied both within and across modalities. We show that cross-modal prediction is critical: without it, a shared encoder degrades below unimodal baselines; with it, each modality's representation benefits from the other. Our frozen ViT-g model outperforms the best prior frozen baseline by over 6.8 mAP on AudioSet-20K, surpasses fully finetuned models on ESC-50 and FSD50K, and is competitive on video benchmarks despite using 10x less video data.",
+  "authors": "Revant Teotia, Adrien Bardes, Michael G. Rabbat, S. Chopra, Matthew J. Muckley, Nicolas Ballas",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2207.06405"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA扩展到音视频联合嵌入，方法可迁移有新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA扩展到音视频联合嵌入，方法有推广价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "MJEPA：单一统一编码器，单预测目标跨模态与模态内预测",
+  "data": "大规模视频（音频-视觉），视频数据比基线少10倍",
+  "scenario": "音视频自监督表征学习",
+  "benchmark": "AudioSet-20K、ESC-50、FSD50K及视频基准",
+  "results": "冻结ViT-g在AudioSet-20K超最佳冻结基线6.8 mAP以上，ESC-50/FSD50K超全微调模型",
+  "availability": "",
+  "limitations": "未提代码公开，跨模态预测缺失时共享编码器退化",
+  "summary": "提出MJEPA，用单一统一编码器与单一预测目标做音视频联合嵌入预测学习。目标同时施加于模态内与跨模态预测，跨模态预测对共享编码器收益关键。冻结ViT-g在AudioSet-20K超最佳冻结基线6.8 mAP以上，在ESC-50与FSD50K超全微调模型，且用少10倍视频数据在视频基准上具竞争力。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

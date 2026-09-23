@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s13059-016-1030-0",
+  "title": "An epigenetic clock analysis of race/ethnicity, sex, and coronary heart disease",
+  "url": "https://doi.org/10.1186/s13059-016-1030-0",
+  "abstract": "Epigenetic biomarkers of aging (the “epigenetic clock”) have the potential to address puzzling findings surrounding mortality rates and incidence of cardio-metabolic disease such as: (1) women consistently exhibiting lower mortality than men despite having higher levels of morbidity; (2) racial/ethnic groups having different mortality rates even after adjusting for socioeconomic differences; (3) the black/white mortality cross-over effect in late adulthood; and (4) Hispanics in the United States having a longer life expectancy than Caucasians despite having a higher burden of traditional cardio-metabolic risk factors. We analyzed blood, saliva, and brain samples from seven different racial/ethnic groups. We assessed the intrinsic epigenetic age acceleration of blood (independent of blood cell counts) and the extrinsic epigenetic aging rates of blood (dependent on blood cell counts and tracks the age of the immune system). In blood, Hispanics and Tsimane Amerindians have lower intrinsic but higher extrinsic epigenetic aging rates than Caucasians. African-Americans have lower extrinsic epigenetic aging rates than Caucasians and Hispanics but no differences were found for the intrinsic measure. Men have higher epigenetic aging rates than women in blood, saliva, and brain tissue. Epigenetic aging rates are significantly associated with sex, race/ethnicity, and to a lesser extent with CHD risk factors, but not with incident CHD outcomes. These results may help elucidate lower than expected mortality rates observed in Hispanics, older African-Americans, and women.",
+  "authors": "S. Horvath, M. Gurven, M. Levine, B. Trumble, H. Kaplan, H. Allayee, B. Ritz, Brian H. Chen",
+  "venue": "Genome Biology",
+  "year": 2016,
+  "citations": 677,
+  "found_by": [
+   "s2:references:doi:10.18632/aging.101414"
+  ],
+  "extra": {
+   "pmcid": "PMC4980791"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "表观时钟跨种族组织分析，公开数据方法",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "表观时钟跨种族经典，被广泛引用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "353 CpG表观遗传时钟分析种族、性别与冠心病",
+  "data": "血液、唾液、脑等多组织DNA甲基化数据",
+  "scenario": "种族/性别与冠心病衰老差异",
+  "benchmark": "不同种族/民族、性别及CHD风险因素",
+  "results": "非洲裔、男性等显示表观年龄加速差异；CHD与表观年龄加速相关",
+  "availability": "部分数据dbGAP/GEO公开",
+  "limitations": "横断面为主；组织来源异质；种族与性别差异机制未完全阐明",
+  "summary": "研究用表观遗传时钟分析种族/民族、性别和冠心病与分子衰老的关系。作者整合血液、唾液、淋巴细胞和脑组织DNA甲基化数据，计算353 CpG表观遗传年龄并比较不同人群及CHD风险因素。发现表观年龄加速存在种族和性别差异，并与冠心病及相关风险因素相关。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-59926-5",
+  "title": "CellFM: a large-scale foundation model pre-trained on transcriptomics of 100 million human cells.",
+  "url": "https://doi.org/10.1038/s41467-025-59926-5",
+  "abstract": "Single-cell sequencing provides transcriptomic profiling at single-cell resolution, uncovering cellular heterogeneity with unprecedented precision. Yet, current single cell data analysis suffers from the inherent data noises, batch effects, and sparsity, highlighting the requirement of a unified model to represent cellular states. To circumvent this problem, many recent efforts focus on training single-cell foundation models based on large datasets. However, current human foundation models are still limited by the sizes of training data and model parameters. Here, we have collected a diverse dataset of 100 million human cells, on which we train a single-cell foundation model (CellFM) containing 800 million parameters. To balance efficiency and performance, the model is trained through a modified RetNet framework on the MindSpore. Extensive experiments have shown that CellFM outperforms existing models in cell annotation, perturbation prediction, gene function prediction, and gene-gene relationship capturing.",
+  "authors": "Zeng Y, Xie J, Shangguan N, Wei Z, Li W, Su Y, Yang S, Zhang C, Zhang J, Fang N, Zhang H, Lu Y, Zhao H, Fan J, Yu W, Yang Y.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 62,
+  "found_by": [
+   "eupmc:single-cell foundation model b"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12092794",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "亿级人细胞转录组预训练基础模型，权重公开，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "1亿细胞转录组基础模型，公开权重，单细胞FM代表工作。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "大规模单细胞转录组基础模型预训练",
+  "data": "1亿人类细胞scRNA-seq，多来源标准化数据",
+  "scenario": "单细胞通用表征与下游任务",
+  "benchmark": "Geneformer、scGPT、scFoundation、UCE等基础模型",
+  "results": "在多种单细胞任务上取得竞争或更优性能；模型规模与训练细胞数显著提升",
+  "availability": "代码与权重公开",
+  "limitations": "仅人类单物种；数据清洗与批次异质性仍影响泛化",
+  "summary": "CellFM是面向人类单细胞转录组的大规模基础模型，预训练于1亿人类细胞。作者系统收集并标准化公共scRNA-seq数据，采用自监督学习获得通用细胞与基因表征。实验表明其在多类下游单细胞任务上达到或超过现有基础模型，验证了单物种超大规模预训练的潜力。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

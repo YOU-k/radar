@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/bioinformatics/btag227",
+  "title": "Benchmarking AI scientists for omics data-driven biological discovery.",
+  "url": "https://doi.org/10.1093/bioinformatics/btag227",
+  "abstract": "Motivation Recent advances in large language models have enabled the emergence of AI scientists that aim to autonomously analyze biological data and assist scientific discovery. Despite rapid progress, it remains unclear to what extent these systems can extract meaningful biological insights from real experimental data. Existing benchmarks either evaluate reasoning in the absence of data or focus on predefined analytical outputs, failing to reflect realistic, data-driven biological research. Results Here, we introduce BAISBench (Biological AI Scientist Benchmark), a benchmark for evaluating AI scientists on real single-cell transcriptomic datasets. BAISBench comprises two tasks: cell type annotation across 15 expert-labeled datasets, and scientific discovery through 193 multiple-choice questions derived from biological conclusions reported in 41 published single-cell studies. We evaluated several representative AI scientists using BAISBench and, to provide a human performance baseline, invited five graduate-level bioinformaticians to collectively complete the same tasks. The results show that while current AI scientists fall short of fully autonomous biological discovery, they already demonstrate substantial potential in supporting data-driven biological research. These results position BAISBench as a practical benchmark for characterizing the current capabilities and limitations of AI scientists in biological research. We expect BAISBench to serve as a practical evaluation framework for guiding the development of more capable AI scientists and for helping biologists identify AI systems that can effectively support real-world research workflows. Availability and implementation https://github.com/EperLuo/BAISBench, https://huggingface.co/datasets/EperLuo/BaisBench.",
+  "authors": "Luo E, Jia J, Xiong Y, Li X, Guo X, Yu B, Hao M, Wei L, Zhang X.",
+  "venue": "Bioinformatics (Oxford, England)",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "eupmc:LLM agent scientific hypothesi"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13340177",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "真实单细胞组学AI科学家基准，可复现评测，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "真实组学数据的AI科学家基准，填补数据驱动评测空白",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出BAISBench基准，评估AI科学家在单细胞转录组数据驱动发现中的能力",
+  "data": "单细胞转录组（scRNA-seq）数据集，具体规模未在片段中给出",
+  "scenario": "组学数据驱动的生物发现",
+  "benchmark": "BAISBench；对比AutoBA、scChat、BioChatter、Biomni、STELLA等AI科学家系统",
+  "results": "指出既有评估偏知识驱动、主观难扩展；BAISBench面向数据驱动发现，具体定量结果未在片段中给出",
+  "availability": "",
+  "limitations": "现有评估依赖专家或LLM评审，主观、难扩展，未直接检验能否从原始数据得出可解释结论",
+  "summary": "本文针对AI科学家在真实生物研究中的能力评估缺口，提出BAISBench基准。该基准基于单细胞转录组数据，构建贴近数据驱动生物发现场景的评测框架。作者指出既有基准多为知识驱动或仅评估计算输出，难以衡量AI系统能否从复杂实验数据中提炼有生物学意义的结论。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

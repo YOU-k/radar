@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-025-00928-9",
+  "title": "Refining the generation, interpretation and application of multi-organ, multi-omics biological aging clocks.",
+  "url": "https://doi.org/10.1038/s43587-025-00928-9",
+  "abstract": "Multi-organ biological aging clocks derived from clinical phenotypes and neuroimaging data have emerged as valuable tools for studying human aging and disease. Plasma proteomics provides an additional molecular dimension to enrich these clocks. In this study, I developed 11 multi-organ proteome-based biological age gaps (ProtBAGs) using 2,448 plasma proteins from 43,498 participants in the UK Biobank. Here I highlight methodological and clinical considerations for developing and using these clocks, including correction for age bias, organ specificity of proteins, sample size and underlying pathologies in the training data, which can affect model generalizability and clinical interpretability. In addition, I integrated 11 ProtBAGs with previously developed nine multi-organ phenotype-based biological age gaps to investigate genetic overlap and causal associations with disease endpoints. Finally, I show that incorporating features across organs improves predictions for systemic disease categories and all-cause mortality. These analyses provide methodological and clinical insights for developing and interpreting these clocks and highlight future avenues toward a multi-organ, multi-omics biological aging clock framework.",
+  "authors": "Wen J.",
+  "venue": "Nature aging",
+  "year": 2025,
+  "citations": 20,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB多器官蛋白组衰老时钟，4.3万人，方法学贡献",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging多器官蛋白组时钟，UK Biobank大规模",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建11个多器官蛋白组年龄差ProtBAG并整合表型时钟",
+  "data": "UKB 43498人，2448血浆蛋白",
+  "scenario": "多器官多组学衰老时钟优化与疾病预测",
+  "benchmark": "既往9个多器官表型年龄差时钟",
+  "results": "整合多器官特征提升系统性疾病和全因死亡预测，强调年龄偏倚与器官特异性",
+  "availability": "",
+  "limitations": "训练数据病理构成影响泛化与可解释性",
+  "summary": "研究基于UKB 43498人的2448个血浆蛋白构建11个多器官蛋白组生物年龄差ProtBAG。讨论年龄偏倚校正、器官蛋白特异性、样本量和训练病理等方法学问题，并与9个表型年龄差整合分析遗传重叠和因果关联。发现跨器官特征可提升系统性疾病类别和全因死亡预测，提出多器官多组学时钟框架。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

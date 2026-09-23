@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2602.16696",
+  "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
+  "url": "https://arxiv.org/abs/2602.16696v1",
+  "abstract": "Single-cell RNA sequencing (scRNA-seq) data exhibit strong and reproducible statistical structure. This has motivated the development of large-scale foundation models, such as TranscriptFormer, that use transformer-based architectures to learn a generative model for gene expression by embedding genes into a latent vector space. These embeddings have been used to obtain state-of-the-art (SOTA) performance on downstream tasks such as cell-type classification, disease-state prediction, and cross-species learning. Here, we ask whether similar performance can be achieved without utilizing computationally intensive deep learning-based representations. Using simple, interpretable pipelines that rely on careful normalization and linear methods, we obtain SOTA or near SOTA performance across multiple benchmarks commonly used to evaluate single-cell foundation models, including outperforming foundation models on out-of-distribution tasks involving novel cell types and organisms absent from the training data. Our findings highlight the need for rigorous benchmarking and suggest that the biology of cell identity can be captured by simple linear representations of single cell gene expression data.",
+  "authors": "Huan Souza, Pankaj Mehta",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "无参数表示超越基础模型，重要批判性结果。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "证明无参表示超越基础模型，重要批判性反例证据。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "无参数线性表示流程（归一化+线性方法）",
+  "data": "scRNA-seq数据，多基准任务",
+  "scenario": "下游基准任务评估",
+  "benchmark": "TranscriptFormer等单细胞基础模型",
+  "results": "在多个基准取得SOTA或近SOTA；在涉及新细胞类型与新物种的分布外任务上超越基础模型",
+  "availability": "",
+  "limitations": "提示需严格基准测试，基础模型优势可能被高估",
+  "summary": "探究是否无需计算密集的深度学习表示即可达到类似性能。采用依赖精细归一化与线性方法的简单可解释流程，在多个常用基准上评估。发现其取得SOTA或近SOTA性能，并在新细胞类型与未见物种的分布外任务上超越基础模型，表明细胞身份生物学可由简单线性表示捕获。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

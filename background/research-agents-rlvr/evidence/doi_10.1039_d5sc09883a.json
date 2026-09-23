@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1039/d5sc09883a",
+  "title": "TeLLAgent: a dual-agent framework for reliable scientific discovery with tool-enhanced LLMs",
+  "url": "https://doi.org/10.1039/d5sc09883a",
+  "abstract": "Large language model agents hold immense promise for automating scientific discovery, yet their real-world application is hindered by an inability to reliably orchestrate tools and execute complex, multi-step plans without encountering hallucinations or logical inconsistencies. Here, we present TeLLAgent, a novel supervisor-executor dual-agent framework that explicitly separates strategic reasoning from precise tool operation to overcome these limitations. The global planning agent, powered by DeepSeek-R1, performs iterative chain-of-thought reasoning to decompose problems and formulate dynamic plans. The local execution agent, leveraging DeepSeek-V3.1, then accurately invokes a curated suite of 30 specialized tools. A critical self-correction loop, mediated by the Model Context Protocol, allows the system to “rethink” and “recover” from failures, significantly enhancing robustness. When rigorously benchmarked on a suite of complex tool-calling tasks, TeLLAgent significantly outperformed GPT-5 and existing agent frameworks, achieving higher success rates in multi-step planning and demonstrating superior scaling with task complexity. Furthermore, TeLLAgent drastically reduced factual hallucinations in knowledge retrieval, as validated by both human experts and LLM judges, underscoring its enhanced reliability. We ultimately demonstrate the power of this approach by deploying TeLLAgent for autonomous discovery in the demanding domain of organic solar cell materials. From a single natural language query, it executed an end-to-end workflow, from molecular design and property prediction to the identification of a high-performance quasi-macromolecular acceptor. This AI-designed molecule was subsequently synthesized and validated, achieving a power conversion efficiency of 16.44%. TeLLAgent establishes a new paradigm for building reliable, autonomous AI systems, proving its potential to accelerate scientific discovery in materials science, drug discovery, and beyond.",
+  "authors": "Jinyu Sun, Ji-Bin Zhou, Huabei Wang, Wei Liu, Jun Yuan, Yue Wang, Ting Xie, Lin Tan",
+  "venue": "Chemical Science",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:recursive self-improvement LLM"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42211270"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "双智能体科研发现框架，工具编排，契合科研智能体方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "双智能体科研发现框架，工具编排可靠，契合科研智能体方向。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "监督者-执行者双智能体框架，分离战略推理与工具操作",
+  "data": "30个专用工具套件；有机太阳能电池材料数据",
+  "scenario": "自主科学发现与工具调用",
+  "benchmark": "对比GPT-5及现有智能体框架",
+  "results": "多步规划成功率更高，随任务复杂度扩展性更优；知识检索事实幻觉大幅降低，经人类专家与LLM评审验证",
+  "availability": "",
+  "limitations": "全文未获取，具体局限未明确说明",
+  "summary": "本文提出TeLLAgent，一个监督者-执行者双智能体框架，用于提升LLM科学发现的可靠性。该框架由DeepSeek-R1驱动的全局规划智能体进行迭代思维链推理与动态规划，DeepSeek-V3.1驱动的局部执行智能体调用30个专用工具，并通过基于模型上下文协议的自纠正循环实现失败后的重思与恢复。在复杂工具调用任务上，TeLLAgent显著优于GPT-5和现有框架，多步规划成功率更高且随复杂度扩展性更强，同时大幅减少知识检索中的事实幻觉，并成功应用于有机太阳能电池材料的自主发现。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

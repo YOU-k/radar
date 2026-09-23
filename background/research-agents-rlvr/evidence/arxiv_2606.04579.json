@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2606.04579",
+  "title": "SCI-PRM: A Tool Aware Process Reward Model for Scientific Reasoning Verification",
+  "url": "https://arxiv.org/abs/2606.04579v2",
+  "abstract": "While Process Reward Models (PRMs) have achieved remarkable success in mathematical reasoning, their application in complex scientific domains-such as biology, chemistry, and physics remains largely unexplored. Scientific problems demand not only logical rigor but also factual consistency and the precise usage of domain-specific tools, areas where current models often suffer from hallucinations and lack of verification. In this paper, we first construct SCIPRM70K, a large-scale dataset featuring Chain-of-Tool trajectories that explicitly interleave reasoning with the execution of scientific tools. Building upon this, we train an efficient reward model called Sci-PRM to provide fine-grained supervision on tool selection, execution accuracy, and result interpretation at each step in one inference. Experiments demonstrate that Sci-PRM significantly enhances foundation models in two key aspects: (1) it enables effective test-time scaling via Best-of-N selection; and (2) when integrated into Reinforcement Learning, it serves as a dense reward signal that mitigates the critical issue of advantage disappearance, allowing the model to break through existing performance ceilings.",
+  "authors": "Xiangyu Zhao, Henry Hengyuan Zhao, Yiheng Wang, Wanghan Xu, Yuhao Zhou, Qinglong Cao, Zhiwang Zhou, Lei Bai",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "工具感知PRM面向科学推理，含数据集与生物场景契合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "面向科学推理的工具感知PRM，含数据集，契合科研智能体方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Sci-PRM工具感知过程奖励模型，基于Chain-of-Tool数据训练",
+  "data": "SCIPRM70K数据集，含工具调用轨迹，跨生物/化学/物理",
+  "scenario": "科学推理验证与工具调用监督",
+  "benchmark": "ChemBench、Mol-Instruct、Physics等；对比GPT-5-Mini、Qwen3-VL-8B",
+  "results": "工具调用步F1显著领先；GPT-5-Mini在工具步大幅退化，Sci-PRM保持高准确",
+  "availability": "代码公开于GitHub",
+  "limitations": "依赖工具沙箱执行；部分验证超时（如BLAST超300s）",
+  "summary": "针对PRM在科学领域工具使用验证的空白，构建SCIPRM70K数据集，含交错推理与科学工具执行的Chain-of-Tool轨迹。训练Sci-PRM在单次推理中对工具选择、执行准确性与结果解读提供细粒度监督。实验表明其支持Best-of-N测试时扩展，并作为RL密集奖励缓解优势消失，在工具调用步F1上显著优于GPT-5-Mini等基线。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

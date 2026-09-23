@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2602.12540",
+  "title": "Self-Supervised JEPA-based World Models for LiDAR Occupancy Completion and Forecasting",
+  "url": "https://arxiv.org/abs/2602.12540v1",
+  "abstract": "Autonomous driving, as an agent operating in the physical world, requires the fundamental capability to build \\textit{world models} that capture how the environment evolves spatiotemporally in order to support long-term planning. At the same time, scalability demands learning such models in a self-supervised manner; \\textit{joint-embedding predictive architecture (JEPA)} enables learning world models via leveraging large volumes of unlabeled data without relying on expensive human annotations. In this paper, we propose \\textbf{AD-LiST-JEPA}, a self-supervised world model for autonomous driving that predicts future spatiotemporal evolution from LiDAR data using a JEPA framework. We evaluate the quality of the learned representations through a downstream LiDAR-based occupancy completion and forecasting (OCF) task, which jointly assesses perception and prediction. Proof of concept experiments show better OCF performance with pretrained encoder after JEPA-based world model learning.",
+  "authors": "Haoran Zhu, Anna Choromanska",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA世界模型用于LiDAR，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA世界模型用于LiDAR，方向契合",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "AD-LiST-JEPA：基于JEPA的多帧LiDAR时空世界模型",
+  "data": "多帧LiDAR点云（自动驾驶场景）",
+  "scenario": "自动驾驶LiDAR占据完成与预测",
+  "benchmark": "生成式世界模型、LAW、World4Drive等",
+  "results": "概念验证显示JEPA预训练编码器在OCF任务上性能更优",
+  "availability": "",
+  "limitations": "仅概念验证实验，未给出大规模定量对比与完整基准结果",
+  "summary": "提出AD-LiST-JEPA，面向自动驾驶的自监督JEPA世界模型，从多帧LiDAR预测未来时空表征。通过JEPA在潜空间学习世界模型，避免生成式方法的高算力与幻觉问题，并规避表征坍塌。以LiDAR占据完成与预测（OCF）为下游任务，初步实验表明预训练编码器带来更好OCF性能。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

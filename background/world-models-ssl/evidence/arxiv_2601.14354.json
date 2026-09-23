@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2601.14354",
+  "title": "VJEPA: Variational Joint Embedding Predictive Architectures as Probabilistic World Models",
+  "url": "https://arxiv.org/abs/2601.14354v1",
+  "abstract": "Joint Embedding Predictive Architectures (JEPA) offer a scalable paradigm for self-supervised learning by predicting latent representations rather than reconstructing high-entropy observations. However, existing formulations rely on \\textit{deterministic} regression objectives, which mask probabilistic semantics and limit its applicability in stochastic control. In this work, we introduce \\emph{Variational JEPA (VJEPA)}, a \\textit{probabilistic} generalization that learns a predictive distribution over future latent states via a variational objective. We show that VJEPA unifies representation learning with Predictive State Representations (PSRs) and Bayesian filtering, establishing that sequential modeling does not require autoregressive observation likelihoods. Theoretically, we prove that VJEPA representations can serve as sufficient information states for optimal control without pixel reconstruction, while providing formal guarantees for collapse avoidance. We further propose \\emph{Bayesian JEPA (BJEPA)}, an extension that factorizes the predictive belief into a learned dynamics expert and a modular prior expert, enabling zero-shot task transfer and constraint (e.g. goal, physics) satisfaction via a Product of Experts. Empirically, through a noisy environment experiment, we demonstrate that VJEPA and BJEPA successfully filter out high-variance nuisance distractors that cause representation collapse in generative baselines. By enabling principled uncertainty estimation (e.g. constructing credible intervals via sampling) while remaining likelihood-free regarding observations, VJEPA provides a foundational framework for scalable, robust, uncertainty-aware planning in high-dimensional, noisy environments.",
+  "authors": "Yongchao Huang",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "变分JEPA概率世界模型，统一PSR与贝叶斯滤波，理论新意强",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "概率化JEPA世界模型，连接PSR与贝叶斯滤波",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "变分JEPA（VJEPA）与贝叶斯JEPA（BJEPA）",
+  "data": "含高方差干扰的噪声线性系统（Noisy TV玩具实验）",
+  "scenario": "随机控制/世界模型与规划",
+  "benchmark": "确定性JEPA、生成式基线",
+  "results": "VJEPA/BJEPA成功滤除高方差干扰，避免生成式基线的表征坍缩；可采样构建可信区间",
+  "availability": "",
+  "limitations": "仅玩具实验验证，未在大规模高维真实环境评估",
+  "summary": "论文将JEPA从确定性回归推广为概率形式VJEPA，学习未来隐状态的概率预测分布，并证明其与预测状态表示和贝叶斯滤波统一。进一步提出BJEPA，用专家乘积分解预测信念以支持零样本任务迁移与约束满足。在噪声环境实验中，VJEPA/BJEPA滤除了导致生成式基线坍缩的干扰，并提供原则性不确定性估计。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

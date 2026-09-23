@@ -25,11 +25,22 @@ S2 = "https://api.semanticscholar.org/graph/v1"
 S2_FIELDS = "title,abstract,year,venue,citationCount,externalIds,authors"
 
 
-def _get_json(url: str, params: dict | None = None, timeout: int = 60) -> dict:
-    r = requests.get(url, params=params, timeout=timeout,
-                     headers={"User-Agent": "radar-background/0.1"})
-    r.raise_for_status()
-    return r.json()
+import os
+
+
+def _get_json(url: str, params: dict | None = None, timeout: int = 60, retries: int = 3) -> dict:
+    """S2 无 key 时共享限速，paper/search 尤其容易 429：指数退避重试；有 S2_API_KEY 则带上。"""
+    headers = {"User-Agent": "radar-background/0.1"}
+    if os.environ.get("S2_API_KEY") and "semanticscholar" in url:
+        headers["x-api-key"] = os.environ["S2_API_KEY"]
+    for attempt in range(retries + 1):
+        r = requests.get(url, params=params, timeout=timeout, headers=headers)
+        if r.status_code == 429 and attempt < retries:
+            time.sleep(8 * (attempt + 1))
+            continue
+        r.raise_for_status()
+        return r.json()
+    return {}
 
 
 class Source(Protocol):
@@ -158,10 +169,14 @@ class S2Snowball:
         eid = normalize_id(raw)
         url = (f"https://doi.org/{ext['DOI']}" if ext.get("DOI") else
                f"https://arxiv.org/abs/{ext['ArXiv']}" if ext.get("ArXiv") else "")
+        alts = sorted({normalize_id(f"{k}:{v}") for k, v in
+                       (("doi", ext.get("DOI")), ("arxiv", ext.get("ArXiv")), ("pmid", ext.get("PubMed")))
+                       if v} - {eid})
         return Candidate(id=eid, title=p["title"], url=url, abstract=p.get("abstract") or "",
                          authors=", ".join(a.get("name", "") for a in (p.get("authors") or [])[:8]),
                          venue=p.get("venue") or "", year=p.get("year"),
-                         citations=p.get("citationCount"), found_by=[tag])
+                         citations=p.get("citationCount"), found_by=[tag],
+                         extra={"alt_ids": alts} if alts else {})
 
     def fetch(self, spec: TopicSpec, plan: DiscoveryPlan) -> list[Candidate]:
         out = []
@@ -187,6 +202,31 @@ class S2Snowball:
                     if c:
                         out.append(c)
                 time.sleep(self.sleep)
+        return out
+
+
+class S2Keyword:
+    """Semantic Scholar 关键词检索：覆盖 arXiv/会议论文（ML 方向 EuropePMC 没有，arXiv API 本机不可达）。"""
+    name = "s2kw"
+
+    def __init__(self, get_json: Callable = _get_json, per_query: int = 40, sleep: float = 1.1):
+        self.get_json, self.per_query, self.sleep = get_json, per_query, sleep
+
+    def fetch(self, spec: TopicSpec, plan: DiscoveryPlan) -> list[Candidate]:
+        out = []
+        y0 = date.today().year - max(1, round(plan.months / 12))
+        for q in plan.queries:
+            try:
+                d = self.get_json(f"{S2}/paper/search", {"query": q.strip('"'), "fields": S2_FIELDS,
+                                                          "limit": self.per_query, "year": f"{y0}-"})
+            except Exception as exc:
+                print(f"[discover:s2kw] {q!r} failed: {exc}")
+                continue
+            for row in d.get("data", []):
+                c = S2Snowball._to_cand(S2Snowball(), row, f"s2kw:{q[:30]}")
+                if c:
+                    out.append(c)
+            time.sleep(self.sleep)
         return out
 
 
@@ -218,7 +258,7 @@ class Inbox:
 
 
 def default_sources() -> list[Source]:
-    return [EuropePMCKeyword(), EuropePMCJournal(), ArxivKeyword(), S2Snowball()]
+    return [EuropePMCKeyword(), EuropePMCJournal(), ArxivKeyword(), S2Keyword(), S2Snowball()]
 
 
 def relevance(c: Candidate, spec: TopicSpec) -> tuple:

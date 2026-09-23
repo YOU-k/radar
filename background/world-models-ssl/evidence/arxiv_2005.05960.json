@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2005.05960",
+  "title": "Planning to Explore via Self-Supervised World Models",
+  "url": "https://arxiv.org/abs/2005.05960",
+  "abstract": "Reinforcement learning allows solving complex tasks, however, the learning tends to be task-specific and the sample efficiency remains a challenge. We present Plan2Explore, a self-supervised reinforcement learning agent that tackles both these challenges through a new approach to self-supervised exploration and fast adaptation to new tasks, which need not be known during exploration. During exploration, unlike prior methods which retrospectively compute the novelty of observations after the agent has already reached them, our agent acts efficiently by leveraging planning to seek out expected future novelty. After exploration, the agent quickly adapts to multiple downstream tasks in a zero or a few-shot manner. We evaluate on challenging control tasks from high-dimensional image inputs. Without any training supervision or task-specific interaction, Plan2Explore outperforms prior self-supervised exploration methods, and in fact, almost matches the performances oracle which has access to rewards. Videos and code at this https URL",
+  "authors": "R. Sekar, Oleh Rybkin, Kostas Daniilidis, P. Abbeel, Danijar Hafner, Deepak Pathak",
+  "venue": "International Conference on Machine Learning",
+  "year": 2020,
+  "citations": 523,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2411.04983"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "自监督世界模型规划探索，Plan2Explore经典有代码",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "自监督世界模型探索经典，Plan2Explore高引",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Plan2Explore：规划探索+集成动力学分歧内在奖励",
+  "data": "高维图像控制任务，无奖励探索轨迹",
+  "scenario": "自监督探索与少样本适应",
+  "benchmark": "对比先前自监督探索方法及有奖励oracle",
+  "results": "无任务监督下优于先前自监督探索方法，几乎匹配有奖励oracle",
+  "availability": "代码与视频公开",
+  "limitations": "依赖集成动力学分歧，未广泛验证真实机器人",
+  "summary": "提出Plan2Explore，通过规划主动寻找预期未来新颖性进行自监督探索。用集成动力学预测下一图像嵌入的分歧作为内在奖励，在潜空间想象 rollout 中反向传播优化探索策略，学习全局世界模型。无任务监督下优于先前自监督探索方法，几乎匹配有奖励oracle，并支持零样本或少样本适应下游任务。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

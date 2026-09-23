@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2025.06.008",
+  "title": "Virtual Cell Challenge: Toward a Turing test for the virtual cell.",
+  "url": "https://doi.org/10.1016/j.cell.2025.06.008",
+  "abstract": "Virtual cells are an emerging frontier at the intersection of artificial intelligence and biology. A key goal of these cell state models is predicting cellular responses to perturbations. The Virtual Cell Challenge is being established to catalyze progress toward this goal. This recurring and open benchmark competition from the Arc Institute will provide an evaluation framework, purpose-built datasets, and a venue for accelerating model development.",
+  "authors": "Roohani YH, Hua TJ, Tung PY, Bounds LR, Yu FB, Dobin A, Teyssier N, Adduri A, Woodrow A, Plosky BS, Mehta R, Hsu B, Sullivan J, Ricci-Tam C, Li N, Kazaks J, Gilbert LA, Konermann S, Hsu PD, Goodarzi H, Burke DP.",
+  "venue": "Cell",
+  "year": 2025,
+  "citations": 59,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Arc虚拟细胞挑战赛，权威基准与数据集，核心方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell 发表，Arc 虚拟细胞挑战赛，定义该方向评测基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "开放基准竞赛与评估框架",
+  "data": "专用扰动数据集（细节未在摘要给出）",
+  "scenario": "虚拟细胞扰动响应预测",
+  "benchmark": "Arc Institute虚拟细胞挑战赛基准",
+  "results": "",
+  "availability": "",
+  "limitations": "仅为竞赛框架介绍，无具体模型结果",
+  "summary": "该文提出虚拟细胞挑战赛，旨在推动细胞状态模型预测扰动响应。通过提供评估框架、专用数据集和竞赛平台加速模型开发。作为开放循环基准，促进虚拟细胞领域进展。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -14,7 +14,7 @@ from . import extract as extract_mod
 from . import metrics as metrics_mod
 from .compile import compile_report
 from .dedup import dedup
-from .discover import Inbox, Source, default_sources, discover
+from .discover import Inbox, S2Snowball, Source, default_sources, discover
 from .fetch import fetch_fulltext
 from .gap import plan_round
 from .llmio import LLM
@@ -22,6 +22,7 @@ from .models import Candidate, DiscoveryPlan, Evidence, RoundLog
 from .outline import Outline, revise
 from .screen import screen
 from .spec import TopicSpec
+from .discover import S2, S2_FIELDS
 from .store import CorpusIndex, EvidenceStore
 
 
@@ -71,6 +72,56 @@ class Pipeline:
                 seen[c.id] = max(int(c.citations), int(seen.get(c.id, 0)))
         self.cited_path.write_text(json.dumps(seen, ensure_ascii=False), encoding="utf-8")
         return [k for k, _ in sorted(seen.items(), key=lambda kv: -kv[1])[:50]]
+
+    @staticmethod
+    def seed_title(seed: str, get_json) -> str:
+        """S2 限流时的兜底：arXiv 种子经 DataCite（无 key）取标题；DOI 种子经 Crossref。"""
+        try:
+            if seed.startswith("arxiv:"):
+                d = get_json(f"https://api.datacite.org/dois/10.48550/arxiv.{seed[6:]}")
+                titles = ((d.get("data") or {}).get("attributes") or {}).get("titles") or []
+                return str(titles[0].get("title", "")) if titles else ""
+            if seed.startswith("doi:"):
+                d = get_json(f"https://api.crossref.org/works/{seed[4:]}")
+                t = ((d.get("message") or {}).get("title") or [""])[0]
+                return str(t)
+        except Exception as exc:
+            print(f"[seeds] title lookup {seed} failed: {exc}")
+        return ""
+
+    def link_seeds(self, s2: S2Snowball | None = None) -> int:
+        """种子若已以另一种 id（期刊 DOI vs arXiv）入库，补上 alt_ids 让种子命中和去重认得它。
+        只查还没命中的种子，通常几次 S2 调用。"""
+        s2 = s2 or S2Snowball()
+        known = self.store.all_ids()
+        missing = [x for x in self.spec.seeds if x not in known]
+        if not missing:
+            return 0
+        from .models import title_key
+        by_title = {title_key(e.candidate.title): e for e in self.store.all()}
+        by_id = {e.id: e for e in self.store.all()}
+        linked = 0
+        for seed in missing:
+            c = None
+            try:
+                c = s2._to_cand(s2.get_json(f"{S2}/paper/{s2._s2_id(seed)}", {"fields": S2_FIELDS}), "seed")
+            except Exception as exc:
+                print(f"[seeds] {seed} S2 lookup failed: {exc}")
+            if c is None:  # S2 不通：只靠标题匹配
+                title = self.seed_title(seed, s2.get_json)
+                if not title:
+                    continue
+                c = Candidate(id=seed, title=title)
+            ev = by_id.get(c.id) or next((by_id[a] for a in c.extra.get("alt_ids", []) if a in by_id), None) \
+                or by_title.get(title_key(c.title))
+            if ev is None:
+                continue
+            alts = set(ev.candidate.extra.get("alt_ids") or []) | {seed, c.id, *c.extra.get("alt_ids", [])}
+            ev.candidate.extra["alt_ids"] = sorted(alts - {ev.id})
+            self.store.update(ev)
+            linked += 1
+        print(f"[seeds] linked {linked}/{len(missing)} seeds to existing evidence")
+        return linked
 
     def compile_only(self, changelog: str = "") -> Path:
         outline = self.load_outline()
@@ -176,6 +227,8 @@ class Pipeline:
         rounds = rounds or self.spec.budget["rounds"]
         results = []
         start = self.round_no() + 1
+        if start > 1:
+            self.link_seeds()
         for r in range(start, start + rounds):
             plan = plan_round(self.spec, self.store, self.load_outline(), r, self.llm, self.last_log())
             cands = discover(self.spec, plan, self.sources, self.spec.budget["max_candidates"])

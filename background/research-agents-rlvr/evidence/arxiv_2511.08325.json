@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2511.08325",
+  "title": "AgentPRM: Process Reward Models for LLM Agents via Step-Wise Promise and Progress",
+  "url": "https://arxiv.org/abs/2511.08325v1",
+  "abstract": "Despite rapid development, large language models (LLMs) still encounter challenges in multi-turn decision-making tasks (i.e., agent tasks) like web shopping and browser navigation, which require making a sequence of intelligent decisions based on environmental feedback. Previous work for LLM agents typically relies on elaborate prompt engineering or fine-tuning with expert trajectories to improve performance. In this work, we take a different perspective: we explore constructing process reward models (PRMs) to evaluate each decision and guide the agent's decision-making process. Unlike LLM reasoning, where each step is scored based on correctness, actions in agent tasks do not have a clear-cut correctness. Instead, they should be evaluated based on their proximity to the goal and the progress they have made. Building on this insight, we propose a re-defined PRM for agent tasks, named AgentPRM, to capture both the interdependence between sequential decisions and their contribution to the final goal. This enables better progress tracking and exploration-exploitation balance. To scalably obtain labeled data for training AgentPRM, we employ a Temporal Difference-based (TD-based) estimation method combined with Generalized Advantage Estimation (GAE), which proves more sample-efficient than prior methods. Extensive experiments across different agentic tasks show that AgentPRM is over $8\\times$ more compute-efficient than baselines, and it demonstrates robust improvement when scaling up test-time compute. Moreover, we perform detailed analyses to show how our method works and offer more insights, e.g., applying AgentPRM to the reinforcement learning of LLM agents.",
+  "authors": "Zhiheng Xi, Chenyang Liao, Guanyu Li, Yajie Yang, Wenxiang Chen, Zhihao Zhang, Binghai Wang, Senjie Jin",
+  "venue": "",
+  "year": 2025,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "面向 LLM 智能体的过程奖励模型，多轮决策，方法明确。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "面向LLM智能体的过程奖励建模，多轮决策，有评测。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "AgentPRM：基于TD与GAE的步骤级promise/progress过程奖励",
+  "data": "多轮智能体任务轨迹；TD+GAE自动标注",
+  "scenario": "网页购物、浏览器导航等智能体任务",
+  "benchmark": "多类agent任务；对比ORM、PVM等奖励模型",
+  "results": "比基线计算效率高8倍以上；Best-of-N随测试时计算扩展稳定提升",
+  "availability": "",
+  "limitations": "动作无明确正确性，奖励设计依赖目标接近度；跨任务泛化仍需验证",
+  "summary": "论文针对LLM智能体任务提出AgentPRM，重新定义过程奖励以同时捕捉步骤承诺与进展。方法用TD估计结合GAE自动生成标签，训练过程奖励模型并用于搜索与RL。实验显示其比基线计算效率高8倍以上，Best-of-N随测试时计算扩展稳定提升。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

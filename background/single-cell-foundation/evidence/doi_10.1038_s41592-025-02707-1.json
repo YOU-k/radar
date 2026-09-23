@@ -1,0 +1,52 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-025-02707-1",
+  "title": "A visual-omics foundation model to bridge histopathology with spatial transcriptomics.",
+  "url": "https://doi.org/10.1038/s41592-025-02707-1",
+  "abstract": "Artificial intelligence has revolutionized computational biology. Recent developments in omics technologies, including single-cell RNA sequencing and spatial transcriptomics, provide detailed genomic data alongside tissue histology. However, current computational models focus on either omics or image analysis, lacking their integration. To address this, we developed OmiCLIP, a visual-omics foundation model linking hematoxylin and eosin images and transcriptomics using tissue patches from Visium data. We transformed transcriptomic data into 'sentences' by concatenating top-expressed gene symbols from each patch. We curated a dataset of 2.2 million paired tissue images and transcriptomic data across 32 organs to train OmiCLIP integrating histology and transcriptomics. Building on OmiCLIP, our Loki platform offers five key functions: tissue alignment, annotation via bulk RNA sequencing or marker genes, cell-type decomposition, image-transcriptomics retrieval and spatial transcriptomics gene expression prediction from hematoxylin and eosin-stained images. Compared with 22 state-of-the-art models on 5 simulations, and 19 public and 4 in-house experimental datasets, Loki demonstrated consistent accuracy and robustness.",
+  "authors": "Chen W, Zhang P, Tran TN, Xiao Y, Li S, Shah VV, Cheng H, Brannan KW, Youker K, Lai L, Fang L, Yang Y, Le NT, Abe JI, Chen SH, Ma Q, Chen K, Song Q, Cooke JP, Wang G.",
+  "venue": "Nature methods",
+  "year": 2025,
+  "citations": 86,
+  "found_by": [
+   "eupmc:single-cell multimodal integra",
+   "eupmc:single-cell benchmark foundati",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12240810",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "OmiCLIP视觉-组学基础模型，公开权重多模态整合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "OmiCLIP视觉-组学基础模型，整合病理与空间转录组。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "OmiCLIP双编码器基础模型与Loki平台",
+  "data": "ST-bank：220万组织patch，1007样本，32器官",
+  "scenario": "组织学与空间转录组整合",
+  "benchmark": "对比22种SOTA方法，5模拟+19公开+4内部数据集",
+  "results": "在组织对齐、注释、细胞分解、检索、基因预测等任务一致准确稳健",
+  "availability": "公开",
+  "limitations": "依赖配对WSI与Visium数据，泛化待验证",
+  "summary": "作者提出OmiCLIP转录组-图像双编码器基础模型及Loki平台。基于ST-bank的220万配对patch，用CLIP对比学习对齐图像与基因句子表示。Loki提供组织对齐、注释、细胞分解、检索与基因表达预测五功能，在多项任务上优于22种SOTA方法。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41746-025-02198-6",
+  "title": "AI-driven virtual cell models in preclinical research: technical pathways, validation mechanisms, and clinical translation potential.",
+  "url": "https://doi.org/10.1038/s41746-025-02198-6",
+  "abstract": "AI-driven virtual cell models show the potential to transform the paradigm of life sciences research by integrating multimodal omics data (e.g., single-cell transcriptomics and proteomics) with advanced algorithms such as deep generative models and graph neural networks to enable high-precision predictions of drug responses, gene perturbations, and disease progression. These models enable high-precision predictions of drug responses, gene perturbations, and disease progression. This review outlines the technical pathways and validation mechanisms of virtual cells, emphasizing a closed-loop workflow from computational evaluation to experimental verification using CRISPR assays and organoid platforms. The applications of virtual cells in personalized drug screening and disease modeling are highlighted, showcasing their potential to reduce animal testing and optimize therapy. However, challenges in regulatory acceptance, data privacy, and model interpretability remain. Global policy and standardization trends are driving clinical translation, and future advancements will involve cross-disciplinary integration and greater standardization to enhance the impact of virtual cells in precision medicine and drug discovery.",
+  "authors": "Ma C, Zhang H, Rao Y, Jiang X, Liu B, Sun Z, Song Z, Gao Y, Cui Y, Liu X, Li Z.",
+  "venue": "NPJ digital medicine",
+  "year": 2025,
+  "citations": 11,
+  "found_by": [
+   "eupmc:virtual cell perturbation resp",
+   "eupmc:spatial transcriptomics founda"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12789685",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "虚拟细胞模型技术路径与验证机制综述，契合方向定义",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "虚拟细胞模型技术路径与验证综述，方向背景必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述AI驱动虚拟细胞模型的技术路径与验证机制",
+  "data": "多模态组学数据，如单细胞转录组和蛋白质组",
+  "scenario": "临床前研究与药物发现",
+  "benchmark": "",
+  "results": "提出从计算评估到CRISPR和类器官实验验证的闭环流程；可预测药物反应、基因扰动和疾病进展",
+  "availability": "",
+  "limitations": "监管接受、数据隐私和模型可解释性仍存挑战",
+  "summary": "该综述讨论AI驱动虚拟细胞模型在临床前研究中的技术路径、验证机制和临床转化潜力。作者强调整合多模态组学与深度生成模型、图神经网络，并采用CRISPR和类器官平台形成闭环验证。文章指出虚拟细胞可用于个性化药物筛选和疾病建模，但监管、隐私和可解释性仍是障碍。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

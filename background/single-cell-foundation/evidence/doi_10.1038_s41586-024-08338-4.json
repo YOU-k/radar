@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-024-08338-4",
+  "title": "The Human Cell Atlas from a cell census to a unified foundation model.",
+  "url": "https://doi.org/10.1038/s41586-024-08338-4",
+  "abstract": "With the convergence of notable advances in molecular and spatial profiling methods and new computational approaches taking advantage of artificial intelligence and machine learning, the construction of cell atlases is progressing from data collection to atlas integration and beyond. Here, we explore five ways in which cell atlases, including the Human Cell Atlas, are already revealing valuable biological insights, and how they are poised to provide even greater benefits in the coming years. In particular, we discuss cell atlases as censuses of cells; as 3D maps of cells in the body, across modalities and scales; as maps connecting genotype causes to phenotype effects; as 4D maps of development; and, ultimately, as foundation models of biology unifying all of these aspects and helping to transform medicine.",
+  "authors": "Rood JE, Wynne S, Robson L, Hupalowska A, Randell J, Teichmann SA, Regev A.",
+  "venue": "Nature",
+  "year": 2024,
+  "citations": 121,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "HCA路线图，明确指向统一基础模型与图谱整合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature人类细胞图谱综述，提出统一基础模型路线，方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "细胞图谱向统一基础模型演进的综述",
+  "data": "Human Cell Atlas等细胞图谱数据",
+  "scenario": "细胞普查到医学转化",
+  "benchmark": "",
+  "results": "提出细胞图谱五种用途，最终作为生物学基础模型",
+  "availability": "",
+  "limitations": "",
+  "summary": "文章探讨细胞图谱从数据收集向图谱整合及基础模型的发展。阐述细胞图谱作为细胞普查、3D图谱、基因型-表型连接、4D发育图谱及生物学基础模型五种用途。指出其有望统一各层面并变革医学。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

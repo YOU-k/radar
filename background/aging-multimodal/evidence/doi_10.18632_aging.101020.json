@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.18632/aging.101020",
+  "title": "DNA methylation-based measures of biological age: meta-analysis predicting time to death",
+  "url": "https://doi.org/10.18632/aging.101020",
+  "abstract": "Estimates of biological age based on DNA methylation patterns, often referred to as “epigenetic age”, “DNAm age”, have been shown to be robust biomarkers of age in humans. We previously demonstrated that independent of chronological age, epigenetic age assessed in blood predicted all-cause mortality in four human cohorts. Here, we expanded our original observation to 13 different cohorts for a total sample size of 13,089 individuals, including three racial/ethnic groups. In addition, we examined whether incorporating information on blood cell composition into the epigenetic age metrics improves their predictive power for mortality. All considered measures of epigenetic age acceleration were predictive of mortality (p≤8.2×10−9), independent of chronological age, even after adjusting for additional risk factors (p<5.4×10−4), and within the racial/ethnic groups that we examined (non-Hispanic whites, Hispanics, African Americans). Epigenetic age estimates that incorporated information on blood cell composition led to the smallest p-values for time to death (p=7.5×10−43). Overall, this study a) strengthens the evidence that epigenetic age predicts all-cause mortality above and beyond chronological age and traditional risk factors, and b) demonstrates that epigenetic age estimates that incorporate information on blood cell counts lead to highly significant associations with all-cause mortality.",
+  "authors": "Brian H. Chen, R. Marioni, E. Colicino, M. Peters, Cavin K. Ward-Caviness, Pei-Chien Tsai, Nicholas S. Roetker, A. Just",
+  "venue": "Aging",
+  "year": 2016,
+  "citations": 1006,
+  "found_by": [
+   "s2:references:doi:10.18632/aging.101414"
+  ],
+  "extra": {
+   "pmcid": "PMC5076441"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "表观时钟死亡预测meta分析，经典可复用系数",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "表观时钟死亡预测里程碑，领域奠基必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "DNA甲基化表观遗传时钟及死亡预测荟萃分析",
+  "data": "13个队列13,089人，2,734例死亡",
+  "scenario": "预测死亡时间",
+  "benchmark": "Horvath 353 CpG与Hannum 71 CpG时钟",
+  "results": "表观年龄与 chronological age 相关系数0.65-0.89；年龄加速预测全因死亡",
+  "availability": "",
+  "limitations": "血液细胞组成影响估计；出生队列无法计算年龄相关；种族/民族亚组有限",
+  "summary": "研究系统评估DNA甲基化表观遗传年龄对死亡时间的预测能力。作者在13个队列13,089人中比较Horvath和Hannum时钟，并区分细胞内在与外在年龄加速指标，进行死亡风险荟萃分析。结果显示表观年龄与 chronological age 高度相关，年龄加速与全因死亡风险增加相关，且血液细胞组成相关指标可提升预测。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

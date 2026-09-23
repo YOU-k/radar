@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2404.01300",
+  "title": "NeRF-MAE: Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural Radiance Fields",
+  "url": "https://doi.org/10.48550/arXiv.2404.01300",
+  "abstract": "Neural fields excel in computer vision and robotics due to their ability to understand the 3D visual world such as inferring semantics, geometry, and dynamics. Given the capabilities of neural fields in densely representing a 3D scene from 2D images, we ask the question: Can we scale their self-supervised pretraining, specifically using masked autoencoders, to generate effective 3D representations from posed RGB images. Owing to the astounding success of extending transformers to novel data modalities, we employ standard 3D Vision Transformers to suit the unique formulation of NeRFs. We leverage NeRF's volumetric grid as a dense input to the transformer, contrasting it with other 3D representations such as pointclouds where the information density can be uneven, and the representation is irregular. Due to the difficulty of applying masked autoencoders to an implicit representation, such as NeRF, we opt for extracting an explicit representation that canonicalizes scenes across domains by employing the camera trajectory for sampling. Our goal is made possible by masking random patches from NeRF's radiance and density grid and employing a standard 3D Swin Transformer to reconstruct the masked patches. In doing so, the model can learn the semantic and spatial structure of complete scenes. We pretrain this representation at scale on our proposed curated posed-RGB data, totaling over 1.8 million images. Once pretrained, the encoder is used for effective 3D transfer learning. Our novel self-supervised pretraining for NeRFs, NeRF-MAE, scales remarkably well and improves performance on various challenging 3D tasks. Utilizing unlabeled posed 2D data for pretraining, NeRF-MAE significantly outperforms self-supervised 3D pretraining and NeRF scene understanding baselines on Front3D and ScanNet datasets with an absolute performance improvement of over 20% AP50 and 8% AP25 for 3D object detection.",
+  "authors": "Muhammad Zubair Irshad, Sergey Zakahrov, V. Guizilini, Adrien Gaidon, Z. Kira, Rares Ambrus",
+  "venue": "European Conference on Computer Vision",
+  "year": 2024,
+  "citations": 29,
+  "found_by": [
+   "s2kw:self-supervised representation"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "NeRF掩码自编码3D表征，有代码",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "NeRF+MAE，ECCV，被引高，有影响",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "NeRF-MAE：基于3D Swin Transformer的掩码自编码器",
+  "data": "带位姿RGB图像，超180万张图像",
+  "scenario": "NeRF三维表征自监督预训练",
+  "benchmark": "3D迁移学习下游任务",
+  "results": "在180万+位姿RGB图像上大规模预训练，编码器用于有效3D迁移学习",
+  "availability": "",
+  "limitations": "依赖相机轨迹采样，掩码自编码器应用于隐式NeRF表征存在困难",
+  "summary": "提出NeRF-MAE，用掩码自编码器对NeRF辐射与密度网格进行自监督预训练。将NeRF体素网格作为密集输入，利用相机轨迹采样规范化场景，随机掩码patch并用3D Swin Transformer重建。在超180万张位姿RGB图像上预训练，编码器可有效用于3D迁移学习。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

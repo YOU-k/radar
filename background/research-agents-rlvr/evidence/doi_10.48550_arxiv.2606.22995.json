@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2606.22995",
+  "title": "Group-Graph Policy Optimization for Long-Horizon Agentic Reinforcement Learning",
+  "url": "https://doi.org/10.48550/arXiv.2606.22995",
+  "abstract": "Group-based Reinforcement Learning (RL) has significantly enhanced Large Language Models (LLMs) in agentic scenarios. To achieve finer-grained policy updates, recent agentic RL frameworks have shifted from trajectory-level to step-level training. However, long-horizon agentic RL suffers from severe reward sparsity and delay, as feedback is often deferred for dozens of interaction steps. While existing step-level frameworks refine training granularity, their credit assignment remains coarse-grained and still treats agent exploration as isolated, linear trajectories. This oversimplified perspective ignores the inherent graph structure of state transitions, leading to high-variance state-value estimation and myopic, localized credit assignment. To overcome these critical bottlenecks, we propose Group-Graph Policy Optimization (G2PO), a novel group-based RL algorithm tailored for multi-turn agentic tasks. G2PO explicitly transforms linear interaction trajectories into a global state-transition graph. By aggregating identical observations across different trajectories, we introduce group-aggregation state-value estimation that reduces sampling variance and trajectory-dependent bias. Furthermore, we redefine agent actions as transitions between state nodes and propose an edge-centric advantage estimation strategy. By globally standardizing Temporal Difference (TD) errors across the entire graph, G2PO explicitly identifies and prioritizes critical transitions that drive absolute task progress. Extensive experiments on representative long-horizon benchmarks-WebShop, ALFWorld, and AppWorld-demonstrate that G2PO substantially outperforms state-of-the-art prompt-based and RL baselines, achieving remarkable success rate improvements of up to 22.2% over GRPO.",
+  "authors": "Yu-Nan Wang, Minghui Song, Zihan Zhang, Shaohan Huang, Haizhen Huang, Furu Wei, Weiwei Deng, Feng Sun",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 3,
+  "found_by": [
+   "s2:citations:arxiv:2410.11287"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "长程智能体RL分组图策略优化，属智能体RL训练方法。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "长程智能体RL分组图策略优化，细粒度信用分配。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "组图策略优化G2PO（状态转移图+边级优势）",
+  "data": "多轮长时程智能体交互轨迹",
+  "scenario": "长时程智能体强化学习",
+  "benchmark": "对比步级/轨迹级组式RL框架",
+  "results": "降低状态价值估计方差，识别关键转移，缓解奖励稀疏与延迟",
+  "availability": "",
+  "limitations": "摘要未给出定量结果，图构建开销未讨论",
+  "summary": "针对长时程智能体RL中奖励稀疏延迟、步级框架信用分配仍粗粒度且将探索视为孤立线性轨迹的问题，提出G2PO。该方法将线性交互轨迹转为全局状态转移图，聚合相同观测做组聚合状态价值估计，并以边为中心、全局标准化TD误差进行优势估计。由此降低采样方差与轨迹依赖偏差，显式优先关键转移。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

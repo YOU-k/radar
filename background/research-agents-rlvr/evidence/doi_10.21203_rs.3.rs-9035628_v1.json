@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.21203/rs.3.rs-9035628/v1",
+  "title": "GenReasoner: Generative Visual Agent Planning",
+  "url": "https://doi.org/10.21203/rs.3.rs-9035628/v1",
+  "abstract": "Abstract    When humans face problems beyond their immediate capabilities, they rely on tools, providing a promising paradigm for improving visual reasoning in multimodal large language models (MLLMs). Effective reasoning, therefore, hinges on knowing which tools to use, when to invoke them, and how to compose them over multiple steps, even when faced with new tools or new tasks. We introduce GenReasoner, a family of multimodal models that learn tool use as a general reasoning skill rather than as tool-specific or explicitly supervised behavior. GenReasoner is enabled by (i) a scalable data curation pipeline exposing models to long-horizon, multi-step tool interactions; (ii) Tool-GRPO, a reinforcement learning algorithm that optimizes tool selection and sequencing based on end-task success; and (iii) an adaptive learning mechanism that dynamically regulates tool usage. Together, these components allow models to infer tool utility from task context and intermediate outcomes, enabling coordination of multiple tools and generalization to unseen tools. Empirically, GenReasoner exhibits strong tool-adaptive and generalization behaviors: it autonomously adopts beneficial tools, suppresses irrelevant ones, and adjusts tool usage frequency based on task demands, despite never being explicitly trained to do so. These capabilities translate into state-of-the-art performance across challenging benchmarks, improving the 7B base model by +24.9% on average and surpassing strong proprietary systems such as GPT-5 on multiple tasks, including VSP and Jigsaw.",
+  "authors": "Song M, Sun H, Gu J, Li L, Xu L, Krishna R, Cheng Y.",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:GRPO reasoning language model"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Tool-GRPO训练多模态工具使用智能体，契合RLVR与智能体方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Tool-GRPO工具使用通用推理技能，多模态智能体训练范式",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Tool-GRPO强化学习+自适应工具使用调节机制",
+  "data": "长程多步工具交互数据，可扩展数据策展管线",
+  "scenario": "多模态视觉推理工具调用",
+  "benchmark": "多个挑战性视觉推理基准；对比专有模型",
+  "results": "7B基座平均提升+24.9%，超越强专有模型，可泛化到未见工具",
+  "availability": "",
+  "limitations": "未明确；依赖工具环境与数据管线，未见工具泛化仍受限",
+  "summary": "GenReasoner将工具使用作为通用推理技能学习，而非工具特定监督行为。通过可扩展数据管线、Tool-GRPO按端任务成功优化工具选择与排序，以及自适应学习机制动态调节工具使用。实验显示模型能自主采纳有益工具、抑制无关工具，7B基座平均提升24.9%并超越强专有模型。"
+ },
+ "sections": [
+  "7"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

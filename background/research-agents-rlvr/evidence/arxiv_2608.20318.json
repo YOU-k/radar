@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.20318",
+  "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+  "url": "https://arxiv.org/abs/2608.20318",
+  "abstract": "Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a better objective or update rule improves the compute\\mbox{-}capability exchange rate for every subsequent run, including the one that produces the next agent. Whether RSI is feasible therefore turns on whether an agent can design training algorithms. No benchmark isolates that ability: existing suites are won by collecting data or by tuning hyperparameters, and none tells a change to how a run is executed apart from a change to how the model learns. We present AI4AI\\mbox{-}Bench, 10 frozen research repositories spanning 10 training algorithm families. In each task, an agent has 4 hours on one B300 to rewrite the training algorithm; its code is then rerun from scratch for up to 12 hours and scored by a fixed evaluator hidden from the agent, against the repository's original algorithm under the same procedure. Because the 10 metrics are incommensurable, every task is mapped onto one scale on which $0$ is an uninformative model, $0.1$ is the algorithm the repository ships, and $1.0$ is the task optimum. Across 29 configurations of 6 systems on all 10 tasks the mean score is $0.166$, and the best system reaches $0.250$: even the strongest closes under a fifth of the distance between the algorithm that was already there and the optimum. The submissions show where that distance went: most never change how the model learns at all, and the minority that do average $0.226$ against $0.126$ for the rest. More reasoning effort mostly buys the willingness to go there, taking that minority from $8\\%$ of submissions to $64\\%$ and the mean score from $0.094$ to $0.196$. We release the task suite, the evaluators and every scored submission, so that the measurement can be repeated as these systems change.",
+  "authors": "Y. Chi, Wenyi Li, Deyao Hong, Xiaoqiu Wang, Mingju Gao, Kai-Sen Yang, Bingxiang He, Youjie Zheng",
+  "venue": "",
+  "year": 2026,
+  "citations": 4,
+  "found_by": [
+   "s2kw:recursive self-improvement LLM"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "递归自改进基准，聚焦训练算法设计，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "RSI训练算法设计基准，切中递归自改进核心",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "AI4AI-Bench：10个冻结训练算法仓库的智能体改写基准",
+  "data": "10个训练算法家族仓库；29种配置×6系统×10任务",
+  "scenario": "递归自我改进的算法设计",
+  "benchmark": "10任务统一0-1量表（0.1为原算法，1.0为最优）",
+  "results": "平均分0.166，最佳系统0.250；改变学习方式的提交均分0.226 vs 0.126；推理投入提升少数派占比8%→64%，均分0.094→0.196",
+  "availability": "公开任务套件、评估器与全部提交",
+  "limitations": "最强系统仅缩小不到五分之一差距；多数提交未改变学习方式",
+  "summary": "针对递归自我改进中算法设计能力缺乏隔离基准的问题，提出AI4AI-Bench。方法为10个冻结研究仓库，智能体在4小时内改写训练算法，代码在全新容器重跑最多12小时并由隐藏评估器打分。结果显示平均分仅0.166、最佳0.250，多数提交未改变学习方式，但增加推理投入可显著提升改变学习方式的比例与得分。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

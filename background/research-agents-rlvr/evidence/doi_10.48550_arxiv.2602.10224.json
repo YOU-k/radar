@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2602.10224",
+  "title": "Internalizing Meta-Experience into Memory for Guided Reinforcement Learning in Large Language Models",
+  "url": "https://doi.org/10.48550/arXiv.2602.10224",
+  "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as an effective approach for enhancing the reasoning capabilities of Large Language Models (LLMs). Despite its efficacy, RLVR faces a meta-learning bottleneck: it lacks mechanisms for error attribution and experience internalization intrinsic to the human learning cycle beyond practice and verification, thereby limiting fine-grained credit assignment and reusable knowledge formation. We term such reusable knowledge representations derived from past errors as meta-experience. Based on this insight, we propose Meta-Experience Learning (MEL), a novel framework that incorporates self-distilled meta-experience into the model's parametric memory. Building upon standard RLVR, we introduce an additional design that leverages the LLM's self-verification capability to conduct contrastive analysis on paired correct and incorrect trajectories, identify the precise bifurcation points where reasoning errors arise, and summarize them into generalizable meta-experience. The meta-experience is further internalized into the LLM's parametric memory by minimizing the negative log-likelihood, which induces a language-modeled reward signal that bridges correct and incorrect reasoning trajectories and facilitates effective knowledge reuse. Experimental results demonstrate that MEL achieves consistent improvements on benchmarks, yielding 3.92%--4.73% Pass@1 gains across varying model sizes.",
+  "authors": "Shi-Ting Huang, Ze-Cheng Li, Yu Zeng, Qingnan Ren, Zhen Fang, Qi-Sheng Su, K. Shi, Lin Chen",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2:citations:arxiv:2504.15275"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "RLVR元经验内化，针对信用分配瓶颈，方法有新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "RLVR元经验内化，针对信用分配瓶颈，有方法创新",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "元经验学习MEL（自蒸馏元经验入参数记忆）",
+  "data": "正确/错误轨迹对，多模型规模",
+  "scenario": "LLM可验证奖励强化学习推理",
+  "benchmark": "RLVR基准，Pass@1",
+  "results": "不同模型规模Pass@1提升3.92%–4.73%",
+  "availability": "",
+  "limitations": "依赖自验证能力，未讨论错误归因失败情形",
+  "summary": "针对RLVR缺乏错误归因与经验内化机制、存在元学习瓶颈的问题，提出元经验学习MEL。方法利用LLM自验证对正确与错误轨迹做对比分析，定位推理错误分叉点并总结为可泛化元经验，再通过最小化负对数似然将其内化进参数记忆，形成桥接正确与错误轨迹的语言建模奖励信号。实验显示不同模型规模下Pass@1提升3.92%–4.73%。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

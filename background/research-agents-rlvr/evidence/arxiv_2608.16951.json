@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.16951",
+  "title": "The Little Scientist: LLM Agent-Driven Discovery via the Scientific Method",
+  "url": "https://arxiv.org/abs/2608.16951",
+  "abstract": "What happens when you teach an LLM-based agent the scientific method? Motivation: Scientific discovery emerges from cycles of hypothesis, implementation, empirical testing, and feedback. Can this process be automated? We approach automated algorithm design through the lens of the scientific method, where an LLM-based agent goes through each step of the process in an ordered, iterative fashion. Results: We present The Little Scientist, a framework in which a\"Scientist agent\"works inside an evaluation environment that benchmarks its code and returns structured per-instance diagnostics. When the Scientist plateaus at a local optimum, a\"Kuhn agent\"injects a paradigm-shifting conjecture paired with a cross-disciplinary inspiration, forcing exploration of a different region of the LLM's latent space. We demonstrate the framework on two problems that require fundamentally different modes of discovery. For protein fitness prediction, the Scientist discovered Delta V, an ensemble calibration strategy that ranks first on the ProteinGym DMS Substitutions Zero-Shot leaderboard across all five official evaluation metrics, exceeding the #2 model (VenusREM) by +0.033 mean Spearman correlation across 217 DMS assays. For DNA motif discovery, the Scientist wrote an algorithm from scratch--DALE (Dual-seed Algorithm for Latent Enumeration)--that outperforms STREME (the default in the MEME Suite) across 132 ENCODE transcription factors (mean AUROC 0.842 vs. 0.803, Wilcoxon p<10^{-6}) while running 11x faster. This demonstrates that the framework can produce genuinely novel algorithms, not just optimize existing components. Together, these results show that an LLM agent stepping through the scientific method can discover both new algorithms and new ensemble strategies that outperform prior solutions. The entire research program consumed 704M tokens on a single virtual machine with no GPUs",
+  "authors": "Travis Smith",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "LLM智能体按科学方法闭环做算法发现，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "科学方法驱动的LLM智能体，含评测环境与范式转换",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Little Scientist：科学方法驱动的Scientist+Kuhn双智能体",
+  "data": "ProteinGym 217个DMS assay；132个ENCODE转录因子",
+  "scenario": "自动化算法与集成策略发现",
+  "benchmark": "ProteinGym零样本排行榜、STREME（MEME Suite）",
+  "results": "Delta V五项指标均列第一，超VenusREM +0.033平均Spearman；DALE平均AUROC 0.842 vs 0.803，快11倍，p<1e-6",
+  "availability": "代码开源GitHub，Apache 2.0许可",
+  "limitations": "仅两个案例研究，全程消耗704M token",
+  "summary": "提出让LLM智能体按科学方法迭代做假设、预测、编码、测试与调和，并在平台期由Kuhn智能体注入范式转换猜想以跳出局部最优。在蛋白质适应度预测中发现Delta V集成校准策略，在DNA基序发现中从零写出DALE算法。Delta V在ProteinGym零样本排行榜五项指标均第一，超VenusREM +0.033平均Spearman；DALE在132个ENCODE转录因子上平均AUROC 0.842优于STREME的0.803且快11倍。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

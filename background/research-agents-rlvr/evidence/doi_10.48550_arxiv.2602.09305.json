@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2602.09305",
+  "title": "Reward Modeling for Reinforcement Learning-Based LLM Reasoning: Design, Challenges, and Evaluation",
+  "url": "https://doi.org/10.48550/arXiv.2602.09305",
+  "abstract": "Large Language Models (LLMs) demonstrate transformative potential, yet their reasoning remains inconsistent and unreliable. Reinforcement learning (RL)-based fine-tuning is a key mechanism for improvement, but its effectiveness is fundamentally governed by reward design. Despite its importance, the relationship between reward modeling and core LLM challenges--such as evaluation bias, hallucination, distribution shift, and efficient learning--remains poorly understood. This work argues that reward modeling is not merely an implementation detail but a central architect of reasoning alignment, shaping what models learn, how they generalize, and whether their outputs can be trusted. We introduce Reasoning-Aligned Reinforcement Learning (RARL), a reasoning-centric taxonomic perspective that organizes diverse reward paradigms for multi-step reasoning. Within this perspective, we present a taxonomy of reward mechanisms, analyze reward hacking as a pervasive failure mode, and examine how reward signals unify challenges ranging from inference-time scaling to hallucination mitigation. We further critically evaluate existing benchmarks, highlighting vulnerabilities such as data contamination and reward misalignment, and outline directions for more robust evaluation. By integrating fragmented research threads and clarifying the interplay between reward design and fundamental reasoning capabilities, this work provides a foundational roadmap for building reasoning models that are robust, verifiable, and trustworthy.",
+  "authors": "P. Pan, Yingbin Liang, Sen-Fon Lin",
+  "venue": "Trans. Mach. Learn. Res.",
+  "year": 2026,
+  "citations": 9,
+  "found_by": [
+   "s2:citations:arxiv:2410.11287",
+   "s2:citations:arxiv:2502.10325",
+   "s2:citations:arxiv:2504.15275"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "奖励建模综述，直接关联RLVR与过程奖励设计",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "TMLR综述，系统梳理RLVR奖励建模设计，方向必读参考",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出RARL推理对齐强化学习奖励建模分类体系",
+  "data": "综述性研究，整合多步推理奖励范式与现有基准",
+  "scenario": "LLM推理强化学习奖励设计",
+  "benchmark": "现有奖励建模与推理评估基准（含数据污染等漏洞分析）",
+  "results": "定性指出奖励设计决定模型学习内容、泛化能力与可信度，并揭示奖励黑客等失效模式",
+  "availability": "",
+  "limitations": "为综述与分类框架，缺乏新实证实验验证",
+  "summary": "本文针对LLM推理不一致问题，论证奖励建模是推理对齐的核心架构而非实现细节。作者提出以推理为中心的RARL分类视角，系统梳理奖励机制、奖励黑客失效模式及奖励信号对推理挑战的统一作用。文章还批判评估现有基准的数据污染与奖励错配问题，为构建鲁棒推理模型提供路线图。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

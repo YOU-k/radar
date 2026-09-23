@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/acel.14451",
+  "title": "Cross-tissue comparison of epigenetic aging clocks in humans.",
+  "url": "https://doi.org/10.1111/acel.14451",
+  "abstract": "Epigenetic clocks are a common group of tools used to measure biological aging-the progressive deterioration of cells, tissues, and organs. Epigenetic clocks have been trained almost exclusively using blood-based tissues, but there is growing interest in estimating epigenetic age using less-invasive oral-based tissues (i.e., buccal or saliva) in both research and commercial settings. However, differentiated cell types across body tissues exhibit unique DNA methylation landscapes and age-related alterations to the DNA methylome. Applying epigenetic clocks derived from blood-based tissues to estimate epigenetic age of oral-based tissues may introduce biases. We tested the within-person comparability of common epigenetic clocks across five tissue types: buccal epithelial, saliva, dry blood spots, buffy coat (i.e., leukocytes), and peripheral blood mononuclear cells. We tested 284 distinct tissue samples from 83 individuals aged 9-70 years. Overall, there were significant within-person differences in epigenetic clock estimates from oral-based versus blood-based tissues, with average differences of almost 30 years observed in some age clocks. In addition, most epigenetic clock estimates of blood-based tissues exhibited low correlation with estimates from oral-based tissues despite controlling for cellular proportions and other technical factors. Notably, the Skin and Blood clock exhibited the greatest concordance across all tissue types, indicating its unique ability to estimate chronological age in oral- and blood-based tissues. Our findings indicate that application of blood-derived epigenetic clocks in oral-based tissues may not yield comparable estimates of epigenetic age, highlighting the need for careful consideration of tissue type when estimating epigenetic age.",
+  "authors": "Apsley AT, Ye Q, Caspi A, Chiaro C, Etzel L, Hastings WJ, Heim CM, Kozlosky J, Noll JG, Schreier HMC, Shenk CE, Sugden K, Shalev I.",
+  "venue": "Aging cell",
+  "year": 2025,
+  "citations": 29,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC11984668",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨组织表观时钟比较，直接契合表观时钟跨组织泛化方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨组织表观时钟比较，直接针对时钟泛化偏差",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨五种组织比较常用表观遗传时钟",
+  "data": "284份组织样本，83人，9-70岁",
+  "scenario": "口腔与血液组织表观年龄比较",
+  "benchmark": "血液来源表观遗传时钟",
+  "results": "口腔与血液组织估计平均差近30年；多数血液时钟与口腔组织相关性低；Skin and Blood clock一致性最高",
+  "availability": "",
+  "limitations": "样本量有限，组织类型和年龄范围受限",
+  "summary": "研究测试常用表观遗传时钟在五种组织中的个体内可比性。比较颊上皮、唾液、干血斑、白细胞层和外周血单核细胞的284份样本，来自83名9-70岁个体。发现口腔与血液组织表观年龄差异显著，部分平均差近30年，Skin and Blood clock跨组织一致性最好。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

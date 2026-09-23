@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2605.05965",
+  "title": "Beyond Uniform Credit Assignment: Selective Eligibility Traces for RLVR",
+  "url": "https://doi.org/10.48550/arXiv.2605.05965",
+  "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has become a key approach for improving the reasoning abilities of large language models. However, widely used critic-free algorithms such as Group Relative Policy Optimization (GRPO) necessitate a ``uniform credit assignment''assumption that indiscriminately broadcast trajectory-level advantages, hindering learning efficiency by failing to distinguish critical reasoning steps. To address this limitation, we propose Selective Eligibility Traces (S-trace). Grounded in the intuition of partial trust region preservation, we initially introduce P-trace as a sample-efficient, critic-free eligibility traces method, upon which we build S-trace, implementing a sparse eligibility traces mechanism to further mitigate variance and achieve fine-grained credit assignment by selectively masking low-entropy tokens. Theoretically, we contextualize the recent Group Sequence Policy Optimization (GSPO) method within the critic-free eligibility traces framework, identifying it as a special instance of the eligibility traces method operating under uniform credit assignment. Experiments demonstrate that S-trace not only outperforms GRPO, showing gains of 0.49\\% on Qwen3-1.7B and 3.16\\% on Qwen3-4B, and maintaining a robust 2.98\\% improvement when scaled further to Qwen3-8B in average pass@16, but notably achieves this with simultaneously higher sample and token efficiency.",
+  "authors": "Chaoli Mou, Zhan Zhuang, Xin-Ning Chen, Yu Zhang",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 3,
+  "found_by": [
+   "s2:citations:arxiv:2410.11287",
+   "s2:citations:arxiv:2504.15275"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "RLVR选择性资格迹改进信用分配，属GRPO相关训练方法。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "RLVR选择性资格迹，改进GRPO信用分配，方法创新。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "选择性资格迹S-trace（稀疏掩码低熵token）",
+  "data": "Qwen3-1.7B/4B/8B模型推理任务",
+  "scenario": "LLM可验证奖励强化学习",
+  "benchmark": "对比GRPO，平均pass@16",
+  "results": "Qwen3-1.7B提升0.49%，4B提升3.16%，8B提升2.98%，且样本与token效率更高",
+  "availability": "",
+  "limitations": "未报告与更多基线及任务类型的对比",
+  "summary": "针对GRPO等无critic算法均匀广播轨迹优势、无法区分关键推理步的问题，提出选择性资格迹S-trace。方法先给出P-trace，再通过选择性掩码低熵token实现稀疏资格迹以降低方差、实现细粒度信用分配，并将GSPO定位为均匀信用分配下的特例。实验显示S-trace在Qwen3多个规模上平均pass@16优于GRPO，且样本与token效率更高。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

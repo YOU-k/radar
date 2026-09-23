@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2203.06604",
+  "title": "Masked Autoencoders for Point Cloud Self-supervised Learning",
+  "url": "https://doi.org/10.48550/arXiv.2203.06604",
+  "abstract": "As a promising scheme of self-supervised learning, masked autoencoding has significantly advanced natural language processing and computer vision. Inspired by this, we propose a neat scheme of masked autoencoders for point cloud self-supervised learning, addressing the challenges posed by point cloud's properties, including leakage of location information and uneven information density. Concretely, we divide the input point cloud into irregular point patches and randomly mask them at a high ratio. Then, a standard Transformer based autoencoder, with an asymmetric design and a shifting mask tokens operation, learns high-level latent features from unmasked point patches, aiming to reconstruct the masked point patches. Extensive experiments show that our approach is efficient during pre-training and generalizes well on various downstream tasks. Specifically, our pre-trained models achieve 85.18% accuracy on ScanObjectNN and 94.04% accuracy on ModelNet40, outperforming all the other self-supervised learning methods. We show with our scheme, a simple architecture entirely based on standard Transformers can surpass dedicated Transformer models from supervised learning. Our approach also advances state-of-the-art accuracies by 1.5%-2.3% in the few-shot object classification. Furthermore, our work inspires the feasibility of applying unified architectures from languages and images to the point cloud.",
+  "authors": "Yatian Pang, Wenxiao Wang, Francis E. H. Tay, W. Liu, Yonghong Tian, Liuliang Yuan",
+  "venue": "European Conference on Computer Vision",
+  "year": 2022,
+  "citations": 794,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2404.01300",
+   "s2:references:doi:10.48550/arxiv.2409.15803"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "点云掩码自编码，高引开源，契合掩码建模方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "点云掩码自编码经典，ECCV 高引，该方向绕不开的基线。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "点云掩码自编码器：不规则点块高比例随机掩码+Transformer重建",
+  "data": "点云数据，ScanObjectNN、ModelNet40等下游任务",
+  "scenario": "点云自监督学习",
+  "benchmark": "其他自监督学习方法；监督专用Transformer模型",
+  "results": "ScanObjectNN 85.18%，ModelNet40 94.04%；少样本分类提升1.5%-2.3%",
+  "availability": "",
+  "limitations": "未明确讨论高比例掩码、点云密度不均和位置泄漏处理的计算成本或泛化边界",
+  "summary": "提出一种简洁的点云掩码自编码器自监督学习方案，应对位置信息泄漏和信息密度不均问题。方法将点云划分为不规则点块并高比例随机掩码，用非对称标准Transformer自编码器和移位掩码token从可见点块重建被掩码点块。实验发现预训练高效且下游泛化好，在ScanObjectNN和ModelNet40超过其他自监督方法，并在少样本分类上提升1.5%-2.3%。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

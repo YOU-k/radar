@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2607.04044",
+  "title": "SiamJEPA: On the Role of Siamese Student Encoders in JEPA",
+  "url": "https://doi.org/10.48550/arXiv.2607.04044",
+  "abstract": "Recently, Joint Embedding Predictive Architectures (JEPAs) have attracted significant attention in the computer vision and machine learning communities as a promising framework for self-supervised representation learning. Unlike masked autoencoders that reconstruct pixels, JEPA models learn representations by predicting latent embeddings of masked regions. Existing JEPA-based methods, such as I-JEPA and V-JEPA, typically employ a single encoder in the student network. In contrast, using Siamese encoders for student network is more naturally aligned with brain-inspired representation learning frameworks, yet their role in JEPA models remains largely unexplored. In this paper, we investigate the effect of Siamese student encoders in JEPA-based representation learning. To this end, we propose SiamJEPA, masked Siamese student encoders equipped with an exponential moving average (EMA) teacher network. SiamJEPA can also be viewed as a JEPA formulation of the brain-inspired representation learning model PhiNet. Through extensive experiments on ImageNet linear probing, we demonstrate that Siamese encoders act as an effective regularizer for the JEPA objective, improving representation separability and accelerating learning during the early stages of training. Furthermore, SiamJEPA consistently outperforms comparable single-encoder JEPA variants under limited training budgets and achieves higher linear probing accuracy than Masked Autoencoders (MAE) which requires longer training. Our findings reveal that Siamese student encoders are not merely an architectural choice but constitute an important inductive bias for predictive representation learning. These results provide new insights into the design of JEPA-based models and suggest that incorporating Siamese student architectures offers a simple yet effective approach for improving self-supervised representation learning.",
+  "authors": "Makoto Yamada",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1007/s11263-023-01852-4"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "探究JEPA孪生编码器机制，属核心方向有代码工作",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "探究JEPA孪生编码器机制，属该范式核心问题",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SiamJEPA：孪生学生编码器+EMA教师",
+  "data": "ImageNet图像",
+  "scenario": "图像自监督表征学习",
+  "benchmark": "ImageNet线性探测，对比I-JEPA/V-JEPA/MAE",
+  "results": "有限训练预算下持续优于单编码器JEPA变体，线性探测精度高于需更长训练的MAE",
+  "availability": "",
+  "limitations": "主要在ImageNet线性探测评估，未广泛验证其他模态与任务",
+  "summary": "研究JEPA中学生网络使用孪生编码器的作用，提出SiamJEPA。采用掩码孪生学生编码器并配EMA教师网络，可视为PhiNet的JEPA形式。实验发现孪生编码器对JEPA目标起正则作用，提升表征可分性并加速早期学习，在有限预算下优于单编码器JEPA和MAE。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

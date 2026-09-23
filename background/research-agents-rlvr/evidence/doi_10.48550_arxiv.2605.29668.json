@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2605.29668",
+  "title": "GRASP: Gated Regression-Aware Skill Proposer for Self-Improving LLM Agents",
+  "url": "https://doi.org/10.48550/arXiv.2605.29668",
+  "abstract": "LLM agents acting in structured environments fail in operational rather than conversational ways, and reliability depends on procedural knowledge of the environment. Prior self-improvement methods accumulate natural-language guidance without checking that each new item preserves previously correct behavior, so a note that fixes one trajectory can silently regress another. We introduce GRASP (Gated Regression-Aware Skill Proposer), which treats agent improvement as a sequence of edits to a bounded skill library, admitting each candidate only if it produces a net improvement on a balanced held-out probe under a hard regression budget. We evaluate GRASP across five base models on two FHIR-based clinical benchmarks, which score procedural reliability against FHIR state rather than clinical correctness or patient outcomes. On MedAgentBench, GRASP lifts gpt-oss-120b from 40.6% to 88.8%, exceeds the strongest of five self-improvement baselines by 21.0 points, and improves every other base model by 17.2 to 40.3 points. Ablations attribute the gain to comparative proposal generation, the acceptance gate, and the hard regression budget rather than to skill writing itself, which without validation is no better than using no skills. Granting the same acceptance gate to all five baselines lifts each of them in-domain and none of them out of distribution, isolating the gain to the gate applied to a bounded, editable library rather than to held-out validation itself. The mechanism helps in non-clinical environments where tasks recur with verifiable structure and is flat where the action space is open-ended. Frozen libraries transfer across models and across benchmarks that share a tool-calling convention and degrade under interface mismatch.",
+  "authors": "Johannes Moll, Jean-Philippe Corbeil, Jiazhen Pan, M. Hadamitzky, D. Rueckert, Lisa C. Adams, K. Bressem",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 6,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "门控回归感知技能自改进，防退化，含多模型评测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "回归感知技能提议，自改进智能体可靠性方法有评测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出GRASP：带门控与回归感知的技能提议器",
+  "data": "两个基于FHIR的临床基准；五种基础模型",
+  "scenario": "结构化环境LLM智能体自改进",
+  "benchmark": "MedAgentBench等FHIR临床基准；对比五种自改进基线",
+  "results": "MedAgentBench上gpt-oss-120b从40.6%升至88.8%，超最强基线21.0点，其他模型提升17.2–40.3点",
+  "availability": "",
+  "limitations": "增益限于域内，未提升分布外表现；无验证的技能写入不优于无技能",
+  "summary": "本文指出智能体自改进中新增自然语言指导可能修复一条轨迹却静默回退另一条，提出GRASP。GRASP将改进视为对受限技能库的编辑序列，仅在平衡留出探针上净提升且满足硬回归预算时接纳候选。在两个FHIR临床基准上，GRASP大幅提升多种基础模型，消融显示增益来自比较式提议、接纳门控与回归预算。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

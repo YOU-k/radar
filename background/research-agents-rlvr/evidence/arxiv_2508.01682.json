@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2508.01682",
+  "title": "The Bidirectional Process Reward Model",
+  "url": "https://arxiv.org/abs/2508.01682v3",
+  "abstract": "Process Reward Models (PRMs), which assign fine-grained scores to intermediate reasoning steps within a solution trajectory, have emerged as a promising approach to enhance the reasoning quality of Large Language Models (LLMs). However, most existing PRMs rely on a unidirectional left-to-right (L2R) evaluation scheme, which restricts their utilization of global context. In light of this challenge, we propose a novel bidirectional evaluation paradigm, named Bidirectional Process Reward Model (BiPRM). BiPRM incorporates a parallel right-to-left (R2L) evaluation stream, implemented via prompt reversal, alongside the conventional L2R flow. Then a gating mechanism is introduced to adaptively fuse the reward scores from both streams to yield a holistic quality assessment. Remarkably, compared to the original PRM, BiPRM introduces only a 0.3% parameter increase for the gating module, and the parallel execution of two streams incurs merely 5% inference time latency. Our extensive empirical evaluations spanning diverse benchmarks, LLM backbones, PRM objectives and sampling policies demonstrate that BiPRM consistently surpasses unidirectional baselines, achieving an average relative gain of 10.6% over 54 solution-level configurations and 37.7% in 12 step-level error detection scenarios. Generally, our results highlight the effectiveness, robustness and general applicability of BiPRM, offering a promising new direction for process-based reward modeling.",
+  "authors": "Lingyin Zhang, Jun Gao, Xiaoxue Ren, Ziqiang Cao",
+  "venue": "",
+  "year": 2025,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "双向过程奖励模型，契合过程奖励模型方向，方法有新意。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "双向过程奖励模型，PRM方法创新，可验证奖励方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "双向过程奖励模型BiPRM，L2R+R2L双流门控融合",
+  "data": "GSM-Plus、MATH500解级与ProcessBench步级数据",
+  "scenario": "LLM推理过程奖励建模",
+  "benchmark": "GSM-Plus、MATH500、ProcessBench；对比单向PRM基线",
+  "results": "54个解级配置平均相对增益10.6%，12个步级错误检测场景增益37.7%",
+  "availability": "代码公开于GitHub",
+  "limitations": "参数量增0.3%、推理延迟增约5%；依赖提示反转实现R2L",
+  "summary": "针对现有PRM仅单向从左到右评估、缺乏全局上下文的问题，提出双向过程奖励模型BiPRM。通过提示反转实现并行从右到左评估流，并用门控机制自适应融合两流分数。在GSM-Plus、MATH500与ProcessBench上，BiPRM持续超越单向基线，解级平均增益10.6%、步级错误检测增益37.7%。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

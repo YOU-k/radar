@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2410.11287",
+  "title": "Process Reward Model with Q-Value Rankings",
+  "url": "https://arxiv.org/abs/2410.11287v2",
+  "abstract": "Process Reward Modeling (PRM) is critical for complex reasoning and decision-making tasks where the accuracy of intermediate steps significantly influences the overall outcome. Existing PRM approaches, primarily framed as classification problems, employ cross-entropy loss to independently evaluate each step's correctness. This method can lead to suboptimal reward distribution and does not adequately address the interdependencies among steps. To address these limitations, we introduce the Process Q-value Model (PQM), a novel framework that redefines PRM in the context of a Markov Decision Process. PQM optimizes Q-value rankings based on a novel comparative loss function, enhancing the model's ability to capture the intricate dynamics among sequential decisions. This approach provides a more granular and theoretically grounded methodology for process rewards. Our extensive empirical evaluations across various sampling policies, language model backbones, and multi-step reasoning benchmarks show that PQM outperforms classification-based PRMs. The effectiveness of the comparative loss function is highlighted in our comprehensive ablation studies, confirming PQM's practical efficacy and theoretical advantage.",
+  "authors": "Wendi Li, Yixuan Li",
+  "venue": "",
+  "year": 2024,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PRM重定义为MDP优化Q值排序，方法有实质新意，属过程奖励核心",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Q值排序重构PRM，过程奖励方法有实质新意",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "PQM过程Q值模型，基于Q值排序的比较损失",
+  "data": "多步推理基准，多种采样策略与语言模型骨干",
+  "scenario": "复杂推理过程奖励建模",
+  "benchmark": "多步推理基准；对比分类式PRM",
+  "results": "PQM优于分类式PRM；消融验证比较损失有效性",
+  "availability": "代码公开于GitHub",
+  "limitations": "基于MDP假设；未充分讨论长轨迹与稀疏奖励下的扩展性",
+  "summary": "针对现有PRM以分类问题建模、忽略步骤间依赖的局限，提出过程Q值模型PQM。将PRM重构为马尔可夫决策过程中的Q值排序问题，用新型比较损失优化Q值排序以捕捉序列决策动态。在多种采样策略、骨干与多步推理基准上，PQM优于分类式PRM，消融实验证实比较损失的有效性。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

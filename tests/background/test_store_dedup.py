@@ -46,3 +46,14 @@ def test_dedup_against_store(tmp_path):
     st.reject(make_cand(2), Decision("doi:10.1000/paper2", [], False, False))
     new = dedup([make_cand(1), make_cand(2), make_cand(3)], st)
     assert [c.id for c in new] == ["doi:10.1000/paper3"]
+
+
+def test_alt_ids_prevent_duplicate_versions(tmp_path):
+    st = _store(tmp_path)
+    nature = make_cand(1, doi="10.1038/s41586-025-09422-z", title="DeepSeek-R1 incentivizes reasoning")
+    nature.extra["alt_ids"] = ["arxiv:2501.12948"]
+    st.add(Evidence(candidate=nature, panel=[]))
+    assert "arxiv:2501.12948" in st.all_ids()
+    from radar.background.models import Candidate
+    preprint = Candidate(id="arxiv:2501.12948", title="DeepSeek-R1: Incentivizing Reasoning Capability", url="")
+    assert st.is_seen(preprint)

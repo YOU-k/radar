@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.18632/aging.206190",
+  "title": "Deep learning and generative artificial intelligence in aging research and healthy longevity medicine.",
+  "url": "https://doi.org/10.18632/aging.206190",
+  "abstract": "With the global population aging at an unprecedented rate, there is a need to extend healthy productive life span. This review examines how Deep Learning (DL) and Generative Artificial Intelligence (GenAI) are used in biomarker discovery, deep aging clock development, geroprotector identification and generation of dual-purpose therapeutics targeting aging and disease. The paper explores the emergence of multimodal, multitasking research systems highlighting promising future directions for GenAI in human and animal aging research, as well as clinical application in healthy longevity medicine.",
+  "authors": "Wilczok D.",
+  "venue": "Aging",
+  "year": 2025,
+  "citations": 15,
+  "found_by": [
+   "eupmc:multimodal biological age inte",
+   "eupmc:aging biomarker healthspan val"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11810058",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI衰老研究综述，涵盖多模态时钟与基础模型",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "AI在衰老研究中的综述，方向性参考价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述深度学习与生成式AI在衰老研究中的应用",
+  "data": "125篇同行评审研究，2016–2024年",
+  "scenario": "衰老研究与健康长寿医学",
+  "benchmark": "",
+  "results": "总结DL、GAN、LLM、扩散模型等在衰老时钟、药物发现和多模态生物标志物中的应用",
+  "availability": "",
+  "limitations": "为叙述性综述，非原始研究，缺乏定量荟萃分析",
+  "summary": "该文综述了深度学习和生成式人工智能在衰老研究与健康长寿医学中的应用。通过梳理2016至2024年间125篇同行评审研究，总结CNN、RNN、GAN、LLM和扩散模型等技术。文章指出这些方法已用于衰老时钟、合成数据生成、药物发现和多模态健康评估，并强调生成式AI的快速发展潜力。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

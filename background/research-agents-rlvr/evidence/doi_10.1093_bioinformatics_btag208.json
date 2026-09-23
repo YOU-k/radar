@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/bioinformatics/btag208",
+  "title": "Cell-o1 : training LLMs to solve single-cell reasoning puzzles with reinforcement learning.",
+  "url": "https://doi.org/10.1093/bioinformatics/btag208",
+  "abstract": "Motivation Large language models (LLMs) have demonstrated strong general reasoning abilities, but applying them to domain-specific tasks such as analysing single-cell RNA sequencing data remains a challenge. A central task in this domain is cell type annotation, which is critical for understanding cellular heterogeneity. Although recent foundation models attempt to automate this process, they typically annotate cells independently, without considering batch-level context or providing explanatory reasoning. To address this limitation, we introduce the CellPuzzles benchmark, which reformulates cell type annotation as a batch-level reasoning task. CellPuzzles spans diverse tissues, diseases, and donor conditions, and requires reasoning across the batch-level cellular context to ensure label uniqueness. Results We find that off-the-shelf LLMs struggle on this task, with the best baseline (OpenAI o1) achieving only 19.0% batch-level accuracy. To fill this gap, we propose Cell-o1, a 7B LLM trained via supervised fine-tuning on distilled reasoning traces, followed by reinforcement learning with batch-level rewards. Cell-o1 achieves state-of-the-art performance, outperforming OpenAI o1 by over 73% and generalizing well across contexts. Further analysis of training dynamics and reasoning behaviors provides insights into batch-level annotation performance and emergent expert-like reasoning. Availability and implementation Code and data are available at https://github.com/ncbi-nlp/cell-o1.",
+  "authors": "Fang Y, Jin Q, Xiong G, Jin B, Zhong X, Ouyang S, Yang Y, Zhang A, Han J, Lu Z.",
+  "venue": "Bioinformatics (Oxford, England)",
+  "year": 2026,
+  "citations": 3,
+  "found_by": [
+   "eupmc:GRPO reasoning language model"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13198386",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞组学推理的RL训练与基准，契合生物医学智能体。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞推理RL训练，含基准与领域智能体",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SFT蒸馏推理轨迹+批级奖励强化学习训练7B模型",
+  "data": "单细胞RNA测序数据，CellPuzzles基准，跨组织/疾病/供体",
+  "scenario": "单细胞细胞类型注释",
+  "benchmark": "CellPuzzles基准；对比OpenAI o1等现成LLM",
+  "results": "Cell-o1达SOTA，超OpenAI o1逾73%；最佳基线o1仅19.0%批级准确率",
+  "availability": "代码与数据公开于GitHub",
+  "limitations": "仅7B规模；依赖蒸馏推理轨迹质量；批级任务泛化范围有限",
+  "summary": "该工作将细胞类型注释重构为批级推理任务，提出CellPuzzles基准。方法上先用蒸馏推理轨迹做监督微调，再用批级奖励强化学习训练7B的Cell-o1。发现现成LLM表现差（o1仅19.0%），而Cell-o1超o1逾73%并展现类专家推理。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

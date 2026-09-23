@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2604.14838",
+  "title": "Intermediate Layers Encode Optimal Biological Representations in Single-Cell Foundation Models",
+  "url": "https://arxiv.org/abs/2604.14838v1",
+  "abstract": "Current single-cell foundation model benchmarks universally extract final layer embeddings, assuming these represent optimal feature spaces. We systematically evaluate layer-wise representations from scFoundation (100M parameters) and Tahoe-X1 (1.3B parameters) across trajectory inference and perturbation response prediction. Our analysis reveals that optimal layers are task-dependent (trajectory peaks at 60% depth, 31% above final layers) and context-dependent (perturbation optima shift 0-96% across T cell activation states). Notably, first-layer embeddings outperform all deeper layers in quiescent cells, challenging assumptions about hierarchical feature abstraction. These findings demonstrate that \"where\" to extract features matters as much as \"what\" the model learns, necessitating systematic layer evaluation tailored to biological task and cellular context rather than defaulting to final-layer embeddings.",
+  "authors": "Vincenzo Yuto Civale, Roberto Semeraro, Andrew David Bagdanov, Alberto Magi",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "揭示基础模型中间层表征，批判性评测有定量证据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "揭示基础模型中间层表征，批判性发现，具方法学影响",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "逐层评估单细胞基础模型表征",
+  "data": "LT-scSeq造血分化数据；CD4+ T细胞CRISPRi数据，2200万细胞",
+  "scenario": "轨迹推断与扰动响应预测",
+  "benchmark": "最终层嵌入默认假设",
+  "results": "轨迹推断中间层优于最终层达31%，稳定在60%深度；扰动最优层随T细胞激活状态偏移0–96%；静息细胞首层超越深层",
+  "availability": "代码公开",
+  "limitations": "仅评估两个模型，任务和数据集有限",
+  "summary": "该研究系统评估scFoundation和Tahoe-X1的逐层表征在轨迹推断和扰动响应预测中的表现。通过提取各Transformer块隐藏状态并跨模型归一化层索引进行比较。发现最优层任务依赖且上下文依赖，中间层常优于最终层，首层在特定情境可超越深层，挑战默认使用最终层嵌入的假设。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

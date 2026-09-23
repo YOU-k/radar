@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1088/2632-2153/ad64a8",
+  "title": "Masked particle modeling on sets: towards self-supervised high energy physics foundation models",
+  "url": "https://doi.org/10.1088/2632-2153/ad64a8",
+  "abstract": "We propose masked particle modeling (MPM) as a self-supervised method for learning generic, transferable, and reusable representations on unordered sets of inputs for use in high energy physics (HEP) scientific data. This work provides a novel scheme to perform masked modeling based pre-training to learn permutation invariant functions on sets. More generally, this work provides a step towards building large foundation models for HEP that can be generically pre-trained with self-supervised learning and later fine-tuned for a variety of down-stream tasks. In MPM, particles in a set are masked and the training objective is to recover their identity, as defined by a discretized token representation of a pre-trained vector quantized variational autoencoder. We study the efficacy of the method in samples of high energy jets at collider physics experiments, including studies on the impact of discretization, permutation invariance, and ordering. We also study the fine-tuning capability of the model, showing that it can be adapted to tasks such as supervised and weakly supervised jet classification, and that the model can transfer efficiently with small fine-tuning data sets to new classes and new data domains.",
+  "authors": "Lukas Heinrich, T. Golling, M. Kagan, Samuel Klein, Matthew Leigh, Margarita Osadchy, John Andrew Raine",
+  "venue": "Machine Learning: Science and Technology",
+  "year": 2024,
+  "citations": 71,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2606.14813"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "掩码建模迁移到HEP集合数据，科学数据自监督，有代码",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "高能物理掩码建模基础模型，科学数据自监督迁移范例。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "MPM：集合上掩码粒子建模，预测离散token身份",
+  "data": "高能物理喷注粒子集合数据",
+  "scenario": "高能物理自监督基础模型",
+  "benchmark": "监督/弱监督喷注分类；新类别与新域小样本微调",
+  "results": "可迁移至监督和弱监督喷注分类，小数据微调可迁移到新类别和新数据域",
+  "availability": "",
+  "limitations": "依赖预训练VQ-VAE离散token，未明确讨论离散化误差和跨任务泛化上限",
+  "summary": "提出掩码粒子建模MPM，用于高能物理无序输入集合的自监督预训练。方法掩码粒子并预测其由预训练VQ-VAE离散化得到的token身份，学习置换不变函数，并研究离散化、置换不变性和顺序影响。实验发现模型可微调用于监督和弱监督喷注分类，并能用小规模微调数据迁移到新类别和新数据域。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

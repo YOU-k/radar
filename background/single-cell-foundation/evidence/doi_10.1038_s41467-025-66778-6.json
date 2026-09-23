@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-66778-6",
+  "title": "A pooled Cell Painting CRISPR screening platform enables de novo inference of gene function by self-supervised deep learning.",
+  "url": "https://doi.org/10.1038/s41467-025-66778-6",
+  "abstract": "Pooled CRISPR screening enables large-scale interrogation of gene functions but typically measures simple phenotypes such as fitness. High-content methods like Perturb-seq extend dimensionality to transcriptomics but are costly and limited in scope. Optical pooled screening (OPS) combines pooled CRISPR screening with imaging to yield scalable, information-rich readouts, yet existing implementations remain pathway-specific. Here we describe an OPS-compatible Cell Painting platform that enables hypothesis-free reverse genetic screening through multiplexed morphological profiling. We validate this technique using a well-defined morphological gene set, compare classical image analysis to self-supervised learning methods using a mechanism-of-action library, and perform discovery screening with a druggable genome library. By combining rich morphological data with deep learning, gene networks emerge without the need for target-specific biomarkers, leading to unbiased discovery of gene functions.",
+  "authors": "Sivanandan S, Leitmann B, Lubeck E, Sultan MM, Stanitsas P, Ranu N, Ewer A, Mancuso JE, Phillips ZF, Kim A, Bisognano JW, Cesarek J, Ruggiu F, Feldman D, Koller D, Sharon E, Kaykas A, Salick MR, Chu C.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 12,
+  "found_by": [
+   "eupmc:Perturb-seq CRISPR screen deep"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12770385",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Cell Painting CRISPR 自监督平台，形态基础模型与扰动筛选契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell Painting CRISPR 自监督平台，公开数据，形态扰动筛选新范式",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CellPaint-POSH：Cell Painting结合pooled光学CRISPR筛选与自监督深度学习",
+  "data": "Cell Painting图像+4色ISS，163,090个单细胞",
+  "scenario": "基因功能从头推断",
+  "benchmark": "经典图像分析/专家形态特征",
+  "results": "自监督ML特征预测性能高于专家形态特征；形态表型可按已知功能聚类基因，无通路报告基因也能揭示基因关联网络",
+  "availability": "",
+  "limitations": "需改造Cell Painting以兼容ISS；依赖成像与测序流程优化",
+  "summary": "作者开发了CellPaint-POSH平台，将Cell Painting与pooled光学CRISPR筛选结合，用于无偏推断基因功能。他们改造线粒体染色为RNA探针Mitoprobe，加入RNase抑制剂并将逆转录提前以兼容原位测序，再用自监督深度学习学习形态表征。结果显示机器学习特征优于专家形态特征，形态表型能按已知功能聚类基因并揭示基因网络。"
+ },
+ "sections": [
+  "2.5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

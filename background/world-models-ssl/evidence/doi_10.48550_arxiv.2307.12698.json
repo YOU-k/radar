@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2307.12698",
+  "title": "MC-JEPA: A Joint-Embedding Predictive Architecture for Self-Supervised Learning of Motion and Content Features",
+  "url": "https://doi.org/10.48550/arXiv.2307.12698",
+  "abstract": "Self-supervised learning of visual representations has been focusing on learning content features, which do not capture object motion or location, and focus on identifying and differentiating objects in images and videos. On the other hand, optical flow estimation is a task that does not involve understanding the content of the images on which it is estimated. We unify the two approaches and introduce MC-JEPA, a joint-embedding predictive architecture and self-supervised learning approach to jointly learn optical flow and content features within a shared encoder, demonstrating that the two associated objectives; the optical flow estimation objective and the self-supervised learning objective; benefit from each other and thus learn content features that incorporate motion information. The proposed approach achieves performance on-par with existing unsupervised optical flow benchmarks, as well as with common self-supervised learning approaches on downstream tasks such as semantic segmentation of images and videos.",
+  "authors": "Adrien Bardes, J. Ponce, Yann LeCun",
+  "venue": "arXiv.org",
+  "year": 2023,
+  "citations": 58,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2409.15803"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA联合学习运动与内容特征，方法有实质新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA联合学习光流与内容特征，世界模型相关有代码。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "MC-JEPA：共享编码器联合学习光流与内容特征",
+  "data": "图像和视频数据；光流与下游分割任务",
+  "scenario": "视觉自监督学习与光流估计",
+  "benchmark": "无监督光流基准；常见自监督学习方法",
+  "results": "在无监督光流基准上与现有方法相当，并在图像/视频语义分割等下游任务上与常见SSL方法相当",
+  "availability": "",
+  "limitations": "未明确讨论共享编码器中运动与内容目标冲突、光流标注依赖或复杂场景泛化限制",
+  "summary": "提出MC-JEPA，用联合嵌入预测架构在共享编码器中联合学习光流和内容特征。方法结合光流估计目标与自监督学习目标，使内容特征融入运动信息。实验发现该方法在无监督光流基准上达到与现有方法相当的性能，并在图像和视频语义分割等下游任务上与常见自监督方法相当。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

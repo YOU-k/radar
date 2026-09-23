@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-021-01336-8",
+  "title": "Benchmarking atlas-level data integration in single-cell genomics",
+  "url": "https://doi.org/10.1038/s41592-021-01336-8",
+  "abstract": "Single-cell atlases often include samples that span locations, laboratories and conditions, leading to complex, nested batch effects in data. Thus, joint analysis of atlas datasets requires reliable data integration. To guide integration method choice, we benchmarked 68 method and preprocessing combinations on 85 batches of gene expression, chromatin accessibility and simulation data from 23 publications, altogether representing >1.2 million cells distributed in 13 atlas-level integration tasks. We evaluated methods according to scalability, usability and their ability to remove batch effects while retaining biological variation using 14 evaluation metrics. We show that highly variable gene selection improves the performance of data integration methods, whereas scaling pushes methods to prioritize batch removal over conservation of biological variation. Overall, scANVI, Scanorama, scVI and scGen perform well, particularly on complex integration tasks, while single-cell ATAC-sequencing integration performance is strongly affected by choice of feature space. Our freely available Python module and benchmarking pipeline can identify optimal data integration methods for new data, benchmark new methods and improve method development. This benchmarking study compares 16 methods for integrating complex single-cell RNA and ATAC datasets and provides a guide to method choice.",
+  "authors": "Malte D. Luecken, M. Büttner, Kridsadakorn Chaichoompu, A. Danese, M. Interlandi, MF Mueller, D. Strobl, L. Zappia",
+  "venue": "Nature Methods",
+  "year": 2020,
+  "citations": 1286,
+  "found_by": [
+   "s2:references:doi:10.1038/s41592-024-02201-0"
+  ],
+  "extra": {
+   "pmcid": "PMC8748196"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "图谱级整合系统性评测基准，经典且高度可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "图谱级整合权威基准，领域必读，被广泛引用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "单细胞数据整合基准测试",
+  "data": "13个整合任务，最多23批次、100万细胞，scRNA/scATAC",
+  "scenario": "图谱级数据整合",
+  "benchmark": "16种整合工具，14项指标",
+  "results": "Scanorama和scVI在复杂任务表现好；有注释时scGen和scANVI最优；Harmony和LIGER适合scATAC",
+  "availability": "",
+  "limitations": "部分任务真实数据ground truth依赖预处理注释，可能引入偏差",
+  "summary": "该研究对16种单细胞数据整合工具在13个复杂整合任务上进行基准测试。使用14项指标评估批次去除和生物变异保留，涵盖scRNA-seq和scATAC-seq。发现Scanorama和scVI在复杂任务表现良好，有细胞注释时scGen和scANVI最优，Harmony和LIGER适合scATAC数据。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

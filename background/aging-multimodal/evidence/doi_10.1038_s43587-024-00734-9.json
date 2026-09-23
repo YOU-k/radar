@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-024-00734-9",
+  "title": "Phenome-wide associations of human aging uncover sex-specific dynamics.",
+  "url": "https://doi.org/10.1038/s43587-024-00734-9",
+  "abstract": "Aging varies significantly among individuals of the same chronological age, indicating that biological age (BA), estimated from molecular and physiological biomarkers, may better reflect aging. Prior research has often ignored sex-specific differences in aging patterns and mainly focused on aging biomarkers from a single data modality. Here we analyze a deeply phenotyped longitudinal cohort (10K project, Israel) of 10,000 healthy individuals aged 40-70 years that includes clinical, physiological, behavioral, environmental and multiomic parameters. Follow-up visits are scheduled every 2 years for a total of 25 years. We devised machine learning models of chronological age and computed biological aging scores that represented diverse physiological systems, revealing different aging patterns among sexes. Higher BA scores were associated with a higher prevalence of age-related medical conditions, highlighting the clinical relevance of these scores. Our analysis revealed system-specific aging dynamics and the potential of deeply phenotyped cohorts to accelerate improvements in our understanding of chronic diseases. Our findings present a more holistic view of the aging process, and lay the foundation for personalized medical prevention strategies.",
+  "authors": "Reicher L, Bar N, Godneva A, Reisner Y, Zahavi L, Shahaf N, Dhir R, Weinberger A, Segal E.",
+  "venue": "Nature aging",
+  "year": 2024,
+  "citations": 31,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC12288840",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "万人纵向多组学队列，性别特异生物年龄建模。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging万人纵向多组学，性别特异衰老动态",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于深度表型纵向队列的机器学习生物年龄评分",
+  "data": "以色列10K项目，1万名40–70岁健康人，随访每2年共25年",
+  "scenario": "性别特异衰老与慢病风险",
+  "benchmark": "实际年龄及单模态衰老标志物模型",
+  "results": "构建多生理系统BA评分，揭示男女衰老模式差异；高BA与年龄相关疾病患病率升高相关",
+  "availability": "",
+  "limitations": "全文不可得；队列主要来自以色列，性别与人群外推性需验证",
+  "summary": "研究利用以色列10K深度表型纵向队列分析人类衰老的表型组关联。方法基于临床、生理、行为、环境和多组学参数训练实际年龄模型，并计算多系统生物衰老评分。发现男女衰老模式不同，较高BA评分与年龄相关疾病负担增加相关。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

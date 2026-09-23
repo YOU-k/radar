@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1109/tmi.2026.3661001",
+  "title": "Med-R1: Reinforcement Learning for Generalizable Medical Reasoning in Vision-Language Models.",
+  "url": "https://doi.org/10.1109/tmi.2026.3661001",
+  "abstract": "Vision-language models (VLMs) have achieved impressive progress in natural image reasoning, yet their potential in medical imaging remains underexplored. Medical vision-language tasks demand precise understanding and clinically coherent answers, which are difficult to achieve due to complexity of medical data and the scarcity of high-quality expert annotations. These challenges limit the effectiveness of conventional supervised fine-tuning (SFT) and Chain-of-Thought (CoT) strategies that work well in general domains. To address these challenges, we propose Med-R1, a reinforcement learning (RL)-enhanced VLM designed to improve generalization and reliability in medical reasoning. Med-R1 adopts Group Relative Policy Optimization (GRPO) to encourage reward-guided learning beyond static annotations. We comprehensively evaluate Med-R1 across eight distinct medical imaging modalities. Med-R1 achieves a 29.94% improvement in average accuracy over its base model Qwen2-VL-2B, and even outperforms Qwen2-VL-72B-a model with $36\\times $ more parameters. To assess cross-task generalization, we further evaluate Med-R1 on five question types. Med-R1 outperforms Qwen2-VL-2B by 32.06% in question-type generalization, also surpassing Qwen2-VL-72B. We further explore the thinking process in Med-R1, a crucial component of Deepseek-R1. Our results show that omitting intermediate rationales (No-Thinking Med-R1) not only improves cross-domain generalization with less training, but also challenges the common assumption that more reasoning always helps. Nevertheless, we also find that the Think-After Med-R1 variant further improves performance while maintaining interpretability. These findings suggest that, in medical VQA, the mere presence of explicit reasoning does not guarantee better performance. Instead, performance depends on the quality of the reasoning and the position where the reasoning is generated.",
+  "authors": "Lai Y, Zhong J, Li M, Zhao S, Li Y, Psounis K, Yang X.",
+  "venue": "IEEE transactions on medical imaging",
+  "year": 2026,
+  "citations": 9,
+  "found_by": [
+   "eupmc:GRPO reasoning language model"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13184669",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "医学VLM的RL推理训练，有定量结果，契合生物医学智能体。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "医学VLM的RL泛化推理，有定量结果",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于GRPO的医学视觉语言模型强化学习Med-R1",
+  "data": "八种医学影像模态；五种问题类型",
+  "scenario": "医学影像视觉语言推理",
+  "benchmark": "对比基座Qwen2-VL-2B与Qwen2-VL-72B",
+  "results": "平均准确率较Qwen2-VL-2B提升29.94%，超过参数量36倍的Qwen2-VL-72B；问题类型泛化提升32.06%；无思考版本跨域泛化更好且训练更少",
+  "availability": "",
+  "limitations": "未明确说明；主要验证于医学影像问答",
+  "summary": "针对医学视觉语言任务中数据复杂与专家标注稀缺问题，提出RL增强的VLM Med-R1。方法采用Group Relative Policy Optimization进行奖励引导学习，超越静态标注监督。在八种医学影像模态上，Med-R1平均准确率较Qwen2-VL-2B提升29.94%，并超过参数量36倍的Qwen2-VL-72B；在五种问题类型上泛化提升32.06%，且省略中间推理的No-Thinking版本跨域泛化更好、训练更少。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.05079",
+  "title": "TruthInsightBench: An Evidence-Grounded Benchmark for Automated Evaluation of Open-Ended Scientific Discovery Agents",
+  "url": "https://arxiv.org/abs/2609.05079",
+  "abstract": "Autonomous coding agents are increasingly proposed as AI-scientist systems that conduct analyses and write research reports, but executing a prescribed analysis is not the same as making a discovery. Existing benchmarks are configured for reproduction: tasks, data, and rubrics are built around a hidden target study, and recovery of its result is rewarded. We present TruthInsightBench, a benchmark configured for discovery. Its 40 blind tasks, drawn from 40 peer-reviewed studies across 10 scientific domains, expose only a neutral scientific objective and frozen data; source conclusions, expected values, and analysis paths are withheld, leaving the agent to determine what claim the data support. A fixed LLM-based judge scores the evidentiary maturity of an agent's own claims along six dimensions, operationalized as 29 artifact-grounded items, with automated, deterministic aggregation and no per-instance human grading, so evaluation can be repeated automatically as agents evolve. On one frozen base model, four coding agents form a narrow plateau (58.4-60.3 of 100) with no statistically reliable pairwise separation: they execute and document analyses competently, with comparatively strong evidence auditability and novelty, but largely lack the discriminating acts that establish a trustworthy claim (controls, robustness, falsifiability, and cross-dataset generalization). The bottleneck is scientific judgment rather than coding, and genuine discovery remains out of reach. TruthInsightBench makes this gap a measurable target; data and scoring code are at https://github.com/TruthInsight-stack/TruthInsightBench.",
+  "authors": "Zhi-Bo Yang, Chen Zhang, Yue-Wei Zhang, Hao Wang",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:arxiv:2408.06292"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "面向科学发现智能体的证据型评测基准，契合纳入标准。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "面向科学发现智能体的证据基准，批判性评测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "面向开放式科学发现的证据锚定自动评测基准",
+  "data": "40个盲任务，源自10个科学领域40篇同行评审研究",
+  "scenario": "开放式科学发现智能体评测",
+  "benchmark": "TruthInsightBench；评测四个编码智能体（同一冻结基座模型）",
+  "results": "总分窄平台58.4–60.3/100，无统计可靠两两区分；证据可审计性与新颖性较强，控制、稳健性、可证伪性、跨数据集泛化缺失",
+  "availability": "任务数据与评分程序：https://github.com/TruthInsight-stack/TruthInsightBench",
+  "limitations": "评测依赖LLM裁判；任务规模40个；未覆盖全部科学发现能力",
+  "summary": "论文区分“执行既定分析”与“开放式科学发现”，提出TruthInsightBench。基准含40个盲任务，来自10个领域40篇同行评审研究，仅给智能体中性科学目标与冻结数据，由固定LLM裁判按6维度29个证据锚定项自动评分。评测四个编码智能体发现总分仅58.4–60.3/100且无可靠区分，瓶颈在科学判断而非编码，真正的科学发现仍难实现。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

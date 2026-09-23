@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1007/s11263-023-01852-4",
+  "title": "Context Autoencoder for Self-supervised Representation Learning",
+  "url": "https://doi.org/10.1007/s11263-023-01852-4",
+  "abstract": "We present a novel masked image modeling (MIM) approach, context autoencoder (CAE), for self-supervised representation pretraining. We pretrain an encoder by making predictions in the encoded representation space. The pretraining tasks include two tasks: masked representation prediction—predict the representations for the masked patches, and masked patch reconstruction—reconstruct the masked patches. The network is an encoder–regressor–decoder architecture: the encoder takes the visible patches as input; the regressor predicts the representations of the masked patches, which are expected to be aligned with the representations computed from the encoder, using the representations of visible patches and the positions of visible and masked patches; the decoder reconstructs the masked patches from the predicted encoded representations. The CAE design encourages the separation of learning the encoder (representation) from completing the pertaining tasks: masked representation prediction and masked patch reconstruction tasks, and making predictions in the encoded representation space empirically shows the benefit to representation learning. We demonstrate the effectiveness of our CAE through superior transfer performance in downstream tasks: semantic segmentation, object detection and instance segmentation, and classification. The code will be available at https://github.com/Atten4Vis/CAE.",
+  "authors": "Xiao-Kang Chen, Mingyu Ding, Xiaodi Wang, Ying Xin, Shentong Mo, Yun-Hao Wang, Shumin Han, Ping Luo",
+  "venue": "International Journal of Computer Vision",
+  "year": 2022,
+  "citations": 520,
+  "found_by": [
+   "s2:references:arxiv:2301.08243"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "CAE在表征空间预测掩码，掩码建模方法有实质贡献",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "CAE在表征空间预测，掩码建模代表工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CAE，编码器-回归器-解码器掩码图像建模",
+  "data": "图像；未列具体规模",
+  "scenario": "自监督图像表征预训练",
+  "benchmark": "语义分割、目标检测、实例分割、分类",
+  "results": "在多项下游任务上取得优越迁移性能（具体数值未列）",
+  "availability": "代码将公开（GitHub）",
+  "limitations": "需两阶段任务（表征预测+块重建），结构较复杂",
+  "summary": "论文提出上下文自编码器CAE，在编码表征空间做预测而非像素空间。方法采用编码器-回归器-解码器结构，编码器处理可见块，回归器预测掩码块表征，解码器重建掩码块。实验表明在分割、检测和分类等下游任务上迁移性能优越，且分离表征学习与预训练任务有益。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

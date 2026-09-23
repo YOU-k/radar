@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41593-024-01774-5",
+  "title": "Integrated multimodal cell atlas of Alzheimer's disease.",
+  "url": "https://doi.org/10.1038/s41593-024-01774-5",
+  "abstract": "Alzheimer's disease (AD) is the leading cause of dementia in older adults. Although AD progression is characterized by stereotyped accumulation of proteinopathies, the affected cellular populations remain understudied. Here we use multiomics, spatial genomics and reference atlases from the BRAIN Initiative to study middle temporal gyrus cell types in 84 donors with varying AD pathologies. This cohort includes 33 male donors and 51 female donors, with an average age at time of death of 88 years. We used quantitative neuropathology to place donors along a disease pseudoprogression score. Pseudoprogression analysis revealed two disease phases: an early phase with a slow increase in pathology, presence of inflammatory microglia, reactive astrocytes, loss of somatostatin +  inhibitory neurons, and a remyelination response by oligodendrocyte precursor cells; and a later phase with exponential increase in pathology, loss of excitatory neurons and Pvalb +  and Vip +  inhibitory neuron subtypes. These findings were replicated in other major AD studies.",
+  "authors": "Gabitto MI, Travaglini KJ, Rachleff VM, Kaplan ES, Long B, Ariza J, Ding Y, Mahoney JT, Dee N, Goldy J, Melief EJ, Agrawal A, Kana O, Zhen X, Barlow ST, Brouner K, Campos J, Campos J, Carr AJ, Casper T, Chakrabarty R, Clark M, Cool J, Dalley R, Darvas M, Ding SL, Dolbeare T, Egdorf T, Esposito L, Ferrer R, Fleckenstein LE, Gala R, Gary A, Gelfand E, Gloe J, Guilford N, Guzman J, Hirschstein D, Ho W, Hupp M, Jarsky T, Johansen N, Kalmbach BE, Keene LM, Khawand S, Kilgore MD, Kirkland A, Kunst M, Lee BR, Leytze M, Mac Donald CL, Malone J, Maltzer Z, Martin N, McCue R, McMillen D, Mena G, Meyerdierks E, Meyers KP, Mollenkopf T, Montine M, Nolan AL, Nyhus JK, Olsen PA, Pacleb M, Pagan CM, Peña N, Pham T, Pom CA, Postupna N, Rimorin C, Ruiz A, Saldi GA, Schantz AM, Shapovalova NV, Sorensen SA, Staats B, Sullivan M, Sunkin SM, Thompson C, Tieu M, Ting JT, Torkelson A, Tran T, Valera Cuevas NJ, Walling-Bell S, Wang MQ, Waters J, Wilson AM, Xiao M, Haynor D, Gatto NM, Jayadev S, Mufti S, Ng L, Mukherjee S, Crane PK, Latimer CS, Levi BP, Smith KA, Close JL, Miller JA, Hodge RD, Larson EB, Grabowski TJ, Hawrylycz M, Keene CD, Lein ES.",
+  "venue": "Nature neuroscience",
+  "year": 2024,
+  "citations": 386,
+  "found_by": [
+   "eupmc:protein language model single-"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11614693",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "大规模多模态脑图谱，含空间与参考图谱资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Neurosci多模态AD细胞图谱，代表性疾病转折点资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多模态单细胞与空间图谱整合",
+  "data": "snRNA-seq、snATAC-seq、snMultiome、MERFISH；340万核，84供体",
+  "scenario": "阿尔茨海默病细胞图谱",
+  "benchmark": "BICCN/BICAN参考分类；10个公开PFC数据集430万核",
+  "results": "构建139种分子细胞类型图谱；A9验证120万核；PFC复制430万核/707供体",
+  "availability": "数据公开于SEA-AD门户",
+  "limitations": "主要聚焦MTG，其他脑区与纵向时间维度覆盖有限",
+  "summary": "SEA-AD联盟构建了阿尔茨海默病中颞回的多模态整合细胞图谱。研究结合定量神经病理、单核多组学和MERFISH空间转录组，将340万核映射到139种细胞类型，并用连续伪进展评分排序供体。结果揭示了随疾病进展受累的高粒度细胞类型及其空间定位，并在A9和公开PFC数据中复制验证。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

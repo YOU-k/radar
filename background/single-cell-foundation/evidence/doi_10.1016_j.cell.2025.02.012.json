@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2025.02.012",
+  "title": "Simultaneous CRISPR screening and spatial transcriptomics reveal intracellular, intercellular, and functional transcriptional circuits.",
+  "url": "https://doi.org/10.1016/j.cell.2025.02.012",
+  "abstract": "Pooled optical screens have enabled the study of cellular interactions, morphology, or dynamics at massive scale, but they have not yet leveraged the power of highly plexed single-cell resolved transcriptomic readouts to inform molecular pathways. Here, we present a combination of imaging spatial transcriptomics with parallel optical detection of in situ amplified guide RNAs (Perturb-FISH). Perturb-FISH recovers intracellular effects that are consistent with single-cell RNA-sequencing-based readouts of perturbation effects (Perturb-seq) in a screen of lipopolysaccharide response in cultured monocytes, and it uncovers intercellular and density-dependent regulation of the innate immune response. Similarly, in three-dimensional xenograft models, Perturb-FISH identifies tumor-immune interactions altered by genetic knockout. When paired with a functional readout in a separate screen of autism spectrum disorder risk genes in human-induced pluripotent stem cell (hIPSC) astrocytes, Perturb-FISH shows common calcium activity phenotypes and their associated genetic interactions and dysregulated molecular pathways. Perturb-FISH is thus a general method for studying the genetic and molecular associations of spatial and functional biology at single-cell resolution.",
+  "authors": "Binan L, Jiang A, Danquah SA, Valakh V, Simonton B, Bezney J, Manguso RT, Yates KB, Nehme R, Cleary B, Farhi SL.",
+  "venue": "Cell",
+  "year": 2025,
+  "citations": 102,
+  "found_by": [
+   "eupmc:spatial transcriptomics founda",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12135205",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Perturb-FISH空间CRISPR筛选，扰动响应新方法。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Perturb-FISH整合CRISPR筛选与空间转录组，Cell发表。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Perturb-FISH：MERFISH+gRNA原位扩增",
+  "data": "成像空间转录组+gRNA，THP1巨噬细胞等",
+  "scenario": "空间CRISPR筛选与转录组",
+  "benchmark": "匹配的Perturb-seq数据",
+  "results": "验证KO效应与Perturb-seq一致；揭示细胞密度与邻居扰动影响；在ASD风险基因CRISPRi筛选中记录钙活动与基因表达；肿瘤异种移植3D组织验证",
+  "availability": "",
+  "limitations": "gRNA仅20bp无法如mRNA般平铺，需原位扩增",
+  "summary": "提出Perturb-FISH，将MERFISH与gRNA原位扩增结合，在空间背景下同时解码扰动与转录组。在LPS刺激巨噬细胞中与匹配Perturb-seq比较验证，并分析细胞密度与邻居扰动的影响。进一步结合钙成像功能读出用于ASD风险基因CRISPRi筛选，并在肿瘤异种移植3D组织中验证。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

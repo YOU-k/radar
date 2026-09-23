@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2507.19457",
+  "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+  "url": "https://arxiv.org/abs/2507.19457",
+  "abstract": "Large language models (LLMs) are increasingly adapted to downstream tasks via reinforcement learning (RL) methods like Group Relative Policy Optimization (GRPO), which often require thousands of rollouts to learn new tasks. We argue that the interpretable nature of language often provides a much richer learning medium for LLMs, compared to policy gradients derived from sparse, scalar rewards. To test this, we introduce GEPA (Genetic-Pareto), a prompt optimizer that thoroughly incorporates natural language reflection to learn high-level rules from trial and error. Given any AI system containing one or more LLM prompts, GEPA samples trajectories (e.g., reasoning, tool calls, and tool outputs) and reflects on them in natural language to diagnose problems, propose and test prompt updates, and combine complementary lessons from the Pareto frontier of its own attempts. As a result of GEPA's design, it can often turn even just a few rollouts into a large quality gain. Across six tasks, GEPA outperforms GRPO by 6% on average and by up to 20%, while using up to 35x fewer rollouts. GEPA also outperforms the leading prompt optimizer, MIPROv2, by over 10% (e.g., +12% accuracy on AIME-2025), and demonstrates promising results as an inference-time search strategy for code optimization. We release our code at https://github.com/gepa-ai/gepa .",
+  "authors": "Lakshya A. Agrawal, Shangyin Tan, Dilara Soylu, Noah Ziems, Rishi Khare, Krista Opsahl-Ong, Arnav Singhvi, Herumb Shandilya",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 389,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2510.04618"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "反思式提示进化对比GRPO，自我改进训练范式相关",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "反思式提示进化挑战RL，高引且被广泛跟进",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "GEPA：反思式提示进化与Pareto搜索",
+  "data": "六类任务，Qwen3 8B与GPT-4.1 Mini",
+  "scenario": "复合AI系统提示优化",
+  "benchmark": "对比GRPO、MIPROv2，任务含HotpotQA、AIME、IFBench等",
+  "results": "平均超GRPO 6%，最高20%，rollout少至35倍；超MIPROv2逾10%，AIME-2025 +12%",
+  "availability": "代码公开：github.com/gepa-ai/gepa",
+  "limitations": "主要评估提示优化，未替代所有RL场景；依赖可序列化轨迹与反思质量",
+  "summary": "本文提出GEPA，用自然语言反思和多目标进化搜索优化复合AI系统提示，而非依赖稀疏标量奖励的RL。GEPA采样推理、工具调用和输出轨迹，反思诊断问题并进化提示，同时维护Pareto前沿避免局部最优。六项任务上平均超GRPO 6%、最高20%，rollout最多少35倍，并超MIPROv2逾10%。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

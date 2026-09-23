@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.05.27.728155",
+  "title": "Trustworthy ML/AI for Aging Clocks: Preventing Systematic Prediction Bias in Biological Age Estimation",
+  "url": "https://doi.org/10.64898/2026.05.27.728155",
+  "abstract": "Machine learning (ML)- and artificial intelligence (AI)-based aging clocks are increasingly used to quantify physiological and molecular aging from omics and medical imaging data as distinct from chronological age. Here, we characterize a fundamental but underappreciated statistical limitation of commonly used ML/AI regression models for continuous outcomes: systematic prediction bias and its propagation to downstream association estimates. This issue becomes more challenging when the true outcome, biological age, is latent and therefore unobserved during ML/AI model training. We demonstrate that systematic prediction bias can distort and, in some cases, even reverse downstream association analyses that use aging clocks as ML/AI-predicted outcomes to assess their associations with exposures or clinical factors. For example, it can produce spurious associations suggesting that older predicted brain age is linked to better cognitive performance, or that older epigenetic age is associated with better kidney function. To address this problem, we introduce a principled and broadly applicable ML/AI regression framework based on constrained optimization, yielding better calibrated aging-clock estimates and valid downstream inference.",
+  "authors": "Hwiyoung Lee, Zhen-Yao Ye, Yun Yang, Ye-Zhi Pan, B. A. Maron, Ze Wang, P. Kochunov, Paul M. Thompson",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1186/gb-2013-14-10-r115"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "揭示衰老时钟系统性预测偏差，方法学新意强，契合AI基准方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "揭示衰老时钟系统性预测偏差，方法学必读，影响下游关联估计",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "用约束优化回归框架校正衰老时钟系统预测偏差",
+  "data": "未在摘要中给出具体数据规模",
+  "scenario": "防止生物年龄估计的系统偏差",
+  "benchmark": "常用ML/AI连续结局回归模型",
+  "results": "系统预测偏差可扭曲甚至逆转下游关联，例如产生“预测脑龄越大认知越好”或“表观年龄越大肾功能越好”的虚假关联；约束优化可改善校准和下游推断",
+  "availability": "",
+  "limitations": "摘要未给具体数据验证；真实生物年龄不可观测；方法需在更多时钟和队列中验证",
+  "summary": "研究指出常用ML/AI衰老时钟存在系统预测偏差，并会传播到下游关联分析。作者以预测脑龄、表观年龄等为例说明偏差可产生虚假甚至方向相反的关联，并提出基于约束优化的回归框架。结果显示该框架能改善衰老时钟校准，并支持有效的下游推断。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

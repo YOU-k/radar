@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2502.11705",
+  "title": "LLM Agents Making Agent Tools",
+  "url": "https://doi.org/10.48550/arXiv.2502.11705",
+  "abstract": "Tool use has turned large language models (LLMs) into powerful agents that can perform complex multi-step tasks by dynamically utilising external software components. However, these tools must be implemented in advance by human developers, hindering the applicability of LLM agents in domains demanding large numbers of highly specialised tools, like in life sciences and medicine. Motivated by the growing trend of scientific studies accompanied by public code repositories, we propose ToolMaker, an agentic framework that autonomously transforms papers with code into LLM-compatible tools. Given a GitHub URL and short task description, ToolMaker autonomously installs dependencies and generates code to perform the task, using a closed-loop self-correction mechanism for debugging. To evaluate our approach, we introduce a benchmark comprising 15 complex computational tasks spanning various domains with over 100 unit tests to assess correctness and robustness. Our method correctly implements 80% of the tasks, substantially outperforming current state-of-the-art software engineering agents. ToolMaker therefore is a step towards fully autonomous agent-based scientific workflows. Our code and benchmark are publicly available at https://github.com/KatherLab/ToolMaker.",
+  "authors": "G. Wölflein, Dyke Ferber, D. Truhn, Ognjen Arandjelovic, J. Kather",
+  "venue": "Annual Meeting of the Association for Computational Linguistics",
+  "year": 2025,
+  "citations": 63,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "智能体自动将论文代码转为工具，生命科学场景，有实现。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "ToolMaker自动将论文代码转为工具，ACL发表，生命科学智能体关键。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "ToolMaker智能体框架，闭环自纠错自动生成工具",
+  "data": "15个复杂计算任务、100+单元测试",
+  "scenario": "从论文代码自动构建LLM工具",
+  "benchmark": "对比当前SOTA软件工程智能体",
+  "results": "正确实现80%任务，显著优于SOTA软件工程智能体",
+  "availability": "代码与基准公开（GitHub）",
+  "limitations": "仅15个任务，依赖公开代码仓库",
+  "summary": "论文提出ToolMaker，一个将带代码的论文自动转化为LLM兼容工具的智能体框架。给定GitHub URL和任务描述，框架自动安装依赖、生成代码并用闭环自纠错调试，同时构建含15个任务和100+单元测试的基准。方法正确实现80%任务，显著超越现有软件工程智能体，迈向全自主科学工作流。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

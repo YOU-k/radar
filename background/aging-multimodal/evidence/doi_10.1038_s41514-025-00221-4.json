@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41514-025-00221-4",
+  "title": "LinAge2: providing actionable insights and benchmarking with epigenetic clocks.",
+  "url": "https://doi.org/10.1038/s41514-025-00221-4",
+  "abstract": "Biological aging is marked by a decline in resilience at the cellular and systemic levels, driving an exponential increase in mortality risk. Here, we evaluate several clinical and epigenetic clocks for their ability to predict mortality, demonstrating that clocks trained on survival and functional aging outperform those trained on chronological age. We present an enhanced clinical clock that predicts mortality more accurately and provides actionable insights for guiding personalized interventions. These findings highlight the potential of mortality-predicting clocks to inform clinical decision-making and promote strategies for healthy longevity.",
+  "authors": "Fong S, Denisov KA, Nefedova AA, Kennedy BK, Gruber J.",
+  "venue": "npj aging",
+  "year": 2025,
+  "citations": 5,
+  "found_by": [
+   "eupmc:aging clock benchmark foundati"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12019333",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "表观时钟基准与死亡率预测改进，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "表观时钟基准与死亡率预测改进，有公开方法",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LinAge2表观遗传时钟构建与基准评测",
+  "data": "表观遗传/临床数据，n=631至2036",
+  "scenario": "20年全因死亡预测",
+  "benchmark": "ChronAge、PhenoAge、GrimAge2、DunedinPoAm、CrystalAge",
+  "results": "LinAge2预测死亡AUC=0.8684，优于PhenoAge Clinical 0.8479和ChronAge 0.8288；20年死亡AUC=0.8440，优于PhenoAge DNAm 0.7859和GrimAge2 0.8233",
+  "availability": "",
+  "limitations": "未满足理想时钟全部标准；部分对比未达统计显著",
+  "summary": "研究提出LinAge2表观遗传衰老时钟并提供可操作洞察与基准评测。方法基于表观遗传和临床数据估计生物年龄，并与多种现有衰老时钟及理论CrystalAge比较。结果显示LinAge2在20年全因死亡预测上显著优于ChronAge、PhenoAge和部分DNAm时钟，并与健康寿命标志物相关。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

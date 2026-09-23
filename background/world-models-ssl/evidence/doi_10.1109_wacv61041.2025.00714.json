@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1109/wacv61041.2025.00714",
+  "title": "Point-JEPA: A Joint Embedding Predictive Architecture for Self-Supervised Learning on Point Cloud",
+  "url": "https://doi.org/10.1109/WACV61041.2025.00714",
+  "abstract": "Recent advancements in self-supervised learning in the point cloud domain have demonstrated significant potential. However, these methods often suffer from drawbacks such as lengthy pre-training time, the necessity of reconstruction in the input space, and the necessity of additional modalities. In order to address these issues, we introduce Point-JEPA, a joint embedding predictive architecture designed specifically for point cloud data. To this end, we introduce a sequencer that orders point cloud patch embeddings to efficiently compute and utilize their proximity based on their indices during target and context selection. The sequencer also allows shared computations of the patch embeddings' proximity between context and target selection, further improving the efficiency. Experimentally, our method demonstrates state-of-the-art performance while avoiding the re-construction in the input space or additional modality. In particular, Point-JEPA attains a classification accuracy of 93.7 ±0.2 % for linear SVM on ModelNet40 surpassing all other self-supervised models. Moreover, Point-JEPA also establishes new state-of-the-art performance levels across all four few-shot learning evaluation frameworks. The code is available at https://github.com/Ayumu-J-S/Point-JEPA",
+  "authors": "Ayumu Saito, Prachi Kudeshia, Jiju Poovvancheri",
+  "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+  "year": 2024,
+  "citations": 39,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2606.14813"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA迁移到点云，有代码，契合隐空间预测表征方向。",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA迁移点云，含序列器设计且开源，契合方向",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "Point-JEPA：点云联合嵌入预测+sequencer排序点块",
+  "data": "点云数据，ModelNet40及少样本学习框架",
+  "scenario": "点云自监督学习",
+  "benchmark": "其他自监督点云模型；ModelNet40线性SVM与少样本学习",
+  "results": "ModelNet40线性SVM分类93.7±0.2%，超过所有其他自监督模型；四个少样本框架均达新SOTA",
+  "availability": "代码公开：https://github.com/Ayumu-J-S/Point-JEPA",
+  "limitations": "未明确讨论sequencer对复杂点云分布、跨域泛化和预训练成本的限制",
+  "summary": "提出Point-JEPA，一种面向点云数据的联合嵌入预测架构。方法引入sequencer对点云块嵌入排序，基于索引高效计算并利用邻近性进行目标和上下文选择，并共享邻近性计算提升效率。实验发现无需输入空间重建或额外模态即可达到SOTA，ModelNet40线性SVM分类93.7±0.2%，并在四个少样本学习框架上均创SOTA。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

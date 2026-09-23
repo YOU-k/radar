@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.00017",
+  "title": "Memory Reward Inflation in Self-Improving LLM Agents",
+  "url": "https://arxiv.org/abs/2608.00017",
+  "abstract": "Self-improving LLM agents increasingly learn from experience without updating any weights. Each episode is stored in an external memory, scored, and retrieved for similar future tasks to shape later behavior. Viewed through a reward lens, the stored score is a proxy reward for an implicit, non-parametric policy. Each retrieved episode then becomes a policy-improvement step whose reliability hinges on how that score is produced. In deployment, ground-truth labels are unavailable, so the stored reward is at best an LLM assessment. This substitution creates a failure mode, the *Echo Gap*, across the memory-based self-improving agents and model families studied. Incorrect episodes receive inflated rewards; thus, the agent preferentially reuses the very mistakes it has most confident in. Because the error compounds through memory rather than averaging out and the confirming judge's errors remain correlated with the original self-grading bias, so it cannot identify which memories are overvalued. The missing property is formalized as the *Error-Independence Assumption* (EIA), which we prove is a *necessary* condition for correcting the inflation, not merely a description of a good verifier: a usable signal must track truth *and* decorrelate its error from the memory bias, and the recoverable payoff is a closed-form function of exactly those two quantities. We further show the inflation compounds not only when retrieval ranks by the stored score but also under plain similarity retrieval which is the regime the deployed agent uses. Finally, the answer-free de-inflation algorithm LUCID delivers a consistent end-to-end gain on the BIRD text-to-SQL benchmark. It raises execution accuracy to $56.9\\%$, above both a Memento-style self-graded agent ($54.0\\%$, a $+2.9$-point mean gain across seeds) and a memory-less agent of identical architecture ($52.4\\%$).",
+  "authors": "Mohammad Asadolahi, Amir Amini, Samira Talebi, Amirfarhad Farhadi, A. Zamanifar",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "揭示记忆自改进奖励膨胀失效模式，有实证分析",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "揭示自改进智能体记忆奖励膨胀失效模式，批判性结果",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出Echo Gap与EIA，设计无答案去膨胀算法LUCID",
+  "data": "BIRD text-to-SQL基准；多种记忆型自改进智能体与模型族",
+  "scenario": "自改进LLM智能体的经验记忆",
+  "benchmark": "BIRD text-to-SQL；对比Memento式自评分智能体与无记忆同架构智能体",
+  "results": "LUCID执行准确率56.9%，高于Memento式54.0%（+2.9点）与无记忆52.4%",
+  "availability": "",
+  "limitations": "依赖错误独立性假设；验证器错误仍与原始自评分偏差相关，难以识别被高估记忆",
+  "summary": "本文研究自改进LLM智能体在不更新权重、仅靠外部记忆学习时的奖励膨胀问题。作者将存储分数视为代理奖励，形式化Echo Gap与误差独立性假设EIA，并提出无答案去膨胀算法LUCID。在BIRD text-to-SQL上，LUCID将执行准确率提升至56.9%，优于自评分与无记忆基线。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

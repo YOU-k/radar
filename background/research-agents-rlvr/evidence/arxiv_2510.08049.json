@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2510.08049",
+  "title": "A Survey of Process Reward Models: From Outcome Signals to Process Supervisions for Large Language Models",
+  "url": "https://arxiv.org/abs/2510.08049v3",
+  "abstract": "Although Large Language Models (LLMs) exhibit advanced reasoning ability, conventional alignment remains largely dominated by outcome reward models (ORMs) that judge only final answers. Process Reward Models(PRMs) address this gap by evaluating and guiding reasoning at the step or trajectory level. This survey provides a systematic overview of PRMs through the full loop: how to generate process data, build PRMs, and use PRMs for test-time scaling and reinforcement learning. We summarize applications across math, code, text, multimodal reasoning, robotics, and agents, and review emerging benchmarks. Our goal is to clarify design spaces, reveal open challenges, and guide future research toward fine-grained, robust reasoning alignment.",
+  "authors": "Congmin Zheng, Jiachen Zhu, Zhuoying Ou, Yuxiang Chen, Kangning Zhang, Rong Shan, Zeyu Zheng, Mengyue Yang",
+  "venue": "",
+  "year": 2025,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PRM系统综述，覆盖生成、训练与应用，背景价值高",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "PRM系统综述，覆盖数据到RL全流程，方向必读背景。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PRM系统综述：数据生成、建模与使用全循环",
+  "data": "综述覆盖数学、代码、文本、多模态、机器人、智能体",
+  "scenario": "LLM过程奖励模型综述",
+  "benchmark": "ORM、测试时扩展、PRM引导RL及相关基准",
+  "results": "归纳人类标注/自动/半自动数据生成、判别式/生成式建模、重排/验证解码/搜索与PRM引导RL",
+  "availability": "附带持续更新的GitHub仓库",
+  "limitations": "综述性质，无新实验；领域快速演进",
+  "summary": "针对LLM对齐长期以仅评判最终答案的结果奖励模型为主、难以捕捉长链推理逐步进展的问题，本文系统综述过程奖励模型（PRM）。综述按完整循环组织：如何生成过程数据（人工标注、自动监督、半自动流水线）、如何构建PRM（判别式与生成式目标、显式与隐式监督、架构创新）、如何使用PRM（测试时扩展的重排、验证引导解码、搜索，以及PRM引导RL的稠密步级奖励与信用分配），并总结数学、代码、文本、多模态推理、机器人与智能体等应用及新兴基准。目标是厘清设计空间、揭示开放挑战，并推动细粒度、鲁棒的推理对齐研究，同时提供持续更新的GitHub仓库。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

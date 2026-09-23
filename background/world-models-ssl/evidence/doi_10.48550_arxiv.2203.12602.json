@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2203.12602",
+  "title": "VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training",
+  "url": "https://doi.org/10.48550/arXiv.2203.12602",
+  "abstract": "Pre-training video transformers on extra large-scale datasets is generally required to achieve premier performance on relatively small datasets. In this paper, we show that video masked autoencoders (VideoMAE) are data-efficient learners for self-supervised video pre-training (SSVP). We are inspired by the recent ImageMAE and propose customized video tube masking with an extremely high ratio. This simple design makes video reconstruction a more challenging self-supervision task, thus encouraging extracting more effective video representations during this pre-training process. We obtain three important findings on SSVP: (1) An extremely high proportion of masking ratio (i.e., 90% to 95%) still yields favorable performance of VideoMAE. The temporally redundant video content enables a higher masking ratio than that of images. (2) VideoMAE achieves impressive results on very small datasets (i.e., around 3k-4k videos) without using any extra data. (3) VideoMAE shows that data quality is more important than data quantity for SSVP. Domain shift between pre-training and target datasets is an important issue. Notably, our VideoMAE with the vanilla ViT can achieve 87.4% on Kinetics-400, 75.4% on Something-Something V2, 91.3% on UCF101, and 62.6% on HMDB51, without using any extra data. Code is available at https://github.com/MCG-NJU/VideoMAE.",
+  "authors": "Zhan Tong, Yibing Song, Jue Wang, Limin Wang",
+  "venue": "Neural Information Processing Systems",
+  "year": 2022,
+  "citations": 2283,
+  "found_by": [
+   "s2:references:arxiv:2304.07193"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "VideoMAE经典掩码自编码工作，高引用开源，奠基性",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "VideoMAE高掩码率视频预训练，必读经典",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "VideoMAE，极高比例视频管状掩码自编码",
+  "data": "视频；约3k-4k视频小数据集，无额外数据",
+  "scenario": "自监督视频预训练",
+  "benchmark": "Kinetics-400、Something-Something V2、UCF101、HMDB51",
+  "results": "Kinetics-400 87.4%，SSv2 75.4%，UCF101 91.3%，HMDB51 62.6%，均无额外数据",
+  "availability": "代码公开（GitHub）",
+  "limitations": "依赖高掩码率与视频时序冗余，域偏移仍是问题",
+  "summary": "论文提出VideoMAE，将图像MAE扩展到视频，采用极高比例（90%-95%）的视频管状掩码使重建任务更具挑战性。方法用vanilla ViT在无标签视频上做掩码自编码预训练。结果显示其在仅3k-4k视频上即取得优异性能，且数据质量比数据数量更重要。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

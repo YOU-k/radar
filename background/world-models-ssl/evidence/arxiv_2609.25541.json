@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.25541",
+  "title": "A JEPA Recipe for Tabular Foundation Models",
+  "url": "https://arxiv.org/abs/2609.25541",
+  "abstract": "Tabular foundation models learn to predict cell values in context, whereas world-model self-supervision asks for prediction in representation space (LeCun, 2022; Assran et al., 2023). On a tabular foundation-model prior, the latent term of a joint-embedding predictive architecture (JEPA) collapsed in our earlier runs and took the encoder with it to a constant map. We report a recipe under which the latent term survives to convergence beside the value objective: the value head reads the encoder field rather than the predictor, and the target is an exponential moving average (EMA) difference. To bound its cost against the value-only arm, both arms train until a plateau rule stops them, with no fixed step budget. A fixed horizon had confounded a slowdown with a ceiling, since the value-only arm was still improving well past the usual budget. At convergence, in one run per arm, the JEPA arm trails the value-only arm across 147 real datasets, 32:70 wins to losses on classification (29:63 with one entry per dataset name) and 8:24 on regression, the margin small on classification and wider on regression, and the count leans the same way in each stratum and each benchmark. The JEPA arm (jepa) needs 1.42 times as many steps as the value-only arm (ds), and 1.66 times its wall-clock, to reach its plateau.",
+  "authors": "Mingyu Jeon, Suwan Cho, Jae-Young Suh",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:arxiv:2410.05016"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA表格基础模型配方，含崩溃分析与训练细节",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA表格基础模型配方，含崩溃诊断有参考价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "JEPA潜项+值目标，值头读编码器，EMA差分目标",
+  "data": "147个真实表格数据集，合成先验预训练",
+  "scenario": "表格基础模型自监督",
+  "benchmark": "对比仅值目标ds臂，分类与回归",
+  "results": "JEPA臂分类32:70胜负（按名29:63），回归8:24；需1.42倍步数、1.66倍墙钟达平台",
+  "availability": "",
+  "limitations": "收敛后未超越仅值目标臂，每臂仅一次运行",
+  "summary": "研究在表格基础模型先验上能否训练JEPA潜目标而不崩溃。提出值头读编码器场、潜目标用EMA差分、隐藏单元以掩码token进入预测器的配方，并用平台停止协议对比。收敛后JEPA臂在147个数据集上仍落后仅值目标臂，分类差距小、回归更大，且需1.42倍步数与1.66倍墙钟。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

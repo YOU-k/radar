@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2409.15803",
+  "title": "3D-JEPA: A Joint Embedding Predictive Architecture for 3D Self-Supervised Representation Learning",
+  "url": "https://doi.org/10.48550/arXiv.2409.15803",
+  "abstract": "Invariance-based and generative methods have shown a conspicuous performance for 3D self-supervised representation learning (SSRL). However, the former relies on hand-crafted data augmentations that introduce bias not universally applicable to all downstream tasks, and the latter indiscriminately reconstructs masked regions, resulting in irrelevant details being saved in the representation space. To solve the problem above, we introduce 3D-JEPA, a novel non-generative 3D SSRL framework. Specifically, we propose a multi-block sampling strategy that produces a sufficiently informative context block and several representative target blocks. We present the context-aware decoder to enhance the reconstruction of the target blocks. Concretely, the context information is fed to the decoder continuously, facilitating the encoder in learning semantic modeling rather than memorizing the context information related to target blocks. Overall, 3D-JEPA predicts the representation of target blocks from a context block using the encoder and context-aware decoder architecture. Various downstream tasks on different datasets demonstrate 3D-JEPA's effectiveness and efficiency, achieving higher accuracy with fewer pretraining epochs, e.g., 88.65% accuracy on PB_T50_RS with 150 pretraining epochs.",
+  "authors": "Naiwen Hu, Haozhe Cheng, Yifan Xie, Shiqi Li, Jihua Zhu",
+  "venue": "arXiv.org",
+  "year": 2024,
+  "citations": 13,
+  "found_by": [
+   "s2kw:self-supervised representation"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA扩展至3D自监督，方法新有代码",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA扩展至3D，有代码，方向代表性工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "3D-JEPA：多块采样+上下文感知解码器的非生成式3D SSRL",
+  "data": "3D点云数据（ModelNet40等下游数据集）",
+  "scenario": "3D自监督表征学习",
+  "benchmark": "基于不变性与生成式3D SSRL方法",
+  "results": "PB_T50_RS上150预训练epoch达88.65%准确率，预训练epoch更少且精度更高",
+  "availability": "",
+  "limitations": "未充分讨论多块采样策略对不同3D数据分布的泛化性",
+  "summary": "提出3D-JEPA，一种非生成式3D自监督表征学习框架。采用多块采样生成信息丰富的上下文块与多个目标块，并用上下文感知解码器持续注入上下文信息以预测目标块表征。在多个下游任务上以更少预训练epoch取得更高精度，如PB_T50_RS达88.65%。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-56741-w",
+  "title": "Biological age model using explainable automated CT-based cardiometabolic biomarkers for phenotypic prediction of longevity.",
+  "url": "https://doi.org/10.1038/s41467-025-56741-w",
+  "abstract": "We derive and test a CT-based biological age model for predicting longevity, using an automated pipeline of explainable AI algorithms that quantifies skeletal muscle, abdominal fat, aortic calcification, bone density, and solid abdominal organs. We apply these AI tools to abdominal CT scans from 123,281 adults (mean age, 53.6 years; 47% women; median follow-up, 5.3 years). The final weighted CT biomarker selection was based on the index of prediction accuracy. The CT model significantly outperforms standard demographic data for predicting longevity (IPA = 29.2 vs. 21.7; 10-year AUC = 0.880 vs. 0.779; p < 0.001). Age- and sex-corrected survival hazard ratio for the highest-vs-lowest risk quartile was 8.73 (95% CI,8.14-9.36) for the CT biological age model, and increased to 24.79 after excluding cancer diagnoses within 5 years of CT. Muscle density, aortic plaque burden, visceral fat density, and bone density contributed the most. Here we show a personalized phenotypic CT biological age model that can be opportunistically-derived, regardless of clinical indication, to better inform risk assessment.",
+  "authors": "Pickhardt PJ, Kattan MW, Lee MH, Pooler BD, Pyrros A, Liu D, Zea R, Summers RM, Garrett JW.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 22,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC11806064",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "12万例CT影像生物年龄模型，公开方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "12万人CT影像生物年龄模型，可解释AI，样本大",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "自动化CT心脏代谢生物标志物构建生物年龄模型",
+  "data": "腹部CT影像，123,281名成人，随访20年",
+  "scenario": "生存预测与长寿表型评估",
+  "benchmark": "传统人口学模型（实际年龄、性别、种族）",
+  "results": "CTBA模型IPA为29.2，人口学模型为21.7（p<0.001）；8个CT标志物入选，肌肉密度、腹主动脉钙化等贡献最大",
+  "availability": "",
+  "limitations": "队列以白人为主（92%），回顾性设计，外部验证有限",
+  "summary": "研究开发了基于腹部CT的生物学年龄（CTBA）模型，用于预测长寿表型。方法上利用自动化AI流程提取8个心脏代谢CT标志物，并在123,281名成人中比较其与人口学模型的生存预测能力。结果显示CTBA模型预测准确性显著优于传统年龄、性别和种族模型，表明CT影像标志物可有效反映生物学衰老。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

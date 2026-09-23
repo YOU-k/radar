@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2023.02.28.530532",
+  "title": "Autonomous AI Agents Discover Aging Interventions from Millions of Molecular Profiles",
+  "url": "https://doi.org/10.1101/2023.02.28.530532",
+  "abstract": "Decades of publicly available molecular studies have generated millions of samples testing diverse interventions, yet these datasets were rarely analyzed for their effects on aging. Aging clocks now enable biological age estimation and life outcome prediction from molecular data, creating an opportunity to systematically mine this untapped resource. We developed ClockBase Agent, a publicly accessible platform that reanalyzes millions of human and mouse methylation and RNA-seq samples by integrating them with over 40 aging clock predictions. ClockBase Agent employs specialized AI agents that autonomously generate aging-focused hypotheses, evaluate intervention effects on biological age, conduct literature reviews, and produce scientific reports across all datasets. Reanalyzing 43,602 intervention-control comparisons through multiple aging biomarkers revealed thousands of age-modifying effects missed by original investigators, including over 500 interventions that significantly reduce biological age (e.g., ouabain, KMO inhibitor, fenofibrate, and NF1 knockout). Large-scale systematic analysis reveals fundamental patterns: significantly more interventions accelerate rather than decelerate aging, disease states predominantly accelerate biological age, and loss-of-function genetic approaches systematically outperform gain-of-function strategies in decelerating aging. As validation, we show that identified interventions converge on canonical longevity pathways and with strong concordance to independent lifespan databases. We further experimentally validated ouabain, a top-scoring AI-identified candidate, demonstrating reduced frailty progression, decreased neuroinflammation, and improved cardiac function in aged mice. ClockBase Agent establishes a paradigm where specialized AI agents systematically reanalyze all prior research to identify age-modifying interventions autonomously, transforming how we extract biological insights from existing data to advance human healthspan and longevity.",
+  "authors": "Kejun Ying, A. Tyshkovskiy, Alexandre Trapp, Hanna Liu, M. Moqri, C. Kerepesi, V. Gladyshev",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 22,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2026.08.026"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI智能体挖掘分子谱发现抗衰干预，公开平台，契合基础模型方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "AI agent整合百万分子谱与40+时钟，衰老基础模型新范式",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "AI代理整合40余种衰老时钟再分析干预数据",
+  "data": "人鼠甲基化与RNA-seq数百万样本，43602干预对照",
+  "scenario": "系统挖掘衰老干预与生物年龄效应",
+  "benchmark": "原始研究未分析的干预效应",
+  "results": "发现超500种干预显著降低生物年龄，如ouabain、KMO抑制剂、fenofibrate、NF1敲除",
+  "availability": "ClockBase Agent公开平台",
+  "limitations": "依赖已有时钟预测，实验验证有限",
+  "summary": "研究开发ClockBase Agent平台，用自主AI代理再分析海量分子数据中的衰老干预效应。整合40余种衰老时钟，评估43602个干预-对照比较并生成假设、文献综述和报告。发现数千个被原研究遗漏的年龄修饰效应，且更多干预加速而非延缓衰老，疾病状态多加速生物年龄。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

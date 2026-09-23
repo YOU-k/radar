@@ -37,10 +37,11 @@ def test_s2_snowball_maps_ids_and_rel(spec):
     def get_json(url, params=None, timeout=60):
         calls.append(url)
         return {"data": [{"citedPaper" if "references" in url else "citingPaper": {
-            "title": "Snow", "externalIds": {"DOI": "10.5/SNOW"}, "year": 2025, "venue": "Cell",
+            "title": "Snow", "externalIds": {"DOI": "10.5/SNOW", "ArXiv": "2501.00001"}, "year": 2025, "venue": "Cell",
             "citationCount": 99, "authors": [{"name": "X"}]}}]}
     out = d.S2Snowball(get_json=get_json, sleep=0).fetch(spec, DiscoveryPlan(snowball_ids=["doi:10.1/seed"]))
     assert len(out) == 2 and out[0].id == "doi:10.5/snow" and out[0].citations == 99
+    assert out[0].extra["alt_ids"] == ["arxiv:2501.00001"]
     assert calls[0].endswith("/paper/DOI:10.1/seed/references") and calls[1].endswith("/citations")
 
 
@@ -71,6 +72,30 @@ def test_empty_result_retried(spec, monkeypatch):
         return [] if n["calls"] == 1 else [_row(1, abstract="UK Biobank")]
     out = d.EuropePMCJournal(search=search).fetch(spec, DiscoveryPlan(journals=["Nature"]))
     assert len(out) == 1 and n["calls"] == 2
+
+
+def test_s2_keyword_source(spec):
+    calls = []
+    def get_json(url, params=None, timeout=60):
+        calls.append((url, params))
+        return {"data": [{"title": "JEPA paper", "externalIds": {"ArXiv": "2301.08243"}, "year": 2023,
+                          "venue": "CVPR", "citationCount": 800, "authors": []}]}
+    out = d.S2Keyword(get_json=get_json, sleep=0).fetch(spec, DiscoveryPlan(queries=['"joint embedding"'], months=24))
+    assert out[0].id == "arxiv:2301.08243" and out[0].url.endswith("2301.08243") and out[0].found_by == ['s2kw:"joint embedding"']
+    assert calls[0][0].endswith("/paper/search") and calls[0][1]["query"] == "joint embedding" and calls[0][1]["year"].endswith("-")
+
+
+def test_get_json_backs_off_on_429(monkeypatch):
+    import requests as rq
+    monkeypatch.setattr(d.time, "sleep", lambda s: None)
+    seq = iter([429, 429, 200])
+    class R:
+        def __init__(self, code): self.status_code = code
+        def raise_for_status(self):
+            if self.status_code >= 400: raise rq.HTTPError(str(self.status_code))
+        def json(self): return {"ok": True}
+    monkeypatch.setattr(d.requests, "get", lambda *a, **k: R(next(seq)))
+    assert d._get_json("https://api.semanticscholar.org/x") == {"ok": True}
 
 
 def test_source_failure_isolated(spec):

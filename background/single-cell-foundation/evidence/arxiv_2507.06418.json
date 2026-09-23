@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "arxiv:2507.06418",
+  "title": "PAST: A multimodal single-cell foundation model for histopathology and spatial transcriptomics in cancer",
+  "url": "https://arxiv.org/abs/2507.06418v1",
+  "abstract": "While pathology foundation models have transformed cancer image analysis, they often lack integration with molecular data at single-cell resolution, limiting their utility for precision oncology. Here, we present PAST, a pan-cancer single-cell foundation model trained on 20 million paired histopathology images and single-cell transcriptomes spanning multiple tumor types and tissue contexts. By jointly encoding cellular morphology and gene expression, PAST learns unified cross-modal representations that capture both spatial and molecular heterogeneity at the cellular level. This approach enables accurate prediction of single-cell gene expression, virtual molecular staining, and multimodal survival analysis directly from routine pathology slides. Across diverse cancers and downstream tasks, PAST consistently exceeds the performance of existing approaches, demonstrating robust generalizability and scalability. Our work establishes a new paradigm for pathology foundation models, providing a versatile tool for high-resolution spatial omics, mechanistic discovery, and precision cancer research.",
+  "authors": "Changchun Yang, Haoyang Li, Yushuai Wu, Yilan Zhang, Yifeng Jiao, Yu Zhang, Rihan Huang, Yuan Cheng",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 5,
+  "found_by": [
+   "arxiv",
+   "s2kw:single-cell multimodal integra"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "病理与空间转录组多模态基础模型，2000万配对数据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "2000万配对病理-转录组的多模态单细胞基础模型，代表性强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多模态单细胞基础模型PAST",
+  "data": "2000万配对病理图像与单细胞转录组，泛癌",
+  "scenario": "癌症病理与空间转录组",
+  "benchmark": "现有病理与空间组学方法",
+  "results": "在多种癌症和下游任务中持续超越现有方法，展现强泛化与可扩展性",
+  "availability": "",
+  "limitations": "现有方法多限于bulk或粗区域整合，难捕捉单细胞变异",
+  "summary": "该研究提出PAST，一个泛癌单细胞基础模型，联合编码细胞形态与基因表达。基于2000万配对病理图像和单细胞转录组训练，学习统一跨模态表征。在多种癌症任务中超越现有方法，支持单细胞基因表达预测、虚拟分子染色和多模态生存分析。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

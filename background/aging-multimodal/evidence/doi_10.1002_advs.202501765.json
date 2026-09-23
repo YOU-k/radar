@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1002/advs.202501765",
+  "title": "Gompertz Law-Based Biological Age (GOLD BioAge): A Simple and Practical Measurement of Biological Ageing to Capture Morbidity and Mortality Risks.",
+  "url": "https://doi.org/10.1002/advs.202501765",
+  "abstract": "Biological age reflects actual ageing and overall health, but current ageing clocks are often complex and difficult to interpret, which limits their clinical application. This study introduces a Gompertz law-based biological age (GOLD BioAge) model designed to simplify the assessment of ageing. We calculated GOLD BioAge using clinical biomarkers and found significant associations between the difference from chronological age (BioAgeDiff) and the risks of morbidity and mortality in the NHANES and UK Biobank. Using proteomics and metabolomics data, we developed GOLD ProtAge and MetAge, which outperformed the clinical biomarker models in predicting mortality and chronic disease risk in UK Biobank. Benchmark analyses demonstrated that the models outperformed common ageing clocks in predicting mortality across diverse age groups in both the NHANES and UK Biobank cohorts. Additionally, a simplified version called Light BioAge is created, which uses three biomarkers to assess ageing. The Light model reliably captured the mortality risk across three validation cohorts (CHARLS, RuLAS, and CLHLS). It significantly predicted the onset of frailty, stratified frail individuals, and collectively identified individuals at high risk of mortality. In summary, the GOLD BioAge algorithm provides a valuable framework for the assessment of ageing in public health and clinical practice.",
+  "authors": "Hao M, Zhang H, Wu J, Huang Y, Li X, Wang M, Wang S, Wang J, Chen J, Jun Bao Z, Jin L, Wang X, Hu Z, Jiang S, Li Y.",
+  "venue": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+  "year": 2025,
+  "citations": 13,
+  "found_by": [
+   "eupmc:aging clock benchmark foundati"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12407260",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "GOLD BioAge基于Gompertz定律，多组学验证，方法简洁可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Gompertz生物年龄模型，多组学验证，临床可解释性强。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于Gompertz风险函数的线性生物年龄模型",
+  "data": "UKB代谢组/蛋白组、NHANES、UKB及3个中国队列",
+  "scenario": "死亡与发病风险预测",
+  "benchmark": "Levine表型年龄、PCAge、ENABLAge等常见衰老时钟",
+  "results": "GOLD BioAge关联发病与死亡风险；轻量模型在CHARLS、CLHLS、RuLAS三个中国队列验证有效",
+  "availability": "",
+  "limitations": "依赖常规临床生物标志物，可能遗漏分子层面衰老机制；跨人群泛化仍需更多验证",
+  "summary": "研究提出GOLD BioAge，用Gompertz定律将实际年龄与常规生物标志物联合映射到死亡风险。方法基于Gompertz风险函数构建易计算线性模型，并在UKB代谢组/蛋白组、NHANES及三个中国队列中验证。结果显示其可捕捉发病和死亡风险，且轻量版本具临床可推广性。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

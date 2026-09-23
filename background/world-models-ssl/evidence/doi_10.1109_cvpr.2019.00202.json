@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1109/cvpr.2019.00202",
+  "title": "Revisiting Self-Supervised Visual Representation Learning",
+  "url": "https://doi.org/10.1109/CVPR.2019.00202",
+  "abstract": "Unsupervised visual representation learning remains a largely unsolved problem in computer vision research. Among a big body of recently proposed approaches for unsupervised learning of visual representations, a class of self-supervised techniques achieves superior performance on many challenging benchmarks. A large number of the pretext tasks for self-supervised learning have been studied, but other important aspects, such as the choice of convolutional neural networks (CNN), has not received equal attention. Therefore, we revisit numerous previously proposed self-supervised models, conduct a thorough large scale study and, as a result, uncover multiple crucial insights. We challenge a number of common practices in self-supervised visual representation learning and observe that standard recipes for CNN design do not always translate to self-supervised representation learning. As part of our study, we drastically boost the performance of previously proposed techniques and outperform previously published state-of-the-art results by a large margin. We will release the code for reproducing our experiments when the anonymity requirements are lifted.",
+  "authors": "Alexander Kolesnikov, Xiaohua Zhai, Lucas Beyer",
+  "venue": "Computer Vision and Pattern Recognition",
+  "year": 2019,
+  "citations": 767,
+  "found_by": [
+   "s2:references:arxiv:2010.13902"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统评测自监督表征，批判性分析有价值",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "自监督表征系统性批判分析，方向必读经典",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "大规模复现并系统研究自监督预训练任务与CNN架构选择",
+  "data": "多种自监督预训练数据集与CNN骨干",
+  "scenario": "视觉自监督表征学习",
+  "benchmark": "此前已发表自监督SOTA方法",
+  "results": "大幅提升已有自监督技术性能，显著超越此前SOTA结果",
+  "availability": "代码将在匿名期结束后公开",
+  "limitations": "未明确说明具体数据集规模与计算资源限制",
+  "summary": "重新审视多种自监督视觉表征学习方法，进行大规模系统研究。通过统一实验揭示CNN设计标准配方不总适用于自监督学习。发现调整架构与训练策略可大幅提升性能并超越此前SOTA。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

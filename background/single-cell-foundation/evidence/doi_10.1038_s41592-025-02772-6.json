@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-025-02772-6",
+  "title": "Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines.",
+  "url": "https://doi.org/10.1038/s41592-025-02772-6",
+  "abstract": "Recent research in deep-learning-based foundation models promises to learn representations of single-cell data that enable prediction of the effects of genetic perturbations. Here we compared five foundation models and two other deep learning models against deliberately simple baselines for predicting transcriptome changes after single or double perturbations. None outperformed the baselines, which highlights the importance of critical benchmarking in directing and evaluating method development.",
+  "authors": "Ahlmann-Eltze C, Huber W, Anders S.",
+  "venue": "Nature methods",
+  "year": 2025,
+  "citations": 143,
+  "found_by": [
+   "eupmc:single-cell foundation model b",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12328236",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "批判性基准，证明扰动预测基础模型未超线性基线",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "批判性基准，证明扰动预测基础模型未超线性基线。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基准评测单细胞基础模型扰动预测",
+  "data": "K562 CRISPRa，224扰动，19,264基因",
+  "scenario": "基因扰动表达变化预测",
+  "benchmark": "scGPT、scFoundation、GEARS、CPA及线性基线",
+  "results": "所有模型误差高于加性基线；遗传互作预测不优于no change基线",
+  "availability": "文中未提",
+  "limitations": "仅K562双扰动数据；模型多预测缓冲互作，协同互作少且不准",
+  "summary": "该研究评测深度学习模型预测基因扰动效应的能力。作者用Norman等K562 CRISPRa双扰动数据，比较scGPT、scFoundation、GEARS、CPA及简单线性基线。结果显示这些模型未超过加性基线，遗传互作预测也不优于no change基线。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

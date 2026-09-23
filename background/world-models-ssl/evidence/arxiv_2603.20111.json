@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2603.20111",
+  "title": "Var-JEPA: A Variational Formulation of the Joint-Embedding Predictive Architecture - Bridging Predictive and Generative Self-Supervised Learning",
+  "url": "https://arxiv.org/abs/2603.20111v2",
+  "abstract": "The Joint-Embedding Predictive Architecture (JEPA) is often seen as a non-generative alternative to likelihood-based self-supervised learning, emphasizing prediction in representation space rather than reconstruction in observation space. We argue that the resulting separation from probabilistic generative modeling is largely rhetorical rather than structural: the canonical JEPA design (coupled encoders with a context-to-target predictor) mirrors the variational posteriors and learned conditional priors obtained when variational inference is applied to a particular class of coupled latent-variable models, and standard JEPA can be viewed as a deterministic specialization in which regularization is imposed via architectural and training heuristics rather than an explicit likelihood. Building on this view, we derive the Variational JEPA (Var-JEPA), which makes the latent generative structure explicit by optimizing a single Evidence Lower Bound (ELBO). This yields meaningful representations without ad-hoc anti-collapse regularizers and allows principled uncertainty quantification in the latent space. We instantiate the framework for tabular data (Var-T-JEPA) and achieve strong representation learning and downstream performance, improving over T-JEPA across real-world tabular benchmarks while remaining competitive with strong raw-feature baselines.",
+  "authors": "Moritz Gögl, Christopher Yau",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA变分理论统一预测与生成式自监督，系统性分析有价值",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA与变分生成统一的理论框架，具方向性意义",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "变分JEPA（Var-JEPA），单一ELBO目标",
+  "data": "表格数据；真实世界表格基准（具体规模未列）",
+  "scenario": "表格数据自监督表征学习",
+  "benchmark": "T-JEPA、强原始特征基线",
+  "results": "在真实表格基准上优于T-JEPA，与强原始特征基线相当；ELBO自然防坍缩，无需反坍缩正则",
+  "availability": "",
+  "limitations": "仅实例化表格数据（Var-T-JEPA），未验证图像/视频等模态",
+  "summary": "论文论证JEPA与变分推断在结构上等价，标准JEPA可视为确定性特例。作者据此推导出Var-JEPA，用单一ELBO显式建模隐变量生成结构，并实例化为表格版Var-T-JEPA。实验显示其在真实表格基准上超过T-JEPA，且无需启发式反坍缩正则即可获得有意义表征与隐空间不确定性量化。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

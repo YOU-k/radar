@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1109/taslp.2021.3122291",
+  "title": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+  "url": "https://doi.org/10.1109/taslp.2021.3122291",
+  "abstract": "Self-supervised approaches for speech representation learning are challenged by three unique problems: (1) there are multiple sound units in each input utterance, (2) there is no lexicon of input sound units during the pre-training phase, and (3) sound units have variable lengths with no explicit segmentation. To deal with these three problems, we propose the Hidden-Unit BERT (HuBERT) approach for self-supervised speech representation learning, which utilizes an offline clustering step to provide aligned target labels for a BERT-like prediction loss. A key ingredient of our approach is applying the prediction loss over the masked regions only, which forces the model to learn a combined acoustic and language model over the continuous inputs. HuBERT relies primarily on the consistency of the unsupervised clustering step rather than the intrinsic quality of the assigned cluster labels. Starting with a simple k-means teacher of 100 clusters, and using two iterations of clustering, the HuBERT model either matches or improves upon the state-of-the-art wav2vec 2.0 performance on the Librispeech (960 h) and Libri-light (60,000 h) benchmarks with 10 min, 1 h, 10 h, 100 h, and 960 h fine-tuning subsets. Using a 1B parameter model, HuBERT shows up to 19% and 13% relative WER reduction on the more challenging dev-other and test-other evaluation subsets.12",
+  "authors": "Wei-Ning Hsu, Benjamin Bolte, Yao-Hung Hubert Tsai, Kushal Lakhotia, R. Salakhutdinov, Abdel-rahman Mohamed",
+  "venue": "IEEE/ACM Transactions on Audio Speech and Language Processing",
+  "year": 2021,
+  "citations": 5140,
+  "found_by": [
+   "s2:references:arxiv:2507.02915"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "HuBERT掩码隐单元预测，自监督语音经典有代码",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "HuBERT 掩码隐单元预测，语音自监督奠基性必读工作。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "HuBERT：离线聚类生成对齐标签+掩码预测损失",
+  "data": "语音数据，Librispeech 960h、Libri-light 60000h",
+  "scenario": "自监督语音表征学习",
+  "benchmark": "wav2vec 2.0；Librispeech/Libri-light微调子集",
+  "results": "匹配或超越wav2vec 2.0；1B模型在dev-other/test-other相对WER降低最高19%/13%",
+  "availability": "",
+  "limitations": "依赖离线聚类步骤的一致性，未明确讨论聚类质量与计算开销等局限",
+  "summary": "提出HuBERT，用离线聚类提供对齐目标，结合BERT式掩码预测学习语音表征。方法先对连续语音特征做k-means聚类，再仅在掩码区域预测隐藏单元标签，并迭代聚类。实验发现从100簇k-means和两轮迭代开始，在Librispeech与Libri-light多规模微调下可匹配或超越wav2vec 2.0，1B参数模型在困难子集上显著降低WER。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

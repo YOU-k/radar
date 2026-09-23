@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-024-02201-0",
+  "title": "scGPT: toward building a foundation model for single-cell multi-omics using generative AI",
+  "url": "https://doi.org/10.1038/s41592-024-02201-0",
+  "abstract": "Generative pretrained models have achieved remarkable success in various domains such as language and computer vision. Specifically, the combination of large-scale diverse datasets and pretrained transformers has emerged as a promising approach for developing foundation models. Drawing parallels between language and cellular biology (in which texts comprise words; similarly, cells are defined by genes), our study probes the applicability of foundation models to advance cellular biology and genetic research. Using burgeoning single-cell sequencing data, we have constructed a foundation model for single-cell biology, scGPT, based on a generative pretrained transformer across a repository of over 33 million cells. Our findings illustrate that scGPT effectively distills critical biological insights concerning genes and cells. Through further adaptation of transfer learning, scGPT can be optimized to achieve superior performance across diverse downstream applications. This includes tasks such as cell type annotation, multi-batch integration, multi-omic integration, perturbation response prediction and gene network inference. Pretrained using over 33 million single-cell RNA-sequencing profiles, scGPT is a foundation model facilitating a broad spectrum of downstream single-cell analysis tasks by transfer learning.",
+  "authors": "Haotian Cui, Chloe Wang, Hassaan Maan, Kuan Pang, Fengning Luo, Nan Duan, Bo Wang",
+  "venue": "Nature Methods",
+  "year": 2024,
+  "citations": 1370,
+  "found_by": [
+   "seed"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "scGPT奠基性单细胞基础模型，公开权重，方向核心。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "scGPT奠基性单细胞基础模型，公开权重，引用超千，方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "生成式预训练Transformer（scGPT）",
+  "data": "单细胞RNA测序，超3300万个细胞",
+  "scenario": "单细胞多组学下游任务",
+  "benchmark": "细胞类型注释、多批次/多组学整合等任务对比",
+  "results": "基于3300万细胞预训练，迁移学习后在注释、整合、扰动预测、基因网络推断等任务表现优异",
+  "availability": "",
+  "limitations": "",
+  "summary": "构建了单细胞基础模型scGPT，用于单细胞生物学与遗传研究。基于生成式预训练Transformer，在超3300万个细胞的单细胞测序数据上预训练。发现模型能提炼基因与细胞的关键生物学洞见，经迁移学习可优化并在多种下游任务中取得优越性能。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

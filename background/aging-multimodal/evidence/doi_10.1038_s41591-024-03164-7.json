@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41591-024-03164-7",
+  "title": "Proteomic aging clock predicts mortality and risk of common age-related diseases in diverse populations",
+  "url": "https://doi.org/10.1038/s41591-024-03164-7",
+  "abstract": "Circulating plasma proteins play key roles in human health and can potentially be used to measure biological age, allowing risk prediction for age-related diseases, multimorbidity and mortality. Here we developed a proteomic age clock in the UK Biobank (n = 45,441) using a proteomic platform comprising 2,897 plasma proteins and explored its utility to predict major disease morbidity and mortality in diverse populations. We identified 204 proteins that accurately predict chronological age (Pearson r = 0.94) and found that proteomic aging was associated with the incidence of 18 major chronic diseases (including diseases of the heart, liver, kidney and lung, diabetes, neurodegeneration and cancer), as well as with multimorbidity and all-cause mortality risk. Proteomic aging was also associated with age-related measures of biological, physical and cognitive function, including telomere length, frailty index and reaction time. Proteins contributing most substantially to the proteomic age clock are involved in numerous biological functions, including extracellular matrix interactions, immune response and inflammation, hormone regulation and reproduction, neuronal structure and function and development and differentiation. In a validation study involving biobanks in China (n = 3,977) and Finland (n = 1,990), the proteomic age clock showed similar age prediction accuracy (Pearson r = 0.92 and r = 0.94, respectively) compared to its performance in the UK Biobank. Our results demonstrate that proteomic aging involves proteins spanning multiple functional categories and can be used to predict age-related functional status, multimorbidity and mortality risk across geographically and genetically diverse populations. A proteomic aging clock, developed using data from the UK Biobank and validated using data from the China Kadoorie Biobank and FinnGen, predicts the incidence of 18 major chronic diseases, as well as multimorbidity and all-cause mortality.",
+  "authors": "M. Argentieri, Si-Hao Xiao, D. Bennett, Laura M. Winchester, A. Nevado-Holgado, U. Ghose, A. Albukhari, P. Yao",
+  "venue": "Nature Medicine",
+  "year": 2023,
+  "citations": 297,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2026.08.026"
+  ],
+  "extra": {
+   "pmcid": "PMC11405266"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank大队列蛋白组时钟，公开系数，跨人群验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Medicine蛋白组时钟，UKB 4.5万人，跨队列验证，高被引",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LightGBM+Boruta筛选204蛋白构建蛋白质组年龄时钟",
+  "data": "UKB 45,441人2,897血浆蛋白；CKB 3,977人；FinnGen 1,990人",
+  "scenario": "预测死亡和常见年龄相关疾病风险",
+  "benchmark": "既往蛋白质组年龄时钟；DNAm时钟；跨 ancestry 独立验证",
+  "results": "ProtAgeGap与27个衰老表型、全因死亡和26种年龄相关疾病关联；在CKB和FinnGen中独立验证",
+  "availability": "",
+  "limitations": "主要发现基于UKB；CKB和FinnGen样本较小或病例少；观察性关联不能证明因果",
+  "summary": "研究在UKB大规模人群中开发并验证蛋白质组年龄时钟。作者用2,897个血浆蛋白训练LightGBM模型，经Boruta筛选204个蛋白，并在CKB和FinnGen中独立验证。结果显示蛋白质组年龄差与多种衰老表型、全因死亡及26种常见年龄相关疾病风险相关，支持其跨人群预测价值。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

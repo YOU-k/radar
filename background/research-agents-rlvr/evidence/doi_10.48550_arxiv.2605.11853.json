@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2605.11853",
+  "title": "GEAR: Granularity-Adaptive Advantage Reweighting for LLM Agents via Self-Distillation",
+  "url": "https://doi.org/10.48550/arXiv.2605.11853",
+  "abstract": "Reinforcement learning has become a widely used post-training approach for LLM agents, where training commonly relies on outcome-level rewards that provide only coarse supervision. While finer-grained credit assignment is promising for effective policy updates, obtaining reliable local credit and assigning it to the right parts of the long-horizon trajectory remains an open challenge. In this paper, we propose Granularity-adaptivE Advantage Reweighting (GEAR), an adaptive-granularity credit assignment framework that reshapes the trajectory-level GRPO advantage using token- and segment-level signals derived from self-distillation. GEAR compares an on-policy student with a ground-truth-conditioned teacher to obtain a reference-guided divergence signal for identifying adaptive segment boundaries and modulating local advantage weights. This divergence often spikes at the onset of a semantic deviation, while later tokens in the same autoregressive continuation may return to low divergence. GEAR therefore treats such spikes as anchors for adaptive credit regions: where the student remains aligned with the teacher, token-level resolution is preserved; where it departs, GEAR groups the corresponding continuation into an adaptive segment and uses the divergence at the departure point to modulate the segment's advantage. Experiments across eight mathematical reasoning and agentic tool-use benchmarks with Qwen3 4B and 8B models show that GEAR consistently outperforms standard GRPO, self-distillation-only baselines, and token- or turn-level credit-assignment methods. The gains are especially strong on benchmarks with lower GRPO baseline accuracy, reaching up to around 20\\% over GRPO, suggesting that the proposed adaptive reweighting scheme is especially useful in more challenging long-horizon settings.",
+  "authors": "Sijia Li, Yuchen Huang, Zifan Liu, Yanping Li, Jingjing Fu, Li Zhao, Jiang Bian, Ling Zhang",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 8,
+  "found_by": [
+   "s2:citations:arxiv:2410.11287"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "GRPO优势重加权细粒度信用分配，方法新且有定量结果",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "GRPO细粒度信用分配方法，自蒸馏重加权有定量结果",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出GEAR：基于自蒸馏的粒度自适应优势重加权",
+  "data": "八个数学推理与智能体工具使用基准；Qwen3 4B与8B模型",
+  "scenario": "LLM智能体强化学习后训练",
+  "benchmark": "对比标准GRPO及自蒸馏等方法",
+  "results": "在八个基准上持续优于标准GRPO等基线（具体数值未在片段中给出）",
+  "availability": "",
+  "limitations": "未在片段中明确说明",
+  "summary": "本文针对LLM智能体强化学习中结果级奖励监督过粗的问题，提出粒度自适应优势重加权框架GEAR。GEAR用自蒸馏比较在线学生与真值条件教师，以散度尖峰确定自适应分段边界并调制局部优势权重。在八个数学推理与工具使用基准、Qwen3 4B/8B上，GEAR一致优于标准GRPO等基线。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

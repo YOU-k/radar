@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2604.17282",
+  "title": "MedPRMBench: A Fine-grained Benchmark for Process Reward Models in Medical Reasoning",
+  "url": "https://arxiv.org/abs/2604.17282v1",
+  "abstract": "Process-Level Reward Models (PRMs) are essential for guiding complex reasoning in large language models, yet existing PRM benchmarks cover only general domains such as mathematics, failing to address medical reasoning -- which is uniquely characterized by safety criticality, knowledge intensity, and diverse error patterns. Without a reliable medical PRM evaluation framework, we cannot quantify models' error detection capabilities in clinical reasoning, leaving their safety in real-world healthcare applications unverified. We propose MedPRMBench, the first process-level reward model benchmark for the medical domain. Built through a three-phase pipeline based on Clinical Reasoning Blueprints (CRBs), MedPRMBench systematically generates high-quality evaluation data from seven medical QA sources, covering 14 fine-grained error types across three categories (Simplicity, Soundness, and Sensitivity) with the first 4-level severity grading system to quantify clinical impact. The benchmark comprises 6{,}500 questions with 13{,}000 reasoning chains and 113{,}910 step-level labels, plus 6{,}879 questions for training. Our medical PRM baseline achieves an 87.1\\% overall PRMScore -- substantially surpassing all baselines -- and serves as a plug-and-play verifier that improves downstream medical QA accuracy by 3.2--6.7 percentage points. Systematic evaluation spanning proprietary frontier models, open-source reasoning models, and medical-specialized models reveals critical weaknesses in current models' medical reasoning error detection capabilities, providing clear directions for future PRM improvement.",
+  "authors": "Lingyan Wu, Xiang Zheng, Weiqi Zhai, Wei Wang, Xuan Ren, Zifan Zhang, Hu Wei, Bing Zhao",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "首个医学PRM基准，契合生物医学智能体评测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "首个医学PRM基准，填补评测空白，具领域必读价值。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于临床推理蓝图构建医学过程奖励模型基准",
+  "data": "7个医学QA源，6500题/13000推理链/113910步标签，另6879题训练",
+  "scenario": "医学推理过程奖励模型评测",
+  "benchmark": "MedPRMBench；对比专有前沿模型、开源推理模型、医学专用模型",
+  "results": "医学PRM基线总体PRMScore达87.1%，显著超越所有基线；作为即插即用验证器使下游医学QA准确率提升3.2–6.7个百分点",
+  "availability": "",
+  "limitations": "",
+  "summary": "该工作提出MedPRMBench，首个面向医学领域的过程级奖励模型基准。它基于临床推理蓝图，通过三阶段流程从7个医学QA源生成数据，覆盖3大类14种细粒度错误类型并首创4级严重度分级。系统评测发现当前模型在医学推理错误检测上存在关键弱点，而自建医学PRM基线达87.1% PRMScore并可提升下游QA准确率3.2–6.7个百分点。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

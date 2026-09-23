@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-024-00751-8",
+  "title": "Comprehensive single-cell aging atlas of healthy mammary tissues reveals shared epigenomic and transcriptomic signatures of aging and cancer.",
+  "url": "https://doi.org/10.1038/s43587-024-00751-8",
+  "abstract": "Aging is the greatest risk factor for breast cancer; however, how age-related cellular and molecular events impact cancer initiation is unknown. In this study, we investigated how aging rewires transcriptomic and epigenomic programs of mouse mammary glands at single-cell resolution, yielding a comprehensive resource for aging and cancer biology. Aged epithelial cells exhibit epigenetic and transcriptional changes in metabolic, pro-inflammatory and cancer-associated genes. Aged stromal cells downregulate fibroblast marker genes and upregulate markers of senescence and cancer-associated fibroblasts. Among immune cells, distinct T cell subsets (Gzmk + , memory CD4 + , γδ) and M2-like macrophages expand with age. Spatial transcriptomics reveals co-localization of aged immune and epithelial cells in situ. Lastly, we found transcriptional signatures of aging mammary cells in human breast tumors, suggesting possible links between aging and cancer. Together, these data uncover that epithelial, immune and stromal cells shift in proportions and cell identity, potentially impacting cell plasticity, aged microenvironment and neoplasia risk.",
+  "authors": "Angarola BL, Sharma S, Katiyar N, Kang HG, Nehar-Belaid D, Park S, Gott R, Eryilmaz GN, LaBarge MA, Palucka K, Chuang JH, Korstanje R, Ucar D, Anczukόw O.",
+  "venue": "Nature aging",
+  "year": 2024,
+  "citations": 52,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC11754115",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞乳腺衰老图谱，公开资源，契合单细胞衰老方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging单细胞乳腺衰老图谱，跨衰老与癌症的公开资源。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "scRNA-seq与snATAC-seq整合分析",
+  "data": "小鼠乳腺scRNA-seq与snATAC-seq，3M/18M各6只/3只",
+  "scenario": "健康乳腺衰老图谱",
+  "benchmark": "年轻3月龄与年老18月龄C57BL/6J小鼠对比",
+  "results": "上皮AV/HS减少、肌上皮增加；免疫髓系/浆细胞/记忆T增加、naive T减少；成纤维细胞增加；衰老与癌症相关表观/转录特征",
+  "availability": "",
+  "limitations": "仅小鼠乳腺，样本量有限，人类验证主要依赖肿瘤特征映射",
+  "summary": "该研究构建健康小鼠乳腺衰老的单细胞多组学图谱。作者用scRNA-seq和snATAC-seq比较3月龄与18月龄乳腺，并结合空间转录组定位年龄相关细胞。发现乳腺衰老伴随细胞组成、谱系保真性和癌症/衰老/炎症相关基因表达及染色质可及性改变。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

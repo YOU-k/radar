@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2603.01752",
+  "title": "Causal Circuit Tracing Reveals Distinct Computational Architectures in Single-Cell Foundation Models: Inhibitory Dominance, Biological Coherence, and Cross-Model Convergence",
+  "url": "https://arxiv.org/abs/2603.01752v2",
+  "abstract": "Motivation: Sparse autoencoders (SAEs) decompose foundation model activations into interpretable features, but causal feature-to-feature interactions across network depth remain unknown for biological foundation models. Results: We introduce causal circuit tracing by ablating SAE features and measuring downstream responses, and apply it to Geneformer V2-316M and scGPT whole-human across four conditions (96,892 edges, 80,191 forward passes). Both models show approximately 53 percent biological coherence and 65 to 89 percent inhibitory dominance, invariant to architecture and cell type. scGPT produces stronger effects (mean absolute d = 1.40 vs. 1.05) with more balanced dynamics. Cross-model consensus yields 1,142 conserved domain pairs (10.6x enrichment, p < 0.001). Disease-associated domains are 3.59x more likely to be consensus. Gene-level CRISPRi validation shows 56.4 percent directional accuracy, confirming co-expression rather than causal encoding.",
+  "authors": "Ihor Kendiukhov",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞基础模型因果电路追踪，跨模型比较",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨模型因果电路追踪，比较Geneformer与scGPT架构，机制洞见强。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "因果电路追踪（SAE特征消融测下游响应）",
+  "data": "Geneformer V2-316M与scGPT，4条件，96,892边，80,191前向",
+  "scenario": "单细胞基础模型机制可解释性",
+  "benchmark": "跨模型对比，CRISPRi基因级验证",
+  "results": "两模型约53%生物一致性、65–89%抑制主导；scGPT效应更强(1.40 vs 1.05)；跨模型共识1,142域对(10.6倍富集)；CRISPRi方向准确率56.4%",
+  "availability": "代码与SAE图谱公开（GitHub）",
+  "limitations": "基因级CRISPRi验证仅56.4%方向准确率，表明编码共表达而非因果",
+  "summary": "提出因果电路追踪，消融SAE特征并测量下游响应，应用于Geneformer V2-316M与scGPT。发现两模型约53%生物一致性、65–89%抑制主导且不随架构与细胞类型变化，跨模型共识1,142域对（10.6倍富集）。CRISPRi验证56.4%方向准确率，表明模型编码共表达而非因果调控。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

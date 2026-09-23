@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/acel.14195",
+  "title": "Proteomic aging clock (PAC) predicts age‐related outcomes in middle‐aged and older adults",
+  "url": "https://doi.org/10.1111/acel.14195",
+  "abstract": "Beyond mere prognostication, optimal biomarkers of aging provide insights into qualitative and quantitative features of biological aging and might, therefore, offer useful information for the testing and, ultimately, clinical use of gerotherapeutics. We aimed to develop a proteomic aging clock (PAC) for all‐cause mortality risk as a proxy of biological age. Data were from the UK Biobank Pharma Proteomics Project, including 53,021 participants aged between 39 and 70 years and 2923 plasma proteins assessed using the Olink Explore 3072 assay®. 10.9% of the participants died during a mean follow‐up of 13.3 years, with the mean age at death of 70.1 years. The Spearman correlation between PAC proteomic age and chronological age was 0.77. PAC showed robust age‐adjusted associations and predictions for all‐cause mortality and the onset of various diseases in general and disease‐free participants. The proteins associated with PAC proteomic age deviation were enriched in several processes related to the hallmarks of biological aging. Our results expand previous findings by showing that biological age acceleration, based on PAC, strongly predicts all‐cause mortality and several incident disease outcomes. Particularly, it facilitates the evaluation of risk for multiple conditions in a disease‐free population, thereby, contributing to the prevention of initial diseases, which vary among individuals and may subsequently lead to additional comorbidities.",
+  "authors": "Chia-Ling Kuo, Zhiduo Chen, Peiran Liu, L. Pilling, J. Atkins, R. Fortinsky, G. Kuchel, B. Diniz",
+  "venue": "Aging Cell",
+  "year": 2024,
+  "citations": 42,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2026.08.026"
+  ],
+  "extra": {
+   "pmcid": "PMC11320350"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "5万人蛋白组时钟预测死亡，方法清晰，契合蛋白组衰老方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB 5.3万人蛋白组时钟预测死亡，公开系数，方法可复现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LASSO构建蛋白组衰老时钟PAC预测全因死亡",
+  "data": "UKB血浆Olink 2923蛋白，53021人，39-70岁",
+  "scenario": "中老年死亡与年龄相关结局预测",
+  "benchmark": "第一代表观/蛋白时钟及SASP指数",
+  "results": "PAC年龄偏差与全因死亡及多种年龄相关疾病显著关联，随访超10年",
+  "availability": "",
+  "limitations": "训练仅UKB，蛋白平台单一，外部验证有限",
+  "summary": "研究开发蛋白组衰老时钟PAC，用于预测全因死亡和年龄相关结局。基于UKB 53021名中老年人2923个血浆蛋白，用LASSO训练并以随访超10年验证。发现PAC年龄偏差与死亡和多种年龄相关疾病风险显著相关，并揭示组织特异基因集关联。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.3390/ijms27135727",
+  "title": "Retrieval-Based Evaluation of Cell Painting Feature Spaces Reveals Differences in the Preservation of Biologically Meaningful Phenotypic Similarity.",
+  "url": "https://doi.org/10.3390/ijms27135727",
+  "abstract": "Cell Painting enables high-dimensional phenotypic profiling of cellular states, but retrieval-based interpretation depends on whether the chosen feature space preserves task-relevant biological relationships. With pretrained Cell Painting feature extractors increasingly available, feature spaces should be qualified before downstream biological retrieval. Here, we developed a task-aware workflow for evaluating Cell Painting feature spaces on a curated U2OS JUMP-MOA reference plate. Three pretrained models, CellPaintSSL, OpenPhenom, and uniDINO, were applied in a zero-shot setting to the same image set, and the resulting profiles were analyzed using a copairs-based mean average precision (mAP) retrieval framework. We assessed compound-induced activity relative to dimethyl sulfoxide (DMSO) controls, same-compound profile resolution among active perturbations, and mechanism-of-action (MOA) annotation recovery at the compound-profile level. All three feature spaces showed strong prerequisite performance, with a large proportion of compounds passing both activity and distinctiveness criteria. However, MOA annotation recovery was partial and model-dependent. Although the overall number of recovered MOA annotations was similar across feature spaces, the specific MOA annotations recovered by each model differed. These results show that prerequisite profile quality does not guarantee recovery of the biological relationship being tested, such as shared MOA annotation, and support task-aware qualification of feature spaces before downstream interpretation.",
+  "authors": "Kuznetsova X, Kuznetsova L, Shabunina E, Sergeev I, Malyshev I.",
+  "venue": "International journal of molecular sciences",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:cell painting morphology found"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13360719",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "评测Cell Painting预训练特征空间，属系统性基准工作。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell Painting特征空间检索评测，批判性基准。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于检索的mAP特征空间评估",
+  "data": "Cell Painting图像，U2OS细胞，JUMP-MOA参考板",
+  "scenario": "特征空间适配性评估",
+  "benchmark": "CellProfiler、CellPaintSSL、uniDINO等预训练模型",
+  "results": "DINO自监督较CellProfiler的mAP提升29%；CLOOME top-10 MoA准确率61.3% vs CellProfiler 24.5%",
+  "availability": "copairs库公开；数据来自JUMP",
+  "limitations": "仅用单一JUMP-MOA参考板，未覆盖多细胞系与多实验条件",
+  "summary": "该研究提出在检测开发早期用检索式mAP框架评估Cell Painting特征空间是否适配特定生物学场景。方法上复用Kalinin的元数据驱动检索框架，在JUMP-MOA参考板上比较多种公开预训练深度模型与经典CellProfiler特征。结果显示深度自监督特征通常优于手工特征，但模型选择依赖具体实验条件，需按场景系统评估。"
+ },
+ "sections": [
+  "2.5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

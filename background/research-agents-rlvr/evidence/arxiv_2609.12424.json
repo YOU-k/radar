@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.12424",
+  "title": "Granularity-Adaptive Credit Assignment for Long-Horizon LLM Agent Reinforcement Learning",
+  "url": "https://arxiv.org/abs/2609.12424",
+  "abstract": "Reinforcement learning is now the standard way to train large language model agents on long-horizon tasks, where dozens of interdependent actions precede a single sparse reward. Critic-free, group-relative methods such as GRPO suit this regime, but they broadcast one trajectory-level scalar to every step and cannot say which decision drove the outcome. GiGPO recovers a step-level signal by grouping time steps that share an anchor state, yet it merges the step- and episode-level estimates under one fixed weight, spending the same resolution on a pivotal branching decision as on a routine, near-deterministic transition. We argue that the right resolution is state-dependent, and propose GACA, a critic-free estimator whose granularity follows an uncertainty-based criticality proxy. GACA scores every step by the negative log-likelihood its own rollout already records, then blends the two advantages with a per-step weight that grows with that score, so the gradient places more weight on the fine-grained signal at above-average NLL and on the episode-level signal below it. We derive an exact risk decomposition for the implemented mixture and show that sufficiently small modulation improves on fixed mixing under positive directional alignment. A separate conditional result bounds local action-value variation using expected NLL, while an error-projection analysis characterizes when mixing adds value beyond scalar uncertainty reweighting. On ALFWorld and WebShop, GACA improves task success over GRPO and GiGPO at both 1.5B and 7B scales.",
+  "authors": "Tao Liang, Yang Liu, Shang Luo, Ying-Guang Yang, Rong-Rong Zhang, Ying-Zong Min, Yu-Long Huang, Jian-Sheng Zhang",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:arxiv:2501.12948"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "GRPO长程智能体信用分配方法，契合RLVR训练范式",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "长程智能体RL信用分配新方法，GRPO改进有定量。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "GACA：按步NLL自适应混合步级/回合级优势",
+  "data": "ALFWorld与WebShop长程任务轨迹，1.5B/7B模型",
+  "scenario": "长程LLM智能体强化学习",
+  "benchmark": "GRPO、GiGPO（Qwen2.5 1.5B/7B）",
+  "results": "在ALFWorld和WebShop上1.5B与7B规模任务成功率均超GRPO和GiGPO",
+  "availability": "",
+  "limitations": "未在摘要中明确说明；固定权重基线在状态最优权重不同时被证明次优",
+  "summary": "针对长程LLM智能体RL中GRPO将轨迹级标量广播到每步、GiGPO以固定权重混合步级与回合级优势的问题，提出GACA。GACA用rollout已记录的每token负对数似然给每步打分，并按该分数逐步骤加权混合两级优势，使不确定处用细粒度信号、确定处用低方差信号。理论上证明更高锚点条件期望NLL可认证更大的局部动作价值方差下界与误差最优步权重，且状态自适应混合严格优于任何固定权重；实验在ALFWorld和WebShop上1.5B与7B规模均提升任务成功率。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

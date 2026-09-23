@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2505.19590",
+  "title": "Learning to Reason without External Rewards",
+  "url": "https://doi.org/10.48550/arXiv.2505.19590",
+  "abstract": "Training large language models (LLMs) for complex reasoning via Reinforcement Learning with Verifiable Rewards (RLVR) is effective but limited by reliance on costly, domain-specific supervision. We explore Reinforcement Learning from Internal Feedback (RLIF), a framework that enables LLMs to learn from intrinsic signals without external rewards or labeled data. We propose Intuitor, an RLIF method that uses a model's own confidence-termed self-certainty-as its sole reward signal. Intuitor replaces external rewards in Group Relative Policy Optimization (GRPO) with self-certainty scores, enabling fully unsupervised learning. Experiments demonstrate that Intuitor matches GRPO's performance on mathematical benchmarks while achieving better generalization to out-of-domain tasks like code generation, without requiring gold solutions or test cases. Our findings show that intrinsic model signals can drive effective learning across domains, offering a scalable alternative to RLVR for autonomous AI systems where verifiable rewards are unavailable. Code is available at https://github.com/sunblaze-ucb/Intuitor",
+  "authors": "Xuandong Zhao, Zhewei Kang, Aosong Feng, Sergey Levine, D. Song",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 209,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2507.10532"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2505.19590"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "RLIF用自置信度替代外部奖励，属RLVR新范式，有定量结果",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "RLIF/Intuitor无外部奖励的GRPO变体，高引且代表训练范式转折",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Intuitor：RLIF，用self-certainty替代外部奖励",
+  "data": "数学推理与代码生成任务，无标注数据",
+  "scenario": "无外部奖励的LLM推理学习",
+  "benchmark": "对比GRPO，数学基准与域外代码生成",
+  "results": "数学基准匹配GRPO，代码生成等域外任务泛化更好，无需金标答案或测试用例",
+  "availability": "代码公开：github.com/sunblaze-ucb/Intuitor",
+  "limitations": "依赖模型自身置信度信号，可能受校准偏差影响；未覆盖所有可验证奖励场景",
+  "summary": "本文探索Reinforcement Learning from Internal Feedback，提出Intuitor，用模型自身置信度self-certainty作为唯一奖励信号。该方法在GRPO中将外部奖励替换为self-certainty，实现完全无监督学习。实验显示其在数学基准上匹配GRPO，并在代码生成等域外任务上泛化更好，无需金标答案或测试用例。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

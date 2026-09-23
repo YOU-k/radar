@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2602.17532",
+  "title": "Systematic Evaluation of Single-Cell Foundation Model Interpretability Reveals Attention Captures Co-Expression Rather Than Unique Regulatory Signal",
+  "url": "https://arxiv.org/abs/2602.17532v1",
+  "abstract": "We present a systematic evaluation framework - thirty-seven analyses, 153 statistical tests, four cell types, two perturbation modalities - for assessing mechanistic interpretability in single-cell foundation models. Applying this framework to scGPT and Geneformer, we find that attention patterns encode structured biological information with layer-specific organisation - protein-protein interactions in early layers, transcriptional regulation in late layers - but this structure provides no incremental value for perturbation prediction: trivial gene-level baselines outperform both attention and correlation edges (AUROC 0.81-0.88 versus 0.70), pairwise edge scores add zero predictive contribution, and causal ablation of regulatory heads produces no degradation. These findings generalise from K562 to RPE1 cells; the attention-correlation relationship is context-dependent, but gene-level dominance is universal. Cell-State Stratified Interpretability (CSSI) addresses an attention-specific scaling failure, improving GRN recovery up to 1.85x. The framework establishes reusable quality-control standards for the field.",
+  "authors": "Ihor Kendiukhov",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统评测注意力可解释性，批判性基准结果。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "系统评测可解释性，揭示注意力仅共表达，批判性关键。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "系统可解释性评估框架（37项分析）",
+  "data": "scGPT与Geneformer，四种细胞类型，两种扰动模态",
+  "scenario": "机制可解释性与GRN推断",
+  "benchmark": "平凡基因级基线、注意力边、相关性边",
+  "results": "基因级基线AUROC 0.81–0.88优于注意力/相关性边0.70；成对边分数零增量；消融调控头无退化；CSSI提升GRN恢复至多1.85×",
+  "availability": "",
+  "limitations": "注意力-相关性关系依赖背景，基因级主导普遍",
+  "summary": "提出包含37项分析、153个统计检验的系统评估框架，评估单细胞基础模型的机制可解释性。应用于scGPT与Geneformer，检验注意力边分数是否提供超出表达统计的机制信息。发现注意力编码分层生物结构但对扰动预测无增量价值，平凡基因级基线更优，消融调控头无影响，CSSI可改善GRN恢复。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

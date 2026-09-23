@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-025-00883-5",
+  "title": "A blood-based epigenetic clock for intrinsic capacity predicts mortality and is associated with clinical, immunological and lifestyle factors.",
+  "url": "https://doi.org/10.1038/s43587-025-00883-5",
+  "abstract": "Age-related decline in intrinsic capacity (IC), defined as the sum of an individual's physical and mental capacities, is a cornerstone for promoting healthy aging by prioritizing maintenance of function over disease treatment. However, assessing IC is resource-intensive, and the molecular and cellular bases of its decline are poorly understood. Here we used the INSPIRE-T cohort (1,014 individuals aged 20-102 years) to construct the IC clock, a DNA methylation-based predictor of IC, trained on the clinical evaluation of cognition, locomotion, psychological well-being, sensory abilities and vitality. In the Framingham Heart Study, DNA methylation IC outperforms first-generation and second-generation epigenetic clocks in predicting all-cause mortality, and it is strongly associated with changes in molecular and cellular immune and inflammatory biomarkers, functional and clinical endpoints, health risk factors and lifestyle choices. These findings establish the IC clock as a validated tool bridging molecular readouts of aging and clinical assessments of IC.",
+  "authors": "Fuentealba M, Rouch L, Guyonnet S, Lemaitre JM, de Souto Barreto P, Vellas B, Andrieu S, Furman D.",
+  "venue": "Nature aging",
+  "year": 2025,
+  "citations": 34,
+  "found_by": [
+   "eupmc:epigenetic clock biological ag",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12270914",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "新表观时钟预测内在能力，队列超千人，方法有创新",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging内在能力甲基化时钟，预测死亡并跨队列验证。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "弹性网回归构建DNAm内在能力时钟",
+  "data": "INSPIRE-T 933人EPIC甲基化；FHS验证",
+  "scenario": "内在能力与死亡预测",
+  "benchmark": "Framingham Heart Study及临床、免疫、生活方式指标",
+  "results": "IC与年龄负相关rs=-0.65；DNAm IC预测相关0.61，含91 CpG；预测死亡并关联临床、免疫和生活方式因素",
+  "availability": "",
+  "limitations": "需DNAm检测；队列以特定人群为主，跨人群泛化待验证",
+  "summary": "研究开发基于血液DNA甲基化的内在能力表观时钟。作者用INSPIRE-T队列933人EPIC甲基化数据，通过弹性网回归筛选91个CpG预测IC，并在FHS中验证。发现该时钟可预测死亡，并与临床、免疫和生活方式因素相关。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

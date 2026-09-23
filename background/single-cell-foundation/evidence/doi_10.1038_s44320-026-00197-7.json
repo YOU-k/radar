@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s44320-026-00197-7",
+  "title": "Progress and new challenges in image-based profiling.",
+  "url": "https://doi.org/10.1038/s44320-026-00197-7",
+  "abstract": "For over two decades, image-based profiling has revolutionized cell phenotype analysis. Image-based profiling processes rich, high-throughput, microscopy data into thousands of unbiased measurements that reveal phenotypic patterns powerful for drug discovery, functional genomics, and cell state classification. Here, we review the evolving computational landscape of image-based profiling, detailing the bioinformatics processes involved from feature extraction to normalization and batch correction. We discuss how deep learning has fundamentally reshaped the field. We examine key methodological advancements, such as single-cell analysis, the development of robust similarity metrics, and the expansion into new modalities like optical pooled screening, temporal imaging, and 3D organoid profiling. We also highlight the growth of public benchmarks and open-source software ecosystems as a key driver for fostering reproducibility and collaboration. Despite these advances, the field still faces substantial challenges, particularly in developing methods for emerging temporal and 3D data modalities, establishing robust quality control standards and workflows, and interpreting the processed features. By focusing on the technical evolution of image-based profiling rather than the wide-ranging biological applications, our aim with this review is to provide researchers with a roadmap for navigating the progress and new challenges in this rapidly advancing domain.",
+  "authors": "Serrano E, Peters J, Wagner J, Graham RE, Chen Z, Feng BY, Miranda G, Kalinin AA, Vulliard L, Tomkinson J, Mattson C, Lippincott MJ, Kang Z, Sitani D, Bunten D, Seal S, Carragher NO, Carpenter AE, Singh S, Marin Zapata PA, Caicedo JC, Way GP.",
+  "venue": "Molecular systems biology",
+  "year": 2026,
+  "citations": 6,
+  "found_by": [
+   "eupmc:cell painting morphology found"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13144522",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统综述图像表型分析，含评测与批判，契合基准方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "图像profiling系统性综述，cell painting方向必读参考",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "图像表型分析综述与方法比较",
+  "data": "Cell Painting等显微图像；CellProfiler与深度学习特征",
+  "scenario": "图像表型分析流程与挑战",
+  "benchmark": "CellProfiler、DeepProfiler、DINO、CLOOME等",
+  "results": "MoA预测CellProfiler F1=0.41 vs DeepProfiler F1=0.42；DINO mAP提升29%",
+  "availability": "综述，未涉及新代码",
+  "limitations": "综述性质，未提出新方法；深度与手工特征优劣仍依场景而定",
+  "summary": "该综述系统回顾了图像表型分析从实验设计、图像采集到特征提取和下游分析的全流程进展。文章比较了传统CellProfiler特征与深度学习特征在MoA预测等任务中的表现，并讨论了相似性度量与评估框架。作者指出深度模型常占优但手工特征仍具竞争力，领域面临可复现性、标准化和跨数据集泛化等新挑战。"
+ },
+ "sections": [
+  "2.5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

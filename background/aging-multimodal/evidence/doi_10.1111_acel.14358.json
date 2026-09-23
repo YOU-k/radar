@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/acel.14358",
+  "title": "Mapping epidermal and dermal cellular senescence in human skin aging.",
+  "url": "https://doi.org/10.1111/acel.14358",
+  "abstract": "Single-cell RNA sequencing and spatial transcriptomics enable unprecedented insight into cellular and molecular pathways implicated in human skin aging and regeneration. Senescent cells are individual cells that are irreversibly cell cycle arrested and can accumulate across the human lifespan due to cell-intrinsic and -extrinsic stressors. With an atlas of single-cell RNA-sequencing and spatial transcriptomics, epidermal and dermal senescence and its effects were investigated, with a focus on melanocytes and fibroblasts. Photoaging due to ultraviolet light exposure was associated with higher burdens of senescent cells, a sign of biological aging, compared to chronological aging. A skin-specific cellular senescence gene set, termed SenSkin™, was curated and confirmed to be elevated in the context of photoaging, chronological aging, and non-replicating CDKN1A+ (p21) cells. In the epidermis, senescent melanocytes were associated with elevated melanin synthesis, suggesting haphazard pigmentation, while in the dermis, senescent reticular dermal fibroblasts were associated with decreased collagen and elastic fiber synthesis. Spatial analysis revealed the tendency for senescent cells to cluster, particularly in photoaged skin. This work proposes a strategy for characterizing age-related skin dysfunction through the lens of cellular senescence and suggests a role for senescent epidermal cells (i.e., melanocytes) and senescent dermal cells (i.e., reticular dermal fibroblasts) in age-related skin sequelae.",
+  "authors": "Yu GT, Ganier C, Allison DB, Tchkonia T, Khosla S, Kirkland JL, Lynch MD, Wyles SP.",
+  "venue": "Aging cell",
+  "year": 2024,
+  "citations": 28,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC11709101",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "人皮肤单细胞与空间转录组衰老图谱，契合空间衰老图谱方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "皮肤衰老单细胞空间图谱，可作衰老时钟数据资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "单细胞与空间转录组解析皮肤衰老",
+  "data": "人皮肤单细胞RNA-seq与空间转录组",
+  "scenario": "表皮和真皮细胞衰老",
+  "benchmark": "SenSkin™衰老基因集",
+  "results": "光老化衰老细胞负担高于时序衰老；SenSkin™在光老化、时序衰老和CDKN1A+细胞中升高；衰老黑素细胞黑色素合成升高，衰老网状真皮成纤维细胞胶原和弹性纤维合成下降",
+  "availability": "",
+  "limitations": "未明确；主要基于皮肤组织观察",
+  "summary": "研究利用单细胞RNA测序和空间转录组绘制人皮肤衰老中表皮和真皮细胞衰老图谱。构建SenSkin™皮肤特异衰老基因集，并聚焦黑素细胞和成纤维细胞。发现光老化比时序衰老有更高衰老细胞负担，衰老细胞倾向聚集，衰老黑素细胞和网状真皮成纤维细胞分别与色素异常和胶原/弹性纤维减少相关。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

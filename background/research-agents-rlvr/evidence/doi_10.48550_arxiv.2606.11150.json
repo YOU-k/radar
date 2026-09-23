@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2606.11150",
+  "title": "ABC-Bench: An Agentic Bio-Capabilities Benchmark for Biosecurity",
+  "url": "https://doi.org/10.48550/arXiv.2606.11150",
+  "abstract": "Large language models (LLMs) are rapidly acquiring capabilities relevant to biological research, from literature synthesis to interpretation of experimental data. Increasingly, LLM agents can also perform in silico biology tasks that previously required experienced human biologists. These emerging AI capabilities offer new opportunities for scientific discovery and biomedical advances, but they also shift the landscape of biosecurity risks. To address this, we introduce the Agentic Bio-Capabilities Benchmark (ABC-Bench), a suite of tasks to measure agentic biosecurity-relevant capabilities. ABC-Bench evaluates LLM agents on both benign and dual-use biology tasks: writing code to operate liquid handling robots, designing DNA fragments for in vitro assembly, and evading DNA synthesis screening. These tasks require a combination of biology and software expertise. All tested LLM agents outperformed the median expert human baseliner on all three tasks. Agents performed highly on tasks drawing on published knowledge and well-documented protocols, and more weakly on a task requiring novel bioinformatics reasoning. In three wet-lab validation experiments, we found that OpenAI's o4-mini-high produced scripts that, when run on an OpenTrons liquid handling robot, successfully assembled DNA with expected sequences.",
+  "authors": "A. B. Liu, S. Nedungadi, Bryce Cai, Alexander Kleinman, Harmon Bhasin, Seth Donoughe",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 8,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2409.11363",
+   "s2:citations:doi:10.48550/arxiv.2503.00096"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2606.11150"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "生物安全智能体评测基准，含双用途任务，契合智能体评测方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "生物安全智能体评测基准，双用途任务，方向稀缺必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建ABC-Bench智能体生物能力基准",
+  "data": "生物双用途任务，含3项任务与3个湿实验验证",
+  "scenario": "生物安全与生物科研智能体",
+  "benchmark": "对比人类专家中位数基线，测试多种LLM智能体",
+  "results": "所有测试智能体三项任务均超人类专家中位数；o4-mini-high生成脚本在OpenTrons机器人上成功组装预期DNA",
+  "availability": "",
+  "limitations": "智能体在需新颖生物信息学推理的任务上表现较弱",
+  "summary": "本文提出ABC-Bench，用于衡量LLM智能体与生物安全相关的代理能力。基准包含液体处理机器人编程、DNA片段设计、规避DNA合成筛查等良性及双用途任务，并比较智能体与人类专家。结果显示所有测试智能体均超过人类专家中位数，且o4-mini-high脚本在湿实验中成功组装DNA，但在新颖生物信息学推理上仍较弱。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

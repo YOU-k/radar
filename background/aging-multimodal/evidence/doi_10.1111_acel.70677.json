@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/acel.70677",
+  "title": "LivAge: An Online Aging Clock for Murine Transcriptomic Age Estimation.",
+  "url": "https://doi.org/10.1111/acel.70677",
+  "abstract": "The increase in life expectancy over the past century has been accompanied by the recognition of age as the primary risk factor for a wide range of pathologies, including cardiovascular and neurodegenerative diseases, as well as cancer. Thus, the development of interventions that slow the underlying biological processes of aging could have beneficial effects on the prevention or progression of these diseases. To evaluate such geroprotective interventions, quantifying biological damage via aging clocks-particularly those based on transcriptomic biomarkers-has become highly relevant, as they provide estimations with strong biological interpretability. However, the limited availability of transcriptomic clocks for murine experimental models has hindered the implementation of these tools in aging research and their use in evaluating interventions that may have geroprotective effects. Here, we have developed an accurate, accessible, and ready-to-use murine transcriptomic clock that provides robust age predictions for healthy mice using hepatic RNA-seq data. Applying the clock to accelerated-aging models revealed an increased transcriptomic age in progeroid syndromes, demonstrating its ability to capture aging-related biological processes. Finally, considering the main interest of these tools, we show that well-established interventions with geroprotective potential, both genetic (Snell Dwarf, Ames Dwarf, and growth hormone receptor-deficient mice) and environmental (caloric, protein, or methionine restriction, as well as rapamycin supplementation in specific contexts), reduce the transcriptomic age estimated by the clock. These findings indicate that the proposed transcriptomic clock could be a valuable tool for studying the biology of aging and for designing and evaluating potential geroprotective interventions.",
+  "authors": "Celemín-Capaldi V, Bea G, Roiz-Valle D, Ugalde AP, Bárcena C, Quirós PM, Freije JMP.",
+  "venue": "Aging cell",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:aging biomarker healthspan val"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13498547",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "小鼠转录组衰老时钟在线工具，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "小鼠转录组衰老时钟在线工具，公开可用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于肝脏RNA-seq的鼠转录组衰老时钟LivAge",
+  "data": "小鼠肝脏RNA-seq转录组数据",
+  "scenario": "小鼠衰老与抗衰老干预评估",
+  "benchmark": "加速衰老模型及遗传/环境干预模型",
+  "results": "在早衰综合征中显示转录组年龄增加；可评估Snell Dwarf、Ames Dwarf、GHR缺陷及热量限制等干预",
+  "availability": "在线工具",
+  "limitations": "仅基于肝脏组织，全文未完全公开，验证范围有限",
+  "summary": "研究构建了名为LivAge的小鼠转录组衰老时钟，用于估计生物学年龄。该时钟基于肝脏RNA-seq数据训练，并应用于早衰模型和多种抗衰老干预。结果显示LivAge能准确预测健康小鼠年龄，并在早衰模型中捕捉到年龄加速，同时可评估遗传和环境干预的延缓衰老效果。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

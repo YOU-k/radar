@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2025.06.048",
+  "title": "Human interpretable grammar encodes multicellular systems biology models to democratize virtual cell laboratories.",
+  "url": "https://doi.org/10.1016/j.cell.2025.06.048",
+  "abstract": "Cells interact as dynamically evolving ecosystems. While recent single-cell and spatial multi-omics technologies quantify individual cell characteristics, predicting their evolution requires mathematical modeling. We propose a conceptual framework-a cell behavior hypothesis grammar-that uses natural language statements (cell rules) to create mathematical models. This enables systematic integration of biological knowledge and multi-omics data to generate in silico models, enabling virtual \"thought experiments\" that test and expand our understanding of multicellular systems and generate new testable hypotheses. This paper motivates and describes the grammar, offers a reference implementation, and demonstrates its use in developing both de novo mechanistic models and those informed by multi-omics data. We show its potential through examples in cancer and its broader applicability in simulating brain development. This approach bridges biological, clinical, and systems biology research for mathematical modeling at scale, allowing the community to predict emergent multicellular behavior.",
+  "authors": "Johnson JAI, Bergman DR, Rocha HL, Zhou DL, Cramer E, Mclean IC, Dance YW, Booth M, Nicholas Z, Lopez-Vidal T, Deshpande A, Heiland R, Bucher E, Shojaeian F, Dunworth M, Forjaz A, Getz M, Godet I, Kurtoglu F, Lyman M, Metzcar J, Mitchell JT, Raddatz A, Solorzano J, Sundus A, Wang Y, DeNardo DG, Ewald AJ, Gilkes DM, Kagohara LT, Kiemen AL, Thompson ED, Wirtz D, Wood LD, Wu PH, Zaidi N, Zheng L, Zimmerman JW, Phillip JM, Jaffee EM, Gray JW, Coussens LM, Chang YH, Heiser LM, Stein-O'Brien GL, Fertig EJ, Macklin P.",
+  "venue": "Cell",
+  "year": 2025,
+  "citations": 39,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC13012569",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "细胞行为语法构建虚拟细胞模型框架，契合虚拟细胞方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell刊虚拟细胞语法框架，多细胞系统建模，方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "细胞行为假设语法构建可解释ABM",
+  "data": "专家知识规则；Allen Brain Atlas空间转录组",
+  "scenario": "多细胞系统虚拟细胞模拟",
+  "benchmark": "传统ABM软件与手工编码模型",
+  "results": "实现文本规则到数学方程一一映射；覆盖肿瘤生长、侵袭、免疫治疗与脑发育",
+  "availability": "文中未明确提及",
+  "limitations": "依赖标注细胞状态与规则质量；复杂系统参数化仍具挑战",
+  "summary": "作者提出一种人类可解释的细胞行为假设语法，将自然语言描述的细胞规则直接翻译为可执行的agent-based模型。该语法既支持专家知识驱动规则，也支持从高通量分子与空间转录组数据参数化。案例涵盖肿瘤生长、侵袭、免疫治疗响应和脑发育，展示了可复现、模块化构建虚拟细胞实验室的可行性。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

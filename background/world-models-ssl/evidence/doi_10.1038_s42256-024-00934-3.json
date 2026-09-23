@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s42256-024-00934-3",
+  "title": "Delineating the Effective Use of Self-Supervised Learning in Single-Cell Genomics",
+  "url": "https://doi.org/10.1038/s42256-024-00934-3",
+  "abstract": "Self-supervised learning (SSL) has emerged as a powerful method for extracting meaningful representations from vast, unlabeled datasets, already transforming computer vision and natural language processing. Similarly, in single-cell genomics (SCG), representation learning is well-recognized for offering insights into complex biological data, even more so by the advent of early foundation model approaches. However, despite these advancements, identifying scenarios in SCG where SSL outperforms traditional supervised or unsupervised learning methods remains a nuanced challenge. Furthermore, selecting the most effective pretext tasks within the SSL framework for SCG is a critical yet unresolved question. Here, we address this gap by adapting and benchmarking SSL techniques in SCG, including masked autoencoders with multiple masking strategies and contrastive learning approaches. Trained on over 20 million cells, this study rigorously examines multiple downstream tasks, including cell type prediction, gene expression reconstruction, cross-modality prediction, and data integration. Our empirical analyses underscore the nuanced role of SSL, namely in transfer learning scenarios leveraging auxiliary data or analyzing novel datasets. Masked autoencoders excel over contrastive methods in SCG, diverging from computer vision trends. Moreover, our findings reveal notable capabilities of SSL in zero-shot cell type prediction and offer insights into its potential benefits in cross-modality prediction and data integration. In summary, we study the application of SSL in SCG, minimizing model bias through simple, fully connected networks, and benchmark SSL’s utility across key representation learning scenarios.",
+  "authors": "Till Richter, Mojtaba Bahrami, Yufan Xia, David S. Fischer, F. Theis",
+  "venue": "bioRxiv",
+  "year": 2024,
+  "citations": 39,
+  "found_by": [
+   "s2kw:self-supervised learning omics"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞基因组自监督系统性评测，契合批判性分析",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "系统性批判分析SSL在单细胞组学的适用性，必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "MAE与对比学习基准测试",
+  "data": "单细胞基因组，超2000万细胞",
+  "scenario": "单细胞基因组表示学习",
+  "benchmark": "细胞类型预测、基因表达重建、跨模态预测、数据整合",
+  "results": "MAE优于对比学习；零样本细胞类型预测表现突出",
+  "availability": "",
+  "limitations": "SSL优势场景有限，主要见于迁移学习",
+  "summary": "系统基准测试了单细胞基因组中的自监督学习方法，包括多种掩码策略的MAE和对比学习。在超2000万细胞上训练，评估细胞类型预测、基因表达重建、跨模态预测和数据整合等下游任务。发现MAE优于对比学习，与计算机视觉趋势相反，并在零样本细胞类型预测中展现显著能力。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

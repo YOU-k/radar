@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2502.03933",
+  "title": "HEP-JEPA: A foundation model for collider physics using joint embedding predictive architecture",
+  "url": "https://doi.org/10.48550/arXiv.2502.03933",
+  "abstract": "We present a transformer architecture-based foundation model for tasks at high-energy particle colliders such as the Large Hadron Collider. We train the model to classify jets using a self-supervised strategy inspired by the Joint Embedding Predictive Architecture. We use the JetClass dataset containing 100M jets of various known particles to pre-train the model with a data-centric approach -- the model uses a fraction of the jet constituents as the context to predict the embeddings of the unseen target constituents. Our pre-trained model fares well with other datasets for standard classification benchmark tasks. We test our model on two additional downstream tasks: top tagging and differentiating light-quark jets from gluon jets. We also evaluate our model with task-specific metrics and baselines and compare it with state-of-the-art models in high-energy physics. Project site: https://hep-jepa.github.io/",
+  "authors": "Jai Bardhan, Radhikesh Agrawal, Abhiram Tilak, Cyrin Neeraj, S. Mitra",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 17,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2606.14813"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA迁移到对撞机物理，有代码，契合科学数据迁移",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA 迁移到对撞机物理，科学数据自监督的代表性探索。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "JEPA自监督喷注分类预训练",
+  "data": "JetClass数据集，1亿个喷注",
+  "scenario": "高能粒子对撞机物理",
+  "benchmark": "top tagging、轻夸克与胶子喷注区分",
+  "results": "预训练模型在标准分类基准上表现良好，与SOTA可比",
+  "availability": "项目网站公开",
+  "limitations": "仅用JetClass预训练，未覆盖更多对撞机数据",
+  "summary": "提出基于Transformer的高能物理基础模型HEP-JEPA，采用JEPA自监督策略。在含1亿喷注的JetClass数据集上预训练，用部分喷注成分预测未见成分的嵌入。在top tagging和轻夸克-胶子喷注区分等下游任务上评估，与高能物理SOTA模型可比。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

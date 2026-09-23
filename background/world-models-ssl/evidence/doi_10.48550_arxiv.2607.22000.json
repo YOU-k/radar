@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2607.22000",
+  "title": "Music-JEPA: Learning a World Model of Sound from Action",
+  "url": "https://doi.org/10.48550/arXiv.2607.22000",
+  "abstract": "Joint Embedding Predictive Architectures (JEPA) have recently emerged as a paradigm for learning world models by predicting latent representations, offering a promising direction for self-supervised learning. While initial attempts have applied JEPA to the music domain, it remains unclear how such frameworks can naturally support the formation of a world model for music. In this work, we propose to learn a world model of piano sound using JEPA by framing music as an action-conditioned system: the audio is treated as the state, and the pianoroll as the instrument action. Given a current audio state and an action, the model predicts the resulting future audio state, mirroring how humans learn musical sound through interaction. The model is trained in a fully offline setting using paired audio-pianoroll data, without environment interaction. Experiments show that the learned model captures the relationships between musical actions and their resulting sound. The resulting representations support downstream tasks, including beat tracking, composer identification, and key estimation, and enable piano transcription via planning, by searching for actions that best explain a target sound.",
+  "authors": "Ziyu Wang, Kun Fang, Yann LeCun",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:arxiv:2507.02915"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA音乐世界模型，动作条件隐空间预测新范式",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA 世界模型拓展到音乐音频，动作条件范式新方向。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "JEPA动作条件音乐世界模型",
+  "data": "成对音频-pianoroll数据，离线训练",
+  "scenario": "钢琴音乐世界模型",
+  "benchmark": "节拍跟踪、作曲家识别、调性估计、钢琴转录",
+  "results": "模型捕获音乐动作与声音关系，支持下游任务与规划转录",
+  "availability": "",
+  "limitations": "仅钢琴领域，离线训练无环境交互",
+  "summary": "提出Music-JEPA，将音乐视为动作条件系统：音频为状态，pianoroll为乐器动作。给定当前音频状态和动作，预测未来音频状态，完全离线使用成对音频-pianoroll数据训练。学到的表示支持节拍跟踪、作曲家识别、调性估计等下游任务，并可通过规划搜索最佳动作实现钢琴转录。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

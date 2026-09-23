@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-025-00819-z",
+  "title": "Single-cell immune aging clocks reveal inter-individual heterogeneity during infection and vaccination.",
+  "url": "https://doi.org/10.1038/s43587-025-00819-z",
+  "abstract": "Aging affects human immune system functionality, increasing susceptibility to immune-mediated diseases. While gene expression programs accurately reflect immune function, their relationship with biological immune aging and health status remains unclear. Here we developed robust, cell-type-specific aging clocks (sc-ImmuAging) for the myeloid and lymphoid immune cell populations in circulation within peripheral blood mononuclear cells, using single-cell RNA-sequencing data from 1,081 healthy individuals aged from 18 to 97 years. Application of sc-ImmuAging to transcriptome data of patients with COVID-19 revealed notable age acceleration in monocytes, which decreased during recovery. Furthermore, inter-individual variations in immune aging induced by vaccination were identified, with individuals exhibiting elevated baseline interferon response genes showing age rejuvenation in CD8 +  T cells after BCG vaccination. sc-ImmuAging provides a powerful tool for decoding immune aging dynamics, offering insights into age-related immune alterations and potential interventions to promote healthy aging.",
+  "authors": "Li W, Zhang Z, Kumar S, Botey-Bataller J, Zoodsma M, Ehsani A, Zhan Q, Alaswad A, Zhou L, Grondman I, Koeken V, Yang J, Wang G, Volland S, Crişan TO, Joosten LAB, Illig T, Xu CJ, Netea MG, Li Y.",
+  "venue": "Nature aging",
+  "year": 2025,
+  "citations": 53,
+  "found_by": [
+   "eupmc:epigenetic clock biological ag",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12003178",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞免疫衰老时钟，1081人，方法新数据公开",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging单细胞免疫衰老时钟，跨感染疫苗泛化",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LASSO、随机森林和PointNet构建单细胞免疫时钟",
+  "data": "1081健康欧洲人PBMC scRNA-seq，约130万细胞",
+  "scenario": "感染和疫苗接种中的免疫衰老异质性",
+  "benchmark": "内部与外部验证，其他衰老模型",
+  "results": "sc-ImmuAging覆盖五类免疫细胞，内外验证优于对照，揭示COVID-19和BCG后异质性",
+  "availability": "",
+  "limitations": "主要欧洲健康成人，疾病与疫苗样本有限",
+  "summary": "研究建立细胞类型特异的单细胞转录组免疫衰老时钟sc-ImmuAging。基于1081名欧洲健康成人PBMC的约130万细胞，用LASSO、随机森林和PointNet为五类免疫细胞建模。发现该时钟内外验证表现更优，并能揭示COVID-19感染后单核细胞和BCG接种后CD8+T细胞的年龄改变异质性。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

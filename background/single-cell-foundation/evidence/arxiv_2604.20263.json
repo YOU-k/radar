@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2604.20263",
+  "title": "AROMA: Augmented Reasoning Over a Multimodal Architecture for Virtual Cell Genetic Perturbation Modeling",
+  "url": "https://arxiv.org/abs/2604.20263v1",
+  "abstract": "Virtual cell modeling predicts molecular state changes under genetic perturbations in silico, which is essential for biological mechanism studies. However, existing approaches suffer from unconstrained reasoning, uninterpretable predictions, and retrieval signals that are weakly aligned with regulatory topology. To address these limitations, we propose AROMA, an Augmented Reasoning Over a Multimodal Architecture for virtual cell genetic perturbation modeling. AROMA integrates textual evidence, graph-topology information, and protein sequence features to model perturbation-target dependencies, and is trained with a two-stage optimization strategy to yield predictions that are both accurate and interpretable. We also construct two knowledge graphs and a perturbation reasoning dataset, PerturbReason, containing more than 498k samples, as reusable resources for the virtual cell domain. Experiments show that AROMA outperforms existing methods across multiple cell lines, and remains robust under zero-shot evaluation on an unseen cell line, as well as in knowledge-sparse, long-tail scenarios. Overall, AROMA demonstrates that combining knowledge-driven multimodal modeling with evidence retrieval provides a promising pathway toward more reliable and interpretable virtual cell perturbation prediction. Model weights are available at https://huggingface.co/blazerye/AROMA. Code is available at https://github.com/blazerye/AROMA.",
+  "authors": "Zhenyu Wang, Geyan Ye, Wei Liu, Man Tat Alexander Ng",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "虚拟细胞遗传扰动建模，多模态推理框架",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多模态虚拟细胞扰动建模框架，整合文本图与序列，方向相关。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多模态增强推理（文本+图拓扑+蛋白序列）",
+  "data": "PerturbReason数据集>498k样本，两个知识图谱",
+  "scenario": "虚拟细胞遗传扰动建模",
+  "benchmark": "多细胞系对比现有方法，含未见细胞系零样本",
+  "results": "多细胞系超越现有方法，未见细胞系零样本及知识稀疏长尾场景下保持稳健",
+  "availability": "权重与代码公开（HuggingFace/GitHub）",
+  "limitations": "依赖知识图谱与检索质量；长尾与知识稀疏场景仍受限",
+  "summary": "针对无约束推理、不可解释预测、检索与调控拓扑弱对齐三大局限，提出AROMA，整合文本证据、图拓扑与蛋白序列特征建模扰动-靶依赖，用两阶段优化训练。构建两个知识图谱与PerturbReason数据集（>498k样本）。在多细胞系超越现有方法，未见细胞系零样本与长尾场景稳健。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2603.10261",
+  "title": "Discovery of a Hematopoietic Manifold in scGPT Yields a Method for Extracting Performant Algorithms from Biological Foundation Model Internals",
+  "url": "https://arxiv.org/abs/2603.10261v1",
+  "abstract": "We report the discovery and extraction of a compact hematopoietic algorithm from the single-cell foundation model scGPT, to our knowledge the first biologically useful, competitive algorithm extracted from a foundation model via mechanistic interpretability. We show that scGPT internally encodes a compact hematopoietic manifold with significant developmental branch structure, validated on a strict non-overlap Tabula Sapiens external panel and confirmed via frozen-head zero-shot transfer to an independent multi-donor immune panel. To isolate this geometry, we introduce a general three-stage extraction method consisting of direct operator export from frozen attention weights, a lightweight learned adaptor, and a task-specific readout, producing a standalone algorithm without target-dataset retraining. In 88-split donor-holdout benchmarks against scVI, Palantir, DPT, CellTypist, PCA, and raw-expression baselines, the extracted algorithm achieves the strongest pseudotime-depth ordering and leads on key subtype endpoints (CD4/CD8 AUROC 0.867, mono/macro AUROC 0.951). Compared to standard probing of frozen scGPT embeddings with a 3-layer MLP, the extracted head is BH-significantly better on 6/8 classification endpoints while completing a full 12-split evaluation campaign 34.5x faster with approximately 1000x fewer trainable parameters. The exported operator compresses from three pooled attention heads to a single head without statistically significant loss, and further to a rank-64 surrogate. Mechanistic interpretability of the compact operator reveals a concentrated four-factor core explaining 66.2% of ablation impact, with factors resolving into explicit T/lymphoid, B/plasma, granulocytic, and monocyte/macrophage gene programs. A supplementary second-manifold validation (intercellular communication geometry) confirms that the extraction method generalizes beyond hematopoiesis.",
+  "authors": "Ihor Kendiukhov",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "从scGPT提取可复用算法，机制可解释性新意，契合基础模型方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "从scGPT内部提取可解释造血算法，机制可解释性+基础模型，具转折意义",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "机制可解释性提取造血算法",
+  "data": "Tabula Sapiens 564,253细胞；多供体免疫面板",
+  "scenario": "造血轨迹与细胞分类",
+  "benchmark": "scVI、Palantir、DPT、CellTypist、PCA、原始表达",
+  "results": "伪时间深度排序|ρ|=0.439优于次优0.331；CD4/CD8 AUROC 0.867，单核/巨噬0.951；比MLP探针快34.5倍，参数少约1000倍",
+  "availability": "",
+  "limitations": "主要验证造血系统，其他生物学过程泛化性有限",
+  "summary": "该研究从scGPT中发现并提取紧凑的造血流形算法。通过三阶段提取方法：冻结注意力权重直接算子导出、轻量适配器和任务特定读出，生成独立算法无需目标数据重训练。在88折供体留出基准中取得最强伪时间排序和关键亚型端点表现，且比标准探针更快、参数更少。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

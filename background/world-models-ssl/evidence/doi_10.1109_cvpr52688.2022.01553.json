@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1109/cvpr52688.2022.01553",
+  "title": "Masked Autoencoders Are Scalable Vision Learners",
+  "url": "https://doi.org/10.1109/CVPR52688.2022.01553",
+  "abstract": "This paper shows that masked autoencoders (MAE) are scalable self-supervised learners for computer vision. Our MAE approach is simple: we mask random patches of the input image and reconstruct the missing pixels. It is based on two core designs. First, we develop an asymmetric encoder-decoder architecture, with an encoder that operates only on the visible subset of patches (without mask tokens), along with a lightweight decoder that reconstructs the original image from the latent representation and mask tokens. Second, we find that masking a high proportion of the input image, e.g., 75%, yields a nontrivial and meaningful self-supervisory task. Coupling these two designs enables us to train large models efficiently and effectively: we accelerate training (by 3× or more) and improve accuracy. Our scalable approach allows for learning high-capacity models that generalize well: e.g., a vanilla ViT-Huge model achieves the best accuracy (87.8%) among methods that use only ImageNet-1K data. Transfer performance in downstream tasks outperforms supervised pretraining and shows promising scaling behavior.",
+  "authors": "Kaiming He, Xinlei Chen, Saining Xie, Yanghao Li, Piotr Doll'ar, Ross B. Girshick",
+  "venue": "Computer Vision and Pattern Recognition",
+  "year": 2021,
+  "citations": 12863,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2203.12602",
+   "s2:references:doi:10.48550/arxiv.2203.06604",
+   "s2:references:doi:10.1007/s11263-023-01852-4",
+   "s2:references:doi:10.48550/arxiv.2207.06405"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "MAE掩码自编码奠基，方向核心方法",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "MAE掩码自编码奠基，可扩展表征必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "随机掩码图像块重建的MAE，非对称编解码器",
+  "data": "图像数据，ImageNet-1K",
+  "scenario": "视觉自监督预训练",
+  "benchmark": "仅用ImageNet-1K的方法，下游迁移任务",
+  "results": "ViT-Huge达87.8%准确率；训练加速3倍以上；迁移性能超过监督预训练",
+  "availability": "未提及",
+  "limitations": "未明确讨论局限；依赖高比例掩码与大规模模型训练",
+  "summary": "本文提出掩码自编码器MAE用于可扩展视觉自监督学习。方法随机掩码输入图像块并重建缺失像素，采用仅编码可见块的非对称编码器和轻量解码器，并掩码约75%输入。发现该设计能高效训练大模型，ViT-Huge在ImageNet-1K达87.8%，迁移性能优于监督预训练。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.21740",
+  "title": "Sandwich-Residuals: Parameter-Efficient Test-time Adaptation of World Models",
+  "url": "https://arxiv.org/abs/2609.21740",
+  "abstract": "Latent world models enable planning by predicting the effects of actions in a learned representation space, but their predictions can become unreliable when test-time conditions differ from training. Existing test-time adaptation methods address this by updating parts of the pretrained model, often modifying millions of parameters and requiring a choice of which internal components to adapt. We introduce Sandwich-Residuals, a lightweight alternative that keeps the pretrained world model frozen and learns only small residual corrections around the predictor. The residuals are optimized online using the model's self-supervised prediction error and require no rewards, labels, or source-domain data. Across 21 conditions on the AdaJEPA benchmark, our method achieves $1.3\\times$ the success rate of the frozen model while retaining 95% of the performance of the strongest AdaJEPA variant and adapting 97-99% fewer parameters. Under compound shifts, this advantage increases to $1.9\\times$ the success rate of the frozen model, while remaining comparable to internal block adaptation. We further demonstrate the same adaptation principle on a DINO-WM model for 3-D manipulation. These results suggest that effective test-time adaptation of world models does not necessarily require modifying their pretrained internal weights.",
+  "authors": "Krishnam Soni, Aditya Sehgal, Vedant Dave, Elmar Rueckert",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2411.04983"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "世界模型测试时自适应，轻量残差契合世界模型方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "世界模型测试时自适应，轻量残差有开源价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Sandwich-Residuals：冻结世界模型，仅学预测器前后残差",
+  "data": "AdaJEPA基准21种条件；DINO-WM三维操作",
+  "scenario": "世界模型测试时自适应",
+  "benchmark": "AdaJEPA基准，对比冻结模型与最强AdaJEPA变体",
+  "results": "成功率1.3倍于冻结模型，保留最强AdaJEPA 95%性能，少调97–99%参数；复合偏移下1.9倍",
+  "availability": "项目页公开",
+  "limitations": "复合偏移下仅与内部块自适应相当，未超越最强变体",
+  "summary": "提出Sandwich-Residuals，在冻结预训练世界模型的前提下仅学习预测器前后的轻量残差修正。残差用模型自监督预测误差在线优化，无需奖励、标签或源域数据。在AdaJEPA 21种条件下成功率达冻结模型1.3倍且少调97–99%参数，复合偏移下达1.9倍，并在DINO-WM三维操作上验证。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

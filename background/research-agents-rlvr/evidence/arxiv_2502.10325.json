@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2502.10325",
+  "title": "Process Reward Models for LLM Agents: Practical Framework and Directions",
+  "url": "https://arxiv.org/abs/2502.10325v1",
+  "abstract": "We introduce Agent Process Reward Models (AgentPRM), a simple and scalable framework for training LLM agents to continually improve through interactions. AgentPRM follows a lightweight actor-critic paradigm, using Monte Carlo rollouts to compute reward targets and optimize policies. It requires minimal modifications to existing RLHF pipelines, making it easy to integrate at scale. Beyond AgentPRM, we propose InversePRM, which learns process rewards directly from demonstrations without explicit outcome supervision. We also explore key challenges and opportunities, including exploration, process reward shaping, and model-predictive reasoning. We evaluate on ALFWorld benchmark, show that small 3B models trained with AgentPRM and InversePRM outperform strong GPT-4o baselines, and analyze test-time scaling, reward hacking, and more. Our code is available at: https://github.com/sanjibanc/agent_prm.",
+  "authors": "Sanjiban Choudhury",
+  "venue": "",
+  "year": 2025,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AgentPRM 框架，含 InversePRM 与 ALFWorld 定量评测。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "AgentPRM框架，含ALFWorld评测，智能体过程奖励实用。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "AgentPRM：actor-critic式PRM训练；InversePRM从示范学习",
+  "data": "ALFWorld交互轨迹；Monte Carlo rollout自动标注",
+  "scenario": "LLM智能体交互决策",
+  "benchmark": "ALFWorld；对比GPT-4o基线",
+  "results": "3B模型经AgentPRM/InversePRM训练后超过强GPT-4o基线；分析测试时扩展与奖励黑客",
+  "availability": "代码公开：https://github.com/sanjibanc/agent_prm",
+  "limitations": "探索、样本效率与模型预测推理仍是挑战；主要在ALFWorld验证",
+  "summary": "论文提出AgentPRM，用Monte Carlo rollout自动生成过程奖励目标，并以actor-critic方式迭代训练PRM与策略。还提出InversePRM，直接从专家示范学习过程奖励而无需结果监督。在ALFWorld上，3B模型训练后超过GPT-4o基线，并分析了测试时扩展与奖励黑客。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

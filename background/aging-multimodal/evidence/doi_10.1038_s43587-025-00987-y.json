@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-025-00987-y",
+  "title": "A unified framework for systematic curation and evaluation of aging biomarkers.",
+  "url": "https://doi.org/10.1038/s43587-025-00987-y",
+  "abstract": "Aging biomarkers are essential for understanding and quantifying the aging process and developing targeted longevity interventions. However, validation of these tools has been hindered by the lack of standardized approaches for cross-population validation, disparate biomarker designs, and inconsistencies in dataset structures. To address these challenges, we developed Biolearn, an open-source library that provides a unified framework for the curation, harmonization, and systematic evaluation of aging biomarkers. Leveraging Biolearn, we conducted a comprehensive evaluation of various aging biomarkers across multiple datasets. Our systematic approach involved three key steps: (1) harmonizing existing and novel aging biomarkers in standardized formats; (2) unifying public datasets to ensure coherent structuring and formatting; and (3) applying computational methodologies to assess the harmonized biomarkers against the unified datasets. This evaluation yielded valuable insights into the performance, robustness, and generalizability of aging biomarkers across different populations and datasets. The Biolearn python library, which forms the foundation of this systematic evaluation, is freely available at https://Bio-Learn.github.io. Our work establishes a unified framework for the curation and evaluation of aging biomarkers, paving the way for more efficient and effective clinical validation and application in the field of longevity research.",
+  "authors": "Ying K, Paulson S, Eames A, Tyshkovskiy A, Li S, Eynon N, Jacques M, Grolaux R, Seale K, Jacques E, Goeminne LJE, Cipriano A, Perez-Guevara M, Emamifar M, Casas Martínez M, Kwon D, Kosheleva A, Snyder M, Gobel D, Herzog C, McCartney DL, Marioni RE, Lasky-Su J, Poganik JR, Moqri M, Gladyshev VN.",
+  "venue": "Nature aging",
+  "year": 2025,
+  "citations": 32,
+  "found_by": [
+   "journal-retro",
+   "s2:references:doi:10.1016/j.cell.2026.08.026"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC13476091",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Biolearn开源框架，衰老标志物系统评估基准",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Biolearn统一衰老标志物评估框架，基准资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "开源Biolearn统一整理与系统评估衰老标志物",
+  "data": "多公开数据集与多种衰老生物标志物",
+  "scenario": "跨人群衰老标志物验证与比较",
+  "benchmark": "不同衰老标志物及数据集间表现",
+  "results": "统一标准化格式并评估性能、稳健性和泛化性，提供可复现框架",
+  "availability": "Biolearn开源，https://Bio-Learn.github.io",
+  "limitations": "依赖已有公开数据，临床验证仍待推进",
+  "summary": "研究开发开源库Biolearn，为衰老生物标志物提供统一整理、协调和评估框架。通过标准化标志物、统一公开数据集并应用计算评估，系统比较多种衰老标志物。发现该框架可揭示标志物跨人群和数据集的表现、稳健性与泛化性，促进临床验证和应用。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

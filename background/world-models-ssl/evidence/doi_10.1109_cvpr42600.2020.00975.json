@@ -1,0 +1,49 @@
+{
+ "candidate": {
+  "id": "doi:10.1109/cvpr42600.2020.00975",
+  "title": "Momentum Contrast for Unsupervised Visual Representation Learning",
+  "url": "https://doi.org/10.1109/cvpr42600.2020.00975",
+  "abstract": "We present Momentum Contrast (MoCo) for unsupervised visual representation learning. From a perspective on contrastive learning as dictionary look-up, we build a dynamic dictionary with a queue and a moving-averaged encoder. This enables building a large and consistent dictionary on-the-fly that facilitates contrastive unsupervised learning. MoCo provides competitive results under the common linear protocol on ImageNet classification. More importantly, the representations learned by MoCo transfer well to downstream tasks. MoCo can outperform its supervised pre-training counterpart in 7 detection/segmentation tasks on PASCAL VOC, COCO, and other datasets, sometimes surpassing it by large margins. This suggests that the gap between unsupervised and supervised representation learning has been largely closed in many vision tasks.",
+  "authors": "Kaiming He, Haoqi Fan, Yuxin Wu, Saining Xie, Ross B. Girshick",
+  "venue": "Computer Vision and Pattern Recognition",
+  "year": 2019,
+  "citations": 15753,
+  "found_by": [
+   "s2:references:doi:10.1109/taslp.2021.3122291",
+   "s2:references:arxiv:2010.13902",
+   "s2:references:doi:10.48550/arxiv.2203.06604",
+   "s2:references:doi:10.48550/arxiv.2207.06405"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "MoCo动量对比学习经典，表征学习基石",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "MoCo动量对比奠基工作，影响力巨大必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "MoCo：队列动态字典+动量平均编码器做对比学习",
+  "data": "ImageNet及PASCAL VOC、COCO等检测分割数据",
+  "scenario": "无监督视觉表征学习与迁移",
+  "benchmark": "ImageNet线性协议，7个检测/分割任务，监督预训练对照",
+  "results": "ImageNet线性协议具竞争力；在7个检测/分割任务上可超监督预训练，部分大幅领先",
+  "availability": "",
+  "limitations": "全文未公开，未提代码与权重",
+  "summary": "提出MoCo，从字典查找视角构建带队列与动量编码器的动态字典做对比无监督学习。队列使字典大且一致，动量编码器保证特征一致性。在ImageNet线性协议上具竞争力，且在PASCAL VOC、COCO等7个检测/分割任务上可超越监督预训练，部分大幅领先，表明无监督与监督表征差距已大幅缩小。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2606.14813",
+  "title": "JetParticle-JEPA: An Efficient Self-Supervised Representation Learning method for Jet Tagging in High-Energy Physics",
+  "url": "https://doi.org/10.48550/arXiv.2606.14813",
+  "abstract": "Jet tagging at the Large Hadron Collider increasingly relies on deep learning models trained on massive simulated datasets, leading to high computational costs and limited robustness to detector mismodeling. We introduce JetParticle-JEPA (JP-JEPA), a self-supervised Joint-Embedding Predictive Architecture that learns physically meaningful jet representations directly from continuous particle clouds without tokenization or reconstruction of raw inputs. Built on a Particle Transformer backbone, JP-JEPA predicts latent representations of masked particles while preserving fine-grained kinematic correlations. On the JetClass benchmark, JP-JEPA achieves performance comparable to fully supervised state-of-the-art methods on the full dataset, surpasses supervised baselines in low-label regimes, and significantly outperforms existing SSL approaches. On Top Quark and Quark-Gluon Tagging benchmarks, it remains on par with supervised methods. The learned representations also exhibit strong robustness to missing detector information and improved uncertainty behavior, highlighting JP-JEPA as a promising foundation-model framework for robust and data-efficient jet physics at the LHC.",
+  "authors": "Guillaume Letellier, A. Vacheret, Frédéric Jurie",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2kw:self-supervised representation"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA迁移到粒子云喷注标记，科学数据自监督迁移范例",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA迁移至粒子物理，科学数据自监督代表工作，有基准。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "JP-JEPA：基于Particle Transformer的JEPA自监督方法",
+  "data": "连续粒子云（JetClass等喷注数据）",
+  "scenario": "高能物理喷注标记",
+  "benchmark": "JetClass、Top Quark、Quark-Gluon标记基准",
+  "results": "JetClass全量数据媲美全监督SOTA，低标签优于监督基线，显著优于现有SSL方法",
+  "availability": "",
+  "limitations": "未报告在真实探测器数据上的表现，仅基于模拟数据",
+  "summary": "提出JetParticle-JEPA（JP-JEPA），一种直接从连续粒子云学习喷注表征的自监督JEPA方法。基于Particle Transformer骨干，预测被掩码粒子的潜表征，无需分词或重建原始输入。在JetClass上媲美全监督SOTA，低标签场景超越监督基线，并在缺失探测器信息下展现鲁棒性。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2410.05016",
+  "title": "T-JEPA: Augmentation-Free Self-Supervised Learning for Tabular Data",
+  "url": "https://arxiv.org/abs/2410.05016v3",
+  "abstract": "Self-supervision is often used for pre-training to foster performance on a downstream task by constructing meaningful representations of samples. Self-supervised learning (SSL) generally involves generating different views of the same sample and thus requires data augmentations that are challenging to construct for tabular data. This constitutes one of the main challenges of self-supervision for structured data. In the present work, we propose a novel augmentation-free SSL method for tabular data. Our approach, T-JEPA, relies on a Joint Embedding Predictive Architecture (JEPA) and is akin to mask reconstruction in the latent space. It involves predicting the latent representation of one subset of features from the latent representation of a different subset within the same sample, thereby learning rich representations without augmentations. We use our method as a pre-training technique and train several deep classifiers on the obtained representation. Our experimental results demonstrate a substantial improvement in both classification and regression tasks, outperforming models trained directly on samples in their original data space. Moreover, T-JEPA enables some methods to consistently outperform or match the performance of traditional methods likes Gradient Boosted Decision Trees. To understand why, we extensively characterize the obtained representations and show that T-JEPA effectively identifies relevant features for downstream tasks without access to the labels. Additionally, we introduce regularization tokens, a novel regularization method critical for training of JEPA-based models on structured data.",
+  "authors": "Hugo Thimonier, José Lucas De Melo Costa, Fabrice Popineau, Arpad Rimmel, Bich-Liên Doan",
+  "venue": "",
+  "year": 2024,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "无增强JEPA用于表格数据，方法有实质新意，可复用。",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "无增强JEPA表格自监督，方法新颖，契合方向",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "T-JEPA：无增强的表格数据自监督预训练",
+  "data": "表格数据（分类与回归任务数据集）",
+  "scenario": "表格数据表征学习",
+  "benchmark": "梯度提升决策树及直接训练深度分类器",
+  "results": "分类与回归任务显著提升，部分方法持续超越或匹配GBDT",
+  "availability": "",
+  "limitations": "需引入正则化token以稳定训练；未在大规模表格上验证",
+  "summary": "提出T-JEPA，一种无需数据增强的表格数据自监督方法，基于联合嵌入预测架构。通过从同一 样本一个特征子集的潜表征预测另一子集的潜表征，实现潜空间掩码重建。实验表明分类与回归任务显著提升，部分方法可超越或匹配GBDT，并引入正则化token保障结构化数据训练稳定。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

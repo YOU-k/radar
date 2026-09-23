@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2601.11061",
+  "title": "Spurious Rewards Paradox: Mechanistically Understanding How RLVR Activates Memorization Shortcuts in LLMs",
+  "url": "https://doi.org/10.48550/arXiv.2601.11061",
+  "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) is highly effective for enhancing LLM reasoning, yet recent evidence shows models like Qwen 2.5 achieve significant gains even with spurious or incorrect rewards. We investigate this phenomenon and identify a\"Perplexity Paradox\": spurious RLVR triggers a divergence where answer-token perplexity drops while prompt-side coherence degrades, suggesting the model is bypassing reasoning in favor of memorization. Using Path Patching, Logit Lens, JSD analysis, and Neural Differential Equations, we uncover a hidden Anchor-Adapter circuit that facilitates this shortcut. We localize a Functional Anchor in the middle layers (L18-20) that triggers the retrieval of memorized solutions, followed by Structural Adapters in later layers (L21+) that transform representations to accommodate the shortcut signal. Finally, we demonstrate that scaling specific MLP keys within this circuit allows for bidirectional causal steering-artificially amplifying or suppressing contamination-driven performance. Our results provide a mechanistic roadmap for identifying and mitigating data contamination in RLVR-tuned models. Code is available at https://github.com/idwts/How-RLVR-Activates-Memorization-Shortcuts.",
+  "authors": "Lecheng Yan, Ruizhe Li, Guanhua Chen, Qing Li, Jia-Hui Geng, Wen-Xi Li, Vincent Wang, Chris Lee",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 11,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2507.10532"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2601.11061"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "机理揭示RLVR伪奖励激活记忆捷径，批判性定量研究",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "揭示RLVR虚假奖励记忆捷径机制，重要批判性发现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "路径修补、Logit Lens、JSD分析与神经常微分方程",
+  "data": "Qwen 2.5等LLM的RLVR训练轨迹",
+  "scenario": "RLVR记忆捷径机制分析",
+  "benchmark": "虚假/错误奖励下的RLVR训练对比",
+  "results": "发现困惑度悖论：答案token困惑度下降而提示侧连贯性退化；定位L18-20功能锚点与L21+结构适配器，可双向因果操控",
+  "availability": "代码公开（GitHub链接）",
+  "limitations": "未明确说明模型规模与任务覆盖范围",
+  "summary": "本文研究RLVR中虚假奖励仍能提升性能的现象，发现存在困惑度悖论，即答案token困惑度下降但提示侧连贯性退化。作者用路径修补、Logit Lens、JSD分析和神经常微分方程揭示隐藏的锚点-适配器回路。结果表明可通过缩放该回路中特定MLP键实现双向因果操控，为识别和缓解数据污染提供机制路线图。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

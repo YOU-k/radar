@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2603.08127",
+  "title": "EvoScientist: Towards Multi-Agent Evolving AI Scientists for End-to-End Scientific Discovery",
+  "url": "https://doi.org/10.48550/arXiv.2603.08127",
+  "abstract": "The increasing adoption of Large Language Models (LLMs) has enabled AI scientists to perform complex end-to-end scientific discovery tasks requiring coordination of specialized roles, including idea generation and experimental execution. However, most state-of-the-art AI scientist systems rely on static, hand-designed pipelines and fail to adapt based on accumulated interaction histories. As a result, these systems overlook promising research directions, repeat failed experiments, and pursue infeasible ideas. To address this, we introduce EvoScientist, an evolving multi-agent AI scientist framework that continuously improves research strategies through persistent memory and self-evolution. EvoScientist comprises three specialized agents: a Researcher Agent (RA) for scientific idea generation, an Engineer Agent (EA) for experiment implementation and execution, and an Evolution Manager Agent (EMA) that distills insights from prior interactions into reusable knowledge. EvoScientist contains two persistent memory modules: (i) an ideation memory, which summarizes feasible research directions from top-ranked ideas while recording previously unsuccessful directions; and (ii) an experimentation memory, which captures effective data processing and model training strategies derived from code search trajectories and best-performing implementations. These modules enable the RA and EA to retrieve relevant prior strategies, improving idea quality and code execution success rates over time. Experiments show that EvoScientist outperforms 7 open-source and commercial state-of-the-art systems in scientific idea generation, achieving higher novelty, feasibility, relevance, and clarity via automatic and human evaluation. EvoScientist also substantially improves code execution success rates through multi-agent evolution, demonstrating persistent memory's effectiveness for end-to-end scientific discovery.",
+  "authors": "Yougang Lyu, Xi Zhang, Xinhao Yi, Yu-Yue Zhao, Shuyu Guo, Wenxiang Hu, Jan Piotrowski, Jakub Kaliski",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 40,
+  "found_by": [
+   "s2kw:recursive self-improvement LLM"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2603.08127"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多智能体自进化AI科学家，持久记忆，端到端。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "自进化多智能体AI科学家，记忆驱动，引用增长快",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "EvoScientist：带持久记忆的多智能体进化AI科学家",
+  "data": "未提及具体规模",
+  "scenario": "端到端科学发现",
+  "benchmark": "对比静态手工流水线AI科学家系统",
+  "results": "未提及具体定量结果",
+  "availability": "",
+  "limitations": "未提及定量评测；依赖持久记忆质量",
+  "summary": "针对现有AI科学家系统静态、无法从交互历史自适应的问题，提出EvoScientist。方法为三个专门智能体（研究、工程、进化管理）加两个持久记忆模块（构思记忆与实验记忆），持续提炼可复用知识。使研究智能体与工程智能体检索先前策略，随时间提升想法质量与代码执行成功率。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

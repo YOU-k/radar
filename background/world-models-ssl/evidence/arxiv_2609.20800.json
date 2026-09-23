@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.20800",
+  "title": "JEPA-Anything: Learning Predictive Models across Different Worlds",
+  "url": "https://arxiv.org/abs/2609.20800",
+  "abstract": "World modeling enables intelligence to anticipate consequences, guide interventions, and learn from interaction. Yet predictive models remain domain-specific: can a common learning principle support world modeling across radically different systems? We introduce JEPA-Anything, a domain-agnostic framework based on orthogonal predictive factorization (OPF). Extending joint-embedding predictive architectures, OPF decomposes latent targets into complementary factors, learns them through dedicated pathways, and recombines them within a shared predictive design. We evaluate JEPA-Anything across seven domains: vision, biology, clinical trajectories, control, molecular dynamics, physical fields, and weather. Experiments span representation learning, intervention prediction, out-of-distribution generalization, and long-horizon dynamics, including 10 matched dynamics tasks, forecasting of over 1,000 clinical events, and 100-step molecular rollouts across four systems. Against matched JEPA baselines, JEPA-Anything improves reported metrics on all 10 dynamics tasks and reduces single-intervention prediction error on Interventional Pong by 34.8%. It achieves the lowest one-step and 100-step molecular errors among compared methods in all four systems. Beyond prediction, a factor-nominated biological intervention receives experimental support in cell co-cultures, patient-derived organoids, tumor fragments, and mice; latent orbital modes recover the Keplerian scaling exponent with a fitted slope of -1.4991. These results support a common factorized predictive principle across heterogeneous worlds, connecting world modeling with intervention and experimentally grounded scientific discovery. Code: https://github.com/Gen-Verse/JEPA-Anything",
+  "authors": "Tao-Yong Cui, Zhong-Yao Wang, Xin-Yue Xu, Wei-Yang Liu, Zhao-Chen Yu, Yu-Ying Zhang, Qiang Gao, Meng-Yue Yang",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2506.09985",
+   "s2:citations:doi:10.48550/arxiv.2411.04983"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA跨域世界模型框架，正交预测分解，方法有新意。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨域JEPA世界模型框架，方法有普适新意。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "正交预测因子分解的域无关JEPA框架",
+  "data": "七领域数据：视觉、生物、临床、控制、分子、物理场、天气",
+  "scenario": "跨域世界模型与预测",
+  "benchmark": "匹配的JEPA基线",
+  "results": "10个动力学任务全部提升；Interventional Pong单干预预测误差降34.8%；四系统100步分子误差最低；轨道标度指数拟合斜率-1.4991",
+  "availability": "代码与模型公开",
+  "limitations": "跨域统一框架在部分领域可能牺牲领域特异性",
+  "summary": "提出JEPA-Anything，基于正交预测因子分解的域无关世界模型框架。将潜在目标分解为互补正交因子，通过专用通路学习并在共享预测设计中重组。发现其在七个领域10个动力学任务上全面超越JEPA基线，并获湿实验与轨道标度律验证。"
+ },
+ "sections": [
+  "7"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

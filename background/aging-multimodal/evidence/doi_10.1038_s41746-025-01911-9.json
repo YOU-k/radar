@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41746-025-01911-9",
+  "title": "From ageing clocks to human digital twins in personalising healthcare through biological age analysis.",
+  "url": "https://doi.org/10.1038/s41746-025-01911-9",
+  "abstract": "Age is the most important risk factor for the majority human diseases, leading to the exploration of innovative approaches, including the development of predictors to estimate biological age (BA). These predictors offer promising insights into the ageing process and age-related diseases. With real-time, multi-modal data streams and continuous patient monitoring, these BA can also inform the construction of 'human digital twins', quantifying how age-related changes impact health trajectories. This study highlights the significance of BA within a deeply phenotyped longitudinal cohort, using omics-based approaches alongside gold-standard clinical risk predictors. BA and health traits predictions were computed from 29 epigenetics, 4 clinical-biochemistry, 2 proteomics, and 3 metabolomics clocks. The study reveals that ageing is different between individuals but relatively stable within individuals. We suggest that BA should be considered crucial biomarkers complementing routine clinical tests. Regular updates of BA predictions within digital twin frameworks can also help guiding individualised treatment plans.",
+  "authors": "Pusparum M, Thas O, Beck S, Ecker S, Ertaylan G.",
+  "venue": "NPJ digital medicine",
+  "year": 2025,
+  "citations": 5,
+  "found_by": [
+   "eupmc:transcriptomic proteomic aging"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12371080",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多模态生物年龄与数字孪生框架，契合方向定义。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "NPJ数字医学，多模态生物年龄与数字孪生框架，代表新方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述生物年龄预测器与人类数字孪生整合框架",
+  "data": "综述，涵盖端粒、表观、转录、蛋白、代谢及复合标志物",
+  "scenario": "个性化医疗与健康衰老",
+  "benchmark": "端粒长度、表观时钟、多组学预测器等",
+  "results": "表观时钟被认为预测生物年龄和健康表型最准确；数字孪生可动态模拟干预与风险",
+  "availability": "",
+  "limitations": "数字孪生落地受数据整合、隐私、互操作性和纵向建模挑战限制",
+  "summary": "文章综述生物年龄预测器并讨论其与人类数字孪生的结合。通过整合可穿戴、电子健康记录和多组学数据，提出动态计算模型用于模拟干预和预测风险。指出表观时钟较准确，但临床落地仍面临技术、隐私和标准化障碍。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

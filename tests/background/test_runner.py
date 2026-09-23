@@ -94,3 +94,40 @@ def test_top_cited_is_cumulative(spec):
     pipe.bootstrap(rounds=2)
     top = pipe.top_cited()
     assert top[0] == "doi:10.1000/paper1" and "doi:10.1000/paper2" in top  # 第 1 轮的高引仍在
+
+
+def test_link_seeds_attaches_alt_ids(spec):
+    from radar.background.discover import S2Snowball
+    from radar.background.models import Candidate, Evidence
+    pipe = Pipeline(spec, None, sources=[], fetch_text=False)
+    # 种子 spec.seeds[0] 已以 arXiv 版入库
+    ev = Evidence(candidate=Candidate(id="arxiv:2409.00001", title="Learning the natural history of disease"), panel=[])
+    pipe.store.add(ev)
+    def get_json(url, params=None, timeout=60):
+        doi = url.split("/paper/DOI:")[1]
+        if doi == spec.seeds[0][4:]:
+            return {"title": "Learning the natural history of disease", "year": 2025, "venue": "Nature",
+                    "externalIds": {"DOI": doi, "ArXiv": "2409.00001"}, "citationCount": 1, "authors": []}
+        return {"title": "Something not in the store", "year": 2026, "externalIds": {"DOI": doi}, "authors": []}
+    assert pipe.link_seeds(S2Snowball(get_json=get_json, sleep=0)) == 1
+    assert spec.seeds[0] in pipe.store.all_ids() and spec.seeds[1] not in pipe.store.all_ids()
+    assert pipe.link_seeds(S2Snowball(get_json=get_json, sleep=0)) == 0  # 已命中的不再查，未入库的链接不上
+
+
+def test_link_seeds_falls_back_to_datacite_title(spec, tmp_path):
+    from radar.background.discover import S2Snowball
+    from radar.background.models import Candidate, Evidence
+    (tmp_path / "s").mkdir()
+    (tmp_path / "s" / "topic.yaml").write_text("name: t\nqueries: [q]\nseeds: ['arxiv:2301.08243']\n", encoding="utf-8")
+    from radar.background.spec import load_spec
+    sp = load_spec(tmp_path / "s" / "topic.yaml")
+    pipe = Pipeline(sp, None, sources=[], fetch_text=False)
+    pipe.store.add(Evidence(candidate=Candidate(id="doi:10.1109/cvpr.2023.01499",
+                            title="Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture"), panel=[]))
+    def get_json(url, params=None, timeout=60):
+        if "semanticscholar" in url:
+            raise RuntimeError("429")
+        assert url.endswith("10.48550/arxiv.2301.08243")
+        return {"data": {"attributes": {"titles": [{"title": "Self-supervised learning from images with a joint-embedding predictive architecture"}]}}}
+    assert pipe.link_seeds(S2Snowball(get_json=get_json, sleep=0)) == 1
+    assert "arxiv:2301.08243" in pipe.store.all_ids()

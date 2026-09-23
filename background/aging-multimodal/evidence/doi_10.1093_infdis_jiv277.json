@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/infdis/jiv277",
+  "title": "HIV-1 Infection Accelerates Age According to the Epigenetic Clock",
+  "url": "https://doi.org/10.1093/infdis/jiv277",
+  "abstract": "Background. Infection with human immunodeficiency virus type 1 (HIV) is associated with clinical symptoms of accelerated aging, as evidenced by the increased incidence and diversity of age-related illnesses at relatively young ages and supporting findings of organ and cellular pathologic analyses. But it has been difficult to detect an accelerated aging effect at a molecular level. Methods. Here, we used an epigenetic biomarker of aging based on host DNA methylation levels to study accelerated aging effects due to HIV infection. DNA from brain and blood tissue was assayed via the Illumina Infinium Methylation 450 K platform. Results. Using 6 novel DNA methylation data sets, we show that HIV infection leads to an increase in epigenetic age both in brain tissue (7.4 years) and blood (5.2 years). While the observed accelerated aging effects in blood may reflect changes in blood cell composition (notably exhausted cytotoxic T cells), it is less clear what explains the observed accelerated aging effects in brain tissue. Conclusions. Overall, our results demonstrate that the epigenetic clock is a useful biomarker for detecting accelerated aging effects due to HIV infection. This tool can be used to accurately determine the extent of age acceleration in individual tissues and cells.",
+  "authors": "S. Horvath, A. Levine",
+  "venue": "Journal of Infectious Diseases",
+  "year": 2015,
+  "citations": 524,
+  "found_by": [
+   "s2:references:doi:10.18632/aging.101414"
+  ],
+  "extra": {
+   "pmcid": "PMC4621253"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "HIV加速表观衰老，公开甲基化数据建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "HIV加速衰老表观时钟经典，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "353 CpG表观遗传时钟评估HIV感染年龄加速",
+  "data": "11个Illumina甲基化数据集，血液与脑组织",
+  "scenario": "HIV感染加速衰老",
+  "benchmark": "HIV感染者 vs 未感染对照",
+  "results": "HIV感染显著增加表观年龄加速，血液和脑组织均观察到",
+  "availability": "新数据GSE67752等GEO公开",
+  "limitations": "样本量有限；横断面设计；抗逆转录病毒治疗等因素影响未完全解析",
+  "summary": "研究检验HIV感染是否按表观遗传时钟表现为加速衰老。作者使用11个DNA甲基化数据集，包括血液和脑组织，比较HIV感染者与未感染对照的表观年龄加速。结果显示HIV感染与显著增加的表观年龄加速相关，提示HIV感染加速生物学衰老。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

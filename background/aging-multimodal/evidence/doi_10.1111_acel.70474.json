@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/acel.70474",
+  "title": "An Extracellular Matrix Aging Clock Based on Circulating Matrisome Proteins Predicts Biological Aging and Disease.",
+  "url": "https://doi.org/10.1111/acel.70474",
+  "abstract": "Plasma proteomic aging clocks estimate biological age and are linked to age-related diseases, but thus far, there has been little focus on circulating extracellular matrix (ECM) proteins, which play a central role in tissue structure and age-related decline. Here, we use publicly available proteomic datasets to profile plasma ECM protein abundances across the human lifespan and reveal a distinct U-shaped trajectory with age. Our ECM-based aging clock, constructed from 14 plasma proteins, accurately predicts chronological age and remains robust across independent validations and different biofluids. Notably, this ECM clock distinguishes between healthy and diseased states. Cross-species comparisons show that while specific predictive ECM proteins differ between humans and rodents, species-specific ECM clocks reliably track aging, and rejuvenation interventions can reverse ECM aging signatures. We prioritize ECM proteins implicated causally in disease and explored drugs targeting these proteins. These findings establish circulating ECM proteins as sensitive biomarkers of aging and disease and suggest that targeting ECM remodeling may offer new strategies for promoting healthy aging.",
+  "authors": "Coenen L, Molière A, Lehallier B, Middeldorp J, Ewald CY.",
+  "venue": "Aging cell",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "eupmc:transcriptomic proteomic aging"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13083228",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "公开蛋白组数据构建ECM衰老时钟，跨队列验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "新型ECM蛋白衰老时钟，公开数据，跨队列验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于循环基质体蛋白构建细胞外基质衰老时钟",
+  "data": "SomaScan血浆蛋白组，两个队列共886人",
+  "scenario": "生物学衰老与疾病风险预测",
+  "benchmark": "无偏衰老时钟及不同数据集/体液",
+  "results": "ECM蛋白随年龄呈U型轨迹，与疾病关联强于其他蛋白；基质体时钟性能与无偏时钟相当",
+  "availability": "公开数据",
+  "limitations": "样本量有限，主要基于SomaScan平台，因果推断有限",
+  "summary": "研究表征了循环细胞外基质（ECM）蛋白随年龄的变化，并构建基质体衰老时钟。利用两个公开SomaScan血浆蛋白组队列，分析约740种基质体蛋白，并与无偏衰老时钟比较。结果显示ECM蛋白呈U型年龄轨迹且与疾病关联更强，基质体时钟可跨数据集和体液预测生物学衰老。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

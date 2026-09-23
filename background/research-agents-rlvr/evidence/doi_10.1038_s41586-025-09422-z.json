@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-025-09422-z",
+  "title": "DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning.",
+  "url": "https://doi.org/10.1038/s41586-025-09422-z",
+  "abstract": "General reasoning represents a long-standing and formidable challenge in artificial intelligence (AI). Recent breakthroughs, exemplified by large language models (LLMs)1,2 and chain-of-thought (CoT) prompting3, have achieved considerable success on foundational reasoning tasks. However, this success is heavily contingent on extensive human-annotated demonstrations and the capabilities of models are still insufficient for more complex problems. Here we show that the reasoning abilities of LLMs can be incentivized through pure reinforcement learning (RL), obviating the need for human-labelled reasoning trajectories. The proposed RL framework facilitates the emergent development of advanced reasoning patterns, such as self-reflection, verification and dynamic strategy adaptation. Consequently, the trained model achieves superior performance on verifiable tasks such as mathematics, coding competitions and STEM fields, surpassing its counterparts trained through conventional supervised learning on human demonstrations. Moreover, the emergent reasoning patterns exhibited by these large-scale models can be systematically used to guide and enhance the reasoning capabilities of smaller models. A new artificial intelligence model, DeepSeek-R1, is introduced, demonstrating that the reasoning abilities of large language models can be incentivized through pure reinforcement learning, removing the need for human-annotated demonstrations.",
+  "authors": "Guo D, Yang D, Zhang H, Song J, Wang P, Zhu Q, Xu R, Zhang R, Ma S, Bi X, Zhang X, Yu X, Wu Y, Wu ZF, Gou Z, Shao Z, Li Z, Gao Z, Liu A, Xue B, Wang B, Wu B, Feng B, Lu C, Zhao C, Deng C, Ruan C, Dai D, Chen D, Ji D, Li E, Lin F, Dai F, Luo F, Hao G, Chen G, Li G, Zhang H, Xu H, Ding H, Gao H, Qu H, Li H, Guo J, Li J, Chen J, Yuan J, Tu J, Qiu J, Li J, Cai JL, Ni J, Liang J, Chen J, Dong K, Hu K, You K, Gao K, Guan K, Huang K, Yu K, Wang L, Zhang L, Zhao L, Wang L, Zhang L, Xu L, Xia L, Zhang M, Zhang M, Tang M, Zhou M, Li M, Wang M, Li M, Tian N, Huang P, Zhang P, Wang Q, Chen Q, Du Q, Ge R, Zhang R, Pan R, Wang R, Chen RJ, Jin RL, Chen R, Lu S, Zhou S, Chen S, Ye S, Wang S, Yu S, Zhou S, Pan S, Li SS, Zhou S, Wu S, Yun T, Pei T, Sun T, Wang T, Zeng W, Liu W, Liang W, Gao W, Yu W, Zhang W, Xiao WL, An W, Liu X, Wang X, Chen X, Nie X, Cheng X, Liu X, Xie X, Liu X, Yang X, Li X, Su X, Lin X, Li XQ, Jin X, Shen X, Chen X, Sun X, Wang X, Song X, Zhou X, Wang X, Shan X, Li YK, Wang YQ, Wei YX, Zhang Y, Xu Y, Li Y, Zhao Y, Sun Y, Wang Y, Yu Y, Zhang Y, Shi Y, Xiong Y, He Y, Piao Y, Wang Y, Tan Y, Ma Y, Liu Y, Guo Y, Ou Y, Wang Y, Gong Y, Zou Y, He Y, Xiong Y, Luo Y, You Y, Liu Y, Zhou Y, Zhu YX, Huang Y, Li Y, Zheng Y, Zhu Y, Ma Y, Tang Y, Zha Y, Yan Y, Ren ZZ, Ren Z, Sha Z, Fu Z, Xu Z, Xie Z, Zhang Z, Hao Z, Ma Z, Yan Z, Wu Z, Gu Z, Zhu Z, Liu Z, Li Z, Xie Z, Song Z, Pan Z, Huang Z, Xu Z, Zhang Z, Zhang Z.",
+  "venue": "Nature",
+  "year": 2025,
+  "citations": 232,
+  "found_by": [
+   "eupmc:reinforcement learning verifia",
+   "eupmc:GRPO reasoning language model",
+   "eupmc:process reward model",
+   "journal-retro",
+   "seed"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12443585",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Nature 发表，纯 RL 激励推理，RLVR 方向奠基性工作，有定量结果。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature发表，纯RL激发推理，RLVR范式转折点，必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "GRPO强化学习+规则奖励，多阶段训练（拒绝采样、RL、SFT）",
+  "data": "数学/代码/逻辑推理题，含AIME等基准；公开数据样本",
+  "scenario": "LLM推理能力自进化",
+  "benchmark": "AIME 2024等数学推理基准；对比DeepSeek-V3 Base",
+  "results": "DeepSeek-R1-Zero在AIME 2024 pass@1随RL训练持续提升；R1继承推理能力并改善可读性；蒸馏小模型超越原指令模型",
+  "availability": "公开R1-Zero、R1、数据样本与蒸馏模型",
+  "limitations": "R1-Zero可读性差、中英混杂；规则RL仅聚焦推理，写作与开放问答受限",
+  "summary": "本文探索用强化学习让LLM自我进化出推理能力，减少人工标注依赖。基于DeepSeek-V3 Base，采用GRPO，仅以最终答案正确性为奖励，跳过SFT直接RL，并进一步用多阶段框架训练DeepSeek-R1。发现模型自发涌现验证、反思、探索等长链推理行为，推理基准显著提升，并公开蒸馏模型。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

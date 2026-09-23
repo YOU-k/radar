@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1109/iccv.2019.00649",
+  "title": "Scaling and Benchmarking Self-Supervised Visual Representation Learning",
+  "url": "https://doi.org/10.1109/ICCV.2019.00649",
+  "abstract": "Self-supervised learning aims to learn representations from the data itself without explicit manual supervision. Existing efforts ignore a crucial aspect of self-supervised learning - the ability to scale to large amount of data because self-supervision requires no manual labels. In this work, we revisit this principle and scale two popular self-supervised approaches to 100 million images. We show that by scaling on various axes (including data size and problem 'hardness'), one can largely match or even exceed the performance of supervised pre-training on a variety of tasks such as object detection, surface normal estimation (3D) and visual navigation using reinforcement learning. Scaling these methods also provides many interesting insights into the limitations of current self-supervised techniques and evaluations. We conclude that current self-supervised methods are not 'hard' enough to take full advantage of large scale data and do not seem to learn effective high level semantic representations. We also introduce an extensive benchmark across 9 different datasets and tasks. We believe that such a benchmark along with comparable evaluation settings is necessary to make meaningful progress. Code is at: https://github.com/facebookresearch/fair_self_supervision_benchmark.",
+  "authors": "Priya Goyal, D. Mahajan, A. Gupta, Ishan Misra",
+  "venue": "IEEE International Conference on Computer Vision",
+  "year": 2019,
+  "citations": 431,
+  "found_by": [
+   "s2:references:arxiv:2010.13902"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "自监督视觉表征规模化基准，系统性评测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "自监督视觉表征规模化评测，方向奠基性必读工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "将两种自监督方法扩展至1亿图像并建立基准",
+  "data": "1亿张图像，9个数据集与任务",
+  "scenario": "大规模自监督视觉表征学习",
+  "benchmark": "监督预训练及9数据集多任务基准",
+  "results": "在检测、表面法线估计、视觉导航等任务上匹配或超越监督预训练",
+  "availability": "代码已开源GitHub",
+  "limitations": "当前自监督方法不够“难”，未充分利用大规模数据，未学到有效高层语义",
+  "summary": "将两种流行自监督方法扩展至1亿图像，研究数据规模与任务难度的影响。通过多轴扩展并在9个数据集任务上建立基准评估。发现可匹配或超越监督预训练，但现有方法仍不足以充分利用大规模数据。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

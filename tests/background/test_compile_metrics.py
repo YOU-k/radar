@@ -95,3 +95,11 @@ def test_synthesis_even_if_evidence_attached(spec):
     o = Outline.from_spec(spec)
     o.attach("1", ["doi:10.1000/paper0"])  # 误挂
     assert is_synthesis(o.find("1"), spec)
+
+
+def test_seed_hit_matches_alt_ids(spec, tmp_path):
+    st = EvidenceStore(tmp_path / "e", tmp_path / "r.jsonl")
+    c = make_cand(0, doi="10.1038/some-journal-version")
+    c.extra["alt_ids"] = [spec.seeds[0]]
+    st.add(Evidence(candidate=c, panel=[]))
+    assert m.coverage(spec, st, Outline.from_spec(spec), None, 1).seed_hit == 0.5

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.3390/e28070811",
+  "title": "Entropy Regularization in Deep Reinforcement Learning: A Structured Review Across Classical Control, Generative Policies, and Reasoning Language Models.",
+  "url": "https://doi.org/10.3390/e28070811",
+  "abstract": "Entropy regularization is a recurring mechanism in reinforcement learning (RL), but its meaning changes across algorithmic settings. In classical online RL, entropy encourages exploration and smooths policy improvement; in inverse RL and imitation learning, maximum-entropy resolves ambiguity among expert-consistent behaviors; in offline RL, entropy must be balanced against data support; in generative policies, entropy becomes a tractability problem; and in reinforcement learning with verifiable rewards (RLVR) for large language models (LLMs), token entropy is tied to reasoning diversity, calibration, and collapse. This review organizes these developments into a unified taxonomy. We first summarize the mathematical foundations of maximum-entropy RL, soft Bellman equations, policy-gradient entropy dynamics, and Kullback-Leibler (KL)-constrained mirror descent. We then review entropy in imitation learning, offline RL, intrinsic motivation, diffusion and flow-based policy classes, and RLVR. Particular attention is given to recent work on entropy collapse in reasoning LLMs, entropy-based advantage shaping, covariance-based control, positive-advantage reweighting, and ordinary differential equation (ODE)-based flow-matching policies with tractable entropy. The review emphasizes that entropy is not universally beneficial: useful exploration, support preservation, multimodality, calibration, and reasoning diversity require different entropy objects and different control mechanisms.",
+  "authors": "Taricco G.",
+  "venue": "Entropy (Basel, Switzerland)",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:GRPO reasoning language model"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13408401",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统综述RLVR中熵正则与推理崩溃，契合训练范式方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "RLVR熵正则化系统综述，覆盖推理多样性，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "熵正则化在深度强化学习中的结构化综述",
+  "data": "综述文献，覆盖经典控制、生成式策略与推理语言模型",
+  "scenario": "强化学习熵正则化理论梳理",
+  "benchmark": "无统一基准；对比SAC、PPO、TRPO、GRPO、RLOO等",
+  "results": "无定量结果；指出熵坍缩影响校准、多样性与Pass@K",
+  "availability": "",
+  "limitations": "为综述无新实验；熵定义跨策略类不可互换，统一度量困难",
+  "summary": "本文系统综述深度强化学习中的熵正则化，跨越经典控制、生成式策略与LLM推理三类范式。通过区分策略级、轨迹级、占用度量级等熵对象，梳理其在探索、平滑、信任域与多样性中的作用。指出生成式策略熵难计算、LLM后训练存在熵坍缩，需按策略类与训练机制区别对待。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

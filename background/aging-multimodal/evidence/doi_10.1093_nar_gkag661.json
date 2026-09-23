@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/nar/gkag661",
+  "title": "Enhancing the performance and interpretability of epigenetic clocks.",
+  "url": "https://doi.org/10.1093/nar/gkag661",
+  "abstract": "Epigenetic clocks based on DNA methylation (DNAm) accurately predict age, but their biological underpinnings remain unclear. One primary mechanism by which DNAm might influence gene regulation is by modulating transcription factor binding activity. This study investigates the regulatory potential of predictive CpGs in established epigenetic clocks. Our analysis reveals that generally most CpGs used by epigenetic clocks do not overlap known transcription factor binding sites (TFBS), indicating that clock accuracy is not primarily driven by changes in TF binding dynamics. However, analysis of CpGs within TFBSs identifies key transcription factors potentially involved in aging, including ZBED1, NFE2, and CEBPB, which are enriched for age-associated CpGs, while RELA, IKZF1, and STAT3 significantly protected against methylation changes. Leveraging TFBS-associated and age-correlated CpGs, combined with noise-stabilizing feature engineering steps, we developed an alternative TFMethyl Clock model that provides competitive predictions of chronological age. Age-predictive CpGs selected by our model enrich for target genes involved in interleukin-1β production and fatty-acid metabolism, while being enriched at TFBSs of NR2C2. Furthermore, approximately three-fourths of these target genes exhibit significant age-related changes, suggesting deeper insights into possible methylation-driven aging processes. Our findings demonstrate that incorporating regulatory information into epigenetic clocks may provide mechanistic insights into the aging process while improving the interpretability and predictive power.",
+  "authors": "Patel T, Schwarz R, Riege K, Varshavsky M, Richmond A, Marioni RE, Kestler HA, Kaplan T, Hoffmann S, van Bömmel A.",
+  "venue": "Nucleic acids research",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:aging clock benchmark foundati"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13338713",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "表观时钟可解释性方法研究，NAR发表。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "NAR表观时钟机制解析，提升可解释性，方法有创新",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于TF结合位点CpG聚类构建TFMethyl Clock",
+  "data": "15个公开全血DNAm队列7803样本；GTEx全血RNA-seq 581样本",
+  "scenario": "提升表观时钟性能与可解释性",
+  "benchmark": "常规弹性网/LASSO表观时钟及既有DNAm时钟",
+  "results": "训练4995、测试2143、验证665；聚焦衰老相关TFBS CpG，提升稳健性并关联靶基因",
+  "availability": "",
+  "limitations": "主要使用全血甲基化数据，TFBS注释和聚类策略可能限制跨组织适用性",
+  "summary": "研究提出TFMethyl Clock，用转录因子结合位点内衰老相关CpG构建调控型表观时钟。方法先筛选TFBS内年龄相关CpG并进行特征聚类，再训练预测模型，并结合GTEx RNA-seq分析靶基因。发现该框架可提升预测稳健性和生物学解释性。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

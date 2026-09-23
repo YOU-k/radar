@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41591-025-03999-8",
+  "title": "MRI-based multi-organ clocks for healthy aging and disease assessment.",
+  "url": "https://doi.org/10.1038/s41591-025-03999-8",
+  "abstract": "Biological aging clocks across organ systems and tissues have advanced understanding of human aging and disease. In this study, we expand this framework to develop seven magnetic resonance imaging-based multi-organ biological age gaps (MRIBAGs), including the brain, heart, liver, adipose tissue, spleen, kidney and pancreas. Using data from 313,645 individuals curated by the MULTI Consortium, we link the seven MRIBAGs to 2,923 plasma proteins, 327 metabolites and 6,477,810 common genetic variants. Genome-wide associations identify 53 MRIBAG-locus pairs (P  -8 ). Genetic correlation and Mendelian randomization analyses support organ-specific and cross-organ interconnection, including 24 non-MRI biological aging clocks and 525 disease endpoints. Through functional gene mapping and Bayesian co-localization multi-omics evidence, we prioritize nine druggable genes as targets for future anti-aging treatments. Furthermore, the seven MRIBAGs are linked to future risk of systemic disease endpoints (for example, diabetes mellitus) and all-cause mortality. Finally, participants with more youthful versus more aged brain profiles exhibited distinct cognitive decline trajectories over 240 weeks of treatment with the Alzheimer's disease drug solanezumab, although this heterogeneity cannot be fully attributed to the drug. In summary, we developed seven MRIBAGs that enhance the existing multi-organ biological aging framework, and we demonstrate their clinical potential to advance aging research.",
+  "authors": "MULTI Consortium, Cao H, Song Z, Duggan MR, Erus G, Srinivasan D, Tian YE, Bai W, Rafii MS, Aisen P, Belsky DW, Walker KA, Zalesky A, Ferrucci L, Davatzikos C, Wen J.",
+  "venue": "Nature medicine",
+  "year": 2025,
+  "citations": 24,
+  "found_by": [
+   "eupmc:single-cell spatial aging atla"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12823390",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "MRI多器官时钟，31万人队列，数据公开。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Medicine 31万人MRI多器官时钟，里程碑式资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于多器官MRI的MRIBAG衰老时钟",
+  "data": "UKBB/MULTI等MRI数据；脑、心、肝、脾、脂肪、肾、胰",
+  "scenario": "健康衰老与疾病风险评估",
+  "benchmark": "脑年龄、PhenoBAG、ProtBAG、MetBAG等衰老时钟",
+  "results": "7个MRIBAG在留出测试中Pearson r 0.23–0.77，MAE约5年；关联2923蛋白和327代谢物",
+  "availability": "模型和结果公开于MEDICINE门户",
+  "limitations": "腹部MRI特征共线性导致泛化较差；脑模型外部队列存在域偏移",
+  "summary": "研究构建脑、心、肝、脾、脂肪、肾和胰七个MRI器官衰老时钟MRIBAG。方法用LASSO和支持向量回归训练，并进行年龄偏差校正、ProWAS/MetWAS、GWAS和PRS分析。结果显示MRIBAG预测MAE约5年，并关联蛋白、代谢物、遗传结构及疾病风险。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

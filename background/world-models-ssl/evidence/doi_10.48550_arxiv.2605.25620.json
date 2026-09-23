@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2605.25620",
+  "title": "Back to Parsimonious Latents: Learning Task-Centric World Models from Visual Foundations",
+  "url": "https://doi.org/10.48550/arXiv.2605.25620",
+  "abstract": "World models enable agents to predict future dynamics conditioned on actions, making the choice of latent representation central to planning and control. Such representations are often either learned directly from pixels with limited semantic structure or inherited from frozen visual foundation models with excessive task-irrelevant detail, yielding state spaces that are poorly matched to downstream planning and control. This is especially challenging in reward-free offline settings, where the model must learn from fixed trajectories without reward supervision or online interaction. To address this, we propose TC-WM, a framework for turning foundation-model embeddings into compact, task-sufficient world representations. The key design is to treat the pretrained embedding space as a semantic scaffold rather than as the final state space: TC-WM linearly projects high-dimensional visual embeddings into a compact latent as the dynamic space, aligns a subspace with the agent's physical state via contrastive learning, and reconstructs embeddings to preserve useful visual structure. This combines the generality of foundation features with the controllability of task-centric dynamics. Theoretically, we show that TC-WM suffices to identify the underlying task-centric latent factors up to a simple transformation. Empirically, TC-WM enables test-time planning across diverse environments (e.g., Robomimic and D4RL), achieving better world-modeling quality and more precise control than state-of-the-art approaches.",
+  "authors": "Ming-Hao Fu, Fan Feng, Nicklas Hansen, Biwei Huang",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:arxiv:2005.05960"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "从视觉基础模型蒸馏紧凑任务中心世界模型，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "从视觉基础模型蒸馏紧凑任务世界模型，方向核心",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "将基础模型嵌入线性投影为紧凑潜空间，对比对齐物理状态并重建嵌入",
+  "data": "离线无奖励轨迹（Robomimic、D4RL）",
+  "scenario": "无奖励离线规划与控制",
+  "benchmark": "Robomimic、D4RL及现有世界模型基线",
+  "results": "世界建模质量与控制精度优于基线，理论上可辨识任务中心潜因子",
+  "availability": "",
+  "limitations": "依赖预训练视觉基础模型，全文未公开",
+  "summary": "提出TC-WM，把冻结视觉基础模型嵌入当作语义脚手架而非最终状态空间。通过线性投影得到紧凑动态潜空间，用对比学习对齐智能体物理状态子空间，并重建嵌入保留视觉结构。理论上可辨识任务中心潜因子，在Robomimic与D4RL上实现更优世界建模与更精确控制。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

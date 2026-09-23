@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2601.17223",
+  "title": "Beyond Outcome Verification: Verifiable Process Reward Models for Structured Reasoning",
+  "url": "https://arxiv.org/abs/2601.17223v1",
+  "abstract": "Recent work on reinforcement learning with verifiable rewards (RLVR) has shown that large language models (LLMs) can be substantially improved using outcome-level verification signals, such as unit tests for code or exact-match checks for mathematics. In parallel, process supervision has long been explored as a way to shape the intermediate reasoning behaviour of LLMs, but existing approaches rely on neural judges to score chain-of-thought steps, leaving them vulnerable to opacity, bias, and reward hacking. To address this gap, we introduce Verifiable Process Reward Models (VPRMs), a reinforcement-learning framework in which intermediate reasoning steps are checked by deterministic, rule-based verifiers. We apply VPRMs to risk-of-bias assessment for medical evidence synthesis, a domain where guideline-defined criteria and rule-based decision paths enable programmatic verification of reasoning traces. Across multiple datasets, we find that VPRMs generate reasoning that adheres closely to domain rules and achieve substantially higher coherence between step-level decisions and final labels. Results show that VPRMs achieve up to 20% higher F1 than state-of-the-art models and 6.5% higher than verifiable outcome rewards, with substantial gains in evidence grounding and logical coherence.",
+  "authors": "Massimiliano Pronesti, Anya Belz, Yufang Hou",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "可验证过程奖励模型，规则校验中间步骤，契合RLVR",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "确定性规则验证过程奖励，RLVR与过程监督结合的关键工作。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "VPRM：规则确定性验证器提供步级过程奖励",
+  "data": "多数据集医学证据合成偏倚风险评估推理轨迹",
+  "scenario": "结构化推理的RLVR",
+  "benchmark": "SOTA模型、可验证结果奖励；F1与证据接地/逻辑一致性",
+  "results": "F1比SOTA高至多20%，比可验证结果奖励高6.5%，证据接地与逻辑一致性显著提升",
+  "availability": "",
+  "limitations": "仅适用于可程序化验证的领域；需领域规则与决策路径",
+  "summary": "针对现有过程监督依赖神经评判器打分CoT步骤、带来不透明、偏见与奖励黑客，且缺乏完全可验证过程监督的问题，提出Verifiable Process Reward Models（VPRMs）。VPRMs在RL框架中用确定性规则验证器检查每个中间推理步，应用于医学证据合成中的偏倚风险评估，该领域有指南定义标准与规则化决策路径可程序化验证；理论上证明在温和假设下梯度更新对正确推理轨迹赋正期望权重、对不一致轨迹赋负权重。多数据集上VPRM推理更贴合领域规则，步级决策与最终标签一致性显著提高，F1比SOTA高至多20%、比可验证结果奖励高6.5%。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

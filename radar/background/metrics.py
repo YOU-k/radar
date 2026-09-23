@@ -25,7 +25,7 @@ class Coverage:
 
 def coverage(spec: TopicSpec, store: EvidenceStore, outline: Outline,
              top_cited: list[str] | None, round_no: int) -> Coverage:
-    ids = store.ids()
+    ids = store.all_ids()
     seeds = [s.lower() for s in spec.seeds]
     seed_hit = (sum(1 for s in seeds if s in ids) / len(seeds)) if seeds else 1.0
     leaves = [s for s in outline.walk() if not s.children and s.title != UNSORTED]

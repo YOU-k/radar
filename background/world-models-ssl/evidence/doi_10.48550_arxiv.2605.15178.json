@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2605.15178",
+  "title": "SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer",
+  "url": "https://doi.org/10.48550/arXiv.2605.15178",
+  "abstract": "We introduce SANA-WM, an efficient 2.6B-parameter open-source world model natively trained for one-minute generation, synthesizing high-fidelity, 720p, minute-scale videos with precise camera control. SANA-WM achieves visual quality comparable to large-scale industrial baselines such as LingBot-World and HY-WorldPlay, while significantly improving efficiency. Four core designs drive our architecture: (1) Hybrid Linear Attention combines frame-wise Gated DeltaNet (GDN) with softmax attention for memory-efficient long-context modeling. (2) Dual-Branch Camera Control ensures precise 6-DoF trajectory adherence. (3) Two-Stage Generation Pipeline applies a long-video refiner to stage-1 outputs, improving quality and consistency across sequences. (4) Robust Annotation Pipeline extracts accurate metric-scale 6-DoF camera poses from public videos to yield high-quality, spatiotemporally consistent action labels. Driven by these designs, SANA-WMdemonstrates remarkable efficiency across data, training compute, and inference hardware: it uses only $\\sim$213K public video clips with metric-scale pose supervision, completes training in 15 days on 64 H100s, and generates each 60s clip on a single GPU; its distilled variant can be deployed on a single RTX 5090 with NVFP4 quantization to denoise a 60s 720p clip in 34s. On our one-minute world-model benchmark, SANA-WM demonstrates stronger action-following accuracy than prior open-source baselines and achieves comparable visual quality at $36\\times$ higher throughput for scalable world modeling.",
+  "authors": "Haoyi Zhu, Hao-Zhe Liu, Yuyang Zhao, Tian Ye, Junsong Chen, Jin-Cheng Yu, Tong He, Song Han",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 33,
+  "found_by": [
+   "s2kw:linear attention transformer e"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "开源世界模型，混合线性注意力长视频生成",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "开源世界模型，混合线性注意力长视频生成有突破",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "混合线性注意力扩散Transformer世界模型",
+  "data": "约21.3万公开视频片段，含度量尺度位姿监督",
+  "scenario": "分钟级视频世界建模",
+  "benchmark": "LingBot-World、HY-WorldPlay及开源基线",
+  "results": "64张H100训练15天，单GPU生成60秒720p；蒸馏版单张RTX 5090 NVFP4下34秒去噪60秒720p",
+  "availability": "开源模型与代码",
+  "limitations": "训练仍需64张H100，计算成本较高",
+  "summary": "提出SANA-WM，2.6B参数开源世界模型，原生支持一分钟720p视频生成与精确相机控制。采用混合线性注意力、双分支相机控制、两阶段生成与鲁棒标注流程。发现其动作跟随精度优于开源基线，视觉质量接近工业级模型且效率显著提升。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

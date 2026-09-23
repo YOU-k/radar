@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2504.13837",
+  "title": "Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?",
+  "url": "https://doi.org/10.48550/arXiv.2504.13837",
+  "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has recently demonstrated notable success in enhancing the reasoning performance of large language models (LLMs), particularly on mathematics and programming tasks. Similar to how traditional RL helps agents explore and learn new strategies, RLVR is believed to enable LLMs to continuously self-improve, thus acquiring novel reasoning abilities beyond those of the corresponding base models. In this study we critically examine the current state of RLVR by systematically probing the reasoning capability boundaries of RLVR-trained LLMs across various model families, RL algorithms, and math, coding, and visual reasoning benchmarks, using pass@k at large k values as the evaluation metric. Surprisingly, we find that the current training setup does not elicit fundamentally new reasoning patterns. While RLVR-trained models outperform their base models at small k (e.g., k = 1), the base models achieve a higher pass@k score when k is large. Coverage and perplexity analyses show that the observed reasoning abilities originate from and are bounded by the base model. Treating the base model as an upper bound, our quantitative analysis shows that six popular RLVR algorithms perform similarly and remain far from optimal in leveraging the potential of the base model. By contrast, we find that distillation can introduce new reasoning patterns from the teacher and genuinely expand the model's reasoning capabilities. Overall, our findings suggest that current RLVR methods have not yet realized the potential of RL to elicit truly novel reasoning abilities in LLMs. This highlights the need for improved RL paradigms, such as continual scaling and multi-turn agent-environment interaction, to unlock this potential.",
+  "authors": "Yang Yue, Zhiqin Chen, Rui Lu, Andrew Zhao, Zhaokai Wang, Shiji Song, Gao Huang",
+  "venue": "Neural Information Processing Systems",
+  "year": 2025,
+  "citations": 1039,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2507.10532"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2504.13837"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "批判性检验RLVR推理边界，重要负面结论。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "NeurIPS，质疑RLVR推理边界，引用超千，必读批判",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "用大k的pass@k系统探测RLVR推理能力边界",
+  "data": "多模型家族、多RL算法；数学、代码、视觉推理基准",
+  "scenario": "RLVR推理能力评估",
+  "benchmark": "pass@k（大k）；对比基座模型与蒸馏",
+  "results": "小k时RLVR模型更优，大k时基座模型pass@k更高；六种RLVR算法表现相近且远未达基座潜力上限",
+  "availability": "",
+  "limitations": "当前训练设置未引出全新推理模式；能力受基座模型上界约束",
+  "summary": "批判性检验RLVR是否真能带来超越基座模型的新推理能力。方法为跨模型家族、RL算法与数学/代码/视觉基准，用大k的pass@k评估。发现小k时RLVR模型更优，但大k时基座模型更高，说明推理能力源自并受限于基座模型；六种RLVR算法表现相近，而蒸馏能真正扩展推理能力。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

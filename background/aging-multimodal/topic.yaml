@@ -1,0 +1,46 @@
+# 方向定义（人改；其余文件由流水线生成）
+name: 多模态衰老时钟与生物年龄
+definition: >
+  以分子组学（DNA 甲基化、转录组、蛋白组、代谢组、单细胞/空间）、影像与功能表型估计生物学年龄与衰老速率的模型，
+  含多模态整合、跨组织/跨队列泛化、类器官与扰动体系中的衰老建模，以及衰老生物学的 AI 基准与基础模型。
+include:
+  - 新一代衰老时钟（表观、蛋白、转录、多组学、单细胞、影像），有公开数据或系数
+  - 多模态衰老整合方法：模态对齐、缺失模态、跨队列校正、纵向/增量学习
+  - 衰老生物学的 AI 基准、语言模型或基础模型（如 LongevityBench）
+  - 类器官 / 扰动 / cell painting 体系里的衰老或年轻化建模
+  - 大规模衰老多组学数据资源与图谱
+exclude:
+  - 单一小样本队列的时钟应用（<500 人）且无方法新意
+  - 纯干预/药物的临床报告，不涉及建模
+  - 无数据无代码的理论综述（CNS 及子刊综述除外）
+keywords: [aging clock, epigenetic clock, DNA methylation age, biological age, proteomic age, transcriptomic age,
+  multimodal aging, aging biomarker, senescence, longevity, geroscience, organoid aging, cell painting,
+  single-cell aging, spatial aging atlas, rejuvenation, healthspan, aging foundation model, LongevityBench]
+queries:
+  - "epigenetic clock biological age"
+  - "proteomic aging clock plasma"
+  - "multimodal biological age deep learning"
+  - "single-cell aging atlas"
+  - "aging biology language model benchmark"
+  - "organoid aging senescence model"
+  - "transcriptomic age prediction"
+journals: [Nature Aging, Aging Cell, GeroScience, Nature, Cell, Science, Nature Metabolism, Cell Metabolism, Nature Medicine]
+seeds:
+  - doi:10.1186/gb-2013-14-10-r115     # Horvath 2013 泛组织甲基化时钟
+  - doi:10.18632/aging.101414          # PhenoAge (Levine 2018)
+  - doi:10.1016/j.cell.2026.08.026     # LongevityBench / AI in aging biology benchmark (Cell 2026)
+radar_domain: aging_multimodal
+months: 24
+outline:
+  - title: 背景与定义
+  - title: 方法学
+    children:
+      - title: 单组学衰老时钟（表观 / 蛋白 / 转录）
+      - title: 多模态整合与跨队列泛化
+      - title: 单细胞与空间衰老图谱
+      - title: 衰老生物学基准与基础模型
+  - title: 数据与资源
+  - title: 应用与结果
+  - title: 评测、可复现性与争议
+  - title: 空白与趋势
+budget: {rounds: 8, max_candidates: 80, max_screen: 60, max_extract: 40, stop_delta: 0.02}

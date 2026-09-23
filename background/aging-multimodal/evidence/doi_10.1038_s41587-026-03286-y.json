@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41587-026-03286-y",
+  "title": "Integration of proteomic aging clocks in a phase 2a clinical trial supports simultaneous geroprotective assessment.",
+  "url": "https://doi.org/10.1038/s41587-026-03286-y",
+  "abstract": "Drugs for aging-related diseases may modulate aging itself, but standard clinical trial designs cannot detect such effects. Aging clocks could close this gap, but epigenetic models often yield inconsistent, hard-to-interpret results. In contrast, proteomic clocks, by tracking the immediate effectors of biological change, may excel in providing aging biomarkers or mechanistic insight. Here we compare six proteomic clocks (ProtAge, OrganAgemortality, OrganAgechrono, PAC, ipfP3GPT and PAOPAC) on serum proteomes from a published 12-week phase 2a trial of the candidate anti-fibrotic drug rentosertib in idiopathic pulmonary fibrosis. We measure the variance between the clocks and find that all six clocks consistently predicted lower biological age in treated arms. However, proteomic clocks alone cannot deconvolute aging- and disease-specific effects. We addressed this issue indirectly through pathway analyses that identified potential anti-aging shifts in senescence and metabolic processes alongside the anti-fibrotic activity of rentosertib. This work supports the goal of dual-purpose clinical trial designs that integrate aging endpoints into studies for specific disease indications.",
+  "authors": "Alex Zhavoronkov, F. Galkin, Shan Chen, F. Ren, A. Aliper, Mikhail Durymanov, D. Sidorenko, Hui Cui",
+  "venue": "Nature Biotechnology",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2:citations:doi:10.1186/gb-2013-14-10-r115"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "蛋白组时钟在临床试验中整合评估，方法可复用。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nat Biotech蛋白组时钟用于临床试验评估，方法整合",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "在2a期临床试验中比较六种蛋白质组衰老时钟",
+  "data": "特发性肺纤维化12周2a期试验血清蛋白质组",
+  "scenario": "临床试验中评估geroprotective效应",
+  "benchmark": "ProtAge、OrganAgemortality、OrganAgechrono、PAC、ipfP3GPT、PAOPAC六种蛋白质组时钟",
+  "results": "六种时钟均一致预测治疗组生物年龄更低；通路分析显示衰老和代谢过程出现潜在抗衰老转变，并伴抗纤维化活性",
+  "availability": "",
+  "limitations": "蛋白质组时钟无法单独区分衰老与疾病特异效应；样本来自单一疾病和短期试验",
+  "summary": "研究在rentosertib治疗特发性肺纤维化的12周2a期试验中整合蛋白质组衰老时钟。作者比较六种蛋白质组时钟对血清蛋白质组的预测，并做通路分析。结果显示所有时钟均提示治疗组生物年龄更低，但需借助通路分析间接区分抗衰老与抗纤维化效应，支持将衰老终点纳入疾病临床试验。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

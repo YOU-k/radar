@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-57047-7",
+  "title": "Unveiling the cell-type-specific landscape of cellular senescence through single-cell transcriptomics using SenePy.",
+  "url": "https://doi.org/10.1038/s41467-025-57047-7",
+  "abstract": "Senescent cells accumulate in most tissues with organismal aging, exposure to stressors, or disease progression. It is challenging to identify senescent cells because cellular senescence signatures and phenotypes vary widely across distinct cell types and tissues. Here we developed an analytical algorithm that defines cell-type-specific and universal signatures of cellular senescence across a wide range of cell types and tissues. We utilize 72 mouse and 64 human weighted single-cell transcriptomic signatures of cellular senescence to create the SenePy scoring platform. SenePy signatures better recapitulate in vivo cellular senescence than signatures derived from in vitro senescence studies. We use SenePy to map the kinetics of senescent cell accumulation in healthy aging as well as multiple disease contexts, including tumorigenesis, inflammation, and myocardial infarction. SenePy characterizes cell-type-specific in vivo cellular senescence and could lead to the identification of genes that serve as mediators of cellular senescence and disease progression.",
+  "authors": "Sanborn MA, Wang X, Gao S, Dai Y, Rehman J.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 76,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC11846890",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞衰老评分平台，公开签名，可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "SenePy单细胞衰老评分平台，跨细胞类型通用工具",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SenePy识别细胞类型特异衰老特征",
+  "data": "单细胞转录组，小鼠328K、人1.6M细胞",
+  "scenario": "体内细胞衰老异质性图谱",
+  "benchmark": "SenMayo及自建CS基因集",
+  "results": "整合181个人、184个小鼠CS标记；SenMayo交集52/51，超几何p=5.5E-97/2.85E-79；SenePy开源",
+  "availability": "代码公开：GitHub jaleesr/senepy",
+  "limitations": "体内CS异质性高，无通用标志物",
+  "summary": "研究开发SenePy以揭示细胞类型特异的体内细胞衰老景观。汇总小鼠和人跨组织、跨年龄单细胞RNA测序数据，并用p16报告小鼠等数据验证算法。发现已知衰老标志物具有细胞类型特异性，SenePy可跨组织映射衰老动力学并识别组织/细胞特异签名。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-025-01016-8",
+  "title": "Organ-specific proteomic aging clocks predict disease and longevity across diverse populations.",
+  "url": "https://doi.org/10.1038/s43587-025-01016-8",
+  "abstract": "Aging and age-related diseases share convergent pathways at the proteome level. Here, using plasma proteomics and machine learning, we developed organismal and ten organ-specific aging clocks in the UK Biobank (n = 43,616) and validated their high accuracy in cohorts from China (n = 3,977) and the USA (n = 800; cross-cohort r = 0.98 and 0.93). Accelerated organ aging predicted disease onset, progression and mortality beyond clinical and genetic risk factors, with brain aging being most strongly linked to mortality. Organ aging reflected both genetic and environmental determinants: brain aging was associated with lifestyle, the GABBR1 and ECM1 genes, and brain structure. Distinct organ-specific pathogenic pathways were identified, with the brain and artery clocks linking synaptic loss, vascular dysfunction and glial activation to cognitive decline and dementia. The brain aging clock further stratified Alzheimer's disease risk across APOE haplotypes, and a super-youthful brain appears to confer resilience to APOE4. Together, proteomic organ aging clocks provide a biologically interpretable framework for tracking aging and disease risk across diverse populations.",
+  "authors": "Wang Y, Xiao S, Liu B, Jiang R, Liu Y, Hang Y, Chen L, Chen R, Vitiello MV, Bennett D, Wang B, Lv J, Yu C, Haslam DE, Zheng Q, Gerszten RE, Bao Y, Shi J, Xie J, Lu L, Li L, van Duijn CM, Wang DD, Chen Z, Chan AT.",
+  "venue": "Nature aging",
+  "year": 2025,
+  "citations": 26,
+  "found_by": [
+   "eupmc:proteomic aging clock plasma",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12823432",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "器官特异蛋白组时钟，跨队列验证，多模态整合价值高",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging器官特异蛋白组时钟，跨中欧美队列验证，代表转折",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "非线性机器学习构建器官特异蛋白组衰老时钟",
+  "data": "UKB 43616、CKB 3977、NHS 800，Olink 2916蛋白",
+  "scenario": "跨人群器官衰老与疾病死亡预测",
+  "benchmark": "整体衰老时钟、临床与遗传标志物",
+  "results": "器官时钟跨三种族验证，预测疾病和死亡，精简蛋白面板保持性能",
+  "availability": "",
+  "limitations": "部分器官蛋白少，因果机制仍有限",
+  "summary": "研究构建了整体和十个器官系统的血浆蛋白组衰老时钟。利用UKB 43616人及CKB、NHS外部队列，基于Olink 2916蛋白和非线性机器学习建模。发现器官特异衰老可跨人群预测年龄相关疾病、脑结构和全因死亡，并可用精简蛋白面板实现。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

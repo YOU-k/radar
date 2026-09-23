@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/acel.70579",
+  "title": "The Evolving Landscape of Clinical Aging Clocks: From Epigenetic to Multi-Omics Integration.",
+  "url": "https://doi.org/10.1111/acel.70579",
+  "abstract": "Aging clocks are tools that quantify biological aging through the integration of multi-omics data, encompassing epigenetic, transcriptomic, proteomic, metabolic, and microbial information, together with functional biomarkers. These tools show significant potential for use in preventive medicine, early detection of chronic conditions, and monitoring the effectiveness of interventions designed to enhance population health. The advancement of artificial intelligence has facilitated the widespread adoption of ensemble learning and deep learning techniques in constructing aging clocks. Such methods are capable of efficiently synthesizing and analyzing high-dimensional, multi-modal biological data, thereby uncovering deeper insights and promoting a transition from epigenetic-based aging prediction to the development of multi-omics and multi-modal aging clocks. Aging clocks built on large-scale data and artificial intelligence have demonstrated notable progress in terms of accuracy, interpretability, and generalizability. Consequently, they provide a substantive foundation for understanding mechanisms of aging and contribute meaningful guidance for clinical practices aimed at delaying age-related diseases and fostering healthy aging.",
+  "authors": "Liu L, Lai Y, Tian C, Huang Y, Hao J, Zhao Y, Chen D, Wu T, Zhou D, Zheng X, Yang H, Yu Z, Li N, Yang J.",
+  "venue": "Aging cell",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:aging clock benchmark foundati"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13271870",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多组学衰老时钟整合综述，契合方向核心。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Aging Cell多组学时钟综述，系统整合该方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述临床衰老时钟向多组学多模态整合演进",
+  "data": "综述，涵盖表观、转录、蛋白、代谢、微生物及功能标志物",
+  "scenario": "预防医学与干预监测",
+  "benchmark": "表观遗传衰老时钟与多组学/多模态衰老时钟",
+  "results": "AI集成学习和深度学习推动衰老时钟在准确性、可解释性和泛化性方面进展",
+  "availability": "",
+  "limitations": "全文不可得，具体数据、验证队列和定量性能无法提取",
+  "summary": "该综述讨论临床衰老时钟从表观遗传向多组学和多模态整合的发展。文章强调AI、集成学习和深度学习可整合高维生物数据，用于预防医学、慢病早筛和干预监测。认为多组学衰老时钟在准确性、解释性和泛化性上已有显著进展。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

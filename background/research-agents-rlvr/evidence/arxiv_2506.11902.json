@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2506.11902",
+  "title": "TreeRL: LLM Reinforcement Learning with On-Policy Tree Search",
+  "url": "https://arxiv.org/abs/2506.11902v1",
+  "abstract": "Reinforcement learning (RL) with tree search has demonstrated superior performance in traditional reasoning tasks. Compared to conventional independent chain sampling strategies with outcome supervision, tree search enables better exploration of the reasoning space and provides dense, on-policy process rewards during RL training but remains under-explored in On-Policy LLM RL. We propose TreeRL, a reinforcement learning framework that directly incorporates on-policy tree search for RL training. Our approach includes intermediate supervision and eliminates the need for a separate reward model training. Existing approaches typically train a separate process reward model, which can suffer from distribution mismatch and reward hacking. We also introduce a cost-effective tree search approach that achieves higher search efficiency under the same generation token budget by strategically branching from high-uncertainty intermediate steps rather than using random branching. Experiments on challenging math and code reasoning benchmarks demonstrate that TreeRL achieves superior performance compared to traditional ChainRL, highlighting the potential of tree search for LLM. TreeRL is open-sourced at https://github.com/THUDM/TreeRL.",
+  "authors": "Zhenyu Hou, Ziniu Hu, Yujiang Li, Rui Lu, Jie Tang, Yuxiao Dong",
+  "venue": "",
+  "year": 2025,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "on-policy树搜索RL，免独立过程奖励模型，方法新且有定量结果。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "on-policy树搜索RL，免独立过程奖励模型，方向关键",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "在策略树搜索强化学习TreeRL与EPTree",
+  "data": "数学与代码推理基准",
+  "scenario": "LLM数学与代码推理RL训练",
+  "benchmark": "ChainRL（独立多链采样）；对比MCTS、多链采样",
+  "results": "相同推理预算下EPTree优于i.i.d多链采样与MCTS；TreeRL优于ChainRL，如GLM4-9B提升2.5–5.6、Qwen-2.5-14B提升4.6–8.5",
+  "availability": "开源：https://github.com/THUDM/TreeRL",
+  "limitations": "主要验证于数学与代码推理，未覆盖更广领域",
+  "summary": "TreeRL将在线策略树搜索直接引入LLM强化学习训练，提供密集的过程监督并免去单独训练奖励模型。方法提出EPTree，从高不确定性中间步骤分支以提升搜索效率，并基于全局与局部优势为每步分配信用。在数学与代码推理基准上，TreeRL优于传统ChainRL，EPTree在相同推理预算下也优于多链采样与MCTS。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

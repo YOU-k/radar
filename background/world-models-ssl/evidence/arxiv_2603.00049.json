@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2603.00049",
+  "title": "BiJEPA: Bi-directional Joint Embedding Predictive Architecture for Symmetric Representation Learning",
+  "url": "https://arxiv.org/abs/2603.00049v1",
+  "abstract": "Self-Supervised Learning (SSL) has shifted from pixel-level reconstruction to latent space prediction, spearheaded by the Joint Embedding Predictive Architecture (JEPA). While effective, standard JEPA models typically rely on a uni-directional prediction mechanism (e.g. Context $\\to$ Target), potentially neglecting the informative signal inherent in the inverse relationship, degrading its performance. In this work, we propose \\textbf{BiJEPA}, a \\textit{Bi-Directional Joint Embedding Predictive Architecture} that enforces cycle-consistent predictability between data segments. We address the inherent instability of symmetric prediction (representation explosion) by introducing a critical norm regularization mechanism on the representation vectors. We evaluate BiJEPA on three distinct modalities: synthetic periodic signals, chaotic Lorenz attractor trajectories, and high-dimensional image data (MNIST). Our results demonstrate that BiJEPA achieves stable convergence without collapse, captures the semantic structure of chaotic systems, and learns robust temporal and spatial representations capable of generation and generalisation, offering a more holistic approach to representation learning.",
+  "authors": "Yongchao Huang",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "双向JEPA解决表征爆炸，方法有实质新意，契合JEPA系列。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "双向JEPA解决表征爆炸，方法创新有代码，方向内可引用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BiJEPA：双向JEPA加表征范数正则化",
+  "data": "合成周期信号、Lorenz混沌轨迹、MNIST图像",
+  "scenario": "对称表征学习与生成验证",
+  "benchmark": "标准单向JEPA（如I-JEPA）",
+  "results": "稳定收敛无坍塌，捕获混沌系统语义结构，学习可生成与泛化的时空表征",
+  "availability": "",
+  "limitations": "仅在合成信号、Lorenz与MNIST上验证，未扩展至大规模真实数据",
+  "summary": "提出BiJEPA，一种双向联合嵌入预测架构，强制数据片段间循环一致可预测性。针对对称预测的表征爆炸问题引入表征向量范数正则化，训练前向与后向两个预测器。在合成周期信号、Lorenz混沌轨迹与MNIST上稳定收敛无坍塌，捕获混沌系统语义结构，并学习到可生成与泛化的时空表征。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

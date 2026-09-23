@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2603.24639",
+  "title": "Experiential Reflective Learning for Self-Improving LLM Agents",
+  "url": "https://doi.org/10.48550/arXiv.2603.24639",
+  "abstract": "Recent advances in large language models (LLMs) have enabled the development of autonomous agents capable of complex reasoning and multi-step problem solving. However, these agents struggle to adapt to specialized environments and do not leverage past interactions, approaching each new task from scratch regardless of their accumulated experience. We introduce Experiential Reflective Learning (ERL), a simple self-improvement framework that enables rapid environment adaptation through experiential learning. ERL reflects on task trajectories and outcomes to generate heuristics, capturing actionable lessons that transfer across tasks. At test time, relevant heuristics are retrieved based on the current task and injected into the agent's context to guide execution. On the Gaia2 benchmark, ERL improves success rate by 7.8% over a ReAct baseline, with large gains in task completion reliability, and outperforms prior experiential learning methods. Through systematic ablations, we find that selective retrieval is essential and that heuristics provide more transferable abstractions than few-shot trajectory prompting. These results demonstrate that reflecting on single-attempt experiences to extract transferable heuristics enables effective agent self-improvement.",
+  "authors": "Marc-Antoine Allard, Arnaud Teinturier, Victor Xing, Gautier Viaud",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 11,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "自改进智能体框架，反思轨迹生成启发式，属自我改进方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "自我改进智能体框架，经验反思启发式，契合递归自改进。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "经验反思学习框架，生成并检索启发式规则",
+  "data": "任务轨迹与结果，未披露具体规模",
+  "scenario": "LLM智能体环境自适应自改进",
+  "benchmark": "Gaia2基准，对比ReAct基线及先前经验学习方法",
+  "results": "成功率较ReAct提升7.8%，任务完成可靠性大幅提升，优于先前经验学习方法",
+  "availability": "",
+  "limitations": "仅在Gaia2评测，未验证更广泛环境",
+  "summary": "论文提出经验反思学习（ERL），一个通过经验学习实现快速环境自适应的自改进框架。ERL反思任务轨迹和结果生成可迁移的启发式规则，测试时检索相关规则注入智能体上下文指导执行。在Gaia2上成功率较ReAct提升7.8%，优于先前经验学习方法，消融表明选择性检索至关重要，启发式比少样本轨迹提示更具可迁移性。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

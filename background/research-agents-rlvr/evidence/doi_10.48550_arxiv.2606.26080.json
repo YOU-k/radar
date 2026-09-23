@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2606.26080",
+  "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+  "url": "https://doi.org/10.48550/arXiv.2606.26080",
+  "abstract": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training altogether. Concretely, we derive an implicit advantage under a general stochastic Markov decision process, which we term progress advantage -- log-probability ratio between the RL-trained policy and its reference policy exactly recovers the optimal advantage function. This formulation makes the resulting signal annotation-free, domain-agnostic, and available as a byproduct of the standard RL post-training pipeline. We validate the effectiveness of the progress advantage across three different applications: test-time scaling, uncertainty quantification, and failure attribution on five benchmarks and four model families. Across all settings, it consistently outperforms confidence-based baselines and, despite requiring no task-specific training, surpasses dedicated trained reward models. We complement these results with deeper analyses on characteristics of progress advantage, offering practical guidance for adoption in real-world agentic systems.",
+  "authors": "Changdae Oh, Wendi Li, S. Park, Samuel Yeh, Tanwi Mallick, Sharon Li",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2:citations:arxiv:2410.11287",
+   "s2:citations:arxiv:2502.10325"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "利用RL后训练隐式优势做过程奖励，属过程奖励方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "过程奖励隐式进展优势，免奖励模型，RLVR关键。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "进度优势：策略与参考策略对数概率比",
+  "data": "五个基准、四个模型族",
+  "scenario": "智能体步级评分与信用分配",
+  "benchmark": "对比置信度基线与专用训练奖励模型",
+  "results": "在测试时扩展、不确定性量化、失败归因三应用中一致优于置信度基线，并超过专用奖励模型",
+  "availability": "",
+  "limitations": "未报告具体数值指标，依赖RL后训练管线",
+  "summary": "指出为智能体构建过程奖励模型因长时程、不可逆动作与随机反馈而难以规模化。作者推导出一般随机MDP下的隐式优势——进度优势，即RL训练策略与参考策略的对数概率比恰好恢复最优优势函数，无需标注与专用奖励模型训练。在测试时扩展、不确定性量化与失败归因三类应用中，跨五基准四模型族一致优于置信度基线并超越专用奖励模型。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

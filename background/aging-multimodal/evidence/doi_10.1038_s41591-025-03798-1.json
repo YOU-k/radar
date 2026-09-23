@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41591-025-03798-1",
+  "title": "Plasma proteomics links brain and immune system aging with healthspan and longevity.",
+  "url": "https://doi.org/10.1038/s41591-025-03798-1",
+  "abstract": "Plasma proteins derived from specific organs can estimate organ age and mortality, but their sensitivity to environmental factors and their robustness in forecasting onset of organ diseases and mortality remain unclear. To address this gap, we estimate the biological age of 11 organs using plasma proteomics data (2,916 proteins) from 44,498 individuals in the UK Biobank. Organ age estimates were sensitive to lifestyle factors and medications and were associated with future onset (within 17 years' follow-up) of a range of diseases, including heart failure, chronic obstructive pulmonary disease, type 2 diabetes and Alzheimer's disease. Notably, having an especially aged brain posed a risk of Alzheimer's disease (hazard ratio (HR) = 3.1) that was similar to carrying one copy of APOE4, the strongest genetic risk factor for sporadic Alzheimer's disease, whereas a youthful brain (HR = 0.26) provided protection that was similar to carrying two copies of APOE2, independent of APOE genotype. Accrual of aged organs progressively increased mortality risk (2-4 aged organs, HR = 2.3; 5-7 aged organs, HR = 4.5; 8+ aged organs, HR = 8.3), whereas youthful brains and immune systems were uniquely associated with longevity (youthful brain, HR = 0.60 for mortality risk; youthful immune system, HR = 0.58; youthful both, HR = 0.44). Altogether, these findings support the use of plasma proteins for monitoring of organ health and point to the brain and immune systems as key targets for longevity interventions.",
+  "authors": "Oh HS, Le Guen Y, Rappoport N, Urey DY, Farinas A, Rutledge J, Channappa D, Wagner AD, Mormino E, Brunet A, Greicius MD, Wyss-Coray T.",
+  "venue": "Nature medicine",
+  "year": 2025,
+  "citations": 64,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC12353788",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank血浆蛋白组11器官年龄，大规模可复用。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Medicine血浆蛋白组器官时钟，4.4万人队列",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于器官富集血浆蛋白训练LASSO年龄预测模型",
+  "data": "UKB 44,498人Olink约3,000蛋白；训练23,140，测试21,358",
+  "scenario": "器官特异性生物年龄与疾病/死亡风险",
+  "benchmark": "PhenoAge、eGFR等既有衰老生物标志物；SomaScan既往模型",
+  "results": "构建11个器官年龄模型；器官年龄可预测疾病、环境暴露和死亡；脑、动脉和整体年龄可预测传统年龄r²=0.97",
+  "availability": "",
+  "limitations": "主要基于UKB；蛋白平台和器官富集定义有局限；观察性关联不能证明因果",
+  "summary": "研究利用UKB血浆蛋白质组学数据估计11个器官的特异性生物年龄。作者定义器官富集蛋白，用LASSO训练年龄预测模型并计算年龄差，再关联疾病、生活方式和死亡风险。结果显示器官年龄差可反映器官特异衰老，脑、动脉和整体年龄足以高度预测传统年龄，并与健康寿命和长寿相关。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

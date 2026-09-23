@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-66220-x",
+  "title": "A multimodal knowledge-enhanced whole-slide pathology foundation model.",
+  "url": "https://doi.org/10.1038/s41467-025-66220-x",
+  "abstract": "Computational pathology has advanced through foundation models, yet faces challenges in multimodal integration and capturing whole-slide context. Current approaches typically utilize either vision-only or image-caption data, overlooking distinct insights from pathology reports and gene expression profiles. Additionally, most models focus on patch-level analysis, failing to capture comprehensive whole-slide patterns. Here we present mSTAR (Multimodal Self-TAught PRetraining), the pathology foundation model that incorporates three modalities: pathology slides, expert-created reports, and gene expression data, within a unified framework. Our dataset includes 26,169 slide-level modality pairs across 32 cancer types, comprising over 116 million patch images. This approach injects multimodal whole-slide context into patch representations, expanding modeling from single to multiple modalities and from patch-level to slide-level analysis. Across oncological benchmark spanning 97 tasks, mSTAR outperforms previous state-of-the-art models, particularly in molecular prediction and multimodal tasks, revealing that multimodal integration yields greater improvements than simply expanding vision-only datasets.",
+  "authors": "Xu Y, Wang Y, Zhou F, Ma J, Jin C, Yang S, Li J, Zhang Z, Zhao C, Zhou H, Li Z, Lin H, Wang X, Wang J, Han A, Chan RCK, Liang L, Zhang X, Chen H.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 23,
+  "found_by": [
+   "eupmc:spatial transcriptomics founda"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12738713",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "病理基础模型，融合影像、报告与基因表达，多模态契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "全切片多模态病理基础模型，含基因表达，公开权重，传播快",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多模态知识增强全切片病理基础模型",
+  "data": "26,169切片-模态对，10,275患者，32癌种，1.16亿patch",
+  "scenario": "全切片病理临床任务",
+  "benchmark": "PLIP、CONCH及视觉单模态病理基础模型",
+  "results": "在15类97项任务中表现优异；多模态预训练可用更少数据达到竞争性能",
+  "availability": "文中未明确提及",
+  "limitations": "依赖报告与基因表达配对数据；跨中心泛化仍需验证",
+  "summary": "mSTAR是一种整合病理切片、病理报告和基因表达的全切片病理基础模型。其采用两阶段预训练：先以切片级对比学习训练聚合器，再将全切片上下文注入patch特征提取器。在97项临床任务中，多模态预训练提升了分子预测、报告生成和多模态融合等性能，并显示可用更少数据达到竞争效果。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

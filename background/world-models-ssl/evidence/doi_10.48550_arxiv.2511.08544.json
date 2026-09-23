@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2511.08544",
+  "title": "LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics",
+  "url": "https://doi.org/10.48550/arXiv.2511.08544",
+  "abstract": "Learning manipulable representations of the world and its dynamics is central to AI. Joint-Embedding Predictive Architectures (JEPAs) offer a promising blueprint, but lack of practical guidance and theory has led to ad-hoc R&D. We present a comprehensive theory of JEPAs and instantiate it in {\\bf LeJEPA}, a lean, scalable, and theoretically grounded training objective. First, we identify the isotropic Gaussian as the optimal distribution that JEPAs'embeddings should follow to minimize downstream prediction risk. Second, we introduce a novel objective--{\\bf Sketched Isotropic Gaussian Regularization} (SIGReg)--to constrain embeddings to reach that ideal distribution. Combining the JEPA predictive loss with SIGReg yields LeJEPA with numerous theoretical and practical benefits: (i) single trade-off hyperparameter, (ii) linear time and memory complexity, (iii) stability across hyper-parameters, architectures (ResNets, ViTs, ConvNets) and domains, (iv) heuristics-free, e.g., no stop-gradient, no teacher-student, no hyper-parameter schedulers, and (v) distributed training-friendly implementation requiring only $\\approx$50 lines of code. Our empirical validation covers 10+ datasets, 60+ architectures, all with varying scales and domains. As an example, using imagenet-1k for pretraining and linear evaluation with frozen backbone, LeJEPA reaches 79\\% with a ViT-H/14. We hope that the simplicity and theory-friendly ecosystem offered by LeJEPA will reestablish self-supervised pre-training as a core pillar of AI research (\\href{https://github.com/rbalestr-lab/lejepa}{GitHub repo}).",
+  "authors": "Randall Balestriero, Yann LeCun",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 208,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2606.14813"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA理论化与SIGReg目标，方法新且可复用，契合方向核心",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA理论化与可扩展目标，代表该范式转折点，必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LeJEPA：JEPA预测损失+SIGReg各向同性高斯正则",
+  "data": "10+数据集、60+架构，含ImageNet-1k预训练",
+  "scenario": "自监督表征学习理论与可扩展训练",
+  "benchmark": "JEPA类方法；ImageNet-1k线性评估",
+  "results": "ViT-H/14在ImageNet-1k冻结骨干线性评估达79%；单超参、线性复杂度、稳定",
+  "availability": "",
+  "limitations": "理论假设与经验验证虽广，但未明确讨论跨全部真实下游任务的预测风险最优性边界",
+  "summary": "提出LeJEPA，为JEPA提供理论并实例化为简洁可扩展训练目标。方法指出各向同性高斯是嵌入最优分布，并用SIGReg约束嵌入，与JEPA预测损失结合，避免stop-gradient、教师学生和调度器等启发式。实验覆盖10+数据集和60+架构，ViT-H/14在ImageNet-1k线性评估达79%，显示单超参、线性复杂度、跨架构稳定且实现约50行代码。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2512.03244",
+  "title": "ScalePRM: Training Process Reward Models by Scaling Verification Compute Without Ground Truth",
+  "url": "https://arxiv.org/abs/2512.03244v2",
+  "abstract": "Training process reward models (PRMs) requires step-level correctness labels, obtained either through expensive human annotation or by relying on ground-truth answers, limiting the ability to scale process-level supervision. We propose ScalePRM, which scales verification compute as an alternative: given a problem and a candidate solution, we generate multiple independent verifications of each reasoning step and aggregate their judgments to produce synthetic step-level labels without ground truth. We explore two representative inference-time scaling strategies, parallel scaling through self-consistency and sequential scaling through meta-critique, and train generative PRMs on the resulting synthetic data. On ProcessBench, a benchmark for identifying erroneous steps in mathematical reasoning, PRMs trained on step-level self-consistency data achieve 67.5 F1, surpassing reference-guided training with ground-truth access (66.4 F1) and GPT-4o as a critic (61.9 F1). When deployed as reward signals in RL training with Qwen2.5-Math-7B, our best PRM achieves 47.4% average accuracy across six mathematical reasoning benchmarks, outperforming ground-truth-based RLVR (43.9%). We also identify and address reward exploitation patterns unique to generative PRM-based RL. Our results demonstrate that scaling verification compute is a viable alternative to ground-truth supervision for training process reward models.",
+  "authors": "Salman Rahman, Sruthi Gorantla, Arpit Gupta, Swastik Roy, Nanyun Peng, Yang Liu",
+  "venue": "",
+  "year": 2025,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "无真值扩展验证计算训练PRM，属过程奖励方法新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "无需真值扩展验证计算训练PRM，方法通用且可复现。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "ScalePRM：扩展验证计算生成合成步级标签训练PRM",
+  "data": "合成步级验证数据；ProcessBench与六个数学推理基准",
+  "scenario": "无真值的过程奖励模型训练与RL",
+  "benchmark": "参考引导训练、GPT-4o critic、RLVR；ProcessBench",
+  "results": "ProcessBench达67.5 F1，超参考引导66.4与GPT-4o 61.9；作奖励信号时Qwen2.5-Math-7B六基准平均47.4%，超RLVR 43.9%",
+  "availability": "",
+  "limitations": "存在生成式PRM特有的奖励利用模式，需额外缓解",
+  "summary": "针对训练PRM需要昂贵人工步级标注或依赖真值答案、限制过程监督规模化的问题，提出ScalePRM。ScalePRM以扩展验证计算替代真值：给定问题与候选解，对每个推理步生成多个独立验证并聚合判断，得到合成步级标签，探索并行自一致性与串行元批判两种推理时扩展策略，并用其监督微调生成式PRM，再作为RL奖励信号。在ProcessBench上，步级自一致性数据训练的PRM达67.5 F1，超过有真值的参考引导66.4 F1和GPT-4o critic 61.9 F1；用于Qwen2.5-Math-7B的RL时，六个数学推理基准平均47.4%，优于基于真值的RLVR 43.9%。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

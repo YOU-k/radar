@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.05.12.724604",
+  "title": "BiomniBench: Process-level Evaluation of LLM Agents for Real-world Biomedical Research",
+  "url": "https://doi.org/10.64898/2026.05.12.724604",
+  "abstract": "LLM agents now perform real biomedical research, but evaluating them rigorously is hard. Outcome-only benchmarks fail in two ways. First, a correct final answer can come from memorization, reward hacking, or wrong reasoning that produces the right number by chance. Second, valid alternative analyses are marked wrong simply because they differ from the reference. We introduce BiomniBench, a process-level evaluation framework that scores the full agent trajectory against expert-designed, task-specific rubrics. Our first release, BiomniBench-DA, contains 100 data-analysis tasks across 17 task types, 5 disease areas, and a general-biology category, each based on a paper from journals such as Nature, Cell, and Science and co-developed with an original author or a domain expert. Benchmarking frontier and open-weight models across four agent harnesses reveals three findings. Frontier and open-weight bases cluster within a few points of each other, with substantial headroom for all models. The agent harness shifts scores by more than the gap between successive model generations. Agents reliably ground claims in real sources yet consistently fall short on method selection, biological interpretation, and scientific reasoning. BiomniBench is the first process-level benchmark for LLM agents in biomedical research, providing the dimension-level diagnostics that outcome scoring cannot. Dataset huggingface.co/datasets/phylobio/BiomniBench-DA",
+  "authors": "Yuanhao Qu, Ying-Zhou Lu, Xinming Tu, Serena Zhang, Tianwei She, A. Shaw, Jou-Ho Shih, Bingqing Zhao",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 9,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2503.00096"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "生物医学智能体过程级评测，100任务含专家评分标准",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "BiomniBench过程级生物医学智能体评测，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于专家设计任务专属评分标准的全过程轨迹评估",
+  "data": "100个数据分析任务，17种类型，5个疾病领域",
+  "scenario": "真实生物医学研究智能体评估",
+  "benchmark": "BiomniBench-DA，前沿与开源模型跨四种智能体框架对比",
+  "results": "前沿与开源模型差距仅几分且均有较大提升空间；智能体框架带来的分数差异大于相邻代际模型差距；智能体在方法选择、生物学解释与科学推理上持续不足",
+  "availability": "数据集公开（HuggingFace链接）",
+  "limitations": "仅覆盖数据分析任务，未涵盖完整科研流程",
+  "summary": "本文提出BiomniBench，一个针对LLM智能体在真实生物医学研究中的过程级评估框架，按专家设计的任务专属评分标准对完整轨迹打分。首个版本BiomniBench-DA包含100个数据分析任务，覆盖17种任务类型、5个疾病领域，均基于Nature、Cell、Science等论文并与原作者或领域专家共同开发。基准测试发现前沿与开源模型差距很小且均有较大提升空间，智能体框架影响大于模型代际差异，智能体在方法选择、生物学解释和科学推理上持续不足。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2606.04130",
+  "title": "CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization",
+  "url": "https://doi.org/10.48550/arXiv.2606.04130",
+  "abstract": "We introduce CLAW, a fully end-to-end self-supervised framework for learning a world model jointly with continuous latent action representations directly from action-free videos. Our approach leverages adversarial latent regularization and diffusion-based video generation to capture structured and semantically meaningful action representations while modeling rich, predictive environment dynamics, without relying on any action labels or annotations. By simultaneously training the Latent Action Model and world model, CLAW learns to reason about how inferred actions induce environment transitions from visual observations alone. We show that the resulting latent action world model supports both imitation learning from observation and goal-directed planning. In imitation learning, latent actions extracted from raw videos enable behavior cloning. For planning, CLAW generates sequences of latent actions and maps them to executable actions to reach desired goals. Extensive experiments across diverse tasks and embodiments demonstrate that CLAW produces semantically meaningful latent action representations, supports effective action transfer, and enables planning and imitation from observation, outperforming existing methods.",
+  "authors": "T. Ayalew, Matthew Jeung, Samuel Wheeler, Xiao Zhang, Ander Arce, Kaylene C. Stocking, Michael Maire, Matthew R. Walter",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:arxiv:2005.05960"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "无动作标签学习连续隐动作世界模型，方法有新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "无动作视频学连续隐动作世界模型，方法新颖有代码",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "对抗潜正则+扩散视频生成，端到端联合训练潜动作与世界模型",
+  "data": "无动作标签视频（未给规模）",
+  "scenario": "模仿学习与目标导向规划",
+  "benchmark": "现有潜动作/世界模型方法（未列具体名）",
+  "results": "生成语义化潜动作，支持动作迁移、规划与从观察模仿，优于现有方法",
+  "availability": "",
+  "limitations": "全文未公开，缺乏定量指标与规模细节",
+  "summary": "提出CLAW，从无动作视频中端到端自监督学习连续潜动作世界模型。用对抗潜正则与扩散视频生成同时训练潜动作模型和世界模型，从视觉观察推断动作如何引起环境变化。结果显示潜动作具语义性，可支持从观察模仿、动作迁移与目标导向规划，并超越现有方法。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

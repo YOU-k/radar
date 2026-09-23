@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2406.15341",
+  "title": "GenoTEX: An LLM Agent Benchmark for Automated Gene Expression Data Analysis",
+  "url": "https://arxiv.org/abs/2406.15341",
+  "abstract": "Recent advancements in machine learning have significantly improved the identification of disease-associated genes from gene expression datasets. However, these processes often require extensive expertise and manual effort, limiting their scalability. Large Language Model (LLM)-based agents have shown promise in automating these tasks due to their increasing problem-solving abilities. To support the evaluation and development of such methods, we introduce GenoTEX, a benchmark dataset for the automated analysis of gene expression data. GenoTEX provides analysis code and results for solving a wide range of gene-trait association problems, encompassing dataset selection, preprocessing, and statistical analysis, in a pipeline that follows computational genomics standards. The benchmark includes expert-curated annotations from bioinformaticians to ensure accuracy and reliability. To provide baselines for these tasks, we present GenoAgent, a team of LLM-based agents that adopt a multi-step programming workflow with flexible self-correction, to collaboratively analyze gene expression datasets. Our experiments demonstrate the potential of LLM-based methods in analyzing genomic data, while error analysis highlights the challenges and areas for future improvement. We propose GenoTEX as a promising resource for benchmarking and enhancing automated methods for gene expression data analysis. The benchmark is available at https://github.com/Liu-Hy/GenoTEX.",
+  "authors": "Haoyang Liu, Shuyu Chen, Ye Zhang, Hao-Han Wang",
+  "venue": "",
+  "year": 2024,
+  "citations": 7,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "基因表达分析LLM智能体基准，含代码结果，契合生物医学智能体。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "基因表达分析智能体基准，含代码结果，生物医学场景。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "GenoAgent多智能体多步编程自纠错流程",
+  "data": "基因表达数据集，含专家标注代码与结果",
+  "scenario": "基因-性状关联分析自动化",
+  "benchmark": "GenoTEX基准，遵循计算基因组学标准流程",
+  "results": "展示LLM方法分析基因组数据潜力；错误分析揭示挑战与改进方向",
+  "availability": "基准公开于GitHub Liu-Hy/GenoTEX",
+  "limitations": "错误分析显示现有方法仍存在明显失败模式",
+  "summary": "为评估LLM智能体自动化基因表达分析，构建了GenoTEX基准。该基准按计算基因组学标准统一流程，涵盖数据集选择、预处理与统计分析，并由生物信息学家人工标注代码与中间/最终结果。同时提出多智能体GenoAgent基线，实验显示LLM方法具潜力，但错误分析暴露了待改进的挑战。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

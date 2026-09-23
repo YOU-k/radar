@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "arxiv:2002.05709",
+  "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+  "url": "https://arxiv.org/abs/2002.05709",
+  "abstract": "This paper presents SimCLR: a simple framework for contrastive learning of visual representations. We simplify recently proposed contrastive self-supervised learning algorithms without requiring specialized architectures or a memory bank. In order to understand what enables the contrastive prediction tasks to learn useful representations, we systematically study the major components of our framework. We show that (1) composition of data augmentations plays a critical role in defining effective predictive tasks, (2) introducing a learnable nonlinear transformation between the representation and the contrastive loss substantially improves the quality of the learned representations, and (3) contrastive learning benefits from larger batch sizes and more training steps compared to supervised learning. By combining these findings, we are able to considerably outperform previous methods for self-supervised and semi-supervised learning on ImageNet. A linear classifier trained on self-supervised representations learned by SimCLR achieves 76.5% top-1 accuracy, which is a 7% relative improvement over previous state-of-the-art, matching the performance of a supervised ResNet-50. When fine-tuned on only 1% of the labels, we achieve 85.8% top-5 accuracy, outperforming AlexNet with 100X fewer labels.",
+  "authors": "Ting Chen, Simon Kornblith, Mohammad Norouzi, Geoffrey E. Hinton",
+  "venue": "International Conference on Machine Learning",
+  "year": 2020,
+  "citations": 26276,
+  "found_by": [
+   "s2:references:arxiv:2010.13902",
+   "s2:references:doi:10.48550/arxiv.2203.06604"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "SimCLR对比学习奠基工作，方向核心背景",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "SimCLR对比学习奠基之作，必读经典",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SimCLR：强数据增强+非线性投影头+NT-Xent对比损失",
+  "data": "ImageNet ILSVRC-2012及12个自然图像分类数据集",
+  "scenario": "视觉自监督与半监督表征学习",
+  "benchmark": "ImageNet线性评估，此前自监督SOTA与监督ResNet-50",
+  "results": "线性分类76.5% top-1，较此前SOTA相对提升7%；1%标签微调达85.8% top-5",
+  "availability": "代码公开：github.com/google-research/simclr",
+  "limitations": "需大batch与长训练，算力开销大",
+  "summary": "提出SimCLR，一个无需专用架构或记忆库的简单对比学习框架。通过组合数据增强、表示与对比损失间可学习非线性变换、归一化嵌入与温度参数，最大化同一样本不同增强视图的一致性。ImageNet线性评估达76.5% top-1，较此前SOTA相对提升7%，1%标签微调达85.8% top-5，12个数据集中10个不逊于强监督基线。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

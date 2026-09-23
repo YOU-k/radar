@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.arr.2024.102552",
+  "title": "Breaking new ground on human health and well-being with epigenetic clocks: A systematic review and meta-analysis of epigenetic age acceleration associations.",
+  "url": "https://doi.org/10.1016/j.arr.2024.102552",
+  "abstract": "Epigenetic clocks provide an accurate molecular readout of epigenetic age and epigenetic age acceleration (EAA) derived from DNA methylation data have shown promise as biomarkers of ageing. This systematic review synthesised research on associations between EAA measures and various physiological, cognitive, social, and environmental factors. A comprehensive search strategy identified 299 publications reporting 1050 unique EAA-factor associations based on 53 methylation clocks. Random-effects meta-analyses pooled results across studies for selected EAA-factor pairs. Significant pooled associations emerged, providing insights into relationships between specific factors and accelerated epigenetic ageing. We developed a novel four-level classification system to categorise this diverse range of factors and enable a structured synthesis. To aid further research planning in this rapidly evolving field, TEAPEE (Tracker of EAA Associations with Phenotype & Environmental Exposure) - an interactive, searchable web table detailing all EAA-factor associations - was developed, cataloguing the epigenetic clocks, associated factors, classification categories, and direct links to the original studies. This resource will empower future investigations into the multifaceted determinants of epigenetic ageing, contributing to a deeper understanding of the epigenome's sensitivity to various life experiences and exposures.",
+  "authors": "Chervova O, Panteleeva K, Chernysheva E, Widayati TA, Baronik ŽF, Hrbková N, Schneider JL, Bobak M, Beck S, Voloshin V.",
+  "venue": "Ageing research reviews",
+  "year": 2024,
+  "citations": 55,
+  "found_by": [
+   "eupmc:epigenetic clock biological ag"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统综述与荟萃分析，整合53种表观时钟关联，具参考价值",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "表观时钟EAA与多因素关联的系统综述与荟萃分析，方向必读参考。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "系统综述与荟萃分析EAA关联",
+  "data": "299篇文献，1050个EAA-因素关联，53种时钟",
+  "scenario": "表观年龄加速与健康因素",
+  "benchmark": "多种EAA与生理、认知、社会、环境因素",
+  "results": "随机效应荟萃分析发现若干EAA-因素显著汇总关联；建立四级分类与TEAPEE数据库",
+  "availability": "TEAPEE交互网页公开",
+  "limitations": "研究异质性大；部分关联证据有限；因果方向不明确",
+  "summary": "研究系统综述并荟萃分析表观遗传年龄加速与多种因素的关联。作者检索299篇文献，提取1050个EAA-因素关联和53种甲基化时钟，对选定配对进行随机效应荟萃分析。结果显示若干EAA与生理、认知、社会和环境因素存在显著汇总关联，并开发TEAPEE交互资源支持后续研究。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

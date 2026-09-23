@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2603.15553",
+  "title": "Self-Distillation of Hidden Layers for Self-Supervised Representation Learning",
+  "url": "https://doi.org/10.48550/arXiv.2603.15553",
+  "abstract": "The landscape of self-supervised learning (SSL) is currently dominated by generative approaches (e.g. MAE) that reconstruct raw low-level data, and predictive approaches (e.g. I-JEPA) that predict high-level abstract embeddings. While generative methods are stable due to their reliable training targets based on ground-truth data, they are computationally inefficient for high-redundancy modalities like imagery, and their training objective does not prioritize learning high-level, conceptual features. Conversely, predictive methods often suffer from training instability due to their reliance on the non-stationary targets of final-layer self-distillation. We introduce Bootleg, a method that bridges this divide by tasking the model with predicting latent representations from multiple hidden layers of a teacher. This hierarchical objective forces the model to capture features at varying levels of abstraction simultaneously. We demonstrate Bootleg significantly outperforms comparable baselines (+10% vs. I-JEPA) on frozen probe classification of ImageNet-1K, iNaturalist-21, and VTAB, and semantic segmentation of ADE20K, Cityscapes, and COCO-Stuff.",
+  "authors": "Scott C. Lowe, A. Fuller, S. Oore, Evan Shelhamer, Graham W. Taylor",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2:citations:arxiv:2410.05016",
+   "s2:citations:arxiv:2507.02915"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "自蒸馏隐层SSL新方法，针对MAE与I-JEPA缺陷，方法有新意。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "提出自蒸馏新范式，针对JEPA/MAE痛点，有方法价值。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Bootleg：预测教师多层隐藏层潜表征自蒸馏",
+  "data": "图像数据；ImageNet-1K、iNaturalist-21、VTAB、ADE20K、Cityscapes、COCO-Stuff",
+  "scenario": "自监督视觉表征学习",
+  "benchmark": "I-JEPA等生成式与预测式SSL基线",
+  "results": "冻结探针分类较I-JEPA提升+10%；在ImageNet-1K、iNaturalist-21、VTAB及ADE20K、Cityscapes、COCO-Stuff分割上显著优于可比基线",
+  "availability": "",
+  "limitations": "未明确讨论多层教师目标带来的训练成本、教师设计依赖和跨模态扩展限制",
+  "summary": "提出Bootleg，连接生成式与预测式自监督学习，通过预测教师多个隐藏层的潜表征训练模型。方法用分层目标迫使模型同时捕获不同抽象层级特征，避免仅重建低层数据或依赖最终层非平稳自蒸馏目标。实验发现Bootleg在ImageNet-1K、iNaturalist-21、VTAB冻结探针分类上较I-JEPA提升+10%，并在ADE20K、Cityscapes、COCO-Stuff语义分割上显著优于可比基线。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

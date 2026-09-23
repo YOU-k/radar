@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2402.03300",
+  "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+  "url": "https://doi.org/10.48550/arXiv.2402.03300",
+  "abstract": "Mathematical reasoning poses a significant challenge for language models due to its complex and structured nature. In this paper, we introduce DeepSeekMath 7B, which continues pre-training DeepSeek-Coder-Base-v1.5 7B with 120B math-related tokens sourced from Common Crawl, together with natural language and code data. DeepSeekMath 7B has achieved an impressive score of 51.7% on the competition-level MATH benchmark without relying on external toolkits and voting techniques, approaching the performance level of Gemini-Ultra and GPT-4. Self-consistency over 64 samples from DeepSeekMath 7B achieves 60.9% on MATH. The mathematical reasoning capability of DeepSeekMath is attributed to two key factors: First, we harness the significant potential of publicly available web data through a meticulously engineered data selection pipeline. Second, we introduce Group Relative Policy Optimization (GRPO), a variant of Proximal Policy Optimization (PPO), that enhances mathematical reasoning abilities while concurrently optimizing the memory usage of PPO.",
+  "authors": "Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Jun-Mei Song, Mingchuan Zhang, Y. K. Li, Yu Wu",
+  "venue": "arXiv.org",
+  "year": 2024,
+  "citations": 8950,
+  "found_by": [
+   "s2:references:arxiv:2501.12948",
+   "seed"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2402.03300"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "提出 GRPO，开源模型与数据，RLVR 训练范式关键方法。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "GRPO原始论文，开源实现，RLVR方向绕不开的基础。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "DeepSeekMath 7B：数学语料继续预训练+GRPO",
+  "data": "120B数学相关token，来自Common Crawl及自然语言/代码数据",
+  "scenario": "数学推理",
+  "benchmark": "MATH竞赛级基准；对比Gemini-Ultra、GPT-4",
+  "results": "MATH达51.7%；64样本自洽达60.9%，接近Gemini-Ultra与GPT-4",
+  "availability": "",
+  "limitations": "未使用外部工具与投票时仍低于顶级闭源模型；依赖公开网页数据质量",
+  "summary": "论文提出DeepSeekMath 7B，通过继续预训练和GRPO提升开放模型数学推理。方法从Common Crawl筛选120B数学token，并引入GRPO优化PPO内存与推理能力。MATH达51.7%，自洽64样本达60.9%，接近Gemini-Ultra和GPT-4。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

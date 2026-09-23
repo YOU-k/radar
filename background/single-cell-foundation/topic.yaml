@@ -1,0 +1,44 @@
+# 方向定义（人改；其余文件由流水线生成）
+name: 单细胞与空间组学基础模型与虚拟细胞
+definition: >
+  在大规模单细胞 / 空间转录组、蛋白组、cell painting 与扰动测序数据上预训练的基础模型，
+  以及以其为核心的"虚拟细胞"：扰动响应预测、细胞状态生成、多模态整合与评测基准。
+include:
+  - 单细胞 / 空间 / 蛋白 / 形态基础模型，有公开权重
+  - 扰动响应预测（Perturb-seq、CRISPR 筛选、药物）与虚拟细胞框架
+  - 多模态整合方法（RNA + 蛋白 + 空间 + 影像）
+  - 大规模图谱与扰动数据资源（Tahoe-100M、CZI 等）
+  - 系统性评测基准与批判性结果（含"没跑赢基线"的证据）
+exclude:
+  - 单一数据集的常规分析流程改良
+  - 无权重无代码的模型论文
+  - 小规模应用案例
+keywords: [single-cell foundation model, virtual cell, perturbation prediction, Perturb-seq, spatial transcriptomics,
+  cell atlas, scGPT, Geneformer, multimodal integration, cell painting, protein language model, CRISPR screen,
+  cell state, generative model, benchmark, Tahoe]
+queries:
+  - "single-cell foundation model"
+  - "virtual cell perturbation prediction"
+  - "spatial transcriptomics foundation model"
+  - "Perturb-seq deep learning"
+  - "single-cell multimodal integration"
+  - "cell painting foundation model"
+  - "single-cell benchmark foundation models"
+journals: [Nature Methods, Nature Biotechnology, Nature, Cell, Science, Cell Systems, Nature Machine Intelligence]
+seeds:
+  - doi:10.1038/s41586-023-06139-9     # Geneformer
+  - doi:10.1038/s41592-024-02201-0     # scGPT
+radar_domain: data_models
+months: 24
+outline:
+  - title: 背景与定义
+  - title: 方法学
+    children:
+      - title: 单细胞基础模型
+      - title: 空间与多模态模型
+      - title: 扰动响应与虚拟细胞
+  - title: 数据与资源
+  - title: 应用与结果
+  - title: 评测、可复现性与争议
+  - title: 空白与趋势
+budget: {rounds: 8, max_candidates: 80, max_screen: 60, max_extract: 40, stop_delta: 0.02}

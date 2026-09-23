@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2501.12599",
+  "title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+  "url": "https://doi.org/10.48550/arXiv.2501.12599",
+  "abstract": "Language model pretraining with next token prediction has proved effective for scaling compute but is limited to the amount of available training data. Scaling reinforcement learning (RL) unlocks a new axis for the continued improvement of artificial intelligence, with the promise that large language models (LLMs) can scale their training data by learning to explore with rewards. However, prior published work has not produced competitive results. In light of this, we report on the training practice of Kimi k1.5, our latest multi-modal LLM trained with RL, including its RL training techniques, multi-modal data recipes, and infrastructure optimization. Long context scaling and improved policy optimization methods are key ingredients of our approach, which establishes a simplistic, effective RL framework without relying on more complex techniques such as Monte Carlo tree search, value functions, and process reward models. Notably, our system achieves state-of-the-art reasoning performance across multiple benchmarks and modalities -- e.g., 77.5 on AIME, 96.2 on MATH 500, 94-th percentile on Codeforces, 74.9 on MathVista -- matching OpenAI's o1. Moreover, we present effective long2short methods that use long-CoT techniques to improve short-CoT models, yielding state-of-the-art short-CoT reasoning results -- e.g., 60.8 on AIME, 94.6 on MATH500, 47.3 on LiveCodeBench -- outperforming existing short-CoT models such as GPT-4o and Claude Sonnet 3.5 by a large margin (up to +550%).",
+  "authors": "Kimi Team, Angang Du, Bofei Gao, Bowei Xing, Changjiu Jiang, Cheng Chen, Cheng Li, Chenjun Xiao",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 1076,
+  "found_by": [
+   "s2:references:arxiv:2504.15275"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Kimi k1.5大规模RL训练实践，高引用，RLVR关键工作。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Kimi k1.5大规模RL训练实践，千次引用，该方向必读转折点。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "长上下文扩展与改进策略优化的RL训练框架",
+  "data": "多模态数据配方，未披露具体规模",
+  "scenario": "多模态LLM推理与RL训练",
+  "benchmark": "AIME、MATH500、Codeforces、MathVista、LiveCodeBench，对比o1",
+  "results": "AIME 77.5、MATH500 96.2、Codeforces 94百分位、MathVista 74.9，匹配o1；短CoT AIME 60.8、MATH500 94.6、LiveCodeBench 47.3，超GPT-4o等最多+550%",
+  "availability": "",
+  "limitations": "未公开训练细节与权重，未依赖MCTS/价值函数",
+  "summary": "论文报告了用强化学习训练的多模态LLM Kimi k1.5的训练实践。采用长上下文扩展和改进策略优化，构建不依赖MCTS、价值函数和过程奖励模型的简洁RL框架，并提出long2short方法。系统在多个基准达到SOTA，匹配OpenAI o1，短CoT模型大幅超越GPT-4o和Claude Sonnet 3.5。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

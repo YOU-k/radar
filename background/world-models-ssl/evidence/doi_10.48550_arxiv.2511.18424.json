@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2511.18424",
+  "title": "CrossJEPA: Cross-Modal Joint-Embedding Predictive Architecture for Efficient 3D Representation Learning from 2D Images",
+  "url": "https://doi.org/10.48550/arXiv.2511.18424",
+  "abstract": "Image-to-point cross-modal learning has emerged to address the scarcity of large-scale 3D datasets in 3D representation learning. However, current methods that leverage 2D data often result in large, slow-to-train models, making them computationally expensive and difficult to deploy in resource-constrained environments. The architecture design of such models is therefore critical, determining their performance, memory footprint, and compute efficiency. The Joint-embedding Predictive Architecture (JEPA) has gained wide popularity in self-supervised learning for its simplicity and efficiency, but has been under-explored in cross-modal settings, partly due to the misconception that masking is intrinsic to JEPA. In this light, we propose CrossJEPA, a simple Cross-modal Joint Embedding Predictive Architecture that harnesses the knowledge of an image foundation model and trains a predictor to infer embeddings of specific rendered 2D views from corresponding 3D point clouds, thereby introducing a JEPA-style pretraining strategy beyond masking. By conditioning the predictor on cross-domain projection information, CrossJEPA purifies the supervision signal from semantics exclusive to the target domain. We further exploit the frozen teacher design with a one-time target embedding caching mechanism, yielding amortized efficiency. CrossJEPA achieves a new state-of-the-art in linear probing on the synthetic ModelNet40 (94.2%) and the real-world ScanObjectNN (88.3%) benchmarks, using only 14.1M pretraining parameters (8.5M in the point encoder), and about 6 pretraining hours on a standard single GPU. These results position CrossJEPA as a performant, memory-efficient, and fast-to-train framework for 3D representation learning via knowledge distillation. We analyze CrossJEPA intuitively, theoretically, and empirically, and extensively ablate our design choices. Code will be made available.",
+  "authors": "Avishka Perera, K. Hewagamage, Saeedha Nazar, Kavishka Abeywardana, Hasitha Gallella, Ranga Rodrigo, Mohamed Afham",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 4,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2409.15803"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA跨模态扩展，方法有实质新意且契合方向核心",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA跨模态3D表征，属JEPA系列有代码工作",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "CrossJEPA跨模态联合嵌入预测",
+  "data": "2D图像与3D点云跨模态数据",
+  "scenario": "3D表示学习",
+  "benchmark": "ModelNet40、ScanObjectNN线性探测",
+  "results": "ModelNet40达94.2%，ScanObjectNN达88.3%，均为SOTA",
+  "availability": "",
+  "limitations": "依赖图像基础模型，未验证真实大规模3D场景",
+  "summary": "针对3D数据稀缺问题，提出CrossJEPA跨模态联合嵌入预测架构。利用图像基础模型知识，训练预测器从3D点云推断特定渲染2D视图的嵌入，并采用冻结教师与目标嵌入缓存提升效率。在ModelNet40和ScanObjectNN线性探测上取得SOTA，分别达94.2%和88.3%。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

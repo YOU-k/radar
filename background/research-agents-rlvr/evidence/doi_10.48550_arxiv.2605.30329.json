@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2605.30329",
+  "title": "SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?",
+  "url": "https://doi.org/10.48550/arXiv.2605.30329",
+  "abstract": "Autonomous AI research agents aim to accelerate scientific discovery by automating the research pipeline, from hypothesis generation to peer review. However, existing benchmarks rarely test a fundamental bottleneck: whether Large Language Models can judge the methodological viability of a research idea before expending time and computational resources. We introduce SoundnessBench, a curated benchmark of 1,099 machine-learning research proposals reconstructed from ICLR submissions, labeled with reviewer soundness sub-scores, and audited against source papers. SoundnessBench should be interpreted as a benchmark for recoverable proposal-stage soundness rather than exact prediction of full-paper review outcomes. Across 12 frontier LLMs, we find a pervasive optimism bias: under standard prompting, models frequently rate low-soundness proposals as sound, while aggressive prompting largely shifts errors from false positives to false negatives. Additional controls for public-corpus contamination, paper-identifying phrases, surface features, and human audit quality suggest that this behavior is not explained by a single confounder. Our results indicate that current LLMs are not yet reliable as standalone first-gate evaluators for scientific rigor.",
+  "authors": "Sy-Tuyen Ho, Ming-Hui Liu, H. Nghiem, Furong Huang",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 10,
+  "found_by": [
+   "s2kw:AI scientist benchmark reprodu"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI科学家研究想法可行性评测基准，含标注数据，契合评测方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "AI科学家研究想法健全性评测，批判性基准，价值高。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建研究提案合理性基准，含污染与特征控制",
+  "data": "1099个ML研究提案，源自ICLR投稿",
+  "scenario": "LLM评判研究想法方法可行性",
+  "benchmark": "12个前沿LLM，对比审稿人合理性子分数",
+  "results": "普遍存在乐观偏差，标准提示下常将低合理性提案评为合理，激进提示使错误从假阳性转向假阴性",
+  "availability": "",
+  "limitations": "仅评测提案阶段合理性，非完整论文评审结果",
+  "summary": "论文提出SoundnessBench，评测LLM能否判断研究想法的方法可行性。基准含1099个从ICLR投稿重建的ML研究提案，标注审稿人合理性子分数并对照源论文审计。评测12个前沿LLM发现普遍乐观偏差，标准提示下常将低合理性提案评为合理，激进提示则使错误从假阳性转向假阴性，表明当前LLM尚不能作为科研严谨性的独立首关评估者。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

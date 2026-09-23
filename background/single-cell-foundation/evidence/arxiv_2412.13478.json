@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2412.13478",
+  "title": "Efficient Fine-Tuning of Single-Cell Foundation Models Enables Zero-Shot Molecular Perturbation Prediction",
+  "url": "https://arxiv.org/abs/2412.13478v2",
+  "abstract": "Predicting transcriptional responses to novel drugs provides a unique opportunity to accelerate biomedical research and advance drug discovery efforts. However, the inherent complexity and high dimensionality of cellular responses, combined with the extremely limited available experimental data, makes the task challenging. In this study, we leverage single-cell foundation models (FMs) pre-trained on tens of millions of single cells, encompassing multiple cell types, states, and disease annotations, to address molecular perturbation prediction. We introduce a drug-conditional adapter that allows efficient fine-tuning by training less than 1% of the original foundation model, thus enabling molecular conditioning while preserving the rich biological representation learned during pre-training. The proposed strategy allows not only the prediction of cellular responses to novel drugs, but also the zero-shot generalization to unseen cell lines. We establish a robust evaluation framework to assess model performance across different generalization tasks, demonstrating state-of-the-art results across all settings, with significant improvements in the few-shot and zero-shot generalization to new cell lines compared to existing baselines.",
+  "authors": "Sepideh Maleki, Jan-Christian Huetter, Kangway V. Chuang, David Richmond, Gabriele Scalia, Tommaso Biancalani",
+  "venue": "",
+  "year": 2024,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "基于单细胞基础模型的扰动预测，属虚拟细胞核心方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "基于单细胞基础模型的零样本扰动预测，契合虚拟细胞核心任务",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "药物条件适配器微调单细胞基础模型",
+  "data": "scRNA-seq，数千万细胞，多细胞类型/状态/疾病",
+  "scenario": "分子扰动响应预测",
+  "benchmark": "现有基线方法，少样本/零样本新细胞系泛化",
+  "results": "仅训练<1%参数；所有设置达SOTA；新细胞系少样本与零样本泛化显著提升",
+  "availability": "",
+  "limitations": "扰动数据集仅覆盖数百分子、少数细胞系，样本有限",
+  "summary": "该研究利用预训练单细胞基础模型预测新药物转录响应。方法引入药物条件适配器，仅微调不到1%参数以保留预训练生物表征。结果显示在所有泛化设置下达SOTA，尤其在新细胞系少样本和零样本泛化上显著优于基线。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

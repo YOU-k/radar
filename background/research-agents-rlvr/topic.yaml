@@ -1,0 +1,45 @@
+# 方向定义（人改；其余文件由流水线生成）
+name: LLM 科研智能体与可验证奖励强化学习
+definition: >
+  面向科学发现的 LLM 智能体（文献、假设、实验、代码闭环）与支撑它们的训练范式：
+  RLVR / GRPO、过程奖励、自我改进与递归自改进，以及科研智能体的评测基准。
+include:
+  - AI scientist / 科研智能体系统，有代码或可复现评测
+  - RLVR、GRPO、过程奖励模型、自我改进等训练方法，有开源实现或明确定量结果
+  - 生物医学场景的智能体（文献综合、实验设计、组学分析）
+  - 智能体评测基准与批判性结果
+exclude:
+  - 纯提示工程的应用案例
+  - 无评测无代码的框架发布
+  - 营销/融资类新闻
+keywords: [LLM agent, AI scientist, research agent, RLVR, GRPO, process reward model, self-improving,
+  recursive self-improvement, tool use, agentic workflow, scientific discovery, benchmark, reinforcement learning,
+  biomedical agent, literature agent]
+queries:
+  - "AI scientist agent automated research"
+  - "reinforcement learning verifiable rewards"
+  - "GRPO reasoning language model"
+  - "process reward model"
+  - "self-improving language model agent"
+  - "biomedical research agent LLM"
+  - "agent benchmark scientific discovery"
+journals: [Nature, Science, Nature Machine Intelligence]
+seeds:
+  - arxiv:2501.12948      # DeepSeek-R1
+  - arxiv:2402.03300      # DeepSeekMath / GRPO
+  - arxiv:2408.06292      # The AI Scientist
+  - arxiv:2210.03629      # ReAct
+radar_domain: agents
+months: 24
+outline:
+  - title: 背景与定义
+  - title: 方法学
+    children:
+      - title: 科研智能体系统
+      - title: RLVR 与过程奖励
+      - title: 自我改进与递归自改进
+  - title: 数据与基准
+  - title: 生物医学场景应用
+  - title: 评测、可复现性与争议
+  - title: 空白与趋势
+budget: {rounds: 8, max_candidates: 80, max_screen: 60, max_extract: 40, stop_delta: 0.02}

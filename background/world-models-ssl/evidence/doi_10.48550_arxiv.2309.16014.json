@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2309.16014",
+  "title": "Graph-level Representation Learning with Joint-Embedding Predictive Architectures",
+  "url": "https://doi.org/10.48550/arXiv.2309.16014",
+  "abstract": "Joint-Embedding Predictive Architectures (JEPAs) have recently emerged as a novel and powerful technique for self-supervised representation learning. They aim to learn an energy-based model by predicting the latent representation of a target signal y from the latent representation of a context signal x. JEPAs bypass the need for negative and positive samples, traditionally required by contrastive learning while avoiding the overfitting issues associated with generative pretraining. In this paper, we show that graph-level representations can be effectively modeled using this paradigm by proposing a Graph Joint-Embedding Predictive Architecture (Graph-JEPA). In particular, we employ masked modeling and focus on predicting the latent representations of masked subgraphs starting from the latent representation of a context subgraph. To endow the representations with the implicit hierarchy that is often present in graph-level concepts, we devise an alternative prediction objective that consists of predicting the coordinates of the encoded subgraphs on the unit hyperbola in the 2D plane. Through multiple experimental evaluations, we show that Graph-JEPA can learn highly semantic and expressive representations, as shown by the downstream performance in graph classification, regression, and distinguishing non-isomorphic graphs. The code is available at https://github.com/geriskenderi/graph-jepa.",
+  "authors": "G. Skenderi, Hang Li, Jiliang Tang, Marco Cristani",
+  "venue": "Trans. Mach. Learn. Res.",
+  "year": 2023,
+  "citations": 27,
+  "found_by": [
+   "s2:references:arxiv:2410.05016"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA推广到图级表征，掩码建模，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "图级JEPA，拓展该范式到图数据，有代码有引用。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Graph-JEPA：掩码子图潜表征预测+双曲线坐标目标",
+  "data": "图数据；图分类、回归、非同构图区分任务",
+  "scenario": "图级自监督表征学习",
+  "benchmark": "图分类、回归、非同构图区分等下游任务",
+  "results": "学习到高语义表达表征，在图分类、回归和区分非同构图任务上表现良好",
+  "availability": "代码公开：https://github.com/geriskenderi/graph-jepa",
+  "limitations": "未明确讨论图规模扩展、复杂图结构泛化和预测目标计算成本",
+  "summary": "提出Graph-JEPA，将联合嵌入预测架构用于图级表征学习。方法采用掩码建模，从上下文子图潜表征预测被掩码子图潜表征，并用单位双曲线二维坐标预测目标赋予隐式层次。实验发现Graph-JEPA能学习高语义和表达性表征，在图分类、回归及区分非同构图等下游任务中表现良好。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

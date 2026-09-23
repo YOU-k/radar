@@ -1,0 +1,46 @@
+# 方向定义（人改；其余文件由流水线生成）
+name: 世界模型与自监督表征学习
+definition: >
+  以预测隐空间（JEPA）、世界模型、掩码建模、对比/蒸馏自监督为核心的表征学习范式，
+  以及状态空间模型、线性注意力等新架构；关注可迁移到生物多模态数据的思想与开源实现。
+include:
+  - JEPA 系列、世界模型（Dreamer、Genie 等）、掩码自编码、自蒸馏（DINO）等有代码的工作
+  - 状态空间模型 / 线性注意力 / 长序列架构
+  - 自监督表征在科学数据（组学、影像、时序）上的迁移
+  - 系统性评测与批判性分析
+exclude:
+  - 无代码的纯理论
+  - 单一下游任务的微调报告
+  - 增量式调参工作
+  - 把 JEPA / 掩码建模 / 对比学习套到小众垂直领域（无线通信、语音、点云、遥感等）的应用，除非方法本身有新意
+  - 纯语音 / 音频 / 图结构自监督（非本方向核心）
+keywords: [JEPA, world model, self-supervised, representation learning, masked autoencoder, DINO, state space model,
+  Mamba, linear attention, latent prediction, contrastive learning, foundation model, test-time compute, diffusion]
+queries:
+  - "joint embedding predictive architecture"
+  - "world model latent dynamics"
+  - "self-supervised representation learning masked"
+  - "state space model long sequence Mamba"
+  - "self-supervised learning scientific data omics"
+  - "video world model generative"
+journals: [Nature, Science, Nature Machine Intelligence]
+seeds:
+  - arxiv:2301.08243      # I-JEPA
+  - arxiv:2506.09985      # V-JEPA 2
+  - arxiv:2312.00752      # Mamba
+  - arxiv:2301.04104      # DreamerV3
+  - arxiv:2304.07193      # DINOv2
+radar_domain: ml_algorithms
+months: 24
+outline:
+  - title: 背景与定义
+  - title: 方法学
+    children:
+      - title: 预测隐空间与世界模型
+      - title: 掩码与自蒸馏表征
+      - title: 新架构：状态空间与线性注意力
+  - title: 数据与基准
+  - title: 向科学数据的迁移
+  - title: 评测、可复现性与争议
+  - title: 空白与趋势
+budget: {rounds: 8, max_candidates: 80, max_screen: 60, max_extract: 40, stop_delta: 0.02}

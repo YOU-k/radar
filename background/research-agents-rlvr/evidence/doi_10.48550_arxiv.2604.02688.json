@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2604.02688",
+  "title": "MatClaw: An Autonomous Code-First LLM Agent for End-to-End Materials Exploration",
+  "url": "https://doi.org/10.48550/arXiv.2604.02688",
+  "abstract": "Existing LLM agents for computational materials science are constrained by pipeline-bounded architectures tied to specific simulation codes and by dependence on manually written tool functions that grow with task scope. We present MatClaw, a code-first agent that writes and executes Python directly, composing any installed domain library to orchestrate multi-code workflows on remote HPC clusters without predefined tool functions. To sustain coherent execution across multi-day workflows, MatClaw uses a four-layer memory architecture that prevents progressive context loss, and retrieval-augmented generation over domain source code that raises per-step API-call accuracy to ${\\sim}$99 %. Three end-to-end demonstrations on ferroelectric CuInP2S6 (machine-learning force field training via active learning, Curie temperature prediction, and heuristic parameter-space search) reveal that the agent handles code generation reliably but struggles with tacit domain knowledge. The missing knowledge, such as appropriate simulation timescales, equilibration protocols, and sampling strategies, is the kind that researchers accumulate through experience but rarely formalize. Two lightweight interventions, literature self-learning and expert-specified constraints, bridge these gaps, defining a guided autonomy model in which the researcher provides high-level domain knowledge while the agent handles workflow execution. Our results demonstrate that the gap between guided and fully autonomous computational materials research is narrower than ever before: LLMs already handle code generation and scientific interpretation reliably, and the rapid improvement in their capabilities will accelerate materials discovery beyond what manual workflows can achieve. All code and benchmarks are open-source.",
+  "authors": "Chenmu Zhang, Boris I. Yakobson",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 3,
+  "found_by": [
+   "s2kw:recursive self-improvement LLM"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2604.02688"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "代码优先科研智能体，四层记忆与RAG，材料探索闭环可复现",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "端到端材料探索智能体，代码优先架构与记忆设计有可复现评测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "代码优先智能体，四层记忆架构+RAG领域源码检索",
+  "data": "铁电CuInP2S6三个端到端演示任务",
+  "scenario": "计算材料科学自主探索",
+  "benchmark": "无预设工具函数的远程HPC多代码工作流",
+  "results": "RAG使每步API调用准确率达约99%；智能体能可靠生成代码但难以处理隐性领域知识",
+  "availability": "",
+  "limitations": "依赖研究者提供高层领域知识，难以完全自主",
+  "summary": "本文提出MatClaw，一个代码优先的LLM智能体，直接编写和执行Python，组合任意已安装领域库在远程HPC集群上编排多代码工作流，无需预定义工具函数。为维持多日工作流的连贯执行，采用四层记忆架构防止上下文丢失，并用领域源码RAG将每步API调用准确率提升至约99%。在铁电CuInP2S6的三个端到端演示中发现智能体能可靠生成代码但难以处理隐性领域知识，需文献自学习与专家约束两种轻量干预弥补。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

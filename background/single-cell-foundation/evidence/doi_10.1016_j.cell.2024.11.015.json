@@ -1,0 +1,55 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2024.11.015",
+  "title": "How to build the virtual cell with artificial intelligence: Priorities and opportunities.",
+  "url": "https://doi.org/10.1016/j.cell.2024.11.015",
+  "abstract": "Cells are essential to understanding health and disease, yet traditional models fall short of modeling and simulating their function and behavior. Advances in AI and omics offer groundbreaking opportunities to create an AI virtual cell (AIVC), a multi-scale, multi-modal large-neural-network-based model that can represent and simulate the behavior of molecules, cells, and tissues across diverse states. This Perspective provides a vision on their design and how collaborative efforts to build AIVCs will transform biological research by allowing high-fidelity simulations, accelerating discoveries, and guiding experimental studies, offering new opportunities for understanding cellular functions and fostering interdisciplinary collaborations in open science.",
+  "authors": "Bunne C, Roohani Y, Rosen Y, Gupta A, Zhang X, Roed M, Alexandrov T, AlQuraishi M, Brennan P, Burkhardt DB, Califano A, Cool J, Dernburg AF, Ewing K, Fox EB, Haury M, Herr AE, Horvitz E, Hsu PD, Jain V, Johnson GR, Kalil T, Kelley DR, Kelley SO, Kreshuk A, Mitchison T, Otte S, Shendure J, Sofroniew NJ, Theis F, Theodoris CV, Upadhyayula S, Valer M, Wang B, Xing E, Yeung-Levy S, Zitnik M, Karaletsos T, Regev A, Lundberg E, Leskovec J, Quake SR.",
+  "venue": "Cell",
+  "year": 2024,
+  "citations": 309,
+  "found_by": [
+   "eupmc:single-cell foundation model",
+   "eupmc:virtual cell perturbation pred",
+   "eupmc:spatial transcriptomics founda",
+   "eupmc:Perturb-seq deep learning",
+   "eupmc:single-cell benchmark foundati",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12148494",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI虚拟细胞愿景与路线图，方向核心纲领性文献",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "AI虚拟细胞愿景纲领，方向必读路线图",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出AI虚拟细胞(AIVC)愿景与路线图",
+  "data": "多尺度多模态组学数据，数据每6个月翻倍",
+  "scenario": "细胞行为模拟预测与引导",
+  "benchmark": "对比规则模型及2012年首个全细胞模型(482基因)",
+  "results": "提出预测、生成、可查询三大能力，构建多尺度神经网络模型",
+  "availability": "",
+  "limitations": "多尺度建模、海量互作组件、非线性动力学挑战",
+  "summary": "文章提出构建AI虚拟细胞(AIVC)的愿景，即多尺度多模态大神经网络模型。基于AI与组学两大革命，主张从数据直接学习细胞行为，无需显式规则。指出AIVC可加速生物医学研究，实现高保真模拟并连接计算与湿实验。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

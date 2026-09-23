@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.08.026",
+  "title": "An open benchmark and language models for AI in aging biology.",
+  "url": "https://doi.org/10.1016/j.cell.2026.08.026",
+  "abstract": "Over the past two decades, human aging has been characterized across DNA methylation, transcriptomic, proteomic, and clinical modalities, yet no benchmark evaluates whether AI systems can interpret these heterogeneous data types in the context of aging biology. We introduce LongevityBench, an open suite of 17 tasks spanning five biodata domains, and use it to assess 18 frontier AI systems from six developer teams. Despite recent advances in AI, no single model dominates all tasks, with omics-based age prediction being the hardest task regardless of scale. To test whether these gaps can be closed without frontier-scale resources, we fine-tuned a family of five multitask Longevity-LLMs on domain-specific aging data. The compact (0.6B-9B parameters) Longevity-LLMs matched or exceeded far larger frontier systems on LongevityBench, showing that general-purpose language models can be adapted to structured-omics tasks. We publicly release the benchmark, models, and Longevity Claw, an agentic research interface for aging researchers.",
+  "authors": "Alex Zhavoronkov, Vladimir Naumov, D. Sidorenko, A. Aliper, V. Aladinskiy, Ramin M. Hasani, Alexander Amini, Katerina Nasto",
+  "venue": "Cell",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "seed"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "LongevityBench衰老AI基准与语言模型，公开任务套件。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell刊LongevityBench，衰老AI基准与语言模型，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建LongevityBench并微调5个多任务Longevity-LLM",
+  "data": "17项任务、5个生物数据域；评估18个前沿AI系统",
+  "scenario": "衰老生物学AI基准评测",
+  "benchmark": "18个前沿AI系统，来自6个开发团队",
+  "results": "无单一模型主导所有任务；组学年龄预测最难；0.6B-9B Longevity-LLM匹配或超过更大前沿系统",
+  "availability": "公开基准、模型和Longevity Claw代理研究界面",
+  "limitations": "摘要未列具体局限；任务和模型覆盖可能仍有限；组学年龄预测仍最难",
+  "summary": "研究推出LongevityBench，用于评估AI系统理解衰老生物学异构数据的能力。作者设计17项任务、覆盖5个生物数据域，并评测18个前沿AI系统，同时微调5个0.6B-9B参数的多任务Longevity-LLM。结果显示没有单一模型全能，组学年龄预测最难，但小型专用Longevity-LLM可匹配或超过更大通用模型，并公开基准、模型和研究界面。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

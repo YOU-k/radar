@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.3389/bjbs.2026.16141",
+  "title": "Artificial intelligence approaches in biological age prediction: current status and challenges.",
+  "url": "https://doi.org/10.3389/bjbs.2026.16141",
+  "abstract": "Biological age (BA) prediction has emerged as a critical research frontier for evaluating individual health status and aging trajectories beyond chronological age (CA). Recent advances in artificial intelligence (AI) have substantially accelerated this field by enabling the integration and interpretation of complex, multimodal biological data. This review provides a systematic overview of AI-driven approaches to BA prediction, covering key components including biomarker selection, feature engineering, model development, bias correction, and performance evaluation. We further highlight the growing recognition of asynchronous aging, a phenomenon in which different organs or physiological systems age at distinct rates, and discuss how AI-particularly deep learning and multimodal fusion-offers powerful tools for capturing such system-specific aging patterns. We summarize current methodologies ranging from traditional machine learning algorithms to advanced neural architectures capable of modeling nonlinear and heterogeneous aging processes. The expanding applications of AI-based BA models in disease risk assessment, geriatric evaluation, and population health monitoring are also examined. Despite rapid methodological progress, significant challenges persist, including data heterogeneity, limited model generalizability, insufficient interpretability, and barriers to clinical translation. Addressing these issues will require standardized methodological practices, robust validation across diverse populations, and the development of interpretable and equitable AI systems. Future research should prioritize the integration of multi-omics and longitudinal datasets with AI-driven analytical frameworks to establish reliable, system-level, and clinically actionable BA prediction models that account for asynchronous aging.",
+  "authors": "Wang G, Ding P, Li Z, Tang Q, Tu L, Jiang T, Zhang L, Su B, Xu J, An H.",
+  "venue": "British journal of biomedical science",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:aging biomarker healthspan val"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13291852",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI生物年龄预测系统综述，覆盖多模态与偏差。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "AI生物年龄预测系统综述，覆盖多模态与偏差校正",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述AI驱动生物年龄预测流程与挑战",
+  "data": "综述，涵盖DNAm、RNA、代谢、端粒、影像等多类标志物",
+  "scenario": "精准医学与公共卫生风险评估",
+  "benchmark": "实际年龄基线及单域生物标志物模型",
+  "results": "同CA个体BA可差达20年；遗传约解释20–30%衰老变异；BA较CA更关联功能衰退和死亡",
+  "availability": "",
+  "limitations": "AI模型仍面临过拟合、偏倚、人群异质性、可解释性和临床转化不足",
+  "summary": "文章综述AI在生物年龄预测中的方法学现状与挑战。将BA建模分为标志物识别、特征工程、预测模型、模型校正和结果评估五部分，并比较回归、机器学习和深度学习。指出BA比实际年龄更能反映功能衰退和死亡风险，但临床转化仍受偏倚和异质性限制。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

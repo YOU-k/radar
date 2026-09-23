@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.1109/iccv48922.2021.00951",
+  "title": "Emerging Properties in Self-Supervised Vision Transformers",
+  "url": "https://doi.org/10.1109/ICCV48922.2021.00951",
+  "abstract": "In this paper, we question if self-supervised learning provides new properties to Vision Transformer (ViT) [16] that stand out compared to convolutional networks (convnets). Beyond the fact that adapting self-supervised methods to this architecture works particularly well, we make the following observations: first, self-supervised ViT features contain explicit information about the semantic segmentation of an image, which does not emerge as clearly with supervised ViTs, nor with convnets. Second, these features are also excellent k-NN classifiers, reaching 78.3% top-1 on ImageNet with a small ViT. Our study also underlines the importance of momentum encoder [26], multi-crop training [9], and the use of small patches with ViTs. We implement our findings into a simple self-supervised method, called DINO, which we interpret as a form of self-distillation with no labels. We show the synergy between DINO and ViTs by achieving 80.1% top-1 on ImageNet in linear evaluation with ViT-Base.",
+  "authors": "Mathilde Caron, Hugo Touvron, Ishan Misra, Hervé Jégou, Julien Mairal, Piotr Bojanowski, Armand Joulin",
+  "venue": "IEEE International Conference on Computer Vision",
+  "year": 2021,
+  "citations": 10289,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2203.12602",
+   "s2:references:doi:10.48550/arxiv.2411.04983"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "DINO自蒸馏ViT经典，方向核心工作",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "DINO自蒸馏ViT里程碑，影响力深远必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "DINO：无标签自蒸馏，动量教师与多裁剪",
+  "data": "图像数据，ImageNet",
+  "scenario": "视觉Transformer自监督预训练",
+  "benchmark": "ImageNet线性评估、k-NN，监督ViT与卷积网络",
+  "results": "小ViT k-NN达78.3% top-1；ViT-Base线性评估达80.1% top-1",
+  "availability": "未提及",
+  "limitations": "未明确讨论局限；依赖动量编码器、多裁剪和小patch等设计",
+  "summary": "本文研究自监督学习是否赋予ViT区别于卷积网络的特性。提出DINO，将自监督方法实现为无标签自蒸馏，并强调动量编码器、多裁剪训练和小patch的重要性。发现自监督ViT特征包含显式语义分割信息，且是优秀k-NN分类器，小ViT达78.3%，ViT-Base线性评估达80.1%。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

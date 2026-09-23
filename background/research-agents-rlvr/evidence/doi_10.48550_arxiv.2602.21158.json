@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2602.21158",
+  "title": "SELAUR: Self Evolving LLM Agent via Uncertainty-aware Rewards",
+  "url": "https://doi.org/10.48550/arXiv.2602.21158",
+  "abstract": "Large language models (LLMs) are increasingly deployed as multi-step decision-making agents, where effective reward design is essential for guiding learning. Although recent work explores various forms of reward shaping and step-level credit assignment, a key signal remains largely overlooked: the intrinsic uncertainty of LLMs. Uncertainty reflects model confidence, reveals where exploration is needed, and offers valuable learning cues even in failed trajectories. We introduce SELAUR: Self Evolving LLM Agent via Uncertainty-aware Rewards, a reinforcement learning framework that incorporates uncertainty directly into the reward design. SELAUR integrates entropy-, least-confidence-, and margin-based metrics into a combined token-level uncertainty estimate, providing dense confidence-aligned supervision, and employs a failure-aware reward reshaping mechanism that injects these uncertainty signals into step- and trajectory-level rewards to improve exploration efficiency and learning stability. Experiments on two benchmarks, ALFWorld and WebShop, show that our method consistently improves success rates over strong baselines. Ablation studies further demonstrate how uncertainty signals enhance exploration and robustness.",
+  "authors": "Dengjia Zhang, Xiaoou Liu, Lu Cheng, Yaqing Wang, Kenton Murray, Hua Wei",
+  "venue": "Pacific-Asia Conference on Knowledge Discovery and Data Mining",
+  "year": 2026,
+  "citations": 8,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "不确定性感知奖励的RL自进化智能体，属过程奖励与RLVR方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "不确定性感知奖励的自我进化智能体，RLVR训练新范式。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "不确定性感知奖励的RL框架SELAUR",
+  "data": "ALFWorld与WebShop两基准交互轨迹",
+  "scenario": "多步决策智能体",
+  "benchmark": "ALFWorld、WebShop及强基线对比",
+  "results": "成功率持续优于强基线；消融显示不确定性信号提升探索与鲁棒性",
+  "availability": "",
+  "limitations": "未给出具体数值增益与失败案例分析",
+  "summary": "针对LLM智能体奖励设计忽视内在不确定性的问题，提出SELAUR强化学习框架。该方法将熵、最低置信度与margin三类指标融合为token级不确定性估计，并通过失败感知奖励重塑注入步级与轨迹级奖励。在ALFWorld和WebShop上成功率一致优于强基线，消融验证不确定性信号增强探索效率与学习稳定性。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

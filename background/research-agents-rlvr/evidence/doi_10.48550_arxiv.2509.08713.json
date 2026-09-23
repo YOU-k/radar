@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2509.08713",
+  "title": "The More You Automate, the Less You See: Hidden Pitfalls of AI Scientist Systems",
+  "url": "https://doi.org/10.48550/arXiv.2509.08713",
+  "abstract": "AI scientist systems, capable of autonomously executing the full research workflow from hypothesis generation and experimentation to paper writing, hold significant potential for accelerating scientific discovery. However, the internal workflow of these systems have not been closely examined. This lack of scrutiny poses a risk of introducing flaws that could undermine the integrity, reliability, and trustworthiness of their research outputs. In this paper, we identify four potential failure modes in contemporary AI scientist systems: inappropriate benchmark selection, data leakage, metric misuse, and post-hoc selection bias. To examine these risks, we design controlled experiments that isolate each failure mode while addressing challenges unique to evaluating AI scientist systems. Our assessment of two prominent open-source AI scientist systems reveals the presence of several failures, across a spectrum of severity, which can be easily overlooked in practice. Finally, we demonstrate that access to trace logs and code from the full automated workflow enables far more effective detection of such failures than examining the final paper alone. We thus recommend journals and conferences evaluating AI-generated research to mandate submission of these artifacts alongside the paper to ensure transparency, accountability, and reproducibility.",
+  "authors": "Ziming Luo, Atoosa Kasirzadeh, Nihar B. Shah",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 23,
+  "found_by": [
+   "s2kw:AI scientist benchmark reprodu"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "批判性揭示AI科学家系统四类失效模式，受控实验。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "揭示AI科学家四类失败模式，批判性分析，社区高度关注。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "受控实验隔离四种失效模式并对比追踪日志",
+  "data": "两个开源AI科学家系统的受控实验",
+  "scenario": "AI科学家系统工作流失效审查",
+  "benchmark": "两个主流开源AI科学家系统",
+  "results": "发现多种严重程度失效；追踪日志与代码比仅看论文更能有效检测失效",
+  "availability": "",
+  "limitations": "仅评估两个开源系统，失效模式可能不全面",
+  "summary": "论文识别了当代AI科学家系统的四种潜在失效模式：不当基准选择、数据泄漏、指标误用和事后选择偏差。通过受控实验隔离每种失效模式，评估两个主流开源系统。发现多种易被忽视的失效，并证明获取完整工作流的追踪日志和代码比仅审查最终论文更能有效检测问题，建议期刊会议强制提交这些工件。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

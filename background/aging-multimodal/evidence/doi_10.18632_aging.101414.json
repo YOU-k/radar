@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.18632/aging.101414",
+  "title": "An epigenetic biomarker of aging for lifespan and healthspan",
+  "url": "https://doi.org/10.18632/aging.101414",
+  "abstract": "Identifying reliable biomarkers of aging is a major goal in geroscience. While the first generation of epigenetic biomarkers of aging were developed using chronological age as a surrogate for biological age, we hypothesized that incorporation of composite clinical measures of phenotypic age that capture differences in lifespan and healthspan may identify novel CpGs and facilitate the development of a more powerful epigenetic biomarker of aging. Using a innovative two-step process, we develop a new epigenetic biomarker of aging, DNAm PhenoAge, that strongly outperforms previous measures in regards to predictions for a variety of aging outcomes, including all-cause mortality, cancers, healthspan, physical functioning, and Alzheimer’s disease. While this biomarker was developed using data from whole blood, it correlates strongly with age in every tissue and cell tested. Based on an in-depth transcriptional analysis in sorted cells, we find that increased epigenetic, relative to chronological age, is associated increased activation of pro-inflammatory and interferon pathways, and decreased activation of transcriptional/translational machinery, DNA damage response, and mitochondrial signatures. Overall, this single epigenetic biomarker of aging is able to capture risks for an array of diverse outcomes across multiple tissues and cells, and provide insight into important pathways in aging.",
+  "authors": "M. Levine, A. Lu, Austin Quach, Brian H. Chen, T. Assimes, S. Bandinelli, L. Hou, A. Baccarelli",
+  "venue": "bioRxiv",
+  "year": 2018,
+  "citations": 3196,
+  "found_by": [
+   "seed"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "DNAm PhenoAge表观时钟，预测寿命健康寿命，系数公开。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "DNAm PhenoAge里程碑，健康寿命表型时钟，广泛引用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "两步法构建DNAm PhenoAge表观遗传衰老生物标志物",
+  "data": "全血DNA甲基化数据；具体规模未在摘要中给出",
+  "scenario": "预测寿命、健康寿命与衰老结局",
+  "benchmark": "第一代以实际年龄为替代的表观遗传衰老标志物",
+  "results": "DNAm PhenoAge在全因死亡、癌症、健康寿命、身体功能、阿尔茨海默病等预测上显著优于既往指标；在多种组织/细胞中与年龄强相关",
+  "availability": "",
+  "limitations": "基于全血开发；摘要未给出样本规模、验证队列和误差指标；机制解释仍有限",
+  "summary": "研究提出DNAm PhenoAge，一种用于寿命和健康寿命的表观遗传衰老生物标志物。作者用包含临床表型年龄的复合指标替代实际年龄，通过两步流程筛选CpG并训练模型。结果显示其比既往表观遗传时钟更能预测死亡、癌症、健康寿命、身体功能和阿尔茨海默病，并关联炎症、干扰素及线粒体等通路。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

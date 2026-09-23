@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-025-00886-2",
+  "title": "A transcriptome-based human universal senescence index (hUSI) robustly predicts cellular senescence under various conditions.",
+  "url": "https://doi.org/10.1038/s43587-025-00886-2",
+  "abstract": "Despite the manifestation and contribution of cellular senescence to aging and various diseases, accurate identification of heterogeneous senescent cells remains challenging. Current senescence evaluation methods rely mainly on limited markers or homogeneous samples, which might fail to capture universal senescence features, limiting their generalizability. Here we developed the human universal senescence index (hUSI), an accurate and robust senescence evaluation method for diverse cells and samples. Based on features learned from the most comprehensive cellular senescence-associated transcriptome data so far, hUSI demonstrated its convincing connections with senescence phenotypes and superior robustness in predicting senescence state. Using hUSI, we discovered potential senescence regulators and mapped senescent cell accumulation across cell types in coronavirus disease 2019 (COVID-19). The method also facilitates decoding heterogeneous senescence states in melanoma tumors, identifying prognosis-associated signaling pathways. Overall, hUSI demonstrates its utility in characterizing cellular senescence across biological contexts, with broad applications in aging research and clinical practice.",
+  "authors": "Wang J, Zhou X, Yu P, Yao J, Guo P, Xu Q, Zhao Y, Wang G, Li Q, Zhu X, Wei G, Wang W, Ni T.",
+  "venue": "Nature aging",
+  "year": 2025,
+  "citations": 21,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC12176644",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "转录组衰老指数hUSI，跨条件泛化建模，契合衰老AI基准",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging，通用衰老指数，转录组建模，公开可泛化。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "OCLR构建hUSI通用衰老指数",
+  "data": "公开RNA-seq，73项研究",
+  "scenario": "多条件细胞衰老评分",
+  "benchmark": "31种衰老评分方法",
+  "results": "hUSI在bulk和单细胞多种条件下优于31种方法；验证衰老抑制因子；适用于COVID-19肺和黑色素瘤组织",
+  "availability": "",
+  "limitations": "衰老异质性高，负样本质量不足",
+  "summary": "研究开发基于转录组的人通用衰老指数hUSI。从73项公开RNA-seq研究整理衰老转录组数据，采用One-Class Logistic Regression学习通用衰老特征。基准测试显示hUSI在bulk和单细胞多种条件下优于31种方法，并可验证衰老抑制因子及用于COVID-19肺组织和黑色素瘤组织。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

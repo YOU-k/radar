@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.27395",
+  "title": "LeVJEPA: Efficient&Scalable Video Pretraining without the Heuristics",
+  "url": "https://arxiv.org/abs/2608.27395",
+  "abstract": "Video carries the temporal structure of the physical world, yet learning representations from it has remained computationally expensive: prevailing self-supervised methods either prevent representation collapse through architectural asymmetries, coupling an exponential-moving-average target encoder, a stop-gradient, and a capacity-limited predictor, or circumvent it by reconstructing masked content in pixel space. We introduce LeVJEPA, the first video encoder trained under LeJEPA's collapse-free objective, which dispenses with both. A single encoder is trained with an invariance loss over global and local views of a clip, regularized by SIGReg, which excludes collapse with a provable guarantee. The architecture reduces to an encoder and a projector, and the objective to a single hyperparameter. This formulation admits two properties. First, the cost of pretraining is governed by the number of tokens the encoder observes; uniform random token dropping renders this number small while simultaneously improving downstream accuracy. At matched epochs on identical data, LeVJEPA matches or surpasses V-JEPA 2 across ViT-S/B/L at 5.6 to 20.8x less pretraining compute, and at matched total FLOPs it exceeds the strongest video baseline by 7.6 points on ImageNet-1K while remaining competitive on motion-centric benchmarks. Second, since no asymmetry between branches is required, the encoder can be trained with block-causal attention at no measurable accuracy cost: temporal ordering becomes a property of the encoder itself. Against a compute-matched DINOv2 trained on frames of the same videos, LeVJEPA approaches the image-pretrained encoder on appearance-centric evaluation while nearly doubling its motion-centric accuracy. These results indicate that, once its computational overhead is removed, video becomes a viable and in several respects preferable substrate for general-purpose visual pretraining.",
+  "authors": "Lukas Kuhn, Lucas Maes, Giuseppe Serra, Quentin Le Lidec, Yann LeCun, Randall Balestriero, F. Buettner",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2411.04983"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "LeJEPA无启发式视频预训练，方法新且可扩展",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "LeJEPA无启发式视频预训练，方法新颖可迁移",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LeVJEPA：单编码器+SIGReg防坍缩，全局-局部不变性损失",
+  "data": "视频片段，ViT-S/B/L，ImageNet-1K等",
+  "scenario": "高效可扩展视频预训练",
+  "benchmark": "V-JEPA 2、DINOv2及最强视频基线",
+  "results": "同数据同轮次下以5.6–20.8×更少预训练算力匹配或超V-JEPA 2；同FLOPs下ImageNet-1K超最强视频基线7.6点",
+  "availability": "",
+  "limitations": "未提代码公开，运动中心基准仅保持竞争力",
+  "summary": "提出LeVJEPA，首个用LeJEPA无坍缩目标训练的视频编码器，去除目标编码器、预测器、stop-gradient与掩码重建。仅用全局-局部不变性损失加SIGReg，并随机丢弃95% patch token，支持块因果注意力。同轮次下以5.6–20.8×更少算力匹配或超V-JEPA 2，同FLOPs下ImageNet-1K超最强视频基线7.6点，运动中心精度近DINOv2两倍。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

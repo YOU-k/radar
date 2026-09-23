@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-024-08411-y",
+  "title": "A cell atlas foundation model for scalable search of similar human cells.",
+  "url": "https://doi.org/10.1038/s41586-024-08411-y",
+  "abstract": "Single-cell RNA sequencing has profiled hundreds of millions of human cells across organs, diseases, development and perturbations to date. Mining these growing atlases could reveal cell-disease associations, identify cell states in unexpected tissue contexts and relate in vivo biology to in vitro models. These require a common measure of cell similarity across the body and an efficient way to search. Here we develop SCimilarity, a metric-learning framework to learn a unified and interpretable representation that enables rapid queries of tens of millions of cell profiles from diverse studies for cells that are transcriptionally similar to an input cell profile or state. We use SCimilarity to query a 23.4-million-cell atlas of 412 single-cell RNA-sequencing studies for macrophage and fibroblast profiles from interstitial lung disease 1  and reveal similar cell profiles across other fibrotic diseases and tissues. The top scoring in vitro hit for the macrophage query was a 3D hydrogel system 2 , which we experimentally demonstrated reproduces this cell state. SCimilarity serves as a foundation model for single-cell profiles that enables researchers to query for similar cellular states across the human body, providing a powerful tool for generating biological insights from the Human Cell Atlas.",
+  "authors": "Heimberg G, Kuo T, DePianto DJ, Salem O, Heigl T, Diamant N, Scalia G, Biancalani T, Turley SJ, Rock JR, Corrada Bravo H, Kaminker J, Vander Heiden JA, Regev A.",
+  "venue": "Nature",
+  "year": 2024,
+  "citations": 133,
+  "found_by": [
+   "eupmc:single-cell benchmark foundati",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11864978",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "细胞图谱基础模型，可扩展相似细胞检索，有公开权重",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature细胞图谱基础模型，跨研究细胞检索，影响力大",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度度量学习基础模型SCimilarity",
+  "data": "2340万细胞，412项研究，56训练/15测试数据集",
+  "scenario": "跨组织疾病细胞搜索",
+  "benchmark": "PCA、自编码器等无监督方法",
+  "results": "在查询敏感性和整合性能间取得最佳平衡（β=0.001）；支持跨器官、系统、条件的可扩展细胞搜索",
+  "availability": "",
+  "limitations": "依赖Cell Ontology注释质量，部分细胞类型关系模糊",
+  "summary": "该研究提出SCimilarity，一个深度度量学习基础模型，量化单细胞图谱间相似性。通过同时优化监督三元组损失和无监督重构损失，学习低维表征使相似细胞靠近。在2340万细胞参考上实现跨组织疾病的可扩展细胞搜索，为Human Cell Atlas提供查询框架。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

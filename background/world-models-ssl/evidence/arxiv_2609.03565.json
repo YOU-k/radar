@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.03565",
+  "title": "Toward Physically Grounded JEPA World Models for Goal-Conditioned Robotic Planning",
+  "url": "https://arxiv.org/abs/2609.03565",
+  "abstract": "Action-conditioned JEPA world models enable planning toward visually specified goals without reconstructing future pixels, yet latent prediction alone does not explicitly encourage the learned representations to retain information relevant to robotic control. We introduce an end-to-end JEPA world model that augments latent prediction with inverse dynamics (IDM) and state alignment (SA). While inverse dynamics discourages latent collapse and makes latent transitions informative of the actions that produced them, state alignment grounds consecutive representations in their associated physical configuration and motion. Across four benchmark tasks, our model attains the highest success rates on TwoRoom (100%), PushT (98%), and OGBench-Cube (87%), while performing comparably to LeWorldModel on Reacher. Our ablation further shows that adding state alignment consistently improves planning success over IDM alone across all four tasks. Although LeWorldModel, our primary baseline, attains higher average straightening on OGBench-Cube, transition-subspace analysis shows that its transition energy is concentrated in a substantially lower-dimensional subspace. Our state-aligned model exhibits a higher effective transition dimension than LeWorldModel and improves planning over IDM alone, supporting state alignment as an effective complement to inverse dynamics for robotic planning.",
+  "authors": "Mu-Yuan Liu, Yue-Ning Huang, Zhe Liang, AI XiangGaoGENISOM, Beijing, China",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.48550/arxiv.2411.04983"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA世界模型加逆动力学，方法有实质新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA 世界模型加逆动力学与状态对齐，机器人规划方向前沿。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "JEPA世界模型+逆动力学+状态对齐",
+  "data": "四个机器人规划基准任务数据",
+  "scenario": "目标条件机器人规划",
+  "benchmark": "TwoRoom、PushT、OGBench-Cube、Reacher；对比LeWorldModel",
+  "results": "TwoRoom 100%、PushT 98%、OGBench-Cube 87%；状态对齐持续提升成功率",
+  "availability": "代码公开（GitHub）",
+  "limitations": "Reacher任务仅与基线相当；过渡子空间维度分析有限",
+  "summary": "提出端到端JEPA世界模型，在潜在预测基础上增加逆动力学和状态对齐目标。逆动力学防止潜在坍缩并使潜在转移包含动作信息，状态对齐将连续表示锚定到物理状态。在四个基准任务上，TwoRoom达100%、PushT达98%、OGBench-Cube达87%，消融显示状态对齐一致提升规划成功率。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

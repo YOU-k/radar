@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2010.13902",
+  "title": "Graph Contrastive Learning with Augmentations",
+  "url": "https://arxiv.org/abs/2010.13902",
+  "abstract": "Generalizable, transferrable, and robust representation learning on graph-structured data remains a challenge for current graph neural networks (GNNs). Unlike what has been developed for convolutional neural networks (CNNs) for image data, self-supervised learning and pre-training are less explored for GNNs. In this paper, we propose a graph contrastive learning (GraphCL) framework for learning unsupervised representations of graph data. We first design four types of graph augmentations to incorporate various priors. We then systematically study the impact of various combinations of graph augmentations on multiple datasets, in four different settings: semi-supervised, unsupervised, and transfer learning as well as adversarial attacks. The results show that, even without tuning augmentation extents nor using sophisticated GNN architectures, our GraphCL framework can produce graph representations of similar or better generalizability, transferrability, and robustness compared to state-of-the-art methods. We also investigate the impact of parameterized graph augmentation extents and patterns, and observe further performance gains in preliminary experiments. Our codes are available at https://github.com/Shen-Lab/GraphCL.",
+  "authors": "Yuning You, Tianlong Chen, Yongduo Sui, Ting Chen, Zhangyang Wang, Yang Shen",
+  "venue": "Neural Information Processing Systems",
+  "year": 2020,
+  "citations": 3009,
+  "found_by": [
+   "s2:references:arxiv:2410.05016"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "图对比学习经典工作，自监督表征奠基性开源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "图对比学习奠基高引工作，该方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "GraphCL：图对比学习+四类图增强",
+  "data": "多图数据集，半监督/无监督/迁移/对抗设置",
+  "scenario": "图自监督预训练",
+  "benchmark": "对比SOTA图学习方法，多数据集四设置",
+  "results": "无需调增强幅度或复杂GNN，泛化、迁移、鲁棒性达相似或更优",
+  "availability": "代码公开",
+  "limitations": "增强类型与幅度需选择，参数化增强仅初步实验",
+  "summary": "提出GraphCL图对比学习框架用于图数据无监督表征。设计四类图增强引入不同先验，通过最大化不同增强视图间特征一致性学习不变表征。在半监督、无监督、迁移和对抗攻击四设置下，无需调增强幅度或复杂架构即达到与SOTA相似或更好的泛化、迁移与鲁棒性。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

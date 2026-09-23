@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2408.09667",
+  "title": "BLADE: Benchmarking Language Model Agents for Data-Driven Science",
+  "url": "https://doi.org/10.48550/arXiv.2408.09667",
+  "abstract": "Data-driven scientific discovery requires the iterative integration of scientific domain knowledge, statistical expertise, and an understanding of data semantics to make nuanced analytical decisions, e.g., about which variables, transformations, and statistical models to consider. LM-based agents equipped with planning, memory, and code execution capabilities have the potential to support data-driven science. However, evaluating agents on such open-ended tasks is challenging due to multiple valid approaches, partially correct steps, and different ways to express the same decisions. To address these challenges, we present BLADE, a benchmark to automatically evaluate agents'multifaceted approaches to open-ended research questions. BLADE consists of 12 datasets and research questions drawn from existing scientific literature, with ground truth collected from independent analyses by expert data scientists and researchers. To automatically evaluate agent responses, we developed corresponding computational methods to match different representations of analyses to this ground truth. Though language models possess considerable world knowledge, our evaluation shows that they are often limited to basic analyses. However, agents capable of interacting with the underlying data demonstrate improved, but still non-optimal, diversity in their analytical decision making. Our work enables the evaluation of agents for data-driven science and provides researchers deeper insights into agents'analysis approaches.",
+  "authors": "Ken Gu, Ruoxi Shang, Ruien Jiang, Keying Kuang, Richard Lin, Donghe Lyu, Yue Mao, Youran Pan",
+  "venue": "Conference on Empirical Methods in Natural Language Processing",
+  "year": 2024,
+  "citations": 81,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2503.00096"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2408.09667"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "数据驱动科学智能体评测基准，自动评估多面分析过程",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "BLADE数据驱动科学智能体评测基准，EMNLP发表",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BLADE：开放式科研智能体自动评估基准",
+  "data": "12个数据集与研究问题，专家独立分析真值",
+  "scenario": "数据驱动科学研究",
+  "benchmark": "自动匹配多种分析表示，评估LM智能体分析决策",
+  "results": "语言模型多限于基础分析；可交互数据智能体多样性提升但仍非最优",
+  "availability": "",
+  "limitations": "开放式任务评估困难，智能体分析决策仍不理想",
+  "summary": "本文提出BLADE，用于自动评估语言模型智能体对开放式科研问题的多面分析方法。基准包含12个来自科学文献的数据集和研究问题，并由专家数据科学家独立分析形成真值，同时开发计算方法匹配不同分析表示。评估显示语言模型多停留在基础分析，能交互数据的智能体分析多样性提升但仍未达最优。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

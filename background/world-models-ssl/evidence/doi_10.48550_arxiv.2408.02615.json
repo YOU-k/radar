@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2408.02615",
+  "title": "LaMamba-Diff: Linear-Time High-Fidelity Diffusion Models Based on Local Attention and Mamba",
+  "url": "https://doi.org/10.48550/arXiv.2408.02615",
+  "abstract": "Recent Transformer-based diffusion models have shown remarkable performance, largely attributed to the ability of the self-attention mechanism to accurately capture both global and local contexts by computing all-pair interactions among input tokens. However, their quadratic complexity poses significant computational challenges for long-sequence inputs. Conversely, a recent state space model called Mamba offers linear complexity by compressing a filtered global context into a hidden state. Despite its efficiency, compression inevitably leads to information loss of fine-grained local dependencies among tokens, which are crucial for effective visual generative modeling. Motivated by these observations, we introduce Local Attentional Mamba (LaMamba) blocks that combine the strengths of self-attention and Mamba, capturing both global contexts and local details with linear complexity. Leveraging the efficient U-Net architecture, our model exhibits exceptional scalability and surpasses the performance of DiT across various model scales on ImageNet at 256x256 resolution, all while utilizing substantially fewer GFLOPs and a comparable number of parameters. Compared to state-of-the-art diffusion models on ImageNet 256x256 and 512x512, our largest model presents notable advantages, such as a reduction of up to 62% GFLOPs compared to DiT-XL/2, while achieving superior performance with comparable or fewer parameters. Our code is available at https://github.com/yunxiangfu2001/LaMamba-Diff.",
+  "authors": "Yunxiang Fu, Chaoqi Chen, Yizhou Yu",
+  "venue": "arXiv.org",
+  "year": 2024,
+  "citations": 7,
+  "found_by": [
+   "s2kw:linear attention transformer e"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Mamba与局部注意力线性扩散，架构有新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Mamba与线性注意力改进扩散长序列建模，架构有贡献",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Local Attentional Mamba块结合自注意力与Mamba",
+  "data": "ImageNet 256×256与512×512图像",
+  "scenario": "图像生成扩散模型",
+  "benchmark": "DiT-XL/2及ImageNet上SOTA扩散模型",
+  "results": "最大模型较DiT-XL/2减少62% GFLOPs，参数量相当或更少，256×256性能超越DiT各规模",
+  "availability": "代码已开源GitHub",
+  "limitations": "未充分讨论Mamba压缩导致局部细节信息损失的残余影响",
+  "summary": "提出LaMamba-Diff，用Local Attentional Mamba块融合自注意力与Mamba。通过U-Net架构在保持线性复杂度的同时捕捉全局上下文与局部细节。发现其在ImageNet上以更少GFLOPs超越DiT，实现高效高保真扩散生成。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

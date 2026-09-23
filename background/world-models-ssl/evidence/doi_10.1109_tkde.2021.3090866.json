@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1109/tkde.2021.3090866",
+  "title": "Self-Supervised Learning: Generative or Contrastive",
+  "url": "https://doi.org/10.1109/TKDE.2021.3090866",
+  "abstract": "Deep supervised learning has achieved great success in the last decade. However, its defects of heavy dependence on manual labels and vulnerability to attacks have driven people to find other paradigms. As an alternative, self-supervised learning (SSL) attracts many researchers for its soaring performance on representation learning in the last several years. Self-supervised representation learning leverages input data itself as supervision and benefits almost all types of downstream tasks. In this survey, we take a look into new self-supervised learning methods for representation in computer vision, natural language processing, and graph learning. We comprehensively review the existing empirical methods and summarize them into three main categories according to their objectives: generative, contrastive, and generative-contrastive (adversarial). We further collect related theoretical analysis on self-supervised learning to provide deeper thoughts on why self-supervised learning works. Finally, we briefly discuss open problems and future directions for self-supervised learning. An outline slide for the survey is provided<inline-formula><tex-math notation=\"LaTeX\">$^1$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>1</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"liu-ieq1-3090866.gif\"/></alternatives></inline-formula>.",
+  "authors": "Xiao Liu, Fanjin Zhang, Zhenyu Hou, Zhaoyu Wang, Li Mian, Jing Zhang, Jie Tang",
+  "venue": "IEEE Transactions on Knowledge and Data Engineering",
+  "year": 2020,
+  "citations": 2247,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2203.06604"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "自监督生成与对比综述，系统性背景",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "生成与对比自监督系统综述，方向背景必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "自监督学习综述：生成式、对比式、生成-对比式",
+  "data": "综述覆盖计算机视觉、自然语言处理、图学习文献",
+  "scenario": "自监督表征学习综述",
+  "benchmark": "不适用，综述与分类现有经验方法及理论分析",
+  "results": "归纳为生成、对比、生成-对比（对抗）三类，并讨论理论、开放问题与未来方向",
+  "availability": "提供综述大纲幻灯片",
+  "limitations": "作为综述未提出统一新方法；覆盖范围受当时文献限制",
+  "summary": "本文综述自监督学习在表征学习中的发展。作者系统回顾计算机视觉、自然语言处理和图学习中的经验方法，并按目标归纳为生成式、对比式和生成-对比式（对抗）三类，同时收集相关理论分析。发现自监督学习利用输入数据自身作为监督，可惠及多种下游任务，并讨论了开放问题与未来方向。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

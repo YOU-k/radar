@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-023-00557-0",
+  "title": "Causality-Enriched Epigenetic Age Uncouples Damage and Adaptation",
+  "url": "https://doi.org/10.1038/s43587-023-00557-0",
+  "abstract": "Machine learning models based on DNA methylation data can predict biological age but often lack causal insights. By harnessing large-scale genetic data through epigenome-wide Mendelian Randomization, we identified CpG sites potentially causal for aging-related traits. Neither the existing epigenetic clocks nor age-related differential DNA methylation are enriched in these sites. These CpGs include sites that contribute to aging and protect against it, yet their combined contribution negatively affects age-related traits. We established a novel framework to introduce causal information into epigenetic clocks, resulting in DamAge and AdaptAge—clocks that track detrimental and adaptive methylation changes, respectively. DamAge correlates with adverse outcomes, including mortality, while AdaptAge is associated with beneficial adaptations. These causality-enriched clocks exhibit sensitivity to short-term interventions. Our findings provide a detailed land-scape of CpG sites with putative causal links to lifespan and healthspan, facilitating the development of aging biomarkers, assessing interventions, and studying reversibility of age-associated changes.",
+  "authors": "Kejun Ying, Hanna Liu, A. Tarkhov, A. Lu, S. Horvath, Z. Kutalik, Xia Shen, V. Gladyshev",
+  "venue": "bioRxiv",
+  "year": 2023,
+  "citations": 188,
+  "found_by": [
+   "s2:references:doi:10.1016/j.cell.2026.08.026"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "因果甲基化时钟DamAge/AdaptAge，方法新且数据公开",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "因果信息引入表观时钟，DamAge/AdaptAge新框架，方法有转折性",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "孟德尔随机化筛选因果CpG构建DamAge/AdaptAge时钟",
+  "data": "大规模遗传与DNA甲基化数据",
+  "scenario": "区分损伤性与适应性表观衰老",
+  "benchmark": "现有表观时钟与年龄相关差异甲基化",
+  "results": "DamAge与死亡等不良结局相关，AdaptAge与有益适应相关，且对短期干预敏感",
+  "availability": "",
+  "limitations": "因果CpG功能验证有限，依赖MR假设",
+  "summary": "研究通过表观全基因组孟德尔随机化识别可能因果影响衰老性状的CpG。将因果信息引入表观时钟，构建追踪损伤性甲基化变化的DamAge和适应性变化的AdaptAge。发现DamAge与死亡等不良结局相关，AdaptAge与有益适应相关，且两者对短期干预敏感。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

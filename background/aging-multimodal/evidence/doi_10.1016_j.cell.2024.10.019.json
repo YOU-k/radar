@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2024.10.019",
+  "title": "Spatial transcriptomic landscape unveils immunoglobin-associated senescence as a hallmark of aging.",
+  "url": "https://doi.org/10.1016/j.cell.2024.10.019",
+  "abstract": "To systematically characterize the loss of tissue integrity and organ dysfunction resulting from aging, we produced an in-depth spatial transcriptomic profile of nine tissues in male mice during aging. We showed that senescence-sensitive spots (SSSs) colocalized with elevated entropy in organizational structure and that the aggregation of immunoglobulin-expressing cells is a characteristic feature of the microenvironment surrounding SSSs. Immunoglobulin G (IgG) accumulated across the aged tissues in both male and female mice, and a similar phenomenon was observed in human tissues, suggesting the potential of the abnormal elevation of immunoglobulins as an evolutionarily conserved feature in aging. Furthermore, we observed that IgG could induce a pro-senescent state in macrophages and microglia, thereby exacerbating tissue aging, and that targeted reduction of IgG mitigated aging across various tissues in male mice. This study provides a high-resolution spatial depiction of aging and indicates the pivotal role of immunoglobulin-associated senescence during the aging process.",
+  "authors": "Ma S, Ji Z, Zhang B, Geng L, Cai Y, Nie C, Li J, Zuo Y, Sun Y, Xu G, Liu B, Ai J, Liu F, Zhao L, Zhang J, Zhang H, Sun S, Huang H, Zhang Y, Ye Y, Fan Y, Zheng F, Hu J, Zhang B, Li J, Feng X, Zhang F, Zhuang Y, Li T, Yu Y, Bao Z, Pan S, Rodriguez Esteban C, Liu Z, Deng H, Wen F, Song M, Wang S, Zhu G, Yang J, Jiang T, Song W, Izpisua Belmonte JC, Qu J, Zhang W, Gu Y, Liu GH.",
+  "venue": "Cell",
+  "year": 2024,
+  "citations": 137,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "空间转录组衰老图谱，多组织数据资源，契合空间衰老方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell空间转录组衰老图谱，多组织，免疫球蛋白衰老新标志",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "空间转录组解析小鼠九组织衰老图谱",
+  "data": "雄性小鼠9种组织衰老空间转录组",
+  "scenario": "组织衰老与免疫球蛋白相关衰老",
+  "benchmark": "年轻 vs 年老组织；雄性与雌性小鼠及人组织",
+  "results": "IgG在衰老组织积累；IgG诱导巨噬/小胶质促衰老；降低IgG缓解小鼠多组织衰老",
+  "availability": "",
+  "limitations": "全文未公开；以雄性小鼠为主；机制与人类因果性仍需验证",
+  "summary": "研究构建衰老组织的高分辨率空间转录组图谱。作者对雄性小鼠9种组织进行衰老空间转录组分析，并结合雌性小鼠和人类组织验证。发现免疫球蛋白表达细胞聚集和IgG积累是衰老保守特征，IgG可诱导巨噬细胞和小胶质细胞促衰老，靶向降低IgG可缓解小鼠多组织衰老。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

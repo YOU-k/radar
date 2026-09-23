@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2602.05897",
+  "title": "Stop Rewarding Hallucinated Steps: Faithfulness-Aware Step-Level Reinforcement Learning for Small Reasoning Models",
+  "url": "https://arxiv.org/abs/2602.05897v2",
+  "abstract": "As large language models become smaller and more efficient, small reasoning models (SRMs) are crucial for enabling chain-of-thought (CoT) reasoning in resource-constrained settings. However, they are prone to faithfulness hallucinations, especially in intermediate reasoning steps. Existing mitigation methods based on online reinforcement learning rely on outcome-based rewards or coarse-grained CoT evaluation, which can inadvertently reinforce unfaithful reasoning when the final answer is correct. To address these limitations, we propose Faithfulness-Aware Step-Level Reinforcement Learning (FaithRL), introducing step-level supervision via explicit faithfulness rewards from a process reward model, together with an implicit truncated resampling strategy that generates contrastive signals from faithful prefixes, while also mitigating reward hacking from step-level rewards. Experiments across multiple SRMs and Open-Book QA benchmarks demonstrate that FaithRL consistently reduces hallucinations in both the CoT and final answers, leading to more faithful and reliable reasoning. Code is available at https://github.com/Easy195/FaithRL.",
+  "authors": "Shuo Nie, Hexuan Deng, Chao Wang, Ruiyu Fang, Xuebo Liu, Shuangyong Song, Yu Li, Min Zhang",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "步骤级忠实度奖励的RLVR方法，针对过程奖励模型，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "步骤级忠实度奖励RLVR，缓解幻觉，方法可复现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "忠实度感知的步级强化学习FaithRL",
+  "data": "多个小推理模型与开放书问答基准",
+  "scenario": "小推理模型开放书问答",
+  "benchmark": "Open-Book QA基准；对比GRPO等在线RL基线",
+  "results": "平均答案准确率提升7.29%，忠实度提升1.73%，优于最佳基线；显著减少CoT幻觉",
+  "availability": "代码公开：https://github.com/Easy195/FaithRL",
+  "limitations": "仅针对小推理模型与开放书QA，未覆盖更广任务",
+  "summary": "针对小推理模型中间步骤忠实度幻觉问题，提出FaithRL。方法引入过程奖励模型提供的显式步级忠实度奖励，并用截断重采样从忠实前缀生成对比信号，同时用信息增益惩罚缓解奖励黑客。实验表明FaithRL在多个SRM和开放书QA上持续减少CoT与最终答案幻觉，平均准确率提升7.29%、忠实度提升1.73%。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

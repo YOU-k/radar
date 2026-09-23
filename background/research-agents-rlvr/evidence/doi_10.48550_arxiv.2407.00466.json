@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2407.00466",
+  "title": "BioKGBench: A Knowledge Graph Checking Benchmark of AI Agent for Biomedical Science",
+  "url": "https://doi.org/10.48550/arXiv.2407.00466",
+  "abstract": "Pursuing artificial intelligence for biomedical science, a.k.a. AI Scientist, draws increasing attention, where one common approach is to build a copilot agent driven by Large Language Models (LLMs). However, to evaluate such systems, people either rely on direct Question-Answering (QA) to the LLM itself, or in a biomedical experimental manner. How to precisely benchmark biomedical agents from an AI Scientist perspective remains largely unexplored. To this end, we draw inspiration from one most important abilities of scientists, understanding the literature, and introduce BioKGBench. In contrast to traditional evaluation benchmark that only focuses on factual QA, where the LLMs are known to have hallucination issues, we first disentangle\"Understanding Literature\"into two atomic abilities, i)\"Understanding\"the unstructured text from research papers by performing scientific claim verification, and ii) Ability to interact with structured Knowledge-Graph Question-Answering (KGQA) as a form of\"Literature\"grounding. We then formulate a novel agent task, dubbed KGCheck, using KGQA and domain-based Retrieval-Augmented Generation (RAG) to identify the factual errors of existing large-scale knowledge graph databases. We collect over two thousand data for two atomic tasks and 225 high-quality annotated data for the agent task. Surprisingly, we discover that state-of-the-art agents, both daily scenarios and biomedical ones, have either failed or inferior performance on our benchmark. We then introduce a simple yet effective baseline, dubbed BKGAgent. On the widely used popular knowledge graph, we discover over 90 factual errors which provide scenarios for agents to make discoveries and demonstrate the effectiveness of our approach. The code and data are available at https://github.com/westlake-autolab/BioKGBench.",
+  "authors": "Xinna Lin, Siqi Ma, Junjie Shan, Xiaojing Zhang, Shell Xu Hu, Tiannan Guo, Stan Z. Li, Kaicheng Yu",
+  "venue": "arXiv.org",
+  "year": 2024,
+  "citations": 15,
+  "found_by": [
+   "s2kw:AI scientist benchmark reprodu"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "生物医学智能体知识图谱核查基准，含评测与代码，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "生物医学智能体文献理解评测基准，有代码，方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建知识图谱校验基准，含KGCheck智能体任务",
+  "data": "2000+原子任务数据、225条智能体任务标注",
+  "scenario": "生物医学AI智能体文献理解评测",
+  "benchmark": "科学论断验证与KGQA，对比SOTA智能体",
+  "results": "SOTA智能体（通用与生物医学）均失败或表现不佳",
+  "availability": "",
+  "limitations": "仅限生物医学领域，智能体任务数据量较小",
+  "summary": "论文提出BioKGBench，从AI科学家视角评测生物医学智能体理解文献的能力。将文献理解拆解为科学论断验证和知识图谱问答两种原子能力，并设计KGCheck智能体任务，用KGQA和领域RAG识别大规模知识图谱的事实错误。收集2000+原子任务数据和225条智能体标注，发现SOTA智能体均失败或表现不佳。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

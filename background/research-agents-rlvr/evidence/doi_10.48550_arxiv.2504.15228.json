@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2504.15228",
+  "title": "A Self-Improving Coding Agent",
+  "url": "https://doi.org/10.48550/arXiv.2504.15228",
+  "abstract": "Recent advancements in Large Language Models (LLMs) have spurred interest in deploying LLM agents to undertake tasks in the world. LLMs are often deployed in agent systems: code that orchestrates LLM calls and provides them with tools. We demonstrate that an agent system, equipped with basic coding tools, can autonomously edit itself, and thereby improve its performance on benchmark tasks. We find performance gains from 17% to 53% on a random subset of SWE Bench Verified, with additional performance gains on LiveCodeBench, as well as synthetically generated agent benchmarks. Our work represents an advancement in the automated and open-ended design of agentic systems, and demonstrates a data-efficient, non gradient-based learning mechanism driven by LLM reflection and code updates.",
+  "authors": "M. Robeyns, M. Szummer, Laurence Aitchison",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 46,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "自改进编码智能体，可自主编辑提升，契合自我改进",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "自改进编码智能体，展示递归自我改进实证。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LLM智能体自主编辑自身代码实现自我改进",
+  "data": "SWE Bench Verified随机子集、LiveCodeBench及合成智能体基准",
+  "scenario": "代码智能体自我进化",
+  "benchmark": "SWE Bench Verified、LiveCodeBench、合成智能体基准",
+  "results": "SWE Bench Verified随机子集性能从17%提升至53%，LiveCodeBench及合成基准也有额外提升",
+  "availability": "",
+  "limitations": "仅在随机子集上验证，未说明全量泛化与稳定性",
+  "summary": "本文研究配备基础编码工具的LLM智能体系统能否自主编辑自身以提升基准任务表现。方法上让智能体通过LLM反思与代码更新实现非梯度、数据高效的学习机制。结果发现SWE Bench Verified随机子集性能从17%升至53%，LiveCodeBench与合成智能体基准也有提升，展示了开放式自动化智能体设计的进展。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

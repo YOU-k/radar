@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.20944/preprints202608.2057.v1",
+  "title": "Strategic Verification for Long-Running LLM Agents",
+  "url": "https://doi.org/10.20944/preprints202608.2057.v1",
+  "abstract": "Large language model (LLM) agents are evolving from single-turn text generators into long-running systems capable of multi-step reasoning, tool use, persistent memory, and reusable skill development. Reinforcement learning from verifiable rewards (RLVR) can improve agent reliability, but existing approaches commonly treat verification as a fixed component of the reward structure, creating challenges related to sparse credit assignment, verifier reliability, reward hacking, path compliance, and verification cost. We introduce Budgeted Adaptive Verification with Asymmetric Rewards (BAVAR), a framework that formulates verification as a sequential, resource-constrained decision problem. BAVAR selectively determines what to verify, when verification is valuable, which verifier to invoke, and how verified evidence should influence learning based on uncertainty, action criticality, verifier reliability, expected verification value, and remaining computational budget. It combines reliability-gated positive process rewards with persistent penalties for path violations and extends verification to persistent memories and reusable skills. In an illustrative evaluation under matched verification budgets, BAVAR achieved 72.6% safe verified success, compared with 67.1% for uniform dense verification and 58.4% for outcome-only RLVR. Relative to dense verification, BAVAR reduced verification cost per safe success by 45.5% while using 47.8% fewer verifier tokens. It also reduced verified path violations to 7.2 per 100 trajectories, compared with 20.4 for outcome-only RLVR, and reduced successful verifier exploitation to 4.8%, compared with 15.9% for a single-judge baseline and 18.6% for outcome-only RLVR. For persistent artifacts, BAVAR achieved 88.7% held-out reuse success, compared with 81.3% for dense verification. These simulated findings suggest that adaptive allocation of verification resources can improve safe agent performance while reducing computational and verification overhead, providing a principled foundation for scalable verification of long-running autonomous agents.",
+  "authors": "Adeli S.",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:reinforcement learning verifia"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "RLVR验证预算化框架，针对奖励黑客等核心问题",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "RLVR验证预算化，长程智能体可靠性关键问题。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BAVAR：预算自适应验证与非对称奖励框架",
+  "data": "未明确；匹配验证预算下的评估",
+  "scenario": "长运行LLM智能体RLVR",
+  "benchmark": "均匀密集验证、仅结果RLVR",
+  "results": "安全验证成功率72.6%，对比均匀密集67.1%、仅结果58.4%；每安全成功验证成本降45.5%，验证token少47.8%",
+  "availability": "",
+  "limitations": "仅示例性评估；验证成本与可靠性权衡未充分展开",
+  "summary": "针对现有RLVR把验证当作固定奖励组件、导致稀疏信用分配、验证器可靠性、奖励黑客、路径合规与验证成本等问题，提出BAVAR。BAVAR把验证建模为序列化资源受限决策问题，依据不确定性、动作关键性、验证器可靠性、期望验证价值与剩余预算，选择验证什么、何时验证、用哪个验证器及如何影响学习，并用可靠性门控的正过程奖励加持续路径违规惩罚，扩展到持久记忆与可复用技能。在匹配验证预算下，BAVAR达到72.6%安全验证成功，优于均匀密集验证67.1%和仅结果RLVR 58.4%，且每安全成功验证成本降45.5%、验证token少47.8%。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

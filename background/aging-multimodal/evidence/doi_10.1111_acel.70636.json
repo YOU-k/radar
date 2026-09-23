@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/acel.70636",
+  "title": "Construction and Validation of Plasma Protein-Based Musculoskeletal Biological Age and Genetic and Environmental Risk Profiles.",
+  "url": "https://doi.org/10.1111/acel.70636",
+  "abstract": "The musculoskeletal system is key to aging. Nonetheless, existing protein-based musculoskeletal aging clocks have limited predictive performance and fail to characterize genetic or environmental determinants. We first constructed a musculoskeletal protein pool by integrating transcriptomic enrichment, protein functional annotation, and literature expertise. Two musculoskeletal aging clocks-MSKAge and MSKAgeMort-were then developed using proteomic data of 21,070 UK Biobank participants. Acceleration metric (MSKAgeAccel/MSKAgeMortAccel) quantified deviations of biological age from chronological age, with positive values indicating accelerated musculoskeletal aging. Associations of MSKAgeAccel/MSKAgeMortAccel with mortality, musculoskeletal disorders, and age-related diseases were assessed using Cox proportional hazards models. Environmental and genetic determinants were evaluated by linear regression and genome-wide association analyses, respectively. Drug repurposing was used to identify potential targets of musculoskeletal diseases. A total of 39 musculoskeletal-related proteins constituted the pool. Leveraging these proteins, MSKAge (r female  = 0.62; r male  = 0.56) and MSKAgeMort (r female  = 0.93; r male  = 0.88) were constructed. Both MSKAgeAccel and (in particular) MSKAgeMortAccel predicted mortality, musculoskeletal diseases, and age-related diseases effectively. MSKAgeMortAccel showed significant associations with musculoskeletal disorders, including osteoarthritis, rheumatoid arthritis, gout, and low back pain. MSKAgeMortAccel was influenced by environmental pollutants, psychological factors, and unhealthy lifestyles. Genetic analyses revealed 13 variants and 71 genes enriched in epigenetic regulation and extracellular environment-receptor interaction. Zinc was identified as a candidate musculoskeletal drug. We established a reliable musculoskeletal aging clock and elucidated genetic and environmental determinants. This framework enables stratification of individuals at risk of accelerated musculoskeletal aging, paving the way for anti-aging interventions.",
+  "authors": "Zhong Y, Xia M, Zhao X, Qu Y, Lei B, Zhen S, Han T, Xiang R, Xiao J, Song X, Ma X, Yang B, Zhang D, Zhou J, Chen Z, Pang Y, Ju Y, Liu T, Li Z, Long L, Zhang T, Li J, Fan M, Liu Z, Jiang X.",
+  "venue": "Aging cell",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:transcriptomic proteomic aging"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13401616",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank两万人蛋白组衰老时钟，数据规模大",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 2万人蛋白组肌骨衰老时钟，规模大",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "血浆蛋白构建MSKAge与MSKAgeMort时钟",
+  "data": "UK Biobank蛋白组，21,070人",
+  "scenario": "肌肉骨骼衰老与死亡风险",
+  "benchmark": "现有蛋白型肌肉骨骼衰老时钟",
+  "results": "MSKAge相关r女性=0.62、r男性=0.56；MSKAgeMort相关r女性=0.93、r男性=0.88；加速指标预测死亡、肌肉骨骼病和年龄相关病",
+  "availability": "",
+  "limitations": "现有蛋白时钟预测性能有限，未充分表征遗传环境因素",
+  "summary": "研究构建并验证基于血浆蛋白的肌肉骨骼生物年龄及其遗传和环境风险谱。整合转录组富集、蛋白功能注释和文献构建39个肌肉骨骼相关蛋白池，在21,070名UK Biobank参与者中开发MSKAge和MSKAgeMort。结果显示MSKAgeMortAccel尤其能有效预测死亡、肌肉骨骼疾病和年龄相关疾病，并可用于药物重定位。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

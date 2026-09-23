@@ -1,0 +1,53 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-026-10644-y",
+  "title": "Accelerating scientific discovery with Co-Scientist.",
+  "url": "https://doi.org/10.1038/s41586-026-10644-y",
+  "abstract": "Scientific discovery is driven by scientists generating hypotheses for complex problems that undergo rigorous experimental validation. To augment this process, we introduce Co-Scientist, a multi-agent artificial intelligence (AI) system built on Gemini for structured scientific thinking and hypothesis generation. Co-Scientist aims to help scientists discover new original knowledge. Conditioned on their research objectives and previous scientific evidence, it formulates demonstrably novel research hypotheses for experimental verification. The system's design involves agents continuously generating, critiquing and refining hypotheses accelerated by scaling test-time compute. Key contributions include (1) a multi-agent architecture with an asynchronous task execution framework for flexible compute scaling, and (2) a tournament evolution process for self-improving hypotheses generation. Automated evaluations show continued benefits of test-time compute scaling, improving hypothesis quality over time. Although this is a general-purpose system, we focus the validation in three biomedical applications: drug repurposing; novel-target discovery 1 ; and explaining mechanisms of antimicrobial resistance 2 . Specifically, Co-Scientist helped to identify new drug-repurposing candidates and synergistic combination therapies for acute myeloid leukaemia that were validated through in vitro experiments. These real-world validations demonstrate the potential of Co-Scientist to accelerate scientific discovery and usher in an era of AI-empowered scientists.",
+  "authors": "Gottweis J, Weng WH, Daryin A, Tu T, Sirkovic P, Myaskovsky A, Glowaty G, Weissenberger F, Orlandi A, Popovici D, Palepu A, Rong K, Tanno R, Saab K, Zhang F, Blum J, Carroll A, Kulkarni K, Tomašev N, Zverinski D, Rendulic I, Vedadi E, Hasler F, Rimanic L, Boia M, Budiselic I, Feinstein B, Bellaiche M, Sheffer T, Freyberg J, Ratcliff J, Bertolli O, Chou K, Hassidim A, Gokturk B, Vahdat A, Guan Y, Dhillon V, Vaishnav ED, Lee B, Costa TRD, Penadés JR, Peltz G, Matias Y, Manyika J, Hassabis D, Xu Y, Kohli P, Pawlosky A, Karthikesalingam A, Natarajan V.",
+  "venue": "Nature",
+  "year": 2026,
+  "citations": 36,
+  "found_by": [
+   "eupmc:AI scientist agent automated r",
+   "eupmc:biomedical research agent LLM",
+   "eupmc:agent benchmark scientific dis",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13345910",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Nature多智能体AI科学家系统，假设生成闭环，高影响力。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature多智能体科学发现系统，转折点级工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于Gemini的多智能体科学发现系统Co-Scientist",
+  "data": "三个生物医学问题：AML药物重定位、肝纤维化靶点、抗菌素耐药机制",
+  "scenario": "科学家在环的假设生成与实验验证",
+  "benchmark": "三个生物医学案例的体外实验验证",
+  "results": "提出AML药物重定位候选、肝纤维化新表观遗传靶点，并独立复现未发表的新型细菌基因转移机制；均经体外实验验证",
+  "availability": "",
+  "limitations": "验证限于三个生物医学案例；依赖科学家在环",
+  "summary": "论文提出Co-Scientist，一个基于Gemini的多智能体科学思维引擎，作为科学家协作者加速发现。系统由生成、反思、排序、进化、邻近性与元评审等专门智能体组成，在锦标赛框架中生成、辩论并进化假设，并可用网络搜索与专门AI模型工具自我批判。在三个生物医学问题上，系统提出的药物重定位候选、肝纤维化新靶点及抗菌素耐药基因转移机制均经独立体外实验验证。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

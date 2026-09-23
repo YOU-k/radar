@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.18653/v1/2026.findings-acl.524",
+  "title": "Exploiting Tree Structure for Credit Assignment in Reinforcement Learning with Large Language Models.",
+  "url": "https://doi.org/10.18653/v1/2026.findings-acl.524",
+  "abstract": "Reinforcement learning has shown strong promise for strengthening the reasoning ability of large language models (LLMs), but sparse, delayed rewards over long chains make token-level credit assignment a central challenge. Actor-critic methods like PPO provide token-level credit but require training a value network alongside the policy, which introduces complexity and can encourage overfitting. Critic-free alternatives such as GRPO avoid this burden but rely on sequence-level outcomes, distributing a single reward uniformly across tokens and ignoring structural differences between responses. We propose Prefix-to-Tree (P2T), which organizes the sampled responses of a prompt into a prefix tree and computes nonparametric prefix values by aggregating descendant outcomes. Building on this idea, we develop TEMPO (Tree-Estimated Mean Prefix Value for Policy Optimization), a critic-free algorithm that enriches GRPO with branch-aware temporal-difference (TD) corrections. Across Qwen3-1.7B and Qwen3-4B, TEMPO consistently improves both convergence and final performance over PPO and GRPO on in-distribution benchmarks (MATH, MedQA) and out-of-distribution settings (GSM-HARD, AMC23, MedMCQA, MMLU-Medical), achieving higher validation accuracy within comparable wall-clock time.",
+  "authors": "Tran H, Yao Z, Yu H.",
+  "venue": "Findings of ACL. ACL",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:GRPO reasoning language model"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13327694",
+   "is_oa": false
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "树结构信用分配改进GRPO，方法有实质新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "ACL，树结构信用分配，GRPO改进有开源。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "TEMPO：前缀树非参数前缀值+分支感知TD修正",
+  "data": "Qwen3-1.7B与Qwen3-4B的采样响应",
+  "scenario": "LLM推理RL的token级信用分配",
+  "benchmark": "PPO、GRPO；MATH、MedQA、GSM-HARD、AMC23、MedMCQA、MMLU-Medical",
+  "results": "在Qwen3-1.7B和4B上收敛与最终性能一致优于PPO和GRPO，验证准确率更高且墙钟时间相当",
+  "availability": "",
+  "limitations": "未在摘要中明确说明；依赖采样响应构建前缀树",
+  "summary": "针对长链推理中稀疏延迟奖励导致token级信用分配困难、PPO需训练价值网络而GRPO仅用序列级结果的问题，提出Prefix-to-Tree（P2T）与TEMPO。P2T把同一提示的采样响应组织成前缀树，通过聚合后代结果计算非参数前缀值；TEMPO在此基础上为GRPO加入分支感知的时序差分修正，无需critic。在Qwen3-1.7B与Qwen3-4B上，TEMPO在MATH、MedQA等分布内及GSM-HARD、AMC23、MedMCQA、MMLU-Medical等分布外基准上，收敛与最终性能均持续优于PPO和GRPO，并在相当墙钟时间内取得更高验证准确率。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2606.00091",
+  "title": "DLLM-JEPA: Joint Embedding Predictive Architectures for Masked Diffusion Language Models",
+  "url": "https://arxiv.org/abs/2606.00091v1",
+  "abstract": "Joint Embedding Predictive Architectures (JEPAs) have reshaped self-supervised representation learning in vision. The recent LLM-JEPA ported JEPA to autoregressive language models but inherited two steep costs from the causal-attention substrate: it demands explicit multi-view data (e.g., text-code pairs), and it requires two gradient-carrying forward passes per step. We introduce DLLM-JEPA, which pairs JEPA with masked-diffusion language models to eliminate both costs at once. The bidirectional attention of diffusion models yields two semantically distinct views of the same input via different masking rates -- no explicit pairs needed -- and supports a single gradient-carrying forward pass, cutting training FLOPs by 33% relative to LLM-JEPA. DLLM-JEPA improves over diffusion-only fine-tuning in every (task, architecture) combination we evaluate: up to +18.7 pp on LLaDA-8B GSM8K and +11.4 pp on Dream-7B GSM8K, with consistent positive gains on Spider, NL-RX-SYNTH, and Django. Beyond accuracy, DLLM-JEPA exhibits a dual-win property: on LLaDA-8B with the Wide-t configuration, it simultaneously raises GSM8K accuracy (67.1 vs. 65.2, +1.8 pp), drives held-out Wikitext loss below the pre-trained base, and preserves MMLU accuracy at base level across three fine-tuning seeds -- whereas an L2-to-base parameter anchor matches baseline accuracy with no task gain. Layer-wise probing reveals the mechanism: a geometric-functional drift dissociation in which the fine-tuned backbone moves further from the pre-trained weights than the baseline yet forgets less on held-out Wikitext, with the amplification concentrated in middle transformer layers. The pattern appears on Dream-7B as well, indicating the phenomenon is not specific to a single backbone.",
+  "authors": "Sangdae Nam",
+  "venue": "",
+  "year": 2026,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "JEPA与掩码扩散语言模型结合，方法有实质新意，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA与掩码扩散语言模型结合，降低多视图与双前向成本，有开源潜力",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "DLLM-JEPA：面向掩码扩散语言模型的JEPA公式",
+  "data": "文本数据（GSM8K、MMLU、Wikitext等）",
+  "scenario": "扩散语言模型微调",
+  "benchmark": "LLM-JEPA、扩散-only微调、LLaDA-8B、Dream-7B",
+  "results": "训练FLOPs较LLM-JEPA减少33%；GSM8K提升+1.8pp，4任务×2骨干均提升",
+  "availability": "",
+  "limitations": "增益在稳定设置下较温和，主要验证于有限任务与骨干",
+  "summary": "提出DLLM-JEPA，将JEPA目标引入掩码扩散语言模型。利用扩散噪声调度从单一输入构造两个视图，无需配对数据，每步单次梯度传播，较LLM-JEPA减少33%训练FLOPs。在4任务×2骨干上一致提升，GSM8K提升+1.8pp，并观察到几何漂移增大而功能遗忘更小的分离现象。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

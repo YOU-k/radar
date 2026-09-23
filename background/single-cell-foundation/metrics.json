@@ -1,0 +1,18 @@
+[
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.667,
+  "highcite": 0.32,
+  "score": 0.628,
+  "n_evidence": 30,
+  "round": 1
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.7,
+  "highcite": 0.28,
+  "score": 0.622,
+  "n_evidence": 48,
+  "round": 2
+ }
+]

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2504.15275",
+  "title": "Stop Summation: Min-Form Credit Assignment Is All Process Reward Model Needs for Reasoning",
+  "url": "https://arxiv.org/abs/2504.15275v3",
+  "abstract": "Process reward models (PRMs) have proven effective for test-time scaling of Large Language Models (LLMs) on challenging reasoning tasks. However, reward hacking issues with PRMs limit their successful application in reinforcement fine-tuning. In this paper, we identify the main cause of PRM-induced reward hacking: the canonical summation-form credit assignment in reinforcement learning (RL), which defines the value as cumulative gamma-decayed future rewards, easily induces LLMs to hack steps with high rewards. To address this, we propose PURE: Process sUpervised Reinforcement lEarning. The key innovation of PURE is a min-form credit assignment that formulates the value function as the minimum of future rewards. This method significantly alleviates reward hacking by limiting the value function range and distributing advantages more reasonably. Through extensive experiments on 3 base models, we show that PRM-based approaches enabling min-form credit assignment achieve comparable reasoning performance to verifiable reward-based methods within only 30% steps. In contrast, the canonical sum-form credit assignment collapses training even at the beginning! Additionally, when we supplement PRM-based fine-tuning with just 10% verifiable rewards, we further alleviate reward hacking and produce the best fine-tuned model based on Qwen2.5-Math-7B in our experiments, achieving 82.5% accuracy on AMC23 and 53.3% average accuracy across 5 benchmarks. Moreover, we summarize the observed reward hacking cases and analyze the causes of training collapse. We release our code and model weights at https://github.com/CJReinforce/PURE.",
+  "authors": "Jie Cheng, Gang Xiong, Ruixi Qiao, Lijun Li, Chao Guo, Junle Wang, Yisheng Lv, Fei-Yue Wang",
+  "venue": "",
+  "year": 2025,
+  "citations": null,
+  "found_by": [
+   "arxiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "提出min-form信用分配缓解PRM奖励黑客，属RLVR训练方法",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "min-form信用分配解决PRM奖励黑客，方法新颖有开源价值。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PURE：最小形式信用分配的过程监督RL",
+  "data": "PRM800K训练PRM；Qwen2.5-7B/Math-7B/Math-1.5B",
+  "scenario": "LLM推理的过程奖励RL微调",
+  "benchmark": "求和形式信用分配、可验证奖励RL；AMC23等5基准",
+  "results": "仅30%步数达可验证奖励方法相当推理性能；加10%可验证奖励后Qwen2.5-Math-7B在AMC23达82.5%，5基准平均53.3%；求和形式训练初期即崩溃",
+  "availability": "代码与模型权重公开（GitHub）",
+  "limitations": "PRM仍可能奖励黑客；需少量可验证奖励辅助缓解",
+  "summary": "针对PRM在强化微调中易被奖励黑客、其根源是RL中求和形式信用分配（价值为γ折扣未来奖励累积）会诱导模型攻击高奖励步骤的问题，提出PURE。PURE把价值函数定义为未来奖励的最小值，即最小形式信用分配，限制价值范围并更合理分配优势，仅需变换过程奖励而无需改代码，并支持稠密过程奖励与稀疏可验证奖励结合。在3个基座模型上，采用最小形式的PRM方法仅用30%步数即达到可验证奖励方法相当的推理性能，而求和形式在训练初期即崩溃；补充10%可验证奖励后，Qwen2.5-Math-7B在AMC23达82.5%、5基准平均53.3%。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

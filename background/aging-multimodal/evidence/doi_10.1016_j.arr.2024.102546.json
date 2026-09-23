@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.arr.2024.102546",
+  "title": "Epigenetic clocks and programmatic aging.",
+  "url": "https://doi.org/10.1016/j.arr.2024.102546",
+  "abstract": "The last decade has seen remarkable progress in the characterization of methylation clocks that can serve as indicators of biological age in humans and many other mammalian species. While the biological processes of aging that underlie these clocks have remained unclear, several clues have pointed to a link to developmental mechanisms. These include the presence in the vicinity of clock CpG sites of genes that specify development, including those of the Hox (homeobox) and polycomb classes. Here we discuss how recent advances in programmatic theories of aging provide a framework within which methylation clocks can be understood as part of a developmental process of aging. This includes how such clocks evolve, how developmental mechanisms cause aging, and how they give rise to late-life disease. The combination of ideas from evolutionary biology, biogerontology and developmental biology open a path to a new discipline, that of developmental gerontology (devo-gero). Drawing on the properties of methylation clocks, we offer several new hypotheses that exemplify devo-gero thinking. We suggest that polycomb controls a trade-off between earlier developmental fidelity and later developmental plasticity. We also propose the existence of an evolutionarily-conserved developmental sequence spanning ontogenesis, adult development and aging, that both constrains and determines the evolution of aging.",
+  "authors": "Gems D, Virk RS, de Magalhães JP.",
+  "venue": "Ageing research reviews",
+  "year": 2024,
+  "citations": 35,
+  "found_by": [
+   "eupmc:epigenetic clock biological ag"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC7618570",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "探讨甲基化时钟与程序性衰老理论，方法学背景相关",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "表观时钟与程序性衰老理论框架，方向概念性必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述表观时钟与程序性衰老理论",
+  "data": "综述DNA甲基化时钟、发育与衰老相关文献",
+  "scenario": "衰老理论整合",
+  "benchmark": "Horvath多组织甲基化时钟等表观时钟",
+  "results": "Horvath时钟基于353 CpG，可跨组织预测年龄；表观时钟从胚胎发育到老年持续运行，支持发育程序驱动衰老",
+  "availability": "",
+  "limitations": "综述性文章，缺乏原始实验验证，部分观点为推测",
+  "summary": "文章综述表观遗传时钟与程序性衰老理论的关系。作者整合DNA甲基化时钟、发育生物学和进化理论，讨论甲基化变化如何贯穿个体生命周期。提出发育相关基因作用在生命后期持续并变得有害，可能是衰老的重要机制。"
+ },
+ "sections": [
+  "7"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/aging-multimodal/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

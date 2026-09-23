@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-58796-1",
+  "title": "A clinical benchmark of public self-supervised pathology foundation models.",
+  "url": "https://doi.org/10.1038/s41467-025-58796-1",
+  "abstract": "The use of self-supervised learning to train pathology foundation models has increased substantially in the past few years. Notably, several models trained on large quantities of clinical data have been made publicly available in recent months. This will significantly enhance scientific research in computational pathology and help bridge the gap between research and clinical deployment. With the increase in availability of public foundation models of different sizes, trained using different algorithms on different datasets, it becomes important to establish a benchmark to compare the performance of such models on a variety of clinically relevant tasks spanning multiple organs and diseases. In this work, we present a collection of pathology datasets comprising clinical slides associated with clinically relevant endpoints including cancer diagnoses and a variety of biomarkers generated during standard hospital operation from three medical centers. We leverage these datasets to systematically assess the performance of public pathology foundation models and provide insights into best practices for training foundation models and selecting appropriate pretrained models. To enable the community to evaluate their models on our clinical datasets, we make available an automated benchmarking pipeline for external use.",
+  "authors": "Campanella G, Chen S, Singh M, Verma R, Muehlstedt S, Zeng J, Stock A, Croken M, Veremis B, Elmas A, Shujski I, Neittaanmäki N, Huang KL, Kwan R, Houldsworth J, Schoenfeld AJ, Vanderbilt C.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 78,
+  "found_by": [
+   "eupmc:joint embedding predictive arc",
+   "eupmc:self-supervised representation"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12003829",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "病理基础模型系统性基准评测，契合自监督表征迁移方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature子刊，病理基础模型系统评测，临床必读基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "病理基础模型临床基准评测（SSL模型对比）",
+  "data": "病理全切片图像（WSI）瓦片；多机构大规模数据",
+  "scenario": "计算病理学下游临床任务",
+  "benchmark": "CTransPath、Phikon、UNI、Virchow、Prov-GigaPath等",
+  "results": "DINO算法优于MAE；各模型在瓦片级与切片级任务表现不一（具体数值未列）",
+  "availability": "",
+  "limitations": "数字病理采用率低、数据与算力缺乏，WSI分辨率极高",
+  "summary": "论文对公开的自监督病理基础模型进行临床基准评测，梳理了CTransPath、Phikon、UNI、Virchow等模型的训练数据与算法。方法通过瓦片编码加聚合的两阶段流程评估下游任务。结果显示DINO算法优于MAE，但病理领域SSL仍处早期，受限于数据与算力。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

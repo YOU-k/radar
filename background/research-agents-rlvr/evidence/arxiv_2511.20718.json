@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2511.20718",
+  "title": "Stabilizing Off-Policy Training for Long-Horizon LLM Agent via Turn-Level Importance Sampling and Clipping-Triggered Normalization",
+  "url": "https://arxiv.org/abs/2511.20718",
+  "abstract": "Reinforcement learning (RL) algorithms such as PPO and GRPO are widely used to train large language models (LLMs) for multi-turn agentic tasks. However, in off-policy training pipelines, these methods often exhibit unstable optimization dynamics and are prone to performance collapse. Through empirical analysis, we identify two fundamental sources of instability in this setting: (1)~a granularity mismatch between token-level policy optimization and turn-structured interactions, and (2) high-variance and unreliable gradient updates induced by off-policy importance sampling and inaccurate advantage estimation. To address these challenges, we propose SORL, \\underline{S}tabilizing \\underline{O}ff-Policy \\underline{R}einforcement \\underline{L}earning for Long-Horizon Agent Training. SORL introduces principled mechanisms that align policy optimization with the structure of multi-turn interactions and adaptively suppress unreliable off-policy updates, yielding more conservative and robust learning dynamics. Within this framework, we instantiate two stabilized algorithms: SO-PPO and SO-GRPO. Both algorithms are designed to mitigate gradient variance and prevent optimization collapse without requiring careful early stopping or heuristic tuning. We evaluate SO-PPO and SO-GRPO on a range of multi-turn search benchmarks, including general question answering, multi-hop question answering, and medical multiple-choice QA tasks. Experimental results show that both methods consistently prevent training instabilities and performance collapses observed in standard PPO and GRPO, maintain lower clipping ratios and more stable optimization trajectories, and achieve superior or comparable task performance. These results demonstrate that the proposed algorithm provides a practical, scalable, and general framework for stabilizing reinforcement learning in multi-turn LLM agent training.",
+  "authors": "Chenliang Li, Adel Elmahdy, A. Boyd, Zhong-Ruo Wang, Siliang Zeng, Alfredo García, Parminder Bhatia, T. Kass-Hout",
+  "venue": "",
+  "year": 2025,
+  "citations": 6,
+  "found_by": [
+   "s2:citations:arxiv:2504.15275"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "稳定长程智能体off-policy RL，回合级重要性采样，方法实质",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "长程智能体off-policy RL稳定化，GRPO训练关键问题",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出SORL框架，含SO-PPO与SO-GRPO，回合级重要性采样与裁剪触发归一化",
+  "data": "多轮搜索基准：通用问答、多跳问答、医学多选题QA",
+  "scenario": "长时程LLM智能体离策略训练",
+  "benchmark": "对比标准PPO与GRPO",
+  "results": "两种方法持续防止训练不稳定与性能崩溃，保持更低裁剪比与更稳定优化轨迹，任务表现更优或相当",
+  "availability": "",
+  "limitations": "未在片段中明确说明",
+  "summary": "本文针对多轮智能体离策略RL训练中PPO/GRPO不稳定与性能崩溃问题，识别出token级优化与回合结构不匹配、离策略重要性采样高方差两大根源。作者提出SORL框架及SO-PPO、SO-GRPO两种算法，对齐多轮交互结构并自适应抑制不可靠更新。在多轮搜索基准上，两方法稳定训练并取得更优或相当表现。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

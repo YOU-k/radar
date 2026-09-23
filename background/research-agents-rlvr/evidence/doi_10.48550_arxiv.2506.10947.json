@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.48550/arxiv.2506.10947",
+  "title": "Spurious Rewards: Rethinking Training Signals in RLVR",
+  "url": "https://doi.org/10.48550/arXiv.2506.10947",
+  "abstract": "We show that reinforcement learning with verifiable rewards (RLVR) can elicit strong mathematical reasoning in certain language models even with spurious rewards that have little, no, or even negative correlation with the correct answer. For example, RLVR training with GRPO improves MATH-500 performance for Qwen2.5-Math-7B by 21.4 percentage points using randomly assigned rewards, nearly matching the 29.1-point gain from ground-truth rewards. To explain this counterintuitive observation, we show that GRPO exhibits a clipping bias from the clip term, which can amplify high-prior behaviors learned during pretraining even without informative rewards. As a case study, we identify one such behavior in Qwen2.5-Math models, which we call code reasoning -- reasoning in code without actual code execution; code-reasoning frequency increases from 65 percent to over 90 percent with spurious rewards. However, the presence of such amplifiable behaviors is highly model-dependent. In practice, spurious rewards that are effective for Qwen models often fail to produce gains for other model families, such as Llama3 or OLMo2. Our results highlight the importance of validating RL methods across diverse models rather than relying on a single de facto choice: large gains can arise on Qwen models even from random rewards that do not reflect genuine capability improvements.",
+  "authors": "Rulin Shao, S. Li, Rui Xin, Scott Geng, Yiping Wang, Sewoong Oh, S. Du, Nathan Lambert",
+  "venue": "arXiv.org",
+  "year": 2025,
+  "citations": 218,
+  "found_by": [
+   "s2:references:doi:10.48550/arxiv.2507.10532"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2506.10947"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "揭示RLVR虚假奖励机制，含GRPO定量实验，方法学批判价值高",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "揭示RLVR虚假奖励仍有效，GRPO机制批判性发现，高引用必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "RLVR+GRPO，使用虚假/随机奖励训练",
+  "data": "数学推理任务，Qwen2.5-Math-7B等模型",
+  "scenario": "LLM数学推理强化学习",
+  "benchmark": "MATH-500，对比真实奖励、随机奖励、Llama3、OLMo2",
+  "results": "随机奖励使Qwen2.5-Math-7B MATH-500提升21.4个百分点，接近真实奖励29.1点；代码推理频率从65%升至90%以上",
+  "availability": "",
+  "limitations": "可放大行为高度依赖模型，虚假奖励对Llama3、OLMo2等无效",
+  "summary": "本文检验RLVR是否必须依赖正确可验证奖励，发现即使奖励与正确答案无关甚至负相关，也能提升部分模型数学推理。作者用GRPO在Qwen2.5-Math-7B等模型上比较真实奖励、随机奖励和虚假奖励，并分析clip项带来的偏差。结果显示随机奖励可带来21.4点提升，主要放大预训练中的代码推理行为，但该现象高度依赖模型家族。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-23"
+}

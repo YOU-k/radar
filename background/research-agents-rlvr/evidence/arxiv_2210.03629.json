@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2210.03629",
+  "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+  "url": "https://arxiv.org/abs/2210.03629",
+  "abstract": "While large language models (LLMs) have demonstrated impressive capabilities across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with external sources, such as knowledge bases or environments, to gather additional information. We apply our approach, named ReAct, to a diverse set of language and decision making tasks and demonstrate its effectiveness over state-of-the-art baselines, as well as improved human interpretability and trustworthiness over methods without reasoning or acting components. Concretely, on question answering (HotpotQA) and fact verification (Fever), ReAct overcomes issues of hallucination and error propagation prevalent in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generates human-like task-solving trajectories that are more interpretable than baselines without reasoning traces. On two interactive decision making benchmarks (ALFWorld and WebShop), ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34% and 10% respectively, while being prompted with only one or two in-context examples. Project site with code: https://react-lm.github.io",
+  "authors": "Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, Yuan Cao",
+  "venue": "International Conference on Learning Representations",
+  "year": 2022,
+  "citations": 11438,
+  "found_by": [
+   "seed"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "ReAct 范式奠基，推理与工具行动交织，科研智能体核心基础。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "ReAct奠基LLM智能体推理-行动协同，万引必读经典。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "ReAct：交错生成推理轨迹与任务动作，提示式协同",
+  "data": "HotpotQA、Fever、ALFWorld、WebShop；仅1-2个上下文示例",
+  "scenario": "问答、事实验证与交互决策",
+  "benchmark": "HotpotQA、Fever、ALFWorld、WebShop；对比模仿学习与强化学习基线",
+  "results": "ALFWorld成功率绝对提升34%，WebShop提升10%；HotpotQA/Fever减少幻觉与错误传播",
+  "availability": "代码公开：https://react-lm.github.io/",
+  "limitations": "依赖提示与外部API；未大规模RL训练；复杂环境下动作空间与错误恢复仍受限",
+  "summary": "论文提出ReAct，让LLM以交错方式生成推理轨迹和任务动作，使推理与行动相互增强。方法通过提示模型在思考与执行间循环，并接入Wikipedia API或交互环境获取信息。在问答、事实验证和交互决策任务上优于强基线，且轨迹更可解释。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

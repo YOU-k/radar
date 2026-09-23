@@ -89,4 +89,20 @@ RADAR_LIVE=1 python -m pytest tests/background/test_live.py             # 真 AP
 - 实跑修掉的问题：纯引用排序被通用方法挤占 → 相关性优先；Europe PMC 限流返回空 → 重试；全文 URL 错 → 修正并按 DOI 反查 pmcid；综合节被误挂论文 → 按节名判定并自动摘下；LLM 重复写标题 → 剥离。
 - 边缘案例合理：TransformEHR / Hi-BEHRT 生物专家 yes、媒体专家 no（非生物库级），记录待复审。
 
-下一步：放开到 8 轮；复制 topic.yaml 起其余方向；站点入口；weekly 接 renew；PaperQA2 插件可选。
+### 五个方向现状（2026-09-23）
+
+| 方向 | 轮 | 证据 | 全文 | 种子命中 | 子题饱和 | 高引覆盖 | 覆盖度 | 报告字数 |
+|---|---|---|---|---|---|---|---|---|
+| population-omics-ai | 7 | 90 | 54 | 1.00 | 0.67 | — | 0.83 | 5.4 万 |
+| aging-multimodal | 2 | 51 | 32 | 1.00 | 0.56 | 0.38 | 0.62 | 4.0 万 |
+| single-cell-foundation | 2 | 48 | 38 | 1.00 | 0.70 | 0.28 | 0.62 | 4.2 万 |
+| world-models-ssl | 3 | 65 | 26 | 0.40 | 0.38 | 0.56 | 0.46 | 3.9 万 |
+| research-agents-rlvr | 3 | 91 | 35 | 0.75 | 0.56 | 0.74 | 0.69 | 6.3 万 |
+
+多方向实跑后新增的机制：Semantic Scholar 关键词源（ML 方向 EuropePMC 无覆盖、arXiv 本机 406）；S2 429 指数退避 + 可选 `S2_API_KEY`；
+同一篇论文的 DOI / arXiv / PMID 互认（`alt_ids`），种子命中与去重都按此；S2 不通时经 DataCite / Crossref 取标题链接种子；
+媒体专家口径：CNS 及子刊综述属背景必读，通用方法套小众领域不算影响力。
+
+已知限制：S2 无 key 时限速严重，ML/agent 方向的种子与滚雪球受影响，配 `S2_API_KEY` 后会明显改善。
+
+下一步：其余四个方向放开到 8 轮；站点入口；weekly 接 renew；PaperQA2 插件可选。

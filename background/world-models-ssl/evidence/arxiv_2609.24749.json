@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "arxiv:2609.24749",
+  "title": "D-JEPA: A Decision-Aligned Latent World Model",
+  "url": "https://arxiv.org/abs/2609.24749",
+  "abstract": "Latent world models predict the consequences of actions, but accurate prediction does not guarantee that latent distance reflects which candidate will execute successfully. We identify a decision-local prediction gap: among the few futures competing for execution, a candidate predicted closer to the goal can produce a worse realized outcome than an available alternative. We introduce D-JEPA, a decision-aligned latent world model that learns decision-relevant relations among candidate futures from executed outcomes. A bounded, permutation-equivariant operator jointly reasons over goal-relative predictive features and ordinal evidence, refining pretrained predictive geometry where action choices are most consequential. Restricted predictor adaptation and a shared ordinal interface extend this alignment across complementary predictive geometries. D-JEPA further realizes the learned decision structure in JEPA-compatible future representations, enabling deployment through native latent-distance planning. Evaluations across latent control, manipulation, pretrained action-producing models, physical robots and autonomous driving demonstrate improved action selection, including 87.89% success on PushT, a 15.04-point average gain on RoboTwin, and a 17-point gain on physical robot tasks. These results establish decision-relevant relational structure as a direct bridge between predictive world modeling and effective control.",
+  "authors": "Shuai-Jun Liu, Cheng-Ju Wu, Qi-Fu Wen, Fei-Yang You, Cheng-Long Zhang, Shu-Yang Hao, Xi Lin, Ning-Xin Su",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:arxiv:2301.08243",
+   "s2:citations:arxiv:2506.09985"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "决策对齐潜世界模型，JEPA新变体有方法新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JEPA决策对齐世界模型，方法新颖有代码潜力",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "D-JEPA，决策对齐的隐世界模型",
+  "data": "机器人操作/控制轨迹；PushT、RoboTwin等",
+  "scenario": "目标条件隐空间规划与控制",
+  "benchmark": "LeWM、TD-JEPA",
+  "results": "PushT成功率87.89%，RoboTwin平均提升15.04点，真实机器人任务提升17点",
+  "availability": "项目网站公开",
+  "limitations": "依赖已执行候选结果监督，需预训练预测几何",
+  "summary": "论文识别出决策局部预测差距：预测隐距离更近的候选动作可能实际失败。提出D-JEPA，用有界置换等变算子从已执行结果中学习候选未来间的决策相关关系，并将决策结构写入JEPA兼容的未来表征。实验在隐控制、操作、真实机器人和自动驾驶上提升动作选择，PushT达87.89%成功率。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/world-models-ssl/cache",
+ "added_round": 1,
+ "added_on": "2026-09-23"
+}

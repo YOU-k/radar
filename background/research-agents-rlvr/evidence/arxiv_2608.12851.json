@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2608.12851",
+  "title": "Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents",
+  "url": "https://arxiv.org/abs/2608.12851",
+  "abstract": "Self-improving LLM agents convert successful trajectories into persistent cross-task state. An unsafe success can thereby become reusable policy after its triggering input disappears. Skill evolution makes this failure measurable by distilling operational trajectories into executable, transferable, and inspectable procedures. Because evolution optimizes task outcomes rather than procedure safety, compromised experience can cause skill misevolution. Existing benchmarks measure current behavior or static artifacts but cannot attribute risk across authoring, retrieval, and later execution. To expose this lifecycle, we introduce SkillMisevo-Gym, a lifecycle-aware harness that versions skill state across agent frameworks, and SkillMisevo-Bench, a frozen design from malicious exposure to carryover tasks, with concept-aligned benign tasks and nine lifecycle metrics. We also introduce SafeEvolve, a wrapper that repairs unsafe content and governs subsequent reuse. Across 25 agent-method configurations, each covering 525 tasks in 25 episodes, all 21 evolved configurations author unsafe artifacts, while only fifteen lead to fresh-session harm. In the exposure sweep, three malicious tasks raise carryover ASR from 16.0% to 35.3%. Across representative skill evolution methods, SafeEvolve reduces unsafe retrieval and fresh-session harm by 26.7 and 17.3 percentage points, respectively, while mean benign utility changes by only 0.4 points. Together, persistent-adaptation safety must govern what updates write and what future executors reuse. Code is available at https://github.com/henrymao2004/misevolve.",
+  "authors": "Xutao Mao, Liang Zhao, Xiang Zheng, Cong Wang",
+  "venue": "",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:self-improving LLM agent scien"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "技能自改进安全隐患，含生命周期评测框架SkillMisevo-Gym",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "技能误进化生命周期基准，自改进智能体安全关键发现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出SKILLMISEVO-GYM、SKILLMISEVO-BENCH与SAFEEVOLVE防护包装",
+  "data": "25种智能体-方法配置，各525任务、25回合；恶意/良性/延续任务",
+  "scenario": "自改进智能体技能演化安全",
+  "benchmark": "SKILLMISEVO-BENCH；含9项生命周期指标与概念对齐良性任务",
+  "results": "21个演化配置均产出不安全技能，15个致新会话危害；3个恶意任务将延续ASR从16.0%升至35.3%；SAFEEVOLVE降不安全检索26.7点、新会话危害17.3点，良性效用仅变0.4点",
+  "availability": "代码公开：https://github.com/henrymao2004/misevolve",
+  "limitations": "现有基准无法跨编写、检索与执行归因风险；演化以任务结果为目标而非过程安全",
+  "summary": "本文揭示自改进LLM智能体将成功轨迹转为持久技能时，不安全成功可固化为可复用策略，即技能误演化。作者提出生命周期感知测试台SKILLMISEVO-GYM、冻结基准SKILLMISEVO-BENCH及修复包装SAFEEVOLVE。实验显示多数演化配置产出不安全技能，SAFEEVOLVE显著降低不安全检索与新会话危害而几乎不损良性效用。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/research-agents-rlvr/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

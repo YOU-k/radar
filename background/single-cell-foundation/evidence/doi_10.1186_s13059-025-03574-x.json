@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s13059-025-03574-x",
+  "title": "Zero-shot evaluation reveals limitations of single-cell foundation models.",
+  "url": "https://doi.org/10.1186/s13059-025-03574-x",
+  "abstract": "Foundation models such as scGPT and Geneformer have not been rigorously evaluated in a setting where they are used without any further training (i.e., zero-shot). Understanding the performance of models in zero-shot settings is critical to applications that exclude the ability to fine-tune, such as discovery settings where labels are unknown. Our evaluation of the zero-shot performance of Geneformer and scGPT suggests that, in some cases, these models may face reliability challenges and could be outperformed by simpler methods. Our findings underscore the importance of zero-shot evaluations in development and deployment of foundation models in single-cell research.",
+  "authors": "Kedzierska KZ, Crawford L, Amini AP, Lu AX.",
+  "venue": "Genome biology",
+  "year": 2025,
+  "citations": 65,
+  "found_by": [
+   "eupmc:single-cell foundation model b",
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12007350",
+   "is_oa": true
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "零样本评测揭示单细胞基础模型局限，属批判性基准证据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "零样本评测揭示单细胞基础模型局限，必读批判性基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "零样本评估Geneformer与scGPT单细胞基础模型",
+  "data": "5个多样单细胞数据集，如Pancreas 16k、PBMC 12k等",
+  "scenario": "细胞类型聚类与嵌入评估",
+  "benchmark": "HVG、Harmony、scVI",
+  "results": "Geneformer和scGPT在AvgBIO上多低于HVG、Harmony、scVI；HVG在所有指标上优于二者；scGPT仅在PBMC 12k部分优于scVI/Harmony",
+  "availability": "",
+  "limitations": "零样本评估仍不常见；预训练与评估数据存在部分重叠",
+  "summary": "作者对Geneformer和scGPT进行零样本评估，检验其细胞嵌入是否能泛化到未见数据。他们在五个数据集上比较细胞类型聚类和批次校正表现，并以HVG、Harmony和scVI为基线。结果发现两种基础模型多数情况下不如更简单基线，说明零样本评估对单细胞基础模型至关重要。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/single-cell-foundation/cache",
+ "added_round": 2,
+ "added_on": "2026-09-23"
+}

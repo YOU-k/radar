@@ -42,6 +42,14 @@ class EvidenceStore:
     def ids(self) -> set[str]:
         return {self.get_by_path(p).id for p in self.dir.glob("*.json")}
 
+    def all_ids(self) -> set[str]:
+        """主 id + 备用 id（同一篇的 DOI / arXiv / PMID 写法）。种子命中与去重都按这个查。"""
+        out = set()
+        for e in self.all():
+            out.add(e.id)
+            out.update(e.candidate.extra.get("alt_ids") or [])
+        return out
+
     def get_by_path(self, p: Path) -> Evidence:
         return Evidence.from_dict(json.loads(p.read_text(encoding="utf-8")))
 
@@ -68,7 +76,8 @@ class EvidenceStore:
         return out
 
     def is_seen(self, cand: Candidate) -> bool:
-        return (cand.id in self.ids() or cand.id in self.rejected()
+        mine = {cand.id, *(cand.extra.get("alt_ids") or [])}
+        return (bool(mine & self.all_ids()) or cand.id in self.rejected()
                 or title_key(cand.title) in self.title_keys())
 
     # ---- 写 ----
