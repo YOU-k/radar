@@ -1,9 +1,12 @@
-# 可用资源清单（数据集 / 模型）
+# 可用资源清单
 
-自动累积：只收确认公开可获取、打分 ≥7 的大数据集和模型，按使用场景分组，持续更新。资讯请看日报。
+「领域基础设施」：用量挖掘——被多篇高分工作反复用于训练/评测的数据集与基准，附使用证据。
+「新发布资源」：只收确认公开可获取、打分 ≥7 的新数据集/模型，按场景分组。资讯请看日报。
 
 ## 单细胞 / 空间组学
 
+- [Speciesformer learns conserved cellular states for cross-species generative virtual cell modeling](https://doi.org/10.64898/2026.09.22.752128) — 跨物种单细胞基础模型，学习保守细胞状态，用于虚拟细胞生成与跨物种迁移研究。
+  `model` · 单细胞转录组 · `7.0` 分 · 2026-09-26
 - [A single-cell RNA-seq catalog of ground truth gene coregulation](https://doi.org/10.64898/2026.09.18.752692) — 含已知调控关系的scRNA-seq基准目录，用于评估共调控识别与归一化方法。
   `dataset` · 单细胞转录组 · 规模 35个样本 · `7.0` 分 · 2026-09-22
 - [LucaCell: a sequence-centric foundation model for cross-species single-cell analysis](https://doi.org/10.64898/2026.09.08.750024) — 跨物种单细胞序列基础模型，适合做细胞表征微调基线

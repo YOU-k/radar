@@ -63,7 +63,7 @@ details.deep .deepbody p{margin:4px 0}
 .hide{display:none!important}
 </style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
-<div class="meta">更新至 2026-09-25 · 7 个方向背景 / 2 份周报 / 11 份日报</div>
+<div class="meta">更新至 2026-09-26 · 7 个方向背景 / 2 份周报 / 12 份日报</div>
 <div class="tabs"><div class="tab on" data-tab="bg">方向背景</div><div class="tab" data-tab="week">周报</div><div class="tab" data-tab="day">日报</div><div class="tab" data-tab="res">资源库</div></div></div>
 <div id="panel-bg" class="on"><details class="bg"><summary>联合分析<span class="cnt">6 个方向 · 证据 439 篇 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>全景</h2>
 <table>
@@ -1658,7 +1658,28 @@ details.deep .deepbody p{margin:4px 0}
 </ul></div></div>
 <div id="panel-day">
 <input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">
-<details class="day" data-first="1" open><summary>2026-09-25 · 周五<span class="cnt">2 条</span></summary><div class="daybody"><div class="dom">人群健康与多组学 AI</div>
+<details class="day" data-first="1" open><summary>2026-09-26 · 周六<span class="cnt">8 条</span></summary><div class="daybody"><div class="dom">衰老与多模态健康模型</div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://doi.org/10.64898/2026.09.22.753364">Spatiotemporal atlas resolves the mesenchymal-epithelial stem cell axis governing human hair follicle aging and pathology</a><span class="badge mid">6.0</span></div><div class="reason">人毛囊时空多模态图谱解析干细胞衰老，数据资源型工作，值得关注。</div><div class="meta">europepmc · 2026-09-23 · Wei X, Xu Y, Du J, Li R, Zhou Z, Yu Y, Yuan Z, Cheng H, Jiang Y, Zhu F, Cai P, S</div><div class="bgline">多模态衰老时钟与生物年龄 › 2.3 单细胞与空间衰老图谱 · 新增人毛囊多模态时空图谱，揭示间充质-上皮干细胞轴驱动衰老与脱发，拓展空间衰老图谱至皮肤附属器</div></div>
+<div class="dom">生物医学数据库 / 模型 / 部署</div>
+<div class="card" data-score="7.0"><div class="t"><a href="https://doi.org/10.64898/2026.09.22.752128">Speciesformer learns conserved cellular states for cross-species generative virtual cell modeling</a><span class="badge mid">7.0</span><span class="badge res">资源</span></div><div class="reason">跨物种单细胞基础模型，虚拟细胞生成，与多模态衰老建模方法学高度相关。</div><div class="meta">europepmc · 2026-09-23 · Wang J, Dong J, Li G, Fang C, Liu L, Gao X.</div><div class="bgline">单细胞与空间组学基础模型与虚拟细胞 › 2.1 单细胞基础模型 · 新增跨物种生成式虚拟细胞建模，突破已有单物种基础模型局限。</div></div>
+<div class="dom">人群健康与多组学 AI</div>
+<div class="card" data-score="8.0"><div class="t"><a href="https://doi.org/10.21203/rs.3.rs-11120748/v1">Molecular Circadian Disturbance in Human Blood Independently Predicts Multi-Disease Risk and Maps to Hepatic metabolism Pathways</a><span class="badge hi">8.0</span></div><div class="reason">42万UKB昼夜节律扰动预测多病风险，大规模队列+多组学，高度契合。</div><div class="meta">europepmc · 2026-09-23 · Shi Y, Song W, Zhao Z, Zou K, Pan T, Zhang M, Wang Z.</div><div class="bgline">人群健康与多组学 AI › 2.4 组学衰老时钟与纵向多组学动态 · 42万UKB多组学昼夜节律扰动指标，新增时间维度与多病风险预测</div><details class="deep"><summary>深读笔记</summary><div class="deepbody"><p><strong>总结</strong>
+该研究在 42 万 UK Biobank 参与者中，将 312 个血液分子指标与采血时间关联，用 Bayesian Additive Regression Trees 提取出两个正交的昼夜节律指标——相位偏移（phase shift）与节律紊乱（circadian disturbance）。节律紊乱独立于睡眠行为，可预测 98 种未来疾病风险（HR 最高 1.51），并在 94 种疾病患者中显著升高，GWAS 定位的位点汇聚于肝脏特异通路和脂代谢基因（APOE、PLTP、CETP、LDLR、ANGPTL3）。</p>
+<p><strong>核心方法</strong>
+方法学核心是"用横断面大队列的采血时间作为自然扰动"来反推个体化分子节律：先对每个分子拟合其相对采血时间的周期性变化，再用 BART 把个体层面的偏差分解为全局相位偏移与分子间不同步的紊乱度两个正交指标。随后用 Cox 模型做疾病风险预测、用 GWAS + SNP-heritability 做遗传解析，属于"大队列 + 组学 + 遗传整合"的典型范式，而非新的深度学习架构。</p>
+<p><strong>数据与代码可用性</strong>
+摘要未提及代码或衍生数据的公开链接，仅说明使用了 UK Biobank 数据（需申请访问），且该文是 Research Square 预印本（rs-3.rs-11120748），尚未见同行评审版本。因此<strong>不能直接拿来用</strong>：数据需通过 UKB 申请流程获取，两个节律指标的具体实现（BART 参数、分子筛选、相位估计细节）需等正式发表或补充材料/代码仓库公布后才能复现。可执行的线索是：先按摘要思路在自有队列（如有采血时间戳的 PBMC/血浆组学数据）上做可行性验证，同时关注该预印本后续版本是否放出 GitHub。</p>
+<p><strong>局限</strong>
+仅摘要可见，无法评估 BART 模型对采血时间分布偏倚、横断面推断个体节律的假设强度，以及相位/紊乱两指标在重复测量数据上的验证情况。SNP-heritability 仅 0.023 和 0.010，遗传解释度很低，提示环境与测量噪声占比大；疾病预测为观察性关联，HR ≤1.51 属中等效应，因果方向（节律紊乱致病 vs 疾病导致节律紊乱）未解决。此外 UKB 以欧洲裔为主，跨队列可复现性未知。</p>
+<p><strong>对多模态衰老模型合作的启发</strong>
+这篇正好落在画像里"人群多组学 + 遗传整合 + 纵向健康建模"的高分区间，且提供了一个<strong>可迁移到多模态衰老模型的具体设计思路</strong>：把"采血/采样时间"当作一个被长期忽略的模态协变量，用类似 BART 的轻量模型为每个模态（蛋白组、甲基化、代谢组）分别估计"时间相位"和"模态内紊乱度"，再检验这些节律特征是否与衰老时钟残差、类器官扰动响应相关。可执行的第一步：在合作方提供的类器官/组学数据中记录并建模采样时间，先做"节律紊乱是否解释衰老时钟的跨样本方差"这一小实验；第二步：把 phase shift / disturbance 作为额外输入特征，接入你们正在搭的多模态整合模型，测试其对跨队列校正和缺失模态处理的增益。同时可关注该团队是否放出指标计算代码，若有则直接作为 demo 阶段的公共数据基线之一。</p></div></details></div>
+<div class="card" data-score="7.0"><div class="t"><a href="https://doi.org/10.64898/2026.09.16.26363186">A national-scale digital atlas of recorded care patterns across more than 1000 diagnostic categories using real-world health data: a retrospective observational study</a><span class="badge mid">7.0</span></div><div class="reason">爱沙尼亚全国30%队列EHR，千余诊断类别自动化框架，人群健康建模高度相关。</div><div class="meta">europepmc · 2026-09-23 · Haug M, Mooses K, Oja M, Heinsar S, Lotman E, Pold M, Pauklin P, Loo L, Ilves P,</div><div class="bgline">人群健康与多组学 AI › 2.3 医学 / EHR 基础模型 · 爱沙尼亚全国30%队列，自动化框架扩展至千余诊断类别</div></div>
+<div class="card" data-score="7.0"><div class="t"><a href="https://doi.org/10.1038/s41591-026-04656-4">Large-scale esophageal cancer screening through noncontrast computed tomography and artificial intelligence.</a><span class="badge mid">7.0</span></div><div class="reason">Nature Medicine，6813例NC CT+AI食管癌筛查，大规模影像AI模型，方法可借鉴。</div><div class="meta">Nature medicine · europepmc · 2026-09-22 · Zhou J, Guo G, Yao J, Yu Q, Zheng C, Feng X, Ye X, Zhou Y, Yang P, Lambert L, Zh</div><div class="bgline">人群健康与多组学 AI › 4 应用与结果 · 6813例NC CT影像AI食管癌筛查，新增影像模态大规模应用</div></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://doi.org/10.1038/s41591-026-04652-8">Performance of a multi-cancer early detection test in the randomized controlled NHS-Galleri trial.</a><span class="badge mid">6.0</span></div><div class="reason">NHS-Galleri 14万人RCT的MCED性能结果，大规模队列硬数据，值得关注。</div><div class="meta">Nature medicine · europepmc · 2026-09-22 · Neal RD, Dolly S, Johnson P, Jones H, Kumar SH, Lee LYW, Lee Y, Liang W, Round T</div><div class="bgline">人群健康与多组学 AI › 5 评测、可复现性与争议 · 14万人RCT显示MCED未达主要终点，提供阴性硬证据</div></div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://doi.org/10.1038/s41591-026-04618-w">Performance and safety of a multi-cancer early detection test: the PATHFINDER 2 study.</a><span class="badge mid">6.0</span></div><div class="reason">PATHFINDER 2前瞻MCED性能与安全性研究，大规模临床队列证据，值得一读。</div><div class="meta">Nature medicine · europepmc · 2026-09-22 · Nabavizadeh N, McDonnell C, Kurbegov D, Matrana M, Gadgeel S, Kim RH, Stipec G, </div><div class="bgline">人群健康与多组学 AI › 4 应用与结果 · PATHFINDER 2前瞻验证MCED性能与安全性，扩大临床证据</div></div>
+<div class="dom">追踪更新（种子论文引用 / 关注作者）</div>
+<div class="card" data-score="6.0"><div class="t"><a href="https://www.semanticscholar.org/paper/13721f604c94dc0058ed3acd2ad18f703f098f59">PRAXIS-VirtualCell: A Programmable and Trustworthy Framework for Agentic Virtual Cell Experiments</a><span class="badge mid">6.0</span></div><div class="reason">可编程虚拟细胞agent框架，跨物种任务，若开源可直接用，值得跟进。</div><div class="meta">semantic_scholar · 2026-09-24 · Zhen-Yu Ma, Xu-Kai Jiang</div></div></div></details>
+<details class="day" data-first="0"><summary>2026-09-25 · 周五<span class="cnt">2 条</span></summary><div class="daybody"><div class="dom">人群健康与多组学 AI</div>
 <div class="card" data-score="6.0"><div class="t"><a href="https://doi.org/10.1016/j.xgen.2026.101364">Pre-diagnosis plasma cell-free DNA reveals early signatures of prostate and breast cancer risk up to eight years prior to clinical detection.</a><span class="badge mid">6.0</span></div><div class="reason">Cell Genomics，cfDNA甲基化早筛，队列纵向设计可借鉴，但样本量中等。</div><div class="meta">Cell genomics · europepmc · 2026-09-21 · Cheng N, Ouellette TW, Skead K, Singhawansa A, Elliott M, Cescon DW, Bratman SV,</div><div class="bgline">人群健康与多组学 AI › 2.4 组学衰老时钟与纵向多组学动态 · 新增cfDNA甲基化纵向早筛证据，诊断前8年预测癌风险，非衰老时钟但属纵向组学动态。</div></div>
 <div class="card" data-score="6.0"><div class="t"><a href="https://doi.org/10.1038/s41588-026-02747-z">Genetic landscape of an in vivo protein interactome.</a><span class="badge mid">6.0</span></div><div class="reason">Nature Genetics，酵母piQTL体内互作组，遗传-蛋白整合方法可迁移。</div><div class="meta">Nature genetics · europepmc · 2026-09-21 · Besse S, Sakaguchi T, Gauthier L, Sahaf Z, Ravindran R, Gonzalez L, Castellanos-</div><div class="bgline">人群健康与多组学 AI › 2.2 多组学与遗传整合 · 新增酵母体内piQTL方法，将遗传变异与蛋白互作强度关联，可迁移至人群多组学。</div></div></div></details>
 <details class="day" data-first="0"><summary>2026-09-24 · 周四<span class="cnt">9 条</span></summary><div class="daybody"><div class="dom">生物医学数据库 / 模型 / 部署</div>
@@ -2967,10 +2988,13 @@ details.deep .deepbody p{margin:4px 0}
 <li>数据库：CMAP、CPRD Aurum、ENCODE、Immunosenescence Inventory、MEDICINE、TEAPEE</li>
 <li>工具：BASIL、BOLT-LMM、Biolearn、CellPaint-POSH、ClockBase Agent、DeGAs、FaithRL、GATK、GEPA、Habitat、Hail、Harmony、ICD-8 to ICD-10 Mapping、K-Dense、LivAge、Loki、Longevity Claw、Olink、PHESANT、Perturb-FISH、PheMIME、PheWeb、Phecodes、REGENIE、SAFEEVOLVE、SAIGE-GENE、STREME、SenePy、SomaLogic、SomaScan、The AI Scientist、TranslAGE、UKB-MDRMF、copairs、moscot、scContam、ukbnmr</li>
 </ul></div>
-<details class="bg"><summary>日报新发现的资源（未核验）</summary><div class="bgbody"><h1>可用资源清单（数据集 / 模型）</h1>
-<p>自动累积：只收确认公开可获取、打分 ≥7 的大数据集和模型，按使用场景分组，持续更新。资讯请看日报。</p>
+<details class="bg"><summary>日报新发现的资源（未核验）</summary><div class="bgbody"><h1>可用资源清单</h1>
+<p>「领域基础设施」：用量挖掘——被多篇高分工作反复用于训练/评测的数据集与基准，附使用证据。
+「新发布资源」：只收确认公开可获取、打分 ≥7 的新数据集/模型，按场景分组。资讯请看日报。</p>
 <h2>单细胞 / 空间组学</h2>
 <ul>
+<li><a href="https://doi.org/10.64898/2026.09.22.752128">Speciesformer learns conserved cellular states for cross-species generative virtual cell modeling</a> — 跨物种单细胞基础模型，学习保守细胞状态，用于虚拟细胞生成与跨物种迁移研究。
+  <code>model</code> · 单细胞转录组 · <code>7.0</code> 分 · 2026-09-26</li>
 <li><a href="https://doi.org/10.64898/2026.09.18.752692">A single-cell RNA-seq catalog of ground truth gene coregulation</a> — 含已知调控关系的scRNA-seq基准目录，用于评估共调控识别与归一化方法。
   <code>dataset</code> · 单细胞转录组 · 规模 35个样本 · <code>7.0</code> 分 · 2026-09-22</li>
 <li><a href="https://doi.org/10.64898/2026.09.08.750024">LucaCell: a sequence-centric foundation model for cross-species single-cell analysis</a> — 跨物种单细胞序列基础模型，适合做细胞表征微调基线
