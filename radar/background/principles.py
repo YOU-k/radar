@@ -3,7 +3,10 @@
 方向报告是自下而上的证据综述（检索 → 评审 → 抽取 → 按节编译），天然只回答"大家在做什么"。
 这里补自上而下的一层：每个方向一次推理（方向定义 + 报告摘要 + 阶段判断 + 头部文献作为证据，
 加模型自身的领域常识，两者分开标注），最后一次跨方向综合。产物 background/_principles/report.md，
-站点「方向背景」tab 置顶。领域格局变化慢，放月度任务跑。"""
+站点「方向背景」tab 置顶。领域格局变化慢，放月度任务跑。
+
+[证据] 只取自通过数字核验的 TL;DR 句子（joint.topic_digest 已过滤）；阶段判断标为雷达检索统计。
+[常识] 受 config/trial_status.yaml 约束：2025 年后读出的试验只能按状态表写，表外的写「待核实」。"""
 from __future__ import annotations
 
 import json
@@ -11,6 +14,7 @@ import re
 from datetime import date
 from pathlib import Path
 
+from . import trials
 from .joint import topic_digest
 from .llmio import LLM, tagged
 from .spec import BASE, TopicSpec, load_spec
@@ -46,7 +50,8 @@ def _profile() -> str:
 def topic_view(spec: TopicSpec, llm: LLM) -> str:
     d = topic_digest(spec, max_top=12)
     material = {"方向": spec.name, "定义": spec.definition, "纳入范围": spec.include,
-                "报告摘要": d["tldr"], "阶段判断": d["stage"], "头部文献": d["top"]}
+                "报告摘要（已通过数字核验，[证据] 只能取自这里）": d["tldr"],
+                "阶段判断（雷达检索统计，非领域属性）": d["stage"], "头部文献": d["top"]}
     prompt = tagged("principles", (
         "你是这个领域资深的 PI，要给一位做算法支持的生物信息学博后讲清楚这个领域的**底层逻辑**，而不是复述文献。"
         "从第一性原理出发：疾病/生命现象的因果结构是什么，今天的研究为什么这样做，还缺什么。\n\n"
@@ -54,7 +59,9 @@ def topic_view(spec: TopicSpec, llm: LLM) -> str:
         + json.dumps(material, ensure_ascii=False)[:14000]
         + "\n\n按以下固定小节输出 markdown（直接从第一个小节开始，不要写方向名标题）：\n"
         + TOPIC_SECTIONS.format(chain=CHAIN)
-        + "\n\n规则：依据上面证据材料的判断在句末标 [证据]；依据你自身领域知识的判断标 [常识]，"
+        + ("\n\n" + trials.prompt_block() if trials.prompt_block() else "")
+        + "\n\n规则：依据上面「报告摘要」的判断在句末标 [证据]，带数字的 [证据] 句只能照抄报告摘要里的原数，"
+          "不要把阶段判断里的篇数、占比当作 [证据]；依据你自身领域知识的判断标 [常识]，"
           "常识必须具体（写出靶点、药物、试验名、机制、代表性数据集），拿不准的写「待核实」。"
           "关键判断用 **加粗**。总长 900-1400 字。"))
     return llm.chat(prompt, task="principles", temperature=0.3, timeout=600).strip()
@@ -65,6 +72,7 @@ def synthesis(views: dict[str, str], llm: LLM) -> str:
     prompt = tagged("principles", (
         "下面是同一位研究者关注的各领域的第一性原理分析。请做跨领域的全局判断，给他一张地图。\n\n"
         f"【他的研究画像】\n{_profile()}\n\n{joined[:40000]}\n\n"
+        + (trials.prompt_block() + "\n\n" if trials.prompt_block() else "") +
         "输出 markdown，固定章节：\n"
         "## 总判断\n一张表：领域 | 核心生物学问题（一句） | 主要瓶颈层（因果链上的哪一层 + 瓶颈类型） | 主流角度的盲点 | 最值得补的策略。每个领域一行。\n"
         "## 跨领域的共同规律\n3-5 条贯穿多个领域的底层规律（例如：关联到因果的鸿沟、测量先于建模、扰动是因果的硬通货、人群异质性），每条点名涉及的领域与具体例子。\n"
