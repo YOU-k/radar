@@ -6,6 +6,7 @@ import re
 from .. import llm
 from ..config import load_profile
 from .. import themes
+from ..journals import is_top
 from ..schema import Item
 
 PREFILTER_TOP = 56   # 7 个领域 × 8（原 5 领域 × 8 = 40）
@@ -71,8 +72,42 @@ def score_items(items: list[Item], cfg: dict, use_llm: bool = True) -> list[Item
         for it in items:
             it.extra["sent_to_llm"] = True
         llm_rerank(items)
+        apply_journal_floor(items, cfg)
     items.sort(key=lambda x: x.score, reverse=True)
     return items
+
+
+THEME_RULE = ("从下列主题 key 里选 0-3 个（最相关的放第一个）。只有条目的研究对象本身符合括号里的说明才选："
+              "只是用了单细胞数据或深度学习方法，不等于 singlecell / ssl；bulk、EHR、影像、微生物组、神经接口等"
+              "不在任何主题说明里的条目给空数组，不要硬凑。")
+
+FLOOR = 7.0
+_REVIEWISH = re.compile(r"\b(review|perspective|commentary|editorial|correction|erratum|news|primer)\b", re.I)
+
+
+def journal_of(it: Item) -> str:
+    return str(it.extra.get("journal") or it.extra.get("venue") or "")
+
+
+def apply_journal_floor(items: list[Item], cfg: dict) -> int:
+    """画像规则「CNS 及主要子刊上与方向相关的原创论文默认 ≥7」由代码执行，不靠 LLM 自觉。
+    条件：期刊在白名单（心血管主题再加 Circulation/EHJ/JACC 等）× 方向相关（LLM 给了主题标签，
+    且全领域关键词分 ≥2）× 非综述/评论。只对 LLM 已打分的条目生效（关键词分量纲不同）。"""
+    n = 0
+    for it in items:
+        if it.extra.get("scored_by") != "llm" or it.score >= FLOOR:
+            continue
+        tags = it.extra.get("themes") or []
+        if not tags or not is_top(journal_of(it), cardio="cardio" in tags):
+            continue
+        if _REVIEWISH.search(it.title or "") or keyword_score(it, cfg, all_domains=True) < 2:
+            continue
+        it.extra["floor"] = f"journal {it.score:g}→{FLOOR:g}"
+        it.score = FLOOR
+        n += 1
+    if n:
+        print(f"[score] journal floor raised {n} items to {FLOOR:g}")
+    return n
 
 
 def llm_rerank(items: list[Item]) -> bool:
@@ -98,7 +133,7 @@ def llm_rerank(items: list[Item]) -> bool:
             "类型 type 五选一：paper（论文/新闻）/ dataset（数据集/数据库）/ model（模型）/ tool（软件工具）/ other。\n"
             "dataset/model 的认定从严：必须有真实存在、公开可获取的产物（公开下载链接、GEO/Zenodo 编号、"
             "HuggingFace 页面、官方开源权重）；只发了论文、数据/权重未公开或「可应要求提供」的一律标 paper。\n"
-            "主题 tags：从下列主题 key 里选 1-3 个（最相关的放第一个），只选确实相关的；与全部都无关就给空数组。"
+            f"主题 tags：{THEME_RULE}"
             f"主题：{themes.prompt_list()}\n\n"
             f"【兴趣画像】\n{profile}\n\n【条目】\n"
             + json.dumps(payload, ensure_ascii=False)

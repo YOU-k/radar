@@ -39,7 +39,8 @@ def test_resolve_and_theme_line_order():
     assert tags == ["cardio", "cohort"]  # LLM 标签在前，定位方向补在后
     lines = retag.with_theme_line(bs[0]["lines"], tags)
     assert lines[2] == "  <sub>主题：#心血管 #人群队列</sub>" and lines[3].startswith("  <sub>定位：")
-    assert retag.resolve_themes(bs[1], [], names) == ["cohort"]  # 无标签无定位：按节名（领域）兜底
+    assert retag.resolve_themes(bs[1], [], names) == []  # LLM 判无主题且无定位：不再按节名（领域）兜底
+    assert retag.resolve_themes(bs[1], None, names) == bs[1]["themes"]  # LLM 没回答：沿用旧标签
 
 
 def test_retag_digest_regroups_by_theme(tmp_path, monkeypatch):

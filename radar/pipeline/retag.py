@@ -9,7 +9,6 @@ from datetime import date
 from pathlib import Path
 
 from .. import llm, themes
-from ..config import load_sources
 from .digest import assemble, summary_entries
 from .summary import day_summary
 
@@ -49,22 +48,13 @@ def parse_blocks(text: str) -> list[dict]:
     return blocks
 
 
-def _section_default(section: str) -> str:
-    """旧日报的节名是领域中文名 / 主题名 → 默认主题 key。"""
-    if section in themes.by_label():
-        return themes.by_label()[section]["key"]
-    for d in load_sources().get("domains", []):
-        if d.get("label_zh") == section:
-            return themes.for_domain(d["name"])
-    return ""
-
-
 def llm_tags(blocks: list[dict]) -> dict[int, list[str]]:
     if not blocks or not llm.available():
         return {}
     payload = [{"id": i, "title": b["title"][:200], "reason": b["reason"], "section": b["section"]}
                for i, b in enumerate(blocks)]
-    prompt = ("给下面每条科研情报条目标主题：从下列主题 key 里选 1-3 个（最相关的放第一个），只选确实相关的。"
+    from .score import THEME_RULE
+    prompt = ("给下面每条科研情报条目标主题：" + THEME_RULE +
               f"主题：{themes.prompt_list()}\n\n" + json.dumps(payload, ensure_ascii=False)
               + '\n\n只输出 JSON 数组：[{"id":0,"tags":["cardio","cohort"]}]')
     try:
@@ -83,15 +73,13 @@ def llm_tags(blocks: list[dict]) -> dict[int, list[str]]:
     return res
 
 
-def resolve_themes(b: dict, llm_given: list[str], names: dict[str, str]) -> list[str]:
-    tags = list(llm_given or b["themes"])
+def resolve_themes(b: dict, llm_given: list[str] | None, names: dict[str, str]) -> list[str]:
+    """LLM 标签（None = LLM 没回答这条，沿用旧标签；[] = LLM 判定无主题）+ 方向背景定位。
+    不再按节名/领域兜底：旧兜底把 data_models / ml_algorithms 领域的一切都标成 #单细胞 / #世界模型。"""
+    tags = list(b["themes"] if llm_given is None else llm_given)
     if b["bg"]:
         k = themes.for_topic(b["bg"].split(" › ", 1)[0].strip(), names)
         if k and k not in tags:
-            tags.append(k)
-    if not tags:
-        k = _section_default(b["section"])
-        if k:
             tags.append(k)
     return tags[:3]
 
@@ -112,7 +100,7 @@ def retag_digest(path: Path, use_llm: bool = True) -> int:
     names = themes.topic_names()
     out_blocks = []
     for i, b in enumerate(blocks):
-        tags = resolve_themes(b, given.get(i, []), names)
+        tags = resolve_themes(b, given.get(i), names)
         out_blocks.append({"themes": tags, "score": b["score"], "lines": with_theme_line(b["lines"], tags),
                            "title": b["title"], "reason": b["reason"], "venue": b["meta"].split(" · ")[0]})
     summary = day_summary(summary_entries(out_blocks)) if use_llm else []
