@@ -151,3 +151,13 @@ RADAR_LIVE=1 python -m pytest tests/background/test_live.py             # 真 AP
 [证据] 来自方向报告，[常识] 来自模型领域知识（需核实）。默认 `deepseek-reasoner`（`PRINCIPLES_MODEL` 可换，失败退回 SYNTH_MODEL）。
 产物 `background/_principles/report.md`，站点方向背景 tab 置顶；每月 1 号随 landscape 任务更新，手动：
 `python -m radar.run background principles --topic all`。
+
+## 9. 深度调研层（人工触发，2026-09-27 起）
+
+自动流水线（DeepSeek、固定 8 字段抽取 + 分节编译）便宜、可持续，但只能做证据汇编，还会犯抽取错误
+（例：cardio-omics 报告把 CKB PRS 论文引用的 EHJ 2022 数字当成其自身结果，并据此写出"两项研究结论相反"）。
+重点方向的深度判断在 Claude 会话里做，流程：
+1. `deep-research`：按子题并行检索（本次 5 个子题），笔记在 `research_notes/<标题>/`，报告在 `reports/`；
+2. `expert-panel`：4 个角色独立评审（心内科 / 遗传流病 / 药物研发 / 医学 AI），综合出事实错误清单与优先研究问题（`research_notes/<标题>/panel/`）；
+3. 按评审修订出"修订版"，与评审综合一起放进 `background/<slug>/deep/YYYY-MM-DD-*.md`，站点方向背景 tab 以〔深度〕卡片展示（排在全局判断、联合分析之后）。
+首个：心血管（ChinaHEART），评审纠正 10 处事实/逻辑错误，并把研究问题改为 测量层重建 → 净获益决策模型 → 诊疗链缺口地图。

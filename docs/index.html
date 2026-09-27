@@ -682,6 +682,676 @@ details.deep .deepbody p{margin:4px 0}
 <li><strong>不要做纯临床队列统计关联（无方法新意、无公开数据）</strong>。依据：心血管方向 2.1 已成熟、cns_share=0.0、median_citations=56，核心是 QRISK3/SCORE2/China-PAR 的增量改进与外部验证，方法已收敛；且 accepted_per_round 从 51 骤降到 8、7 后回升到 29，<strong>审稿门槛在 2024 年前后明显抬高，纯增量预测模型已被挤出</strong>。例外：中国人群大队列工作按画像规则仍按中档以上看。</li>
 <li><strong>不要追 RLVR/GRPO 的纯算法增量</strong>。依据：该主线（2.2）n=40、recent_share=0.95，但 median_citations=0、CNS 占比仅 0.03，DeepSeek-R1 已把范式推到 CNS 级、Kimi k1.5 在做规模验证，<strong>窗口约剩 6-12 个月</strong>；且已有虚假奖励与单样本 RLVR 使 MATH-500 分别提升 21.4 点与 36.0%→73.6% 的证据，提示增益可能主要来自策略梯度对既有行为的放大，<strong>[84] 的质疑若成立则许多"能力提升"叙事会被重估</strong>。真正该占位的是生物医学智能体 + 过程级验证（2.4 + 4）。</li>
 </ul></div></details>
+<details class="bg"><summary>〔深度〕心血管靶点问题因病种而异：ASCVD 与血压轴缺的是校准与实施链，ICH、HFpEF 与房颤基质仍缺靶点<span class="cnt">深度调研 · cardio-omics · 2026-09-27</span></summary><div class="bgbody"><p><strong>结论先行：对 ASCVD 和血压轴，心血管不缺方向已知的靶点，缺的是经事件校准的替代终点、足够的暴露单位，以及把每单位效应落到具体人群的实施链；对中国，这条链首先卡在结局能否测准和诊疗链哪一段断裂，然后才是给谁、降多少的净获益决策；ICH、HFpEF 和房颤基质则仍然缺靶点本身。</strong> 这句话有三层限定。第一是<strong>适用范围</strong>。LDL 轴（HMGCR、NPC1L1、PCSK9、LDLR）是全医学里因果链闭合最完整的靶点：遗传学先作出预测，结局试验随后证实，药物已获批；2025 年 11 月的 VESALIUS-CV 又把 PCSK9 单抗的获益扩展到无既往心梗或卒中的高危动脉粥样硬化人群。降压药靶同样早已明确。但出血性卒中（ICH）、HFpEF、房颤的致病基质（心房心肌病）和血管衰老确实缺少经人类遗传学验证的直接靶点，"不缺靶点"不适用于它们。第二是<strong>在"可干预的因果层"内部补上两个原报告忽略的层级</strong>：一个在下方，是<strong>测量/结局确定层</strong>，即卒中亚型能不能从死因登记中测准、POC 血脂和两次血压能不能代表通常水平；另一个在上方，是<strong>效应迁移/决策层</strong>，即怎样把 MR 和 RCT 给出的每单位相对效应，换算成中国个体在卒中亚型竞争风险下的绝对净获益。第三是<strong>对孟德尔随机化（MR）的正确表述</strong>：<strong>MR 给出的是每单位生物标志物的终生因果效应，在 LDL 轴上它对获益幅度的预测是成功的</strong>；换算到试验获益，需要知道可达到的绝对降幅、暴露时长的换算系数和正确的生物标志物尺度。2026 年 Lp(a)（Lp(a)HORIZON，2026-09-04 顶线未达主要终点）和 IL-6（ZEUS，2026-07-31，HR 0.99）的 III 期阴性，不是"MR 只能判方向、不能判幅度"，而是有把手但未经事件校准的替代终点，加上试验暴露的单位不足（HORIZON），或者外推超出了工具变量覆盖的尺度（ZEUS）。</p>
+<p>对中国，<strong>归因负担前三位是高收缩压、大气颗粒物和 LDL-C，三者的靶点早已明确。</strong> China PEACE MPP 筛查人群（2014–2017 年，35–75 岁志愿者）的高血压控制率只有 7.2%，同期具有全国代表性的中国高血压调查（CHS 2012–2015）报告的控制率约 15%【未核实】，两者都说明可挽回的负担主要在"人群→干预"这一层，缺的并不是靶点。ChinaHEART 高危人群的他汀使用率很低（原笔记给出的是他汀或阿司匹林不到 3%）；需要说明的是，一级预防已不常规推荐阿司匹林，它的低使用率不能算作可挽回的缺口。对即将分析 ChinaHEART 的算法团队，笔记显示这个队列<strong>目前没有已知的全基因组分型或大规模蛋白组</strong>，现有的是 440 万人的基线数据、约 270 万份存储样本和以死亡登记为主的随访（中位 3.6 年）。<strong>它的第一道关卡是测量层</strong>：死因登记里 I61、I63 之外还有 I64（未特指卒中）和垃圾编码，其分布与地区、医疗能力和居家死亡相关，属于差异性错分，足以让 LDL–ICH 权衡的方向翻转。因此本修订版把研究问题重排为：测量层重建 → 净获益决策模型（东亚药靶 MR 面板作为零成本的并行输入）→ 诊疗链缺口地图；个体水平的遗传学降为有条件启动的第二梯队，只能通过嵌套检测并与 CKB、BBJ 等外部遗传资源合作来做。</p>
+<blockquote>
+<p>标注约定：带引用链接的陈述是研究笔记中已核实的事实；标"【推断】"的是基于证据的判断；标"【未核实】"的是笔记中无法在本轮确认的背景知识，包括评审专家补充、但本修订没有回原始来源复核的数字与事件。凡是 2025–2026 年的试验，均注明日期和状态（截至 2026-09-27）。本修订版依据四位专家的评审意见改写，改动说明见文末"专家评审说明"。</p>
+</blockquote>
+<h2>一张记分牌：靶点丰富度与瓶颈层级因病种而异</h2>
+<p>下表把各病种放在同一条因果链上比较。与原报告相比，这条链的两端各补了一层：<strong>"测量/结局确定"位于最下方</strong>，决定我们看到的结局和暴露是否可信；<strong>"效应迁移/决策"位于"干预"之上</strong>，决定每单位效应能否落到具体人群。完整的链条是"遗传变异→分子→细胞→组织→个体→人群→干预→效应迁移/决策"，并以测量层为底座。表中的"瓶颈层"是综合各笔记和评审意见后作出的判断【推断】，证据在后文各节逐一给出。</p>
+<table>
+<thead>
+<tr>
+<th>病种</th>
+<th>经人类遗传学+结局试验闭环验证的靶点</th>
+<th>主要缺口</th>
+<th>瓶颈所在层</th>
+<th>根本原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ASCVD/冠心病</td>
+<td>HMGCR、NPC1L1、PCSK9、LDLR（已获批）；CETP 经 apoB 在 REVEAL 中获益</td>
+<td>约 47% 的 CAD 位点与传统危险因素无关，属于血管壁生物学，至今没有成药；Lp(a)（HORIZON）与下游 IL-6 配体阻断（ZEUS）的 III 期阴性</td>
+<td>血管壁位点：变异→分子→细胞；非 LDL 循环靶点：替代终点未经事件校准、试验暴露单位不足（干预层）</td>
+<td>血管壁：增强子变异，效应依赖细胞状态，没有可测的循环"把手"；Lp(a)、hsCRP：有把手，但没有跨机制校准的剂量–事件关系</td>
+</tr>
+<tr>
+<td>高血压（SBP）</td>
+<td>降压药靶（RAAS、利尿剂、CCB、β 阻滞剂）经 BPLTTC 等大量 RCT 证实；新机制醛固酮合酶抑制剂与 AGT siRNA 在研或新获批【未核实】</td>
+<td>靶点充足，诊疗链断裂：MPP 筛查人群控制率 7.2%</td>
+<td>测量层（两次读数、回归稀释）+ 人群→干预（筛出→知晓→起始→达标→坚持）</td>
+<td>无症状、需终身用药，基层药物可及性与滴定能力不足</td>
+</tr>
+<tr>
+<td>缺血性卒中</td>
+<td>LDL 轴、降压、抗栓；FXIa（OCEANIC-STROKE，2026 阳性）</td>
+<td>心源性卒中与 ACS 中 FXIa 结果不一；颅内动脉粥样硬化（ICAS）缺乏特异靶点，东亚特有的 RNF213 p.R4810K 是强遗传因子但尚无干预【未核实】</td>
+<td>干预层（抑制深度、对照药设计、亚型）；测量层（死因不分 TOAST 亚型）</td>
+<td>亚型异质，同一药物在加药设计与头对头设计中结论相反</td>
+</tr>
+<tr>
+<td>出血性卒中（ICH）</td>
+<td>除血压外基本没有；急性期集束化救治（INTERACT3）改善功能结局【未核实】</td>
+<td>COL4A1/2、1q22、APOE 均非可成药分子；东亚 GWAS 样本量不足；死因数据不分部位</td>
+<td>分子→组织；人群层样本量；测量层（I64 错分、死亡混合发病与病死）</td>
+<td>基底膜结构蛋白与淀粉样变性导致慢性退变；遗传学上低 LDL 与 ICH 风险升高相关</td>
+</tr>
+<tr>
+<td>HFpEF</td>
+<td>无（有效药物均来自经验生理学或代谢医学）</td>
+<td>ni-HFpEF 的 SNP-h² 为 1.8% ± 1.3%，证据不足以估计；位点数 3 个，而 HFrEF 为 46 个；HERMES 91% 为欧洲人</td>
+<td>个体→组织（表型定义），外加人群层（共病组合）</td>
+<td>这是综合征标签，汇合了肥胖、血压、房颤、CKD 等多条上游路径</td>
+</tr>
+<tr>
+<td>HFrEF</td>
+<td>部分落在心肌病基因上</td>
+<td>新机制难以超出 SGLT2i、ARNI、MRA、BB 已覆盖的范围</td>
+<td>分子→干预</td>
+<td>位点可解析，但可成药机制已被现有药物占据</td>
+</tr>
+<tr>
+<td>房颤</td>
+<td>没有来自 GWAS 的获批药物；抗凝预防卒中有效（非遗传来源）</td>
+<td>354–525 个位点主要指向发育转录因子和结构蛋白；中国房颤检出与抗凝不足</td>
+<td>变异→细胞（发育设定点），外加细胞→组织（纤维化）；对中国更直接的是人群→干预（检出→抗凝）</td>
+<td>最强位点多在生命早期起作用，但也有 KCNN3 这类成人期可干预的反例【未核实】</td>
+</tr>
+<tr>
+<td>心肌病：HCM</td>
+<td>肌球蛋白抑制剂（梗阻性 HCM）</td>
+<td>非梗阻性 HCM 失败（ODYSSEY-HCM）</td>
+<td>替代终点（缺可测读数）</td>
+<td>梗阻性 HCM 有 LVOT 压差这个把手；非梗阻性没有，峰值 VO2 太"软"</td>
+</tr>
+<tr>
+<td>心肌病：基因治疗与 ATTR</td>
+<td>TTR 稳定剂、沉默剂、编辑</td>
+<td>AAV 心脏递送有毒性；每个基因覆盖的人群很小</td>
+<td>分子→干预（递送）</td>
+<td>心脏 AAV 的剂量依赖性免疫与肝毒性；TTR 因靶器官是肝脏而例外</td>
+</tr>
+<tr>
+<td>血管衰老/CHIP</td>
+<td>无获批的特异药物</td>
+<td>未按 CHIP 分层的 IL-6 阻断失败；PWV 遗传学与血压纠缠</td>
+<td>人群→干预（没有按基因型选人）</td>
+<td>遗传证据指向亚组，试验却按表型入组</td>
+</tr>
+</tbody>
+</table>
+<p><strong>跨病种的规律需要从"有没有分子把手"改写为三层：有没有可测的分子 → 分子与事件之间有没有经过跨机制校准的剂量关系 → 监管是否接受它作为替代终点。</strong> LDL-C/apoB 和血压三层都满足：每降低一个单位对应多少事件下降，已被多种机制的 RCT 反复验证，所以替代终点、MR 定标和小样本剂量探索都成为可能，新药可以先凭 LDL-C 获批再补 CVOT（obicetrapib 在欧盟即是如此，见下文）。Lp(a) 和 hsCRP 是"有把手但未经校准"的反例：pelacarsen 确实降低了 Lp(a)，ziltivekimab 确实降低了 IL-6 和 hsCRP，试验照样阴性，所以可测的把手只是必要条件。非梗阻性 HCM 是"缺少把手"的例子：没有 LVOT 压差这样的读数，只能用峰值 VO2 这类软终点，ODYSSEY-HCM 因此失败。血管壁位点、ICH 位点和房颤发育位点连第一层都不满足，每个候选都得直接跑一个大型结局试验（CVOT）。</p>
+<p>Minikel 等（Nature 2024）估计，有人类遗传学支持的机制从 I 期到获批的成功率高 <strong>2.6 倍</strong>（OMIM 证据 3.7 倍，GWAS 证据超过 2 倍），这一优势在 II–III 期最明显，而且与遗传变异的效应大小基本无关。但<strong>在研项目中只有 4.8% 有胚系遗传支持</strong> (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11096124/">Minikel 2024</a>)。【推断】对心血管而言，这一优势主要体现在降低 II→III 期的失败率；而 CVOT 动辄上万例、随访 4–5 年，"有遗传支持但暴露量不足"的失败代价远高于其他领域，HORIZON 就是例子。</p>
+<p>这里必须区分两个量，原报告把它们混在了一起。Minikel 讲的是<strong>变异对疾病的效应大小</strong>：HMGCR 的一个等位基因只让 LDL 降几个 mg/dL，GWAS 效应很小，他汀的临床效应却很大，所以变异效应大小不能用来判断能否成药。<strong>MR 估计的则是每单位暴露变化的因果效应</strong>（每 mmol/L LDL-C、每 10 mmHg SBP），在这个尺度上它对幅度有相当好的预测力。Ference 等的析因 MR 按每 mmol/L LDL-C 或 apoB 的效应，再乘上"终生暴露对约 5 年试验"的时间系数，成功预言了 PCSK9 抑制剂、依折麦布和 CETP 抑制剂的获益幅度 (<a href="https://doi.org/10.1001/jama.2017.14429">Ference 2017</a>)；Swerdlow 2015 用 HMGCR 变异预测出他汀增加 T2D 风险，幅度也与试验荟萃分析一致【未核实】。<strong>所以正确的说法是：MR 给出每单位的终生因果效应；要换算成试验获益，必须明确可达到的绝对降幅、暴露时长或起始年龄的换算系数，以及生物标志物尺度是否正确（颗粒数还是质量浓度）。</strong> 这三项都能在试验前量化，不应写成"MR 预测不了幅度"。</p>
+<h2>ASCVD 与卒中：LDL 轴闭环，非 LDL 靶点的失败要分开归因</h2>
+<h3>LDL 轴是唯一的完整闭环，2025 年扩展到首次事件预防</h3>
+<p>PCSK9 无义变异携带者 LDL-C 低 28%，冠心病风险低 88%，这是"功能缺失变异→靶点"的范本 (<a href="https://doi.org/10.1056/NEJMoa054013">Cohen 2006</a>)，也是"终生暴露的幅度远大于试验幅度"的教科书例子。NPC1L1 失活突变使冠心病风险低约 53% (<a href="https://doi.org/10.1056/NEJMoa1405386">Stitziel 2014</a>)，随后 IMPROVE-IT 确认依折麦布有效 (<a href="https://doi.org/10.1056/NEJMoa1410489">IMPROVE-IT</a>)。FOURIER 和 ODYSSEY 证明了 PCSK9 单抗在二级预防中的获益 (<a href="https://doi.org/10.1056/NEJMoa1615664">FOURIER</a>)。<strong>VESALIUS-CV（AHA，2025 年 11 月，阳性）</strong> 纳入 12,257 名既往无心梗或卒中、但已有动脉粥样硬化证据或高危糖尿病的患者，中位随访 4.6 年，结果为三点 MACE 降低 25%、首次心梗降低 36% (<a href="https://www.acc.org/latest-in-cardiology/clinical-trials/2025/11/20/21/09/vesalius-cv">ACC</a>; <a href="https://www.nejm.org/doi/abs/10.1056/NEJMoa2514428">NEJM</a>)。<strong>它把 PCSK9 单抗的获益扩展到无既往心梗或卒中的高危动脉粥样硬化人群，在药企和监管语境里属于"首次事件预防"，不是传统意义上以危险因素定义的一级预防。</strong> 对 ChinaHEART 而言，这类人群恰恰在高危层中人数多、治疗率低。CETP 同样符合遗传学预测：析因 MR 显示获益跟随 apoB 的下降，与 HDL 升高无关 (<a href="https://doi.org/10.1001/jama.2017.14429">Ference 2017</a>)，REVEAL 中主要冠脉事件下降约 9% (<a href="https://doi.org/10.1056/NEJMoa1706444">REVEAL</a>)。<strong>obicetrapib 的 PREVAIL（进行中）</strong> 已纳入 9,500 多例，期中分析推迟到 2026 年第四季度，结果预计 2027 年第一季度公布 (<a href="https://www.globenewswire.com/news-release/2026/05/07/3289808/0/en/newamsterdam-pharma-provides-corporate-update-and-reports-first-quarter-financial-results.html">NewAmsterdam Q1 2026</a>)。在没有结局数据的情况下，欧盟委员会已于 2026-09-21 以降 LDL-C 为适应证批准了 obicetrapib (<a href="https://www.globenewswire.com/news-release/2026/09/21/3365512/0/en/newamsterdam-pharma-and-menarini-group-receive-european-commission-approval-for-ubeslo-obicetrapib-monotherapy-and-evlarco-obicetrapib-plus-ezetimibe-fixed-dose-combination.html">GlobeNewswire</a>)，这正是"经事件校准的替代终点"在监管上的含义。</p>
+<h3>已验证靶点的新给药方式：把依从性问题变成药物设计问题</h3>
+<p>原报告把"人群→干预"层只当作实施科学和政策问题，漏掉了 2025–2026 年心血管研发的主线：<strong>在已验证靶点上换给药方式，以及 incretin 带来的 CV 获益。</strong> 这条产业路径与中国高度相关，因为高血压控制率低、他汀使用率低的场景，正是每半年一针、一次性编辑或口服替代注射的卫生经济学论证所需要的背景。以下事件由评审人【药】在本轮检索提供，本修订没有逐条回原始来源复核，日期与数字均按【未核实】处理：口服 PCSK9 抑制剂 enlicitide 据报于 2026-07-16 获 FDA 批准降 LDL-C，其 CORALreef Outcomes 入组超过 14,500 例、尚未读出 (<a href="https://www.merck.com/news/mercks-lipfendra-enlicitide-is-the-first-and-only-once-daily-oral-pcsk9-inhibitor-approved-by-the-u-s-fda-to-reduce-ldl-c-in-adults-with-hypercholesterolemia/">Merck</a>)【未核实】；inclisiran 的 ORION-4（约 16,000 例）预计 2027 年初读出 (<a href="https://www.sciencedirect.com/science/article/pii/S0002870326002085">AHJ 2026</a>)【未核实】；PCSK9 碱基编辑 VERVE-102 单次给药后 LDL-C 最多降 62%，II 期计划 2026 年底入组 (<a href="https://investor.lilly.com/news-releases/news-release-details/single-dose-lillys-pcsk9-base-editor-verve-102-reduced-pcsk9-88">Lilly</a>)【未核实】；降压方面，醛固酮合酶抑制剂 baxdrostat 据报于 2026-05-18 获 FDA 批准 (<a href="https://www.astrazeneca.com/media-centre/press-releases/2026/Baxdrostat-MNR-2026.html">AstraZeneca</a>)【未核实】，lorundrostat 在研，每半年一次的 AGT siRNA zilebesiran 已启动约 11,000 例的 ZENITH CVOT (<a href="https://www.roche.com/media/releases/med-cor-2025-08-30">Roche</a>)【未核实】；TRL 轴的 olezarsen 和 plozasiran 已在胰腺炎和甘油三酯上获益，CAPITAN CVOT 在研【未核实】。incretin 方面，SELECT、SOUL、SURPASS-CVOT 和 HFpEF 中的 STEP-HFpEF、SUMMIT 构成 PCSK9 之后最大的 CV 获益事件，而这一靶点并不来自 CAD 遗传学（BMI 的 MR 对它有支持）【SELECT 等具体数字未核实】。</p>
+<p>【推断】下表汇总 2026–2027 年待读出、对本报告论断有检验意义的 CVOT。除已在研究笔记中核实并附链接的条目外，日期均需逐条核实。</p>
+<table>
+<thead>
+<tr>
+<th>试验</th>
+<th>机制</th>
+<th>预计读出</th>
+<th>状态来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OCEAN(a)-Outcomes（olpasiran）</td>
+<td>Lp(a) siRNA</td>
+<td>约 2026 年 12 月完成</td>
+<td>笔记已核实（见下文链接）</td>
+</tr>
+<tr>
+<td>PREVAIL（obicetrapib）</td>
+<td>CETP</td>
+<td>2027 年第一季度</td>
+<td>笔记已核实</td>
+</tr>
+<tr>
+<td>HERMES / ARTEMIS（ziltivekimab）</td>
+<td>IL-6 配体</td>
+<td>2027 年上半年</td>
+<td>笔记已核实</td>
+</tr>
+<tr>
+<td>ORION-4（inclisiran）</td>
+<td>PCSK9 siRNA</td>
+<td>2027 年初</td>
+<td>【未核实】</td>
+</tr>
+<tr>
+<td>CORALreef Outcomes（enlicitide）</td>
+<td>口服 PCSK9</td>
+<td>未公布</td>
+<td>【未核实】</td>
+</tr>
+<tr>
+<td>LIBREXIA-AF（milvexian）</td>
+<td>FXIa</td>
+<td>预计 2027 年完成</td>
+<td>【未核实】</td>
+</tr>
+<tr>
+<td>ZENITH（zilebesiran）</td>
+<td>AGT siRNA</td>
+<td>在研</td>
+<td>【未核实】</td>
+</tr>
+<tr>
+<td>CAPITAN（olezarsen）</td>
+<td>APOC3</td>
+<td>在研</td>
+<td>【未核实】</td>
+</tr>
+<tr>
+<td>ACCLAIM-Lp(a)（lepodisiran）</td>
+<td>Lp(a) siRNA</td>
+<td>约 2029 年</td>
+<td>笔记已核实</td>
+</tr>
+</tbody>
+</table>
+<h3>一半 CAD 遗传结构在血管壁，至今零成药</h3>
+<p>CARDIoGRAMplusC4D（Aragam 2022）纳入 181,522 例病例，发现 279 个变异，优先排序出 220 个候选因果基因 (<a href="https://www.nature.com/articles/s41588-022-01233-6">Nature Genetics 2022</a>)。<strong>其中只有 128 个（53%）与血脂、血压、血糖或肥胖有方向一致的关联，其余约 47%（包括最强的常见位点 9p21）机制未明，大多作用于血管壁的平滑肌细胞、内皮和巨噬细胞。</strong> 需要说明，53% 是位点计数，不是遗传力分解比例，笔记里没有找到"多少 SNP-h² 由 LDL 或血压介导"的数字。【推断】这些位点难以成药的原因可以按层列出：在变异→分子层，致病变异多位于增强子，效应基因不确定（9p21 处在 lncRNA ANRIL 区域，没有编码改变）；在分子→细胞层，效应依赖平滑肌表型转换、内皮剪切应力等细胞状态；在细胞→组织层，同一位点影响的可能是斑块稳定性，而且方向可以相反（平滑肌调控也能形成保护性纤维帽）；在干预层，没有循环生物标志物就无法用替代终点。</p>
+<h3>Lp(a) 与 IL-6：两次阴性性质不同，必须分开归因</h3>
+<p><strong>Lp(a)HORIZON（pelacarsen；2026-09-04 公布顶线结果；未达主要终点）</strong> 入组 8,323 名已确诊 CVD 的患者，Lp(a) ≥70 mg/dL。Lp(a) 虽然下降，但总体人群中没有转化为心血管风险的降低；HR 以及按设计与全人群并列的<strong>共同主要分析人群（Lp(a) ≥90 mg/dL）</strong>的结果均尚未公布 (<a href="https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd">Novartis</a>; <a href="https://www.tctmd.com/news/lpahorizon-top-line-results-dash-hopes-pelacarsen">TCTMD</a>)。有评论指出，这项试验的背景 LDL-C 平均只有约 66 mg/dL。<strong>ZEUS（ziltivekimab，IL-6 配体抗体；2026-07-31 公布顶线结果；失败）</strong> 入组 6,300 多名合并 ASCVD、CKD 且 hsCRP ≥2 的患者，MACE 的 HR 为 <strong>0.99（0.88–1.11）</strong>，IL-6 和 hsCRP 都按预期下降，严重感染增多 (<a href="https://www.globenewswire.com/news-release/2026/07/31/3336733/0/en/novo-nordisk-provides-update-on-the-zeus-phase-3-trial-in-people-with-ascvd-ckd-and-inflammation.html">Novo Nordisk</a>; <a href="https://www.tctmd.com/news/zeus-trial-ziltivekimab-fails-reduce-mace-ascvd-patients">TCTMD</a>)。与 ZEUS 同一药物的 HERMES（HFpEF）和 ARTEMIS（心梗后）仍在进行，预计 2027 年上半年读出。<strong>OCEAN(a)-Outcomes（olpasiran，7,297 例，进行中，预计约 2026 年 12 月完成）</strong> 和 <strong>ACCLAIM-Lp(a)（lepodisiran，计划入组超过 17,300 例，约 2029 年完成）</strong> 将决定 Lp(a) 这一类药物的命运 (<a href="https://familyheart.org/lpa-clinical-trials">Family Heart Foundation</a>; <a href="https://clinicaltrials.gov/study/NCT06292013">NCT06292013</a>)。</p>
+<p><strong>HORIZON 的阴性与 MR 预期的小效应相容，属于试验暴露的单位不足，不是 MR 失灵。</strong> 早年的 MR 估计认为，Lp(a) 需要绝对下降约 100 mg/dL 才能获得相当于 LDL-C 降 1 mmol/L 的获益 (<a href="https://doi.org/10.1001/jamacardio.2018.1470">Burgess 2018</a>)，之后的估计多在 50–65 mg/dL 之间【未核实】。【推断，量级估计】以入组阈值 ≥70 mg/dL、基线中位数约 90–110 mg/dL、pelacarsen 降幅约 70–80% 估算，绝对降幅约 70–85 mg/dL，对应的终生等效 RR 约 0.82–0.85；再乘上"终生对约 4–5 年"的时间系数，<strong>试验期内可预期的 RR 大约只有 0.90–0.95</strong>，加上背景 LDL-C 很低、绝对风险也低，8,323 例的试验很可能效力不足。换言之，每单位校准框架在试验前就提示了"获益可能很小"。还有三点需要写明。其一，Lp(a) 的因果效应应当按 apoB 颗粒数理解，以 mg/dL 计的质量浓度受 apo(a) 异构体大小影响，分析中应以 nmol/L 为准（试验入组门槛仍按其自身单位引用）。其二，HORIZON 阴性既不能反驳也不能证实 Lp(a) 的因果方向，要等 OCEAN(a) 和 ACCLAIM。其三，这两项试验用的是 siRNA，降幅约 95% 以上、每 3–6 个月给药一次、入组门槛更高【未核实】，所以 HORIZON 不能直接外推为 Lp(a) 这一类药物的失败。</p>
+<p><strong>ZEUS 的阴性则有几种尚未区分的备择解释。</strong> 原报告曾认为"IL6R Asp358Ala 这一工具变量作用于膜受体的经典信号通路，而 ZEUS 阻断的是配体"，以此解释阴性，这一论证方向反了：该变异的 MR 证据显示遗传性 IL-6 信号减弱与较低的冠心病风险相关 (<a href="https://doi.org/10.1016/S0140-6736(12)60110-X">IL6R MR Consortium 2012</a>)，而 Asp358Ala 的作用是促进膜 IL-6R 脱落、升高可溶性 IL-6R，<strong>削弱</strong>的是经典信号；配体阻断则同时抑制经典信号和反式信号，覆盖面比遗传工具更宽，因此这个差异解释不了阴性，反而让阴性更难解释（研究笔记中的同一说法已同步更正）。更可能的解释有四种，它们目前并列存在。第一是<strong>尺度外推</strong>：若按 hsCRP 尺度线性外推遗传工具的效应（每个等位基因 CRP 约降 8%、CHD OR 约 0.95【未核实】），ziltivekimab 带来的 CRP 大幅下降会被外推成很大的获益，而 HR 0.99（0.88–1.11）已经排除了大于约 12% 的获益，这说明 CRP 不是 IL-6 因果效应的正确尺度，或者效应在工具覆盖范围之外饱和。第二是 <strong>CKD 人群的竞争风险</strong>：非动脉粥样硬化性心血管死亡占比高，稀释了 MACE。第三，<strong>hsCRP ≥2 的富集</strong>选到的是"炎症高"的人，未必是"IL-6 驱动事件"的人。第四，<strong>严重感染增加</strong>抵消了部分获益。由此可以提炼一条方法规则：<strong>只能在遗传工具覆盖的生物标志物范围内外推；靶点参与度指标（如 hsCRP）不等于因果尺度。</strong></p>
+<p>同时不应把 ZEUS 外推为整个炎症轴的失败。上游的 IL-1β 抗体 canakinumab 在 CANTOS 中使 MACE 下降约 15%，但致死性感染增多、未获 CV 适应证 (<a href="https://doi.org/10.1056/NEJMoa1707914">CANTOS 2017</a>)；秋水仙碱在 LoDoCo2 中使慢性冠心病的事件率从 9.6% 降到 6.8%，并于 2023 年 6 月获 FDA 批准 (<a href="https://doi.org/10.1056/NEJMoa2021372">LoDoCo2</a>; <a href="https://www.tctmd.com/news/fda-approves-colchicine-decreasing-cv-events">TCTMD</a>)，而心梗后 PCI 人群中的 CLEAR-SYNERGY（2024）为中性。【推断】更准确的表述是：<strong>"IL-6 失败"限于下游配体阻断在 CKD 人群中的失败</strong>；炎症轴的遗传证据宜描述为"方向一致，但幅度尺度不明"，不宜称为"遗传学强"。两项试验的完整数据公布后，才能在这些解释之间作出区分。</p>
+<p><strong>东亚工具变量的有效性是这一节对中国最直接的后果。</strong> 欧洲经典的 LPA 工具 rs10455872 在东亚人群中近乎单态，rs3798220 的频率和效应也不同【未核实】，直接套用会造成弱工具偏倚甚至工具无效；东亚 Lp(a) MR 需要东亚特异的 LPA 变异、KIV-2 拷贝数或东亚 Lp(a) GWAS 的多变异评分。反过来，CETP 的功能缺失变异（D442G、Int14+1G&gt;A）在东亚人中常见【未核实】，是为 obicetrapib 和 PREVAIL 做东亚校准的理想工具。</p>
+<h3>卒中：亚型特异的遗传结构，ICH 几乎无靶点</h3>
+<p>GIGASTROKE 纳入 110,182 例卒中病例（33% 为非欧洲人群），发现 89 个位点，并把 F11、KLKB1、PROC、GP1BA 等列为候选药物靶点 (<a href="https://www.nature.com/articles/s41586-022-05165-3">Mishra 2022</a>)。<strong>OCEANIC-STROKE（asundexian 50 mg；2026 年发表于 NEJM；阳性）</strong> 在非心源性缺血性卒中或高危 TIA 患者中，把缺血性卒中从 8.4% 降到 6.2%（HR 0.74），ISTH 大出血为 1.9% 对 1.7%（P=0.46），没有显著增加 (<a href="https://www.acc.org/latest-in-cardiology/journal-scans/2026/04/22/11/23/oceanic-stroke">ACC journal scan 2026-04-22</a>)。但同一剂量在房颤中劣于阿哌沙班（OCEANIC-AF，2023 年提前终止）；milvexian 的 LIBREXIA-ACS 于 2025-11-13 因无效中止 (<a href="https://news.bms.com/news/details/2025/Update-on-Phase-3-Librexia-ACS-Trial/default.aspx">BMS</a>)，据评审人检索其最终结果已在 ESC 2026 公布，milvexian 组 5.4%、安慰剂组 5.1% (<a href="https://www.escardio.org/news/press/press-releases/milvexian-did-not-reduce-cardiovascular-events-in-the-librexia-acs-trial/">ESC</a>)【未核实】；LIBREXIA-AF/STROKE 原定 2026 年读出，截至 2026-09-27 本研究笔记未检索到结果（评审人称 LIBREXIA-AF 预计 2027 年完成【未核实】）。【推断】FXI 的靶点有效性不成问题，决定成败的是干预层的三个变量：<strong>抑制深度</strong>（asundexian 50 mg 谷浓度抑制不足，是 OCEANIC-AF 劣于阿哌沙班的主要解释；milvexian 在 LIBREXIA-AF 中用了按模型选定的更高剂量【未核实】）；<strong>对照药设计</strong>（在安慰剂对照的加药设计中赢，在与 DOAC 头对头的设计中输，这是试验设计问题而不只是亚型生物学）；以及<strong>卒中亚型</strong>。面向不适合抗凝的房颤患者、以安慰剂为对照的 abelacimab（LILAC-TIMI 76）是"低出血"价值主张最干净的检验，其状态笔记未核实。<strong>对中国最关键的联系是：FXI 的核心卖点是低出血，而中国卒中中 ICH 占比高、抗栓治疗严重不足</strong>，所以 FXI 在中国的 benefit-risk 定位取决于目标人群中基线 ICH 与缺血性卒中的比例，这正是 ChinaHEART 能提供的数字（前提是测量层过关）。</p>
+<p>ICH 的主要位点是 1q22、APOE、COL4A1/COL4A2 和 ICA1L，编码基底膜结构蛋白或参与淀粉样变性，不属于循环酶 (<a href="https://www.neurology.org/doi/10.1212/WNL.0000000000209666">Neurology 2024</a>)，而且东亚的大型 ICH GWAS 至今有限 (<a href="https://www.neurology.org/doi/10.1212/NXG.0000000000200390">Neurology Genetics</a>)。欧洲 ICH 遗传结构能否外推还受两点限制：APOE ε4 在中国人中频率较低，东亚 ICH 以深部（高血压性小动脉病）为主，欧洲研究中的脑叶型 ICH（CAA/APOE）占比更高【未核实】。<strong>对中国最关键的遗传学事实来自 CKB 的 MR：遗传学上 LDL-C 越高，缺血性卒中风险越高，而 LDL-C 越低，ICH 风险越高</strong>（5,475 例缺血性卒中、4,776 例 ICH，46 个变异构成的 LDL 评分） (<a href="https://www.nature.com/articles/s41591-019-0366-x">Sun 2019 Nat Med</a>)。</p>
+<p>但这一 MR 结果反映的是<strong>终生遗传性低 LDL</strong> 与 ICH 的关系，临床决策面对的是另一个问题：成年后用他汀或 PCSK9 抑制剂把 LDL 降下来，在血压控制的前提下会不会增加 ICH。RCT 证据的方向并不一致【以下各条均为评审人【临】提供，本修订未回原始文献核实】：SPARCL 有 ICH 信号，但 CTT 荟萃分析中 ICH 的绝对增加远小于缺血性事件的减少；Treat Stroke to Target（TST）在 LDL &lt;70 mg/dL 组没有显示 ICH 显著增加；FOURIER 和 ODYSSEY 在极低 LDL 下也没有 ICH 信号。<strong>因此 LDL–ICH 权衡是一个需要在血压控制状态下量化的问题，而不是"越低越好不能照搬"的结论。</strong> ICH 的可干预层除了一级预防中的血压，还有急性期救治：INTERACT3 在以中国医院为主的研究中推行 ICH 急性期集束化管理，改善了功能结局【未核实】，这恰好对应县医院的能力。颅内动脉粥样硬化方面，东亚特有的 RNF213 p.R4810K 是 ICAS 和烟雾病的强遗传因子，在中国人群中携带率不低【未核实】，比已随 darapladib 失败而失去意义的 PLA2G7 V279F 更有前瞻价值。</p>
+<h2>HF、房颤、心肌病与血管衰老：遗传学在这里给不出可用的循环靶点</h2>
+<p><strong>HFpEF 的遗传学证据不足以作出判断。</strong> HERMES 2025 纳入 195 万人（153,174 例 HF），发现 66 个位点。液体尺度 SNP-h² 为：全部 HF <strong>5.4%</strong>，ni-HFrEF <strong>11.8%</strong>，ni-HFpEF <strong>1.8% ± 1.3%</strong>，而 ni-HFpEF 病例只有 3,841 例。MR 显示 BMI 对 ni-HFpEF 的效应最大（OR 1.87/SD），SBP 对 ni-HFrEF 的效应最大（OR 1.92/SD）。遗传力富集指向心外组织，而且 91% 的病例是欧洲人 (<a href="https://doi.org/10.1038/s41588-024-02064-3">Henry 2025 Nat Genet</a>)。ni-HFpEF 的估计 95% 置信区间上限约为 4.3%，信息量很低，"位点少"主要反映病例少和表型异质，不能直接证明遗传贡献小，应当读作"证据不足以估计"，而不是"近乎空白"。MVP 与 BioVU 2026 年的研究在病例数相近（约 3.8 万）的情况下，为 HFrEF 找到 <strong>46 个位点，HFpEF 只有 3 个</strong> (<a href="https://doi.org/10.1038/s41467-026-76438-y">Liu 2026 Nat Commun</a>)。与此一致，在 HFpEF 中有效的药物都不是从 HF 遗传学来的：FINEARTS-HF（2024 年 9 月，率比 0.84）延伸自 MRA 的生理学 (<a href="https://doi.org/10.1056/nejmoa2407107">Solomon 2024</a>)，STEP-HFpEF 用的是减重药 (<a href="https://doi.org/10.1056/nejmoa2306963">Kosiborod 2023</a>)，替尔泊肽的 SUMMIT 也属于这一路径。HF 的血浆蛋白信号很密集，在 UKB 中有 385 个蛋白与 HF 相关，多于 CAD 的 270 个（本地证据库 ref [47]），但 MR 支持的比例很低。【推断】HFpEF 的瓶颈在"个体→组织"这一层：它由 EF 阈值加症状定义，把多条共病路径汇在一起，而活体心肌无法做分子测量。它的"遗传靶点"其实就是危险因素本身（BMI 对应 GLP-1RA，还有血压和 MR 通路）。但这一结论建立在欧洲表型上：中国 HFpEF 患者的 BMI 明显更低，驱动因素以高血压、糖尿病、CKD 和高龄为主【未核实】，所以 GLP-1RA 路径在中国的可推广性需要打折，降压和容量管理的权重更高。<strong>还需要明确：在住院关联落地之前，HF 和 AF 方向在 ChinaHEART 上目前基本做不了</strong>，因为没有蛋白组和基因分型，死因登记中的 I50 本身就是垃圾编码，AF 也很少作为根本死因。</p>
+<p><strong>房颤的位点数量与可成药性形成最强烈的反差。</strong> Roselli 2025 纳入 181,446 例病例，发现 <strong>354 个常见位点</strong>，跨人群荟萃分析达到 525 个。优先基因包括 PITX2、TBX5、TTN、MYH6 和 KCNN3，罕见变异负荷集中在 TTN、PKP2、FLNC、RBM20 等心肌病基因上。PRS 在 CHARGE-AF 基础上只增加 <strong>ΔC 0.015–0.026</strong> (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12094172/">Roselli 2025</a>)。在 ARCADIA 中，对有"心房心肌病"生物标志物的患者用阿哌沙班，与阿司匹林相比 HR 为 1.00（0.64–1.55），试验因无效中止 (<a href="https://doi.org/10.1001/jama.2023.27188">Kamel 2024</a>)。【推断】最强的房颤位点可能是在发育期设定心房的"基线状态"，成年后抑制这些基因的产物很难逆转已经形成的纤维化基质。不过这属于强推断，也有反例：KCNN3 位点对应的 SK 通道抑制剂（如 AP30663）正在做复律的 II 期研究【未核实】，说明部分位点在成人期仍可干预。心房组织只能在手术或消融时取到，目前也没有经过验证的心房纤维化循环读数。<strong>对中国临床而言，房颤更直接的问题不在靶点，而在检出和抗凝</strong>：多项中国登记研究中，高危房颤患者的口服抗凝率长期在 10%–30% 区间【未核实】，而心源性栓塞卒中是可以用现成药物预防的。</p>
+<p><strong>心肌病要分成两类看：HCM 的瓶颈是替代终点，基因治疗的瓶颈才是递送。</strong> HCM GWAS 发现 70 个位点，MR 显示 LV 收缩力对梗阻性和非梗阻性 HCM 都有因果作用 (<a href="https://doi.org/10.1038/s41588-025-02087-4">Tadros 2025</a>)。梗阻性 HCM 有 LVOT 压差这个可测读数，所以 mavacamten 和 aficamten 能成功；<strong>ODYSSEY-HCM（mavacamten 用于非梗阻性 HCM，2025 年 8 月，阴性）</strong> 缺少这样的读数，只能用峰值 VO2，差值为 0.47（P=0.07） (<a href="https://doi.org/10.1056/nejmoa2505927">Desai 2025</a>)。它的失败与递送无关，而是"缺少把手"。两套 DCM GWAS 分别发现 80 个和 70 个位点，多基因评分会改变罕见变异携带者的外显率 (<a href="https://doi.org/10.1038/s41588-024-01952-y">Zheng 2024</a>; <a href="https://doi.org/10.1038/s41588-024-01975-5">Jurgens 2024</a>)。递送问题只对应基因治疗。TTR 是例外，因为它的靶器官是肝脏：nex-z 使 TTR 下降 90–92% (<a href="https://doi.org/10.1056/nejmoa2510209">Gillmore 2025</a>)，但 MAGNITUDE 于 2025-10-29 因肝毒性被 FDA 暂停，2026 年 3 月解除 (<a href="https://www.clinicaltrialsarena.com/news/fda-releases-hold-on-second-of-intellias-attr-cm-gene-therapy-trials/">Clinical Trials Arena</a>)。心脏 AAV 项目（MYBPC3 的 TN-201、PKP2 的 LX2020、LAMP2 的 RP-A501）都还是小样本开放标签的早期数据 (<a href="https://www.globenewswire.com/news-release/2026/06/03/3305902/0/en/Tenaya-Therapeutics-Announces-Interim-Data-from-MyPEAK-1-Showing-Treatment-of-MYBPC3-associated-HCM-with-TN-201-Gene-Therapy-Resulted-in-Consistent-Signs-of-Cardiac-Remodeling-and-.html">Tenaya 2026-06</a>)。</p>
+<p><strong>CHIP 是血管衰老中唯一有遗传锚点的轴，但它的效应量比最初估计的小。</strong> 在大克隆（VAF&gt;10%）CHIP 携带者中，IL6R p.Asp358Ala 可以抵消 CVD 风险（HR 0.46），在非携带者中则没有这一作用（交互作用 P=0.003） (<a href="https://doi.org/10.1161/circulationaha.119.044362">Bick 2020</a>)。非 DNMT3A 型 CHIP 与 HF 的 aHR 为 1.52，其中只有 28.2% 能由 CAD、AF、T2D 和 CKD 解释 (<a href="https://doi.org/10.1001/jamacardio.2025.4603">Flynn 2026</a>)。但在 5 项 TIMI 试验的 63,700 名患者中，CHIP 的 aHR 只有 <strong>1.07（0.99–1.16）</strong>，而且不修饰 PCSK9、SGLT2 等药物的疗效 (<a href="https://pubmed.ncbi.nlm.nih.gov/39107561/">Nat Med 2024</a>)，这与早期队列报告的 HR 1.9 相去甚远 (<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1701719">Jaiswal 2017</a>)。【推断】ZEUS 没有按 CHIP 选择入组人群，它的阴性结果与"不加选择地阻断 IL-6 会稀释效应"的预测相符，这是上文四种备择解释之外的又一种可能，也让按 CHIP 分层的试验更值得做。目前已检索到一项在 TET2 CH 人群中做 IL-1β 抑制的影像终点试验（NCT06691217）正在进行 (<a href="https://clinicaltrials.gov/study/NCT06691217">ClinicalTrials.gov</a>)。中国人群中能与之呼应的"基因型或生物标志物 × 干预"先例是 CSPPT：依那普利加叶酸使首发卒中降低约 21%，在 MTHFR C677T TT 型和低叶酸人群中获益最大【未核实】。</p>
+<h2>大队列加多组学：预测增益约 0.03，因果转化率约 3%</h2>
+<p>蛋白组在临床评分之上的真实增益可以量化。按性别分别建模时，18 个蛋白把 SCORE2 的 C 指数从 0.713 提升到 <strong>0.778</strong> (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12766183/">J Adv Res 2025</a>)。另一项研究中，114 个蛋白使 AUC 从 0.740 升到 0.771，而只加 10 个常规危险因素就能达到 <strong>0.767</strong> (<a href="https://doi.org/10.1101/2024.03.13.24304196">medRxiv 2024</a>)。在 CKB 中，用蛋白预测 IHD 使 C 从 0.845 升到 0.862（Olink）或 0.863（SomaScan） (<a href="https://www.nature.com/articles/s41467-025-56935-2">Nat Commun 2025</a>)。NMR 代谢组只增加约 0.015–0.02（UKB：0.691→0.710） (<a href="https://doi.org/10.1101/2024.04.29.24306593">medRxiv 2024</a>)。CAD PRS 使 ΔC 增加 <strong>+0.012</strong>。在全人群中用 PRS 筛查，每 <strong>5,750</strong> 人才能多预防 1 个事件；只筛中危人群时降到每 <strong>340</strong> 人 1 个 (<a href="https://doi.org/10.1371/journal.pmed.1003498">Sun 2021 PLoS Med</a>)。东亚 metaPRS 在 China-PAR 队列中 ΔC 约为 0.01，NRI 为 3.5%，最高与最低五分位的 HR 为 2.91 (<a href="https://doi.org/10.1093/eurheartj/ehac093">Lu 2022 EHJ</a>)。ESC 2025 共识不推荐常规使用 PRS (<a href="https://academic.oup.com/eurheartj/article/46/15/1372/8001983">ESC 2025</a>)。【推断】扣除偏弱基线带来的虚高（例如某个 UKB 子集中 PREVENT 的 C 只有 0.645），蛋白组的真实 ΔC 约为 <strong>0.03–0.065</strong>。增益主要来自 NT-proBNP、GDF15、WFDC2 这类器官损伤和亚临床病变标志物，它们预测的是"当前的疾病状态"，并不提供新的病因学信息。PRS 也不宜因 ΔC 小而完全否定：它可能的价值在于"何时开始"（35–50 岁、短期风险低而终生风险高的人）和"给谁用"（FOURIER 等试验的事后分析显示高 PRS 者相对获益更大【未核实】），而不在于提升区分度。</p>
+<p>从关联走到因果，损耗非常大。UKB 52,164 人的研究中有 <strong>636 个蛋白与 CVD 相关，其中 47 个（7.4%）得到 MR 支持，18 个（2.8%）通过共定位</strong> (<a href="https://doi.org/10.1038/s44161-024-00545-6">Nat Cardiovasc Res 2024</a>)。UKB-PPP 与 deCODE 的 5,813 个蛋白最终只优先排出 10 个，而且大多是已知的血脂或炎症靶点（APOB、LPA、IL6R、ANGPTL4 等） (<a href="https://doi.org/10.1093/cvr/cvag095">Cardiovasc Res 2026</a>)。平台本身也不可靠：在 CKB 中 Olink 与 SomaScan 的中位相关系数只有 <strong>0.29</strong>，1,694 个一一匹配的蛋白中只有 400 个在两个平台上都有共定位的 cis-pQTL (<a href="https://www.nature.com/articles/s41467-025-56935-2">Nat Commun 2025</a>)；有 cis-pQTL 的检测比例，Olink 为 72%，SomaScan 为 43% (<a href="https://www.nature.com/articles/s41586-023-06563-x">Eldjarn 2023</a>)。UKB 的参与偏倚经加权校正后，MR 估计最多可移动 0.15 SD (<a href="https://www.nature.com/articles/s41562-023-01579-9">Schoeler 2023</a>)。</p>
+<p>单次基线血样的队列在原理上回答不了四类问题：组织特异性（血浆不能代表斑块或心肌）、时机（终生暴露与晚年用药之间的差别）、剂量与疗程的换算，以及疗效异质性。【推断】所以对这类队列要分两件事看：它能可靠提供的是风险分层、因果方向的排除（如 HDL 的阴性结果、CETP 获益经由 apoB），以及候选靶点的初筛；<strong>获益幅度则要靠"MR 每单位效应 × 时间与尺度换算"加上 RCT 来确定，而不是由观察性队列直接估计。</strong> ZEUS 和 HORIZON 的教训是，MR 对幅度的预测应当事先登记，而且登记前要先做回顾性校准：用已完成的 CVOT（他汀、依折麦布、PCSK9、REVEAL、降压、OCEANIC-STROKE、HORIZON、ZEUS）检验"每单位效应 × 时间系数"的换算是否可靠，再对 OCEAN(a) 和 PREVAIL 做预注册的方向性预测。只用 4 个待读出的试验去"校准分析管线"在统计上只有轶事意义，这些试验的终点（多为西方人群的 MACE）也与东亚卒中亚型 MR 的估计对象不同。</p>
+<h2>中国人群与 ChinaHEART：负担偏向卒中，数据宽而薄</h2>
+<p>中国的疾病谱与西方有结构性差异。2023 年归因于 CVD 的前五位危险因素依次是高 SBP、大气颗粒物、高 LDL-C、吸烟和铅暴露 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13491092/">GBD China</a>)。在社区研究中，ICH 占中国人卒中的 33%，白人只占 12%，但这个数字来自 2013 年以前的研究 (<a href="https://www.neurology.org/doi/10.1212/WNL.0b013e31829bfde3">Tsai 2013</a>)；NESS-China（2013）中 ICH 约占 24%，而且随着血压控制改善还在下降【未核实】，所以"ICH 负担高"这一论据应当降调使用。China PEACE MPP 纳入 174 万人（2014–2017 年，35–75 岁，志愿筛查，非概率抽样），高血压粗患病率 44.7%，治疗率 30.1%，<strong>控制率 7.2%</strong>，8.1% 的基层医疗点没有任何降压药 (<a href="https://pubmed.ncbi.nlm.nih.gov/29102084">Lancet 2017</a>)。这是筛查人群的数字，不是全国代表性估计；同期全国代表性的 CHS 2012–2015 控制率约 15%，近年的监测数据也更高【均未核实】。</p>
+<p>在"人群→干预"层，中国本土已经有一组最该对标的 RCT【以下试验的设计与效应量均为评审人【临】提供，本修订未回原文核实，标为【未核实】】。SSaSS 使用盐替代品，使卒中减少约 14% (<a href="https://www.acc.org/Latest-in-Cardiology/Clinical-Trials/2021/08/26/01/19/SSaSS">ACC</a>)。<strong>STEP</strong>（NEJM 2021，中国 60–80 岁老人，SBP 目标 110–130 对 130–150，MACE 降低约 26%）和 <strong>ESPRIT</strong>（Lancet 2024，中国高危人群，SBP &lt;120）回答了"降多少"；<strong>CRHCP</strong>（Lancet 2022，村医主导的农村强化降压）使卒中和 MACE 显著下降，是"基层能力→结局"的 RCT 版本；<strong>CSPPT</strong>（JAMA 2015）是上文提到的中国"基因型 × 干预"先例；<strong>INTERACT3</strong>（Lancet 2023）对应 ICH 急性期救治。它们既是净获益模型的相对效应来源，也是任何目标试验模拟的阳性基准。遗传上，ALDH2 rs671 几乎只见于东亚人，CKB 用它做 MR，发现饮酒导致卒中风险上升，但对心梗没有保护作用 (<a href="https://pubmed.ncbi.nlm.nih.gov/30955975/">Millwood 2019 Lancet</a>)。PLA2G7 V279F 是东亚特有的功能缺失变异，已被用作 darapladib 靶点的自然实验 (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5100610/">PMC5100610</a>)。CKB 的 pQTL 图谱中有 36% 的精细定位可信集与欧洲不同 (<a href="https://www.medrxiv.org/content/10.1101/2023.11.13.23298365v2.full">medRxiv preprint</a>)。中国人群的 Lp(a) 分布和 rs671 频率，笔记没有核实到原始来源【未核实】，写报告时不应引用具体数字。</p>
+<p><strong>ChinaHEART 的数据现实</strong>，依据 IJE 2023 队列简介 (<a href="https://academic.oup.com/ije/article/52/5/e273/7187439">IJE 2023</a>)：2014–2022 年在 353 个点共纳入 <strong>4,404,586 人</strong>，年龄 35–75 岁，应答率超过 35%，属于志愿者样本，不是概率抽样。高危人群 998,673 人。全员数据只有问卷、两次血压、身高体重和<strong>即时检测（POC）</strong>的血脂与血糖；心电图、颈动脉超声和超声心动图只在高危组和对照亚样本中做。约 <strong>270 万人</strong>留存了血液和尿液样本。随访以死亡登记关联为主，截至简介发表时为 1,630 万人年，<strong>中位 3.6 年</strong>；高危人群另有面对面主动随访，参与率约 85%；2019–20 年对 82,403 名非高危者做了重复调查。住院数据关联当时仍处于"计划中"，数据只对中国境内的研究者开放。笔记检索到的唯一组学研究是一项 28 蛋白 MSD 的嵌套病例对照研究（颈动脉斑块，BMJ Open 2026） (<a href="https://doi.org/10.1136/bmjopen-2025-110220">BMJ Open 2026</a>)。<strong>笔记没有找到 ChinaHEART 做过全基因组分型或大规模蛋白组的证据</strong>，住院关联在 2023 年后的状态也未核实。凡是涉及基因分型或样本出境的研究，都受《人类遗传资源管理条例》约束：外资或合资药企原则上拿不到个体数据，合作只能采用"中方主导分析、输出汇总结果"或联邦、摘要级分析的形式，所以<strong>研究产出从设计之初就应当是可以出境的汇总量</strong>（分层事件率、合格人群比例、校准曲线、NNT 表）。</p>
+<p>【推断】这些条件带来一组直接后果，其中前三条属于测量层，是所有以死亡为结局的分析的前置任务，而不仅是"可行性要点"。<strong>第一，死因编码。</strong> 能否区分卒中亚型，不只取决于 I61 与 I63 的区分，还取决于 I64（未特指卒中）和 R96、R99、I50 等垃圾编码的占比。农村居家死亡、未经 CT 确诊的高龄死者常由村医或乡镇医生凭推断填写死因，I64 因而在地区、年龄和医疗可及性上有系统差异，属于<strong>差异性错分</strong>：它不只会让效应偏向零，还可能让 LDL–ICH 权衡的方向翻转，或者制造出虚假的县级差异。死因数据也没有 ICH 部位信息，而且 ICH 死亡混合了发病与病死（ICH 30 天病死率约 40%【未核实】），基因型或 LDL 与"ICH 死亡"的关联无法分离两者。<strong>第二，POC 血脂不只是回归稀释问题。</strong> POC 设备多数只测 TC、HDL 和 TG，LDL-C 由 Friedewald 公式推算，在非空腹或高 TG 时误差是非随机的，需要中心实验室直接法复测来建立校准方程；两次血压读数也需要用 82,403 人的重复调查估计回归稀释比。<strong>第三，亚样本是按设计缺失的。</strong> 心电图、超声和详细膳食只在"高危加对照"亚样本中采集，直接在亚样本内建模会把筛选条件带进估计，需要用逆概率加权（IPW）、广义 raking 或多重插补，并利用全员都有的辅助变量。<strong>第四，随访不对称。</strong> 非致死事件只在高危层做了主动追踪，高危层与非高危层的发病率不可比，发病风险模型要么以死亡为主要结局，要么只在高危层内建模；<strong>但这一变通只适用于观察性风险模型，高危层内禁止做遗传因果分析</strong>，因为高危层是按血压、血脂和既往史筛选的，在其中做 MR 或基因型交互等于以暴露的下游为条件，会诱导碰撞偏倚。遗传分析应当使用覆盖全体的随机子队列（case-cohort 设计），并对纳入概率做逆概率加权；同时需要控制主成分和站点固定效应，以免南北遗传梯度与地理、饮食、医疗资源的共线伪装成遗传效应。<strong>第五，志愿者偏倚。</strong> 应答率约 35% 意味着明显的健康志愿者效应，绝对死亡率会被低估；加权需要外部目标总体，可用中国慢性病及危险因素监测（CCDRFS）或人口普查的边际分布做 raking，在估计"可挽回死亡"的绝对数时必须说明方向。<strong>第六，时期效应。</strong> 2014–2022 年间经历了大气治理、他汀推广和 COVID，时期效应和地区效应会混杂在一起。</p>
+<p>所以 ChinaHEART 的比较优势是<strong>规模、县级地理对比、诊疗链缺口和死因数据</strong>，它不是一个遗传药物靶点平台。CKB（约 10 万人以上有基因分型、约 4,000 人做了 Olink，PheWeb 公开了汇总统计）是它天然的外部遗传与蛋白补充 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10435379/">CKB genotyping</a>)。</p>
+<h2>关联建模以外：每种策略对应一个具体的瓶颈层</h2>
+<p>因为瓶颈落在不同的层，研究策略也应该按层来选。在变异→分子→细胞层，最成熟的是扰动生物学：Schnitzler 2024 在内皮细胞中对 241 个 CAD 位点附近的 2,285 个基因做了 CRISPRi Perturb-seq（约 21.5 万个细胞），发现 CCM2/TLNRD1 汇聚到 MEKK3-ERK5-KLF2/4 保护性程序上 (<a href="https://www.nature.com/articles/s41586-024-07022-x">Nature 2024</a>)，数据已公开。在细胞→组织层，冠状动脉 snRNA+snATAC 数据得到 11,182 个单细胞 caQTL，CAD 遗传风险富集在平滑肌细胞，而且 COL4A1/2 变异只在平滑肌去分化时才显示为 caQTL (<a href="https://www.medrxiv.org/content/10.1101/2024.11.13.24317257v1">medRxiv 2024</a>)。心脏图谱方面，Kanemaru 2023 覆盖 704,296 个细胞/细胞核，包括心房和传导系统 (<a href="https://www.nature.com/articles/s41586-023-06311-1">Nature 2023</a>)。在组织→个体层，AI 表型可以把综合征转化成可做 GWAS 的定量性状（深度学习测得的 LV 壁厚得到 72 个位点） (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10689443/">PMC10689443</a>)。EchoPrime 用超过 1,200 万对超声视频与报告训练，并宣布开源 (<a href="https://www.nature.com/articles/s41586-025-09850-x">Nature 2025</a>)。EAGLE 整群 RCT 显示，AI-ECG 把低 EF 的新诊断率从 1.6% 提高到 2.1% (<a href="https://www.nature.com/articles/s41591-021-01335-4">Nat Med 2021</a>)。在人群→干预层，SSaSS、SECURE 多效片（MACE HR 0.76）和 DANFLU-2（33 万人，基于登记系统的随机试验）说明，低成本的实用性试验能够改变硬终点 (<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2208275">SECURE</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12579978/">DANFLU-2</a>)；上文的长效制剂则说明，这一层的一部分问题也可以由药物设计来解决。系统综述显示，只要方案明确，目标试验模拟（TTE）多能重现 RCT 的结果 (<a href="https://www.jclinepi.com/article/S0895-4356(25)00205-7/fulltext">JCE 2025</a>)，但前提是有处方或配药数据来定义时间零点，ChinaHEART 目前不具备这一条件。</p>
+<p>原报告的策略清单缺了两层，而<strong>这两层恰恰是算法团队相对于纯流行病学团队的比较优势所在</strong>。在测量层，需要的是结局误分类下的生存估计、测量误差校正和两阶段设计估计量；在效应迁移/决策层，需要的是把外部 RCT 与 MR 的相对效应，与本地分亚型的绝对风险结合，给出带后验区间的个体净获益（不确定性区间是进入指南讨论的门槛）。原报告在 Conclusion 里说"在谁身上、从几岁开始、降多少"，指的就是决策层，但当时的研究问题清单没有把它落实成方法。</p>
+<p>【推断】这些策略与病种的对应关系如下：HFpEF 和房颤属于"没有靶点"型，应当用多器官蛋白组 MR 加 AI 定量亚表型，外加更贴近体内环境的扰动模型（心房心肌细胞与成纤维细胞共培养、在脂肪酸加 L-NAME 条件下培养的 EHT (<a href="https://doi.org/10.1016/j.stem.2026.06.007">Cell Stem Cell 2026</a>)），但这条路线<strong>不适用于 ChinaHEART</strong>，因为它没有蛋白组、没有基因分型，HF 和 AF 结局也不可测，除非住院关联落地，或者 AI-ECG 把 AF 和左室收缩功能下降变成基线可测的表型。ASCVD 和高血压属于"有靶点、不知道给谁用、何时用、诊疗链哪里断了"型，杠杆在测量层校正、净获益决策、诊疗链分解和长效给药。ICH 两头都缺，需要东亚大样本遗传学和脑小血管细胞层面的扰动实验。Delphi 类生成式轨迹模型需要纵向就诊序列，ChinaHEART 每人只有一次基线加死亡，要等住院关联落地才适用。<strong>对只有 ChinaHEART 数据的算法团队来说，最可行的是测量层和"人群→干预→决策"层；只要能拿到嵌套检测，还可以向下延伸到"变异→分子"层。</strong> 拿到数据访问权限之前，可以先用公共数据跑通代码：CHARLS（中国人群的血脂、血压与死亡，适合原型化测量误差和竞争风险管线）、CKB PheWeb 汇总统计（MR 先验）、PTB-XL、MIMIC-IV-ECG 和 CODE-15%（ECG 模型预训练与域偏移评估）。</p>
+<h2>给 ChinaHEART 算法团队的研究问题：三个优先问题与有条件启动的第二梯队</h2>
+<p>选题遵循四条原则【推断】：用得上 ChinaHEART 独有的规模、县级覆盖和死因数据；按依赖关系排序，前一个问题的产出是后一个问题的输入；一套分析骨架同时服务指南、药企和医保三类受众；不以尚未确认的数据（原始 ECG 波形、DNA、住院关联）作为前提。依赖关系决定了顺序：诊疗链地图中涉及卒中亚型的部分和净获益模型都需要"ICH 与缺血性卒中的比例"，所以依赖测量层；东亚药靶 MR 面板不依赖 ChinaHEART，可以作为零成本的并行轨道立即启动，并成为净获益模型的先验输入。</p>
+<p><strong>启动任何分析或嵌套检测之前，先向数据方核实三件事：</strong> 死因登记中 I64 和垃圾编码的占比；270 万份存储样本是否保留了白膜层或全血（如果只有血浆、血清，能提取的主要是游离 DNA，产量低，芯片分型很难）；住院和医保数据关联的进度。住院关联应当被视为前置的基础设施，而不是一个普通研究问题：HF、AF、非致死卒中以及任何用药暴露的定义都依赖它。</p>
+<h3>问题 1：测量层重建——卒中亚型死因的概率化重建，以及血脂和血压的测量误差校正</h3>
+<p><strong>问题。</strong> ChinaHEART 死因登记中 I61、I63、I64 和垃圾编码的错分结构，怎样随地区、城乡、年份和死亡地点变化？POC 血脂和两次血压读数的误差有多大？校正之后，按亚型分的死亡率和暴露–结局关联会变化多少？</p>
+<p><strong>为什么优先。</strong> 从第一性原理看，本报告所有中国特色的论断，包括 LDL–ICH 权衡、ICH 负担和县级差异，都建立在两个未经检验的假设上：死因编码能区分亚型，POC 血脂能代表通常水平。I64 与地区医疗能力相关，属于差异性错分，可能让效应方向翻转，或者制造出虚假的县级差异。<strong>这是因果链上测量/结局确定层的瓶颈；这一层不打通，上面的"人群→干预"层和决策层就没有可信的因变量。</strong> 它也是算法团队的比较优势所在，方法论文可以单独发表，中国死因数据质量本身也是有价值的公共卫生问题。</p>
+<p><strong>所需数据。</strong> <em>ChinaHEART 现有</em>：全员基线；死因登记（ICD-10 编码、死亡地点、年份、县区）；高危层主动随访中有住院或影像记录的卒中死亡，作为验证子集；2019–20 年 82,403 名非高危者的重复调查，用于估计回归稀释比；点位层面的医疗能力信息。<em>嵌套检测</em>：从存储样本中分层抽取约 5,000 份，送中心实验室复测直接法 LDL-C、apoB 和 Lp(a)（以 nmol/L 报告，采用对异构体不敏感的方法），同时检查冻存漂移；这一步顺带完成原 B3 中 Lp(a) 分布的描述部分。<em>外部公共或申请数据</em>：CHARLS（原型化测量误差和竞争风险管线）；全国死因监测和 CCDRFS 的地区 I64 比例及协变量边际分布（用于外部对照和 raking）；CKB 已发表的卒中亚型构成（作为错分率的外部参照）。</p>
+<p><strong>方法。</strong> 用验证子集估计各编码的敏感度和特异度，按地区和年份分层；用半监督分类器（输入血压、年龄、地区、既往史、死亡地点、县医院 CT 能力）对 I64 和垃圾编码做多重插补，把亚型标签转成概率，下游用 Rubin 规则合并，或者基于错分矩阵做似然校正；建立 POC 到实验室值的回归校准或 SIMEX 方程，并允许误差依赖 TG 水平和空腹状态；用重复调查估计血压和血脂的"通常水平"。最终产出一张<strong>"亚型结局可用性地图"</strong>，标明哪些县区可以做亚型分析，哪些只能报告全卒中死亡。</p>
+<p><strong>主要偏倚与应对。</strong> 验证子集只来自高危层，属于选择性验证，需要按验证概率加权，并检查验证模型在非高危层的迁移性。错分可能与暴露相关（高血压患者更容易被编为 ICH），插补模型中必须纳入暴露变量，以保证插补模型与分析模型相容。复测样本的冻存降解按冻存年限分层检验。验证子集中的"金标准"本身也有误差（基层病历质量不一），只采用有 CT 或 MRI 确认的病例，并做敏感性分析。</p>
+<p><strong>1–3 个月的第一步。</strong> 其一，向数据方正式核实上述三件事。其二，只用现有死因数据做描述性分析：给出 I61、I63、I64、R96、R99、I50 按县区、年份、城乡和死亡地点的构成，并与县医院 CT 可及性做相关分析，这一步就能判断净获益模型中的亚型分析能不能做。其三，在 CHARLS 或模拟数据上跑通"错分矩阵 + 多重插补 + 竞争风险"的代码管线。其四，起草复测子样本的抽样方案和伦理、人遗审批材料。</p>
+<h3>问题 2：卒中亚型竞争风险下的净获益决策模型——强化降脂和强化降压"给谁、降多少"</h3>
+<p><strong>问题。</strong> 在中国 35–75 岁人群中，按血压控制状态、年龄、性别和地区分层，强化降 LDL 和强化降压对"缺血性卒中加 CHD 死亡"与"ICH 死亡"的绝对风险变化各是多少？净获益为负或不确定的人群占多大比例、有什么特征？</p>
+<p><strong>为什么优先。</strong> 遗传学和 RCT 给出的是<strong>每单位的相对效应</strong>，临床和政策需要的是<strong>中国个体在竞争风险下的绝对净获益</strong>，两者之间缺少一个效应迁移/决策层。原 A1 想用观察性的 LDL–ICH 关联来识别"净获益人群"，这条路走不通：低 LDL 与衰弱、肝病、饮酒和营养不良相关，存在反向因果，而中位随访只有 3.6 年；基线 LDL 的自然差异也不等于"用药降 LDL"的效应。<strong>本设计让相对效应来自外部（RCT/MR），只让 ChinaHEART 提供它独有的东西，即按亚型的本地基线风险，从而绕开观察性关联的反向因果。</strong> 代价是把问题转移到了"可迁移性假设"和"亚型错分"上，前者要做敏感性分析，后者由问题 1 解决。同一个模型可以同时产出：给指南的分层净获益边界，给药企和医保的 NNT 与可预防死亡数，以及给 FXI 这类"低出血"药物在中国做 benefit-risk 定位所需的基线 ICH 与缺血性卒中比例。它的定位是<strong>为指南分层讨论提供量化输入（按血压控制状态给出的净获益边界及其后验区间）</strong>，而不是改写 LDL 目标值。</p>
+<p><strong>所需数据。</strong> <em>ChinaHEART 现有</em>：全员死亡结局（使用问题 1 校正后的亚型概率）；校正后的"通常水平"血压和血脂；高危层的非致死事件（用于敏感性分析）。<em>嵌套检测</em>：不是必需的；问题 1 的复测子样本提供 apoB 和 Lp(a)，可作为扩展。<em>外部公共数据</em>：CTT 按每 mmol/L 和卒中亚型给出的 RR；BPLTTC、STEP、ESPRIT、CRHCP 的降压效应；<strong>东亚药靶 MR 面板</strong>，使用 CKB PheWeb、BBJ、TPMI、KoGES 的汇总统计，靶点包括降脂（HMGCR、NPC1L1、PCSK9、CETP，含 D442G 等东亚功能缺失变异）、降压（ACE、ADRB1、CACNA1D/CACNB2、SLC12A3、NR3C2）、F11 和东亚特异的 LPA 工具，结局分缺血性卒中和 ICH；UKB（申请制，用于验证整套"绝对风险 × 迁移"方法）。</p>
+<p><strong>方法。</strong> 第一，分原因风险模型用于病因解释，Fine–Gray 模型用于绝对风险。第二，做东亚药靶 MR 面板：东亚 LD 下的共定位（coloc-SuSiE，需要祖源匹配的 LD 参考）；多变量 MR，区分 apoB、LDL-C、TG 和 Lp(a) 的独立效应；非线性 MR（如 doubly-ranked 方法），刻画低 LDL 区间对 ICH 的剂量–反应形状；析因 MR（LDL 评分 × SBP 评分对 ICH 的联合效应），它正是"按血压控制分层看净获益"的遗传学版本。面板先用已完成的 CVOT 回顾性校准"每单位效应 × 时间系数"，再对 OCEAN(a) 和 PREVAIL 做预注册的方向性预测；这就是原 B1 的修订版，范围缩窄到卒中亚型，尤其是 ICH 的安全性方向，并入本模型，不单独立项。第三，把 RCT 效应和 MR 效应合成为分层贝叶斯先验，用效应修饰因子加权完成迁移。第四，计算个体的绝对风险降低（ARR）、绝对风险增加（ARI）和净获益及其后验区间，做决策曲线分析，与"统一 LDL 目标"策略比较。第五，ChinaHEART 本地的观察性 LDL–ICH 关联（排除前 2 年事件）只用来检验迁移假设是否与本地数据冲突，不用于估计效应。</p>
+<p><strong>主要偏倚与应对。</strong> 亚型错分由问题 1 的概率化结局传递不确定性。反向因果用滞后排除和阴性对照结局（如意外死亡）处理。死亡结局混合了发病和病死，在高危层用非致死事件做敏感性分析，并在结论中写明这一限制。可迁移性假设（RCT 人群与中国人群的效应修饰因子分布不同）要报告对迁移假设的敏感性分析。MR 方面：弱工具和赢家诅咒，优先用大样本 pQTL 和东亚 GWAS；LD 参考不匹配，使用祖源匹配的参考面板；多效性，用多变量 MR 和 cis 工具。志愿者偏倚用 CCDRFS 做 raking。</p>
+<p><strong>1–3 个月的第一步。</strong> 其一，东亚药靶 MR 面板完全基于公开汇总统计，不需要 ChinaHEART 的访问权限，可以立即开始：先完成降脂和降压靶点对缺血性卒中和 ICH 的方向与幅度分析，以及对已完成 CVOT 的回顾性校准。其二，在 OSF 上预注册对 OCEAN(a)（约 2026 年 12 月完成）和 PREVAIL（2027 年第一季度）的预测。其三，整理 CTT、BPLTTC、STEP、ESPRIT 按卒中亚型给出的 RR，建成一张先验表。其四，在 UKB 或 CHARLS 上搭好决策模型的骨架，等问题 1 的亚型概率一到就接入。</p>
+<h3>问题 3：诊疗链缺口地图——从筛出高危到长期达标，各段损失多少、卡在哪些县、对应多少可挽回的死亡</h3>
+<p><strong>问题。</strong> 在 ChinaHEART 高危人群中，高血压（主线）和他汀适应人群（副线）沿"筛出→知晓→起始治疗→滴定达标→长期坚持"各段的转化率是多少？各段损失由哪些个体因素和点位因素决定（基层药物配备、村医能力、医保和集采政策的时点）？把某一段补齐能挽回多少死亡？待上市或在研疗法（醛固酮合酶抑制剂、每半年一次的 siRNA、口服 PCSK9 等）的合格人群有多大、分布在哪里？</p>
+<p><strong>为什么优先。</strong> 原报告判断瓶颈在"人群→干预"层，却把这一层当成了黑箱。<strong>不同的段对应完全不同的干预手段</strong>：筛查和知晓对应基层筛查，起始治疗对应处方行为和药物可及性，达标对应滴定方案，坚持对应给药方式（这正是长效制剂要解决的问题）。不拆开，算法团队不知道该建什么模型，政策方也不知道该补哪一段。SBP 是中国归因负担第一位的危险因素，ChinaHEART 440 万人的血压数据加上县级覆盖，是 CKB 和 UKB 都没有的。产出是分层汇总量，可以合规出境，同时服务卫健和医保（补齐哪一段）以及药企（合格人群富集地图）。下表把这条链与数据可得性对应起来【推断】。</p>
+<table>
+<thead>
+<tr>
+<th>诊疗链环节</th>
+<th>ChinaHEART 可用数据</th>
+<th>主要局限</th>
+<th>对应干预</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>筛出</td>
+<td>全员两次基线血压、POC 血脂</td>
+<td>两次读数有白大衣效应与回归稀释，需问题 1 校正</td>
+<td>基层筛查覆盖</td>
+</tr>
+<tr>
+<td>知晓</td>
+<td>问卷自报诊断史</td>
+<td>自报偏倚</td>
+<td>基层随访、告知</td>
+</tr>
+<tr>
+<td>起始治疗</td>
+<td>问卷自报用药（全员）、高危层随访用药</td>
+<td>无处方或医保结算数据，无剂量与起止时间</td>
+<td>药物可及性、处方行为</td>
+</tr>
+<tr>
+<td>滴定达标</td>
+<td>高危层随访血压</td>
+<td>仅高危层有纵向测量</td>
+<td>滴定方案、村医能力（CRHCP 型）</td>
+</tr>
+<tr>
+<td>长期坚持</td>
+<td>高危层随访中的用药状态</td>
+<td>依赖自报</td>
+<td>长效给药、医保报销</td>
+</tr>
+<tr>
+<td>可及性与基层能力</td>
+<td>点位层面的基层医疗机构调查（药物配备、人员）</td>
+<td>353 个点是便利抽样</td>
+<td>集采、医保目录</td>
+</tr>
+</tbody>
+</table>
+<p><strong>所需数据。</strong> <em>ChinaHEART 现有</em>：两次基线血压、自报用药、高危层主动随访中的血压和用药、点位层面的基层医疗机构调查、死亡结局；有心电图的高危亚样本可用于"房颤检出→抗凝缺口"这条副链的扩展。<em>嵌套检测</em>：不需要。<em>外部数据</em>：CRHCP、STEP、ESPRIT 的效应量，作为"补齐某一段"的反事实锚点；CHS 或 CCDRFS 的全国代表性控制率，用于外部校准和代表性加权；药品集采和医保目录的地区落地时间表，用于识别政策冲击；试验入排标准（VESALIUS 型、ZENITH 型、OCEANIC-STROKE 型）。</p>
+<p><strong>方法。</strong> 按段做 cascade 分解，使用多水平模型（个体嵌套于点位，点位随机效应），并按点位分解各段损失的方差；用参数 g-formula 模拟"把某一段提高到 CRHCP 干预组水平"对 CV 死亡和全卒中死亡的影响，相对效应来自 RCT、绝对风险来自本地数据，与问题 2 共用同一骨架；政策效应只在有错峰时间节点时才估计，采用 Callaway–Sant'Anna 这类异质性稳健的错峰 DID 估计量；按试验入排标准操作化定义合格人群，估计其规模、县级分布和竞争风险下的事件率。</p>
+<p><strong>主要偏倚与应对。</strong> 用药信息是自报的，缺少剂量和起止时间，所以只用来定义"是否处在某一段"，不用来估计药效。353 个点是便利抽样，点位间差异有一部分来自招募方式和应答率，需要控制点位的招募特征，并用外部代表性数据做 raking。基线只测了两次血压，白大衣效应和回归稀释会影响"是否控制"的判定，用问题 1 的回归稀释比校正分类。健康志愿者效应会低估绝对死亡率，可挽回死亡数要给出区间并注明偏倚方向。以死亡为结局时，全卒中死亡是主结局，亚型分析只在问题 1 判定"可用"的县区做。</p>
+<p><strong>1–3 个月的第一步。</strong> 其一，用现有基线数据做描述性的县级 cascade（知晓、治疗、控制各段的比例）。其二，把点位层面的基层能力变量与各段转化率做关联分析。其三，按 VESALIUS 型、ZENITH 型等入排标准统计合格人群的规模和县级分布，形成第一版可出境的汇总表，用来与药企和医保方洽谈合作；这一部分只用全卒中和 CV 死亡，可以先于问题 1 完成，涉及卒中亚型的部分等问题 1 完成后再补。其四，收集集采和医保目录的地区落地时间表，判断是否存在可以识别的政策冲击。</p>
+<h3>有条件启动的第二梯队</h3>
+<p>以下方向没有进入前三，但保留下来，各自写明启动条件。它们的共同点是依赖尚未确认的数据或审批，或者单独立项时效力不足。</p>
+<p><strong>房颤检出→抗凝缺口，加上 AI-ECG。</strong> 临床价值高：在有心电图的高危亚样本中估计房颤患病率和既往未知房颤的比例，按 CHA₂DS₂-VASc 分层描述抗凝使用率，分析未抗凝与卒中死亡、全因死亡的关系。启动条件是确认保存的是数字 ECG 波形（如果只有纸质或图片，需先走数字化管线）；一旦确认，它可以作为问题 3 的第二条诊疗链。AI-ECG 部分（原 A5 的改写）应当优先 ECG 而不是超声：EchoPrime 在美国三级医院数据上训练，迁移到基层超声风险大，而 12 导联 ECG 标准化程度高、公开预训练资源多。终点改为全因死亡、CV 死亡和高危层非致死事件，不用"HF/AF 相关死亡"这种在死因登记中不可用的结局；可以用同一亚样本中的超声测量值作为弱标签，对 ECG 模型做跨模态监督，并按省份和设备品牌评估域偏移。</p>
+<p><strong>嵌套 case-cohort 基因分型加 Lp(a)。</strong> 启动条件是白膜层或全血 DNA 可用、人遗审批通过。设计上以死亡病例（ICH、缺血性卒中、CHD）加覆盖全体的随机子队列构成 case-cohort，所有遗传分析都在加权框架下进行，禁止在高危层内做。<strong>结局只写 ICH 与缺血性卒中死亡，删去原 B2 中的"小血管卒中死亡"</strong>：腔隙性卒中极少致死，ICD-10 死因编码也不区分 TOAST 亚型，这个结局无法观测。效力粗算【推断，量级估计】：按 1,630 万人年、ICH 死亡率约 40–60/10 万人年、约 60% 有存储样本估算，可用 ICH 死亡约 4,000–6,000 例，与 CKB 相当；对 MAF 0.2、OR 1.15 的常见变异，在 5×10⁻⁸ 阈值下达到 80% 效力大约需要 1 万例以上，所以<strong>定位应是加入 CKB、BBJ、TPMI、KoGES、ISGC 的荟萃分析，而不是独立的发现 GWAS</strong>；单样本 LDL→ICH MR 只能以约 80% 效力检出每 SD OR ≤0.80 的效应，其价值在于与 CKB 合并后缩窄置信区间。rs671 饮酒 MR 已在 CKB 做过，增量主要在合并，女性饮酒极少、可作阴性对照。Lp(a) 检测（原 B3）成本低，问题清楚：描述中国人群达到各试验入组门槛的比例，估计每单位绝对量与冠心病、缺血性卒中和 ICH 死亡的风险梯度，并用东亚特异工具做非线性 MR；描述部分已并入问题 1 的复测，风险梯度部分的效力取决于病例数，启动前需查重 CKB 是否已有同类研究。芯片分型可以顺带从强度数据检出嵌合染色体改变（mCA），替代原 B4 的 CHIP 靶向测序。</p>
+<p><strong>CKB→ChinaHEART 迁移。</strong> 用 CKB 的住院事件训练分亚型的非致死事件风险模型，通过协变量偏移加权迁移到 ChinaHEART，并以两队列共有的死亡结局做锚定再校准。在住院关联落地之前，这是做发病风险研究的唯一路径。启动条件是能访问 CKB，并能处理两个队列之间的时期偏移（2004–08 年对 2014–22 年）；数据不能合并时，采用摘要级或联邦协作。</p>
+<p><strong>降级或改写的原问题。</strong> 原 A2（高危层目标试验模拟）降级为<strong>数据适用性验证</strong>：先检验这套数据能否复现已知 RCT，不作为主结论。原设计以 SSaSS 和 SECURE 为基准并不恰当，两者都不对应 ChinaHEART 能模拟的药物启用，而且"阳性基准"与"阴性对照"是两个概念：阳性基准应改为 CTT、HOPE-3（他汀）、BPLTTC、STEP/ESPRIT（降压）和 ASPREE/ARRIVE（阿司匹林一级预防的零效应）；阴性对照结局（如意外死亡）另外单列，用于经验校准。它还面临缺少处方数据导致的时间零点问题、健康使用者偏倚、用药率低带来的正性问题，以及 ICH 伤害检测效力不足（启用者中的 ICH 死亡估计只有一二百例【推断】）。阿司匹林在一级预防中的缺血获益与 ICH 伤害可以作为净获益问题保留，但因效力所限不进入前三。原 A3（县级自然实验）只在找到有明确时间节点的县级政策（例如集采的地区错峰落地）时启动，353 个点的横断面异质性本身不构成外生变异。原 A4 中单纯重校准死亡版风险评分的价值有限（China-PAR 本就基于中国队列），降为次要项；它的参与加权部分已并入各问题的 raking。原 B4（CHIP × IL6R × 死亡）在这个年龄段大克隆比例只有百分之几、交互项检验又以死亡为结局，效力极低，改为基因分型时顺带分析 mCA。原 B5 的逻辑需要修正：如果工具变量来自 CKB 的 cis-pQTL，两样本 MR 根本不需要在 ChinaHEART 测 Olink，而单样本 MR 又必须有基因分型；按原写法，钱花在蛋白组上，因果推断却没有增量，而且 CKB 的 Olink pQTL 只有约 4,000 人，工具偏弱且有赢家诅咒。修订后的做法是"ChinaHEART 基因分型 + 外部大样本 pQTL（UKB-PPP、日本 pQTL）+ 东亚 LD 共定位"，否则删去嵌套 Olink 的 MR 用途。湿实验合作（脑小血管平滑肌细胞和周细胞中对 COL4A1/2、ICA1L、PMF1 等位点做 CRISPRi 或 MPRA；对 rs671、RNF213 等东亚特异变异做功能验证；在心房或 HFpEF 的 EHT 中验证候选靶点）仍保留为算法团队以合作方身份参与的长期方向，离 ChinaHEART 数据最远。此外，司美格鲁肽在中国专利到期后仿制药陆续上市【未核实】，可能构成 GLP-1 可及性骤增的自然实验，可以挂在问题 3 的政策冲击框架下备选。</p>
+<h2>专家评审说明</h2>
+<p>本修订版依据一轮四人专家评审改写，评审原文与综合见研究笔记 <code>panel/</code> 目录。四位评审的角色分别是：心内科临床专家（中国指南、基层落地与 ChinaHEART 数据实际）、遗传流行病学家（MR、drug-target MR、共定位、PRS 与东亚生物样本库）、心血管药物研发负责人（靶点验证、CVOT 设计与监管路径）、医学 AI/算法研究者（竞争风险、TTE、跨队列迁移、测量误差与 AI-ECG）。四位都认可原报告的骨架："缺靶点"不是心血管的统一诊断，中国可挽回的负担主要在"人群→干预"层，ChinaHEART 不是靶点发现平台。</p>
+<p>主要修正分三类。第一类是 10 处事实或逻辑错误：7.2% 是 MPP 筛查人群而非全国的控制率；VESALIUS-CV 属于首次事件预防而非传统一级预防；HORIZON 的 ≥90 mg/dL 人群是共同主要分析人群而非亚组；ZEUS 的"膜受体对配体"论证方向反了（研究笔记同步更正）；"遗传效应大小不能预测药物效应大小"混淆了变异效应与每单位因果效应；心肌病一行把 ODYSSEY-HCM 的失败错归为递送；"小血管卒中死亡"在死因登记中不可观测；B5 的嵌套 Olink MR 逻辑断链；A2 的基准选错且混淆了阳性基准与阴性对照；阿司匹林低使用率被错当作可挽回缺口。第二类是框架修正：因果链补上测量/结局确定层与效应迁移/决策层；"分子把手"改为三层框架；Lp(a) 与 IL-6 的失败分开归因并补上 CANTOS 与秋水仙碱；死因编码（含 I64 和垃圾编码）从可行性要点升为第一个研究问题；明确禁止在高危层内做遗传因果分析；指出欧洲 LPA 工具在东亚不可用。第三类是补充：高血压行与诊疗链表、中国本土 RCT、新给药方式与待读出 CVOT、FXI 的抑制深度与对照药设计、RNF213、HFpEF 的欧洲表型局限，以及研究问题的整体重排。评审人新引入的 2026 年事件与数字，本修订没有独立复核，均标为【未核实】。</p>
+<p>仍然存在的分歧有七处。<strong>D1</strong>（A1 能否影响 LDL 目标值）：遗传流病学家认为"绝对风险 × 相对效应"框架的结果可以写进指南的分层建议，临床专家认为观察性队列不可能改写目标值；本修订采用前者的框架、后者的结论强度，定位为"指南讨论的量化输入"。<strong>D2</strong>（第一优先做什么）：临床与 AI 评审主张先做测量层，遗传流病学家主张先做零成本的 MR 面板，药物研发评审主张先做入组富集地图；本修订按依赖关系把测量层放在关键路径上，MR 面板并行，富集地图中不涉及亚型的部分先出。<strong>D3</strong>（预注册 MR 的价值）：遗传流病学家要把它列为第一位，AI 评审认为它不体现 ChinaHEART 的比较优势，药物研发评审认为只有东亚 ICH 安全性方向有增量；本修订把它并入问题 2 作为先验与三角验证模块。<strong>D4</strong>（面向学术与指南，还是面向药企与监管）：三方受众不同；本修订选择一套骨架同时服务多方的问题，个体遗传学降为第二梯队。<strong>D5</strong>（A4 重校准与 CKB 迁移）：临床专家认为重校准价值低，AI 评审认为 CKB 迁移是补齐非致死事件的唯一路径；本修订降级前者，把后者保留为有条件启动的方向。<strong>D6</strong>（ZEUS 阴性的含义）：遗传流病学家视之为真正的"MR 幅度外推失败"，药物研发评审强调人群与试验设计、认为炎症假说未被证伪；本修订把两者并列为尚未区分的备择解释。<strong>D7</strong>（阿司匹林）：临床专家要求把它移出缺口论据，AI 评审把一级预防中的阿司匹林净获益列为中国缺乏 RCT 的问题；本修订在论据层面移出阿司匹林，在研究问题层面保留为效力受限的净获益问题。</p>
+<h2>Conclusion</h2>
+<p>【推断】这一轮证据与评审改变的认识是："缺靶点"不是心血管领域的统一诊断，只适用于 ICH、HFpEF、房颤基质和血管衰老。对 ASCVD 和血压轴，靶点方向早已明确，稀缺的是另外三样东西：经事件校准的替代终点，足够的暴露单位，以及把每单位效应落到具体人群的实施链。2026 年 Lp(a) 和 IL-6 的两次阴性，一次是试验暴露的单位不足，一次是外推超出了工具变量覆盖的尺度，都不说明 MR 判不了幅度；它们说明下一代心血管靶点研究的价值，不在于再发现一个 MR 显著的蛋白，而在于回答"在谁身上、从几岁开始、降多少才有用"。这恰好是大型人群队列和实用性试验擅长的领域，但前提是先把结局测准。对中国而言，LDL 与 ICH 之间的遗传学权衡意味着，<strong>在血压未控制、ICH 基线风险高的亚人群中，强化降脂的净获益需要单独量化，并在血压控制状态下评估</strong>；RCT 证据并未显示极低 LDL 下 ICH 显著增加，所以这不是否定"越低越好"，而是要求按人群算清净账。ChinaHEART 在卒中亚型死亡数据和县级血压数据上的规模，是全球其他队列难以替代的资产，但这份资产的价值取决于死因编码能否经得起验证。</p>
+<p>对算法团队最现实的路线是：先做测量层重建（问题 1），把卒中亚型死因概率化、把 POC 血脂和血压校准到通常水平；同时立即用公开的东亚汇总统计启动药靶 MR 面板，先对已完成的 CVOT 做回顾性校准，再对 OCEAN(a) 和 PREVAIL 做预注册预测，作为净获益决策模型（问题 2）的先验；与此并行，用现有基线数据绘制诊疗链缺口地图（问题 3）中不依赖亚型的部分。个体水平的遗传学、Lp(a) 检测、AI-ECG 和 CKB 迁移，在数据与审批条件满足后作为第二梯队启动。启动前应先向 ChinaHEART 数据方核实三件事：死因登记中 I64 和垃圾编码的占比，存储样本是否保留了白膜层或全血，以及住院数据关联的进度。</p></div></details>
+<details class="bg"><summary>〔深度〕专家评审综合：心血管调研（心内科 · 遗传流病 · 药物研发 · 医学 AI）<span class="cnt">深度调研 · cardio-omics · 2026-09-27</span></summary><div class="bgbody"><p><strong>评审对象</strong>：<code>reports/心血管遗传靶点与ChinaHEART策略.md</code>（截至 2026-09-27）
+<strong>输入</strong>：<code>round-1-clinician.md</code>（临床）、<code>round-1-genetic-epi.md</code>（遗传流病）、<code>round-1-drug-dev.md</code>（药物研发）、<code>round-1-ai-researcher.md</code>（医学 AI）
+<strong>缩写</strong>：【临】心内科临床专家；【遗】遗传流行病学家；【药】心血管药物研发负责人；【AI】医学 AI/算法研究者</p>
+<blockquote>
+<p>核对说明：报告原文中涉及事实错误的语句，本综合已逐条回原文核对位置。评审人新引入的 2026 年事件（enlicitide 获批、baxdrostat 获批、obicetrapib 欧盟获批、LIBREXIA-ACS 数字等）来自【药】本轮的检索，本综合没有独立复核，写入报告前需再核一次原始来源。评审中的效力估算均为量级估计。</p>
+</blockquote>
+<hr />
+<h2>一、交叉共识（≥2 位评审）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>共识点</th>
+<th>提出者</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td><strong>大方向成立</strong>：中国可挽回的负担主要在"人群→干预"层；ChinaHEART 不是靶点发现平台</td>
+<td>临、遗、药、AI（4/4）</td>
+<td>四位都没有否定核心判断，分歧只在"这一层怎么拆、先做什么"</td>
+</tr>
+<tr>
+<td>C2</td>
+<td><strong>死因编码是整条路线的地基，报告只讨论 I61 与 I63，漏了 I64（未特指卒中）和垃圾编码</strong></td>
+<td>临、遗、药、AI（4/4）</td>
+<td>I64 的分布与地区、医疗能力、居家死亡相关，属于<strong>差异性错分</strong>，可能让 LDL–ICH 结论翻转。必须先做验证子研究，不能只当成"可行性要点"</td>
+</tr>
+<tr>
+<td>C3</td>
+<td><strong>A1 的"净获益人群"不能靠观察性 LDL–ICH 关联回答</strong></td>
+<td>临、遗、AI；药（部分）</td>
+<td>低 LDL 与衰弱、肝病、饮酒、营养不良相关，存在反向因果，而中位随访只有 3.6 年。【遗】【AI】主张改用"本地绝对风险 × 外部 RCT/MR 相对效应"；【临】主张降格为安全性信号；【药】保留 A1 方向，但要求把 I64 作为主要敏感性分析</td>
+</tr>
+<tr>
+<td>C4</td>
+<td><strong>ICH 死亡混合了发病和病死</strong>，死因数据也没有 ICH 部位信息</td>
+<td>遗、AI</td>
+<td>基因型或 LDL 与"ICH 死亡"的关联无法分离对发病和对致死的效应</td>
+</tr>
+<tr>
+<td>C5</td>
+<td><strong>POC 血脂不只是回归稀释问题</strong>：LDL-C 多由 Friedewald 公式推算，非空腹或高 TG 时误差非随机</td>
+<td>临、遗、AI</td>
+<td>需要中心实验室直接法复测来建立校准方程，经典的回归稀释校正不够</td>
+</tr>
+<tr>
+<td>C6</td>
+<td><strong>A2（目标试验模拟）被高估了</strong></td>
+<td>临、遗、药、AI（4/4）</td>
+<td>没有处方或配药数据，时间零点难定义；健康使用者偏倚；用药率低于 3% 带来正性问题；ICH 伤害检测效力不足（【AI】估计启用者中 ICH 死亡只有一二百例）</td>
+</tr>
+<tr>
+<td>C7</td>
+<td><strong>A2 的基准选错了</strong>：SSaSS（盐替代）和 SECURE（心梗后多效片）都不是 ChinaHEART 能模拟的"药物启用"；阳性基准和阴性对照被混为一谈</td>
+<td>遗、AI；临（改用 STEP/ESPRIT 作基准）</td>
+<td>阳性基准应改为 CTT、HOPE-3、BPLTTC、STEP/ESPRIT、ASPREE/ARRIVE；阴性对照结局（如意外死亡）另外单列</td>
+</tr>
+<tr>
+<td>C8</td>
+<td><strong>高血压 / SBP 在报告中缺位</strong>：它是归因第一位的危险因素，却不在记分牌里，研究问题中也没有</td>
+<td>临、遗、药；AI（在 R2 中纳入强化降压）</td>
+<td>【临】要求拆解诊疗链；【遗】提出降压药靶 MR；【药】提出未控制或顽固高血压的表型地图，以及醛固酮合酶抑制剂（ASI）和 siRNA 的新管线</td>
+</tr>
+<tr>
+<td>C9</td>
+<td><strong>"遗传效应大小不能预测药物效应大小"是概念错误</strong>：它混淆了变异效应和每单位生物标志物的因果效应</td>
+<td>遗、药</td>
+<td>在 LDL 轴上，析因 MR 按每 mmol/L 的效应加时间换算，成功预言了 PCSK9、依折麦布和 CETP 的获益幅度</td>
+</tr>
+<tr>
+<td>C10</td>
+<td><strong>HORIZON 阴性与 MR 预期的小效应相容</strong>，不是"MR 预测不了幅度"</td>
+<td>遗、药</td>
+<td>【遗】推算试验期内的 RR 约 0.90–0.95，试验效力不足；【药】推算绝对降幅在等效阈值附近或更低。两人方向一致</td>
+</tr>
+<tr>
+<td>C11</td>
+<td><strong>ZEUS 的"膜受体对配体"解释方向反了</strong>：Asp358Ala 促进受体脱落、削弱经典信号，配体阻断覆盖面更宽，这个差异解释不了阴性结果</td>
+<td>遗、药</td>
+<td>研究笔记 <code>ascvd_stroke_targets.md</code> 中的同一说法需要同步修正</td>
+</tr>
+<tr>
+<td>C12</td>
+<td><strong>炎症轴的对照证据缺失</strong>：CANTOS 和秋水仙碱（LoDoCo2）没有进入正文</td>
+<td>遗、药</td>
+<td>笔记中有秋水仙碱的内容，报告正文没有写进去</td>
+</tr>
+<tr>
+<td>C13</td>
+<td><strong>Lp(a) 应以 nmol/L 表述，并要考虑东亚工具变量和分布</strong></td>
+<td>遗、药</td>
+<td>【遗】欧洲 LPA 工具 rs10455872 在东亚人群中近乎单态；【药】中国人群的 Lp(a) 分布决定入组筛选的成功率</td>
+</tr>
+<tr>
+<td>C14</td>
+<td><strong>B4（CHIP × IL6R × 死亡）效力极低，应降为 P2</strong></td>
+<td>遗、药、AI</td>
+<td>大克隆 CHIP 在这个年龄段的比例只有百分之几，交互项检验再以死亡为结局，效力很低</td>
+</tr>
+<tr>
+<td>C15</td>
+<td><strong>B1 的"用 4 个待读出试验校准管线"在统计上站不住</strong></td>
+<td>遗、AI；药（缩窄为 ICH 安全性方向）</td>
+<td>4 个试验只有轶事意义，而且这些试验的终点与东亚卒中亚型 MR 的估计对象不同</td>
+</tr>
+<tr>
+<td>C16</td>
+<td><strong>住院和医保关联（B6）应提为前置条件或基础设施</strong></td>
+<td>临、AI；药（"基础设施落实之后"）</td>
+<td>HF、AF、非致死卒中，以及 A2 中的用药暴露都依赖它</td>
+</tr>
+<tr>
+<td>C17</td>
+<td><strong>志愿者或参与偏倚（应答率约 35%）必须显式处理</strong>，加权需要外部目标总体</td>
+<td>临、遗、AI</td>
+<td>用 CCDRFS 或普查边际分布做 raking；在估计可挽回死亡的绝对数时必须说明</td>
+</tr>
+<tr>
+<td>C18</td>
+<td><strong>亚样本的选择性结构</strong>：高危组和对照亚样本属于按设计缺失，在亚样本内直接建模或做遗传分析会带入筛选条件</td>
+<td>遗（碰撞偏倚）、AI（两阶段设计估计量）</td>
+<td>遗传因果分析用随机子队列的 case-cohort 设计加逆概率加权；表型模型用 IPW 或 raking</td>
+</tr>
+<tr>
+<td>C19</td>
+<td><strong>A3（县级自然实验）识别条件不足</strong>：353 个点是便利抽样，缺乏可识别的政策冲击</td>
+<td>临、AI</td>
+<td>降为 P2，只在找到有明确时间节点的政策（例如集采错峰落地）时启动，并采用错峰 DID 的稳健估计量</td>
+</tr>
+<tr>
+<td>C20</td>
+<td><strong>ECG 优于超声；A5 的终点选错了</strong>（"HF/AF 相关死亡"在死因登记中不可用）</td>
+<td>临、AI</td>
+<td>【临】用房颤检出→抗凝缺口；【AI】用全因和 CV 死亡、高危层非致死事件，加上超声→ECG 的跨模态弱监督</td>
+</tr>
+<tr>
+<td>C21</td>
+<td><strong>HFpEF 段落过度外推</strong></td>
+<td>临、遗、AI</td>
+<td>【临】HERMES 91% 为欧洲人，中国 HFpEF 的 BMI 更低；【遗】SNP-h² 1.8% ± 1.3% 应读作"证据不足"，不是"近乎空白"；【AI】HF/AF 方向在 ChinaHEART 上目前基本做不了</td>
+</tr>
+<tr>
+<td>C22</td>
+<td><strong>新靶点之外，"新给药方式"本身就是人群→干预层的解法</strong></td>
+<td>药；临（提到 ASI、AGT siRNA）</td>
+<td>口服 PCSK9、siRNA、碱基编辑和 ASI 把依从性问题转成了药物设计问题</td>
+</tr>
+<tr>
+<td>C23</td>
+<td><strong>人遗条例决定了合作形态</strong></td>
+<td>药、AI</td>
+<td>产出应当设计成可以出境的汇总量，或者采用联邦 / 摘要级分析</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>二、真实分歧与裁决</h2>
+<h3>D1. A1 的结论能否"影响中国指南的 LDL 目标值"</h3>
+<ul>
+<li><strong>【临】</strong>：不能。观察性队列的死因编码可疑、血脂用 POC 测量、随访只有 3.6 年，不可能改写目标值。RCT 证据（CTT、TST、FOURIER、ODYSSEY）也没有显示极低 LDL 下 ICH 显著增加。A1 只能定位为安全性信号和异质性探索，"越低越好不能照搬"要改成"需要在血压控制的前提下评估"。</li>
+<li><strong>【遗】</strong>：改成"绝对风险 × 相对效应"框架后，结果"可以直接写进指南的 LDL 目标值分层建议"。</li>
+<li><strong>【药】</strong>：把 A1 列为第二位，理由是它影响 PCSK9、CETP 和 FXI 的说明书人群、NMPA 的安全性关注点和指南目标值。</li>
+<li><strong>【AI】</strong>：同意换框架，但强调输出要带不确定性区间，否则进不了指南讨论。</li>
+</ul>
+<p><strong>裁决</strong>：分析框架采用【遗】和【AI】的方案，结论强度采用【临】的限定。相对效应从 RCT 和 MR 迁移过来，本地数据只提供按亚型的绝对风险。这确实绕开了观察性 LDL 的反向因果，但把问题转移到了"可迁移性假设"和"亚型错分"上。这两项假设都有待验证，所以产出的定位是"为指南分层讨论提供量化输入（按血压控制状态给出的净获益边界及其后验区间）"，而不是"改写目标值"。报告的 Conclusion 应当删掉"西方越低越好不能照搬"，改写为：在血压未控制、ICH 基线风险高的亚人群中，强化降脂的净获益需要单独量化。</p>
+<h3>D2. 第一优先做什么：先做测量层，还是先做不依赖测量层的产出</h3>
+<ul>
+<li><strong>【临】【AI】</strong>：先做死因和暴露的测量层审计，它是所有下游分析的地基。</li>
+<li><strong>【遗】</strong>：先做零检测成本的东亚药靶 MR 面板，可以立即开始，而且是唯一能证伪"MR 幅度能否外推"的设计。</li>
+<li><strong>【药】</strong>：先做 CVOT 入组富集地图，药企可以直接使用，而且只用现有数据。</li>
+</ul>
+<p><strong>裁决</strong>：这三件事并不互斥，但依赖关系决定了顺序。富集地图需要"ICH 与缺血性卒中的比例"，净获益模型需要分亚型的绝对风险，两者都<strong>依赖</strong>测量层；MR 面板<strong>不依赖</strong> ChinaHEART。因此：测量层审计是 P0 的关键路径；MR 面板作为并行的零成本轨道同时启动，并作为净获益模型的先验输入；富集地图中只用全卒中和 CV 死亡的部分可以先出，涉及卒中亚型的部分要等测量层完成。</p>
+<h3>D3. B1（预注册 MR）的价值和规模</h3>
+<ul>
+<li><strong>【遗】</strong>：升为第一位。先用已完成的 CVOT（他汀、依折麦布、PCSK9、REVEAL、降压、OCEANIC-STROKE、HORIZON、ZEUS）做回顾性校准，再对 OCEAN(a) 和 PREVAIL 做前瞻登记。</li>
+<li><strong>【AI】</strong>：4 个试验谈不上校准；这项工作不使用 ChinaHEART，也就不体现算法团队的比较优势，只应作为低投入的并行项。</li>
+<li><strong>【药】</strong>：药企内部都有 MR 流程，增量有限；只有东亚 ICH 安全性方向有价值。</li>
+</ul>
+<p><strong>裁决</strong>：【遗】提出的回顾性校准把校准集扩大到约 8–10 个试验，基本回应了【AI】关于"n=4"的批评，可以保留。【AI】关于比较优势的判断也成立，【药】关于"只有 ICH 方向对外有增量"的判断同样成立。所以 B1 不单独立项，改为净获益决策模型（下文推荐问题 2）的<strong>先验与三角验证模块</strong>，范围聚焦在卒中亚型，尤其是 ICH，并纳入降压药靶。</p>
+<h3>D4. 研究问题应当面向"学术发现与指南"，还是面向"药企与监管可用"</h3>
+<ul>
+<li><strong>【药】</strong>：清单偏学术发现，应当重排到入组富集、可迁移性、benefit-risk 校准和生物标志物分布上，产出做成可出境的汇总量。</li>
+<li><strong>【遗】</strong>：主张嵌套 case-cohort 基因分型、PRS 和 Lp(a) 非线性 MR，也就是个体水平的遗传学。</li>
+<li><strong>【临】</strong>：主张诊疗链和房颤抗凝，面向卫健和医保的行动。</li>
+</ul>
+<p><strong>裁决</strong>：这是受众上的分歧，不是事实分歧。面向算法提供者，应选<strong>同一套分析骨架同时服务多方</strong>的问题。按亚型的绝对风险加上迁移效应，可以同时产出指南输入、药企需要的 NNT 和合格人群规模，以及医保需要的可挽回死亡估计。【遗】的个体遗传学受 DNA 可用性（白膜层或全血，【AI】指出）和人遗审批两道门槛限制，列为有条件启动的第二梯队。</p>
+<h3>D5. A4 重校准和 CKB 迁移的价值</h3>
+<ul>
+<li><strong>【临】</strong>：China-PAR 本来就是用中国队列建的，重校准价值不高，降为 P2。</li>
+<li><strong>【AI】</strong>：把 A4 扩展为"CKB→ChinaHEART 迁移"，用 CKB 的住院事件训练分亚型的非致死风险模型，再迁移过来。这是 B6 落地之前做发病风险研究的唯一路径。</li>
+</ul>
+<p><strong>裁决</strong>：两人说的其实是两个问题。单纯重校准死亡版风险评分，同意【临】，降为 P2。【AI】的迁移建模针对的是"非高危层没有非致死事件"这一真实缺口，保留为 P1 的方法储备，但依赖 CKB 数据访问，而且两个队列的时期偏移很大（2004–08 年对 2014–22 年），不列入前三。</p>
+<h3>D6. ZEUS 阴性的主要含义</h3>
+<ul>
+<li><strong>【遗】</strong>：IL-6 是一个真正的"MR 幅度外推失败"案例。若按 hsCRP 尺度外推，预期获益会很大，而 HR 0.99 已经排除了大于约 12% 的获益。他据此提出规则：只能在工具变量覆盖的生物标志物范围内外推，靶点参与度指标不等于因果尺度。他还认为炎症轴不宜称为"遗传学强"。</li>
+<li><strong>【药】</strong>：重点在人群和试验设计，包括 CKD 人群的竞争风险、hsCRP 富集到的不是"IL-6 驱动事件"的人、感染增加。他认为炎症假说没有被证伪，CANTOS 和秋水仙碱是阳性的，表现为上游和下游的分化。</li>
+</ul>
+<p><strong>裁决</strong>：两者都成立，也不互斥，报告应当把它们并列为<strong>尚未区分的备择解释</strong>。【遗】提炼的外推规则值得作为方法论写进报告。同时采纳【药】的观点，把"IL-6 失败"限定为"下游配体阻断在 CKD 人群中失败"，不外推到整个炎症轴。报告里"遗传学强"的措辞下调为"遗传方向一致，但幅度尺度不明"。</p>
+<h3>D7. 阿司匹林：是可挽回的缺口，还是值得研究的问题</h3>
+<ul>
+<li><strong>【临】</strong>：一级预防不常规推荐阿司匹林，使用率低在一定程度上是合理的，应当从"缺口"中拆出去。</li>
+<li><strong>【AI】</strong>：在 R3 中把"中国高危一级预防人群启用阿司匹林的缺血获益与 ICH 伤害"列为中国缺乏 RCT 的问题。</li>
+</ul>
+<p><strong>裁决</strong>：两人并不矛盾。在报告的<strong>论据</strong>层面，阿司匹林必须移出"&lt;3% 缺口"的表述；在<strong>研究问题</strong>层面，它可以作为净获益问题存在，但效力受限（ICH 伤害检测不足），不进入前三。</p>
+<hr />
+<h2>三、P0 / P1 / P2 合并修订清单</h2>
+<h3>3.1 事实错误与自相矛盾（单列，全部视为 P0）</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>原文位置</th>
+<th>问题</th>
+<th>指出者</th>
+<th>依据</th>
+<th>修改</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F1</td>
+<td>结论先行段："全国高血压控制率只有 7.2%"</td>
+<td>7.2% 来自 China PEACE MPP（2014–2017 年，35–75 岁志愿筛查人群），不是全国代表性数据。报告在"中国人群"一节中的引用本身是对的，结论段扩大成了"全国"</td>
+<td>临</td>
+<td>MPP 的研究设计（Lancet 2017）；同期具有全国代表性的 CHS 2012–2015 控制率约 15%（【临】给出，需核实）</td>
+<td>改为"China PEACE MPP 筛查人群的控制率为 7.2%"，并补上全国代表性调查的数字作对照</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>结论先行段："VESALIUS-CV 把获益推进到一级预防"</td>
+<td>VESALIUS-CV 入组的是无既往心梗或卒中、但已有动脉粥样硬化证据或高危糖尿病的患者，属于"首次事件预防"，不是传统意义上的一级预防</td>
+<td>药</td>
+<td>试验入排标准</td>
+<td>改为"扩展到无既往心梗或卒中的高危动脉粥样硬化人群"</td>
+</tr>
+<tr>
+<td>F3</td>
+<td>HORIZON 段："≥90 mg/dL 亚组的数据尚未公布"</td>
+<td>≥90 mg/dL 人群按设计是共同主要分析人群，不是事后亚组</td>
+<td>药</td>
+<td>HORIZON 设计文章（AHJ 2025）</td>
+<td>改为"共同主要人群（≥90 mg/dL）的结果尚未公布"</td>
+</tr>
+<tr>
+<td>F4</td>
+<td>【推断】段："IL6R Asp358Ala 作用于膜受体经典通路，ZEUS 阻断配体"</td>
+<td>论证方向反了。该变异增加受体脱落、削弱经典信号；配体阻断同时抑制经典信号和反式信号，覆盖面更宽，这个差异解释不了阴性</td>
+<td>遗、药</td>
+<td>IL-6R 生物学（rs2228145 → sIL-6R 升高）</td>
+<td>删除这一论证，改写为 D6 中的备择解释；同步修正笔记 <code>ascvd_stroke_targets.md</code>（【遗】指出相关行在约第 105 行和第 220 行）</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>记分牌末段："遗传效应大小不能预测药物效应大小"；导言："MR 预测不了获益幅度"</td>
+<td>概念混淆：Minikel 讲的是变异对疾病的效应大小，MR 估计的是每单位暴露的因果效应，后者在 LDL 轴上对幅度有很好的预测力</td>
+<td>遗、药</td>
+<td>Ference 2016/2017/2019 的析因 MR 与 CTT 对比；报告自己引用的 Cohen 2006；Swerdlow 2015</td>
+<td>改为"MR 给出每单位的终生因果效应；换算到试验获益，需要知道绝对降幅、暴露时长换算系数和正确的生物标志物尺度"</td>
+</tr>
+<tr>
+<td>F6</td>
+<td>记分牌"心肌病"一行把瓶颈写成"分子→干预（递送）"，并引 ODYSSEY-HCM 为例</td>
+<td>与正文自相矛盾：ODYSSEY-HCM（非梗阻性 HCM）失败的原因是缺少可测的替代读数（没有 LVOT 压差，峰值 VO2 太"软"），不是递送。递送只对应 AAV 基因治疗</td>
+<td>药</td>
+<td>报告原文的表格与第 52 行叙述</td>
+<td>把心肌病拆成两类：梗阻性和非梗阻性 HCM 属于"替代终点"问题，AAV 属于"递送"问题</td>
+</tr>
+<tr>
+<td>F7</td>
+<td>B2："富集 ICH 与小血管卒中死亡病例"</td>
+<td>腔隙性卒中极少致死，ICD-10 死因编码也不区分 TOAST 亚型，这个结局无法观测</td>
+<td>遗</td>
+<td>ICD-10 编码结构；腔隙性卒中的病死率</td>
+<td>删掉"小血管卒中死亡"</td>
+</tr>
+<tr>
+<td>F8</td>
+<td>B5：在 ChinaHEART 测 Olink，以 CKB cis-pQTL 为工具变量做 MR</td>
+<td>逻辑断链：两样本 MR 不需要 ChinaHEART 的蛋白数据；单样本 MR 又需要基因分型。现在的写法对因果推断没有增量。CKB 的 Olink pQTL 只有约 4,000 人，工具偏弱，还有赢家诅咒</td>
+<td>遗</td>
+<td>MR 设计原理</td>
+<td>改为"ChinaHEART 基因分型 + 外部 pQTL（UKB-PPP、日本 pQTL）+ 东亚 LD 共定位"，或者删去 Olink 的 MR 用途</td>
+</tr>
+<tr>
+<td>F9</td>
+<td>A2："以 SSaSS、SECURE 为基准做阴性对照校准"</td>
+<td>两个试验都不对应可以模拟的药物启用；"阳性基准"和"阴性对照"是两个不同的概念</td>
+<td>遗、AI</td>
+<td>目标试验模拟与 OHDSI 经验校准的方法学</td>
+<td>阳性基准改为 CTT、HOPE-3、BPLTTC、STEP/ESPRIT、ASPREE/ARRIVE；阴性对照结局单列</td>
+</tr>
+<tr>
+<td>F10</td>
+<td>结论先行段：他汀"或阿司匹林"使用率 &lt;3% 被当作可挽回缺口</td>
+<td>一级预防不常规推荐阿司匹林（ASPREE、ARRIVE 之后），使用率低不等于缺口</td>
+<td>临</td>
+<td>中外指南</td>
+<td>把阿司匹林移出缺口论据</td>
+</tr>
+</tbody>
+</table>
+<h3>3.2 P0（其余必须修改的内容，否则结论或资源分配会出错）</h3>
+<ol>
+<li><strong>在因果链中显式加入"测量/结局确定层"</strong>，把死因编码验证（含 I64 和垃圾编码）、POC 血脂校准和血压回归稀释校正，从"可行性要点"升级为第一个研究问题，列为所有以死亡为结局的分析的前置任务。【临、AI；遗、药同意 I64】</li>
+<li><strong>重写 A1</strong>：去掉"直接关系中国指南 LDL 目标值"；框架改为"本地分亚型绝对风险 × RCT/MR 迁移效应"；补上 CTT、TST、FOURIER、ODYSSEY 中关于 ICH 的 RCT 证据；Conclusion 中的"越低越好不能照搬"改为"需要在血压控制状态下评估"。【临、遗、AI、药】</li>
+<li><strong>把 Lp(a) 和 IL-6 的失败分开归因</strong>：HORIZON 与 MR 预期的小效应相容，属于试验效力或暴露单位不足；ZEUS 列出多个备择解释（尺度外推、CKD 竞争风险、hsCRP 未经校准、感染）；补上 CANTOS 和秋水仙碱。【遗、药】</li>
+<li><strong>重写"分子把手"框架</strong>，改为三层：有无可测分子 → 分子与事件之间有无跨机制校准的剂量关系 → 监管是否接受它作替代终点。以 Lp(a) 和 hsCRP 作为"有把手但未经校准"的反例，以 ODYSSEY-HCM 作为"缺少把手"的例子。【药；遗在幅度问题上呼应】</li>
+<li><strong>明确禁止在高危层内做遗传因果分析</strong>，改用随机子队列 case-cohort 设计加逆概率加权。【遗；AI 呼应】</li>
+<li><strong>东亚工具变量的有效性</strong>：欧洲 LPA 工具在东亚不可用，需要东亚特异变异或 KIV-2 拷贝数；CETP 可用东亚功能缺失变异（D442G、Int14+1G&gt;A）。【遗】</li>
+<li><strong>启动任何嵌套检测之前必须核实三件事</strong>：I64 占比、存储样本是否含白膜层或全血 DNA、住院关联的进度。【AI；与报告末段"三个开放问题"合并，把"DNA 质量"具体化为"是否有白膜层或全血"】</li>
+<li><strong>重排研究问题</strong>：把 A2 降级为"数据适用性验证"（先检验能否复现已知 RCT），不再作为主结论。【药、AI、遗、临】</li>
+</ol>
+<h3>3.3 P1（显著提升质量或可行性）</h3>
+<ol start="9">
+<li>记分牌增加"高血压（SBP）"一行，并在"人群→干预"层下加一张"诊疗链 × 数据可得性"表（筛出→知晓→起始治疗→滴定达标→长期坚持，外加药物可及性和基层能力）。【临；药、遗呼应】</li>
+<li>补上中国本土关键 RCT：STEP、ESPRIT、CRHCP、CSPPT（MTHFR × 叶酸，中国罕见的"基因型 × 干预"先例）、INTERACT3。【临】</li>
+<li>新增"已验证靶点的新给药方式与 incretin"一节，外加 2026–2027 年待读出 CVOT 的时间表（ORION-4、CORALreef、VERVE-102、SELECT/SOUL/SURPASS-CVOT、baxdrostat/lorundrostat/ZENITH、CAPITAN、OCEAN(a)、PREVAIL、LIBREXIA-AF），日期需逐条核实。【药；临提及 ASI 和 AGT siRNA】</li>
+<li>FXI 部分补充抑制深度、对照药设计（安慰剂加药设计与 DOAC 头对头设计的差别）、LIBREXIA-ACS 的最终结果、abelacimab（LILAC），以及"FXI 低出血 × 中国 ICH 高占比"这条联系。【药】</li>
+<li>房颤一行和研究问题中加入"房颤检出→抗凝缺口→卒中死亡"；A5 改写为优先使用 ECG、终点改为全因和 CV 死亡及高危层非致死事件、加入超声→ECG 的跨模态弱监督。【临、AI】</li>
+<li>增加降压药靶 MR（按缺血性卒中和 ICH 分开），以及非线性 MR、析因 MR（LDL 评分 × SBP 评分）、多变量 MR（apoB、TG、Lp(a)）的方法说明。【遗】</li>
+<li>B1 改为"用已完成的 CVOT 做回顾性校准，再对待读出试验做预注册的方向性预测"，范围缩窄到卒中亚型，尤其是 ICH 的安全性方向；并入净获益模型，不单独立项。【遗、AI、药】</li>
+<li>B2、B3、B4 补上效力粗算；B2 重新定位为加入 CKB、BBJ、TPMI、KoGES、ISGC 荟萃分析，不做独立的发现 GWAS。【遗】</li>
+<li>B6 住院和医保关联提为前置条件；在它落地之前，CKB→ChinaHEART 迁移作为补齐非致死事件的备选路径。【临、AI】</li>
+<li>增加两阶段设计估计量（IPW、广义 raking），用于处理只在亚样本中采集的变量；志愿者偏倚用 CCDRFS 或普查边际分布做 raking；把分省、城乡、性别的校准和公平性指标列为标准输出。【AI、遗、临】</li>
+<li>补上 RNF213 p.R4810K（东亚 ICAS 和烟雾病的强遗传因子），它比 PLA2G7 V279F 更有前瞻价值。【临】</li>
+<li>HFpEF 段注明 HERMES 的欧洲表型局限，SNP-h² 改读为"不确定"，并写明 HF 和 AF 方向在 ChinaHEART 上目前基本做不了。【临、遗、AI】</li>
+</ol>
+<h3>3.4 P2（改进表述或择机）</h3>
+<ol start="21">
+<li>更新 ICH 占卒中的比例（NESS-China 2013 约 24%，以及 CNSR 等更近的数据），或者明确降调这一论据。【临】</li>
+<li>A3 降级，只在找到有明确时间节点的县级政策时启动（错峰 DID）；A4 的单纯重校准降级。【临、AI】</li>
+<li>B4（CHIP）降级，改为基因分型时顺带检出 mCA。【遗、药、AI】</li>
+<li>Lp(a) 统一以 nmol/L 表述；APOE ε4 在中国人中频率较低、东亚 ICH 以深部为主，这两点影响欧洲 ICH 遗传结构的外推。【遗、药】</li>
+<li>房颤"发育设定点、成年不可逆"的说法补上 KCNN3 等成人期可干预的反例。【遗】</li>
+<li>PRS 不宜完全否定：它的价值在于"何时开始"和"给谁用"，不在于提升 ΔC。【遗】</li>
+<li>写明人遗条例对合作形式的约束，以及"产出应为可出境的汇总量"这一原则；补上 Minikel 2.6 倍优势在 CVOT 成本结构下的含义。【药】</li>
+<li>写明 Delphi 类生成式轨迹模型要等住院关联落地才适用；列出公共数据原型清单（CHARLS、PTB-XL、MIMIC-IV-ECG、CODE-15%、CKB PheWeb）。【AI】</li>
+<li>在估计"可挽回死亡"的绝对数时，说明应答率约 35% 带来的健康志愿者效应。【临】</li>
+<li>司美格鲁肽在中国专利到期后的仿制药上市，可以作为 GLP-1 可及性的自然实验备选（需核实）。【药】</li>
+</ol>
+<hr />
+<h2>四、最终推荐的 3 个优先研究问题（面向 ChinaHEART 算法提供者）</h2>
+<p>选题原则：(1) 用得上 ChinaHEART 独有的规模、县级覆盖和死因数据；(2) 按依赖关系排序，前面问题的产出是后面问题的输入；(3) 一套分析骨架同时服务指南、药企和医保三类受众；(4) 不以尚未确认的数据（原始 ECG 波形、DNA、住院关联）作为前提。</p>
+<h3>问题 1：测量层重建——卒中亚型死因的概率化重建，以及血脂和血压的测量误差校正</h3>
+<ul>
+<li><strong>问题</strong>：ChinaHEART 死因登记中 I61、I63、I64 和垃圾编码的错分结构怎样随地区、城乡、年份和死亡地点变化？POC 血脂和两次血压读数的误差有多大？校正之后，按亚型分的死亡率和暴露–结局关联会变化多少？</li>
+<li><strong>为什么优先（第一性原理）</strong>：报告的所有中国特色论断，包括 LDL–ICH 权衡、ICH 负担和县级差异，都建立在"死因编码能区分亚型、POC 血脂能代表通常水平"这两个未经检验的假设上。I64 和地区能力相关，属于<strong>差异性错分</strong>：它不只会让效应偏向零，还可能让方向翻转，或者制造出虚假的县级差异。这是因果链上<strong>测量/结局确定层</strong>的瓶颈。这一层不打通，上面的"人群→干预"层就没有可信的因变量。它也是算法团队相对于纯流行病学团队的比较优势，方法论文可以单独发表。【临 Q1、AI R1；遗、药列为前置】</li>
+<li><strong>所需数据</strong>：</li>
+<li><em>ChinaHEART 现有</em>：全员基线、死因登记（ICD-10、死亡地点、年份、县区）、高危层主动随访中有住院或影像记录的卒中死亡（作为验证子集）、2019–20 年 82,403 名非高危者的重复调查（用于估计回归稀释比）、点位层面的医疗能力信息。</li>
+<li><em>嵌套检测</em>：从存储样本中分层抽取约 5,000 份，送中心实验室复测直接法 LDL-C、apoB 和 Lp(a)（nmol/L，对异构体不敏感的方法），同时检查冻存漂移。这一步顺带完成原 B3 的描述部分。</li>
+<li><em>外部公共或申请数据</em>：CHARLS（原型化测量误差和竞争风险管线）；全国死因监测和 CCDRFS 的地区 I64 比例及协变量边际（用于外部对照和 raking）；CKB 已发表的卒中亚型构成（作为错分率的外部参照）。</li>
+<li><strong>方法</strong>：用验证子集估计各编码的敏感度和特异度（按地区、年份分层）；用半监督分类器（输入血压、年龄、地区、既往史、死亡地点、县医院 CT 能力）对 I64 和垃圾编码做多重插补，把亚型标签转成概率，下游用 Rubin 合并或基于错分矩阵的似然校正；建立 POC→实验室值的回归校准或 SIMEX 方程，并允许误差依赖 TG 和空腹状态；用重复调查估计血压和血脂的"通常水平"。最后产出一张"亚型结局可用性地图"（哪些县区可以做亚型分析，哪些只能报告全卒中）。</li>
+<li><strong>主要偏倚与应对</strong>：验证子集只来自高危层，属于选择性验证，需要用验证概率加权，并检查验证模型在非高危层的迁移性；错分可能与暴露相关（高血压患者更容易被编为 ICH），插补模型中要纳入暴露变量，保证与分析模型相容；复测样本的冻存降解按冻存年限分层检验；验证子集中的"金标准"本身有误差（基层病历质量不一），只采用有 CT 或 MRI 确认的病例，并做敏感性分析。</li>
+<li><strong>1–3 个月的第一步</strong>：(1) 向数据方正式核实三件事：I64 占比、存储样本是否有白膜层或全血、住院关联进度；(2) 用现有死因数据做描述性分析，给出 I61/I63/I64/R96/R99/I50 按县区、年份、城乡和死亡地点的构成，并与县医院 CT 可及性做相关分析（只需要现有数据，就能判断 A1 能不能做）；(3) 在 CHARLS 或模拟数据上跑通"错分矩阵 + 多重插补 + 竞争风险"的代码管线；(4) 起草复测子样本的抽样方案和伦理、人遗材料。</li>
+</ul>
+<h3>问题 2：卒中亚型竞争风险下的净获益决策模型——强化降脂和强化降压"给谁、降多少"</h3>
+<ul>
+<li><strong>问题</strong>：在中国 35–75 岁人群中，按血压控制状态、年龄、性别和地区分层，强化降 LDL 和强化降压对"缺血性卒中加 CHD 死亡"和"ICH 死亡"的绝对风险变化各是多少？净获益为负或不确定的人群占多大比例、有什么特征？</li>
+<li><strong>为什么优先（第一性原理）</strong>：遗传学和 RCT 给出的是<strong>每单位的相对效应</strong>，临床和政策需要的是<strong>中国个体在竞争风险下的绝对净获益</strong>。两者之间缺少一个"效应迁移/决策层"，报告 Conclusion 中"在谁身上、从几岁开始、降多少"指的就是这一层，但研究问题清单没有落实它。这个设计让相对效应来自外部（RCT/MR），只让 ChinaHEART 提供它独有的东西，也就是按亚型的本地基线风险，从而绕开观察性 LDL–ICH 关联的反向因果（D1 的裁决）。同一个模型可以同时产出：给指南的分层净获益边界、给药企和医保的 NNT 与可预防死亡数、给 FXI 这类"低出血"药物在中国做 benefit-risk 定位的基线 ICH 与缺血性卒中比例。【遗 Q1+Q2、AI R2、药 Q2+Q4、临 Q3/Q5 的安全性分层】</li>
+<li><strong>所需数据</strong>：</li>
+<li><em>ChinaHEART 现有</em>：全员死亡结局（使用问题 1 校正后的亚型概率）、校正后的"通常水平"血压和血脂、高危层的非致死事件（用于敏感性分析）。</li>
+<li><em>嵌套检测</em>：不是必需的。问题 1 的复测子样本提供 apoB 和 Lp(a)，可以作为扩展。</li>
+<li><em>外部公共数据</em>：CTT 按每 mmol/L 和卒中亚型给出的 RR；BPLTTC、STEP、ESPRIT、CRHCP 的降压效应；<strong>东亚药靶 MR 面板</strong>，使用 CKB PheWeb、BBJ、TPMI、KoGES 的汇总统计，靶点包括降脂（HMGCR、NPC1L1、PCSK9、CETP，含 D442G 等东亚功能缺失变异）、降压（ACE、ADRB1、CACNA1D/CACNB2、SLC12A3、NR3C2）、F11 和东亚特异的 LPA 工具，结局分缺血性卒中和 ICH；UKB（申请制，用于验证整套"绝对风险 × 迁移"方法）。</li>
+<li><strong>方法</strong>：(1) 分原因风险模型用于病因解释，Fine–Gray 模型用于绝对风险；(2) 做 MR 面板：东亚 LD 下的共定位（coloc-SuSiE）、多变量 MR、非线性 MR（低 LDL 区间对 ICH 的剂量–反应形状），并先用已完成的 CVOT 回顾性校准"每单位效应 × 时间系数"，再对 OCEAN(a) 和 PREVAIL 做预注册预测（即原 B1 的修订版）；(3) 把 RCT 效应和 MR 效应合成为分层贝叶斯先验，用效应修饰因子加权完成迁移；(4) 计算个体的 ARR、ARI 和净获益及其后验区间，做决策曲线分析，与"统一 LDL 目标"策略比较；(5) ChinaHEART 本地的观察性 LDL–ICH 关联（滞后 2 年排除）只用来检验迁移假设与本地数据是否冲突，不用于估计效应。</li>
+<li><strong>主要偏倚与应对</strong>：亚型错分由问题 1 的概率化结局传递不确定性；反向因果用滞后排除和阴性对照结局（意外死亡）处理；死亡结局混合了发病和病死，在高危层用非致死事件做敏感性分析，并在结论中写明限制；可迁移性假设（RCT 人群与中国人群的效应修饰因子分布不同）要报告对迁移假设的敏感性分析；MR 方面有弱工具和赢家诅咒（优先用大样本 pQTL 和东亚 GWAS）、LD 参考不匹配（使用祖源匹配的参考面板）、多效性（多变量 MR 和 cis 工具）；志愿者偏倚用 CCDRFS 做 raking。结论定位是"指南讨论的量化输入"，不是"改写目标值"。</li>
+<li><strong>1–3 个月的第一步</strong>：(1) 东亚药靶 MR 面板完全基于公开汇总统计，不需要 ChinaHEART 的访问权限，可以立即开始，先完成降脂和降压靶点对缺血性卒中和 ICH 的方向与幅度分析，以及对已完成 CVOT 的回顾性校准；(2) 在 OSF 上预注册对 OCEAN(a)（约 2026 年 12 月）和 PREVAIL（2027 年第一季度）的预测；(3) 整理 CTT、BPLTTC、STEP、ESPRIT 按卒中亚型给出的 RR，建成一张先验表；(4) 在 UKB 或 CHARLS 上搭好决策模型的骨架，等问题 1 的亚型概率一到就能接入。</li>
+</ul>
+<h3>问题 3：诊疗链缺口地图——从筛出高危到长期达标，各段损失多少、卡在哪些县、对应多少可挽回的死亡</h3>
+<ul>
+<li><strong>问题</strong>：在 ChinaHEART 高危人群中，高血压（主线）和他汀适应人群（副线）沿"筛出→知晓→起始治疗→滴定达标→长期坚持"各段的转化率是多少？各段损失由哪些个体因素和点位因素决定（基层药物配备、村医能力、医保和集采政策时点）？把某一段补齐能挽回多少死亡？各类待上市或在研疗法（例如 ASI、每半年一次的 siRNA、口服 PCSK9）的合格人群有多大、分布在哪里？</li>
+<li><strong>为什么优先（第一性原理）</strong>：报告判断瓶颈在"人群→干预"层，但把这一层当成了黑箱。不同的段对应完全不同的干预手段：筛查和知晓对应基层筛查，起始治疗对应处方行为和药物可及性，达标对应滴定方案，坚持对应给药方式（这正是长效制剂要解决的问题）。不拆开，算法团队就不知道该建什么模型，政策方也不知道该补哪一段。SBP 是中国归因负担第一位的危险因素，而 ChinaHEART 440 万人的血压数据加上县级覆盖，是 CKB 和 UKB 都没有的。产出是分层汇总量，可以合规出境，同时服务卫健和医保（补齐哪一段）以及药企（合格人群富集地图）。【临 Q2、药 Q1+Q5；遗 C8 降压；AI 对 A3 的识别要求】</li>
+<li><strong>所需数据</strong>：</li>
+<li><em>ChinaHEART 现有</em>：两次基线血压、自报用药、高危层主动随访中的血压和用药、点位层面的基层医疗机构调查（药物配备、人员）、死亡结局；有心电图的高危亚样本（用于"房颤检出→抗凝缺口"这条副链的扩展）。</li>
+<li><em>嵌套检测</em>：不需要。</li>
+<li><em>外部数据</em>：CRHCP、STEP、ESPRIT 的效应量（作为"补齐某一段"的反事实锚点）；CHS 或 CCDRFS 的全国代表性控制率（用于外部校准和代表性加权）；药品集采和医保目录的地区落地时间表（用于识别政策冲击）；试验入排标准（VESALIUS 型、ZENITH 型、OCEANIC-STROKE 型）。</li>
+<li><strong>方法</strong>：按段做 cascade 分解（多水平模型，个体嵌套在点位中，点位随机效应）；按点位分解各段损失的方差；用参数 g-formula 模拟"把某一段提高到 CRHCP 干预组的水平"对 CV 死亡和全卒中死亡的影响（相对效应来自 RCT，绝对风险来自本地数据，与问题 2 共用同一骨架）；政策效应只在有错峰时间节点时才用 Callaway–Sant'Anna 估计量；按试验入排标准操作化定义合格人群，估计其规模、县级分布，以及竞争风险下的事件率。</li>
+<li><strong>主要偏倚与应对</strong>：用药信息是自报的，缺少剂量和起止时间，所以只用来定义"是否处在某一段"，不用来估计药效；353 个点是便利抽样，点位间差异中有一部分来自招募方式和应答率，需要控制点位的招募特征，并用外部代表性数据做 raking；基线只测了两次血压，白大衣效应和回归稀释会影响"是否控制"的判定，用问题 1 的回归稀释比校正分类；健康志愿者效应会低估绝对死亡率，可挽回死亡数要给出区间并注明方向；以死亡为结局时，全卒中死亡是主结局，亚型分析只在问题 1 判定"可用"的县区做。</li>
+<li><strong>1–3 个月的第一步</strong>：(1) 用现有基线数据做描述性的县级 cascade（知晓、治疗、控制各段的比例），这只需要现有数据；(2) 把点位层面的基层能力变量与各段转化率做关联分析；(3) 按 VESALIUS 型、ZENITH 型等入排标准统计合格人群的规模和县级分布，形成第一版可出境的汇总表，用来和药企、医保方谈合作；(4) 收集集采和医保目录的地区落地时间表，判断是否存在可以识别的政策冲击。</li>
+</ul>
+<p><strong>未进入前三但保留的方向（有条件启动）</strong>：
+- <strong>房颤检出→抗凝缺口，加上 AI-ECG</strong>【临 Q4、AI R4】：临床价值高，但前提是确认保存的是数字 ECG 波形；一旦确认，可以作为问题 3 的第二条诊疗链。
+- <strong>嵌套 case-cohort 基因分型加 Lp(a)</strong>【遗 Q3/Q4、药 Q3】：前提是白膜层或全血 DNA 可用、人遗审批通过；定位为加入东亚荟萃分析，不做独立发现。
+- <strong>CKB→ChinaHEART 迁移</strong>【AI R5】：前提是能访问 CKB，并能处理两个队列之间的时期偏移。</p>
+<hr />
+<h2>五、底线建议</h2>
+<p>这份报告的骨架是对的。"缺靶点不是心血管领域的统一诊断"这一判断，以及"中国可挽回的负担主要在人群→干预层、ChinaHEART 不是靶点平台"这一定位，四位评审都认可。但核心论断"心血管不缺靶点，缺的是可干预的因果层"需要改三处。第一，<strong>限定适用范围</strong>：ICH、HFpEF、房颤基质和血管衰老确实缺少经遗传验证的靶点，"不缺靶点"只适用于 ASCVD 和血压轴。第二，<strong>在"可干预的因果层"内部补上两个被忽略的层级</strong>：一个是位于其下方的<strong>测量/结局确定层</strong>，也就是卒中亚型能不能测准、暴露能不能校准，这对 ChinaHEART 是第一道关卡；另一个是位于其上方的<strong>效应迁移/决策层</strong>，也就是怎样把 MR 和 RCT 给出的每单位相对效应，换算成中国个体在卒中亚型竞争风险下的绝对净获益。第三，<strong>纠正对 MR 的误读</strong>：Lp(a) 和 IL-6 的失败不是"MR 只能判方向、不能判幅度"，而是有把手但没有经过事件校准的替代终点，加上试验设计暴露的单位不足（HORIZON），或者超出了工具变量覆盖的尺度（ZEUS）。建议把核心论断改写为：<strong>"对 ASCVD 和血压轴，心血管不缺方向已知的靶点，缺的是经事件校准的替代终点、足够的暴露单位，以及把每单位效应落到具体人群的实施链；对中国，这条链首先卡在结局能否测准和诊疗链哪一段断裂，然后才是给谁、降多少的净获益决策；ICH、HFpEF 和房颤基质则仍然缺靶点本身。"</strong> 与此配套，报告需要先改正第三部分列出的 10 处事实或逻辑错误，尤其是"全国 7.2%"、VESALIUS"一级预防"、HORIZON 共同主要人群、ZEUS 的机制论证和"遗传效应不能预测药效"。研究问题的顺序应当调整为：测量层 → 净获益决策层（MR 面板作为零成本的并行输入）→ 诊疗链缺口地图，而把个体水平的遗传学降为有条件启动的第二梯队。</p></div></details>
 <details class="bg"><summary>多模态衰老时钟与生物年龄<span class="cnt">证据 71 篇 · 覆盖度 0.62 · 第 4 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
 <li>表观时钟从 Horvath 2013 的 <strong>353 个 CpG、约 3.6 年误差</strong> [1] 演进到结局预测、因果拆分、通路级与 TFBS 聚类，但跨组织差异可达<strong>近 30 年</strong> [2]，且生物学可靠性低至中等、技术重现性无法预测 [3]。</li>

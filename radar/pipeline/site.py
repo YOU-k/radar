@@ -407,6 +407,19 @@ def _day_theme_counts(paths: list[Path]) -> dict[str, int]:
     return counts
 
 
+def _render_deep(path: Path) -> str:
+    """background/<slug>/deep/*.md：会话里用 deep-research + expert-panel 做的深度调研（人工触发，不自动更新）。"""
+    text = path.read_text(encoding="utf-8")
+    m = re.match(r"# (?P<t>[^\n]+)\n", text)
+    title = m.group("t") if m else path.stem
+    body = text[m.end():] if m else text
+    stats = f"深度调研 · {path.parent.parent.name} · {path.name[:10]}"
+    html_body = markdown.markdown(body, extensions=["extra", "sane_lists", "tables"])
+    return (f'<details class="bg"><summary>〔深度〕{html.escape(title)}'
+            f'<span class="cnt">{html.escape(stats)}</span></summary>'
+            f'<div class="bgbody">{html_body}</div></details>')
+
+
 def build_site(today: date | None = None) -> Path:
     today = today or date.today()
     digests = sorted((ROOT / "digests").glob("*.md"), reverse=True)
@@ -419,8 +432,13 @@ def build_site(today: date | None = None) -> Path:
     pinned = {"_principles": 0, "_joint": 1}  # 全局判断置顶，联合分析第二，其余按方向名
     bg_reports = sorted((ROOT / "background").glob("*/report.md"),
                         key=lambda p: (pinned.get(p.parent.name, 2), p.parent.name))
-    bg_html = ("\n".join(_render_background(p) for p in bg_reports)
-               if bg_reports else '<div class="empty">暂无方向背景报告。</div>')
+    # 文件名以 YYYY-MM-DD- 开头：新的在前；同一天里正文报告在前、评审综合在后（mtime 在 CI checkout 后不可靠）
+    deep = sorted((ROOT / "background").glob("*/deep/*.md"),
+                  key=lambda p: (p.name[:10], "评审" not in p.name, p.name), reverse=True)
+    cards = [_render_background(p) for p in bg_reports]
+    cut = sum(1 for p in bg_reports if p.parent.name in pinned)  # 深度调研排在全局判断/联合分析之后、各方向之前
+    cards[cut:cut] = [_render_deep(p) for p in deep]
+    bg_html = "\n".join(cards) if cards else '<div class="empty">暂无方向背景报告。</div>'
     res_parts = []
     reg_json = ROOT / "background" / "_resources" / "registry.json"
     if reg_json.exists():
