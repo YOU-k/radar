@@ -28,14 +28,16 @@
   }
  ],
  "extraction": {
-  "method": "UK Biobank全表型GWAS图谱构建",
-  "data": "UKB 452,264欧洲裔，118连续+660二分类性状，9,113,133变异",
-  "scenario": "遗传关联结果查询",
-  "benchmark": "公开数据库GeneATLAS，30M+插补变异汇总统计",
-  "results": "覆盖>230亿表型-基因型对，可在线查询并下载GWAS汇总统计",
-  "availability": "GeneATLAS公开",
-  "limitations": "仅欧洲裔；主要为UKB单队列；部分性状统计功效有限",
-  "summary": "构建UK Biobank大规模遗传关联图谱以便统一查询。对452,264名欧洲裔参与者的778个性状进行GWAS并汇总为GeneATLAS数据库。提供9,113,133个变异结果及超3000万插补变异汇总统计，降低重复计算成本。"
+  "method": "大规模GWAS汇总与数据库构建",
+  "data": "452,264名UKB欧洲裔参与者，118连续与660二分类性状",
+  "scenario": "遗传关联查询数据库",
+  "benchmark": "",
+  "results": "汇总9,113,133个遗传变异关联结果，可下载超3000万插补变异GWAS汇总统计",
+  "availability": "公开数据库GeneATLAS",
+  "limitations": "仅限欧洲裔，未涵盖其他祖源",
+  "summary": "对452,264名UK Biobank欧洲裔参与者的118个连续和660个二分类性状进行GWAS分析。将结果编译为公开数据库GeneATLAS，支持查询9,113,133个遗传变异关联并下载超3000万插补变异汇总统计。该资源使研究者无需高计算成本即可便捷查询UK Biobank遗传关联结果。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
  },
  "sections": [
   "2.2"

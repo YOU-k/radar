@@ -32,14 +32,16 @@
   }
  ],
  "extraction": {
-  "method": "基于检索的mAP特征空间评估",
-  "data": "Cell Painting图像，U2OS细胞，JUMP-MOA参考板",
-  "scenario": "特征空间适配性评估",
-  "benchmark": "CellProfiler、CellPaintSSL、uniDINO等预训练模型",
-  "results": "DINO自监督较CellProfiler的mAP提升29%；CLOOME top-10 MoA准确率61.3% vs CellProfiler 24.5%",
-  "availability": "copairs库公开；数据来自JUMP",
-  "limitations": "仅用单一JUMP-MOA参考板，未覆盖多细胞系与多实验条件",
-  "summary": "该研究提出在检测开发早期用检索式mAP框架评估Cell Painting特征空间是否适配特定生物学场景。方法上复用Kalinin的元数据驱动检索框架，在JUMP-MOA参考板上比较多种公开预训练深度模型与经典CellProfiler特征。结果显示深度自监督特征通常优于手工特征，但模型选择依赖具体实验条件，需按场景系统评估。"
+  "method": "基于检索评估Cell Painting特征空间",
+  "data": "U2OS JUMP-MOA参考板90个化合物",
+  "scenario": "特征空间任务感知评估",
+  "benchmark": "CellPaintSSL、OpenPhenom、uniDINO零样本对比",
+  "results": "活性阳性：CellPaintSSL 85/90、OpenPhenom 81/90、uniDINO 82/90；CellPaintSSL活性mAP显著高于另两者(p<0.0001)；MOA注释恢复部分且模型依赖",
+  "availability": "",
+  "limitations": "仅单一U2OS参考板，MOA恢复不完整且模型间不一致",
+  "summary": "本文开发任务感知流程评估Cell Painting特征空间。方法是在U2OS JUMP-MOA参考板上对CellPaintSSL、OpenPhenom、uniDINO零样本提取特征，用copairs的mAP框架评估活性、区分度与MOA恢复。发现三者活性分类数量相近，但CellPaintSSL活性检索质量显著更高，MOA注释恢复部分且因模型而异，说明前提性质量不保证目标生物学关系的恢复。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.5"

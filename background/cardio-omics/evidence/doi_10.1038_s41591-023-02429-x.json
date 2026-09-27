@@ -33,14 +33,16 @@
   }
  ],
  "extraction": {
-  "method": "多祖先GWAS汇总统计+stepAIC+logistic加权构建GPS Mult",
-  "data": "269,000 CAD病例、1,178,000对照；相关性状>200万人；UKB训练116,649人，验证325,991人",
-  "scenario": "冠脉疾病遗传风险预测",
-  "benchmark": "既往单祖先多基因评分及临床风险估计器",
-  "results": "整合多祖先与相关性状信息，提升CAD风险预测，尤其在非欧洲祖先和年轻人群中表现更优",
+  "method": "多ancestry多基因风险评分GPS_Mult",
+  "data": "UKB训练116,649、验证325,991人",
+  "scenario": "冠脉疾病风险预测",
+  "benchmark": "既往已发表CAD多基因评分",
+  "results": "患病CAD OR/SD 2.14；事件CAD HR/SD 1.73；优于所有既往评分",
   "availability": "",
-  "limitations": "非欧洲祖先预测性能仍较低；对 incident disease 预测较弱；遗传与临床风险整合不足",
-  "summary": "研究开发了多祖先冠脉疾病多基因风险评分GPS Mult。方法上整合269,000例CAD病例、1,178,000例对照及200万人相关性状GWAS数据，在UKB中训练并独立验证。结果显示该评分改善CAD风险预测，尤其有助于非欧洲祖先和年轻人群的早期风险识别。"
+  "limitations": "训练限于欧洲ancestry；部分ancestry样本量小",
+  "summary": "研究整合五个ancestry的CAD GWAS（>269,000病例、>1,178,000对照）及十项CAD危险因素，开发改进的多基因评分GPS_Mult。评分在UK Biobank 116,649名欧洲ancestry个体中训练，并在325,991人独立验证。GPS_Mult与患病CAD强关联（OR/SD 2.14），识别20.0%人群风险增3倍、13.9%风险降3倍；与事件CAD关联HR/SD 1.73，识别3%健康个体风险等同现患病人，并在多族裔外部验证中优于所有既往CAD评分。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

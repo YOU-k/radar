@@ -33,14 +33,16 @@
   }
  ],
  "extraction": {
-  "method": "性别特异性代谢物筛选+Cox风险模型",
-  "data": "UKB 274,353例+ESTHER 8,308例，249种NMR代谢物",
-  "scenario": "2型糖尿病10年MACE风险预测",
+  "method": "性别特异性LASSO筛选代谢物加入SCORE2-Diabetes",
+  "data": "UK Biobank 10257例及ESTHER 1039例2型糖尿病，249种代谢物",
+  "scenario": "2型糖尿病10年MACE预测",
   "benchmark": "SCORE2-Diabetes模型",
-  "results": "加入性别特异性代谢物标志物后，SCORE2-Diabetes对10年MACE预测能力提升，具体C指数改善数值未在摘要中给出",
+  "results": "选出7种代谢物；UKB内部验证C指数从0.660升至0.678（P=0.037）；ESTHER外部验证增0.043（P=0.011）；白蛋白、omega-3百分比、乳酸改善C指数",
   "availability": "",
-  "limitations": "既往研究样本小、随访短、缺外部验证；本研究仅欧洲人群",
-  "summary": "研究旨在评估NMR代谢组学标志物能否提升2型糖尿病患者10年心血管风险预测。利用UKB和ESTHER两个欧洲大队列，按性别特异性筛选249种代谢物并整合入SCORE2-Diabetes模型。发现性别特异性代谢物标志物可改善SCORE2-Diabetes对10年MACE的预测能力。"
+  "limitations": "ESTHER样本量较小，仅白蛋白在男性显著",
+  "summary": "研究评估代谢组生物标志物能否提升2型糖尿病患者10年MACE预测。方法在UK Biobank和ESTHER的2型糖尿病患者中，用NMR测249种代谢物，性别特异性LASSO筛选并加入SCORE2-Diabetes模型。结果选出7种代谢物，内部验证C指数从0.660升至0.678，外部验证增0.043，白蛋白、omega-3百分比和乳酸改善区分度。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

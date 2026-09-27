@@ -32,14 +32,16 @@
   }
  ],
  "extraction": {
-  "method": "AI虚拟细胞AIVC框架综述与多尺度建模",
-  "data": "多组学、单细胞转录组、染色质可及性等；如5000万+细胞图谱",
-  "scenario": "AI驱动多尺度虚拟细胞构建",
-  "benchmark": "VCell、E-Cell、CellML、JCVI-syn3A、scFoundation、GET等",
-  "results": "总结AIVC可整合多学科知识，实现从单尺度模拟到全链条动态预测；列举scFoundation 1亿参数、5000万+细胞预训练，GET覆盖213种人类细胞类型",
+  "method": "综述：提出AIVC统一框架与跨尺度耦合机制",
+  "data": "综述，汇总现有模型与数据集，未自行分析样本",
+  "scenario": "虚拟细胞建模与跨尺度仿真",
+  "benchmark": "现有AIVC模型与数据集（如GeneCompass、Tahoe-100M等）",
+  "results": "提出AIVC统一定义与技术框架，分解跨尺度表征、子模块设计与动态调控机制，梳理现有模型与数据集资源",
   "availability": "",
-  "limitations": "AIVC仍非单一系统；跨尺度整合、泛化性与标准化仍具挑战",
-  "summary": "文章综述AI赋能多尺度虚拟细胞的前景、挑战与机遇，提出AIVC作为整合细胞生物学、AI算法和多尺度建模的研究范式。通过梳理VCell、E-Cell、CellML、JCVI-syn3A、scFoundation、GET等代表性模型，比较其训练数据、贡献、输出、覆盖范围和局限。作者指出AIVC核心价值在于整合分散技术，实现从单尺度模拟到全链条动态预测，但仍面临跨尺度整合、泛化和标准化挑战。"
+  "limitations": "数据异质性与模型可解释性等挑战尚未解决，AIVC仍处早期阶段",
+  "summary": "本文是一篇关于AI虚拟细胞（AIVC）的综述，旨在整合现有模型、数据集与技术思路，为该领域提供统一框架。作者提出AIVC的统一技术框架，从跨尺度表征工程、功能子模块设计与多组件动态调控机制三方面进行分解，并系统梳理了现有模型与数据集资源。文章指出AIVC仍面临数据异质性与模型可解释性等挑战，但作为新兴方向已获广泛关注，有望推动生命科学从观测分析转向可预测与创新的范式。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "7"

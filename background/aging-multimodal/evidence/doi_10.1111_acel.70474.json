@@ -32,14 +32,47 @@
   }
  ],
  "extraction": {
-  "method": "基于循环基质体蛋白构建细胞外基质衰老时钟",
-  "data": "SomaScan血浆蛋白组，两个队列共886人",
-  "scenario": "生物学衰老与疾病风险预测",
-  "benchmark": "无偏衰老时钟及不同数据集/体液",
-  "results": "ECM蛋白随年龄呈U型轨迹，与疾病关联强于其他蛋白；基质体时钟性能与无偏时钟相当",
-  "availability": "公开数据",
-  "limitations": "样本量有限，主要基于SomaScan平台，因果推断有限",
-  "summary": "研究表征了循环细胞外基质（ECM）蛋白随年龄的变化，并构建基质体衰老时钟。利用两个公开SomaScan血浆蛋白组队列，分析约740种基质体蛋白，并与无偏衰老时钟比较。结果显示ECM蛋白呈U型年龄轨迹且与疾病关联更强，基质体时钟可跨数据集和体液预测生物学衰老。"
+  "method": "基于14个血浆ECM蛋白构建ECM衰老时钟",
+  "data": "",
+  "scenario": "血浆蛋白预测生物衰老与疾病",
+  "benchmark": "独立验证、不同生物流体、跨物种比较",
+  "results": "ECM蛋白呈U型轨迹，最低点约40-50岁；14蛋白时钟准确预测年龄并区分健康与疾病",
+  "availability": "未提及",
+  "limitations": "Robbins队列最老仅66岁，U型轨迹较弱；蛋白轨迹异质性大",
+  "summary": "利用公开血浆蛋白质组数据刻画人类生命周期中ECM蛋白丰度变化。基于14个血浆蛋白构建ECM衰老时钟，并进行独立验证、跨物种比较和药物靶点探索。发现ECM蛋白随龄呈U型轨迹，ECM时钟可预测年龄、区分健康与疾病，且 rejuvenation干预可逆转ECM衰老特征。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "150",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "data",
+    "number": "736",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "results",
+    "number": "112",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "results",
+    "number": "47",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "results",
+    "number": "103",
+    "reason": "cited",
+    "dropped": true
+   }
+  ],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.1"

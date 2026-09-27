@@ -33,14 +33,16 @@
   }
  ],
  "extraction": {
-  "method": "多基因风险评分构建与验证(C+T、LDpred)",
-  "data": "中国CKB队列约10万例全基因组基因型数据",
-  "scenario": "中国人群冠心病风险预测",
-  "benchmark": "CKB-CVD传统风险模型、China-PAR模型",
-  "results": "最优PRS加入传统模型后Harrell's C仅小幅提升，参考东亚PRS研究C指数提升约0.01、NRI 3.5%",
+  "method": "评估并开发PRS，加入传统CAD风险模型",
+  "data": "中国嘉道理生物库训练28490、测试72150人",
+  "scenario": "中国人群10年冠心病风险预测",
+  "benchmark": "传统CAD风险模型及10种既往PRS",
+  "results": "测试集11.2年随访1214例硬CAD、7201例软CAD；最优PRS每SD HR 1.26（硬CAD）；加入PRS后Harrell C男性增0.003、女性增0.001；最高NRI 3.2%",
   "availability": "",
-  "limitations": "中国人群缺乏大规模CAD GWAS，PRS预测增益有限",
-  "summary": "研究评估多基因风险评分能否在中国人群中改善冠心病风险预测。基于CKB近10万例基因型数据，验证10个既往PRS并开发新PRS，筛选最优者加入传统模型。发现PRS对中国人群CAD风险预测的改善幅度很小。"
+  "limitations": "PRS对软CAD改善极小或无改善",
+  "summary": "研究旨在评估PRS在中国人群冠心病一级预防中的预测潜力。方法将中国嘉道理生物库分为训练集和测试集，评估10种既往PRS并开发新PRS，将最优PRS加入传统风险模型评估10年首发CAD预测。结果最优PRS每SD对硬CAD的HR为1.26，但加入传统模型后区分度仅轻微提升（男性C指数增0.003、女性增0.001），对软CAD改善极小。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

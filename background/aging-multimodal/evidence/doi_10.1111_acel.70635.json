@@ -33,13 +33,22 @@
  ],
  "extraction": {
   "method": "TranslAGE平台评估18种DNAm时钟可靠性",
-  "data": "DNA甲基化数据，EPIC与450K芯片重复检测",
-  "scenario": "衰老时钟技术/生物学可靠性评估",
-  "benchmark": "18种DNAm衰老时钟，含PCGrimAge、SystemsAge",
-  "results": "多数时钟技术重现性优，但受切片位置与DNA提取影响；PCGrimAge/SystemsAge稳健；生物学可靠性低至中等，校正免疫组成后更低；技术重现性不能预测生物学可靠性",
-  "availability": "",
-  "limitations": "生物学可靠性普遍不足，技术重现性无法预测实际应用稳定性",
-  "summary": "系统评估了18种DNA甲基化衰老时钟的技术与生物学可靠性。使用TranslAGE平台在EPIC和450K芯片上重复检测，并结合短期重复测量分析。发现多数时钟技术重现性良好但生物学可靠性低，且技术重现性无法预测下游疾病预后与干预反应稳定性。"
+  "data": "EPIC与450K重复检测；短期重复测量样本",
+  "scenario": "表观遗传时钟技术与生物学可靠性",
+  "benchmark": "18种DNAm衰老标志物，含PCGrimAge、SystemsAge",
+  "results": "多数时钟技术重现性好；PCGrimAge和SystemsAge稳健；生物学可靠性低至中等，调整免疫组成后进一步下降；技术重现性不能预测生物学可靠性",
+  "availability": "未提及",
+  "limitations": "多数时钟生物学可靠性低；技术重现性无法预测生物学可靠性",
+  "summary": "使用TranslAGE平台评估18种DNA甲基化衰老标志物的技术和生物学可靠性。比较重复检测、实验因素敏感性及短期重复测量稳定性，并分析可靠性对疾病预后和干预响应的影响。发现多数时钟技术重现性好但生物学可靠性低，且技术重现性不能预测生物学可靠性。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "450K",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract"
  },
  "sections": [
   "2.1"

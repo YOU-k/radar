@@ -33,14 +33,16 @@
   }
  ],
  "extraction": {
-  "method": "可解释增强机EBM及梯度提升树+SHAP预测CVD",
-  "data": "UKB>54,000人，Olink Explore 2923血浆蛋白+临床数据",
-  "scenario": "CVD风险预测与生物标志物识别",
-  "benchmark": "LASSO回归及其他梯度提升模型",
-  "results": "EBM具高预测力并可提供全局和个体化解释，识别高预测力蛋白、个体风险因素及不同特征值风险",
+  "method": "可解释提升机EBM蛋白组学预测",
+  "data": "UKB 46,009名无基线CVD参与者",
+  "scenario": "10年CVD风险预测",
+  "benchmark": "PREVENT等方程评分及PRS",
+  "results": "EBM蛋白组AUROC 0.767、AUPRC 0.241；加临床特征升至0.785、0.284",
   "availability": "",
-  "limitations": "线性模型难捕捉非线性关系；需统计与文献进一步验证发现",
-  "summary": "研究利用UKB蛋白组学与临床数据，构建可解释机器学习模型预测心血管疾病风险。采用EBM和梯度提升树结合SHAP，实现全局与个体化解释。结果显示模型具高预测力，并识别关键蛋白和个体化风险因素。"
+  "limitations": "仅UKB；欧洲ancestry为主；需外部验证",
+  "summary": "研究利用UK Biobank Pharma Proteomics Project数据，纳入46,009名40-69岁无基线CVD参与者，用可解释提升机（EBM）预测10年首发冠脉疾病、缺血性卒中或心梗风险，模型可用2,923个蛋白和55个危险因素。蛋白组EBM模型AUROC 0.767、AUPRC 0.241，优于PREVENT等方程评分及多个PRS；加入临床特征后升至0.785和0.284。模型在性别和族裔间表现一致，并提供个体化风险预测与疾病生物学见解。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

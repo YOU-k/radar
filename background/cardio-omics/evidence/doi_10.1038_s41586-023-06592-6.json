@@ -34,14 +34,16 @@
   }
  ],
  "extraction": {
-  "method": "Olink Explore 3072 PEA高通量血浆蛋白组学检测",
-  "data": "UKB 54219人血浆，2941个蛋白分析物/2923个独特蛋白",
-  "scenario": "大规模人群血浆蛋白组与遗传关联研究",
-  "benchmark": "既往约12000个pQTL关联研究",
-  "results": "检测54219名UKB参与者，2941个蛋白分析物，覆盖2923个独特蛋白；含46595随机基线、6376联盟选择、1268 COVID-19重复影像样本",
-  "availability": "开放获取框架(UKB-PPP)",
-  "limitations": "全文未完整获取；抗体法PEA检测，部分蛋白特异性与覆盖度有限",
-  "summary": "该研究由UKB-PPP联盟开展，旨在将人类遗传学与大规模人群蛋白组学结合以加速生物标志物和药物发现。研究采用抗体法Olink Explore 3072 PEA，对54219名UKB参与者的血浆样本检测2941个蛋白分析物，覆盖2923个独特蛋白。该工作构建了大规模pQTL数据库，为生物标志物、诊断和药物发现提供开放资源。"
+  "method": "血浆蛋白组pQTL定位与预测建模",
+  "data": "54,219名UK Biobank参与者血浆蛋白",
+  "scenario": "血浆蛋白组遗传结构解析",
+  "benchmark": "既往pQTL研究",
+  "results": "2,923蛋白鉴定14,287个主要遗传关联，81%为新发现；复制队列n=17,806",
+  "availability": "开放获取蛋白组资源",
+  "limitations": "以欧洲 ancestry为主；非欧样本量小",
+  "summary": "Pharma Proteomics Project对54,219名UK Biobank参与者进行血浆蛋白组表征，开展技术生物学验证、疾病特征与预测建模。研究对2,923个蛋白进行pQTL定位，鉴定14,287个主要遗传关联（81%为新发现），并做非欧ancestry特异定位。结果揭示跨生物域的trans pQTL、配体-受体相互作用与通路扰动，以及ABO和FUT2对胃肠组织富集蛋白的远距离上位效应，并展示对PCSK9等靶点药物发现的效用。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

@@ -32,14 +32,16 @@
   }
  ],
  "extraction": {
-  "method": "基于TF结合位点CpG聚类构建TFMethyl Clock",
-  "data": "15个公开全血DNAm队列7803样本；GTEx全血RNA-seq 581样本",
-  "scenario": "提升表观时钟性能与可解释性",
-  "benchmark": "常规弹性网/LASSO表观时钟及既有DNAm时钟",
-  "results": "训练4995、测试2143、验证665；聚焦衰老相关TFBS CpG，提升稳健性并关联靶基因",
-  "availability": "",
-  "limitations": "主要使用全血甲基化数据，TFBS注释和聚类策略可能限制跨组织适用性",
-  "summary": "研究提出TFMethyl Clock，用转录因子结合位点内衰老相关CpG构建调控型表观时钟。方法先筛选TFBS内年龄相关CpG并进行特征聚类，再训练预测模型，并结合GTEx RNA-seq分析靶基因。发现该框架可提升预测稳健性和生物学解释性。"
+  "method": "TFBS与年龄相关CpG结合弹性网建模TFMethyl Clock",
+  "data": "血液DNAm 7138训练样本；665验证样本(18-81岁)",
+  "scenario": "表观遗传时钟可解释性与预测",
+  "benchmark": "Horvath1/2、PhenoAge、GrimAge2、DunedinPACE、GP-clock",
+  "results": "多数时钟CpG不与TFBS重叠；弱相关非TFBS CpG模型MdAE=3.77年，优于Horvath1(5.95年)，接近PhenoAge(3.79年)；移除88007个CpG后误差才达随机水平",
+  "availability": "未提及",
+  "limitations": "多数时钟CpG生物学信息有限；模型机制解释仍不明确",
+  "summary": "研究已建立表观遗传时钟中预测性CpG的转录因子结合调控潜力。分析CpG与TFBS重叠及年龄相关性，并用TFBS相关和年龄相关CpG结合噪声稳定特征工程构建TFMethyl Clock。发现多数时钟CpG不重叠TFBS，但弱相关非TFBS CpG在足够大训练集下仍可准确预测年龄。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.1"

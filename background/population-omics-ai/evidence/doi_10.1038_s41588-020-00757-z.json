@@ -31,14 +31,16 @@
   }
  ],
  "extraction": {
-  "method": "GWAS+精细定位+PheWAS+孟德尔随机化+PRS建模",
-  "data": "UK Biobank 363,228人，35项血尿生物标志物，SNP/CNV/HLA",
-  "scenario": "血尿生物标志物遗传解析",
-  "benchmark": "42个既往队列、25项生物标志物效应量比较",
-  "results": ">10,000显著关联；58个PTV、1,323个PAV关联；常见SNP遗传度0.6%–23.9%(LDSC)、3.2%–57%(HESS)",
+  "method": "35项血尿生物标志物GWAS、MR与PRS",
+  "data": "363,228名UKB参与者；FinnGen 135,500人验证",
+  "scenario": "生物标志物遗传基础与疾病风险分层",
+  "benchmark": "单疾病PRS",
+  "results": "发现5,794个独立位点，3,374个精细映射关联；51个因果关系；多PRS模型改善CKD、T2D、痛风、酒精性肝硬化风险分层",
   "availability": "",
-  "limitations": "主要基于欧洲人群；LDSC与HESS遗传度估计差异较大；部分标志物多基因性低",
-  "summary": "系统解析UK Biobank 35项血尿生物标志物的遗传结构并构建多基因预测模型。对363,228人开展SNP、CNV、HLA关联分析、精细定位、PheWAS、因果推断与PRS建模。发现逾万显著关联及大量蛋白截短/改变变异，揭示标志物遗传度与多基因性差异，并支持治疗靶点优先排序。"
+  "limitations": "未提及",
+  "summary": "对UK Biobank 363,228名参与者的35项血尿实验室指标进行遗传分析。识别独立位点、精细映射关联、蛋白改变变异、CNV和HLA等位型，并通过孟德尔随机化推断因果，构建多PRS模型。发现5,794个独立位点、51个因果关系，多PRS模型在FinnGen中改善慢性肾病、2型糖尿病、痛风和酒精性肝硬化的遗传风险分层。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

@@ -32,14 +32,16 @@
   }
  ],
  "extraction": {
-  "method": "PRnet：扰动条件深度生成模型预测化学扰动转录响应",
-  "data": "约1亿bulk HTS观测、175,549化合物；数千万单细胞HTS、188化合物",
-  "scenario": "新化合物转录响应预测",
-  "benchmark": "CPA、chemCPA、scGen、Biolord、CellOT等",
-  "results": "PRnet可泛化到未实验扰动的新化合物，支持bulk和单细胞水平预测，并捕捉细胞异质性与基因级响应解释",
+  "method": "扰动条件深度生成模型PRnet",
+  "data": "bulk HTS 175,549化合物与单细胞HTS 188化合物",
+  "scenario": "新化学扰动转录响应预测",
+  "benchmark": "与其他转录响应预测方法对比",
+  "results": "在新化合物、通路和细胞系预测上优于替代方法；实验验证小细胞肺癌与结直肠癌候选化合物；整合图谱覆盖88细胞系、52组织，为233种疾病推荐药物",
   "availability": "",
-  "limitations": "依赖训练数据覆盖；新化学空间外推仍具挑战",
-  "summary": "作者提出PRnet，一种扰动条件深度生成模型，用于预测新化学扰动在bulk和单细胞水平的转录响应。模型以化合物SMILES和未扰动转录谱为输入，通过Perturb-adapter、Perturb-encoder和Perturb-decoder实现未见化合物泛化。PRnet在近1亿bulk观测和数千万单细胞观测上训练，可解释基因级响应并捕捉细胞异质性。"
+  "limitations": "依赖训练化合物库覆盖度，对全新化学空间外推能力有限",
+  "summary": "本文提出扰动条件深度生成模型PRnet预测新化学扰动的转录响应。方法是用SMILES与剂量构建扰动嵌入，结合未扰动表达谱经编码解码生成响应分布。结果显示其在新化合物、通路和细胞系预测上优于替代方法，实验验证了肺癌与结直肠癌候选化合物，并构建覆盖88细胞系、52组织的扰动图谱，为233种疾病推荐药物。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.3"

@@ -33,14 +33,16 @@
   }
  ],
  "extraction": {
-  "method": "十种机器学习算法+SHAP可解释分析，构建网页风险计算器",
-  "data": "CHARLS 2011-2020，约23,000名≥45岁中国中老年人，9年纵向随访",
-  "scenario": "中国中老年长期CVD风险预测",
-  "benchmark": "Framingham、PCE、SCORE、China-PAR等传统模型",
-  "results": "系统比较十种ML算法，SHAP揭示决策机制和关键风险因素，并开发网页风险计算器",
-  "availability": "",
-  "limitations": "传统模型外部验证C-statistic中位仅0.74且校准不佳；机器学习黑箱阻碍临床转化",
-  "summary": "研究基于CHARLS 2011-2020纵向数据，比较十种机器学习算法预测中国中老年长期CVD风险。采用SHAP解释模型决策机制和关键风险因素，并开发网页风险计算器。结果显示可解释机器学习可提升中国人群CVD风险预测与临床可用性。"
+  "method": "可解释机器学习+SHAP风险预测",
+  "data": "CHARLS 8,080名≥45岁无基线CVD者",
+  "scenario": "中国中老年CVD长期风险预测",
+  "benchmark": "十种机器学习模型对比",
+  "results": "GBM AUC 0.828最高；Logistic 0.792；验证集n=2,423",
+  "availability": "提供网络风险计算器",
+  "limitations": "单队列；随访9年；外部验证缺乏",
+  "summary": "研究利用CHARLS 2011-2020纵向数据，纳入8,080名≥45岁无基线CVD参与者，随访9年预测新发CVD。从77个候选变量经logistic回归筛选出11个预测因子，按7:3分为训练集（5,657）和验证集（2,423），构建十种机器学习模型并用SHAP解释。梯度提升机（GBM）AUC达0.828为最优，并开发了面向中国居民的个体化网络风险计算器。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.1"

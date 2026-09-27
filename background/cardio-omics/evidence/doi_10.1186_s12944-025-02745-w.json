@@ -33,14 +33,16 @@
   }
  ],
  "extraction": {
-  "method": "NMR检测PUFA/MUFA比值+SCORE2模型",
-  "data": "UKB 183,237例无CVD/糖尿病欧洲成人",
-  "scenario": "欧洲人群10年MACE风险预测",
-  "benchmark": "SCORE2算法",
-  "results": "PUFA/MUFA比值加入SCORE2后改善10年MACE预测，具体C指数提升数值未在摘要给出",
+  "method": "将PUFA/MUFA比值加入SCORE2模型",
+  "data": "UK Biobank 183237名50–69岁无CVD/糖尿病者",
+  "scenario": "10年MACE风险预测",
+  "benchmark": "SCORE2模型",
+  "results": "验证集54971人，C指数从0.740升至0.744（P<0.001）；NRI 7.5%，IDI 0.025；比值每增1单位MACE风险HR 1.21",
   "availability": "",
-  "limitations": "仅欧洲人群，排除40-49岁以减轻健康志愿者偏倚",
-  "summary": "研究探讨NMR量化的PUFA/MUFA比值能否提升SCORE2对10年MACE的预测。基于UKB 183,237例无基线CVD/糖尿病的欧洲成人，将PUFA/MUFA比值加入SCORE2模型。发现该比值可改善SCORE2对10年MACE风险的预测精度。"
+  "limitations": "改善幅度较小，临床影响需进一步验证",
+  "summary": "研究评估血浆多不饱和/单不饱和脂肪酸比值（PUFA/MUFA）能否提升SCORE2模型对MACE的预测。方法纳入UK Biobank 183237名无CVD或糖尿病者，用NMR测定该比值，随机分为训练集和验证集比较模型性能。结果加入该比值使验证集C指数从0.740升至0.744，NRI 7.5%、IDI 0.025，改善幅度不大但具统计学意义。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

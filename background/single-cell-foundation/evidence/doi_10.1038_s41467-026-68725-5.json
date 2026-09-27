@@ -32,14 +32,16 @@
   }
  ],
  "extraction": {
-  "method": "用简单细胞计数预测小分子生物活性基准",
-  "data": "Cell Painting图像与小分子活性数据，涉及209/270/201等 assays",
-  "scenario": "化合物活性与毒性预测",
-  "benchmark": "化学结构、Cell Painting、L1000、CLOOME等",
-  "results": "许多既往高预测 assays 与细胞毒性/增殖相关；简单细胞计数具有意外强预测力；Tox21中37–87%活性命中可能由细胞毒性爆发导致，仅2–14%特异",
+  "method": "细胞计数基线评估小分子活性基准",
+  "data": "Hofmarcher 209个任务；Moshkov 40个被排除后剩余任务",
+  "scenario": "小分子生物活性预测基准",
+  "benchmark": "CLOOME、CellProfiler、ResNet、DenseNet等模型",
+  "results": "逻辑回归细胞计数AUC 0.70±0.22，接近CLOOME 0.71±0.19；细胞计数+MW+logP达0.74±0.21；24个蛋白靶标基准中Cell Painting优于细胞计数",
   "availability": "",
-  "limitations": "细胞毒性/增殖混杂会误导预测模型；需区分特异与非特异活性",
-  "summary": "作者研究小分子生物活性预测中细胞计数的作用，发现既往基准中许多高预测 assays 与细胞毒性或增殖相关。通过分析Cell Painting和多种活性预测任务，他们指出简单细胞计数本身具有很强预测力，并揭示Tox21中大量活性命中可能源于细胞毒性爆发。研究强调预测模型需考虑混杂因素，避免误导性性能。"
+  "limitations": "许多基准assay与细胞健康/毒性直接相关，削弱其判别力",
+  "summary": "本文发现常用小分子活性基准中许多assay与细胞健康或毒性直接相关。方法是用细胞计数作为基线模型与CLOOME、CellProfiler及多种深度学习模型在Hofmarcher和Moshkov数据集上比较。结果显示细胞计数基线性能接近甚至超过复杂模型，建议过滤此类assay并纳入细胞计数基线，而在24个蛋白靶标基准中Cell Painting图像模型确实优于细胞计数。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "5"

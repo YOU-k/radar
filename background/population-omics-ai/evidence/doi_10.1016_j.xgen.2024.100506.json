@@ -30,14 +30,16 @@
   }
  ],
  "extraction": {
-  "method": "蛋白比值GWAS（rQTL，p-gain筛选）",
-  "data": "UKB PPP Olink 1536蛋白，54000样本",
-  "scenario": "pQTL发现与蛋白互作推断",
-  "benchmark": "UKB PPP标准单蛋白GWAS pQTL",
-  "results": "在已知pQTL位点用部分相关蛋白比值发现标准GWAS未检出的pQTL，并揭示蛋白-蛋白互作",
-  "availability": "Olink数据经UKB RAP公开",
-  "limitations": "未做全对全比值GWAS（成本高）；仅测部分相关蛋白对；样本以欧洲裔为主",
-  "summary": "研究提出用蛋白水平比值增强pQTL发现与解释。对UKB PPP中部分相关蛋白对计算比值，在已知pQTL位点做GWAS并以p-gain筛选显著rQTL。发现标准单蛋白GWAS未检出的pQTL，并揭示基于共享遗传/非遗传方差的蛋白互作。"
+  "method": "蛋白质比值GWAS与p-gain分析",
+  "data": "UKB Olink 1,463蛋白，54,000余样本；发现43,000，复制8,700",
+  "scenario": "pQTL与蛋白互作发现",
+  "benchmark": "UKB PPP单蛋白GWAS",
+  "results": "复制4,248个rQTL，覆盖2,821蛋白对；p-gain显著蛋白对富集已知互作7.6倍；比值GWAS发现2,527个新rQTL，较单蛋白GWAS增加24.7%",
+  "availability": "",
+  "limitations": "复制队列仅限非高加索裔8,700人，样本量较小",
+  "summary": "利用UK Biobank Olink 1,463种蛋白、54,000余样本数据，系统分析蛋白水平比值与遗传变异的关联。通过p-gain筛选显著rQTL并在非高加索裔复制队列中验证，随后对2,821个比值进行GWAS。发现4,248个复制rQTL，显著p-gain蛋白对富集已知蛋白互作7.6倍，比值GWAS较单蛋白GWAS新增24.7%遗传信号。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

@@ -30,14 +30,16 @@
   }
  ],
  "extraction": {
-  "method": "Olink PEA血浆蛋白组+遗传关联分析",
-  "data": "54,219名UKB参与者，2,941个血浆蛋白分析物",
-  "scenario": "血浆蛋白pQTL与药物靶点发现",
-  "benchmark": "既往大规模pQTL研究（约12,000个独立关联）",
-  "results": "测量2,941个蛋白分析物、2,923个独特蛋白；建立大规模pQTL资源，支持生物标志物和药物发现",
-  "availability": "数据开放获取（UKB-PPP）",
-  "limitations": "基于抗体PEA面板，蛋白覆盖有限；样本以UKB参与者为主",
-  "summary": "UKB-PPP联盟对54,219名UK Biobank参与者血浆样本进行Olink Explore 3072 PEA检测，测量2,941个蛋白分析物。研究描述蛋白测量、处理和下游遗传关联分析流程，构建大规模血浆蛋白组资源。该资源扩展pQTL数据库，支持生物标志物、诊断和药物靶点发现。"
+  "method": "血浆蛋白质组pQTL定位与精细映射",
+  "data": "54,219名UKB参与者，2,923种蛋白；复制17,806人",
+  "scenario": "血浆蛋白遗传架构与药物发现",
+  "benchmark": "既往pQTL研究",
+  "results": "发现14,287个主要遗传关联，81%为新发现；复制中95.6% cis和64.1% trans关联显著；精细映射29,420个独立信号",
+  "availability": "开放获取",
+  "limitations": "非欧洲裔样本量小，AMR仅97人",
+  "summary": "Pharma Proteomics Project对54,219名UK Biobank参与者进行血浆蛋白质组检测，覆盖2,923种蛋白。开展pQTL定位、祖源特异分析、精细映射及药物靶点验证。发现14,287个主要遗传关联，81%为既往未报道，精细映射出29,420个独立信号，并揭示ABO与FUT2对胃肠道表达蛋白的远距离上位效应。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

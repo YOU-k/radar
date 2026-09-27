@@ -32,14 +32,16 @@
   }
  ],
  "extraction": {
-  "method": "LLM语义嵌入+Transformer风险预测(GRASP)",
-  "data": "EHR数据，三国超100万人，预测21种病及全因死亡",
-  "scenario": "跨国家跨编码系统疾病风险预测",
-  "benchmark": "XGBoost及OMOP-CDM标准化模型",
-  "results": "跨医疗系统迁移性显著优于XGBoost；无需编码协调即可泛化；更少训练数据达同等性能；遗传高风险识别更准",
+  "method": "LLM语义嵌入+transformer预测模型GRASP",
+  "data": "UKB 391921、FinnGen 253991、Mount Sinai 386755人",
+  "scenario": "跨国家跨编码系统疾病预测",
+  "benchmark": "年龄性别模型、随机初始化嵌入transformer、XGBoost",
+  "results": "GRASP平均ΔC-index较语言无关模型在芬兰高88%、美国高47%；62%疾病与PRS相关性显著更高；未统一数据模型仍稳健",
   "availability": "",
-  "limitations": "LLM嵌入依赖预训练词表，罕见概念嵌入质量受限；未直接暴露患者数据但泛化仍受本地实践影响",
-  "summary": "研究评估LLM语义嵌入能否提升EHR疾病预测模型跨国家跨编码系统的迁移性。提出GRASP框架，用LLM将医疗编码映射到统一语义空间，再由Transformer处理病史预测风险。在英芬美三国超100万人21种病上，迁移性显著优于XGBoost，且更省数据、能识别遗传高风险人群。"
+  "limitations": "",
+  "summary": "本文提出GRASP方法，用大语言模型将医学编码映射到共享语义空间并结合transformer预测疾病。方法上先用text-embedding-3-large生成概念嵌入，再训练transformer联合预测21种疾病和全因死亡。结果显示GRASP在跨国家跨编码系统迁移中显著优于语言无关模型，并与多基因风险评分相关性更高。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.3"

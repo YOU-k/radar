@@ -33,14 +33,16 @@
   }
  ],
  "extraction": {
-  "method": "机器学习UKCRP预测10年CVD",
-  "data": "UK Biobank 502505人；丰富表型与随访",
-  "scenario": "10年心梗/缺血/出血性卒中风险",
-  "benchmark": "FGCRS、SCORE、QRISK、AHA/ASCVD",
-  "results": "UKCRP优于现有模型；心梗和缺血性卒中可比，出血性卒中较差",
-  "availability": "网页应用；代码/权重未提",
-  "limitations": "随访时间受限；变量多；外推性待验证",
-  "summary": "研究开发机器学习模型UKCRP预测10年心血管疾病风险。基于UK Biobank大规模前瞻队列，采用数据驱动流程筛选预测因子并训练验证，再与FGCRS、SCORE、QRISK和AHA/ASCVD比较。UKCRP总体优于现有风险评分，对心梗和缺血性卒中表现可比，但对出血性卒中预测明显较差。"
+  "method": "机器学习数据驱动筛选变量并建10年CVD风险模型",
+  "data": "UK Biobank 473611名无CVD者，645候选变量",
+  "scenario": "10年心血管病风险预测",
+  "benchmark": "多种现有临床模型（AHA/ASCVD、FGCRS、QRISK3、SCORE2等）",
+  "results": "UKCRP含10个预测因子，AUC 0.762±0.010，Brier 0.057±0.006；MI AUC 0.774，IS 0.730，HS 0.644；10年内31466人发生CVD",
+  "availability": "",
+  "limitations": "以白人为主（94.0%），出血性卒中预测较差",
+  "summary": "本研究旨在从全面变量空间中识别预测因子并用机器学习建立新的心血管病风险预测模型。方法基于UK Biobank 473611名无CVD参与者，从645个候选变量中数据驱动筛选变量，并评估多种机器学习分类器，采用留一中心交叉验证。结果建立了含10个预测因子的UKCRP模型，AUC 0.762±0.010，优于多个现有临床模型，对心肌梗死和缺血性卒中表现相当，但对出血性卒中较差。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.1"

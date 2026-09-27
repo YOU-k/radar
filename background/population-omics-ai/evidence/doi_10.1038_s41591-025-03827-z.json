@@ -31,14 +31,16 @@
   }
  ],
  "extraction": {
-  "method": "多祖源PRS-CSx构建BMI/肥胖多基因评分",
-  "data": "GIANT与23andMe GWAS>510万人；130万变异",
-  "scenario": "跨祖源BMI与肥胖预测",
-  "benchmark": "祖源匹配PGS及全基因组显著变异PGS",
-  "results": "多祖源PGS解释BMI方差7.2%-17.5%，中位14.0%；AFR/SAS提升2.6/2.8倍",
-  "availability": "数据需申请；代码未提",
-  "limitations": "祖源分组简化、部分人群GWAS样本小、生活方式干预情境有限",
-  "summary": "利用GIANT和23andMe大规模BMI GWAS，构建祖源特异和多祖源PGS。在UKB调参并验证多祖源线性组合PGS，再在独立人群、儿童青少年及生活方式干预中评估。发现多祖源PGS优于祖源匹配评分，尤其提升非洲和南亚祖源预测，支持跨祖源肥胖风险分层。"
+  "method": "构建祖源特异与多祖源BMI多基因评分",
+  "data": "GIANT与23andMe遗传数据，最多510万人；ALSPAC等验证",
+  "scenario": "BMI与肥胖终生预测",
+  "benchmark": "未提及具体基准模型",
+  "results": "多祖源评分解释UKB欧洲裔BMI变异17.6%；其他人群16%至2.2%；8岁时加入PGS解释方差从11%升至21%；5岁时预测18岁BMI从22%升至35%",
+  "availability": "",
+  "limitations": "非欧洲裔人群预测效能显著较低，如农村乌干达仅2.2%",
+  "summary": "利用GIANT联盟与23andMe最多510万人遗传数据，开发了祖源特异和多祖源BMI多基因评分。在UK Biobank、ALSPAC等队列中评估评分对BMI和肥胖的预测效能及生命历程变化。发现多祖源评分在欧洲裔中解释17.6%的BMI变异，儿童期加入评分可显著提升BMI预测，且高评分者成年后体重增加更多、生活方式干预后更易反弹。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
  },
  "sections": [
   "4"

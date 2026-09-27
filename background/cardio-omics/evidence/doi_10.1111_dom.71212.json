@@ -33,13 +33,15 @@
  ],
  "extraction": {
   "method": "10年CVD风险模型验证与重校准",
-  "data": "CKB 42,937人；JBPCD 14,125人，随访约10–12年",
-  "scenario": "中国一般人群与T2D患者CVD风险预测",
+  "data": "CKB 42937人，JBPCD 14125人",
+  "scenario": "中国人群10年心血管风险预测",
   "benchmark": "CKB-CVD、Globorisk、Framingham、WHO 2019、SCORE2-Diabetes",
-  "results": "一般人群C统计量0.723–0.778，T2D人群0.584–0.629；原模型校准差，一般人群E/O 1.47–3.78，系统性高估风险",
+  "results": "一般人群C统计量0.723-0.778，糖尿病人群0.584-0.629；原模型E/O一般人群1.47-3.78，糖尿病0.32-2.70；重校准后CKB-CVD高风险48.4%，实际10年风险25.7%",
   "availability": "",
-  "limitations": "T2D队列区分度较低；部分模型校准异质，需重校准",
-  "summary": "研究评估中国一般人群和2型糖尿病人群中常用10年心血管风险预测模型的表现。基于CKB和JBPCD两个前瞻队列，比较多个模型并用IPCW C统计量、E/O和Brier评分评价。结果显示一般人群区分度优于T2D人群，原模型普遍校准不良并存在系统性高估。"
+  "limitations": "模型在中国人群校准差，尤其糖尿病人群",
+  "summary": "该研究评估并重校准常用10年CVD风险预测模型在中国一般人群和2型糖尿病人群中的表现。研究分析CKB吴忠子队列42937人和JBPCD 14125人，采用IPCW C统计量、E/O比值和Brier评分评估原模型与重校准模型。结果显示原模型区分度可接受但校准差，重校准显著改善校准并降低Brier评分，区分度变化不大。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
  },
  "sections": [
   "2.1"

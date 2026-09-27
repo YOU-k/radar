@@ -32,14 +32,29 @@
   }
  ],
  "extraction": {
-  "method": "PRS分诊冠脉钙化评分实施试验",
-  "data": "1000名45-65岁低/中危人群；12个月多中心",
-  "scenario": "初级保健识别亚临床冠脉病",
-  "benchmark": "标准初级保健CVD风险评估",
-  "results": "CAD PRS≥80%者转诊CACS；主要结局CACS>0 AU",
+  "method": "PRS分层冠脉钙化评分前瞻实施试验",
+  "data": "1000名45-65岁低/中危参与者",
+  "scenario": "初级保健CVD风险评估",
+  "benchmark": "常规初级保健CVD风险评估",
+  "results": "主要结局为识别亚临床CAD（CACS>0 AU）；CAD PRS≥80%者转诊冠脉钙化扫描",
   "availability": "",
-  "limitations": "非随机；样本1000；实施与随访期短",
-  "summary": "ESCALATE研究将冠脉多基因风险评分纳入初级保健CVD风险评估，以识别亚临床冠脉病。1000名45-65岁低或中等5年绝对风险者接受PRS，PRS≥80%者转诊非侵入性冠脉钙化扫描。主要结局为CACS>0 AU，并评估共享治疗决策和参与者体验。"
+  "limitations": "方案阶段，尚无结局数据；非随机设计",
+  "summary": "本研究旨在检验将CAD多基因风险评分（PRS）纳入初级保健CVD风险评估、以识别亚临床冠脉疾病的临床路径效用。ESCALATE为12个月前瞻性多中心实施研究，纳入1000名45-65岁参与者，对5年绝对风险低/中危者计算PRS，将CAD PRS≥80%者转诊行冠脉钙化扫描。主要结局为亚临床CAD（CACS>0 AU），并评估血脂血压治疗、用药强度及健康相关生活质量等次要结局。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "1000",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "summary",
+    "number": "1000",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract"
  },
  "sections": [
   "5"

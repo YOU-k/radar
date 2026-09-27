@@ -33,14 +33,23 @@
   }
  ],
  "extraction": {
-  "method": "影像内型分层+蛋白组+外部PRS机器学习",
-  "data": "Penn Medicine BioBank 57,170人；4,007例PET压力测试",
-  "scenario": "冠状动脉微血管病早期风险预测",
-  "benchmark": "Prescott等临床模型，AUROC 0.61–0.66",
-  "results": "提出首个无需临床输入的CMVD机器学习框架；结合影像内型分层改善分类性能",
+  "method": "整合影像内型、血浆蛋白组与外部PRS的多模态机器学习",
+  "data": "灌注PET心肌血流数据及血浆蛋白组、PRS，聚类样本约825例",
+  "scenario": "冠状动脉微血管病风险预测",
+  "benchmark": "二分类模型及现有临床模型",
+  "results": "多分类AUROC 0.65–0.73，Class 0 AUROC 0.723、Class 2 0.721；二分类最佳AUROC 0.676；PRS靶向模型AUROC 0.601",
   "availability": "",
-  "limitations": "缺乏大规模CMVD GWAS和专用PRS；使用CAD PRS替代",
-  "summary": "研究构建整合基因组和蛋白组、无需临床输入的CMVD风险预测机器学习框架。基于Penn Medicine BioBank影像衍生内型分层，并评估外部CAD PRS的跨表型效用。结果显示内型分层可改善分类性能，并可在临床特征出现前预测风险。"
+  "limitations": "部分类别样本量小、类别不平衡",
+  "summary": "研究针对冠状动脉微血管病（CMVD）缺乏大规模GWAS导致PRS预测受限的问题，开发了CMVD PRS并整合血浆蛋白组、PET影像临床指标与PRS。方法采用机器与深度学习模型，并基于灌注PET心肌血流数据构建无监督内型分型框架。结果影像分型结合蛋白组和PRS显著提升分类性能，各类AUROC达0.65–0.73，优于二分类器和现有临床模型。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "825",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

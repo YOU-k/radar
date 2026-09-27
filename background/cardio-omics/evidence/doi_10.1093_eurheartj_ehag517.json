@@ -32,14 +32,77 @@
   }
  ],
  "extraction": {
-  "method": "基于Transformer的性别特异性时间事件预测模型",
-  "data": "中国CKMCC队列156790人，外部队列新疆与CHARLS",
+  "method": "基于Transformer的性别特异性生存预测模型",
+  "data": "推导队列156790人，外部队列新疆和CHARLS",
   "scenario": "中国成人10年CVD风险预测",
-  "benchmark": "相同预测因子的Cox模型；China-PAR、PREVENT-ASCVD、SCORE2亚太",
-  "results": "C统计量男性0.767、女性0.780；校准χ2男14.806、女9.326；Brier男0.104、女0.077；较Cox模型ΔC统计量男性0.027",
+  "benchmark": "相同预测因子的Cox模型及China-PAR、PREVENT-ASCVD、SCORE2亚太",
+  "results": "C统计量男性0.767、女性0.780；较Cox模型ΔC男性0.027、女性0.031；NRI男性0.478、女性0.560；外部验证C 0.740–0.825",
   "availability": "",
-  "limitations": "全文未获取，外部验证队列细节与泛化性未充分展示",
-  "summary": "研究开发并验证了针对中国成人10年心血管疾病风险预测的性别特异性Transformer模型China-AIHeart。方法基于中国心脏代谢疾病与癌症队列156790名无CVD参与者建模，并在新疆和CHARLS两个独立中国队列进行外部验证，同时与Cox模型及China-PAR、PREVENT-ASCVD、SCORE2亚太方程比较。结果显示模型具有良好区分度、校准度和净临床获益，预测事件率与观察风险高度一致，且优于使用相同预测因子的Cox模型。"
+  "limitations": "",
+  "summary": "研究开发并验证针对中国成人的性别特异性Transformer模型China-AIHeart用于10年CVD风险预测。方法基于中国心脏代谢疾病与癌症队列156790人推导，在新疆和CHARLS两个独立队列外部验证，比较Cox模型和现有风险评分。结果模型区分度良好（男性C 0.767、女性0.780），优于相同预测因子的Cox模型及China-PAR、PREVENT-ASCVD、SCORE2亚太方程，外部验证稳健。",
+  "_unverified_numbers": [
+   {
+    "field": "results",
+    "number": "0.767",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "results",
+    "number": "0.780",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "results",
+    "number": "0.027",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "results",
+    "number": "0.031",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "results",
+    "number": "0.478",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "results",
+    "number": "0.560",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "results",
+    "number": "0.740",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "results",
+    "number": "0.825",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "summary",
+    "number": "0.767",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "summary",
+    "number": "0.780",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract"
  },
  "sections": [
   "2.1"

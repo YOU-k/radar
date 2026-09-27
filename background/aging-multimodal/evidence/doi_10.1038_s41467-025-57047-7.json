@@ -32,14 +32,29 @@
   }
  ],
  "extraction": {
-  "method": "SenePy识别细胞类型特异衰老特征",
-  "data": "单细胞转录组，小鼠328K、人1.6M细胞",
-  "scenario": "体内细胞衰老异质性图谱",
-  "benchmark": "SenMayo及自建CS基因集",
-  "results": "整合181个人、184个小鼠CS标记；SenMayo交集52/51，超几何p=5.5E-97/2.85E-79；SenePy开源",
-  "availability": "代码公开：GitHub jaleesr/senepy",
-  "limitations": "体内CS异质性高，无通用标志物",
-  "summary": "研究开发SenePy以揭示细胞类型特异的体内细胞衰老景观。汇总小鼠和人跨组织、跨年龄单细胞RNA测序数据，并用p16报告小鼠等数据验证算法。发现已知衰老标志物具有细胞类型特异性，SenePy可跨组织映射衰老动力学并识别组织/细胞特异签名。"
+  "method": "单细胞转录组衰老评分算法SenePy",
+  "data": "小鼠328K细胞19组织；人1.6M细胞37组织",
+  "scenario": "体内细胞衰老识别与映射",
+  "benchmark": "体外衰老signature、SenMayo、已知衰老标志物",
+  "results": "构建72鼠/64人signature；SenePy优于体外signature；Cdkn2a等随龄增加(FDR p=0.01)；仅58/1540细胞类型组合标志物重叠显著",
+  "availability": "未提及",
+  "limitations": "通用衰老signature受细胞异质性掩盖；标志物高度组织细胞特异",
+  "summary": "开发SenePy算法定义细胞类型特异与通用细胞衰老signature。利用72个小鼠和64个人类加权单细胞转录组signature构建评分平台，并在健康衰老及肿瘤、炎症、心梗等疾病中映射衰老细胞积累动态。发现SenePy比体外来源signature更能重现体内衰老，且已知标志物高度细胞类型特异。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "328K",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "data",
+    "number": "1.6M",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.3"

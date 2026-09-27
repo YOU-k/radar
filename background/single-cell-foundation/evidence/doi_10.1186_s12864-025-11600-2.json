@@ -32,14 +32,41 @@
   }
  ],
  "extraction": {
-  "method": "基准测试scGPT与scFoundation",
-  "data": "4个Perturb-seq数据集，约48.5万细胞",
-  "scenario": "扰动后RNA-seq预测",
-  "benchmark": "均值基线及生物先验标准ML模型",
-  "results": "基础模型普遍不如简单均值基线；标准ML模型大幅超越基础模型；数据集样本间方差低",
+  "method": "基准测试基础细胞模型扰动后表达预测",
+  "data": "Adamson 68,603；Norman 91,205；Replogle K562 162,751与RPE1 162,733单细胞",
+  "scenario": "扰动后RNA-seq表达预测",
+  "benchmark": "scGPT、scFoundation对比Train Mean与随机森林等基线",
+  "results": "差分空间Train Mean(0.711/0.557/0.373/0.628)优于scGPT(0.641/0.554/0.327/0.596)与scFoundation(0.552/0.459/0.269/0.471)；RF+GO最佳(0.739/0.586/0.480/0.648)",
   "availability": "",
-  "limitations": "现有基准多依赖单一细胞系Perturb-seq，主要评估PEX，泛化评估有限",
-  "summary": "该研究基准测试两个Transformer基础模型scGPT和scFoundation在四个Perturb-seq数据集上的扰动后RNA-seq预测。比较其与不同复杂度基线模型的表现。发现基础模型普遍不如简单均值基线，标准ML模型大幅领先，且常用数据集低样本间方差影响评估。"
+  "limitations": "现有Perturb-Seq基准数据集扰动特异性方差低，评估价值有限",
+  "summary": "本文对scGPT和scFoundation在扰动后基因表达预测任务上进行基准测试。方法是在四个Perturb-seq数据集上微调模型并与均值、Elastic-Net、kNN、随机森林等基线比较。发现最简单的训练均值基线即优于两个基础模型，而结合GO特征的随机森林大幅领先，并指出当前基准数据集扰动特异性方差偏低。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "68,603",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "data",
+    "number": "91,205",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "data",
+    "number": "162,751",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "data",
+    "number": "162,733",
+    "reason": "cited",
+    "dropped": true
+   }
+  ],
+  "_basis": "abstract+results"
  },
  "sections": [
   "5"

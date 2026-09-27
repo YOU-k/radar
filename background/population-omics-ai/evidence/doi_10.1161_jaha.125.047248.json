@@ -28,14 +28,16 @@
   }
  ],
  "extraction": {
-  "method": "LASSO Cox蛋白评分+CatBoost整合模型",
-  "data": "UK Biobank血浆蛋白组+基因；约5.2万人",
+  "method": "LASSO Cox与CatBoost整合蛋白、PRS和传统风险",
+  "data": "UKB有蛋白与遗传数据者，训练32,330，内部验证13,857，外部5,775",
   "scenario": "冠心病风险预测",
   "benchmark": "传统风险因素模型",
-  "results": "AUC由0.750升至0.789（内部验证），外部验证由0.717提升；202蛋白评分剂量依赖关联CAD",
+  "results": "内部验证AUC从0.750升至0.789，外部验证从0.717升至0.762；9蛋白面板捕获大部分预测信息",
   "availability": "",
-  "limitations": "全文缺失，外部验证结果不完整，人群以欧洲为主",
-  "summary": "整合传统风险因素、多基因风险评分与大规模血浆蛋白组，构建冠心病风险预测统一模型。用LASSO Cox推导202蛋白风险评分，CatBoost逐步加入PRS与蛋白评分，SHAP前向选择精简蛋白面板。内部验证AUC从0.750升至0.789，外部验证从0.717提升，蛋白评分与CAD风险剂量依赖相关。"
+  "limitations": "未提及",
+  "summary": "整合传统风险因素、多基因风险评分和大规模蛋白质组学数据，构建冠心病风险预测模型。在UK Biobank中按地区划分训练、内部验证和外部验证集，采用LASSO Cox构建202蛋白风险评分，并用CatBoost建模。发现加入PRS和蛋白评分后内部验证AUC从0.750升至0.789，外部验证从0.717升至0.762，9蛋白面板即可捕获大部分预测信息。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
  },
  "sections": [
   "4"

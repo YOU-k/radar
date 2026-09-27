@@ -28,14 +28,23 @@
   }
  ],
  "extraction": {
-  "method": "构建知识图谱校验基准，含KGCheck智能体任务",
-  "data": "2000+原子任务数据、225条智能体任务标注",
-  "scenario": "生物医学AI智能体文献理解评测",
-  "benchmark": "科学论断验证与KGQA，对比SOTA智能体",
-  "results": "SOTA智能体（通用与生物医学）均失败或表现不佳",
-  "availability": "",
-  "limitations": "仅限生物医学领域，智能体任务数据量较小",
-  "summary": "论文提出BioKGBench，从AI科学家视角评测生物医学智能体理解文献的能力。将文献理解拆解为科学论断验证和知识图谱问答两种原子能力，并设计KGCheck智能体任务，用KGQA和领域RAG识别大规模知识图谱的事实错误。收集2000+原子任务数据和225条智能体标注，发现SOTA智能体均失败或表现不佳。"
+  "method": "构建BioKGBench基准，含KGCheck智能体任务与BKGAgent基线",
+  "data": "两个原子任务超2000条数据，智能体任务225条高质量标注数据",
+  "scenario": "生物医学文献理解与知识图谱核查",
+  "benchmark": "现有SOTA智能体（日常与生物医学）、流行知识图谱",
+  "results": "现有SOTA智能体表现失败或较差；BKGAgent在流行知识图谱上发现超90个事实错误",
+  "availability": "代码与数据公开于GitHub",
+  "limitations": "仅针对生物医学领域，智能体任务标注数据仅225条",
+  "summary": "本文提出BioKGBench，从AI科学家视角评估生物医学智能体。将“理解文献”拆解为科学论断验证与知识图谱问答两个原子能力，并设计KGCheck任务，用KGQA与领域RAG识别大规模知识图谱的事实错误。发现现有SOTA智能体表现失败或较差，并提出BKGAgent基线，在流行知识图谱上发现超90个事实错误。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "2000",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract"
  },
  "sections": [
   "4"

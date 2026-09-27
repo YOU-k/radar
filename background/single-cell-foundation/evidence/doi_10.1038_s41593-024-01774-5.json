@@ -32,14 +32,23 @@
   }
  ],
  "extraction": {
-  "method": "多模态单细胞与空间图谱整合",
-  "data": "snRNA-seq、snATAC-seq、snMultiome、MERFISH；340万核，84供体",
-  "scenario": "阿尔茨海默病细胞图谱",
-  "benchmark": "BICCN/BICAN参考分类；10个公开PFC数据集430万核",
-  "results": "构建139种分子细胞类型图谱；A9验证120万核；PFC复制430万核/707供体",
-  "availability": "数据公开于SEA-AD门户",
-  "limitations": "主要聚焦MTG，其他脑区与纵向时间维度覆盖有限",
-  "summary": "SEA-AD联盟构建了阿尔茨海默病中颞回的多模态整合细胞图谱。研究结合定量神经病理、单核多组学和MERFISH空间转录组，将340万核映射到139种细胞类型，并用连续伪进展评分排序供体。结果揭示了随疾病进展受累的高粒度细胞类型及其空间定位，并在A9和公开PFC数据中复制验证。"
+  "method": "多组学与空间基因组学构建AD细胞图谱",
+  "data": "84名供体，340万核多模态，另120万核snRNA-seq",
+  "scenario": "阿尔茨海默病细胞类型与进展",
+  "benchmark": "BRAIN Initiative参考图谱及10个公开数据集",
+  "results": "识别139种分子细胞类型；早期阶段炎症小胶质、反应性星形胶质、SST+神经元丢失与OPC再髓鞘；晚期兴奋性神经元及Pvalb+、Vip+亚型丢失",
+  "availability": "数据与工具公开于SEA-AD",
+  "limitations": "队列以老年供体为主，横断面设计难以确定因果时序",
+  "summary": "本文构建阿尔茨海默病整合多模态细胞图谱。方法是对84名供体颞中回开展定量神经病理、snRNA-seq、snATAC-seq、snMultiome与MERFISH，并用公开数据集重复验证。发现疾病分两阶段：早期炎症小胶质、反应性星形胶质、SST+抑制性神经元丢失与OPC再髓鞘，晚期病理指数增长并丢失兴奋性神经元及Pvalb+、Vip+亚型。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "120万",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract+results"
  },
  "sections": [
   "2.2"

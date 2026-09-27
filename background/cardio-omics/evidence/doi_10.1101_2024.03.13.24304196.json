@@ -32,14 +32,16 @@
   }
  ],
  "extraction": {
-  "method": "Olink蛋白组+XGBoost特征选择与建模",
-  "data": "UK Biobank 38,380人，2,919血浆蛋白，10年随访",
-  "scenario": "无既往CVD人群MACE预测",
-  "benchmark": "SCORE2及SCORE2的10个传统危险因素",
-  "results": "SCORE2 AUC 0.740；加114蛋白后AUC 0.771，p<0.001，NRI 0.140；加10个TRF后AUC 0.767，p=0.03，NRI 0.053",
+  "method": "极端梯度提升机器学习蛋白组预测",
+  "data": "UKB 38,380名参与者2,919蛋白",
+  "scenario": "10年MACE风险预测",
+  "benchmark": "SCORE2及SCORE2的10项TRF",
+  "results": "SCORE2 AUC 0.740；114蛋白+SCORE2 AUC 0.771（NRI 0.140）；+TRF 0.767（NRI 0.053）",
   "availability": "",
-  "limitations": "蛋白组仅适度提升预测；假设驱动选择结果未完整呈现",
-  "summary": "研究评估大规模血浆蛋白组能否在传统危险因素之外提升MACE预测。在UK Biobank 38,380人中测量2,919个蛋白，用XGBoost进行数据驱动和假设驱动特征选择并训练模型。结果显示114个蛋白联合SCORE2或10个传统危险因素可显著提升预测，但单独使用蛋白提升有限。"
+  "limitations": "改善幅度有限；仅UKB人群",
+  "summary": "研究旨在确定大规模蛋白组学能否在传统危险因素（TRF）之外改善心血管事件预测。使用邻近延伸法在38,380名UK Biobank参与者中测量2,919个血浆蛋白，采用数据驱动和假设驱动特征选择及极端梯度提升机器学习预测10年MACE。SCORE2和重拟合SCORE2的AUC分别为0.740和0.749；数据驱动选出114个蛋白单独预测AUC 0.758，与SCORE2或10项TRF联合显著改善至0.771（NRI 0.140）和0.767（NRI 0.053），而随机选114个蛋白无改善。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
  },
  "sections": [
   "2.2"

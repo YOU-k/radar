@@ -32,14 +32,29 @@
   }
  ],
  "extraction": {
-  "method": "随机生存森林机器学习",
-  "data": "MESA 6814人，45-84岁，4种族，735变量，随访12年",
-  "scenario": "多心血管结局预测",
+  "method": "随机生存森林机器学习预测6种心血管结局",
+  "data": "MESA队列6814名45–84岁无CVD参与者，735个变量",
+  "scenario": "12年心血管事件预测",
   "benchmark": "标准心血管风险评分",
-  "results": "影像、ECG、血清标志物进入top-20；年龄预测全因死亡；CAC预测CHD/ASCVD；空腹血糖和颈动脉超声预测卒中",
+  "results": "随机生存森林预测准确度优于既有风险评分；影像、心电图和血清标志物在top-20中突出；CAC是CHD和ASCVD最重要预测因子",
   "availability": "",
-  "limitations": "仅MESA队列；预测变量多；需外部验证",
-  "summary": "研究测试随机生存森林能否预测MESA队列6种心血管结局并优于标准风险评分。纳入6814名无心血管病参与者，使用735个影像、非侵入检查和生物标志物变量，随访12年。影像、ECG和血清标志物在top-20预测因子中突出，年龄预测全因死亡，CAC预测冠心病和ASCVD，空腹血糖与颈动脉超声预测卒中。"
+  "limitations": "",
+  "summary": "研究测试随机生存森林这一机器学习技术预测多种心血管结局的能力。方法纳入MESA 6814名无CVD参与者，用735个影像、问卷和生物标志物变量预测12年随访的6种心血管结局，并与标准风险评分比较。结果随机生存森林预测准确度优于既有风险评分，影像、心电图和血清标志物在top-20预测因子中突出，CAC是冠心病和ASCVD最重要预测因子。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "735",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "summary",
+    "number": "735",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract"
  },
  "sections": [
   "2.1"

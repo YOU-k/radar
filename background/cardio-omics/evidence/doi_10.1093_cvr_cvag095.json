@@ -32,14 +32,29 @@
   }
  ],
  "extraction": {
-  "method": "孟德尔随机化+贝叶斯共定位+AlphaFold3结构预测+中介分析",
-  "data": "UKB Pharma Proteomics 54,219人及deCODE 35,559人，5,813个蛋白cis-pQTL",
-  "scenario": "动脉硬化与CVD共享蛋白组机制",
-  "benchmark": "五种动脉硬化/粥样硬化标志物及八种心血管事件",
-  "results": "优先筛选出10个蛋白与动脉硬化/粥样硬化标志物及CVD事件相关；ANGPTL4、APOB、BRAP、LPA、ZPR1升高风险，DUSP13、FN1、IL6R、MMP12降低风险；ABO与外周动脉病风险升高相关",
+  "method": "孟德尔随机化+共定位+AlphaFold3",
+  "data": "UKB 54,219及deCODE 35,559蛋白pQTL",
+  "scenario": "动脉硬化共享蛋白组解析",
+  "benchmark": "观察性数据与转录组验证",
+  "results": "优先10个蛋白；LPA对卒中经颈动脉斑块中介92.4%；DUSP13经PAD中介91.0%",
   "availability": "",
-  "limitations": "动脉硬化与粥样硬化分子机制仍未完全阐明，需进一步验证",
-  "summary": "研究整合蛋白组学、贝叶斯共定位、孟德尔随机化和AlphaFold3，探索动脉硬化与粥样硬化共享及特异血浆蛋白。利用UKB和deCODE的cis-pQTL数据评估与血管标志物和心血管事件关联。结果优先筛选出10个潜在因果蛋白，并揭示其与CVD风险的方向性关联。"
+  "limitations": "MR假设限制；需实验验证",
+  "summary": "研究整合蛋白组学、贝叶斯共定位、孟德尔随机化与结构建模，探索动脉硬化与动脉粥样硬化跨血管床的共享与特异血浆蛋白组。利用UKB（N=54,219）和deCODE（N=35,559）的cis-pQTL，评估5,813个蛋白与五种硬化标志及八种心血管事件的关联。优先鉴定出10个潜在因果蛋白，其中ANGPTL4、APOB、BRAP、LPA、ZPR1增加风险，DUSP13、FN1、IL6R、MMP12降低风险；中介分析显示LPA对卒中效应92.4%经颈动脉斑块中介，DUSP13对CAD效应91.0%经PAD中介，AlphaFold3识别出ANGPTL4、FN1等关键功能变异。",
+  "_unverified_numbers": [
+   {
+    "field": "results",
+    "number": "10",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "summary",
+    "number": "10",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract"
  },
  "sections": [
   "2.2"

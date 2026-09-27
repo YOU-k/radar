@@ -32,14 +32,35 @@
   }
  ],
  "extraction": {
-  "method": "交互式N体模拟世界，智能体设计实验并推断运动定律",
-  "data": "22个偏离真实物理的模拟世界，N体模拟器按需生成",
-  "scenario": "LLM科学发现与物理推理评估",
-  "benchmark": "DiscoverPhysics，11个前沿模型对比",
-  "results": "最强智能体仅通过半数世界，在需揭示潜在结构的世界持续失败；开源模型显著落后于商业模型",
+  "method": "构建DiscoverPhysics交互式基准，N体模拟偏离物理世界",
+  "data": "22个模拟世界，评估11个前沿模型",
+  "scenario": "LLM智能体从实验中发现运动定律",
+  "benchmark": "11个前沿模型（含开源与商业模型）",
+  "results": "最强智能体仅通过半数世界；开源模型显著落后；预测精度高不保证解释质量",
   "availability": "",
-  "limitations": "未说明开源模型具体表现数值与失败细节",
-  "summary": "本文提出DiscoverPhysics，一个交互式基准，要求LLM智能体发现刻意偏离真实物理的模拟世界的运动定律。构建22个世界，涵盖屏蔽引力、分数幂引力、多物种耦合、隐藏暗物质粒子等，智能体需多轮设计实验、观察原始轨迹数据并提交自然语言解释与Python实现。评估11个前沿模型发现最强智能体仅通过半数世界，在需揭示潜在结构的世界持续失败，开源模型显著落后于商业模型。"
+  "limitations": "最强智能体仅通过半数世界，潜藏结构难以揭示",
+  "summary": "本文提出DiscoverPhysics，一个交互式基准，让LLM智能体发现偏离真实物理的模拟世界运动定律。构建22个由N体模拟器按需生成的世界，智能体提出实验、观察轨迹数据并提交自然语言解释与Python实现，按轨迹MSE和LLM评判解释分评估。发现11个前沿模型中最强智能体仅通过半数世界，开源模型显著落后，且预测精度高不保证解释质量。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "11",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "benchmark",
+    "number": "11",
+    "reason": "not_found",
+    "dropped": false
+   },
+   {
+    "field": "summary",
+    "number": "11",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract"
  },
  "sections": [
   "3"
