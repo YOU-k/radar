@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.18.752796",
+  "title": "A lifespan single-cell atlas of the human developing hippocampus benchmarks familial Alzheimer's disease brain organoids.",
+  "url": "https://doi.org/10.64898/2026.09.18.752796",
+  "abstract": "该研究构建了覆盖人海马发育过程的单细胞图谱，并以此作为基准评估家族性阿尔茨海默病（fAD）脑类器官。由于iPSC来源脑类器官存在区域身份、成熟状态和细胞组成异质性，作者用连续发育海马图谱来校准fAD类器官中神经发育相关扰动。结果强调fAD突变对早期海马发育过程的影响需要在统一发育参照下解读。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "脑类器官扰动+发育单细胞图谱基准，契合类器官建模与评测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "脑类器官扰动+发育单细胞图谱基准，契合类器官建模方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "单细胞图谱基准评估脑类器官",
+  "data": "人海马发育单细胞图谱；fAD脑类器官",
+  "scenario": "海马发育与fAD建模",
+  "benchmark": "连续发育人海马单细胞图谱",
+  "results": "强调fAD突变对早期海马发育扰动需在统一发育参照下解读",
+  "availability": "",
+  "limitations": "类器官存在区域身份、成熟状态和细胞组成异质性",
+  "summary": "该研究构建了覆盖人海马发育过程的单细胞图谱，并以此作为基准评估家族性阿尔茨海默病脑类器官。作者利用连续发育海马图谱校准fAD类器官中神经发育相关扰动，以应对iPSC来源脑类器官的区域身份、成熟状态和细胞组成异质性。结果强调fAD突变对早期海马发育过程的影响需要在统一发育参照下解读。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 5,
+ "added_on": "2026-09-27"
+}

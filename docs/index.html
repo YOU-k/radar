@@ -117,7 +117,7 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 [data-t=aging]{--c:#1a7f37;--cb:#1a7f3714;--cl:#1a7f3755;--cd:#81b891;--cbd:#81b8911f}[data-t=cohort]{--c:#0969da;--cb:#0969da14;--cl:#0969da55;--cd:#77acea;--cbd:#77acea1f}[data-t=cardio]{--c:#cf222e;--cb:#cf222e14;--cl:#cf222e55;--cd:#e4858c;--cbd:#e4858c1f}[data-t=organoid]{--c:#9a6700;--cb:#9a670014;--cl:#9a670055;--cd:#c7ab72;--cbd:#c7ab721f}[data-t=singlecell]{--c:#8250df;--cb:#8250df14;--cl:#8250df55;--cd:#ba9eed;--cbd:#ba9eed1f}[data-t=vcell]{--c:#bf3989;--cb:#bf398914;--cl:#bf398955;--cd:#db92be;--cbd:#db92be1f}[data-t=ssl]{--c:#1b7c83;--cb:#1b7c8314;--cl:#1b7c8355;--cd:#81b6ba;--cbd:#81b6ba1f}[data-t=agent]{--c:#bc4c00;--cb:#bc4c0014;--cl:#bc4c0055;--cd:#da9c72;--cbd:#da9c721f}</style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
 
-<div class="meta">构建 2026-09-27 · 最新日报 2026-09-27 · 13 份日报 / 2 份周报 / 8 个方向</div>
+<div class="meta">构建 2026-09-27 · 最新日报 2026-09-27 · 13 份日报 / 3 份周报 / 8 个方向</div>
 <div class="tabs" role="tablist"><button type="button" role="tab" class="tab on" data-tab="day">日报</button><button type="button" role="tab" class="tab" data-tab="week">周报</button><button type="button" role="tab" class="tab" data-tab="bg">总览</button><button type="button" role="tab" class="tab" data-tab="res">资源库</button></div></div>
 <div id="panel-day" class="panel on">
 <div class="fbar" id="fbar-day"><button type="button" class="fchip" data-t="aging" aria-pressed="false" data-v="aging">衰老<span class="n">12</span></button><button type="button" class="fchip" data-t="cohort" aria-pressed="false" data-v="cohort">人群队列<span class="n">16</span></button><button type="button" class="fchip" data-t="cardio" aria-pressed="false" data-v="cardio">心血管<span class="n">2</span></button><button type="button" class="fchip" data-t="organoid" aria-pressed="false" data-v="organoid">类器官<span class="n">2</span></button><button type="button" class="fchip" data-t="singlecell" aria-pressed="false" data-v="singlecell">单细胞<span class="n">33</span></button><button type="button" class="fchip" data-t="vcell" aria-pressed="false" data-v="vcell">虚拟细胞<span class="n">4</span></button><button type="button" class="fchip" data-t="ssl" aria-pressed="false" data-v="ssl">世界模型<span class="n">21</span></button><button type="button" class="fchip" data-t="agent" aria-pressed="false" data-v="agent">Agent<span class="n">4</span></button></div>
@@ -302,7 +302,181 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 <div class="card tagged" style="--tc:#1b7c83" data-score="6.0" data-themes="ssl singlecell"><div class="t"><a href="https://arxiv.org/abs/2609.13507" target="_blank" rel="noopener">Pretraining for Sample-Efficient Neural Interfaces</a><span class="badge mid">6.0</span></div><div class="reason">神经接口自监督预训练，跨被试表征思路可迁移到单细胞。</div><div class="meta"><span class="vt pp">预印本</span>arXiv · 2026-09 · 末位 Gregory B. Cogan · Ben Tang, Zachary Spalding, Gregory B. Cogan</div><div class="tags"><span class="th" data-t="ssl">世界模型</span><span class="th" data-t="singlecell">单细胞</span></div></div>
 <div class="dom">Agent</div>
 <div class="card tagged" style="--tc:#bc4c00" data-score="6.0" data-themes="agent ssl"><div class="t"><a href="https://arxiv.org/abs/2606.02388" target="_blank" rel="noopener">Policy and World Modeling Co-Training for Language Agents</a><span class="badge mid">6.0</span></div><div class="reason">策略与世界模型协同训练，方法学可迁移到扰动响应建模。</div><div class="meta"><span class="vt pp">预印本</span>arXiv · 2026-06 · 末位 Ke Tang · Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Ya</div><div class="tags"><span class="th" data-t="agent">Agent</span><span class="th" data-t="ssl">世界模型</span></div></div></div></details></div>
-<div id="panel-week" class="panel"><div class="wk" data-week="2026-W38"><h3>2026-W38 <span class="newdot">新</span></h3><h2>本周科研情报总结（2026-09-15 ~ 2026-09-19）</h2>
+<div id="panel-week" class="panel"><div class="wk" data-week="2026-W39"><h3>2026-W39 <span class="newdot">新</span></h3><h2>本周科研情报总结（2026-09-21 ~ 2026-09-25）</h2>
+<h2>生物医学数据库 / 模型 / 部署</h2>
+<h3>本周亮点</h3>
+<ul>
+<li><strong>A lifespan single-cell atlas of the human developing hippocampus benchmarks familial Alzheimer's disease brain organoids</strong>（8.0）：构建 HuDeHA 人发育海马单细胞图谱（受孕后 3 周至 15.3 岁，658,059 细胞），并以此为基准评测 PSEN1 E280A 家族性 AD 脑类器官，揭示放射状胶质细胞减少、神经嵴来源神经元增加及 MEIS2/TTR 等跨谱系改变。<a href="https://doi.org/10.64898/2026.09.18.752796" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.18.752796</a></li>
+<li><strong>Benchmarking of plasma proteomics workflows reveals complementarity of deep MS and affinity-based assays</strong>（7.0）：在 80 例锂肝素血浆上系统比较 7 种蛋白组流程，Orbitrap Astral 蛋白鉴定量较 Exploris 480 高 3 倍、通量高 4 倍，SEER 覆盖 6003 个蛋白组并超 70% HPPP。<a href="https://doi.org/10.1016/j.jprot.2026.105735" target="_blank" rel="noopener">https://doi.org/10.1016/j.jprot.2026.105735</a></li>
+<li><strong>ProteinJEPA: Latent prediction improves protein language model pretraining</strong>（7.0）：在 MLM 基础上加余弦损失，用未掩码序列预测教师模型半深度隐藏状态，将 JEPA 引入蛋白领域；19 任务、ESM2 35M/150M 下 114 次比较中 78 次胜出，结构及同源敏感任务中位增益 +0.0106。<a href="https://arxiv.org/abs/2605.07554" target="_blank" rel="noopener">https://arxiv.org/abs/2605.07554</a></li>
+<li><strong>Speciesformer learns conserved cellular states for cross-species generative virtual cell modeling</strong>（7.0）：跨物种生成式单细胞基础模型，在 1.31 亿细胞的 SpeciesCorpus 上预训练，学习可迁移细胞状态与状态转变，区分保守原理与物种/组织特异变异。<a href="https://doi.org/10.64898/2026.09.22.752128" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.22.752128</a></li>
+</ul>
+<h3>数据与资源</h3>
+<ul>
+<li><strong>HuDeHA</strong>：人发育海马单细胞整合参考图谱（658,059 细胞，PCW3–15.3 岁），可作类器官成熟度/区域身份校正基准。</li>
+<li><strong>单细胞共调控 ground truth 目录</strong>：35 个 scRNA-seq 样本，含启动子报告基因（正共调控）与 B 细胞 κ/λ 互斥（负共调控），用于评估 7 种归一化方法。<a href="https://doi.org/10.64898/2026.09.18.752692" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.18.752692</a></li>
+<li><strong>SpeciesCorpus</strong>：1.31 亿细胞跨物种单细胞语料，配套 Speciesformer 模型。</li>
+<li><strong>ProteinJEPA</strong>：蛋白语言模型预训练方法（ESM2 35M/150M 规模验证）。</li>
+</ul>
+<h3>评测与警示</h3>
+<ul>
+<li><strong>蛋白语言模型层级探针分析</strong>（7.0）：13 个 PLM × 15 任务 × 9 数据集，发现末层嵌入很少在下游任务取得最佳结果，提示应重视中间层嵌入——对直接取末层做下游的常规做法是明确警示。<a href="https://arxiv.org/abs/2608.12090" target="_blank" rel="noopener">https://arxiv.org/abs/2608.12090</a></li>
+<li><strong>单细胞共调控基准</strong>：7 种归一化方法在正、负共调控识别上表现各有优劣，无普适最优，方法选择需按任务区分。</li>
+<li><strong>HuDeHA</strong>：摘要未提数据/代码获取方式，能否"拿来即用"取决于是否提供 count matrix、注释表与映射脚本，需核查 Data/Code Availability。</li>
+<li><strong>Speciesformer</strong>：摘要未提评测细节与代码可用性，跨物种迁移的实际增益待正文确认。</li>
+</ul>
+<h3>一句话判断</h3>
+<p>本周实质进展集中在"资源型基准"（发育图谱、共调控目录、血浆蛋白组流程评测）与"预训练范式迁移"（JEPA 进蛋白、跨物种生成式虚拟细胞），前者可直接接入类器官/蛋白组 demo，后者提示中间层表征与潜空间设计值得重视。</p>
+<hr />
+<h2>人群健康与多组学 AI</h2>
+<h3>本周亮点</h3>
+<ul>
+<li><strong>Robust cis-by-trans epistasis in the human plasma proteome highlights an ABO-centered interaction network</strong>（8.0）：利用 UKB-PPP 在蛋白水平（而非变异水平）定义互作以降低多重检验负担，用 sandwich 方差估计控制假阳性，识别出以 ABO 为中心的互作网络；结论偏保守——上位效应对性状定位增益有限。<a href="https://doi.org/10.1016/j.ajhg.2026.09.003" target="_blank" rel="noopener">https://doi.org/10.1016/j.ajhg.2026.09.003</a></li>
+<li><strong>Multi-ancestry MHC-pQTL mapping reveals disease-linked HLA protein networks and shared genetic architecture</strong>（8.0）：UKB（n=43,762）+ CKB（n=3,977）跨祖先 MHC-pQTL 定位，2920 蛋白中鉴定 13 个 cis、606 个 trans 关联，多数信号跨祖先一致，并发现东亚 EDAR 祖先富集关联；HLA 特异性共定位连接免疫疾病位点（如 B2M 与 MS 在 HLA-A，PP=0.991）。<a href="https://doi.org/10.21203/rs.3.rs-10956233/v1" target="_blank" rel="noopener">https://doi.org/10.21203/rs.3.rs-10956233/v1</a></li>
+<li><strong>Molecular Circadian Disturbance in Human Blood Independently Predicts Multi-Disease Risk and Maps to Hepatic metabolism Pathways</strong>（8.0）：42 万 UKB 参与者、312 种分子，用贝叶斯加性回归树推导相位偏移与节律紊乱两个正交指标，节律紊乱独立于睡眠、可预测 98 种未来发病风险并映射到肝脏代谢通路。<a href="https://doi.org/10.21203/rs.3.rs-11120748/v1" target="_blank" rel="noopener">https://doi.org/10.21203/rs.3.rs-11120748/v1</a></li>
+<li><strong>Large-scale esophageal cancer screening through noncontrast computed tomography and artificial intelligence</strong>（7.0，Nature Medicine）：EAGLE 模型从胸部非增强 CT 检测食管癌前病变与癌症，训练 6,813 例、验证 80,612 例，覆盖 3 国 12 中心，完成历史上被认为难以实现的 NC CT 筛查任务。<a href="https://doi.org/10.1038/s41591-026-04656-4" target="_blank" rel="noopener">https://doi.org/10.1038/s41591-026-04656-4</a></li>
+</ul>
+<h3>数据与资源</h3>
+<ul>
+<li><strong>EST-Health-30</strong>：爱沙尼亚 30% 随机人群样本（2012–2024）真实世界诊疗模式数字图谱，覆盖 1000+ ICD-10 三位字符诊断类别。<a href="https://doi.org/10.64898/2026.09.16.26363186" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.16.26363186</a></li>
+<li><strong>UKB-PPP cis-by-trans 上位效应图谱</strong>：以 ABO 为中心的蛋白互作网络（受控访问）。</li>
+<li><strong>多祖先 MHC-pQTL 汇总结果</strong>：UKB + CKB，2920 蛋白的 cis/trans 关联（预印本，待正式释放）。</li>
+<li><strong>All of Us 白内障 GWAS + 多组学 MR</strong>：欧洲（161,812 例）与东亚（66,679 例）荟萃分析，配套 cis-eQTL/cis-pQTL MR 与共定位。<a href="https://doi.org/10.1016/j.ebiom.2026.106485" target="_blank" rel="noopener">https://doi.org/10.1016/j.ebiom.2026.106485</a></li>
+</ul>
+<h3>评测与警示</h3>
+<ul>
+<li><strong>cis-by-trans 上位效应</strong>：仅 7 个显著信号，统计功效受限；作者自认对 trait mapping 提升甚微，实用价值存疑；仅覆盖 UKB 单队列单模态，跨队列可复现性未验证。</li>
+<li><strong>多祖先 MHC-pQTL</strong>：祖先样本量严重不平衡（UKB 约为 CKB 的 11 倍），跨祖先结论稳健性、trans 信号假阳性控制、共定位是否区分因果与连锁均需正文核实；MHC 区高多态与复杂 LD 使 HLA 归因依赖插补质量。</li>
+<li><strong>可复现性</strong>：UKB/CKB/All of Us 数据均需申请，多数工作未在摘要中给出代码仓库，落地需自行实现方法模板。</li>
+</ul>
+<h3>一句话判断</h3>
+<p>本周人群多组学在"遗传调控网络精细化"（蛋白级互作、HLA 分辨率 pQTL、跨祖先一致性）与"大队列 AI 临床落地"（NC CT 食管癌筛查、节律紊乱多病预测）两条线上同时推进，方法成熟度高、可直接迁移到 ChinaHEART 的跨队列校正与风险预测框架。</p>
+<hr />
+<h2>Registry 增补建议</h2>
+<h3>databases.md</h3>
+<ul>
+<li>HuDeHA — 人发育海马单细胞整合图谱（658,059 细胞，PCW3–15.3 岁），类器官成熟度/区域身份校正基准 | <a href="https://doi.org/10.64898/2026.09.18.752796" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.18.752796</a></li>
+<li>单细胞共调控 ground truth 目录 — 35 样本，含正/负共调控对照，用于归一化与共调控方法评估 | <a href="https://doi.org/10.64898/2026.09.18.752692" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.18.752692</a></li>
+<li>SpeciesCorpus — 1.31 亿细胞跨物种单细胞语料，配套 Speciesformer | <a href="https://doi.org/10.64898/2026.09.22.752128" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.22.752128</a></li>
+<li>EST-Health-30 — 爱沙尼亚 30% 人群真实世界诊疗模式图谱，1000+ ICD-10 类别 | <a href="https://doi.org/10.64898/2026.09.16.26363186" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.16.26363186</a></li>
+<li>UKB-PPP cis-by-trans 上位效应图谱 — 以 ABO 为中心的蛋白互作网络 | <a href="https://doi.org/10.1016/j.ajhg.2026.09.003" target="_blank" rel="noopener">https://doi.org/10.1016/j.ajhg.2026.09.003</a></li>
+<li>多祖先 MHC-pQTL 汇总（UKB + CKB）— 2920 蛋白 cis/trans 关联，HLA 分辨率 | <a href="https://doi.org/10.21203/rs.3.rs-10956233/v1" target="_blank" rel="noopener">https://doi.org/10.21203/rs.3.rs-10956233/v1</a></li>
+</ul>
+<h3>models.md</h3>
+<ul>
+<li>ProteinJEPA — JEPA 潜空间预测预训练，蛋白语言模型，19 任务 78/114 胜出 | <a href="https://arxiv.org/abs/2605.07554" target="_blank" rel="noopener">https://arxiv.org/abs/2605.07554</a></li>
+<li>Speciesformer — 跨物种生成式单细胞基础模型，1.31 亿细胞预训练 | <a href="https://doi.org/10.64898/2026.09.22.752128" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.22.752128</a></li>
+<li>EAGLE — NC CT 食管癌筛查 AI 模型，12 中心 80,612 例验证（Nature Medicine） | <a href="https://doi.org/10.1038/s41591-026-04656-4" target="_blank" rel="noopener">https://doi.org/10.1038/s41591-026-04656-4</a></li>
+<li>血浆蛋白组工作流基准方案 — Astral/Exploris 480/SEER/Olink 等 7 流程对比 | <a href="https://doi.org/10.1016/j.jprot.2026.105735" target="_blank" rel="noopener">https://doi.org/10.1016/j.jprot.2026.105735</a></li>
+</ul>
+<h3>people.md</h3>
+<ul>
+<li>Ekaterina Ivleva（University of Pittsburgh）— HuDeHA 发育海马图谱与 fAD 类器官基准通讯作者 | <a href="https://doi.org/10.64898/2026.09.18.752796" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.18.752796</a></li>
+<li>Valentine Svensson — 单细胞共调控 ground truth 基准目录通讯作者 | <a href="https://doi.org/10.64898/2026.09.18.752692" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.18.752692</a></li>
+<li>Xuanyao Liu（University of Illinois Chicago）— UKB-PPP cis-by-trans 上位效应图谱通讯作者 | <a href="https://doi.org/10.1016/j.ajhg.2026.09.003" target="_blank" rel="noopener">https://doi.org/10.1016/j.ajhg.2026.09.003</a></li>
+<li>Alexander J. Mentzer（University of Oxford）— 多祖先 MHC-pQTL 映射，CKB 蛋白组遗传整合 | <a href="https://doi.org/10.21203/rs.3.rs-10956233/v1" target="_blank" rel="noopener">https://doi.org/10.21203/rs.3.rs-10956233/v1</a></li>
+<li>Olga V. Kalinina（Helmholtz Institute for Pharmaceutical Research Saarland）— 蛋白语言模型层级表征分析 | <a href="https://arxiv.org/abs/2608.12090" target="_blank" rel="noopener">https://arxiv.org/abs/2608.12090</a></li>
+</ul>
+<h2>本周来源分布</h2>
+<p>期刊 13 篇 · 预印本 20 篇（仅统计进 digest 的论文）</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>期刊 / 平台</th>
+<th>类型</th>
+<th>篇数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arXiv</td>
+<td>预印本</td>
+<td>11</td>
+</tr>
+<tr>
+<td>bioRxiv</td>
+<td>预印本</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Research Square</td>
+<td>预印本</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Nature Medicine</td>
+<td>期刊</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Journal of Proteomics</td>
+<td>期刊</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FEBS Journal</td>
+<td>期刊</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Nature Metabolism</td>
+<td>期刊</td>
+<td>1</td>
+</tr>
+<tr>
+<td>The American Journal of Human Genetics</td>
+<td>期刊</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EBioMedicine</td>
+<td>期刊</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Environmental Pollution</td>
+<td>期刊</td>
+<td>1</td>
+</tr>
+<tr>
+<td>PLoS Computational Biology</td>
+<td>期刊</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Nature Methods</td>
+<td>期刊</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>方向背景本周变更</h2>
+<h3>心血管队列多组学与临床 AI</h3>
+<ul>
+<li>覆盖度平台期收尾编译</li>
+</ul>
+<h3>类器官与模式生物虚拟响应建模</h3>
+<ul>
+<li>新增 [49] A lifespan single-cell atlas of the human developing hippocampus benchmarks familial Alzheimer's disease brain organoids.</li>
+<li>新增 [24] Speciesformer learns conserved cellular states for cross-species generative virtual cell modeling</li>
+</ul>
+<h3>人群健康与多组学 AI</h3>
+<ul>
+<li>新增 [50] Robust cis-by-trans epistasis in the human plasma proteome highlights an ABO-centered interaction network.</li>
+<li>新增 [49] Multi-ancestry MHC-pQTL mapping reveals disease-linked HLA protein networks and shared genetic architecture</li>
+<li>新增 [18] Molecular Circadian Disturbance in Human Blood Independently Predicts Multi-Disease Risk and Maps to Hepatic metabolism Pathways</li>
+<li>新增 [22] A national-scale digital atlas of recorded care patterns across more than 1000 diagnostic categories using real-world health data: a retrospective observational study</li>
+</ul>
+<h3>单细胞与空间组学基础模型与虚拟细胞</h3>
+<ul>
+<li>新增 [7] Speciesformer learns conserved cellular states for cross-species generative virtual cell modeling</li>
+</ul>
+<h3>虚拟细胞与扰动响应预测</h3>
+<ul>
+<li>新增 [7] Speciesformer learns conserved cellular states for cross-species generative virtual cell modeling</li>
+</ul></div>
+<div class="wk" data-week="2026-W38"><h3>2026-W38 <span class="newdot">新</span></h3><h2>本周科研情报总结（2026-09-15 ~ 2026-09-19）</h2>
 <h2>衰老与多模态健康模型</h2>
 <h3>本周亮点</h3>
 <ul>
@@ -449,17 +623,17 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 <li>（本周无值得长期跟踪的独立研究者条目；上述 repo 均为工具/代码类，暂不单列人物）</li>
 </ul></div></div>
 <div id="panel-bg" class="panel"><div class="sec"><div class="sec-t">一页总览</div><div class="sec-d">每个主题一行：处在什么阶段、真正要回答的问题、卡在哪。点主题名跳到该方向的报告。</div></div>
-<a class="ov" href="#topic-aging" style="border-left-color:#1a7f37"><div class="ov-h"><span class="th" data-t="aging">衰老</span><span class="ov-n">多模态衰老时钟与生物年龄</span></div><div class="ov-s">朝阳期偏早期（内部严重不均）</div><div class="ov-l"><b>问题</b> 生物年龄是否独立实在，时钟回拨是否等于衰老与结局改善？</div><div class="ov-l"><b>瓶颈</b> 分子/测量层缺金标准；干预/转化层因果识别不足；遗传层几乎缺席</div></a>
-<a class="ov" href="#topic-cohort" style="border-left-color:#0969da"><div class="ov-h"><span class="th" data-t="cohort">人群队列</span><span class="ov-n">人群健康与多组学 AI</span></div><div class="ov-s">朝阳（生成式轨迹）+ 成熟（多组学遗传整合）</div><div class="ov-l"><b>问题</b> 疾病是否存在少数可重复、可校准、可干预的分子轨迹与共病亚型？</div><div class="ov-l"><b>瓶颈</b> 分子→个体因果识别不足；生成轨迹数据多样性不足；EHR 基础模型转化落地缺失</div></a>
+<a class="ov" href="#topic-aging" style="border-left-color:#1a7f37"><div class="ov-h"><span class="th" data-t="aging">衰老</span><span class="ov-n">多模态衰老时钟与生物年龄</span></div><div class="ov-s">朝阳期偏早期（结构不均：单组学成熟、多模态/单细胞朝阳…</div><div class="ov-l"><b>问题</b> 生物年龄是否独立实在，时钟回拨是否等于衰老与结局改善？</div><div class="ov-l"><b>瓶颈</b> 分子/测量层缺金标准；干预/转化层因果识别不足；遗传层几乎缺席</div></a>
+<a class="ov" href="#topic-cohort" style="border-left-color:#0969da"><div class="ov-h"><span class="th" data-t="cohort">人群队列</span><span class="ov-n">人群健康与多组学 AI</span></div><div class="ov-s">朝阳期（生成式轨迹爆发、评测严重欠开发）</div><div class="ov-l"><b>问题</b> 疾病是否存在少数可重复、可校准、可干预的分子轨迹与共病亚型？</div><div class="ov-l"><b>瓶颈</b> 分子→个体因果识别不足；生成轨迹数据多样性不足；EHR 基础模型转化落地缺失</div></a>
 <a class="ov" href="#topic-cardio" style="border-left-color:#cf222e"><div class="ov-h"><span class="th" data-t="cardio">心血管</span><span class="ov-n">心血管队列多组学与临床 AI</span><span class="ov-deep">深度调研 2</span></div><div class="ov-s">朝阳期偏成熟的分化状态</div><div class="ov-l"><b>问题</b> 哪些循环分子对 CAD/心衰/房颤/卒中有因果效应，且跨东亚可复现、可干预？</div><div class="ov-l"><b>瓶颈</b> 遗传→分子因果识别不足；分子→组织测量不足；人群→干预转化落地缺失</div></a>
-<a class="ov" href="#topic-organoid" style="border-left-color:#9a6700"><div class="ov-h"><span class="th" data-t="organoid">类器官</span><span class="ov-n">类器官与模式生物虚拟响应建模</span></div><div class="ov-s">朝阳期偏早期，内部严重分化</div><div class="ov-l"><b>问题</b> 扰动响应哪些由保守网络决定、哪些由背景决定，能否因果预测患者结局？</div><div class="ov-l"><b>瓶颈</b> 因果识别不足 + 数据多样性不足；缺匹配扰动、跨物种基准、前瞻结局</div></a>
-<a class="ov" href="#topic-singlecell" style="border-left-color:#8250df"><div class="ov-h"><span class="th" data-t="singlecell">单细胞</span><span class="ov-n">单细胞与空间组学基础模型与虚拟细胞</span></div><div class="ov-s">朝阳期偏中后段，内部严重分化</div><div class="ov-l"><b>问题</b> 扰动如何跨供体/平台/物种把细胞从 A 推到 B，非转录模态能否约束状态？</div><div class="ov-l"><b>瓶颈</b> 分子→细胞因果识别不足+测量不足；细胞→组织数据多样性不足；转化落地不足</div></a>
-<a class="ov" href="#topic-vcell" style="border-left-color:#bf3989"><div class="ov-h"><span class="th" data-t="vcell">虚拟细胞</span><span class="ov-n">虚拟细胞与扰动响应预测</span></div><div class="ov-s">朝阳期偏早，内部严重分化</div><div class="ov-l"><b>问题</b> 扰动效应多少可由调控网络预测，多少必须实测，跨语境哪些不变？</div><div class="ov-l"><b>瓶颈</b> 因果识别不足+跨语境测量不足；原代/体内稀疏；干预转化靠试验</div></a>
-<a class="ov" href="#topic-ssl" style="border-left-color:#1b7c83"><div class="ov-h"><span class="th" data-t="ssl">世界模型</span><span class="ov-n">世界模型与自监督表征学习</span></div><div class="ov-s">错位窗口期（方法爆发、科学迁移刚起步）</div><div class="ov-l"><b>问题</b> 细胞/组织/健康轨迹是否是可由扰动干预的可预测隐状态？</div><div class="ov-l"><b>瓶颈</b> 分子→细胞测量不足；细胞→个体因果识别不足；人群跨队列多样性不足；落地瓶颈</div></a>
-<a class="ov" href="#topic-agent" style="border-left-color:#bc4c00"><div class="ov-h"><span class="th" data-t="agent">Agent</span><span class="ov-n">LLM 科研智能体与可验证奖励强化学习</span></div><div class="ov-s">朝阳（训练范式已热、落地空白）</div><div class="ov-l"><b>问题</b> 智能体假设能否独立复现，过程奖励能否达到专家因果验证水平？</div><div class="ov-l"><b>瓶颈</b> 分子→细胞过程验证缺失；因果识别与验证信号缺失；转化落地缺失</div></a>
+<a class="ov" href="#topic-organoid" style="border-left-color:#9a6700"><div class="ov-h"><span class="th" data-t="organoid">类器官</span><span class="ov-n">类器官与模式生物虚拟响应建模</span></div><div class="ov-s">朝阳期偏早期</div><div class="ov-l"><b>问题</b> 扰动响应哪些由保守网络决定、哪些由背景决定，能否因果预测患者结局？</div><div class="ov-l"><b>瓶颈</b> 因果识别不足 + 数据多样性不足；缺匹配扰动、跨物种基准、前瞻结局</div></a>
+<a class="ov" href="#topic-singlecell" style="border-left-color:#8250df"><div class="ov-h"><span class="th" data-t="singlecell">单细胞</span><span class="ov-n">单细胞与空间组学基础模型与虚拟细胞</span></div><div class="ov-s">朝阳期偏中后段</div><div class="ov-l"><b>问题</b> 扰动如何跨供体/平台/物种把细胞从 A 推到 B，非转录模态能否约束状态？</div><div class="ov-l"><b>瓶颈</b> 分子→细胞因果识别不足+测量不足；细胞→组织数据多样性不足；转化落地不足</div></a>
+<a class="ov" href="#topic-vcell" style="border-left-color:#bf3989"><div class="ov-h"><span class="th" data-t="vcell">虚拟细胞</span><span class="ov-n">虚拟细胞与扰动响应预测</span></div><div class="ov-s">朝阳期偏早期</div><div class="ov-l"><b>问题</b> 扰动效应多少可由调控网络预测，多少必须实测，跨语境哪些不变？</div><div class="ov-l"><b>瓶颈</b> 因果识别不足+跨语境测量不足；原代/体内稀疏；干预转化靠试验</div></a>
+<a class="ov" href="#topic-ssl" style="border-left-color:#1b7c83"><div class="ov-h"><span class="th" data-t="ssl">世界模型</span><span class="ov-n">世界模型与自监督表征学习</span></div><div class="ov-s">错位窗口期（核心范式爆发、科学迁移起步、评测空白）</div><div class="ov-l"><b>问题</b> 细胞/组织/健康轨迹是否是可由扰动干预的可预测隐状态？</div><div class="ov-l"><b>瓶颈</b> 分子→细胞测量不足；细胞→个体因果识别不足；人群跨队列多样性不足；落地瓶颈</div></a>
+<a class="ov" href="#topic-agent" style="border-left-color:#bc4c00"><div class="ov-h"><span class="th" data-t="agent">Agent</span><span class="ov-n">LLM 科研智能体与可验证奖励强化学习</span></div><div class="ov-s">朝阳期（训练范式已热、科研智能体爆发、生医落地与验证空…</div><div class="ov-l"><b>问题</b> 智能体假设能否独立复现，过程奖励能否达到专家因果验证水平？</div><div class="ov-l"><b>瓶颈</b> 分子→细胞过程验证缺失；因果识别与验证信号缺失；转化落地缺失</div></a>
 <div class="sec"><div class="sec-t">跨方向</div><div class="sec-d">两份报告分工不同：一份讲为什么（底层逻辑，每月更新），一份讲做什么（联合项目建议，每周更新）。</div></div>
 <details class="bg" data-src="bg/principles.html"><summary>为什么 · 全局判断（第一性原理）<span class="cnt">8 个领域 · 每月更新 · 更新 2026-09-27 · [证据] = 来自方向背景报告；[常识] = 模型领域知识，需核实</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/principles.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" data-src="bg/joint.html"><summary>做什么 · 联合行动建议<span class="cnt">8 个方向 · 证据 593 篇 · 更新 2026-09-27</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/joint.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
+<details class="bg" data-src="bg/joint.html"><summary>做什么 · 联合行动建议<span class="cnt">8 个方向 · 证据 601 篇 · 更新 2026-09-27</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/joint.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
 <div class="sec"><div class="sec-t">各方向</div><div class="sec-d">每个方向一份证据综述（每周吃日报增量重编）。卡片里先给 TL;DR，展开后加载全文；有深度调研的放在最上面。</div></div>
 <details class="bg" id="topic-aging" data-src="bg/aging.html"><summary><span class="th" data-t="aging">衰老</span>多模态衰老时钟与生物年龄<span class="cnt">证据 71 篇 · 覆盖度 0.62 · 第 4 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
@@ -477,25 +651,20 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 <li>数据基础设施走向统一框架与专用库并行：Biolearn 以开源库统一协调多种衰老标志物与数据集 [<a class="cite" href="#ref-aging-33">33</a>]，Immunosenescence Inventory 整合单细胞、bulk、表观组与 TCR/BCR 多物种数据并提供免疫时钟计算 [<a class="cite" href="#ref-aging-34">34</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/aging.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" id="topic-cohort" data-src="bg/cohort.html"><summary><span class="th" data-t="cohort">人群队列</span>人群健康与多组学 AI<span class="cnt">证据 90 篇 · 覆盖度 0.83 · 第 7 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-cohort" data-src="bg/cohort.html"><summary><span class="th" data-t="cohort">人群队列</span>人群健康与多组学 AI<span class="cnt">证据 94 篇 · 覆盖度 0.83 · 第 8 轮 · 更新 2026-09-27</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>生成式疾病轨迹模型已分化为贝叶斯概率混合（如 ALADYNOULLI，在 68.3 万余人、348 种疾病上识别 21 个可复制特征并发现 151 个全基因组显著位点）与 Transformer 自回归（如 Delphi-2M 覆盖 1000 多种 ICD-10 疾病、Foresight 利用约 80% 自由文本）两大谱系 [<a class="cite" href="#ref-cohort-1">1</a>][<a class="cite" href="#ref-cohort-2">2</a>][<a class="cite" href="#ref-cohort-3">3</a>]。</li>
-<li>规模扩张正遭遇数据治理瓶颈：Foresight-England 虽有 243M 参数、约 6100 万人训练数据，却因 NHS England 暂停数据访问导致定量结果不可得，暴露"规模"与"可验证性"的结构性张力 [<a class="cite" href="#ref-cohort-4">4</a>]。</li>
-<li>从预测走向干预成为新线索：EHR-MPC 用生成式数字孪生加模型预测控制，在 8 家医院 ICU 脓毒症队列上离线策略与强化学习基线相当、模拟性能更优，但仿真与真实临床的差距仍是主要局限 [<a class="cite" href="#ref-cohort-5">5</a>]。</li>
-<li>轨迹特征本身携带独立信号：基于 All of Us 297,861 人、12 项生物标志物 3 年轨迹的 LightGBM 模型 AUROC 0.797 显著优于静态 0.755（P&lt;0.001），并可提前 3-12 个月持续预测 [<a class="cite" href="#ref-cohort-6">6</a>]。</li>
-<li>外部验证不足是系统性短板：Foresight-England 无定量结果，NOAH（559M 事件、299,000 患者）与 MiGHT-EHR 均主要基于 MIMIC，ALADYNOULLI 仅覆盖三个生物库，跨医疗体系泛化性普遍未验证 [<a class="cite" href="#ref-cohort-4">4</a>][<a class="cite" href="#ref-cohort-7">7</a>][<a class="cite" href="#ref-cohort-8">8</a>][<a class="cite" href="#ref-cohort-1">1</a>]。</li>
-<li>蛋白组遗传资源规模跃升：UKB-PPP 对 54,219 人测量 2,941 个蛋白分析物，罕见编码变异路径在 49,736 人中鉴定 5,433 个罕见基因型-蛋白关联（81% 为既往 GWAS 未检出），但均受 UK Biobank 单队列与欧洲裔为主限制 [<a class="cite" href="#ref-cohort-9">9</a>][<a class="cite" href="#ref-cohort-10">10</a>]。</li>
-<li>群体差异证据呈"共享为主、特异为辅"：ARIC/AASK 中 7,213 名欧裔与 1,871 名非裔的 cis-pQTL 多数共享但存在人群特异信号，而 69.1% 的蛋白存在性别差异且仅 15.3%/20.5% 可由已知生理通路解释 [<a class="cite" href="#ref-cohort-11">11</a>][<a class="cite" href="#ref-cohort-12">12</a>]。</li>
-<li>蛋白-疾病全景关联的判别性能存在解读争议：UK Biobank 53,026 人、2,920 种蛋白关联 406 种现患与 660 种新发疾病，183 种疾病 AUC&gt;0.80，但该结果在同一人群、中位随访 14.8 年、缺乏外部验证条件下取得，不能直接等同于临床可用性 [<a class="cite" href="#ref-cohort-13">13</a>]。</li>
-<li>疾病亚型化直接挑战"一个疾病一个 PRS"：ATM 在 UK Biobank 282,957 人与 All of Us 211,908 人中识别 52 种共病异质性疾病，发现 18 个亚型的 PRS 显著异于同病其他亚型，但仅基于 EHR 共病信息、未纳入多组学 [<a class="cite" href="#ref-cohort-14">14</a>]。</li>
-<li>跨祖源整合争议集中：Pan-UK Biobank 跨祖源合并新发现 14,676 个仅欧洲分析未检出位点，GBMI 覆盖 23 个生物样本库、220 万人，但 PRS 精度并非随样本量单调增长，人群特异模型在部分性状上仍不可替代 [<a class="cite" href="#ref-cohort-15">15</a>][<a class="cite" href="#ref-cohort-16">16</a>][<a class="cite" href="#ref-cohort-17">17</a>][<a class="cite" href="#ref-cohort-18">18</a>]。</li>
-<li>PRS 临床转化的最大障碍可能是个体一致性：对 171,095 人、48 个冠心病 PRS 的评估显示群体水平表现相似的 PRS 在个体层面一致性差（ICC 与 Light κ 低），"选哪个 PRS"本身成为临床决策问题 [<a class="cite" href="#ref-cohort-19">19</a>]。</li>
-<li>非加性、结构性与双等位遗传效应覆盖明显不足：FinnGen 176,899 人隐性关联扫描揭示同一变异杂合与纯合可呈不同表型，UK Biobank 472,228 人 CNV 全表型关联发现 16p11.2、22q11.2 等位点，而主流流程仍以加性常见变异为主干 [<a class="cite" href="#ref-cohort-20">20</a>][<a class="cite" href="#ref-cohort-21">21</a>]。</li>
-<li>多模态生成与真实测量之间存在路线分歧：PULSE 从稀疏血检生成代谢组与蛋白质组（251 个标志物优于所有基准、6 种常见病 AUC 0.72–0.83），但生成数据可能继承训练队列偏差，与扩大真实多组学测量覆盖的路线验证标准并不相同 [<a class="cite" href="#ref-cohort-22">22</a>][<a class="cite" href="#ref-cohort-9">9</a>]。</li>
-<li>结构化 EHR 建模的争议集中在三点：编码语义统一是否必须依赖标准化（GRASP 用 LLM 语义嵌入在英芬美超 100 万人上给出否定答案，BEHRT/Med-BERT 隐含依赖本地编码）、预测目标是分类/生存/智能体推理、以及预训练规模与外部泛化的权衡 [<a class="cite" href="#ref-cohort-23">23</a>][<a class="cite" href="#ref-cohort-24">24</a>][<a class="cite" href="#ref-cohort-25">25</a>][<a class="cite" href="#ref-cohort-26">26</a>][<a class="cite" href="#ref-cohort-27">27</a>]。</li>
-<li>纵向多组学衰老研究揭示群体趋势与个体轨迹的偏离：335 名女性 8 年随访中 5,061 个基因和 181 个代谢物随时间变化但个体轨迹常偏离群体趋势，对单时点"衰老时钟"构成方法论挑战 [<a class="cite" href="#ref-cohort-28">28</a>]。</li>
-<li>衰老时钟"应测量什么"存在实质分歧：单时点偏差（PAI 基于 36 项临床指标）、纵向速度（LPAI 在 ARIC 2,954 人与 MESA 3,726 人中捕捉累积负担与变化速度）、器官特异性累积负担（274,247 人 5 个器官 MetBAG，独立测试 r 0.25–0.42）各有主张，样本量与随访差异巨大，目前更宜视为互补 [<a class="cite" href="#ref-cohort-29">29</a>][<a class="cite" href="#ref-cohort-30">30</a>][<a class="cite" href="#ref-cohort-31">31</a>]。</li>
-<li>队列基础设施的深度提升未自动解决多样性问题：UK Biobank 对 490,640 人 WGS 平均覆盖 32.5×、识别约 15 亿变异，较芯片插补增加 18.8 倍、较 WES 增加超 40 倍，但 93.5% 为非芬兰欧洲 ancestry，非欧洲样本仍然有限 [<a class="cite" href="#ref-cohort-32">32</a>]。</li>
+<li>生成式疾病轨迹模型已从静态EHR快照走向可外推时间序列，Delphi-2M覆盖1000多种ICD-10顶层诊断并评估亚组公平性，Foresight利用约80%自由文本、覆盖18类SNOMED概念，但两者均依赖登记或病历编码，且明确提示人群偏倚或不宜直接用于临床决策 [<a class="cite" href="#ref-cohort-1">1</a>][<a class="cite" href="#ref-cohort-2">2</a>]</li>
+<li>国家级EHR基础模型Foresight-England设计243M参数、基于约6100万人纵向EHR训练，却因NHS England暂停数据访问无法给出定量结果，与Delphi-2M、Foresight已有可报告结果形成反差，说明数据治理与可复现性可能比模型容量更决定证据强度 [<a class="cite" href="#ref-cohort-3">3</a>]</li>
+<li>NOAH以时间感知、任务无关生成式Transformer基于MIMIC家族559M事件、299,000患者训练，支持自回归预测、零样本分类和反事实干预模拟，但主要基于MIMIC、外部泛化待验证，与Foresight-England的全国尺度设计形成“规模”与“可验证”的取舍 [<a class="cite" href="#ref-cohort-4">4</a>]</li>
+<li>轨迹建模正与决策优化耦合：EHR-MPC在Mass General Brigham 8家医院ICU脓毒症队列上以生成式数字孪生加模型预测控制规划治疗，离线策略性能与强化学习基线相当、模拟性能更优，但依赖离线数据且仿真与真实临床存在差距 [<a class="cite" href="#ref-cohort-5">5</a>]</li>
+<li>ALADYNOULLI以贝叶斯生成路线联合建模纵向EHR诊断、年龄和多基因风险，覆盖三个生物库n&gt;683,000、随访52年、348种疾病，识别21个可复制特征并发现151个全基因组显著位点，但依赖EHR诊断编码、可能存在记录偏倚且仅纳入三个生物库人群 [<a class="cite" href="#ref-cohort-6">6</a>]</li>
+<li>亚型与预警子问题上方法差异明显：深度生存聚类整合变分自编码器与Weibull混合生存分布，AD/PD亚型研究用Transformer嵌入加K-means在CPRD Aurum内部验证、UK Biobank外部验证，两者均指向“亚型是否真实存在”的争议——聚类结构可能反映疾病生物学，也可能反映就诊行为或编码习惯 [<a class="cite" href="#ref-cohort-7">7</a>][<a class="cite" href="#ref-cohort-8">8</a>]</li>
+<li>非深度生成路线同样有效：基于All of Us 297,861人、12项生物标志物3年轨迹特征的LightGBM预测临床前功能衰退AUROC达0.797，显著优于静态汇总的0.755（P&lt;0.001），可提前3–12个月持续预测，但仅用常规实验室数据、缺乏外部队列验证 [<a class="cite" href="#ref-cohort-9">9</a>]</li>
+<li>多组学与遗传整合的核心张力在于：UKB全外显子测序从首批49,960人扩展到200,643人，454,787人分析发现8,865个显著关联且91%不能由常见变异LD解释，但不同研究在祖源覆盖和变异类型覆盖上存在共同短板，非欧洲样本分辨率低 [<a class="cite" href="#ref-cohort-10">10</a>][<a class="cite" href="#ref-cohort-11">11</a>][<a class="cite" href="#ref-cohort-12">12</a>][<a class="cite" href="#ref-cohort-13">13</a>]</li>
+<li>PRS跨祖源预测性能是争议焦点：GBMI显示PRS-CS总体优于P+T且欧洲LD面板精度相当或更高，All of Us与UKB研究则发现PRS精度随血统分歧线性下降、多血统训练可减缓，但元分析增大样本并非普遍最优；同时48个冠心病PRS在171,095人中群体水平表现相似却个体层面一致性差（ICC与Light κ低），提示临床使用需谨慎 [<a class="cite" href="#ref-cohort-14">14</a>][<a class="cite" href="#ref-cohort-15">15</a>][<a class="cite" href="#ref-cohort-16">16</a>]</li>
+<li>纵向多组学衰老研究揭示群体平均趋势与个体真实轨迹的偏离：335名女性8年随访发现5,061个基因和181个代谢物随时间显著变化且受遗传、昼夜节律、季节和污染物影响，个体轨迹常明显偏离群体趋势；UKB 420,746人、312种血液标志物分析则把节律紊乱视为可提取的预测信号，可独立预测98种未来发病风险，提示节律性波动究竟是被消除的噪声还是被建模的特征仍是核心分歧 [<a class="cite" href="#ref-cohort-17">17</a>][<a class="cite" href="#ref-cohort-18">18</a>]</li>
+<li>大规模队列资源呈现“深度”与“广度”分化：UK Biobank招募超过50万名40—69岁参与者、预计20年积累糖尿病68,000例等，All of Us目标至少100万名多样化参与者且超过80%来自历史上研究不足群体，但前者以健康志愿者为主、年龄范围有限，后者尚处招募早期、长期随访和数据完整性仍待建立 [<a class="cite" href="#ref-cohort-19">19</a>][<a class="cite" href="#ref-cohort-20">20</a>]</li>
+<li>真实世界EHR来源差异正成为可泛化性核心争议：All of Us中患者介导EHR与提供者来源EHR在393,590名参与者中人群特征、测序覆盖（35.2% vs 83.2%）和关联复制上存在差异，不能默认不同数据来源可互换；EST-Health-30则基于爱沙尼亚30%随机人群样本构建覆盖1000多个ICD-10三位字符诊断类别的全国尺度数字图谱，但仅基于单一国家样本、外推性仍需验证 [<a class="cite" href="#ref-cohort-21">21</a>][<a class="cite" href="#ref-cohort-22">22</a>]</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/cohort.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
 <details class="bg" id="topic-cardio" data-src="bg/cardio.html"><summary><span class="th" data-t="cardio">心血管</span>心血管队列多组学与临床 AI<span class="cnt">证据 92 篇 · 覆盖度 0.66 · 第 6 轮 · 更新 2026-09-27</span></summary><div class="bgbody"><details class="bg sub" data-src="bg/cardio-omics-deep-36e80f93.html"><summary>深度调研：心血管靶点问题因病种而异：ASCVD 与血压轴缺的是校准与实施链，ICH、HFpEF 与房颤基质仍缺靶点<span class="cnt">深度调研 · 心血管 · 2026-09-27</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/cardio-omics-deep-36e80f93.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details><details class="bg sub" data-src="bg/cardio-omics-deep-f26fe910.html"><summary>深度调研：专家评审综合：心血管调研（心内科 · 遗传流病 · 药物研发 · 医学 AI）<span class="cnt">深度调研 · 心血管 · 2026-09-27</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/cardio-omics-deep-f26fe910.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details><h2>摘要（TL;DR）</h2>
@@ -514,68 +683,49 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 <li>组学方法有前景但尚未被指南采纳：综述指出现有临床评分准确性有限、组学方法有潜力但尚未被指南采纳，统计增量不等于临床效用 [<a class="cite" href="#ref-cardio-13">13</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/cardio.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" id="topic-organoid" data-src="bg/organoid.html"><summary><span class="th" data-t="organoid">类器官</span>类器官与模式生物虚拟响应建模<span class="cnt">证据 62 篇 · 覆盖度 0.47 · 第 4 轮 · 更新 2026-09-27</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-organoid" data-src="bg/organoid.html"><summary><span class="th" data-t="organoid">类器官</span>类器官与模式生物虚拟响应建模<span class="cnt">证据 64 篇 · 覆盖度 0.47 · 第 5 轮 · 更新 2026-09-27</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>类器官扰动建模正从二维高通量筛选转向在 3D 类器官中直接施加扰动并结合单细胞/空间组学读出，OSCAR 以调控网络活性替代单纯表达变化，在肝类器官中鉴定出 c-Fos 加速、Ubr5 缺失抑制分化成熟 [<a class="cite" href="#ref-organoid-1">1</a>]。</li>
-<li>因果效应估计与调控网络排序形成方法分野：CINEMA-OT 用独立成分分析与加权最优传输实现因果细胞配对，在气道类器官病毒/烟雾扰动及 PBMC 刺激数据上验证，但依赖独立性与线性假设 [<a class="cite" href="#ref-organoid-2">2</a>]。</li>
-<li>遗传筛选规模化推进到人胃肿瘤类器官全套 CRISPR 平台（切割/CRISPRi/CRISPRa+单细胞读出），在 TP53/APC 双敲模型中筛选顺铂互作，揭示 DNA 修复通路趋同及 TAF6L 在损伤恢复期增殖中的作用 [<a class="cite" href="#ref-organoid-3">3</a>]。</li>
-<li>宫颈鳞癌工作提出 NF1 是 HPV 相关上皮演化关键限制因子，缺失将 5~10 年癌变压缩至 3~6 个月，NF1 恢复诱导凋亡、AI 设计模拟肽降低肿瘤负荷，但全文未获取、局限未明确 [<a class="cite" href="#ref-organoid-4">4</a>]。</li>
-<li>空间维度由 Perturb-FISH 推进，将 MERFISH 与 gRNA 原位扩增结合实现扰动与转录组空间联合读取，在 THP1 巨噬细胞中与 Perturb-seq 一致并揭示细胞密度与邻居扰动影响，但 gRNA 仅 20 bp 难以 tiling、3D 组织应用有限 [<a class="cite" href="#ref-organoid-5">5</a>]。</li>
-<li>类器官空间转录组标准化仍未收敛：Stereo-seq 系列优化芯片包被与通透条件，两篇工作结论一致但细节有出入（小类器官捕获偏低 vs 具体类器官保留数量），提示造血与悬浮肾类器官存在转录扩散、单细胞注释困难 [<a class="cite" href="#ref-organoid-6">6</a>][<a class="cite" href="#ref-organoid-7">7</a>]。</li>
-<li>药物扰动建模主线是患者特异药敏预测：直肠癌 PDO 活体生物库与 III 期临床试验对比给出预测准确率 84.43%、灵敏度 78.01%、特异性 91.97%，但样本来源单一临床试验需更多验证 [<a class="cite" href="#ref-organoid-8">8</a>]。</li>
-<li>微流控与器官芯片提供动态控制能力：自动化平台兼容 Matrigel 支持长期培养与实时监测但受凝胶与通量限制 [<a class="cite" href="#ref-organoid-9">9</a>]；单细胞来源肿瘤类器官阵列识别耐药亚群但通量与标准化受限 [<a class="cite" href="#ref-organoid-10">10</a>]；Heart-on-a-Miniscope 实现 228 lp/mm@60 帧/秒钙瞬变成像 [<a class="cite" href="#ref-organoid-11">11</a>]。</li>
-<li>成像与深度学习使扰动响应可不依赖分子读出预测：结直肠癌类器官明场图像 profiling 预测凋亡强度与真值相关 0.91 [<a class="cite" href="#ref-organoid-12">12</a>]；PDO 延时视频用 SAM+DI-NOv2 预测 ATP 优于非时间分辨方法 [<a class="cite" href="#ref-organoid-13">13</a>]；视网膜类器官用 117249 张明场图早期预测组织结局，但均依赖大量标注 [<a class="cite" href="#ref-organoid-14">14</a>]。</li>
-<li>多组学嵌入与表型分类把扰动响应扩展为多维表征：SCOPE 提出 GV 评分与 CCTR 并将药敏分为细胞毒、细胞静止加细胞毒、延迟细胞毒、细胞静止四类 [<a class="cite" href="#ref-organoid-15">15</a>]，与 Trellis 发现（靶向细胞周期阻断与 DNA 损伤常见但凋亡罕见、CAF 保护癌细胞抵抗化疗）共同提示以凋亡为终点的药敏评估可能系统性误判 [<a class="cite" href="#ref-organoid-16">16</a>]。</li>
-<li>神经与脑类器官扰动建模从多重化走向基础模型：皮层脑类器官多重化开发 SCanSNP 去卷积实现基因型识别与变异-轨迹关联 [<a class="cite" href="#ref-organoid-17">17</a>]；自闭症 AI 框架构建 360 万细胞图谱、基准 17 个模型并优先排序 343 个候选基因（167 个在关键簇，NBEA、KLHDC10 有复现证据）[<a class="cite" href="#ref-organoid-18">18</a>]；Leigh 综合征用深度学习药物重定位结合 ΔSHY 酵母筛选 2250 种 FDA 药物，独立识别唑类化合物 sertaconazole 与 talarozole [<a class="cite" href="#ref-organoid-19">19</a>]。</li>
-<li>强化学习与物理读出代表扰动建模两个极端：DiRL 把分化建模为目标条件序列决策，对随机扰动胜率 69% 并恢复 Wnt/Hedgehog 顺序调控因子，但真实生物验证有限 [<a class="cite" href="#ref-organoid-20">20</a>]；胃癌纳米机械振动传感检测 pM 级紫杉醇引起的振动变化早于形态改变，CNN 分类准确率 97%，但依赖 AFM、通量有限 [<a class="cite" href="#ref-organoid-21">21</a>]。</li>
-<li>跨物种迁移瓶颈正从"找同源基因"转向"找可迁移表示"：CAME 用半监督异构图神经网络编码表达矩阵与同源映射支持一对多/多对多注释，但依赖同源映射质量 [<a class="cite" href="#ref-organoid-22">22</a>]；SATURN 用蛋白语言模型嵌入分组"宏基因"实现远缘物种注释迁移并优于序列相似性方法，但受嵌入质量与宏基因可解释性制约 [<a class="cite" href="#ref-organoid-23">23</a>]。</li>
-<li>基础模型"通用 vs 知识注入"路线尚未直接对决：UCE 自监督构建统一潜空间覆盖 3600 万细胞、8 物种但全文未获取 [<a class="cite" href="#ref-organoid-24">24</a>]；GeneCompass 在 1.017 亿人鼠细胞上整合四类先验知识、微调后多任务达或近 SOTA 但主要限人鼠 [<a class="cite" href="#ref-organoid-25">25</a>]；mouse-Geneformer 迁移人类编码器至小鼠但仅用健康野生型数据 [<a class="cite" href="#ref-organoid-26">26</a>]。</li>
-<li>空间组学把跨物种迁移推进到组织生态位对齐：Nicheformer 在 SpatialCorpus-110M（超 1.1 亿细胞、5383 万空间细胞、73 组织）预训练，空间依赖任务系统性优于 Geneformer/scGPT/UCE/CellPLM，与 UCE 通用嵌入形成张力 [<a class="cite" href="#ref-organoid-27">27</a>]；BrainBeacon 基于 1.33 亿空间细胞实现四物种全脑对齐但全文未获取 [<a class="cite" href="#ref-organoid-28">28</a>]；LucaCell 用 mRNA 序列嵌入在 8500 万人鼠细胞预训练实现无手动映射注释 [<a class="cite" href="#ref-organoid-29">29</a>]。</li>
-<li>扰动响应核心子问题上 CellOT 用神经最优传输从非配对数据学习扰动映射，在跨物种 LPS 响应等任务优于 SOTA，但依赖未配对假设与训练队列异质性 [<a class="cite" href="#ref-organoid-30">30</a>]；跨物种细胞景观用 Microwell-seq 分析超 260 万细胞并整合 15 物种，发现结构炎症与线粒体功能障碍为常见衰老标志 [<a class="cite" href="#ref-organoid-31">31</a>]；小胶质细胞图谱识别保守 LAM 状态（APOE/TREM2/GPNMB 高表达）但依赖二次分析与整合方法 [<a class="cite" href="#ref-organoid-32">32</a>]。</li>
-<li>类器官数字孪生仍属概念整合：AIVOs 框架提出数据-模型-交互三层路径，将虚拟干细胞、功能细胞与肿瘤细胞定义为可复用基元以打通分子到临床决策链路，但尚无针对具体药物筛选任务的验证结果 [<a class="cite" href="#ref-organoid-33">33</a>]。</li>
-<li>AIVOs 落地受物理类器官实验特性约束：Matrigel 批次差异大、手动操作频繁、测量多为终点式，导致训练数据分布不稳定、时间动态缺失、通量与标准化不足，虚拟模型能否在批次差异下稳健尚未实证 [<a class="cite" href="#ref-organoid-33">33</a>]。</li>
-<li>PDO 与临床响应是效度层级与可行性条件的复合问题：胰腺癌 30 例 PDO 生物库测试 76 种药物揭示 PRMT5 抑制剂对 MTAP 阴性肿瘤有效但需进一步验证 [<a class="cite" href="#ref-organoid-34">34</a>]；系统综述强调需同时满足分析效度、临床效度和临床效用，现有研究异质性大、临床效用证据有限 [<a class="cite" href="#ref-organoid-35">35</a>]。</li>
-<li>消化道肿瘤证据在预测准确率上较一致但前瞻性规模不足：转移性结直肠癌 PDO 对伊立替康为基础治疗预测准确率超 80% 且无误分类但样本有限 [<a class="cite" href="#ref-organoid-36">36</a>]；胃癌 73 例建成 57 个类器官成功率 78% 可传 17 代并富集干性/增殖基因 [<a class="cite" href="#ref-organoid-37">37</a>]；结直肠癌肝转移前瞻性观察 30 例建 39 个类器官但随访有限 [<a class="cite" href="#ref-organoid-38">38</a>]。</li>
-<li>妇科肿瘤揭示预测能力与取材部位相关：卵巢癌 191 个类器官来自 123 例患者，原发肿瘤来源预测准确性最高、转移灶次之、腹水来源较低 [<a class="cite" href="#ref-organoid-39">39</a>]；23 例患者 36 个 PDO 中 88% 对至少一种药物高响应但异质性机制未完全阐明 [<a class="cite" href="#ref-organoid-40">40</a>]；长期培养后药敏稳定性证据不充分 [<a class="cite" href="#ref-organoid-41">41</a>]。</li>
-<li>难治肿瘤中类器官功能性读出可能提供增量信息：GBO 比 MGMT 启动子甲基化更准确预测 TMZ 个体反应并筛选出 lazertinib 有效 [<a class="cite" href="#ref-organoid-42">42</a>]；iPSC 脑类器官共培养 IPTO 在前瞻性队列预测患者特异药物响应但未提及通量与成本 [<a class="cite" href="#ref-organoid-43">43</a>]；骨肉瘤 PDO 可预测新辅助化疗反应与长期生存但面临 3D 培养启动挑战 [<a class="cite" href="#ref-organoid-44">44</a>]。</li>
-<li>药敏数据解读方式本身影响预后判断：乳腺癌类器官嵌入 I-SPY2 框架进行 386 化合物 10 剂量筛选但样本量有限 [<a class="cite" href="#ref-organoid-45">45</a>]；CODRP 整合 AUC、生长率与分期，PFS 预后准确性优于传统 AUC 方法 [<a class="cite" href="#ref-organoid-46">46</a>]；PharmaFormer 用 900+ 细胞系、100+ 药物 GDSC 预训练再微调，承认类器官数据不足 [<a class="cite" href="#ref-organoid-47">47</a>]。</li>
-<li>单项研究与荟萃分析存在张力：荟萃分析纳入 411 对患者-模型配对（267 PDX、144 PDO）发现总体治疗反应一致率 70%、PDX 与 PDO 无显著差异、PDO 应答者无进展生存延长，而单项研究常报告 80% 以上准确率，差距可能来自设计、瘤种、偏倚与终点定义异质性 [<a class="cite" href="#ref-organoid-48">48</a>]。</li>
-<li>基础模型评测在 2026 年出现两条路线且均指向可复现性难题：统一框架对 Nicheformer、CellPLM、scGPT-spatial、GenePT、scELMo、Novae 六模型基准测试发现无任何模型全面占优、排名随模态/预处理/token化/先验/域偏移/指标而变 [<a class="cite" href="#ref-organoid-49">49</a>]；VCBench 整合四框架七维度评测 Geneformer、scGPT、UCE、TranscriptFormer、Arc State 及预注册线性/KNN 基线，发现基线在五个可测维度中四个匹配或超越所有基础模型，仅 TranscriptFormer 跨模态 RNA-蛋白预测 Pearson 提升 53% [<a class="cite" href="#ref-organoid-50">50</a>]。</li>
+<li>类器官扰动建模正从单一标记读出转向多维读出（regulon活性、因果配对、空间邻域、PTM/凋亡），但读出维度越高，通量与标准化越受限 [<a class="cite" href="#ref-organoid-1">1</a>][<a class="cite" href="#ref-organoid-2">2</a>][<a class="cite" href="#ref-organoid-3">3</a>][<a class="cite" href="#ref-organoid-4">4</a>]</li>
+<li>OSCAR在3D类器官中以调控网络为读出，鉴定出c-Fos扰动加速肝细胞分化成熟、Ubr5缺失起相反作用，但受单细胞噪声与dropout限制 [<a class="cite" href="#ref-organoid-1">1</a>]</li>
+<li>类器官CRISPR筛选已扩展到基因-药物互作与多模态体系，如胃肿瘤类器官中揭示DNA修复通路趋同与蛋白岩藻糖化关联顺铂敏感性 [<a class="cite" href="#ref-organoid-5">5</a>]</li>
+<li>Perturb-FISH将CRISPR筛选与空间转录组联合，揭示细胞密度与邻居扰动对基因回路的影响，但gRNA仅20bp难以tiling、3D组织应用仍有限 [<a class="cite" href="#ref-organoid-3">3</a>]</li>
+<li>药敏预测正从终点活力走向动态、组合与微环境感知，切片培养可在24小时内完成GBM药敏筛选并保留肿瘤微环境，但仅7例、短期培养 [<a class="cite" href="#ref-organoid-6">6</a>]</li>
+<li>Trellis分析&gt;2500个CRC PDO与CAF发现凋亡罕见且患者特异，CAF促proCSC向revCSC转变以耐药，但预印本版本无全文、数据规模未提供 [<a class="cite" href="#ref-organoid-4">4</a>][<a class="cite" href="#ref-organoid-7">7</a>]</li>
+<li>图像与深度学习已能预测类器官凋亡强度（与真值相关0.91）和早期组织结局，但各方法基准不统一（真值相关、ATP金标准、表型分组） [<a class="cite" href="#ref-organoid-8">8</a>][<a class="cite" href="#ref-organoid-9">9</a>][<a class="cite" href="#ref-organoid-10">10</a>][<a class="cite" href="#ref-organoid-11">11</a>]</li>
+<li>AI驱动扰动建模在预测目标上分化明显（全基因组扰动响应、多步扰动策略、药物重定位、靶向治疗响应），但多数预测仍停留在计算验证或有限实验验证阶段 [<a class="cite" href="#ref-organoid-12">12</a>][<a class="cite" href="#ref-organoid-13">13</a>][<a class="cite" href="#ref-organoid-14">14</a>][<a class="cite" href="#ref-organoid-15">15</a>]</li>
+<li>患者来源类器官临床预测证据强度不一：直肠癌PDO预测准确率84.43%、灵敏度78.01%、特异性91.97%，但受单一临床试验来源限制，且正常细胞过度生长与克隆性漂移可能削弱保真度 [<a class="cite" href="#ref-organoid-16">16</a>][<a class="cite" href="#ref-organoid-17">17</a>]</li>
+<li>跨物种迁移方法从显式对齐（CellOT、CAME）演进到通用嵌入与生成建模（SATURN、UCE、GeneCompass、Nicheformer、Speciesformer），但保守与特异变异的区分至今尚无系统性定量答案 [<a class="cite" href="#ref-organoid-18">18</a>][<a class="cite" href="#ref-organoid-19">19</a>][<a class="cite" href="#ref-organoid-20">20</a>][<a class="cite" href="#ref-organoid-21">21</a>][<a class="cite" href="#ref-organoid-22">22</a>][<a class="cite" href="#ref-organoid-23">23</a>][<a class="cite" href="#ref-organoid-24">24</a>]</li>
+<li>类器官数字孪生（AIVOs）提出数据层-模型层-交互层三层结构与可复用基元，但Matrigel依赖、批次差异与终点测量使全链条可重复性仍受制于湿实验端标准化程度 [<a class="cite" href="#ref-organoid-25">25</a>]</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/organoid.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" id="topic-singlecell" data-src="bg/singlecell.html"><summary><span class="th" data-t="singlecell">单细胞</span>单细胞与空间组学基础模型与虚拟细胞<span class="cnt">证据 86 篇 · 覆盖度 0.65 · 第 5 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-singlecell" data-src="bg/singlecell.html"><summary><span class="th" data-t="singlecell">单细胞</span>单细胞与空间组学基础模型与虚拟细胞<span class="cnt">证据 87 篇 · 覆盖度 0.65 · 第 6 轮 · 更新 2026-09-27</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>单细胞基础模型的核心范式是把 NLP 自监督预训练迁移到细胞生物学，以 Geneformer（约 3000 万细胞）[<a class="cite" href="#ref-singlecell-1">1</a>] 和 scGPT（超 3300 万细胞）[<a class="cite" href="#ref-singlecell-2">2</a>] 确立“大规模预训练 + 下游微调”路线。</li>
-<li>规模扩张趋势明显：CellFM 达 1 亿人类细胞 [<a class="cite" href="#ref-singlecell-3">3</a>]，scPRINT-2 达 3.5 亿细胞/16 物种 [<a class="cite" href="#ref-singlecell-4">4</a>]，TranscriptFormer 覆盖 1.12 亿细胞/12 物种/15.3 亿年进化 [<a class="cite" href="#ref-singlecell-5">5</a>]。</li>
-<li>结构先验路线以 RegFormer 为代表，将 GRN 先验与 Mamba 架构结合，在 2500 万人类细胞上预训练，在注释、GRN 重建、扰动预测和药物响应上优于 scGPT 与 Geneformer [<a class="cite" href="#ref-singlecell-6">6</a>]。</li>
-<li>规模收益存在直接争议：400 个模型、6400 次实验未发现清晰数据缩放定律，性能常在远小于现有语料时饱和 [<a class="cite" href="#ref-singlecell-7">7</a>]，与 CellFM、scPRINT-2 的“更大即更好”形成张力 [<a class="cite" href="#ref-singlecell-3">3</a>][<a class="cite" href="#ref-singlecell-4">4</a>]。</li>
-<li>零样本评估对基础模型成色提出尖锐质疑：在 Pancreas 16k、PBMC 12k 等数据集上，Geneformer 和 scGPT 多数指标低于 HVG、Harmony、scVI 基线，HVG 在所有指标上优于二者 [<a class="cite" href="#ref-singlecell-8">8</a>]。</li>
-<li>表征读取方式本身成为变量：逐层分析显示轨迹推断中中间层优于最终层达 31%、稳定在 60% 深度，扰动最优层随 T 细胞激活状态偏移 0–96%，挑战“默认最终层嵌入”惯例 [<a class="cite" href="#ref-singlecell-9">9</a>]。</li>
-<li>复用外部知识可低成本竞争：GenePT 用 GPT-3.5 基因文本嵌入在部分任务上媲美 Geneformer [<a class="cite" href="#ref-singlecell-10">10</a>]，PTM-Mamba 复用 ESM-2 嵌入与 79,707 条修饰序列训练 [<a class="cite" href="#ref-singlecell-11">11</a>]。</li>
-<li>虚拟细胞方向从“注释准不准”转向生成、反事实与样本级异质性：scDifformer 三阶段扩散后训练在 7 个组织提升跨数据集表现 [<a class="cite" href="#ref-singlecell-12">12</a>]，MrVI 用层次生成模型实现无注释差异表达与丰度分析 [<a class="cite" href="#ref-singlecell-13">13</a>]。</li>
-<li>检索路线与生成路线分化：SCimilarity 在 2340 万细胞、412 项研究上以度量学习实现跨器官细胞搜索，不追求生成新表达，说明单细胞基础模型是围绕注释、整合、生成、检索分化的方法群 [<a class="cite" href="#ref-singlecell-14">14</a>]。</li>
-<li>空间与多模态基础模型的核心张力在于跨模态对齐与评测：PAST 基于 2000 万配对病理图像与单细胞转录组 [<a class="cite" href="#ref-singlecell-15">15</a>]，OmiCLIP 基于 220 万 patch/1007 样本/32 器官 [<a class="cite" href="#ref-singlecell-16">16</a>]，而 CellWorld 以 5.74M 参数在全部 11 个线性探针和 7 个空间基准上超越基线，挑战“参数与数据规模决定空间迁移能力”的直觉 [<a class="cite" href="#ref-singlecell-17">17</a>]。</li>
-<li>扰动响应与虚拟细胞的路线分歧集中在泛化来源：Tahoe-x1 以 30 亿参数在四项基准达 SOTA [<a class="cite" href="#ref-singlecell-18">18</a>]，但 70M 参数跨模态蛋白质组继续预训练模型在多数基准匹配或超过 1B/3B RNA-only 模型 [<a class="cite" href="#ref-singlecell-19">19</a>]。</li>
-<li>评估标准本身尚未统一：具体模型以留出扰动/细胞系精度为成功标志 [<a class="cite" href="#ref-singlecell-20">20</a>][<a class="cite" href="#ref-singlecell-21">21</a>]，可信虚拟细胞路线图主张超越留出重建、转向未见细胞类型与扰动的生物学泛化 [<a class="cite" href="#ref-singlecell-22">22</a>]，虚拟细胞挑战赛试图以开放基准仲裁但尚未给出模型结果 [<a class="cite" href="#ref-singlecell-23">23</a>]。</li>
-<li>可解释性研究呈现张力：SAE 特征图谱显示仅 3/48（6.2%）转录因子具调控靶标特异性 [<a class="cite" href="#ref-singlecell-24">24</a>]，因果电路追踪 CRISPRi 方向准确率仅 56.4% [<a class="cite" href="#ref-singlecell-25">25</a>]，但 L5 层穷举电路追踪将显著下游边扩大 27 倍，提示“调控逻辑稀缺”可能部分源于采样偏差 [<a class="cite" href="#ref-singlecell-26">26</a>]。</li>
-<li>数据与平台异质性是共同约束：四平台基准显示 Stereo-seq、Visium HD、CosMx、Xenium 性能差异显著 [<a class="cite" href="#ref-singlecell-27">27</a>]，SEA-AD 虽整合 340 万核/84 供体但主要聚焦 MTG [<a class="cite" href="#ref-singlecell-28">28</a>]，扰动数据普遍受限于数百分子、少数细胞系与供体数量 [<a class="cite" href="#ref-singlecell-20">20</a>][<a class="cite" href="#ref-singlecell-29">29</a>]。</li>
+<li>单细胞基础模型把NLP的预训练—微调范式迁移到转录组，将细胞类比句子、基因类比词元，Geneformer（约3000万细胞）与scGPT（超3300万细胞）确立了“大规模预训练+下游迁移”的基本范式[<a class="cite" href="#ref-singlecell-1">1</a>][<a class="cite" href="#ref-singlecell-2">2</a>][<a class="cite" href="#ref-singlecell-3">3</a>]。</li>
+<li>规模驱动路线不断刷新语料量级：CellFM（1亿人类细胞）[<a class="cite" href="#ref-singlecell-4">4</a>]、scPRINT-2（3.5亿细胞、16物种）[<a class="cite" href="#ref-singlecell-5">5</a>]、TranscriptFormer（1.12亿细胞、12物种、15.3亿年进化）[<a class="cite" href="#ref-singlecell-6">6</a>]与Speciesformer（1.31亿细胞）[<a class="cite" href="#ref-singlecell-7">7</a>]均把“更大语料、更多物种”当作提升泛化的手段。</li>
+<li>规模收益存在直接冲突证据：一项用2220万细胞训练400个模型、进行6400次实验的系统研究发现性能在远小于现有语料时就趋于平台，未显示清晰的数据缩放定律[<a class="cite" href="#ref-singlecell-8">8</a>]，与CellFM、scPRINT-2等报告的正向结果形成张力[<a class="cite" href="#ref-singlecell-4">4</a>][<a class="cite" href="#ref-singlecell-5">5</a>]。</li>
+<li>零样本泛化受到尖锐质疑：在Pancreas 16k、PBMC 12k等五个数据集上，Geneformer和scGPT在AvgBIO上多数低于HVG、Harmony、scVI等简单基线，HVG在所有指标上优于二者，且预训练与评估数据存在部分重叠问题[<a class="cite" href="#ref-singlecell-9">9</a>]。</li>
+<li>架构与知识驱动路线试图绕开单纯堆数据：RegFormer融合GRN先验与Mamba在2500万细胞上预训练[<a class="cite" href="#ref-singlecell-10">10</a>]，scDifformer用掩码预训练+扩散后训练提升跨研究泛化[<a class="cite" href="#ref-singlecell-11">11</a>]，GenePT仅用GPT-3.5生成基因文本嵌入即达到与Geneformer相当甚至更优性能[<a class="cite" href="#ref-singlecell-12">12</a>]。</li>
+<li>表征层选择被系统性误用：对scFoundation和Tahoe-X1的逐层评估发现最优层是任务与上下文依赖的，轨迹推断中中间层优于最终层达31%、稳定在60%深度，扰动最优层随T细胞激活状态偏移0–96%，直接挑战“默认使用最终层嵌入”的假设[<a class="cite" href="#ref-singlecell-13">13</a>]。</li>
+<li>空间与多模态基础模型的核心张力在于单细胞粒度与组织学通用性的取舍：PAST以2000万配对病理图像与单细胞转录组训练单细胞粒度模型[<a class="cite" href="#ref-singlecell-14">14</a>]，OmiCLIP则在ST-bank的220万组织patch、1007样本、32器官上做patch级对齐以换取更广任务覆盖[<a class="cite" href="#ref-singlecell-15">15</a>]。</li>
+<li>是否必须重建基因表达出现路线分歧：CellWorld转向JEPA式潜在细胞表征预测，用4600万人细胞、3平台11器官训练，CellWorld-Small（5.74M）在全部11个线性探针和7个空间基准上超越所有基线，仅用5%语料的冻结Large模型在7个空间基准上超越全部微调基线[<a class="cite" href="#ref-singlecell-16">16</a>]，与PAST、OmiCLIP以显式基因表达预测为核心任务形成直接对照[<a class="cite" href="#ref-singlecell-14">14</a>][<a class="cite" href="#ref-singlecell-15">15</a>]。</li>
+<li>扰动响应与虚拟细胞领域缩放叙事受到挑战：Tahoe-x1以最高30亿参数在四项基准达SOTA、计算效率提升3–30倍[<a class="cite" href="#ref-singlecell-17">17</a>]，但跨模态继续预训练显示70M参数模型在48,843个蛋白质组样本上训练一个epoch即可在多数原基准上匹配或超过1B/3B RNA-only模型[<a class="cite" href="#ref-singlecell-18">18</a>]。</li>
+<li>机制可解释性证据偏悲观：对Geneformer V2-316M与scGPT的SAE图谱研究显示29–59%特征可注释到通路，但仅3/48（6.2%）转录因子显示调控靶标特异性响应，99.8%特征在SVD下不可见[<a class="cite" href="#ref-singlecell-19">19</a>]；另一项37项分析、153个统计检验的评估发现平凡基因级基线AUROC达0.81–0.88，反优于注意力边的0.70，消融调控头也无性能退化[<a class="cite" href="#ref-singlecell-20">20</a>]。</li>
+<li>评估与转化框架正在形成但尚未裁决争议：AIVC路线图提出预测、生成、可查询三大能力[<a class="cite" href="#ref-singlecell-21">21</a>]，虚拟细胞挑战赛提供开放基准与评估框架[<a class="cite" href="#ref-singlecell-22">22</a>]，可信虚拟细胞路线图则批评静态图谱、仅转录组读出与分布内基准不足以预测新条件，主张评估转向泛化到未见细胞类型与扰动[<a class="cite" href="#ref-singlecell-23">23</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/singlecell.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" id="topic-vcell" data-src="bg/vcell.html"><summary><span class="th" data-t="vcell">虚拟细胞</span>虚拟细胞与扰动响应预测<span class="cnt">证据 36 篇 · 覆盖度 0.56 · 第 2 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-vcell" data-src="bg/vcell.html"><summary><span class="th" data-t="vcell">虚拟细胞</span>虚拟细胞与扰动响应预测<span class="cnt">证据 37 篇 · 覆盖度 0.56 · 第 3 轮 · 更新 2026-09-27</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>早期范式由scGen确立，用变分自编码器在潜空间学习扰动向量并做“潜空间算术”，把扰动响应转化为表征空间方向性变换，但全文未提供、方法细节与基准表现难核验[<a class="cite" href="#ref-vcell-1">1</a>]。</li>
-<li>scGPT在超过3300万个单细胞RNA测序图谱上预训练生成式Transformer，把扰动预测纳入通用基础模型统一框架，但未针对扰动数据设计归纳偏置，埋下“通用基础模型是否足够”的争论[<a class="cite" href="#ref-vcell-2">2</a>]。</li>
-<li>scKITE以179,067个预训练样本、不足先前强模型0.5%的数据量，通过注入细胞注释与GRN监督在多个下游任务上超越Geneformer、scGPT、scFoundation，知识增强训练带来平均28.8%相对提升，与scGPT的大规模无标注预训练路线形成直接张力[<a class="cite" href="#ref-vcell-3">3</a>][<a class="cite" href="#ref-vcell-2">2</a>]。</li>
-<li>扩散与流匹配技术族内部差异集中在“如何约束生成过程”：D²R²用掩码离散扩散加调控引导排序在Norman19五项指标最优[<a class="cite" href="#ref-vcell-4">4</a>]，scBalFlow用两阶段解耦训练缓解药物扰动类别不平衡[<a class="cite" href="#ref-vcell-5">5</a>]，SCALE用条件传输模型处理非配对群体问题并在CRISPR数据7项指标领先[<a class="cite" href="#ref-vcell-6">6</a>]。</li>
-<li>数据规模与情境多样性成为另一竞争轴线：X-Cell构建含2560万扰动单细胞、16种生物学情境的X-Atlas/Pisces，在Pearson Δ等指标上优于现有最先进模型最高达五倍[<a class="cite" href="#ref-vcell-7">7</a>]；PerturbGen训练于超1亿单细胞，把预测目标转向沿细胞轨迹的扰动响应[<a class="cite" href="#ref-vcell-8">8</a>]。</li>
-<li>显式建模调控结构的路线主张GRN可作为预测骨架：D-SPIN从数千扰动条件推断机制可解释的GRN[<a class="cite" href="#ref-vcell-9">9</a>]，RegVelo联合建模剪接动力学与基因调控互作并验证tfec、elf1[<a class="cite" href="#ref-vcell-10">10</a>]，TFActProfiler整合TF-mRNA先验与RNA-seq图谱实现轻量先验整合[<a class="cite" href="#ref-vcell-11">11</a>]。</li>
-<li>最简方法在分布外扰动预测上表现强竞争力：知识图谱KNN击败几乎所有方法，RL优化推理LLM调整邻域后在Replogle 2022细胞系上达SOTA，对复杂生成模型构成尖锐质疑[<a class="cite" href="#ref-vcell-12">12</a>]；CellFluxRL用七类奖励后训练CellFlux，说明生成质量与生物学正确性之间需额外约束机制弥合[<a class="cite" href="#ref-vcell-13">13</a>]。</li>
-<li>应用层面扰动预测正从“预测表达变化”走向“预测可干预的因果结构”：scDEFT把药物视为条件算子在116万细胞IBD图谱上治疗前应答分层AUROC达0.70[<a class="cite" href="#ref-vcell-14">14</a>]，UniPert-G2CP用两阶段框架桥接遗传与化学筛选实现跨模态表型迁移[<a class="cite" href="#ref-vcell-15">15</a>]。</li>
-<li>细胞世界模型出现定义层、预测层与精炼层三条路线：VCWM框架把虚拟细胞定义为有状态动态系统并写入长程规划能力但未报告任何定量结果[<a class="cite" href="#ref-vcell-16">16</a>]，Chreode实现一步式残差转移算子在240万细胞小鼠胚胎图谱预训练、GEARS上DE20 MSE从0.2121降至0.1858但明确不声称规划能力[<a class="cite" href="#ref-vcell-17">17</a>]，CellScientist用假设—实现闭环把PCC从0.3416提升至0.4368但依赖LLM代理[<a class="cite" href="#ref-vcell-18">18</a>]。</li>
-<li>评测效度面临三重质疑：2220万细胞预训练400个模型、6400次实验发现性能在数据规模远小于现有语料时即达平台期且无明确数据缩放定律[<a class="cite" href="#ref-vcell-19">19</a>]；细胞级随机划分会泄漏组内答案，患者队列中的泄漏足以推翻临床结论[<a class="cite" href="#ref-vcell-20">20</a>]；药物盲性能显著下降、部分模型完全失败，泛化主要限于同类内[<a class="cite" href="#ref-vcell-21">21</a>]。</li>
-<li>领域分歧集中在三个层面：表征与生成之争（scGPT/scKITE对OCOO-T/D²R²/scBalFlow/SCALE，KNN结果质疑复杂生成是否必要）[<a class="cite" href="#ref-vcell-2">2</a>][<a class="cite" href="#ref-vcell-3">3</a>][<a class="cite" href="#ref-vcell-22">22</a>][<a class="cite" href="#ref-vcell-4">4</a>][<a class="cite" href="#ref-vcell-5">5</a>][<a class="cite" href="#ref-vcell-6">6</a>][<a class="cite" href="#ref-vcell-12">12</a>]、数据规模与知识注入之争[<a class="cite" href="#ref-vcell-7">7</a>][<a class="cite" href="#ref-vcell-8">8</a>][<a class="cite" href="#ref-vcell-3">3</a>][<a class="cite" href="#ref-vcell-11">11</a>]、预测目标之争（静态表达谱、轨迹重塑、状态比例、治疗前分层与跨模态迁移定义不一导致基准难直接比较）[<a class="cite" href="#ref-vcell-2">2</a>][<a class="cite" href="#ref-vcell-8">8</a>][<a class="cite" href="#ref-vcell-9">9</a>][<a class="cite" href="#ref-vcell-14">14</a>][<a class="cite" href="#ref-vcell-15">15</a>]。</li>
-<li>数据资源呈分层图景：转录组规模已达亿级[<a class="cite" href="#ref-vcell-23">23</a>]、蛋白动态达千万级[<a class="cite" href="#ref-vcell-24">24</a>]，但原代与体内覆盖仍稀疏[<a class="cite" href="#ref-vcell-25">25</a>][<a class="cite" href="#ref-vcell-26">26</a>]、空间维度刚起步[<a class="cite" href="#ref-vcell-27">27</a>]，如何在异质资源间建立可比的扰动响应表征仍是核心争议。</li>
-<li>AIVC被提出为整合细胞生物学、AI算法与多尺度建模的研究范式，综述梳理VCell、E-Cell、CellML、JCVI-syn3A、scFoundation（1亿参数、5000万+细胞）、GET（覆盖213种人类细胞类型）等模型，但跨尺度整合、泛化性与标准化仍具挑战，现有证据更支持将其视为多路线并行的研究议程而非已完成统一验证的单一系统[<a class="cite" href="#ref-vcell-28">28</a>]。</li>
+<li>早期范式由scGen的潜空间算术确立，但scGPT以超3300万细胞预训练转向"大规模预训练+微调"，两者对扰动响应预测的定义并不一致，埋下评测争议伏笔[<a class="cite" href="#ref-vcell-1">1</a>][<a class="cite" href="#ref-vcell-2">2</a>]。</li>
+<li>生成范式沿流匹配、离散扩散、扩散语言模型、条件传输多线分化，OCOO-T与scBalFlow同用流匹配却对失败原因给出不同诊断（分布学习难 vs 类别不平衡）[<a class="cite" href="#ref-vcell-3">3</a>][<a class="cite" href="#ref-vcell-4">4</a>]。</li>
+<li>数据规模持续扩张：X-Cell构建2560万扰动细胞、PerturbGen超1亿细胞、Speciesformer达1.31亿细胞，但scKITE以不足0.5%数据量取得平均28.8%相对提升，直接质疑规模必要性[<a class="cite" href="#ref-vcell-5">5</a>][<a class="cite" href="#ref-vcell-6">6</a>][<a class="cite" href="#ref-vcell-7">7</a>][<a class="cite" href="#ref-vcell-8">8</a>]。</li>
+<li>知识注入路线对"大模型+大参数"构成直接挑战：最简KNN在分布外扰动预测上击败几乎所有方法，RL优化推理LLM在Replogle 2022上达SOTA[<a class="cite" href="#ref-vcell-9">9</a>]。</li>
+<li>调控网络先验内部存在竞争：D-SPIN从扰动数据推断网络、RegVelo强调动力学与多模态验证、TFActProfiler强调先验资源与免训练迁移，对"网络从哪来"回答截然不同[<a class="cite" href="#ref-vcell-10">10</a>][<a class="cite" href="#ref-vcell-11">11</a>][<a class="cite" href="#ref-vcell-12">12</a>]。</li>
+<li>验证强度差异显著：SCALE经三名供体PBMC实验验证、RegVelo经CRISPR-Cas9与Perturb-seq验证，而scDEFT归因结果仅为待验证假设、D²R²仅在两个数据集验证、CellFluxRL仅验证于一种生成框架[<a class="cite" href="#ref-vcell-13">13</a>][<a class="cite" href="#ref-vcell-11">11</a>][<a class="cite" href="#ref-vcell-14">14</a>][<a class="cite" href="#ref-vcell-15">15</a>][<a class="cite" href="#ref-vcell-16">16</a>]。</li>
+<li>细胞世界模型存在认识论分歧：Chreode以一步式残差转移将DE20 MSE从0.2121降至0.1858（相对提升12.4%）却主动放弃推演，VCWM主张反事实推理与长程规划却无任何定量结果[<a class="cite" href="#ref-vcell-17">17</a>][<a class="cite" href="#ref-vcell-18">18</a>]。</li>
+<li>评测体系正从"分数竞赛"转向"效度审查"：2026虚拟细胞挑战赛要求未见细胞系零样本预测，标准化基准发现常用设置下性能被高估、严格条件下显著下降[<a class="cite" href="#ref-vcell-19">19</a>]。</li>
+<li>数据泄漏构成根本效度威胁：细胞级随机划分会泄漏组内答案，患者队列中泄漏足以推翻临床结论，而分组验证才是更保守的效度底线[<a class="cite" href="#ref-vcell-20">20</a>]。</li>
+<li>跨"组"泛化（新细胞系、新患者、新药物类、新扰动类型）远比组内插值困难，药物盲预测性能显著下降甚至部分模型完全失败，当前多数乐观结论建立在组内划分之上[<a class="cite" href="#ref-vcell-21">21</a>]。</li>
+<li>现有资源在转录组、蛋白质组、空间与体内维度各有侧重，但无任何单一数据集同时满足大规模、原代/体内、多组学与空间分辨四项要求，跨体系泛化仍受制于数据覆盖的结构性不均衡[<a class="cite" href="#ref-vcell-22">22</a>][<a class="cite" href="#ref-vcell-23">23</a>][<a class="cite" href="#ref-vcell-24">24</a>][<a class="cite" href="#ref-vcell-25">25</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/vcell.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
 <details class="bg" id="topic-ssl" data-src="bg/ssl.html"><summary><span class="th" data-t="ssl">世界模型</span>世界模型与自监督表征学习<span class="cnt">证据 65 篇 · 覆盖度 0.46 · 第 3 轮 · 更新 2026-09-23</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>

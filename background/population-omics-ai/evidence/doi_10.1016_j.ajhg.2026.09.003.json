@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.ajhg.2026.09.003",
+  "title": "Robust cis-by-trans epistasis in the human plasma proteome highlights an ABO-centered interaction network.",
+  "url": "https://doi.org/10.1016/j.ajhg.2026.09.003",
+  "abstract": "利用UK Biobank Pharma Proteomics Project大规模血浆蛋白组数据，系统映射调控蛋白表达的高置信度cis-by-trans上位效应。为降低多重检验负担，聚焦蛋白水平而非变异水平互作，并采用三明治方差估计器控制假阳性，经大量模拟验证。识别出以ABO为中心的互作网络，揭示人类血浆蛋白组中稳健的cis-by-trans上位效应。",
+  "authors": "",
+  "venue": "American journal of human genetics",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB大规模血浆蛋白组cis-by-trans上位效应图谱，方法稳健且可复用。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB大规模血浆蛋白组cis-by-trans上位效应图谱，pQTL方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "蛋白水平cis-by-trans上位效应映射，三明治方差估计",
+  "data": "UK Biobank Pharma Proteomics Project血浆蛋白组数据",
+  "scenario": "血浆蛋白组上位效应解析",
+  "benchmark": "大量模拟验证，控制假阳性",
+  "results": "识别以ABO为中心的互作网络，揭示稳健cis-by-trans上位效应",
+  "availability": "",
+  "limitations": "仅聚焦蛋白水平互作，未提及其他组学或功能验证",
+  "summary": "该研究系统映射人类血浆蛋白组中的cis-by-trans上位效应。利用UK Biobank Pharma Proteomics Project大规模数据，聚焦蛋白水平互作并采用三明治方差估计器控制假阳性，经模拟验证。发现以ABO为中心的稳健互作网络。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 8,
+ "added_on": "2026-09-27"
+}

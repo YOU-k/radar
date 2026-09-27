@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.21203/rs.3.rs-11120748/v1",
+  "title": "Molecular Circadian Disturbance in Human Blood Independently Predicts Multi-Disease Risk and Maps to Hepatic metabolism Pathways",
+  "url": "https://doi.org/10.21203/rs.3.rs-11120748/v1",
+  "abstract": "研究将420,746名UK Biobank参与者的312种血液学、生化和代谢分子与采血时间关联，发现广泛而深刻的昼夜节律改变。使用贝叶斯加性回归树推导出相位偏移和节律紊乱两个正交指标，其中相位偏移主要与睡眠行为相关，而节律紊乱基本独立于睡眠。节律紊乱可独立预测98种未来发病风险，并映射到肝脏代谢通路。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "42万人队列节律紊乱指标预测98种疾病，纵向多病风险建模。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "42万人队列昼夜节律紊乱预测98种疾病，人群多组学轨迹",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "贝叶斯加性回归树推导相位偏移与节律紊乱",
+  "data": "UK Biobank 420,746人，312种血液学、生化、代谢分子",
+  "scenario": "血液分子昼夜节律与疾病风险",
+  "benchmark": "相位偏移与节律紊乱两指标对比",
+  "results": "节律紊乱独立预测98种未来发病风险，并映射到肝脏代谢通路",
+  "availability": "",
+  "limitations": "观察性关联，未明确因果机制",
+  "summary": "研究分析UK Biobank中312种血液分子与采血时间关联，发现广泛昼夜节律改变。用贝叶斯加性回归树推导相位偏移和节律紊乱两个正交指标。发现节律紊乱基本独立于睡眠，可独立预测98种未来发病风险并映射到肝脏代谢通路。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 8,
+ "added_on": "2026-09-27"
+}

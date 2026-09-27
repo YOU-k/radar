@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.16.26363186",
+  "title": "A national-scale digital atlas of recorded care patterns across more than 1000 diagnostic categories using real-world health data: a retrospective observational study",
+  "url": "https://doi.org/10.64898/2026.09.16.26363186",
+  "abstract": "研究扩展了既往开发的自动化框架，将异质临床事件压缩为以诊断为中心的真实世界诊疗模式标准化摘要。基于爱沙尼亚30%随机人群样本EST-Health-30，构建ICD-10三位字符诊断类别队列，并汇总索引前90天、索引后30天等窗口内的临床事件。最终形成覆盖1000多个诊断类别的全国尺度记录诊疗模式数字图谱。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "全国尺度EHR诊疗模式图谱，覆盖千余诊断类别可复用。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "全国尺度EHR诊疗模式数字图谱，队列数据资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "自动化框架压缩临床事件为诊断中心标准化摘要",
+  "data": "爱沙尼亚EST-Health-30，30%随机人群样本",
+  "scenario": "全国尺度真实世界诊疗模式图谱",
+  "benchmark": "覆盖1000多个ICD-10三位字符诊断类别",
+  "results": "构建覆盖1000多个诊断类别的全国尺度记录诊疗模式数字图谱",
+  "availability": "",
+  "limitations": "回顾性观察研究，仅基于单一国家样本",
+  "summary": "研究扩展自动化框架，将异质临床事件压缩为诊断中心真实世界诊疗模式摘要。基于爱沙尼亚30%随机人群样本EST-Health-30，构建ICD-10三位字符诊断队列并汇总索引前后窗口事件。最终形成覆盖1000多个诊断类别的全国尺度数字图谱。"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 8,
+ "added_on": "2026-09-27"
+}

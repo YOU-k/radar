@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.21203/rs.3.rs-10956233/v1",
+  "title": "Multi-ancestry MHC-pQTL mapping reveals disease-linked HLA protein networks and shared genetic architecture",
+  "url": "https://doi.org/10.21203/rs.3.rs-10956233/v1",
+  "abstract": "在UK Biobank（n=43,762）和中国慢性病前瞻性研究（n=3,977）中开展多祖先pQTL映射，刻画MHC区遗传变异如何影响血浆蛋白丰度。在2920个血浆蛋白中鉴定出显著MHC关联（13个cis、606个trans），多数信号效应跨祖先一致，同时发现东亚人群中EDAR的祖先富集关联。局域遗传相关分析进一步揭示疾病相关HLA蛋白网络与共享遗传结构。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB与CKB多祖先MHC-pQTL映射，跨队列复现且揭示HLA蛋白网络。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多祖先MHC-pQTL映射，揭示HLA蛋白网络与共享遗传结构",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多祖先MHC-pQTL映射与局域遗传相关分析",
+  "data": "UK Biobank n=43,762；中国慢性病前瞻性研究 n=3,977",
+  "scenario": "MHC区血浆蛋白遗传调控",
+  "benchmark": "跨祖先一致性比较",
+  "results": "2920个蛋白中13个cis、606个trans MHC关联；多数跨祖先一致；东亚EDAR祖先富集关联",
+  "availability": "",
+  "limitations": "样本祖先仍有限，未提及功能实验验证",
+  "summary": "研究在UK Biobank和中国慢性病前瞻性研究中开展多祖先pQTL映射。刻画MHC遗传变异对血浆蛋白丰度影响，并进行局域遗传相关分析。发现多数MHC关联跨祖先一致，并揭示疾病相关HLA蛋白网络及东亚EDAR祖先富集关联。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 8,
+ "added_on": "2026-09-27"
+}
