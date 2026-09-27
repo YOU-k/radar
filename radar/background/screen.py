@@ -94,9 +94,11 @@ def screen(cands: list[Candidate], spec: TopicSpec, llm: LLM, round_no: int = 0,
                     first[role["name"]][remap[k]] = v
         for i, c in enumerate(chunk):
             vs = [first[r["name"]][i] for r in spec.roles if i in first[r["name"]]]
-            # 某角色没返回该条 → 视为 no（缺票不放行）
+            # 某角色没返回该条（LLM 失败或漏答）→ 推迟：不出决定、不进落选表，下轮或下周重新评
             missing = [r["name"] for r in spec.roles if i not in first[r["name"]]]
-            vs += [Vote(role=m, vote="no", reason="未返回投票") for m in missing]
+            if missing:
+                print(f"[screen] {c.id} deferred: no vote from {', '.join(missing)}")
+                continue
             accepted, borderline = decide(vs, rule)
             out.append(Decision(candidate_id=c.id, votes=vs, accepted=accepted,
                                 borderline=borderline, round=round_no))

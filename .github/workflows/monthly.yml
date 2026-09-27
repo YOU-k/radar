@@ -2,18 +2,22 @@ name: monthly-landscape
 
 on:
   schedule:
-    - cron: "17 1 1 * *"   # 每月 1 号 UTC 01:17 = 北京时间 09:17（错开 daily，避开整点拥堵）
+    - cron: "17 1 1 * *"   # 每月 1 号 UTC 01:17 = 北京时间 09:17
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:            # 与 daily 同一天运行时排队，不再并发改 docs/
+  group: radar-bot
+  cancel-in-progress: false
+
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
@@ -31,14 +35,7 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           SYNTH_MODEL: ${{ vars.SYNTH_MODEL }}
           PRINCIPLES_MODEL: ${{ vars.PRINCIPLES_MODEL }}
-        run: |
-          python -m radar.run background principles --topic all
-          python -m radar.run site
-      - name: commit results
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add registry_updates/ background/_principles/ docs/
-          git diff --cached --quiet || git commit -m "landscape $(date -u +%Y-%m)"
-          git pull --rebase origin main
-          git push
+        run: python -m radar.run background principles --topic all
+      - name: commit results (site rebuilt after pull)
+        if: always()
+        run: scripts/commit_push.sh "landscape $(date -u +%Y-%m)" registry_updates/ background/_principles/

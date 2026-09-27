@@ -68,6 +68,8 @@ def score_items(items: list[Item], cfg: dict, use_llm: bool = True) -> list[Item
     rest = [it for it in items if not it.extra.get("journal_watch")]
     items = prefilter(rest, cfg) + watch
     if use_llm:
+        for it in items:
+            it.extra["sent_to_llm"] = True
         llm_rerank(items)
     items.sort(key=lambda x: x.score, reverse=True)
     return items
@@ -110,6 +112,7 @@ def llm_rerank(items: list[Item]) -> bool:
                 j = int(s.get("id", -1))
                 if 0 <= j < len(chunk):
                     chunk[j].score = float(s.get("score", chunk[j].score))
+                    chunk[j].extra["scored_by"] = "llm"
                     chunk[j].reason_zh = str(s.get("reason", ""))[:120]
                     kind = str(s.get("type", "")).strip().lower()
                     if kind in ("paper", "dataset", "model", "tool", "other"):

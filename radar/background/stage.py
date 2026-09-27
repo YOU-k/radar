@@ -78,4 +78,5 @@ def stage_section(spec: TopicSpec, evs: list[Evidence], outline: Outline, hist: 
         return llm.chat(prompt, task="stage", temperature=0.3, timeout=300).strip() + "\n"
     except Exception as exc:
         print(f"[stage] failed: {exc}")
-        return "（生成失败）\n"
+        from .llmio import FAILED
+        return FAILED + "\n"

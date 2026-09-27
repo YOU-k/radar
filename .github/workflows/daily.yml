@@ -2,7 +2,7 @@ name: daily-radar
 
 on:
   schedule:
-    - cron: "23 0 * * *"   # UTC 00:23 = 北京时间 08:23（整点是全网拥堵高峰，GitHub 定时任务会排长队）
+    - cron: "23 0 * * *"   # UTC 00:23 = 北京时间 08:23（整点是全网拥堵高峰；实测 GitHub 定时任务仍常晚 4-5 小时）
   workflow_dispatch:
     inputs:
       days:
@@ -13,12 +13,16 @@ on:
 permissions:
   contents: write
 
+concurrency:            # 所有 bot 任务互斥排队，避免同时改 docs/ 与数据文件
+  group: radar-bot
+  cancel-in-progress: false
+
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
@@ -31,14 +35,7 @@ jobs:
           DEEP_MODEL: ${{ vars.DEEP_MODEL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
-        run: python -m radar.run daily --days ${{ inputs.days || 1 }}
-      - name: build site
-        run: python -m radar.run site
-      - name: commit results
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add digests/ data/seen.json data/extractions.jsonl docs/ resources.md
-          git diff --cached --quiet || git commit -m "digest $(date -u +%F)"
-          git pull --rebase --autostash origin main
-          git push
+          DAYS: ${{ inputs.days || 1 }}
+        run: python -m radar.run daily --days "$DAYS"
+      - name: commit results (site rebuilt after pull)
+        run: scripts/commit_push.sh "digest $(date -u +%F)" digests/ data/ resources.md

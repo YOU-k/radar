@@ -87,11 +87,13 @@ def principles_report(specs: list[TopicSpec], llm: LLM) -> str:
             print(f"[principles] {spec.slug} done")
         except Exception as exc:
             print(f"[principles] {spec.slug} failed: {exc}")
+    from .llmio import GenerationFailed
+    if len(views) < len(specs):  # 任一领域失败就不发布残缺版本，保留上月的
+        raise GenerationFailed(f"principles: {len(specs) - len(views)} topic views failed")
     try:
-        top = synthesis(views, llm) if views else "（生成失败）"
+        top = synthesis(views, llm)
     except Exception as exc:
-        print(f"[principles] synthesis failed: {exc}")
-        top = "（综合失败，见下方各领域分析）"
+        raise GenerationFailed(f"principles synthesis: {exc}") from exc
     head = (f"# 全局判断：从第一性原理看各领域 · 方向背景报告\n\n"
             f"{len(views)} 个领域 · 每月更新 · 更新 {date.today().isoformat()} · "
             "[证据] = 来自方向背景报告；[常识] = 模型领域知识，需核实\n\n")

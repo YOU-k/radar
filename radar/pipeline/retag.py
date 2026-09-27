@@ -13,7 +13,7 @@ from ..config import load_sources
 from .digest import assemble, summary_entries
 from .summary import day_summary
 
-ITEM_HEAD = re.compile(r"^- \*\*\[(?P<title>.+?)\]\((?P<url>[^)]+)\)\*\* `(?P<score>[0-9.]+)`(?:〔资源〕)?(?: — (?P<reason>.*))?$")
+ITEM_HEAD = re.compile(r"^- \*\*\[(?P<title>.+?)\]\((?P<url>(?:[^()\s]|\([^()\s]*\))+)\)\*\* `(?P<score>[0-9.]+)`(?:〔资源〕)?(?: — (?P<reason>.*))?$")
 SEC = re.compile(r"^## (?P<name>.+?)（\d+ 条）$")
 DROPPED = re.compile(r"另有 (\d+) 条低分已过滤")
 

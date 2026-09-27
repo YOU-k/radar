@@ -4,11 +4,14 @@ import argparse
 import json
 from datetime import date, timedelta
 
-from . import llm
-from .collectors import COLLECTORS
 from .config import ROOT, load_local_env, load_profile, load_sources
-from .pipeline import extract
-from .pipeline.dedup import filter_new
+
+load_local_env()  # 必须早于 llm 等模块导入：它们在导入时读 LLM_BASE_URL / *_MODEL / DIGEST_MIN_SCORE
+
+from . import llm  # noqa: E402
+from .collectors import COLLECTORS  # noqa: E402
+from .pipeline import extract  # noqa: E402
+from .pipeline.dedup import filter_new, mark_seen  # noqa: E402
 from .pipeline.deepread import deepread_top
 from .pipeline.digest import write_digest
 from .pipeline.resources import append_resources, mine_infrastructure
@@ -34,35 +37,72 @@ def cmd_daily(days: int, use_llm: bool) -> None:
     if days > 1:  # 手动回补窗口
         freqs = {f: days for f in freqs}
     print(f"[plan] cadences: {sorted(freqs)}")
+    health = {"date": date.today().isoformat(), "sources": {}, "errors": [], "stages": {}}
     items = []
     for name, mod in COLLECTORS.items():
         try:
             got = mod.collect(cfg, freqs)
             print(f"[{name}] {len(got)} items")
             items.extend(got)
+            health["sources"][name] = len(got)
         except Exception as exc:
             print(f"[{name}] collector failed: {exc}")
-    fresh = filter_new(items)
+            health["sources"][name] = -1
+            health["errors"].append(f"{name}: {exc}"[:200])
+    fresh = filter_new(items, commit=False)  # 打完分再标已读：LLM 失败的条目明天重来
     print(f"[dedup] {len(items)} -> {len(fresh)} new")
     scored = score_items(fresh, cfg, use_llm=use_llm)
+    sent = [it for it in scored if it.extra.get("sent_to_llm")]
+    unscored = [it for it in sent if it.extra.get("scored_by") != "llm"]
+    health["stages"]["score"] = {"sent": len(sent), "unscored": len(unscored)}
+    if use_llm and unscored:
+        print(f"::warning::[score] {len(unscored)}/{len(sent)} items not scored by LLM; deferred to next run")
+        scored = [it for it in scored if it not in unscored]  # 关键词分不进日报（量纲不同）
+
+    def stage(name, fn):
+        """非关键步骤失败不拖垮整份日报。"""
+        try:
+            n = fn()
+            print(f"[{name}] {n}")
+            health["stages"][name] = n
+        except Exception as exc:
+            print(f"::warning::[{name}] failed: {exc}")
+            health["errors"].append(f"{name}: {exc}"[:200])
+
     if use_llm:
-        n = deepread_top(scored)
-        print(f"[deepread] {n} items")
+        stage("deepread", lambda: deepread_top(scored))
         from .background.context import annotate
-        n = annotate(scored, cfg)
-        print(f"[context] {n} items placed against background")
+        stage("context", lambda: annotate(scored, cfg))
     from .pipeline.digest import MIN_SCORE
     from .pipeline.enrich import enrich
-    n = enrich(scored, MIN_SCORE)
-    print(f"[enrich] {n} items with venue / date / PI institution")
-    n = append_resources(scored, date.today())
-    print(f"[resources] {n} new")
+    stage("enrich", lambda: enrich(scored, MIN_SCORE))
+    stage("resources", lambda: append_resources(scored, date.today()))
     if use_llm:
         hot = [it for it in scored if it.score >= 7.0]
-        n = extract.store(hot, extract.extract_items(hot), date.today())
-        print(f"[extract] {n} records")
+        stage("extract", lambda: extract.store(hot, extract.extract_items(hot), date.today()))
     out = write_digest(scored, date.today(), use_llm=use_llm)
     print(f"[digest] wrote {out}")
+    if use_llm:  # 本地 --no-llm 冒烟不动去重状态
+        mark_seen([it for it in fresh if it not in unscored])
+    health["llm"] = dict(llm.STATS)
+    write_health(health)
+
+
+def write_health(h: dict) -> None:
+    """运行健康摘要：打印、发 Actions 警告，并写 data/health.json（站点顶部显示异常）。"""
+    zero = [k for k, v in h["sources"].items() if v == 0]
+    failed = [k for k, v in h["sources"].items() if v < 0]
+    llm_fail = h.get("llm", {}).get("fail", 0)
+    h["problems"] = ([f"{k} 采集失败" for k in failed] + [f"{k} 0 条" for k in zero]
+                     + ([f"LLM 失败 {llm_fail} 次"] if llm_fail else [])
+                     + ([f"{h['stages']['score']['unscored']} 条未打分已顺延"]
+                        if h.get("stages", {}).get("score", {}).get("unscored") else []))
+    print("[health] " + json.dumps({k: h[k] for k in ("sources", "llm", "problems")}, ensure_ascii=False))
+    for p in h["problems"]:
+        print(f"::warning::[health] {p}")
+    out = ROOT / "data" / "health.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(h, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 def cmd_weekly(use_llm: bool) -> None:
@@ -192,7 +232,11 @@ def cmd_background(args) -> None:
         if llm is None:
             raise SystemExit("[background] principles 需要 LLM")
         from .background.principles import run_principles
-        print(f"[background] wrote {run_principles(llm)}")
+        from .background.llmio import GenerationFailed
+        try:
+            print(f"[background] wrote {run_principles(llm)}")
+        except GenerationFailed as exc:
+            print(f"::warning::[principles] {exc}; kept previous report")
         return
     if args.action == "prioritize":
         if llm is None:
@@ -208,25 +252,44 @@ def cmd_background(args) -> None:
         if args.action == "resources":
             print(f"[background] wrote {run_resources(llm)}")
         else:
+            from .background.llmio import GenerationFailed
             res = BASE / "_resources" / "resources.md"
-            print(f"[background] wrote {run_joint(llm, resources_md=res.read_text(encoding='utf-8') if res.exists() else '')}")
+            try:
+                print(f"[background] wrote {run_joint(llm, resources_md=res.read_text(encoding='utf-8') if res.exists() else '')}")
+            except GenerationFailed as exc:
+                print(f"::warning::[joint] {exc}; kept previous report")
         return
     slugs = background_slugs(args.topic)
     for slug in slugs:
         if len(slugs) > 1:
             print(f"[background] === {slug} ===")
-        spec = load_spec(slug)
-        pipe = Pipeline(spec, llm, fetch_text=not args.no_fulltext)
-        if args.action == "bootstrap":
-            for res in pipe.bootstrap(args.rounds or None):
-                print(res.log.to_markdown())
-        elif args.action == "renew":
-            res = pipe.renew(ROOT / "data" / "extractions.jsonl")
+        try:
+            _background_one(args, slug, llm)
+        except Exception as exc:  # 一个方向出错不拖垮其他方向（周报 renew --topic all）
+            if len(slugs) == 1:
+                raise
+            print(f"::warning::[background] {slug} {args.action} failed: {exc}")
+
+
+def _background_one(args, slug: str, llm) -> None:
+    from .background.llmio import GenerationFailed
+    from .background.runner import Pipeline
+    from .background.spec import load_spec
+    spec = load_spec(slug)
+    pipe = Pipeline(spec, llm, fetch_text=not args.no_fulltext)
+    if args.action == "bootstrap":
+        for res in pipe.bootstrap(args.rounds or None):
             print(res.log.to_markdown())
-        elif args.action == "refetch":
-            print(f"[background] refetched {pipe.refetch()}")
-        elif args.action == "compile":
+    elif args.action == "renew":
+        res = pipe.renew(ROOT / "data" / "extractions.jsonl")
+        print(res.log.to_markdown())
+    elif args.action == "refetch":
+        print(f"[background] refetched {pipe.refetch()}")
+    elif args.action == "compile":
+        try:
             print(f"[background] wrote {pipe.compile_only()}")
+        except GenerationFailed as exc:
+            print(f"::warning::[compile] {exc}; kept previous report")
 
 
 def background_slugs(topic: str) -> list[str]:

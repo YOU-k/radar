@@ -39,10 +39,10 @@ def test_no_discussion_when_agree(spec, cands):
     assert [t for t, _ in llm.calls].count("screen") == 2
 
 
-def test_missing_vote_counts_as_no(spec, cands):
+def test_missing_vote_defers_instead_of_rejecting(spec, cands):
+    """LLM 失败导致缺票：不出决定（不进落选表），下轮重新评，而不是永久拒绝。"""
     llm = FakeLLM(fail_tasks={"screen"})
-    ds = screen(cands[:1], spec, llm, discuss=False)
-    assert ds[0].accepted is False and {v.reason for v in ds[0].votes} == {"未返回投票"}
+    assert screen(cands[:1], spec, llm, discuss=False) == []
 
 
 def test_borderline_recorded(spec, cands):

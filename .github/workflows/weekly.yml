@@ -2,18 +2,23 @@ name: weekly-radar
 
 on:
   schedule:
-    - cron: "41 12 * * 0"   # UTC 周日 12:41 = 北京时间 20:41（避开整点/半点拥堵）
+    - cron: "41 12 * * 0"   # UTC 周日 12:41 = 北京时间 20:41（实测常晚 4 小时左右）
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: radar-bot
+  cancel-in-progress: false
+
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 150
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
@@ -24,10 +29,11 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           SYNTH_MODEL: ${{ vars.SYNTH_MODEL }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
+        # 各步内部已隔离失败（单方向出错不中止、生成失败保留旧版）；这里再兜一层，保证周报照常生成
         run: |
-          python -m radar.run background renew --topic all
-          python -m radar.run background resources --topic all
-          python -m radar.run background joint --topic all
+          python -m radar.run background renew --topic all || echo "::warning::renew step failed"
+          python -m radar.run background resources --topic all || echo "::warning::resources step failed"
+          python -m radar.run background joint --topic all || echo "::warning::joint step failed"
       - name: weekly synthesis (after renew, so it can list background changes)
         env:
           LLM_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -35,13 +41,6 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           SYNTH_MODEL: ${{ vars.SYNTH_MODEL }}
         run: python -m radar.run weekly
-      - name: build site
-        run: python -m radar.run site
-      - name: commit results
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add weekly/ docs/ resources.md background/
-          git diff --cached --quiet || git commit -m "weekly $(date -u +%G-W%V)"
-          git pull --rebase --autostash origin main
-          git push
+      - name: commit results (site rebuilt after pull)
+        if: always()
+        run: scripts/commit_push.sh "weekly $(date -u +%G-W%V)" weekly/ background/ resources.md

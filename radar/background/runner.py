@@ -14,6 +14,7 @@ from . import extract as extract_mod
 from . import metrics as metrics_mod
 from .compile import compile_report
 from .dedup import dedup
+from .llmio import GenerationFailed
 from .discover import Inbox, S2Snowball, Source, default_sources, discover
 from .fetch import fetch_fulltext
 from .gap import plan_round
@@ -128,7 +129,7 @@ class Pipeline:
         cov = metrics_mod.coverage(self.spec, self.store, outline, self.top_cited(), self.round_no())
         hist = json.loads(self.spec.metrics_path.read_text(encoding="utf-8")) if self.spec.metrics_path.exists() else []
         report = compile_report(self.spec, outline, self.store.all(), self.llm, cov.score,
-                                self.round_no(), changelog, hist)
+                                self.round_no(), changelog, hist)  # 失败抛 GenerationFailed，旧报告不动
         self.spec.report_path.write_text(report, encoding="utf-8")
         return self.spec.report_path
 
@@ -169,7 +170,7 @@ class Pipeline:
         accepted: list[Evidence] = []
         for c, ex, d in zip(accepted_c, extractions, [d for d in decisions if d.accepted]):
             ev = Evidence(candidate=c, panel=d.votes, extraction=ex,
-                          fulltext_path=(str(self.spec.cache_dir) if c.id in fulltexts else ""),
+                          fulltext_path=("cache" if c.id in fulltexts else ""),  # 只作布尔用，不记机器路径
                           added_round=round_no, added_on=date.today().isoformat())
             self.store.add(ev, fulltexts.get(c.id, ""))
             accepted.append(ev)
@@ -193,12 +194,17 @@ class Pipeline:
             f.write(log.to_markdown())
 
         report_path = None
-        if compile_now and self.llm is not None:
+        # 没有新证据且已有报告时不重编：省掉每个方向十几次 LLM 调用
+        need = accepted or not self.spec.report_path.exists()
+        if compile_now and self.llm is not None and need:
             changelog = "\n".join(f"- 新增 [{e.id}] {e.candidate.title}" for e in accepted) or "- 无新增"
-            report = compile_report(self.spec, outline, self.store.all(), self.llm,
-                                    cov.score, round_no, changelog, hist)
-            self.spec.report_path.write_text(report, encoding="utf-8")
-            report_path = self.spec.report_path
+            try:
+                report = compile_report(self.spec, outline, self.store.all(), self.llm,
+                                        cov.score, round_no, changelog, hist)
+                self.spec.report_path.write_text(report, encoding="utf-8")
+                report_path = self.spec.report_path
+            except GenerationFailed as exc:
+                print(f"::warning::[compile] {exc}; kept previous report")
         return RoundResult(log=log, accepted=accepted, report_path=report_path)
 
     def refetch(self, limit: int = 80) -> int:
@@ -218,7 +224,7 @@ class Pipeline:
         for e, ex in zip(got, exs):
             if ex.get("summary"):
                 e.extraction = ex
-            e.fulltext_path = str(self.spec.cache_dir)
+            e.fulltext_path = "cache"
             self.store.update(e)
         print(f"[refetch] fulltext for {len(got)}/{len(todo)}")
         return len(got)
@@ -248,5 +254,10 @@ class Pipeline:
     def renew(self, inbox_path: Path, since_days: int = 7, min_score: float = 7.0) -> RoundResult:
         r = self.round_no() + 1
         cands = Inbox(inbox_path, since_days, min_score).fetch(self.spec, DiscoveryPlan())
+        if not cands:  # 本周收件箱为空：不记轮次、不追加指标、不重编
+            print(f"[renew] {self.spec.slug}: inbox empty, skipped")
+            return RoundResult(log=RoundLog(round=r - 1, focus="renew：无新条目", n_candidates=0, n_new=0,
+                                            n_accepted=0, n_rejected=0, n_borderline=0, coverage=0.0),
+                               accepted=[], report_path=None)
         return self.run_round(cands, r, focus=f"renew：日报近 {since_days} 天",
                               top_cited=self.top_cited(), compile_now=True)

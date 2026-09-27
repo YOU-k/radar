@@ -82,6 +82,7 @@ details.deep .deepbody h2,details.deep .deepbody h3{font-size:13.5px;color:#1a7f
 details.deep .deepbody p{margin:4px 0}
 .empty{color:#57606a;font-size:13px;padding:6px 2px}
 .hide{display:none!important}
+.health{font-size:12px;color:#9a6700;background:#fff8c5;border-radius:6px;padding:2px 8px;margin:2px 0 6px}
 .sec{margin:18px 2px 8px}
 .sec-t{font-size:15px;font-weight:700}
 .sec-d{font-size:12.5px;color:#57606a}
@@ -168,7 +169,7 @@ bindChips(document.getElementById('fbar-kind'),v=>{resKind=v;applyRes();});
 """
 
 ITEM_RE = re.compile(
-    r"^- \*\*\[(?P<title>.+?)\]\((?P<url>[^)]+)\)\*\*"
+    r"^- \*\*\[(?P<title>.+?)\]\((?P<url>(?:[^()\s]|\([^()\s]*\))+)\)\*\*"
     r" `(?P<score>[0-9.]+)`(?P<tag>〔资源〕)?(?: — (?P<reason>.*))?$")
 SEC_RE = re.compile(r"^## (?P<name>.+?)（\d+ 条）$")
 META_RE = re.compile(r"^  <sub>(?!定位：)(?P<meta>.*)</sub>$")
@@ -180,6 +181,15 @@ DEEP_RE = re.compile(
     re.DOTALL)
 
 WEEKDAYS = "一二三四五六日"
+
+_BAD_HREF = re.compile(r'(href|src)="\s*(?:javascript|data|vbscript):[^"]*"', re.I)
+
+
+def _md(text: str, extensions: list[str]) -> str:
+    """markdown → HTML，防存储型 XSS：先把原始 HTML 当文本转义（本站 markdown 源都不需要内嵌 HTML；
+    标题、摘要与 LLM 输出都来自不可信来源），再清掉 javascript:/data: 链接。"""
+    out = markdown.markdown(text.replace("<", "&lt;"), extensions=extensions)
+    return _BAD_HREF.sub(r'\1="#"', out)
 
 
 def _chip(key: str) -> str:
@@ -286,7 +296,7 @@ def _parse_digest(text: str) -> list[tuple[str, list[dict]]]:
                 if dm:
                     body = "\n".join(l[2:] if l.startswith("  ") else l
                                      for l in dm.group("body").splitlines())
-                    it["deep"] = markdown.markdown(body, extensions=["extra"])
+                    it["deep"] = _md(body, extensions=["extra"])
             continue
         i += 1
     return sections
@@ -341,7 +351,7 @@ def _render_digest(path: Path, first: bool) -> str:
 
 def _render_weekly(path: Path) -> str:
     text = re.sub(r"\A# [^\n]*\n+", "", path.read_text(encoding="utf-8"))
-    body = markdown.markdown(text, extensions=["extra", "sane_lists"])
+    body = _md(text, extensions=["extra", "sane_lists"])
     return f'<div class="wk"><h3>{html.escape(path.stem)}</h3>{body}</div>'
 
 
@@ -355,7 +365,7 @@ def _render_background(report: Path, title: str = "", chip: str = "", anchor: st
     name = title or (m.group("name") if m else report.parent.name)
     stats = m.group("stats") if m else ""
     body = text[m.end():] if m else text
-    html_body = markdown.markdown(body, extensions=["extra", "sane_lists", "tables"])
+    html_body = _md(body, extensions=["extra", "sane_lists", "tables"])
     ident = f' id="{anchor}"' if anchor else ""
     return (f'<details class="bg"{ident}><summary>{_chip(chip) if chip else ""}{html.escape(name)}'
             f'<span class="cnt">{html.escape(stats)}</span></summary>'
@@ -427,7 +437,7 @@ def _render_deep(path: Path, nested: bool = False) -> str:
     title = m.group("t") if m else path.stem
     body = text[m.end():] if m else text
     stats = f"深度调研 · {path.parent.parent.name} · {path.name[:10]}"
-    html_body = markdown.markdown(body, extensions=["extra", "sane_lists", "tables"])
+    html_body = _md(body, extensions=["extra", "sane_lists", "tables"])
     cls = "bg sub" if nested else "bg"
     return (f'<details class="{cls}"><summary>〔深度〕{html.escape(title)}'
             f'<span class="cnt">{html.escape(stats)}</span></summary>'
@@ -506,6 +516,22 @@ def _render_overview() -> tuple[str, int]:
     return "\n".join(out), len(topics)
 
 
+def _health_html(today: date) -> str:
+    """data/health.json（日报运行写入）有问题且是近两天的，就在页头提示一行。"""
+    import json
+    p = ROOT / "data" / "health.json"
+    if not p.exists():
+        return ""
+    try:
+        h = json.loads(p.read_text(encoding="utf-8"))
+        if (today - date.fromisoformat(h.get("date", "1970-01-01"))).days > 2 or not h.get("problems"):
+            return ""
+        return (f'<div class="health">采集提示（{html.escape(h["date"])}）：'
+                f'{html.escape("；".join(h["problems"][:4]))}</div>')
+    except Exception:
+        return ""
+
+
 def build_site(today: date | None = None) -> Path:
     today = today or date.today()
     digests = sorted((ROOT / "digests").glob("*.md"), reverse=True)
@@ -523,7 +549,7 @@ def build_site(today: date | None = None) -> Path:
     daily_res = ROOT / "resources.md"
     if daily_res.exists():
         res_parts.append('<details class="bg"><summary>日报新发现的资源（未核验）</summary><div class="bgbody">'
-                         + markdown.markdown(daily_res.read_text(encoding="utf-8"), extensions=["extra", "sane_lists"])
+                         + _md(daily_res.read_text(encoding="utf-8"), extensions=["extra", "sane_lists"])
                          + "</div></details>")
     res_html = "\n".join(res_parts) or '<div class="empty">暂无资源条目。</div>'
 
@@ -533,6 +559,7 @@ def build_site(today: date | None = None) -> Path:
         "<title>radar · 科研情报</title>",
         f"<style>{CSS}</style></head><body><main>",
         '<div class="top"><h1>radar · 科研情报</h1>',
+        _health_html(today),
         f'<div class="meta">更新至 {today.isoformat()} · '
         f'{n_topics} 个方向 / {len(weeklies)} 份周报 / {len(digests)} 份日报</div>',
         '<div class="tabs">'

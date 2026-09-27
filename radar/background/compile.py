@@ -7,12 +7,12 @@ import json
 import re
 from datetime import date
 
-from .llmio import LLM, tagged
+from .llmio import LLM, tagged, FAILED, GenerationFailed
 from .models import Evidence
 from .outline import Outline, Section, is_synthesis_title
 from .spec import TopicSpec
 
-CITE = re.compile(r"\[((?:doi|arxiv|pmid):[^\]\s]+)\]")
+CITE = re.compile(r"\[((?:doi|arxiv|pmid|eupmc|s2|url):[^\]\s]+)\]")  # 与 models.normalize_id 的前缀一致
 def is_synthesis(sec: Section, spec: TopicSpec) -> bool:
     """综合节：不挂证据，而是基于全部证据与其他节正文来写（背景与定义、空白与趋势）。"""
     return is_synthesis_title(sec.title)
@@ -56,7 +56,7 @@ def write_section(sec: Section, evs: list[Evidence], spec: TopicSpec, llm: LLM) 
         return strip_headings(llm.chat(prompt, task="compile", temperature=0.3, timeout=300))
     except Exception as exc:
         print(f"[compile] section {sec.id} failed: {exc}")
-        return "（生成失败）\n"
+        return FAILED + "\n"
 
 
 def write_synthesis(sec: Section, spec: TopicSpec, body: str, evs: list[Evidence], llm: LLM) -> str:
@@ -76,7 +76,7 @@ def write_synthesis(sec: Section, spec: TopicSpec, body: str, evs: list[Evidence
         return strip_headings(llm.chat(prompt, task="compile", temperature=0.3, timeout=300))
     except Exception as exc:
         print(f"[compile] synthesis {sec.id} failed: {exc}")
-        return "（生成失败）\n"
+        return FAILED + "\n"
 
 
 def write_tldr(spec: TopicSpec, body: str, llm: LLM) -> str:
@@ -149,4 +149,8 @@ def compile_report(spec: TopicSpec, outline: Outline, evs: list[Evidence], llm: 
     tldr = write_tldr(spec, body, llm) if evs else ""
     from .stage import stage_section
     extra = [("阶段判断与行动建议", stage_section(spec, evs, outline, hist or [], llm))] if evs else []
+    failed = [k for k, v in sections_md.items() if v.startswith(FAILED)] + \
+             [k for k, v in extra if v.startswith(FAILED)] + (["TL;DR"] if evs and not tldr else [])
+    if failed:  # 残缺报告不发布：调用方保留上一版
+        raise GenerationFailed(f"{spec.slug}: {len(failed)} parts failed ({', '.join(failed[:5])})")
     return assemble(spec, outline, evs, sections_md, tldr, coverage, round_no, changelog, extra)

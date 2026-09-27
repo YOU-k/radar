@@ -70,7 +70,8 @@ def joint_report(specs: list[TopicSpec], llm: LLM, resources_md: str = "") -> st
         body = llm.chat(prompt, task="joint", temperature=0.3, timeout=400).strip()
     except Exception as exc:
         print(f"[joint] failed: {exc}")
-        body = "（生成失败）"
+        from .llmio import GenerationFailed
+        raise GenerationFailed(f"joint: {exc}") from exc
     head = (f"# 联合分析 · 方向背景报告\n\n"
             f"{len(specs)} 个方向 · 证据 {sum(d['n_evidence'] for d in digests)} 篇 · 更新 {date.today().isoformat()}\n\n")
     return head + body + "\n"

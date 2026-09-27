@@ -37,6 +37,13 @@ class RadarLLM:
         return radar_llm.chat(prompt, model=model, temperature=temperature, timeout=timeout)
 
 
+FAILED = "（生成失败）"
+
+
+class GenerationFailed(RuntimeError):
+    """某个 LLM 生成步骤失败：调用方保留上一版产物，不要用失败占位覆盖已发布内容。"""
+
+
 def available() -> bool:
     return radar_llm.available()
 

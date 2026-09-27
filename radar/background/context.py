@@ -109,7 +109,13 @@ def weekly_changes(base=None) -> str:
         spec = load_spec(p)
         if not spec.report_path.exists():
             continue
-        block = _block(spec.report_path.read_text(encoding="utf-8"), "本次变更")
+        text = spec.report_path.read_text(encoding="utf-8")
+        import re
+        from datetime import date, timedelta
+        m = re.search(r"更新 (\d{4}-\d{2}-\d{2})", text[:500])
+        if m and date.fromisoformat(m.group(1)) < date.today() - timedelta(days=7):
+            continue  # 本周没重编的方向：它的「本次变更」是旧的，不列
+        block = _block(text, "本次变更")
         if block and block.strip() != "- 无新增":
             parts.append(f"### {spec.name}\n\n{block}\n")
     if not parts:
