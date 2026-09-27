@@ -1,0 +1,569 @@
+# 资源登记的人工种子：规范名、别名、规模、获取、开放性、置顶优先级。
+#
+# 为什么要种子：自动登记（background/resources.py）从证据里用 LLM 抽资源，规模取自某一篇引用文献
+# （UKB 被写成"30,376 人"是某篇论文的子集）、开放性是 LLM 猜的、链接常指错。种子里的字段**覆盖**
+# 自动抽取的同名字段，并且种子条目即使没有证据引用也进主表。
+# 合并了原先手工维护的 registry/databases.md 与 registry/models.md（那两份的条目都在这里了）。
+#
+# 字段：
+#   name      规范名（显示用）
+#   aliases   别名（归一化后映射到本条；只放无歧义的）
+#   match     链接核验时页面里应出现的字符串（缺省用 name + aliases）
+#   kind      dataset / model / benchmark / database / tool
+#   modality / scale / access   覆盖自动抽取；access 写 "" 表示清掉自动抽到的错链接
+#   open      yes 公开下载 / partial 部分公开（汇总公开、个体数据受控）/ registration 注册即可 /
+#             controlled 受控申请 / commercial 商业平台 / no 不公开 / unknown 未确认
+#   themes    主题 key（config/themes.yaml），与证据推出的主题取并集
+#   pin       P0 / P1：研究者画像点名的资源，无论被引几次都置顶，不交给 LLM 重排
+#   why       置顶理由（≤40 字）
+#
+# 另外三张表：aliases（额外别名 → 规范名）、split（同名异物按 kind 拆开）、exclude（不是资源的条目）。
+
+resources:
+  # ---- 人群队列（中国队列一律优先；ChinaHEART 是目标队列）----
+  - name: ChinaHEART
+    aliases: [China HEART, ChinaHEART cohort, ChinaHEART Project]
+    kind: dataset
+    modality: 心血管病筛查人群队列（问卷/体检/心电等）
+    scale: 中国大规模心血管病筛查/早筛队列
+    open: controlled
+    themes: [cardio, cohort]
+    pin: P0
+    why: 目标队列：UKB 等公共队列方法迁移的落点
+  - name: China Kadoorie Biobank
+    aliases: [CKB, China Kadoorie Biobank (CKB), 中国嘉道理生物库]
+    match: [Kadoorie]
+    kind: dataset
+    modality: 前瞻性人群队列（问卷/体检/血样/基因组/蛋白组）
+    scale: 约 51 万成人（10 个地区，2004–08 入组）
+    access: https://www.ckbiobank.org/
+    open: controlled
+    themes: [cohort, cardio]
+    pin: P0
+    why: 中国人群参照队列，ChinaHEART 迁移时的对照
+  - name: UK Biobank
+    aliases: [UKB, UKBB, UK Biobank (UKB), UK Biobank (UKBB)]
+    kind: dataset
+    modality: 人群队列（基因组/影像/蛋白组/代谢组/EHR）
+    scale: 约 50 万人（40–69 岁入组，2006–10）
+    access: https://www.ukbiobank.ac.uk/
+    open: controlled
+    themes: [cohort]
+  - name: UK Biobank Pharma Proteomics Project
+    aliases: [UKB-PPP, UKB PPP, UK Biobank Pharma Proteomics Project (UKB-PPP), UKB Pharma Proteomics Project]
+    match: [Pharma Proteomics, UKB-PPP]
+    kind: dataset
+    modality: 血浆蛋白组（Olink Explore）
+    scale: 约 5.4 万人 · 约 2,900 蛋白
+    access: https://www.ukbiobank.ac.uk/
+    open: controlled
+    themes: [cohort, aging]
+  - name: All of Us Research Program
+    aliases: [All of Us, AoU, All of Us Research Program (AoU)]
+    match: [All of Us]
+    kind: dataset
+    modality: 人群队列（WGS/EHR/问卷/可穿戴）
+    scale: 目标 100 万人（美国，多族裔）
+    access: https://www.researchallofus.org/
+    open: controlled
+    themes: [cohort]
+  - name: CHARLS
+    aliases: [China Health and Retirement Longitudinal Study]
+    match: [CHARLS]
+    kind: dataset
+    modality: 中老年追踪调查（问卷/体检/血检）
+    access: https://charls.pku.edu.cn/
+    open: registration
+    themes: [cohort, aging]
+  - name: NHANES
+    aliases: [National Health and Nutrition Examination Survey]
+    kind: dataset
+    modality: 横断面体检+血检，可链接死亡随访
+    scale: 每两年约 1 万人（美国代表性样本）
+    access: https://www.cdc.gov/nchs/nhanes/
+    open: yes
+    themes: [aging, cohort]
+  - name: Framingham Heart Study
+    aliases: [FHS]
+    match: [Framingham]
+    kind: dataset
+    modality: 心血管前瞻队列（三代）
+    access: https://www.framinghamheartstudy.org/
+    open: controlled
+    themes: [cardio]
+  - name: ARIC
+    aliases: [Atherosclerosis Risk in Communities, Atherosclerosis Risk in Communities (ARIC) Study, ARIC Study]
+    kind: dataset
+    modality: 动脉粥样硬化前瞻队列（含 SomaScan 蛋白组）
+    scale: 约 1.6 万人（1987–89 入组）
+    open: controlled
+    themes: [cardio]
+  - name: Cardiovascular Health Study
+    aliases: [CHS]
+    match: [Cardiovascular Health Study]
+    kind: dataset
+    modality: 老年心血管前瞻队列
+    scale: 5,888 人（65 岁以上）
+    access: https://chs-nhlbi.org/
+    open: controlled
+    themes: [cardio, aging]
+  - name: MESA
+    aliases: [Multi-Ethnic Study of Atherosclerosis]
+    match: [MESA, Multi-Ethnic Study of Atherosclerosis]
+    kind: dataset
+    modality: 多族裔亚临床动脉粥样硬化队列
+    scale: 6,814 人（45–84 岁，四个族裔）
+    access: https://www.mesa-nhlbi.org/
+    open: controlled
+    themes: [cardio]
+  - name: BioBank Japan
+    aliases: [BBJ, BioBank Japan (BBJ)]
+    kind: dataset
+    modality: 医院来源生物库（基因组/临床）
+    scale: 第一期约 20 万患者（47 种疾病）
+    access: https://biobankjp.org/
+    open: controlled
+    themes: [cohort]
+  - name: Pan-UK Biobank
+    aliases: [Pan-UKB, Pan-UK Biobank GWAS summary statistics, Pan UKB, Pan UKBB]
+    match: [Pan-UK Biobank, Pan-UKB]
+    kind: dataset
+    modality: 多祖源 GWAS 汇总统计
+    access: https://pan.ukbb.broadinstitute.org/
+    open: yes
+    themes: [cohort]
+  - name: dbGaP
+    kind: database
+    modality: NIH 受控访问基因型-表型库
+    access: https://www.ncbi.nlm.nih.gov/gap/
+    open: controlled
+    themes: [cohort]
+  - name: EGA
+    aliases: [European Genome-phenome Archive]
+    match: [EGA, European Genome-phenome Archive]
+    kind: database
+    modality: 欧洲受控访问人类组学档案
+    access: https://ega-archive.org/
+    open: controlled
+    themes: [cohort]
+
+  # ---- 心血管风险评分与疾病轨迹基线（画像点名）----
+  - name: China-PAR
+    aliases: [China PAR, China-PAR equations, China-PAR risk equations]
+    kind: model
+    modality: 中国人群 ASCVD 10 年风险方程
+    access: https://doi.org/10.1161/CIRCULATIONAHA.116.022367
+    open: yes
+    themes: [cardio]
+    pin: P0
+    why: 中国人群传统评分基线，ChinaHEART 模型必须对标
+  - name: Pooled Cohort Equations
+    aliases: [PCE, ASCVD-PCE, ASCVD PCE, ACC/AHA Pooled Cohort Equations, Pooled Cohort Equations (PCE)]
+    match: [Pooled Cohort]
+    kind: model
+    modality: ACC/AHA ASCVD 10 年风险方程（2013）
+    open: yes
+    themes: [cardio]
+    pin: P0
+    why: 心血管风险预测的传统评分基线
+  - name: Delphi-2M
+    aliases: [Delphi, Delphi 2M]
+    match: [Delphi]
+    kind: model
+    modality: 生成式疾病轨迹 Transformer
+    scale: UKB 约 40 万人训练 + 丹麦 190 万人验证 · 1000+ 病种
+    themes: [cohort, cardio]
+    pin: P0
+    why: 生成式疾病轨迹的对标基线
+  - name: ALADYNOULLI
+    aliases: [Aladynoulli]
+    kind: model
+    modality: 贝叶斯生成式疾病轨迹模型
+    themes: [cohort, cardio]
+    pin: P0
+    why: 生成式疾病轨迹的对标基线（可解释）
+
+  # ---- 衰老时钟与基准 ----
+  - name: PhenoAge
+    aliases: [Levine PhenoAge, Phenotypic Age, PhenoAge (Levine 2018)]
+    kind: model
+    modality: 临床血检衰老时钟（9 项血检 + 年龄）
+    open: yes
+    themes: [aging]
+    pin: P1
+    why: 血检生物年龄基线，NHANES 可复现
+  - name: DNAm PhenoAge
+    aliases: [DNAmPhenoAge, Levine DNAm PhenoAge]
+    kind: model
+    modality: 甲基化衰老时钟（513 CpG）
+    open: yes
+    themes: [aging]
+    pin: P1
+    why: 甲基化时钟基线
+  - name: GrimAge
+    aliases: [DNAm GrimAge, GrimAge2, DNAmGrimAge]
+    kind: model
+    modality: 甲基化死亡率时钟
+    themes: [aging]
+    pin: P1
+    why: 死亡率导向的甲基化时钟基线
+  - name: DunedinPACE
+    kind: model
+    modality: 甲基化衰老速度时钟
+    access: https://github.com/danbelsky/DunedinPACE
+    open: yes
+    themes: [aging]
+  - name: Horvath clock
+    aliases: [Horvath DNAm Age Clock, Horvath pan-tissue clock, Horvath DNAm age, Horvath clock (2013)]
+    match: [Horvath]
+    kind: model
+    modality: 多组织甲基化年龄时钟
+    scale: 353 CpG
+    open: yes
+    themes: [aging]
+  - name: LongevityBench
+    aliases: [Longevity Bench]
+    kind: benchmark
+    modality: 衰老生物学多域 AI 基准
+    access: https://doi.org/10.1016/j.cell.2026.08.026
+    themes: [aging]
+    pin: P0
+    why: 衰老 AI 基准（Cell 2026），模型评测对标
+  - name: ClockBase
+    aliases: [ClockBase (Altos)]
+    kind: database
+    modality: 多组织多物种甲基化时钟基准与评估平台
+    themes: [aging]
+  - name: Aging Atlas
+    kind: database
+    modality: 衰老相关基因/多组学聚合
+    access: https://ngdc.cncb.ac.cn/aging/
+    open: yes
+    themes: [aging]
+  - name: Open Genes
+    kind: database
+    modality: 衰老基因库 + 实验证据分级
+    access: https://open-genes.com/
+    open: yes
+    themes: [aging]
+  - name: GenAge
+    aliases: [HAGR GenAge]
+    kind: database
+    modality: 衰老相关基因 curated 集（HAGR）
+    access: https://genomics.senescence.info/genes/
+    open: yes
+    themes: [aging]
+  - name: CellAge
+    aliases: [HAGR CellAge]
+    kind: database
+    modality: 细胞衰老基因 curated 集（HAGR）
+    access: https://genomics.senescence.info/cells/
+    open: yes
+    themes: [aging]
+  - name: EWAS Atlas
+    aliases: [EWAS Data Hub]
+    kind: database
+    modality: 甲基化关联结果与数据
+    access: https://ngdc.cncb.ac.cn/ewas/atlas
+    open: yes
+    themes: [aging]
+
+  # ---- 蛋白组平台（商业）----
+  - name: Olink
+    aliases: [Olink Proteomics, Olink Explore 3072, Olink Explore, Olink Explore 1536, Olink Target 96]
+    kind: tool
+    modality: 邻位延伸蛋白组检测平台
+    open: commercial
+    themes: [cohort]
+  - name: SomaScan
+    aliases: [SomaLogic, SomaScan assay, SomaScan v4]
+    kind: tool
+    modality: 适配体蛋白组检测平台
+    open: commercial
+    themes: [cohort]
+
+  # ---- 心电 ----
+  - name: CODE-15%
+    aliases: [CODE15, CODE-15, CODE 15%, CODE-15% dataset]
+    match: [CODE-15, CODE 15]
+    kind: dataset
+    modality: 12 导联心电（巴西 CODE 研究 15% 子集）
+    scale: 约 34.6 万份心电 / 23.4 万患者
+    access: https://zenodo.org/records/4916206
+    open: yes
+    themes: [cardio]
+  - name: PTB-XL
+    kind: dataset
+    modality: 12 导联心电（带诊断标注）
+    scale: 21,799 份心电 / 18,869 人
+    access: https://physionet.org/content/ptb-xl/
+    open: yes
+    themes: [cardio]
+  - name: MIMIC-IV
+    aliases: [MIMIC IV]
+    kind: dataset
+    modality: ICU / 住院 EHR
+    access: https://physionet.org/content/mimiciv/
+    open: controlled
+    themes: [cohort]
+  - name: ADVANCE
+    aliases: [ADVANCE Trial, ADVANCE risk model]
+    kind: dataset
+    modality: 2 型糖尿病试验队列与风险模型
+    access: ""
+    themes: [cardio]
+
+  # ---- 转录组 / 通用仓库（原 registry/databases.md）----
+  - name: Gene Expression Omnibus
+    aliases: [GEO, NCBI GEO]
+    match: [GEO, Gene Expression Omnibus]
+    kind: database
+    modality: 公共组学仓库（bulk + 部分单细胞）
+    access: https://www.ncbi.nlm.nih.gov/geo/
+    open: yes
+  - name: SRA
+    aliases: [Sequence Read Archive, NCBI SRA]
+    match: [SRA, Sequence Read Archive]
+    kind: database
+    modality: 原始测序 reads
+    access: https://www.ncbi.nlm.nih.gov/sra
+    open: yes
+  - name: ARCHS4
+    kind: database
+    modality: GEO RNA-seq 统一重处理矩阵（人/鼠）
+    access: https://maayanlab.cloud/archs4/
+    open: yes
+  - name: recount3
+    kind: database
+    modality: 统一重处理 RNA-seq（含 GTEx/TCGA）
+    access: https://rna.recount.bio/
+    open: yes
+  - name: ArrayExpress
+    aliases: [ArrayExpress / BioStudies, BioStudies, EMBL-EBI ArrayExpress]
+    kind: database
+    modality: EBI 表达与多组学归档
+    access: https://www.ebi.ac.uk/biostudies/arrayexpress
+    open: yes
+  - name: GTEx
+    aliases: [Genotype-Tissue Expression, GTEx Portal, GTEx v8]
+    kind: dataset
+    modality: 多组织基因型-表达（eQTL）参考
+    scale: 约 950 名供体 · 54 个组织（v8）
+    access: https://gtexportal.org/
+    open: partial
+    themes: [aging]
+  - name: TCGA
+    aliases: [The Cancer Genome Atlas]
+    kind: dataset
+    modality: 肿瘤多模态（RNA/甲基化/CNV/病理/结局）
+    access: https://portal.gdc.cancer.gov/
+    open: partial
+  - name: ENCODE
+    kind: database
+    modality: ChIP/ATAC/DNase 调控组学
+    access: https://www.encodeproject.org/
+    open: yes
+
+  # ---- 单细胞 / 空间 / 蛋白 ----
+  - name: CELLxGENE
+    aliases: [CZ CELLxGENE, CZI CELLxGENE, CZ CELLxGENE Discover, cellxgene]
+    kind: database
+    modality: 单细胞标准化浏览器 + h5ad 下载
+    access: https://cellxgene.cziscience.com/
+    open: yes
+    themes: [singlecell]
+  - name: CELLxGENE Census
+    aliases: [CZ CELLxGENE Census, cellxgene census]
+    match: [Census]
+    kind: database
+    modality: CELLxGENE 全库可查询切片（面向 ML）
+    access: https://chanzuckerberg.github.io/cellxgene-census/
+    open: yes
+    themes: [singlecell]
+  - name: Human Cell Atlas
+    aliases: [HCA]
+    kind: database
+    modality: 人体全细胞图谱计划
+    access: https://data.humancellatlas.org/
+    open: yes
+    themes: [singlecell]
+  - name: Tabula Sapiens
+    kind: dataset
+    modality: 人多器官单细胞参考
+    themes: [singlecell]
+  - name: Single Cell Portal
+    aliases: [Single Cell Portal (Broad), Broad Single Cell Portal]
+    kind: database
+    modality: Broad 托管单细胞数据集
+    access: https://singlecell.broadinstitute.org/
+    open: yes
+    themes: [singlecell]
+  - name: HuBMAP
+    kind: database
+    modality: 人体单细胞 + 空间图谱
+    access: https://portal.hubmapconsortium.org/
+    open: yes
+    themes: [singlecell]
+  - name: Human Protein Atlas
+    aliases: [HPA, The Human Protein Atlas]
+    kind: database
+    modality: 组织/单细胞/亚细胞蛋白表达图谱
+    access: https://www.proteinatlas.org/
+    open: yes
+  - name: PRIDE
+    aliases: [PRIDE / ProteomeXchange, ProteomeXchange, PRIDE Archive]
+    kind: database
+    modality: 质谱蛋白组原始数据
+    access: https://www.ebi.ac.uk/pride/
+    open: yes
+  - name: MassIVE
+    kind: database
+    modality: 质谱数据仓库
+    access: https://massive.ucsd.edu/
+    open: yes
+  - name: Tahoe-100M
+    aliases: [Tahoe 100M]
+    kind: dataset
+    modality: 单细胞药物扰动图谱
+    access: https://huggingface.co/datasets/tahoebio/Tahoe-100M
+    open: yes
+    themes: [vcell, singlecell]
+
+  # ---- 药物 / 扰动 ----
+  - name: LINCS L1000
+    aliases: [L1000, LINCS, CMap L1000, Connectivity Map]
+    match: [L1000, LINCS, CLUE]
+    kind: dataset
+    modality: 药物/基因扰动转录组
+    access: https://clue.io/
+    open: registration
+    themes: [vcell]
+  - name: DepMap
+    aliases: [Cancer Dependency Map, DepMap PRISM]
+    kind: database
+    modality: 癌细胞系 CRISPR 依赖 + 药敏
+    access: https://depmap.org/portal/
+    open: yes
+    themes: [vcell]
+  - name: Open Targets
+    aliases: [Open Targets Platform]
+    kind: database
+    modality: 靶点-疾病证据聚合
+    access: https://platform.opentargets.org/
+    open: yes
+  - name: scPerturb
+    kind: database
+    modality: 单细胞扰动数据集聚合
+    open: yes
+    themes: [vcell]
+  - name: Norman 2019 Perturb-seq
+    aliases: [Norman Perturb-seq, Norman K562 CRISPRa, Norman19, Norman 2019, Norman et al. 2019]
+    kind: dataset
+    modality: K562 CRISPRa 单/双基因组合扰动单细胞
+    themes: [vcell]
+  - name: Perturb-seq
+    kind: tool
+    modality: 单细胞 CRISPR 扰动测序方法
+    themes: [vcell]
+  - name: Cell Painting Gallery
+    aliases: [Cell Painting Gallery (Broad)]
+    kind: dataset
+    modality: 细胞成像形态学数据
+    access: https://github.com/broadinstitute/cellpainting-gallery
+    open: yes
+    themes: [organoid]
+
+  # ---- 模型（原 registry/models.md）----
+  - name: scGPT
+    kind: model
+    modality: 单细胞预训练 Transformer
+    access: https://github.com/bowang-lab/scGPT
+    open: yes
+    themes: [singlecell]
+  - name: Geneformer
+    kind: model
+    modality: 基因 token 预训练（单细胞）
+    access: https://huggingface.co/ctheodoris/Geneformer
+    open: yes
+    themes: [singlecell]
+  - name: scFoundation
+    kind: model
+    modality: 单细胞大模型
+    access: https://github.com/biomap-research/scFoundation
+    open: yes
+    themes: [singlecell]
+  - name: UCE
+    aliases: [Universal Cell Embedding, Universal Cell Embeddings]
+    match: [UCE, Universal Cell Embedding]
+    kind: model
+    modality: 跨物种细胞 embedding
+    access: https://github.com/snap-stanford/UCE
+    open: yes
+    themes: [singlecell]
+  - name: scvi-tools
+    aliases: [scVI, scANVI, scVI / scANVI, totalVI, MultiVI]
+    match: [scvi]
+    kind: tool
+    modality: 单细胞概率模型工具包（scVI/scANVI/totalVI/MultiVI）
+    access: https://github.com/scverse/scvi-tools
+    open: yes
+    themes: [singlecell]
+  - name: ESM-2
+    aliases: [ESM2, ESM, ESM-2 / ESM-3]
+    match: [esm]
+    kind: model
+    modality: 蛋白语言模型
+    access: https://github.com/facebookresearch/esm
+    open: yes
+  - name: AlphaFold
+    aliases: [AlphaFold2, AlphaFold 2, AlphaFold2/3, AlphaFold3, AlphaFold 3]
+    kind: model
+    modality: 蛋白结构预测
+    access: https://github.com/google-deepmind/alphafold
+    open: yes
+  - name: Enformer
+    kind: model
+    modality: 序列 → 表达/染色质状态
+    open: yes
+  - name: Nucleotide Transformer
+    kind: model
+    modality: 跨物种基因组基础模型
+    access: https://github.com/instadeepai/nucleotide-transformer
+    open: yes
+  - name: DNABERT-2
+    aliases: [DNABERT2, DNABERT 2]
+    match: [DNABERT]
+    kind: model
+    modality: 多物种 DNA 语言模型
+    access: https://github.com/MAGICS-LAB/DNABERT_2
+    open: yes
+  - name: DINOv2
+    aliases: [DI-NOv2, DINO v2]
+    kind: model
+    modality: 自监督视觉骨干（ViT）
+    access: https://github.com/facebookresearch/dinov2
+    open: yes
+    themes: [ssl]
+  - name: I-JEPA
+    aliases: [IJEPA]
+    kind: model
+    modality: 自监督表征（联合嵌入预测）
+    access: https://github.com/facebookresearch/ijepa
+    open: yes
+    themes: [ssl]
+
+aliases:  # 额外别名 → 规范名（归一化前的原样写法即可）
+  Olink Proteomics Panel (UK Biobank): UK Biobank Pharma Proteomics Project
+
+split:  # 同名异物：按 kind 拆成不同条目
+  DISCO:
+    database: DISCO (single-cell database)
+    dataset: DISCO (single-cell database)
+    model: DISCO (ECG HFrEF study)
+    tool: DISCO (ECG HFrEF study)
+
+exclude:  # 不是可复用资源（算法名、泛称），挖到也丢掉
+  - GRPO
+  - PPO
+  - DPO
+  - single-cell data

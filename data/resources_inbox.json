@@ -1,0 +1,90 @@
+[
+ {
+  "name": "Speciesformer learns conserved cellular states for cross-species generative virtual cell modeling",
+  "kind": "model",
+  "url": "https://doi.org/10.64898/2026.09.22.752128",
+  "note": "跨物种单细胞基础模型，学习保守细胞状态，用于虚拟细胞生成与跨物种迁移研究。",
+  "score": 7.0,
+  "day": "2026-09-26",
+  "source": "daily",
+  "theme": "singlecell",
+  "legacy_section": "单细胞 / 空间组学"
+ },
+ {
+  "name": "A single-cell RNA-seq catalog of ground truth gene coregulation",
+  "kind": "dataset",
+  "url": "https://doi.org/10.64898/2026.09.18.752692",
+  "note": "含已知调控关系的scRNA-seq基准目录，用于评估共调控识别与归一化方法。",
+  "score": 7.0,
+  "day": "2026-09-22",
+  "source": "daily",
+  "theme": "singlecell",
+  "legacy_section": "单细胞 / 空间组学"
+ },
+ {
+  "name": "LucaCell: a sequence-centric foundation model for cross-species single-cell analysis",
+  "kind": "model",
+  "url": "https://doi.org/10.64898/2026.09.08.750024",
+  "note": "跨物种单细胞序列基础模型，适合做细胞表征微调基线",
+  "score": 7.0,
+  "day": "2026-09-16",
+  "source": "daily",
+  "theme": "singlecell",
+  "legacy_section": "单细胞 / 空间组学"
+ },
+ {
+  "name": "Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence",
+  "kind": "dataset",
+  "url": "https://doi.org/10.64898/2026.09.11.748700",
+  "note": "跨组织单细胞长读长异构体图谱，含衰老维度，可做异构体层分析参考",
+  "score": 7.0,
+  "day": "2026-09-16",
+  "source": "daily",
+  "theme": "singlecell",
+  "legacy_section": "单细胞 / 空间组学"
+ },
+ {
+  "name": "A breast tissue-specific epigenetic clock provides accurate chronological age predictions and reveals de-correlation of age and DNA methylation in tumor-adjacen",
+  "kind": "model",
+  "url": "https://doi.org/10.1080/15592294.2026.2714582",
+  "note": "乳腺组织特异甲基化时钟（BTEC），跨祖源稳健，组织特异时钟参考",
+  "score": 8.0,
+  "day": "2026-09-15",
+  "source": "daily",
+  "theme": "aging",
+  "legacy_section": "衰老时钟 / 表观遗传"
+ },
+ {
+  "name": "A massively parallel synthetic gene atlas for learning compact cis-regulatory grammar across cellular contexts",
+  "kind": "dataset",
+  "url": "https://doi.org/10.64898/2026.09.13.751267",
+  "note": "大规模合成顺式调控元件图谱，适合训练调控语法模型",
+  "score": 7.0,
+  "day": "2026-09-16",
+  "source": "daily",
+  "theme": "",
+  "legacy_section": "基因组 / 调控"
+ },
+ {
+  "name": "A lifespan-scale single-cell atlas defines an early-childhood immunometabolic transition linked to age-referenced immune states",
+  "kind": "dataset",
+  "url": "https://doi.org/10.64898/2026.09.11.750312",
+  "note": "0-100岁PBMC单细胞图谱，揭示6岁免疫代谢转变，适合衰老研究",
+  "score": 7.0,
+  "day": "2026-09-19",
+  "source": "daily",
+  "theme": "cohort",
+  "legacy_section": "人群队列 / 多模态"
+ },
+ {
+  "name": "spaGFM is a scalable graph foundation model for spatial transcriptomics analyses",
+  "kind": "model",
+  "url": "https://doi.org/10.21203/rs.3.rs-11012643/v1",
+  "note": "空间转录组图基础模型，随机游走序列化邻域，可微调用于组织分析",
+  "score": 8.0,
+  "day": "2026-09-19",
+  "source": "daily",
+  "theme": "",
+  "legacy_section": "通用 ML / 其他"
+ }
+]
