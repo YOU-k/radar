@@ -13,7 +13,12 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ],
+  "priority": "P0",
+  "why": "衰老AI基准，类器官衰老demo与虚拟扰动建模的对标评测"
  },
  "longevity llm": {
   "name": "Longevity-LLM",
@@ -30,7 +35,12 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ],
+  "priority": "P1",
+  "why": "衰老组学基础模型，可微调做表观年龄与多模态衰老表征"
  },
  "longevity claw": {
   "name": "Longevity Claw",
@@ -46,7 +56,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ]
  },
  "teapee": {
   "name": "TEAPEE",
@@ -62,7 +75,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "medicine": {
   "name": "MEDICINE",
@@ -79,7 +95,13 @@
    "多模态衰老时钟与生物年龄",
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging",
+   "cohort"
+  ],
+  "priority": "P1",
+  "why": "UKB代谢组生物年龄模型，迁移到ChinaHEART做代谢衰老评分"
  },
  "uk biobank": {
   "name": "UK Biobank",
@@ -208,7 +230,14 @@
    "心血管队列多组学与临床 AI",
    "人群健康与多组学 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "aging",
+   "cardio",
+   "cohort"
+  ],
+  "priority": "P0",
+  "why": "多组学衰老与CVD方法迁移主数据源，ChinaHEART参照基准"
  },
  "china kadoorie biobank": {
   "name": "China Kadoorie Biobank",
@@ -232,7 +261,13 @@
    "多模态衰老时钟与生物年龄",
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "aging",
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "中国人群队列，CVD风险模型跨国验证与迁移参照"
  },
  "finngen": {
   "name": "FinnGen",
@@ -252,7 +287,13 @@
    "多模态衰老时钟与生物年龄",
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging",
+   "cohort"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "pasta": {
   "name": "Pasta",
@@ -268,7 +309,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "sc immuaging": {
   "name": "sc-ImmuAging",
@@ -284,7 +328,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "damage": {
   "name": "DamAge",
@@ -300,7 +347,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "adaptage": {
   "name": "AdaptAge",
@@ -316,7 +366,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "metbag": {
   "name": "MetBAG",
@@ -332,7 +385,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "inspire t": {
   "name": "INSPIRE-T",
@@ -348,7 +404,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "framingham heart study": {
   "name": "Framingham Heart Study",
@@ -367,7 +426,13 @@
    "多模态衰老时钟与生物年龄",
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging",
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "ECG-AF深度学习经典队列，心血管AI模型对标"
  },
  "biolearn": {
   "name": "Biolearn",
@@ -383,7 +448,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ]
  },
  "nurses health study": {
   "name": "Nurses' Health Study",
@@ -399,7 +467,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "lothian birth cohort 1936": {
   "name": "Lothian Birth Cohort 1936",
@@ -415,7 +486,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "gse67752": {
   "name": "GSE67752",
@@ -431,7 +505,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "clockbase agent": {
   "name": "ClockBase Agent",
@@ -447,7 +524,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "horvath dnam age clock": {
   "name": "Horvath DNAm Age Clock",
@@ -464,7 +544,12 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ],
+  "priority": "P1",
+  "why": "DNAm年龄基线时钟，类器官衰老demo必比基线"
  },
  "hannum dnam age clock": {
   "name": "Hannum DNAm Age Clock",
@@ -480,7 +565,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "nhanes": {
   "name": "NHANES",
@@ -496,7 +584,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "aging"
+  ]
  },
  "cz cellxgene discover": {
   "name": "CZ CELLxGENE Discover",
@@ -512,7 +603,12 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ],
+  "priority": "P0",
+  "why": "单细胞图谱，训练类器官/单细胞衰老时钟的公开数据"
  },
  "senepy": {
   "name": "SenePy",
@@ -528,7 +624,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ]
  },
  "generation scotland": {
   "name": "Generation Scotland",
@@ -544,7 +643,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "aging"
+  ]
  },
  "dnam phenoage": {
   "name": "DNAm PhenoAge",
@@ -560,7 +662,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "gold bioage": {
   "name": "GOLD BioAge",
@@ -576,7 +681,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "pathwayage": {
   "name": "PathwayAge",
@@ -592,7 +700,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "ctba": {
   "name": "CTBA",
@@ -608,7 +719,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "linage2": {
   "name": "LinAge2",
@@ -624,7 +738,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "scageclock": {
   "name": "scAgeClock",
@@ -640,7 +757,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "medicine portal": {
   "name": "MEDICINE portal",
@@ -656,7 +776,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "israel 10k project": {
   "name": "Israel 10K Project",
@@ -672,7 +795,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "husi": {
   "name": "hUSI",
@@ -688,7 +814,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "healthspan proteomic score": {
   "name": "Healthspan Proteomic Score (HPS)",
@@ -704,7 +833,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "gtex": {
   "name": "GTEx",
@@ -720,7 +852,12 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "tfmethyl clock": {
   "name": "TFMethyl Clock",
@@ -736,7 +873,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "senskin": {
   "name": "SenSkin",
@@ -752,7 +892,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "somascan": {
   "name": "SomaScan",
@@ -771,7 +914,13 @@
    "多模态衰老时钟与生物年龄",
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging",
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "血浆蛋白组平台，ChinaHEART蛋白组衰老建模参照"
  },
  "extracellular matrix aging clock": {
   "name": "Extracellular Matrix Aging Clock",
@@ -787,7 +936,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "mskage": {
   "name": "MSKAge",
@@ -803,7 +955,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "livage": {
   "name": "LivAge",
@@ -819,7 +974,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "archs4": {
   "name": "ARCHS4",
@@ -836,7 +994,12 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ],
+  "priority": "P1",
+  "why": "跨年龄RNA-seq，转录组衰老时钟训练验证数据"
  },
  "mgb biobank": {
   "name": "MGB Biobank",
@@ -852,7 +1015,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "gene expression omnibus": {
   "name": "GEO",
@@ -868,7 +1034,12 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ],
+  "priority": "P1",
+  "why": "干预研究DNAm数据，衰老标志物响应性分析"
  },
  "embl ebi arrayexpress": {
   "name": "EMBL-EBI ArrayExpress",
@@ -884,7 +1055,12 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "trudiagnostic": {
   "name": "TruDiagnostic",
@@ -900,7 +1076,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "horvath clock": {
   "name": "Horvath clock",
@@ -916,7 +1095,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "pedbe clock": {
   "name": "PedBE clock",
@@ -932,7 +1114,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "omicmage": {
   "name": "OMICmAge",
@@ -948,7 +1133,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "dnamemrage": {
   "name": "DNAmEMRAge",
@@ -964,7 +1152,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "emrage": {
   "name": "EMRAge",
@@ -980,7 +1171,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "stackage": {
   "name": "StackAge",
@@ -996,7 +1190,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "k dense": {
   "name": "K-Dense",
@@ -1012,7 +1209,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "translage": {
   "name": "TranslAGE",
@@ -1028,7 +1228,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "mcas": {
   "name": "mCAS",
@@ -1044,7 +1247,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "cengen": {
   "name": "CeNGEN",
@@ -1060,7 +1266,12 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging"
+  ],
+  "priority": "P1",
+  "why": "线虫神经元转录组，模式生物虚拟扰动与衰老时钟"
  },
  "immunosenescence inventory": {
   "name": "Immunosenescence Inventory",
@@ -1076,7 +1287,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "aging"
+  ]
  },
  "computagebench": {
   "name": "ComputAgeBench",
@@ -1092,7 +1306,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "aging"
+  ]
  },
  "longevity bench": {
   "name": "Longevity Bench",
@@ -1108,7 +1325,10 @@
   "topics": [
    "多模态衰老时钟与生物年龄"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "aging"
+  ]
  },
  "cell painting": {
   "name": "Cell Painting",
@@ -1127,7 +1347,13 @@
    "多模态衰老时钟与生物年龄",
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "aging",
+   "singlecell"
+  ],
+  "priority": "P0",
+  "why": "细胞形态扰动响应，类器官+cell painting扰动建模核心"
  },
  "uk biobank pharma proteomics project": {
   "name": "UK Biobank Pharma Proteomics Project (UKB-PPP)",
@@ -1153,7 +1379,13 @@
    "心血管队列多组学与临床 AI",
    "人群健康与多组学 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cardio",
+   "cohort"
+  ],
+  "priority": "P0",
+  "why": "UKB蛋白组，ChinaHEART蛋白组CVD风险迁移参照"
  },
  "olink explore 3072": {
   "name": "Olink Explore 3072",
@@ -1169,7 +1401,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "gps mult": {
   "name": "GPS Mult",
@@ -1185,7 +1420,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "aire": {
   "name": "AIRE",
@@ -1201,7 +1439,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "charls": {
   "name": "CHARLS",
@@ -1218,7 +1459,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "中国队列，ChinaHEART迁移与AI-ECG外部验证"
  },
  "score2": {
   "name": "SCORE2",
@@ -1238,7 +1484,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "欧洲CVD风险基线，ChinaHEART模型对标"
  },
  "prevent": {
   "name": "PREVENT",
@@ -1256,7 +1507,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "AHA风险方程，蛋白组评分增量比较基线"
  },
  "framingham risk score": {
   "name": "Framingham Risk Score (FRS)",
@@ -1272,7 +1528,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "传统CVD风险评分，ChinaHEART迁移对照"
  },
  "ukb pharma proteomics project": {
   "name": "UKB Pharma Proteomics Project",
@@ -1288,7 +1549,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cardio"
+  ]
  },
  "decode genetics": {
   "name": "deCODE genetics",
@@ -1304,7 +1568,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "olink proteomics": {
   "name": "Olink Proteomics",
@@ -1320,7 +1587,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "alphafold3": {
   "name": "AlphaFold3",
@@ -1336,7 +1606,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "copenhagen general population study": {
   "name": "Copenhagen General Population Study",
@@ -1352,7 +1625,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "elsa brasil": {
   "name": "ELSA-Brasil",
@@ -1369,7 +1645,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "yale new haven health system": {
   "name": "Yale New Haven Health System",
@@ -1385,7 +1666,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "penn medicine biobank": {
   "name": "Penn Medicine BioBank",
@@ -1403,7 +1687,13 @@
    "心血管队列多组学与临床 AI",
    "人群健康与多组学 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio",
+   "cohort"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "kora": {
   "name": "KORA",
@@ -1419,7 +1709,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "cardiovascular health study": {
   "name": "Cardiovascular Health Study",
@@ -1436,7 +1729,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "老年CVD队列，ECG-AI心血管结局外部验证"
  },
  "china par": {
   "name": "China-PAR",
@@ -1455,7 +1753,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P0",
+  "why": "中国CVD风险模型，ChinaHEART迁移必比对照"
  },
  "code15": {
   "name": "CODE15",
@@ -1471,7 +1774,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "大规模ECG公开数据，ECG基础模型预训练验证"
  },
  "sami trop": {
   "name": "SaMi-Trop",
@@ -1487,7 +1795,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "score2 diabetes": {
   "name": "SCORE2-Diabetes",
@@ -1505,7 +1818,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "T2D专用CVD模型，代谢组增量改进对照"
  },
  "advance": {
   "name": "ADVANCE",
@@ -1521,7 +1839,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "elan": {
   "name": "ELAN",
@@ -1537,7 +1860,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio"
+  ]
  },
  "seer": {
   "name": "SEER",
@@ -1553,7 +1879,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "ai hf": {
   "name": "AI-HF",
@@ -1569,7 +1898,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cardio"
+  ]
  },
  "ship start": {
   "name": "SHIP-START",
@@ -1585,7 +1917,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio"
+  ]
  },
  "ship trend": {
   "name": "SHIP-TREND",
@@ -1601,7 +1936,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio"
+  ]
  },
  "ecg ai": {
   "name": "ECG-AI",
@@ -1617,7 +1955,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "ml cvd c": {
   "name": "ML-CVD-C",
@@ -1633,7 +1974,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "qrisk3": {
   "name": "QRISK3",
@@ -1651,7 +1995,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "英国CVD风险模型，蛋白组增量比较基线"
  },
  "esther": {
   "name": "ESTHER",
@@ -1668,7 +2017,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "chinaheart": {
   "name": "ChinaHEART",
@@ -1684,7 +2038,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "aric": {
   "name": "ARIC",
@@ -1704,7 +2061,13 @@
    "心血管队列多组学与临床 AI",
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio",
+   "cohort"
+  ],
+  "priority": "P1",
+  "why": "蛋白组心衰/衰弱队列，ChinaHEART蛋白组参照"
  },
  "olink": {
   "name": "Olink",
@@ -1724,7 +2087,13 @@
    "心血管队列多组学与临床 AI",
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio",
+   "cohort"
+  ],
+  "priority": "P1",
+  "why": "蛋白组检测平台，ChinaHEART蛋白组方案参照"
  },
  "charge af": {
   "name": "CHARGE-AF",
@@ -1742,7 +2111,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "房颤风险模型，AI-ECG与蛋白组评分比较基线"
  },
  "cprd": {
   "name": "CPRD",
@@ -1758,7 +2132,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cardio"
+  ]
  },
  "autoprognosis": {
   "name": "AutoPrognosis",
@@ -1774,7 +2151,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "cardiac fm": {
   "name": "CARDIAC-FM",
@@ -1790,7 +2170,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "chs": {
   "name": "CHS",
@@ -1807,7 +2190,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "mesa": {
   "name": "MESA",
@@ -1826,7 +2214,13 @@
    "心血管队列多组学与临床 AI",
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio",
+   "cohort"
+  ],
+  "priority": "P1",
+  "why": "多模态CVD队列，心血管基础模型外部验证"
  },
  "china aiheart": {
   "name": "China-AIHeart",
@@ -1842,7 +2236,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "totalsegmentator": {
   "name": "TotalSegmentator",
@@ -1858,7 +2255,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "nlst": {
   "name": "NLST",
@@ -1874,7 +2274,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio"
+  ]
  },
  "geisinger ecg cohort": {
   "name": "Geisinger ECG Cohort",
@@ -1890,7 +2293,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "olink proteomics panel": {
   "name": "Olink Proteomics Panel (UK Biobank)",
@@ -1906,7 +2312,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "ynhhs outpatient ecg cohort": {
   "name": "YNHHS Outpatient ECG Cohort",
@@ -1922,7 +2331,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "mgb ecg cohort": {
   "name": "MGB (Mass General Brigham) ECG Cohort",
@@ -1938,7 +2350,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "ecg2cad": {
   "name": "ECG2CAD",
@@ -1954,7 +2369,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "mimic iv ecg": {
   "name": "MIMIC-IV-ECG",
@@ -1970,7 +2388,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "ecg lfm": {
   "name": "ECG-LFM",
@@ -1986,7 +2407,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "heedb": {
   "name": "HEEDB",
@@ -2002,7 +2426,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "paradigm hf": {
   "name": "PARADIGM-HF",
@@ -2018,7 +2445,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cardio"
+  ]
  },
  "disco": {
   "name": "DISCO",
@@ -2036,7 +2466,13 @@
    "心血管队列多组学与临床 AI",
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio",
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "ECG嵌入表型匹配，虚拟扰动与治疗效应模拟思路"
  },
  "trim": {
   "name": "TRIM",
@@ -2052,7 +2488,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "uk biobank ecg interval reference dataset": {
   "name": "UK Biobank ECG Interval Reference Dataset",
@@ -2068,7 +2507,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "code": {
   "name": "CODE (Brazilian ECG Dataset, 2.3M ECGs)",
@@ -2084,7 +2526,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cardio"
+  ]
  },
  "reti cvd": {
   "name": "Reti-CVD",
@@ -2101,7 +2546,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "视网膜图像CVD评分，多模态风险分层可迁移"
  },
  "ecg fm": {
   "name": "ECG-FM",
@@ -2117,7 +2567,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "uhn ecg": {
   "name": "UHN-ECG",
@@ -2133,7 +2586,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "physionet": {
   "name": "PhysioNet",
@@ -2149,7 +2605,12 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ],
+  "priority": "P1",
+  "why": "生理信号门户，ECG基础模型预训练与基准"
  },
  "mimic-iv": {
   "name": "MIMIC-IV",
@@ -2167,7 +2628,13 @@
    "心血管队列多组学与临床 AI",
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio",
+   "cohort"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "echo2hf": {
   "name": "Echo2HF",
@@ -2183,7 +2650,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "ascvd irt": {
   "name": "ASCVD-IRT",
@@ -2199,7 +2669,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "ascvd pce": {
   "name": "ASCVD-PCE",
@@ -2215,7 +2688,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "auscvdrisk": {
   "name": "AusCVDRisk",
@@ -2231,7 +2707,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "biobank japan": {
   "name": "BioBank Japan (BBJ)",
@@ -2249,7 +2728,13 @@
    "心血管队列多组学与临床 AI",
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio",
+   "cohort"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "mortara veritas algorithm": {
   "name": "Mortara VERITAS Algorithm",
@@ -2265,7 +2750,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio"
+  ]
  },
  "jiangsu behavioral and physical chronic disease cohort": {
   "name": "Jiangsu Behavioral and Physical Chronic Disease Cohort (JBPCD)",
@@ -2281,7 +2769,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "charge af consortium": {
   "name": "CHARGE-AF Consortium",
@@ -2297,7 +2788,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio"
+  ]
  },
  "atherosclerosis risk in communities study": {
   "name": "Atherosclerosis Risk in Communities (ARIC) Study",
@@ -2315,7 +2809,13 @@
    "心血管队列多组学与临床 AI",
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cardio",
+   "cohort"
+  ],
+  "priority": "P1",
+  "why": "蛋白组预测模型与cis-pQTL参照，可迁移到ChinaHEART蛋白组分析"
  },
  "age gene environment susceptibility reykjavik study": {
   "name": "Age, Gene/Environment Susceptibility-Reykjavik Study (AGES)",
@@ -2331,7 +2831,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio"
+  ]
  },
  "rotterdam study": {
   "name": "Rotterdam Study",
@@ -2347,7 +2850,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio"
+  ]
  },
  "advance trial": {
   "name": "ADVANCE Trial",
@@ -2363,7 +2869,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio"
+  ]
  },
  "mondrian cross conformal prediction": {
   "name": "Mondrian Cross-Conformal Prediction (MCCP)",
@@ -2379,7 +2888,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "asian indian diabetes heart study sikh diabetes study": {
   "name": "Asian Indian Diabetes Heart Study / Sikh Diabetes Study (AIDHS/SDS)",
@@ -2395,7 +2907,10 @@
   "topics": [
    "心血管队列多组学与临床 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cardio"
+  ]
  },
  "mass general brigham biobank": {
   "name": "Mass General Brigham Biobank",
@@ -2415,7 +2930,13 @@
    "心血管队列多组学与临床 AI",
    "人群健康与多组学 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cardio",
+   "cohort"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "sccompass 126m": {
   "name": "scCompass-126M",
@@ -2431,7 +2952,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "genecompass": {
   "name": "GeneCompass",
@@ -2447,7 +2971,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "cellot": {
   "name": "CellOT",
@@ -2463,7 +2990,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "saturn": {
   "name": "SATURN",
@@ -2479,7 +3009,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "spatialcorpus 110m": {
   "name": "SpatialCorpus-110M",
@@ -2495,7 +3028,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "nicheformer": {
   "name": "Nicheformer",
@@ -2511,7 +3047,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "perturb fish": {
   "name": "Perturb-FISH",
@@ -2528,7 +3067,13 @@
    "类器官与模式生物虚拟响应建模",
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid",
+   "singlecell"
+  ],
+  "priority": "P1",
+  "why": "空间扰动读取思路，可用于类器官虚拟扰动建模设计"
  },
  "integrated mega scale atlas": {
   "name": "Integrated Mega-scale Atlas",
@@ -2544,7 +3089,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "uce": {
   "name": "UCE (Universal Cell Embeddings)",
@@ -2562,7 +3110,13 @@
    "类器官与模式生物虚拟响应建模",
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid",
+   "singlecell"
+  ],
+  "priority": "P1",
+  "why": "免微调细胞嵌入，类器官衰老demo可作基线表征"
  },
  "brainbeacon": {
   "name": "BrainBeacon",
@@ -2578,7 +3132,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "oscar": {
   "name": "OSCAR",
@@ -2594,7 +3151,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "mouse genecorpus 20m": {
   "name": "mouse-Genecorpus-20M",
@@ -2610,7 +3170,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "mouse geneformer": {
   "name": "Mouse-Geneformer",
@@ -2626,7 +3189,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "tabicl": {
   "name": "TabICL",
@@ -2642,7 +3208,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "tabpfn": {
   "name": "TabPFN",
@@ -2658,7 +3227,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "presage": {
   "name": "PRESAGE",
@@ -2674,7 +3246,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "scgpt": {
   "name": "scGPT",
@@ -2705,7 +3280,14 @@
    "单细胞与空间组学基础模型与虚拟细胞",
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "organoid",
+   "singlecell",
+   "vcell"
+  ],
+  "priority": "P0",
+  "why": "单细胞基础模型基线，类器官衰老demo与虚拟扰动对标"
  },
  "lucacell": {
   "name": "LucaCell",
@@ -2721,7 +3303,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "cell landscape": {
   "name": "Cell Landscape",
@@ -2737,7 +3322,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "cinema ot": {
   "name": "CINEMA-OT",
@@ -2753,7 +3341,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "scansnp": {
   "name": "SCanSNP",
@@ -2769,7 +3360,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "pharmaformer": {
   "name": "PharmaFormer",
@@ -2785,7 +3379,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "gdsc": {
   "name": "GDSC",
@@ -2801,7 +3398,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "tcga": {
   "name": "TCGA",
@@ -2817,7 +3417,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "i spy2": {
   "name": "I-SPY2",
@@ -2833,7 +3436,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "came": {
   "name": "CAME",
@@ -2849,7 +3455,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "sam": {
   "name": "SAM (Segment Anything Model)",
@@ -2865,7 +3474,12 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "organoid"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "di nov2": {
   "name": "DI-NOv2",
@@ -2881,7 +3495,12 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "organoid"
+  ],
+  "priority": "P1",
+  "why": "类器官视频自监督特征+药效预测，可直接用于类器官demo"
  },
  "codrp": {
   "name": "CODRP",
@@ -2897,7 +3516,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "dirl": {
   "name": "DiRL",
@@ -2913,7 +3535,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "vcbench": {
   "name": "VCBench",
@@ -2930,7 +3555,13 @@
    "类器官与模式生物虚拟响应建模",
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid",
+   "singlecell"
+  ],
+  "priority": "P1",
+  "why": "单细胞基础模型评测基准，选型与对标时参照"
  },
  "transcriptformer": {
   "name": "TranscriptFormer",
@@ -2949,7 +3580,13 @@
    "类器官与模式生物虚拟响应建模",
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid",
+   "singlecell"
+  ],
+  "priority": "P1",
+  "why": "跨物种虚拟细胞图谱，虚拟扰动与跨物种迁移参照"
  },
  "lwd miniscope": {
   "name": "LWD-Miniscope",
@@ -2965,7 +3602,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "transfernet pdo": {
   "name": "TransferNet-PDO",
@@ -2981,7 +3621,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "scope": {
   "name": "SCOPE (Systematic Classification of Organoids for Phenotypic Evaluation)",
@@ -2997,7 +3640,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "trellis": {
   "name": "Trellis",
@@ -3013,7 +3659,10 @@
   "topics": [
    "类器官与模式生物虚拟响应建模"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "organoid"
+  ]
  },
  "uk biobank whole genome sequencing": {
   "name": "UK Biobank Whole-Genome Sequencing",
@@ -3029,7 +3678,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cohort"
+  ]
  },
  "proteome phenome atlas": {
   "name": "Proteome-Phenome Atlas",
@@ -3045,7 +3697,12 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ],
+  "priority": "P0",
+  "why": "开放蛋白组-疾病图谱，ChinaHEART蛋白组关联查询与验证"
  },
  "mimic": {
   "name": "MIMIC",
@@ -3061,7 +3718,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "foresight": {
   "name": "Foresight",
@@ -3077,7 +3737,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "foresight england": {
   "name": "Foresight-England",
@@ -3093,7 +3756,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "noah": {
   "name": "NOAH",
@@ -3109,7 +3775,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "delphi 2m": {
   "name": "Delphi-2M",
@@ -3125,7 +3794,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "msgene": {
   "name": "MSGene",
@@ -3141,7 +3813,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "icd 8 to icd 10 mapping": {
   "name": "ICD-8 to ICD-10 Mapping",
@@ -3157,7 +3832,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "estonian biobank": {
   "name": "Estonian Biobank",
@@ -3173,7 +3851,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "thl biobank": {
   "name": "THL Biobank",
@@ -3190,7 +3871,12 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cohort"
+  ],
+  "priority": "P1",
+  "why": "NMR代谢组重复验证队列，ChinaHEART代谢标志物外部参照"
  },
  "all of us research program": {
   "name": "All of Us Research Program",
@@ -3215,7 +3901,12 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ],
+  "priority": "P1",
+  "why": "多血统EHR+基因组，PRS与EHR关联复制方法参照"
  },
  "danish national patient registry": {
   "name": "Danish National Patient Registry",
@@ -3231,7 +3922,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "us veterans affairs ehr": {
   "name": "US Veterans Affairs EHR",
@@ -3247,7 +3941,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "giant consortium bmi gwas": {
   "name": "GIANT Consortium BMI GWAS",
@@ -3263,7 +3960,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cohort"
+  ]
  },
  "23andme bmi gwas": {
   "name": "23andMe BMI GWAS",
@@ -3279,7 +3979,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "nhgri ebi gwas catalog": {
   "name": "NHGRI-EBI GWAS Catalog",
@@ -3295,7 +3998,12 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ],
+  "priority": "P1",
+  "why": "GWAS汇总统计标准库，ChinaHEART遗传关联查询"
  },
  "pgs catalog": {
   "name": "PGS Catalog",
@@ -3311,7 +4019,12 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ],
+  "priority": "P1",
+  "why": "多基因评分库，ChinaHEART PRS构建与迁移参照"
  },
  "aladynoulli": {
   "name": "ALADYNOULLI",
@@ -3327,7 +4040,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "atm": {
   "name": "ATM (Age-dependent Topic Model)",
@@ -3343,7 +4059,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "milton": {
   "name": "MILTON",
@@ -3359,7 +4078,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "behrt": {
   "name": "BEHRT",
@@ -3375,7 +4097,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "med bert": {
   "name": "Med-BERT",
@@ -3391,7 +4116,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "pulse": {
   "name": "PULSE",
@@ -3407,7 +4135,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "pan uk biobank gwas summary statistics": {
   "name": "Pan-UK Biobank GWAS summary statistics",
@@ -3424,7 +4155,12 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ],
+  "priority": "P0",
+  "why": "跨祖源GWAS汇总，ChinaHEART迁移与PRS跨人群校正"
  },
  "uk biobank polygenic risk score release": {
   "name": "UK Biobank Polygenic Risk Score Release",
@@ -3440,7 +4176,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cohort"
+  ]
  },
  "mimic-iii": {
   "name": "MIMIC-III",
@@ -3456,7 +4195,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "ucla biobank": {
   "name": "UCLA Biobank",
@@ -3472,7 +4214,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cohort"
+  ]
  },
  "framingham offspring study": {
   "name": "Framingham Offspring Study",
@@ -3488,7 +4233,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "phecodes": {
   "name": "Phecodes",
@@ -3504,7 +4252,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cohort"
+  ]
  },
  "might ehr": {
   "name": "MiGHT-EHR",
@@ -3520,7 +4271,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "ehr mpc": {
   "name": "EHR-MPC",
@@ -3536,7 +4290,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "prs pad": {
   "name": "PRS-PAD",
@@ -3552,7 +4309,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "ukb mdrmf": {
   "name": "UKB-MDRMF",
@@ -3568,7 +4328,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "saige gene": {
   "name": "SAIGE-GENE",
@@ -3584,7 +4347,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "regenie": {
   "name": "REGENIE",
@@ -3600,7 +4366,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "gatk": {
   "name": "GATK",
@@ -3616,7 +4385,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "hail": {
   "name": "Hail",
@@ -3632,7 +4404,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "uk biobank whole exome sequencing": {
   "name": "UK Biobank Whole Exome Sequencing (49,960)",
@@ -3648,7 +4423,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "phemime": {
   "name": "PheMIME",
@@ -3664,7 +4442,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cohort"
+  ]
  },
  "global biobank meta analysis initiative": {
   "name": "Global Biobank Meta-analysis Initiative (GBMI)",
@@ -3681,7 +4462,12 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ],
+  "priority": "P1",
+  "why": "跨库荟萃资源，跨祖源PRS评估方法参照"
  },
  "prs cs": {
   "name": "PRS-CS",
@@ -3697,7 +4483,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "associationsubgraphs": {
   "name": "associationSubgraphs",
@@ -3713,7 +4502,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "23andme": {
   "name": "23andMe",
@@ -3729,7 +4521,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "finrisk": {
   "name": "FINRISK",
@@ -3745,7 +4540,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cohort"
+  ]
  },
  "chop": {
   "name": "CHOP",
@@ -3761,7 +4559,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "vanderbilt university medical center biobank": {
   "name": "Vanderbilt University Medical Center (VUMC) Biobank",
@@ -3777,7 +4578,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "taiwan precision medicine initiative": {
   "name": "Taiwan Precision Medicine Initiative (TPMI)",
@@ -3793,7 +4597,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "bolt lmm": {
   "name": "BOLT-LMM",
@@ -3809,7 +4616,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cohort"
+  ]
  },
  "geneatlas": {
   "name": "GeneATLAS",
@@ -3825,7 +4635,12 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "pheweb": {
   "name": "PheWeb",
@@ -3841,7 +4656,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "uk biobank exome sequencing consortium data": {
   "name": "UK Biobank Exome Sequencing Consortium (UKB-ESC) data",
@@ -3857,7 +4675,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cohort"
+  ]
  },
  "mexico city prospective study": {
   "name": "Mexico City Prospective Study (MCPS)",
@@ -3873,7 +4694,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "epic norfolk": {
   "name": "EPIC-Norfolk",
@@ -3889,7 +4713,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "ukbnmr": {
   "name": "ukbnmr",
@@ -3905,7 +4732,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "cohort"
+  ]
  },
  "phesant": {
   "name": "PHESANT",
@@ -3921,7 +4751,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "spx op": {
   "name": "SPX-OP",
@@ -3937,7 +4770,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "metabohealth": {
   "name": "MetaboHealth",
@@ -3953,7 +4789,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "metabolic vulnerability index": {
   "name": "Metabolic Vulnerability Index (MVX)",
@@ -3969,7 +4808,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "degas": {
   "name": "DeGAs",
@@ -3985,7 +4827,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "fenland": {
   "name": "Fenland",
@@ -4001,7 +4846,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "somalogic": {
   "name": "SomaLogic",
@@ -4017,7 +4865,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "cohort"
+  ]
  },
  "protagegap": {
   "name": "ProtAgeGap",
@@ -4033,7 +4884,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "longitudinal proteomic aging index": {
   "name": "Longitudinal Proteomic Aging Index (LPAI)",
@@ -4049,7 +4903,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "physiological aging index": {
   "name": "Physiological Aging Index (PAI)",
@@ -4065,7 +4922,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "dftj": {
   "name": "DFTJ",
@@ -4081,7 +4941,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "basil": {
   "name": "BASIL",
@@ -4097,7 +4960,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "grasp": {
   "name": "GRASP",
@@ -4113,7 +4979,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "survivehr": {
   "name": "SurvivEHR",
@@ -4129,7 +4998,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "cprd aurum": {
   "name": "CPRD Aurum",
@@ -4145,7 +5017,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "cohort"
+  ]
  },
  "precise": {
   "name": "PRECISE",
@@ -4161,7 +5036,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "npbbd korea": {
   "name": "NPBBD-Korea",
@@ -4177,7 +5055,10 @@
   "topics": [
    "人群健康与多组学 AI"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "cohort"
+  ]
  },
  "hotpotqa": {
   "name": "HotpotQA",
@@ -4193,7 +5074,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "fever": {
   "name": "FEVER",
@@ -4209,7 +5095,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "alfworld": {
   "name": "ALFWorld",
@@ -4228,7 +5119,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "webshop": {
   "name": "WebShop",
@@ -4245,7 +5141,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "prm800k": {
   "name": "PRM800K",
@@ -4261,7 +5162,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "qwen2 5 7b": {
   "name": "Qwen2.5-7B",
@@ -4277,7 +5183,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ]
  },
  "qwen2 5 math 7b": {
   "name": "Qwen2.5-Math-7B",
@@ -4294,7 +5203,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "qwen2 5 math 1 5b": {
   "name": "Qwen2.5-Math-1.5B",
@@ -4310,7 +5224,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ]
  },
  "socratic prmbench": {
   "name": "Socratic-PRMBench",
@@ -4326,7 +5243,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "treerl": {
   "name": "TreeRL",
@@ -4342,7 +5264,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ]
  },
  "gsm plus": {
   "name": "GSM-Plus",
@@ -4358,7 +5283,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ]
  },
  "math500": {
   "name": "MATH500",
@@ -4374,7 +5302,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "processbench": {
   "name": "ProcessBench",
@@ -4391,7 +5324,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "gsm8k": {
   "name": "GSM8K",
@@ -4409,7 +5347,13 @@
    "LLM 科研智能体与可验证奖励强化学习",
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent",
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "math": {
   "name": "MATH",
@@ -4427,7 +5371,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "mmlu": {
   "name": "MMLU",
@@ -4445,7 +5394,13 @@
    "LLM 科研智能体与可验证奖励强化学习",
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent",
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "logiqa": {
   "name": "LOGIQA",
@@ -4461,7 +5416,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ]
  },
  "amc23": {
   "name": "AMC23",
@@ -4478,7 +5436,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "faithrl": {
   "name": "FaithRL",
@@ -4494,7 +5457,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ]
  },
  "medprmbench": {
   "name": "MedPRMBench",
@@ -4510,7 +5476,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "sciprm70k": {
   "name": "SCIPRM70K",
@@ -4526,7 +5495,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "sci prm": {
   "name": "Sci-PRM",
@@ -4542,7 +5514,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "truthinsightbench": {
   "name": "TruthInsightBench",
@@ -4558,7 +5533,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P1",
+  "why": "科学发现智能体评测，科研智能体工作流可参照"
  },
  "memcalib": {
   "name": "MemCalib",
@@ -4574,7 +5554,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ]
  },
  "deepseek r1": {
   "name": "DeepSeek-R1",
@@ -4590,7 +5573,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "deepseek r1 zero": {
   "name": "DeepSeek-R1-Zero",
@@ -4606,7 +5592,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "co scientist": {
   "name": "Co-Scientist",
@@ -4622,7 +5611,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "cellpuzzles": {
   "name": "CellPuzzles",
@@ -4638,7 +5630,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "cell o1": {
   "name": "Cell-o1",
@@ -4654,7 +5649,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "genotex": {
   "name": "GenoTEX",
@@ -4670,7 +5668,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P1",
+  "why": "基因表达分析智能体基准，LLM科研工作流直接对标"
  },
  "genoagent": {
   "name": "GenoAgent",
@@ -4686,7 +5689,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "bird": {
   "name": "BIRD",
@@ -4702,7 +5708,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "lucid": {
   "name": "LUCID",
@@ -4718,7 +5729,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "skillmisevo gym": {
   "name": "SKILLMISEVO-GYM",
@@ -4734,7 +5748,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "skillmisevo bench": {
   "name": "SKILLMISEVO-BENCH",
@@ -4750,7 +5769,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "safeevolve": {
   "name": "SAFEEVOLVE",
@@ -4766,7 +5790,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ]
  },
  "proteingym": {
   "name": "ProteinGym",
@@ -4782,7 +5809,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P1",
+  "why": "蛋白适应度基准，虚拟扰动与蛋白语言模型对标"
  },
  "encode": {
   "name": "ENCODE",
@@ -4798,7 +5830,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ]
  },
  "dale": {
   "name": "DALE",
@@ -4814,7 +5849,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ]
  },
  "delta v": {
   "name": "Delta V",
@@ -4830,7 +5868,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "deepseekmath 7b": {
   "name": "DeepSeekMath 7B",
@@ -4846,7 +5887,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ]
  },
  "grpo": {
   "name": "GRPO",
@@ -4864,7 +5908,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P1",
+  "why": "RL优化算法，智能体RLVR训练可直接采用"
  },
  "med r1": {
   "name": "Med-R1",
@@ -4880,7 +5929,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "qwen2 vl 2b": {
   "name": "Qwen2-VL-2B",
@@ -4896,7 +5948,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ]
  },
  "qwen2 vl 72b": {
   "name": "Qwen2-VL-72B",
@@ -4912,7 +5967,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ]
  },
  "qwen3 1 7b": {
   "name": "Qwen3-1.7B",
@@ -4929,7 +5987,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "qwen3 4b": {
   "name": "Qwen3-4B",
@@ -4947,7 +6010,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "medqa": {
   "name": "MedQA",
@@ -4963,7 +6031,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "gsm hard": {
   "name": "GSM-HARD",
@@ -4979,7 +6052,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "medmcqa": {
   "name": "MedMCQA",
@@ -4995,7 +6073,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "mmlu medical": {
   "name": "MMLU-Medical",
@@ -5011,7 +6094,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "agent"
+  ]
  },
  "tempo": {
   "name": "TEMPO",
@@ -5027,7 +6113,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "p2t": {
   "name": "P2T",
@@ -5043,7 +6132,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "bavar": {
   "name": "BAVAR",
@@ -5059,7 +6151,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "genreasoner": {
   "name": "GenReasoner",
@@ -5075,7 +6170,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "tool grpo": {
   "name": "Tool-GRPO",
@@ -5091,7 +6189,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "cellduality": {
   "name": "CellDuality",
@@ -5107,7 +6208,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "sorl": {
   "name": "SORL",
@@ -5123,7 +6227,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "so ppo": {
   "name": "SO-PPO",
@@ -5139,7 +6246,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "so grpo": {
   "name": "SO-GRPO",
@@ -5155,7 +6265,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "r judge": {
   "name": "R-Judge",
@@ -5171,7 +6284,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "biokgbench": {
   "name": "BioKGBench",
@@ -5187,7 +6305,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "toolmaker benchmark": {
   "name": "ToolMaker Benchmark",
@@ -5203,7 +6324,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "lmr bench": {
   "name": "LMR-BENCH",
@@ -5219,7 +6343,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "swe bench verified": {
   "name": "SWE Bench Verified",
@@ -5235,7 +6362,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "livecodebench": {
   "name": "LiveCodeBench",
@@ -5251,7 +6381,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "kimi k1 5": {
   "name": "Kimi k1.5",
@@ -5267,7 +6400,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "nkibench": {
   "name": "NKIBench",
@@ -5283,7 +6419,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "gaia2": {
   "name": "Gaia2",
@@ -5299,7 +6440,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "sciintegrity bench": {
   "name": "SciIntegrity-Bench",
@@ -5315,7 +6459,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "qwen3 8b": {
   "name": "Qwen3-8B",
@@ -5332,7 +6479,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "soundnessbench": {
   "name": "SoundnessBench",
@@ -5348,7 +6500,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ]
  },
  "seagym": {
   "name": "SEAGym",
@@ -5364,7 +6519,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ]
  },
  "terminal bench 2 0": {
   "name": "Terminal-Bench 2.0",
@@ -5380,7 +6538,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "hle": {
   "name": "HLE",
@@ -5396,7 +6557,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "the ai scientist": {
   "name": "The AI Scientist",
@@ -5412,7 +6576,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "gepa": {
   "name": "GEPA",
@@ -5428,7 +6595,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "ai4ai bench": {
   "name": "AI4AI-Bench",
@@ -5444,7 +6614,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "biodatalab": {
   "name": "BioDataLab",
@@ -5460,7 +6635,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "agent"
+  ]
  },
  "streambench": {
   "name": "StreamBench",
@@ -5476,7 +6654,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "blade": {
   "name": "BLADE",
@@ -5492,7 +6675,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "scienceagentbench": {
   "name": "ScienceAgentBench",
@@ -5508,7 +6694,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "intuitor": {
   "name": "Intuitor",
@@ -5524,7 +6713,12 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "rose": {
   "name": "ROSE",
@@ -5540,7 +6734,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "matclaw": {
   "name": "MatClaw",
@@ -5556,7 +6753,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "discoverphysics": {
   "name": "DiscoverPhysics",
@@ -5572,7 +6772,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ]
  },
  "abc bench": {
   "name": "ABC-Bench",
@@ -5588,7 +6791,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ]
  },
  "officeqa": {
   "name": "OfficeQA",
@@ -5604,7 +6810,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "sealqa": {
   "name": "SealQA",
@@ -5620,7 +6829,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "rsibench data": {
   "name": "RSIBench-Data",
@@ -5636,7 +6848,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "agent"
+  ]
  },
  "humaneval": {
   "name": "HumanEval",
@@ -5652,7 +6867,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "biomnibench da": {
   "name": "BiomniBench-DA",
@@ -5668,7 +6886,10 @@
   "topics": [
    "LLM 科研智能体与可验证奖励强化学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "agent"
+  ]
  },
  "geneformer": {
   "name": "Geneformer",
@@ -5694,7 +6915,13 @@
    "单细胞与空间组学基础模型与虚拟细胞",
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell",
+   "vcell"
+  ],
+  "priority": "P0",
+  "why": "单细胞基础模型基线，类器官衰老demo与虚拟扰动建模直接对标"
  },
  "tabula sapiens": {
   "name": "Tabula Sapiens",
@@ -5710,7 +6937,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "tahoe x1": {
   "name": "Tahoe-X1",
@@ -5728,7 +6958,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P0",
+  "why": "扰动训练单细胞基础模型，虚拟扰动响应建模首选基线"
  },
  "scfoundation": {
   "name": "scFoundation",
@@ -5749,7 +6984,13 @@
    "单细胞与空间组学基础模型与虚拟细胞",
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell",
+   "vcell"
+  ],
+  "priority": "P0",
+  "why": "扰动预测基准模型，类器官扰动demo可直接部署对比"
  },
  "perturbreason": {
   "name": "PerturbReason",
@@ -5765,7 +7006,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "past": {
   "name": "PAST",
@@ -5781,7 +7025,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "aroma": {
   "name": "AROMA",
@@ -5797,7 +7044,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "strand": {
   "name": "STRAND",
@@ -5813,7 +7063,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "scale": {
   "name": "SCALE",
@@ -5830,7 +7083,13 @@
    "单细胞与空间组学基础模型与虚拟细胞",
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell",
+   "vcell"
+  ],
+  "priority": "P0",
+  "why": "条件传输虚拟扰动模型，类器官扰动响应建模直接可用"
  },
  "genecorpus 30m": {
   "name": "Genecorpus-30M",
@@ -5847,7 +7106,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "scib": {
   "name": "scIB",
@@ -5864,7 +7128,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "sccontam": {
   "name": "scContam",
@@ -5880,7 +7149,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "cellworld": {
   "name": "CellWorld",
@@ -5896,7 +7168,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "perturb seq genome scale screen": {
   "name": "Perturb-seq genome-scale screen",
@@ -5912,7 +7187,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "virtual cell challenge": {
   "name": "Virtual Cell Challenge",
@@ -5928,7 +7206,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "human cell atlas": {
   "name": "Human Cell Atlas",
@@ -5945,7 +7226,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P1",
+  "why": "细胞图谱资源，类器官衰老demo参照与跨组织整合"
  },
  "scimilarity": {
   "name": "SCimilarity",
@@ -5963,7 +7249,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P1",
+  "why": "细胞表示基础模型，跨队列细胞注释与状态查询可用"
  },
  "st bank": {
   "name": "ST-bank",
@@ -5979,7 +7270,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "omiclip": {
   "name": "OmiCLIP",
@@ -5995,7 +7289,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P1",
+  "why": "图像-转录组对齐模型，类器官多模态衰老建模参照"
  },
  "loki": {
   "name": "Loki",
@@ -6011,7 +7310,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell"
+  ]
  },
  "prnet": {
   "name": "PRnet",
@@ -6027,7 +7329,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell"
+  ]
  },
  "cellfm": {
   "name": "CellFM",
@@ -6043,7 +7348,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "mstar": {
   "name": "mSTAR",
@@ -6059,7 +7367,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell"
+  ]
  },
  "cellpaint posh": {
   "name": "CellPaint-POSH",
@@ -6075,7 +7386,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell"
+  ]
  },
  "allen brain atlas": {
   "name": "Allen Brain Atlas",
@@ -6091,7 +7405,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "tox21": {
   "name": "Tox21",
@@ -6107,7 +7426,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "unagi": {
   "name": "UNAGI",
@@ -6123,7 +7445,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "cmap": {
   "name": "CMAP",
@@ -6139,7 +7464,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "moscot": {
   "name": "moscot",
@@ -6155,7 +7483,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "gears": {
   "name": "GEARS",
@@ -6174,7 +7505,13 @@
    "单细胞与空间组学基础模型与虚拟细胞",
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell",
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "扰动预测可迁移基线，虚拟扰动建模对比方法"
  },
  "cpa": {
   "name": "CPA",
@@ -6190,7 +7527,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "norman k562 crispra": {
   "name": "Norman K562 CRISPRa",
@@ -6206,7 +7546,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "sea ad": {
   "name": "SEA-AD",
@@ -6222,7 +7565,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "perturbnet": {
   "name": "PerturbNet",
@@ -6238,7 +7584,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "perturb seq": {
   "name": "Perturb-seq",
@@ -6256,7 +7605,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P1",
+  "why": "CRISPR扰动数据，虚拟扰动建模训练与基准"
  },
  "cellprofiler": {
   "name": "CellProfiler",
@@ -6273,7 +7627,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "harmony": {
   "name": "Harmony",
@@ -6289,7 +7648,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "scvi": {
   "name": "scVI",
@@ -6305,7 +7667,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "jump moa": {
   "name": "JUMP-MOA",
@@ -6321,7 +7686,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "copairs": {
   "name": "copairs",
@@ -6337,7 +7705,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "jump lite": {
   "name": "JUMP-lite",
@@ -6353,7 +7724,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "nahual": {
   "name": "Nahual",
@@ -6369,7 +7743,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "crop seq": {
   "name": "CROP-seq",
@@ -6385,7 +7762,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "regformer": {
   "name": "RegFormer",
@@ -6402,7 +7782,13 @@
    "单细胞与空间组学基础模型与虚拟细胞",
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell",
+   "ssl"
+  ],
+  "priority": "P1",
+  "why": "融合GRN先验的扰动预测模型，虚拟扰动建模可迁移"
  },
  "multivi": {
   "name": "MultiVI",
@@ -6418,7 +7804,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "scdifformer": {
   "name": "scDifformer",
@@ -6434,7 +7823,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "merfish whole mouse brain atlas": {
   "name": "MERFISH whole mouse brain atlas",
@@ -6450,7 +7842,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "sceval": {
   "name": "scEval",
@@ -6466,7 +7861,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "cellplm": {
   "name": "CellPLM",
@@ -6483,7 +7881,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P1",
+  "why": "scEval最佳基础模型之一，类器官单细胞建模候选"
  },
  "genept": {
   "name": "GenePT",
@@ -6499,7 +7902,12 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "perteval scfm": {
   "name": "PertEval-scFM",
@@ -6515,7 +7923,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "tahoe-100m": {
   "name": "Tahoe-100M",
@@ -6535,7 +7946,13 @@
    "单细胞与空间组学基础模型与虚拟细胞",
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell",
+   "vcell"
+  ],
+  "priority": "P0",
+  "why": "亿级药物扰动图谱，虚拟扰动预训练与类器官demo核心数据"
  },
  "perturbench": {
   "name": "PerturBench",
@@ -6551,7 +7968,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "chreode": {
   "name": "Chreode",
@@ -6569,7 +7989,13 @@
    "单细胞与空间组学基础模型与虚拟细胞",
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell",
+   "vcell"
+  ],
+  "priority": "P0",
+  "why": "细胞世界模型，虚拟扰动响应与类器官时序建模直接参照"
  },
  "scprint 2": {
   "name": "scPRINT-2",
@@ -6585,7 +8011,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "scmulan": {
   "name": "scMulan",
@@ -6601,7 +8030,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "norman perturb seq": {
   "name": "Norman Perturb-seq",
@@ -6617,7 +8049,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "biollm": {
   "name": "BioLLM",
@@ -6633,7 +8068,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "aida": {
   "name": "AIDA v2",
@@ -6649,7 +8087,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "clm x": {
   "name": "CLM-X",
@@ -6665,7 +8106,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "spatialqm": {
   "name": "SpatialQM",
@@ -6681,7 +8125,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "stp": {
   "name": "STP",
@@ -6697,7 +8144,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "ptm mamba": {
   "name": "PTM-Mamba",
@@ -6713,7 +8163,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "mrvi": {
   "name": "MrVI",
@@ -6729,7 +8182,10 @@
   "topics": [
    "单细胞与空间组学基础模型与虚拟细胞"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "singlecell"
+  ]
  },
  "scarchon": {
   "name": "scArchon",
@@ -6746,7 +8202,13 @@
    "单细胞与空间组学基础模型与虚拟细胞",
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "singlecell",
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "扰动预测标准化基准，虚拟扰动建模评测直接可用"
  },
  "replogle 2022 perturb seq": {
   "name": "Replogle 2022 Perturb-seq",
@@ -6763,7 +8225,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P0",
+  "why": "基因组规模Perturb-seq，扰动预测建模与基准评估核心数据"
  },
  "norman19": {
   "name": "Norman19",
@@ -6779,7 +8246,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "vcell"
+  ]
  },
  "vcc h1": {
   "name": "VCC-H1",
@@ -6795,7 +8265,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "vcell"
+  ]
  },
  "assaybench": {
   "name": "ASSAYBENCH",
@@ -6811,7 +8284,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "CRISPR表型预测基准，评估智能体虚拟细胞能力"
  },
  "cellflux": {
   "name": "CellFlux",
@@ -6827,7 +8305,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "vcell"
+  ]
  },
  "ocoo t": {
   "name": "OCOO-T",
@@ -6843,7 +8324,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "d2r2": {
   "name": "D2R2",
@@ -6859,7 +8343,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "scdeft": {
   "name": "scDEFT",
@@ -6875,7 +8362,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "药物响应反事实推理框架，虚拟扰动建模可迁移"
  },
  "sckite": {
   "name": "scKITE",
@@ -6891,7 +8383,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "知识增强单细胞基础模型，类器官建模候选"
  },
  "cellscientist": {
   "name": "CellScientist",
@@ -6907,7 +8404,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "cellfluxrl": {
   "name": "CellFluxRL",
@@ -6923,7 +8423,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "scgen": {
   "name": "scGen",
@@ -6939,7 +8442,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "潜空间扰动向量预测，虚拟扰动建模经典基线"
  },
  "virtual cell challenge 2026": {
   "name": "Virtual Cell Challenge 2026",
@@ -6955,7 +8463,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "vcell"
+  ]
  },
  "d spin": {
   "name": "D-SPIN",
@@ -6971,7 +8482,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "spac seq": {
   "name": "SPAC-seq",
@@ -6987,7 +8501,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "tardis": {
   "name": "TARDIS",
@@ -7003,7 +8520,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "unipert g2cp": {
   "name": "UniPert-G2CP",
@@ -7019,7 +8539,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "proteintalks": {
   "name": "ProteinTalks",
@@ -7035,7 +8558,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "mosaic": {
   "name": "Mosaic",
@@ -7051,7 +8577,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "chip atlas": {
   "name": "ChIP-Atlas",
@@ -7067,7 +8596,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "TF结合先验，虚拟扰动建模调控推断可用"
  },
  "collectri": {
   "name": "CollecTRI",
@@ -7083,7 +8617,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "TF调控网络先验，扰动预测带符号系数学习"
  },
  "tfactprofiler": {
   "name": "TFActProfiler",
@@ -7099,7 +8638,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "blocked"
+  "verified": "blocked",
+  "themes": [
+   "vcell"
+  ]
  },
  "perturbgen": {
   "name": "PerturbGen",
@@ -7115,7 +8657,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "x atlas pisces": {
   "name": "X-Atlas/Pisces",
@@ -7131,7 +8676,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "x cell": {
   "name": "X-Cell",
@@ -7147,7 +8695,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "leakcheck": {
   "name": "leakcheck",
@@ -7163,7 +8714,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "regvelo": {
   "name": "RegVelo",
@@ -7179,7 +8733,10 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ]
  },
  "get": {
   "name": "GET",
@@ -7195,7 +8752,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "代表性虚拟细胞基础模型，扰动建模对标"
  },
  "scbalflow": {
   "name": "scBalFlow",
@@ -7211,7 +8773,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "流匹配药物扰动预测，类别不平衡场景可迁移"
  },
  "sciplex3": {
   "name": "SciPlex3",
@@ -7227,7 +8794,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "药物扰动基准数据，虚拟扰动建模评测"
  },
  "mcfarland": {
   "name": "McFarland",
@@ -7243,7 +8815,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "药物扰动基准数据，虚拟扰动建模评测"
  },
  "ctrp": {
   "name": "CTRP",
@@ -7259,7 +8836,12 @@
   "topics": [
    "虚拟细胞与扰动响应预测"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "vcell"
+  ],
+  "priority": "P1",
+  "why": "药物基因组学面板，盲响应预测泛化评估"
  },
  "audioset": {
   "name": "AudioSet",
@@ -7275,7 +8857,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "x ares": {
   "name": "X-ARES",
@@ -7291,7 +8878,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "wav2vec 2 0": {
   "name": "wav2vec 2.0",
@@ -7307,7 +8897,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "data2vec": {
   "name": "data2vec",
@@ -7323,7 +8918,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "jepa dna": {
   "name": "JEPA-DNA",
@@ -7339,7 +8939,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P1",
+  "why": "JEPA 用于基因组序列，可迁移到虚拟扰动与多组学表征建模"
  },
  "mnist": {
   "name": "MNIST",
@@ -7355,7 +8960,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "lorenz attractor": {
   "name": "Lorenz attractor",
@@ -7371,7 +8981,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "sentinel 2": {
   "name": "Sentinel-2",
@@ -7387,7 +9000,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "ssl"
+  ]
  },
  "sentinel 1": {
   "name": "Sentinel-1",
@@ -7403,7 +9019,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "ssl"
+  ]
  },
  "modis": {
   "name": "MODIS",
@@ -7419,7 +9038,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "alphaearth": {
   "name": "AlphaEarth",
@@ -7435,7 +9059,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "wikitext": {
   "name": "Wikitext",
@@ -7451,7 +9078,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "dead"
+  "verified": "dead",
+  "themes": [
+   "ssl"
+  ]
  },
  "pusht": {
   "name": "PushT",
@@ -7467,7 +9097,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "robotwin": {
   "name": "RoboTwin",
@@ -7483,7 +9118,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "ctranspath": {
   "name": "CTransPath",
@@ -7499,7 +9139,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "phikon": {
   "name": "Phikon",
@@ -7515,7 +9158,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "uni": {
   "name": "UNI",
@@ -7531,7 +9177,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "virchow": {
   "name": "Virchow",
@@ -7547,7 +9196,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "modelnet40": {
   "name": "ModelNet40",
@@ -7566,7 +9218,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "dinov2": {
   "name": "DINOv2",
@@ -7582,7 +9239,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "jetclass": {
   "name": "JetClass",
@@ -7599,7 +9259,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "particle transformer": {
   "name": "Particle Transformer",
@@ -7615,7 +9280,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "plan2explore": {
   "name": "Plan2Explore",
@@ -7631,7 +9299,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "graphcl": {
   "name": "GraphCL",
@@ -7647,7 +9320,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "flow jepa": {
   "name": "Flow-JEPA",
@@ -7663,7 +9341,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "point lewm": {
   "name": "Point-LeWM",
@@ -7679,7 +9362,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "point delta jepa": {
   "name": "Point-Delta-JEPA",
@@ -7695,7 +9383,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "adajepa": {
   "name": "AdaJEPA",
@@ -7711,7 +9404,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "dino wm": {
   "name": "DINO-WM",
@@ -7727,7 +9423,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "librispeech": {
   "name": "Librispeech",
@@ -7743,7 +9442,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "libri light": {
   "name": "Libri-light",
@@ -7759,7 +9463,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "hubert": {
   "name": "HuBERT",
@@ -7775,7 +9484,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "point jepa": {
   "name": "Point-JEPA",
@@ -7791,7 +9505,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "scanobjectnn": {
   "name": "ScanObjectNN",
@@ -7808,7 +9527,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "audio mae": {
   "name": "Audio-MAE",
@@ -7824,7 +9548,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "mc jepa": {
   "name": "MC-JEPA",
@@ -7840,7 +9567,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "graph jepa": {
   "name": "Graph-JEPA",
@@ -7856,7 +9586,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "hep jepa": {
   "name": "HEP-JEPA",
@@ -7872,7 +9607,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "v jepa 2": {
   "name": "V-JEPA 2",
@@ -7888,7 +9626,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "v jepa 2 ac": {
   "name": "V-JEPA 2-AC",
@@ -7904,7 +9645,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "droid": {
   "name": "Droid",
@@ -7920,7 +9664,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "lejepa": {
   "name": "LeJEPA",
@@ -7936,7 +9683,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "imagenet 1k": {
   "name": "ImageNet-1k",
@@ -7959,7 +9709,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "crossjepa": {
   "name": "CrossJEPA",
@@ -7975,7 +9730,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "bootleg": {
   "name": "Bootleg",
@@ -7991,7 +9749,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "inaturalist 21": {
   "name": "iNaturalist-21",
@@ -8007,7 +9768,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "vtab": {
   "name": "VTAB",
@@ -8023,7 +9787,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "ade20k": {
   "name": "ADE20K",
@@ -8039,7 +9806,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "cityscapes": {
   "name": "Cityscapes",
@@ -8055,7 +9825,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "coco stuff": {
   "name": "COCO-Stuff",
@@ -8071,7 +9844,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "siamjepa": {
   "name": "SiamJEPA",
@@ -8087,7 +9863,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "music jepa": {
   "name": "Music-JEPA",
@@ -8103,7 +9882,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "screp": {
   "name": "scRep",
@@ -8119,7 +9901,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "simclr": {
   "name": "SimCLR",
@@ -8135,7 +9920,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "imagenet ilsvrc 2012": {
   "name": "ImageNet ILSVRC-2012",
@@ -8151,7 +9939,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "byol": {
   "name": "BYOL",
@@ -8167,7 +9958,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "levjepa": {
   "name": "LeVJEPA",
@@ -8183,7 +9977,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "glam": {
   "name": "GLAM",
@@ -8199,7 +9996,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "glam nav": {
   "name": "GLAM NAV",
@@ -8215,7 +10015,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "hm3d": {
   "name": "HM3D v0.2",
@@ -8231,7 +10034,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "habitat": {
   "name": "Habitat",
@@ -8247,7 +10053,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "pascal voc": {
   "name": "PASCAL VOC",
@@ -8263,7 +10072,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "coco": {
   "name": "COCO",
@@ -8280,7 +10094,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "lvis": {
   "name": "LVIS",
@@ -8296,7 +10115,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "moco": {
   "name": "MoCo",
@@ -8312,7 +10136,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "mae": {
   "name": "MAE",
@@ -8328,7 +10157,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "i jepa": {
   "name": "I-JEPA",
@@ -8344,7 +10178,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P1",
+  "why": "I-JEPA 是自监督表征范式基线，可迁移到类器官图像与组学"
  },
  "dino": {
   "name": "DINO",
@@ -8360,7 +10199,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "siameseim": {
   "name": "SiameseIM",
@@ -8376,7 +10220,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "cmae": {
   "name": "CMAE",
@@ -8392,7 +10239,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "lamamba diff": {
   "name": "LaMamba-Diff",
@@ -8408,7 +10258,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "jepa anything": {
   "name": "JEPA-Anything",
@@ -8424,7 +10279,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "sana wm": {
   "name": "SANA-WM",
@@ -8440,7 +10298,12 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "ok"
+  "verified": "ok",
+  "themes": [
+   "ssl"
+  ],
+  "priority": "P2",
+  "why": ""
  },
  "baba in wonderland": {
   "name": "Baba in Wonderland",
@@ -8456,7 +10319,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "robomimic": {
   "name": "Robomimic",
@@ -8472,7 +10338,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "d4rl": {
   "name": "D4RL",
@@ -8488,7 +10357,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "audioset 20k": {
   "name": "AudioSet-20K",
@@ -8504,7 +10376,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "esc 50": {
   "name": "ESC-50",
@@ -8520,7 +10395,10 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  },
  "fsd50k": {
   "name": "FSD50K",
@@ -8536,6 +10414,9 @@
   "topics": [
    "世界模型与自监督表征学习"
   ],
-  "verified": "n/a"
+  "verified": "n/a",
+  "themes": [
+   "ssl"
+  ]
  }
 }

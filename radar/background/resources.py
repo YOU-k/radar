@@ -134,6 +134,73 @@ def verify(reg: dict, head: Callable = _head) -> int:
     return n
 
 
+PRIORITIES = ("P0", "P1", "P2")
+PRI_ZH = {"P0": "P0 优先上手", "P1": "P1 值得登记", "P2": "P2 了解即可"}
+PRI_BATCH = 40
+
+
+def attach_themes(reg: dict, topic_names: dict[str, str] | None = None) -> None:
+    """资源的方向（中文名）→ 主题 key，供站点彩色标签与筛选。"""
+    from .. import themes
+    names = topic_names if topic_names is not None else themes.topic_names()
+    for r in reg.values():
+        keys_ = [themes.for_topic(t, names) for t in r.get("topics", [])]
+        r["themes"] = list(dict.fromkeys(k for k in keys_ if k))
+
+
+def _profile_lines() -> str:
+    try:
+        from ..config import load_profile
+        text = load_profile()
+    except Exception:
+        return ""
+    i = text.find("## 应用线")
+    return text[i:i + 1500] if i >= 0 else text[:1500]
+
+
+def prioritize(reg: dict, llm: LLM, only_missing: bool = True) -> int:
+    """主表资源按研究者的应用线打 P0/P1/P2 + 一句理由。已有优先级默认保留（only_missing）。"""
+    from .. import themes
+    bk = themes.by_key()
+    todo = [r for r in reg.values() if is_core(r) and (not only_missing or r.get("priority") not in PRIORITIES)]
+    n = 0
+    for b in range(0, len(todo), PRI_BATCH):
+        chunk = todo[b:b + PRI_BATCH]
+        payload = [{"id": i, "name": r["name"], "kind": r["kind"], "modality": r.get("modality", ""),
+                    "scale": r.get("scale", ""), "open": r.get("open", ""), "n_evidence": len(r.get("used_by", [])),
+                    "themes": [bk[k]["label"] for k in r.get("themes", []) if k in bk], "note": r.get("note", "")}
+                   for i, r in enumerate(chunk)]
+        prompt = tagged("prioritize", (
+            "研究者是提供算法支持的生物信息学博后。他的应用线：\n" + _profile_lines()
+            + "\n\n请给下面每个资源定优先级：\n"
+              "P0 = 某条应用线**现在就要用**：做 demo 的可下载公开数据、必须对标的基线模型/评分、"
+              "迁移到 ChinaHEART 或类器官项目时的参照队列/基准；每批 P0 不超过 15%。\n"
+              "P1 = 用途明确、接下来可能用到。\nP2 = 了解即可（通用工具、边缘数据、与应用线弱相关）。\n"
+              "why：≤40 字中文，写清用在哪、怎么用（P2 可写空）；不要写「应用线N」这类编号，"
+              "直接写具体场景名，如 ChinaHEART 迁移、类器官衰老 demo、虚拟扰动建模。\n\n【资源】\n"
+            + json.dumps(payload, ensure_ascii=False)
+            + '\n\n只输出 JSON 数组：[{"id":0,"priority":"P0","why":"..."}]'))
+        try:
+            rows = parse_json_array(llm.chat(prompt, task="prioritize", temperature=0.1, timeout=240))
+        except Exception as exc:
+            print(f"[resources] prioritize batch {b // PRI_BATCH} failed: {exc}")
+            continue
+        for row in rows:
+            try:
+                i = int(row.get("id", -1))
+            except (TypeError, ValueError):
+                continue
+            pr = str(row.get("priority", "")).upper().strip()
+            if 0 <= i < len(chunk) and pr in PRIORITIES:
+                chunk[i]["priority"], chunk[i]["why"] = pr, str(row.get("why", ""))[:80]
+                n += 1
+    return n
+
+
+def _pri(r: dict) -> str:
+    return r.get("priority") if r.get("priority") in PRIORITIES else "P2"
+
+
 def render(reg: dict, day: date | None = None) -> str:
     day = day or date.today()
     all_rows = sorted(reg.values(), key=lambda r: (-len(r["topics"]), -len(r["used_by"]), r["name"].lower()))
@@ -143,19 +210,22 @@ def render(reg: dict, day: date | None = None) -> str:
            f"从 {sum(len(r['used_by']) for r in all_rows)} 处证据引用中挖出 {len(all_rows)} 项命名资源；"
            f"主表 {len(rows)} 项（被 ≥2 篇工作使用、或跨方向、或开放且链接核验通过且规模明确），"
            f"其余 {len(tail)} 项单篇提及的列在末尾。核验：ok 可达 / blocked 站点拒绝探测 / dead 失效 / n/a 非链接。更新 {day.isoformat()}\n"]
-    for kind in KINDS:
-        sub = [r for r in rows if r["kind"] == kind]
+    from .. import themes
+    bk = themes.by_key()
+    for pr in PRIORITIES:
+        sub = sorted((r for r in rows if _pri(r) == pr), key=lambda r: (KINDS.index(r["kind"]), -len(r["used_by"])))
         if not sub:
             continue
-        out.append(f"\n## {KIND_ZH[kind]}（{len(sub)}）\n")
-        out.append("| 名称 | 模态 | 规模 | 获取 | 开放 | 核验 | 方向 | 证据 | 用途 |")
-        out.append("|---|---|---|---|---|---|---|---|---|")
+        out.append(f"\n## {PRI_ZH[pr]}（{len(sub)}）\n")
+        out.append("| 名称 | 类型 | 主题 | 规模 | 获取 | 开放 | 证据 | 为什么 / 用途 |")
+        out.append("|---|---|---|---|---|---|---|---|")
         for r in sub:
             acc = r.get("access", "")
             m = re.search(r"https?://\S+", acc)
             acc_md = f"[链接]({m.group(0)})" if m else acc
-            out.append(f"| **{r['name']}** | {r.get('modality','')} | {r.get('scale','')} | {acc_md} | {r.get('open','')} | "
-                       f"{r.get('verified','')} | {len(r['topics'])} | {len(r['used_by'])} | {r.get('note','')} |")
+            tags = " ".join(f"#{bk[k]['label']}" for k in r.get("themes", []) if k in bk)
+            out.append(f"| **{r['name']}** | {KIND_ZH[r['kind']]} | {tags} | {r.get('scale','')} | {acc_md} | "
+                       f"{r.get('open','')} | {len(r['used_by'])} | {r.get('why') or r.get('note','')} |")
     if tail:
         out.append(f"\n## 单篇提及（{len(tail)}，未进主表）\n")
         by_kind: dict[str, list[str]] = {}
@@ -165,6 +235,19 @@ def render(reg: dict, day: date | None = None) -> str:
             if by_kind.get(kind):
                 out.append(f"- {KIND_ZH[kind]}：" + "、".join(sorted(by_kind[kind])[:80]))
     return "\n".join(out) + "\n"
+
+
+def run_prioritize(llm: LLM, root: Path | None = None, redo: bool = False) -> Path:
+    """不重挖不重核验：给现有 registry 补主题与优先级，重渲染。redo=True 全部重打。"""
+    out_dir = (root or BASE) / RES_DIR_NAME
+    reg_path = out_dir / "registry.json"
+    reg = json.loads(reg_path.read_text(encoding="utf-8"))
+    attach_themes(reg)
+    print(f"[resources] prioritized {prioritize(reg, llm, only_missing=not redo)}")
+    reg_path.write_text(json.dumps(reg, ensure_ascii=False, indent=1), encoding="utf-8")
+    out = out_dir / "resources.md"
+    out.write_text(render(reg), encoding="utf-8")
+    return out
 
 
 def run_resources(llm: LLM | None, root: Path | None = None, head: Callable = _head) -> Path:
@@ -187,8 +270,15 @@ def run_resources(llm: LLM | None, root: Path | None = None, head: Callable = _h
             got = mine(evs, spec.name, llm)
             print(f"[resources] {spec.slug}: {len(got)} mentions from {len(evs)} evidence")
             rows += got
+    old = json.loads(reg_path.read_text(encoding="utf-8")) if reg_path.exists() else {}
     reg = merge(rows)
+    for k, r in reg.items():  # 优先级是人读过的判断，重挖不丢
+        if old.get(k, {}).get("priority"):
+            r["priority"], r["why"] = old[k]["priority"], old[k].get("why", "")
     verify(reg, head)
+    attach_themes(reg)
+    if llm is not None:
+        print(f"[resources] prioritized {prioritize(reg, llm)}")
     reg_path.write_text(json.dumps(reg, ensure_ascii=False, indent=1), encoding="utf-8")
     out = out_dir / "resources.md"
     out.write_text(render(reg), encoding="utf-8")

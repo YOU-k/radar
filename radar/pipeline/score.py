@@ -5,6 +5,7 @@ import re
 
 from .. import llm
 from ..config import load_profile
+from .. import themes
 from ..schema import Item
 
 PREFILTER_TOP = 56   # 7 个领域 × 8（原 5 领域 × 8 = 40）
@@ -94,10 +95,12 @@ def llm_rerank(items: list[Item]) -> bool:
             "综述原则上 ≤5 分，但 journal 字段为知名期刊（Nature/Cell/Science 及其子刊）的高质量综述正常评估，可到 6-7 分。\n"
             "类型 type 五选一：paper（论文/新闻）/ dataset（数据集/数据库）/ model（模型）/ tool（软件工具）/ other。\n"
             "dataset/model 的认定从严：必须有真实存在、公开可获取的产物（公开下载链接、GEO/Zenodo 编号、"
-            "HuggingFace 页面、官方开源权重）；只发了论文、数据/权重未公开或「可应要求提供」的一律标 paper。\n\n"
+            "HuggingFace 页面、官方开源权重）；只发了论文、数据/权重未公开或「可应要求提供」的一律标 paper。\n"
+            "主题 tags：从下列主题 key 里选 1-3 个（最相关的放第一个），只选确实相关的；与全部都无关就给空数组。"
+            f"主题：{themes.prompt_list()}\n\n"
             f"【兴趣画像】\n{profile}\n\n【条目】\n"
             + json.dumps(payload, ensure_ascii=False)
-            + '\n\n只输出 JSON 数组，形如 [{"id":0,"score":8,"type":"dataset","reason":"..."}]，不要输出其他内容。'
+            + '\n\n只输出 JSON 数组，形如 [{"id":0,"score":8,"type":"dataset","tags":["cardio","cohort"],"reason":"..."}]，不要输出其他内容。'
         )
         try:
             content = llm.chat(prompt, model=llm.SCORE_MODEL, temperature=0.2, timeout=180)
@@ -111,6 +114,9 @@ def llm_rerank(items: list[Item]) -> bool:
                     kind = str(s.get("type", "")).strip().lower()
                     if kind in ("paper", "dataset", "model", "tool", "other"):
                         chunk[j].extra["kind"] = kind
+                    tags = themes.clean(s.get("tags") or [])
+                    if tags:
+                        chunk[j].extra["themes"] = tags
             ok = True
         except Exception as exc:
             print(f"[llm] batch {i // BATCH} failed, keep keyword scores: {exc}")

@@ -71,7 +71,8 @@ digests、去重状态（`data/seen.json`）和站点（`docs/`）由 bot 自动
 | 文件 | 作用 |
 |---|---|
 | `config/sources.yaml` | 加/减信息源：关键词、arxiv query、RSS feed、GitHub/HF 搜索词、种子论文、追踪作者 |
-| `config/profile.md` | 研究画像。方向变了改这里，打分质量立刻跟着变 |
+| `config/profile.md` | 研究画像。方向变了改这里，打分质量立刻跟着变；「应用线」一节决定联合分析与资源优先级 |
+| `config/themes.yaml` | 8 个主题颜色标签（对应 8 个方向背景）。日报条目与资源共用；改了之后跑 `python -m radar.run retag` 重排旧日报 |
 
 追踪某作者的新论文：在 Semantic Scholar 找到其一篇代表论文，
 从 `https://api.semanticscholar.org/graph/v1/paper/DOI:<doi>?fields=authors.authorId`

@@ -61,7 +61,7 @@ def cmd_daily(days: int, use_llm: bool) -> None:
         hot = [it for it in scored if it.score >= 7.0]
         n = extract.store(hot, extract.extract_items(hot), date.today())
         print(f"[extract] {n} records")
-    out = write_digest(scored, date.today())
+    out = write_digest(scored, date.today(), use_llm=use_llm)
     print(f"[digest] wrote {out}")
 
 
@@ -188,6 +188,12 @@ def cmd_background(args) -> None:
     llm = llmio.RadarLLM() if (llmio.available() and not args.no_llm) else None
     if llm is None:
         print("[background] 无 LLM key：只做检索/去重，不评审、不编译")
+    if args.action == "prioritize":
+        if llm is None:
+            raise SystemExit("[background] prioritize 需要 LLM")
+        from .background.resources import run_prioritize
+        print(f"[background] wrote {run_prioritize(llm, redo=args.redo)}")
+        return
     if args.action in ("resources", "joint"):
         if llm is None and args.action == "joint":
             raise SystemExit("[background] joint 需要 LLM")
@@ -233,12 +239,16 @@ def main() -> None:
         p.add_argument("--days", type=int, default=1)
         p.add_argument("--no-llm", action="store_true")
     p = sub.add_parser("background", help="方向背景库：init / bootstrap / renew / compile")
-    p.add_argument("action", choices=["init", "bootstrap", "renew", "compile", "refetch", "resources", "joint"])
+    p.add_argument("action", choices=["init", "bootstrap", "renew", "compile", "refetch", "resources", "prioritize", "joint"])
     p.add_argument("--topic", required=True, help="slug，如 population-omics-ai；all = 全部方向")
     p.add_argument("--name", default="", help="init 用：方向中文名")
     p.add_argument("--rounds", type=int, default=0, help="bootstrap 轮数，0 = topic.yaml 的 budget.rounds")
     p.add_argument("--no-fulltext", action="store_true")
+    p.add_argument("--redo", action="store_true", help="prioritize 用：全部重打优先级")
     p.add_argument("--no-llm", action="store_true", help="只检索/去重，不评审不编译（冒烟用）")
+    p = sub.add_parser("retag", help="已有日报补主题标签与今日要点、按主题重排")
+    p.add_argument("--days", type=int, default=0, help="只处理最近 N 份，0 = 全部")
+    p.add_argument("--no-llm", action="store_true")
     sub.add_parser("site")
     args = ap.parse_args()
     use_llm = not getattr(args, "no_llm", False)
@@ -250,6 +260,11 @@ def main() -> None:
         cmd_landscape(use_llm)
     elif args.cmd == "background":
         cmd_background(args)
+    elif args.cmd == "retag":
+        from .pipeline.retag import retag_digest
+        paths = sorted((ROOT / "digests").glob("*.md"))
+        for path in (paths[-args.days:] if args.days else paths):
+            print(f"[retag] {path.name}: {retag_digest(path, use_llm=use_llm)} items")
     else:
         out = build_site()
         print(f"[site] wrote {out}")

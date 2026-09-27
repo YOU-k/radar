@@ -1,0 +1,20 @@
+# 主题标签：日报条目与资源库共用的颜色 tag。一个主题对应一个方向背景（topic），
+# domains 是该主题在日报里的默认来源领域（LLM 没给标签时按 domain 兜底）。
+# 新增方向时在这里加一行即可；key 只用小写英文，label 是网页上显示的短名。
+themes:
+  - {key: aging,     label: 衰老,     color: "#1a7f37", topic: aging-multimodal,          domains: [aging_multimodal],
+     hint: 衰老时钟、生物年龄、衰老多组学与图谱、衰老基准}
+  - {key: cohort,    label: 人群队列, color: "#0969da", topic: population-omics-ai,       domains: [population_omics_ai],
+     hint: 生物样本库/EHR 的疾病轨迹与风险预测、人群多组学与遗传整合、医学基础模型}
+  - {key: cardio,    label: 心血管,   color: "#cf222e", topic: cardio-omics,              domains: [cardio_omics],
+     hint: 心血管病队列、风险评分、心血管多组学/PRS/MR、ECG 与心脏影像 AI、中国人群心血管队列}
+  - {key: organoid,  label: 类器官,   color: "#9a6700", topic: organoid-virtual-response, domains: [organoid_models],
+     hint: 类器官/器官芯片/模式生物上的扰动与响应建模、跨物种迁移}
+  - {key: singlecell, label: 单细胞,  color: "#8250df", topic: single-cell-foundation,    domains: [data_models],
+     hint: 单细胞/空间/蛋白组基础模型、图谱与多模态整合}
+  - {key: vcell,     label: 虚拟细胞, color: "#bf3989", topic: virtual-cell,              domains: [],
+     hint: 细胞层面扰动响应预测、虚拟细胞与细胞世界模型、Perturb-seq}
+  - {key: ssl,       label: 世界模型, color: "#1b7c83", topic: world-models-ssl,          domains: [ml_algorithms],
+     hint: JEPA/世界模型/自监督表征、新架构、通用 ML 算法}
+  - {key: agent,     label: Agent,    color: "#bc4c00", topic: research-agents-rlvr,      domains: [agents],
+     hint: LLM 智能体、RLVR/GRPO、AI 科学家、科研自动化}

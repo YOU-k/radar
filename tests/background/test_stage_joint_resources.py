@@ -72,8 +72,8 @@ def test_resources_mine_merge_verify_render(spec, tmp_path):
     n = R.verify(reg, head=lambda u: 200 if "ukbiobank" in u else 404)
     assert n == 2 and ukb["verified"] == "ok" and reg["scgpt"]["verified"] == "dead"
     md = R.render(reg)
-    assert "**UK Biobank**" in md and "**scGPT**" in md and "## 数据库（1）" in md and "## 模型（1）" in md
-    assert "[链接](https://www.ukbiobank.ac.uk)" in md and md.index("## 模型") < md.index("## 数据库")  # 按类型分表
+    assert "**UK Biobank**" in md and "**scGPT**" in md and "## P2 了解即可（2）" in md and "| 数据库 |" in md
+    assert "[链接](https://www.ukbiobank.ac.uk)" in md and md.index("**scGPT**") < md.index("**UK Biobank**")  # 同一优先级内按类型排序
 
 
 def test_run_resources_end_to_end(spec):
@@ -120,3 +120,23 @@ def test_joint_prompt_asks_every_application_line(spec, monkeypatch):
             seen.append(prompt); return "## 全景"
     joint.joint_report([spec], L())
     assert "心血管队列" in seen[0] and "每条都必须有" in seen[0] and "类器官等多模态健康衰老模型" not in seen[0]
+
+
+def test_prioritize_and_themes(monkeypatch):
+    from radar import themes
+    reg = {"uk biobank": {"name": "UK Biobank", "kind": "database", "used_by": ["a", "b"], "topics": ["心血管方向", "人群方向"],
+                          "open": "restricted", "note": "n"},
+           "scgpt": {"name": "scGPT", "kind": "model", "used_by": ["c", "d"], "topics": ["单细胞方向"], "open": "yes",
+                     "note": "n", "priority": "P1", "why": "旧理由"}}
+    R.attach_themes(reg, {"心血管方向": "cardio-omics", "人群方向": "population-omics-ai", "单细胞方向": "single-cell-foundation"})
+    assert reg["uk biobank"]["themes"] == ["cardio", "cohort"] and reg["scgpt"]["themes"] == ["singlecell"]
+    seen = []
+
+    class L:
+        def chat(self, prompt, **kw):
+            seen.append(prompt)
+            return '[{"id":0,"priority":"P0","why":"ChinaHEART 迁移参照队列"}]'
+    assert R.prioritize(reg, L()) == 1 and len(seen) == 1 and "scGPT" not in seen[0]  # 已有优先级不重打
+    assert reg["uk biobank"]["priority"] == "P0" and reg["scgpt"]["why"] == "旧理由"
+    md = R.render(reg)
+    assert md.index("## P0 优先上手（1）") < md.index("## P1 值得登记（1）") and "#心血管 #人群队列" in md

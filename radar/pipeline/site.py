@@ -14,6 +14,7 @@ from pathlib import Path
 
 import markdown
 
+from .. import themes
 from ..config import ROOT
 
 OUT = ROOT / "docs" / "index.html"
@@ -81,6 +82,24 @@ details.deep .deepbody h2,details.deep .deepbody h3{font-size:13.5px;color:#1a7f
 details.deep .deepbody p{margin:4px 0}
 .empty{color:#57606a;font-size:13px;padding:6px 2px}
 .hide{display:none!important}
+.th{display:inline-block;font-size:11.5px;font-weight:600;border-radius:10px;padding:0 7px;margin:0 4px 2px 0;line-height:18px;white-space:nowrap}
+.card.tagged{border-left:4px solid var(--tc,#d0d7de)}
+.tags{margin-top:5px}
+.fbar{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.fchip{font-size:12.5px;font-weight:600;border-radius:14px;padding:3px 10px;cursor:pointer;user-select:none;border:1px solid #d0d7de;background:#fff;color:#57606a}
+.fchip.on{box-shadow:inset 0 0 0 2px currentColor}
+.fchip .n{font-weight:400;opacity:.75;margin-left:3px}
+.sum{background:#fff;border:1px solid #d0d7de;border-radius:12px;padding:8px 14px;margin:0 0 12px;font-size:14px}
+.sum h4{margin:4px 0 2px;font-size:13px;color:#57606a}
+.sum ul{margin:4px 0;padding-left:18px}
+.sum li{margin:3px 0}
+.pri{font-size:13px;font-weight:700;margin:16px 2px 6px}
+.pri.p0{color:#cf222e}.pri.p1{color:#9a6700}.pri.p2{color:#57606a}
+.rcard{background:#fff;border:1px solid #d0d7de;border-radius:10px;padding:8px 12px;margin:0 0 8px;font-size:13.5px}
+.rcard .rn{font-weight:700;font-size:14.5px}
+.rcard .rk{font-size:11.5px;color:#57606a;border:1px solid #d0d7de;border-radius:4px;padding:0 4px;margin-left:6px}
+.rcard .why{color:#1f2328;margin-top:3px}
+.rcard .rm{color:#57606a;font-size:12px;margin-top:3px}
 """
 
 JS = """
@@ -93,12 +112,14 @@ tabs.forEach(t=>t.addEventListener('click',()=>{
 }));
 const q=document.getElementById('q');
 const days=[...document.querySelectorAll('details.day')];
-q.addEventListener('input',()=>{
+let dayTheme='';
+function applyDay(){
   const s=q.value.trim().toLowerCase();
+  const active=s||dayTheme;
   days.forEach(d=>{
     let any=false;
     d.querySelectorAll('.card').forEach(c=>{
-      const hit=!s||c.textContent.toLowerCase().includes(s);
+      const hit=(!s||c.textContent.toLowerCase().includes(s))&&(!dayTheme||(' '+c.dataset.themes+' ').includes(' '+dayTheme+' '));
       c.classList.toggle('hide',!hit); any=any||hit;
     });
     d.querySelectorAll('.dom').forEach(g=>{
@@ -106,10 +127,32 @@ q.addEventListener('input',()=>{
       while(n&&n.classList.contains('card')){if(!n.classList.contains('hide'))has=true;n=n.nextElementSibling}
       g.classList.toggle('hide',!has);
     });
+    d.querySelectorAll('.sum').forEach(x=>x.classList.toggle('hide',!!dayTheme));
     d.classList.toggle('hide',!any);
-    if(s)d.open=any; else d.open=d.dataset.first==='1';
+    if(active)d.open=any; else d.open=d.dataset.first==='1';
   });
-});
+}
+q.addEventListener('input',applyDay);
+function bindChips(bar,onPick){
+  if(!bar)return;
+  const chips=[...bar.querySelectorAll('.fchip')];
+  chips.forEach(c=>c.addEventListener('click',()=>{
+    const v=c.classList.contains('on')?'':c.dataset.v;
+    chips.forEach(x=>x.classList.toggle('on',x===c&&v!==''));
+    onPick(v);
+  }));
+}
+bindChips(document.getElementById('fbar-day'),v=>{dayTheme=v;applyDay();});
+let resTheme='',resKind='';
+function applyRes(){
+  document.querySelectorAll('.rcard').forEach(c=>{
+    const hit=(!resTheme||(' '+c.dataset.themes+' ').includes(' '+resTheme+' '))&&(!resKind||c.dataset.kind===resKind);
+    c.classList.toggle('hide',!hit);
+  });
+  document.querySelectorAll('.rgroup').forEach(g=>g.classList.toggle('hide',!g.querySelector('.rcard:not(.hide)')));
+}
+bindChips(document.getElementById('fbar-res'),v=>{resTheme=v;applyRes();});
+bindChips(document.getElementById('fbar-kind'),v=>{resKind=v;applyRes();});
 """
 
 ITEM_RE = re.compile(
@@ -118,11 +161,61 @@ ITEM_RE = re.compile(
 SEC_RE = re.compile(r"^## (?P<name>.+?)（\d+ 条）$")
 META_RE = re.compile(r"^  <sub>(?!定位：)(?P<meta>.*)</sub>$")
 BG_RE = re.compile(r"^  <sub>定位：(?P<bg>.*)</sub>$")
+SUB_RE = re.compile(r"^  <sub>(?P<body>.*)</sub>$")
+SUMMARY_RE = re.compile(r"^## 今日要点\n+(?P<body>(?:- .*\n?)+)", re.M)
 DEEP_RE = re.compile(
     r'^  <details markdown="1"><summary>深读</summary>\n\n(?P<body>.*?)\n\n  </details>$',
     re.DOTALL)
 
 WEEKDAYS = "一二三四五六日"
+
+
+def _chip(key: str) -> str:
+    t = themes.by_key().get(key)
+    if not t:
+        return ""
+    c = t["color"]
+    return (f'<span class="th" style="color:{c};background:{c}14;border:1px solid {c}55">'
+            f'{html.escape(t["label"])}</span>')
+
+
+def _chips_html(keys_: list[str]) -> str:
+    return "".join(_chip(k) for k in keys_)
+
+
+def _filter_bar(bar_id: str, counts: dict[str, int]) -> str:
+    """主题筛选条：只列有条目的主题，点一下只看该主题，再点取消。"""
+    out = [f'<div class="fbar" id="{bar_id}">']
+    for t in themes.load_themes():
+        n = counts.get(t["key"], 0)
+        if not n:
+            continue
+        c = t["color"]
+        out.append(f'<span class="fchip" data-v="{t["key"]}" style="color:{c};border-color:{c}66">'
+                   f'{html.escape(t["label"])}<span class="n">{n}</span></span>')
+    out.append("</div>")
+    return "".join(out)
+
+
+def _summary_html(text: str) -> str:
+    m = SUMMARY_RE.search(text)
+    if not m:
+        return ""
+    items = []
+    for line in m.group("body").splitlines():
+        line = line[2:].strip()
+        if not line:
+            continue
+        words, rest = [], line
+        while rest.startswith("#"):  # 行首的 #主题 渲染成彩色标签
+            w, _, rest = rest.partition(" ")
+            words.append(w)
+        keys_ = themes.parse_line(" ".join(words))
+        body = html.escape(rest if keys_ else line)
+        if body.startswith("必读："):
+            body = "<b>必读：</b>" + body[3:]
+        items.append(f"<li>{_chips_html(keys_)}{body}</li>")
+    return f'<div class="sum"><h4>今日要点</h4><ul>{"".join(items)}</ul></div>' if items else ""
 
 
 def _meta_html(meta: str) -> str:
@@ -155,19 +248,18 @@ def _parse_digest(text: str) -> list[tuple[str, list[dict]]]:
             it = {"title": m.group("title"), "url": m.group("url"),
                   "score": float(m.group("score")),
                   "reason": m.group("reason") or "", "meta": "", "deep": "",
-                  "tag": m.group("tag") or "", "bg": ""}
+                  "tag": m.group("tag") or "", "bg": "", "themes": []}
             cur.append(it)
             i += 1
-            if i < len(lines):
-                mm = META_RE.match(lines[i])
-                if mm:
-                    it["meta"] = mm.group("meta")
-                    i += 1
-            if i < len(lines):
-                mb = BG_RE.match(lines[i])
-                if mb:
-                    it["bg"] = mb.group("bg")
-                    i += 1
+            while i < len(lines) and SUB_RE.match(lines[i]):
+                body = SUB_RE.match(lines[i]).group("body")
+                if body.startswith("定位："):
+                    it["bg"] = body[3:]
+                elif body.startswith("主题："):
+                    it["themes"] = themes.parse_line(body[3:])
+                elif not it["meta"]:
+                    it["meta"] = body
+                i += 1
             # 深读块跨行，拼起来再匹配
             if i < len(lines) and lines[i].startswith('  <details markdown="1">'):
                 block = [lines[i]]
@@ -207,13 +299,19 @@ def _render_digest(path: Path, first: bool) -> str:
                      f'{it["score"]:.1f}</span>')
             if it.get("tag"):
                 badge += '<span class="badge res">资源</span>'
-            parts = [f'<div class="card" data-score="{it["score"]}">',
+            tks = it.get("themes") or []
+            color = themes.by_key().get(tks[0], {}).get("color", "") if tks else ""
+            cls = "card tagged" if color else "card"
+            style = f' style="--tc:{color}"' if color else ""
+            parts = [f'<div class="{cls}"{style} data-score="{it["score"]}" data-themes="{" ".join(tks)}">',
                      f'<div class="t"><a href="{html.escape(it["url"])}">'
                      f'{html.escape(it["title"])}</a>{badge}</div>']
             if it["reason"]:
                 parts.append(f'<div class="reason">{html.escape(it["reason"])}</div>')
             if it["meta"]:
                 parts.append(f'<div class="meta">{_meta_html(it["meta"])}</div>')
+            if tks:
+                parts.append(f'<div class="tags">{_chips_html(tks)}</div>')
             if it.get("bg"):
                 parts.append(f'<div class="bgline">{html.escape(it["bg"])}</div>')
             if it["deep"]:
@@ -222,7 +320,7 @@ def _render_digest(path: Path, first: bool) -> str:
                     f'<div class="deepbody">{it["deep"]}</div></details>')
             parts.append("</div>")
             cards.append("".join(parts))
-    body = "\n".join(cards) or '<div class="empty">当日无条目。</div>'
+    body = _summary_html(text) + ("\n".join(cards) or '<div class="empty">当日无条目。</div>')
     open_attr = " open" if first else ""
     return (f'<details class="day" data-first="{1 if first else 0}"{open_attr}>'
             f'<summary>{html.escape(label)}<span class="cnt">{total} 条</span></summary>'
@@ -251,6 +349,64 @@ def _render_background(report: Path) -> str:
             f'<div class="bgbody">{html_body}</div></details>')
 
 
+KIND_ZH = {"dataset": "数据集", "model": "模型", "benchmark": "基准", "database": "数据库", "tool": "工具"}
+PRI_ZH = {"P0": "P0 优先上手", "P1": "P1 值得登记", "P2": "P2 了解即可"}
+
+
+def _render_resources(reg_path: Path) -> str:
+    """registry.json → 按优先级分组的资源卡片 + 主题 / 类型筛选条。只展示主表（与 resources.md 同口径）。"""
+    import json
+    from ..background.resources import is_core
+    reg = json.loads(reg_path.read_text(encoding="utf-8"))
+    rows = [r for r in reg.values() if is_core(r)]
+    if not rows:
+        return ""
+    counts: dict[str, int] = {}
+    for r in rows:
+        for k in r.get("themes", []):
+            counts[k] = counts.get(k, 0) + 1
+    kinds = [k for k in KIND_ZH if any(r["kind"] == k for r in rows)]
+    kind_bar = ('<div class="fbar" id="fbar-kind">' + "".join(
+        f'<span class="fchip" data-v="{k}">{KIND_ZH[k]}<span class="n">'
+        f'{sum(r["kind"] == k for r in rows)}</span></span>' for k in kinds) + "</div>")
+    out = [f'<div class="meta" style="margin:0 2px 8px">主表 {len(rows)} 项 · 按你的应用线排优先级 · '
+           f'点主题/类型筛选，再点取消</div>', _filter_bar("fbar-res", counts), kind_bar]
+    for pr in ("P0", "P1", "P2"):
+        sub = [r for r in rows if (r.get("priority") if r.get("priority") in PRI_ZH else "P2") == pr]
+        if not sub:
+            continue
+        sub.sort(key=lambda r: (-len(r.get("themes", [])), -len(r.get("used_by", [])), r["name"].lower()))
+        cards = []
+        for r in sub:
+            m = re.search(r"https?://\S+", r.get("access", ""))
+            name = html.escape(r["name"])
+            name = f'<a href="{html.escape(m.group(0))}">{name}</a>' if m else name
+            meta = " · ".join(x for x in (r.get("modality", ""), r.get("scale", ""),
+                                          f"开放 {r.get('open', '')}", f"证据 {len(r.get('used_by', []))} 篇",
+                                          f"核验 {r.get('verified', '')}") if x)
+            why = r.get("why") or r.get("note", "")
+            tks = r.get("themes", [])
+            color = themes.by_key().get(tks[0], {}).get("color", "") if tks else ""
+            style = f' style="border-left:4px solid {color}"' if color else ""
+            cards.append(f'<div class="rcard"{style} data-themes="{" ".join(tks)}" data-kind="{r["kind"]}">'
+                         f'<div class="rn">{name}<span class="rk">{KIND_ZH.get(r["kind"], r["kind"])}</span></div>'
+                         f'<div class="tags">{_chips_html(tks)}</div>'
+                         f'<div class="why">{html.escape(why)}</div><div class="rm">{html.escape(meta)}</div></div>')
+        out.append(f'<div class="rgroup"><div class="pri {pr.lower()}">{PRI_ZH[pr]}（{len(sub)}）</div>'
+                   + "".join(cards) + "</div>")
+    return "\n".join(out)
+
+
+def _day_theme_counts(paths: list[Path]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for p in paths:
+        for line in p.read_text(encoding="utf-8").splitlines():
+            if line.startswith("  <sub>主题："):
+                for k in themes.parse_line(line[len("  <sub>主题："):-len("</sub>")]):
+                    counts[k] = counts.get(k, 0) + 1
+    return counts
+
+
 def build_site(today: date | None = None) -> Path:
     today = today or date.today()
     digests = sorted((ROOT / "digests").glob("*.md"), reverse=True)
@@ -264,10 +420,9 @@ def build_site(today: date | None = None) -> Path:
     bg_html = ("\n".join(_render_background(p) for p in bg_reports)
                if bg_reports else '<div class="empty">暂无方向背景报告。</div>')
     res_parts = []
-    reg = ROOT / "background" / "_resources" / "resources.md"
-    if reg.exists():
-        res_parts.append('<div class="wk">' + markdown.markdown(
-            reg.read_text(encoding="utf-8"), extensions=["extra", "sane_lists", "tables"]) + "</div>")
+    reg_json = ROOT / "background" / "_resources" / "registry.json"
+    if reg_json.exists():
+        res_parts.append(_render_resources(reg_json))
     daily_res = ROOT / "resources.md"
     if daily_res.exists():
         res_parts.append('<details class="bg"><summary>日报新发现的资源（未核验）</summary><div class="bgbody">'
@@ -292,7 +447,8 @@ def build_site(today: date | None = None) -> Path:
         f'<div id="panel-bg" class="on">{bg_html}</div>',
         f'<div id="panel-week">{week_html}</div>',
         '<div id="panel-day">',
-        '<input id=q placeholder="过滤条目（标题 / 关键词 / 领域）…">',
+        _filter_bar("fbar-day", _day_theme_counts(digests)),
+        '<input id=q placeholder="过滤条目（标题 / 关键词）…">',
         f"{day_html}</div>",
         f'<div id="panel-res">{res_html}</div>',
         f"<script>{JS}</script></main></body></html>",
