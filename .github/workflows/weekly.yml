@@ -43,4 +43,4 @@ jobs:
         run: python -m radar.run weekly
       - name: commit results (site rebuilt after pull)
         if: always()
-        run: scripts/commit_push.sh "weekly $(date -u +%G-W%V)" weekly/ background/ resources.md
+        run: scripts/commit_push.sh "weekly $(date -u +%G-W%V)" weekly/ background/ data/

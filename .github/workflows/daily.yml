@@ -38,4 +38,4 @@ jobs:
           DAYS: ${{ inputs.days || 1 }}
         run: python -m radar.run daily --days "$DAYS"
       - name: commit results (site rebuilt after pull)
-        run: scripts/commit_push.sh "digest $(date -u +%F)" digests/ data/ resources.md
+        run: scripts/commit_push.sh "digest $(date -u +%F)" digests/ data/
