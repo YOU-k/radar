@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.eclinm.2023.101862",
+  "title": "SCORE2 cardiovascular risk prediction models in an ethnic and socioeconomic diverse population in the Netherlands: an external validation study",
+  "url": "https://doi.org/10.1016/j.eclinm.2023.101862",
+  "abstract": "Summary Background Socioeconomic status and ethnicity are not explicitly incorporated as risk factors in the four SCORE2 cardiovascular disease (CVD) risk models developed for country-wide implementation across Europe (low, moderate, high and very-high model). The aim of this study was to evaluate the performance of the four SCORE2 CVD risk prediction models in an ethnic and socioeconomic diverse population in the Netherlands. Methods The SCORE2 CVD risk models were externally validated in socioeconomic and ethnic (by country of origin) subgroups, from a population-based cohort in the Netherlands, with GP, hospital and registry data. In total 155,000 individuals, between 40 and 70 years old in the study period from 2007 to 2020 and without previous CVD or diabetes were included. Variables (age, sex, smoking status, blood pressure, cholesterol) and outcome first CVD event (stroke, myocardial infarction, CVD death) were consistent with SCORE2. Findings 6966 CVD events were observed, versus 5495 events predicted by the CVD low-risk model (intended for use in the Netherlands). Relative underprediction was similar in men and women (observed/predicted (OE-ratio), 1.3 and 1.2 in men and women, respectively). Underprediction was larger in low socioeconomic subgroups of the overall study population (OE-ratio 1.5 and 1.6 in men and women, respectively), and comparable in Dutch and the combined “other ethnicities” low socioeconomic subgroups. Underprediction in the Surinamese subgroup was largest (OE-ratio 1.9, in men and women), particularly in the low socioeconomic Surinamese subgroups (OE-ratio 2.5 and 2.1 in men and women). In the subgroups with underprediction in the low-risk model, the intermediate or high-risk SCORE2 models showed improved OE-ratios. Discrimination showed moderate performance in all subgroups and the four SCORE2 models, with C-statistics between 0.65 and 0.72, similar to the SCORE2 model development study. Interpretation The SCORE 2 CVD risk model for low-risk countries (as the Netherlands are) was found to underpredict CVD risk, particularly in low socioeconomic and Surinamese ethnic subgroups. Including socioeconomic status and ethnicity as predictors in CVD risk models and implementing CVD risk adjustment within countries is desirable for adequate CVD risk prediction and counselling. Funding 10.13039/501100005039Leiden University Medical Centre and 10.13039/501100001717Leiden University.",
+  "authors": "J. Kist, R. Vos, A. Mairuhu, J. Struijs, P. V. van Peet, H. Vos, H. V. van Os, E. Beishuizen",
+  "venue": "EClinicalMedicine",
+  "year": 2023,
+  "citations": 49,
+  "found_by": [
+   "s2kw:ChinaHEART cohort cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:36864978"
+   ],
+   "pmcid": "PMC9971516"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "15.5万人队列外部验证SCORE2，含种族与社会经济亚组校准",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "SCORE2在15.5万人多元族群外部验证，跨人群校准关键证据",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SCORE2模型外部验证",
+  "data": "荷兰ELAN常规医疗数据库2007-2020，40-70岁人群",
+  "scenario": "荷兰多元族裔与社会经济人群CVD风险预测",
+  "benchmark": "SCORE2四种国家风险模型",
+  "results": "按高危亚组调整至高危欧洲国家SCORE2模型后，符合治疗资格人数几乎翻倍(男10%→17%，女2%→5%)",
+  "availability": "",
+  "limitations": "未明确族裔和社会经济地位是否应纳入模型",
+  "summary": "研究在荷兰族裔和社会经济多样化人群中外部验证SCORE2模型。基于ELAN常规医疗数据库，评估SCORE2在不同亚组中的表现。发现族裔和社会经济地位可进一步区分CVD绝对风险，按高危亚组调整模型会使治疗资格人数近乎翻倍。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

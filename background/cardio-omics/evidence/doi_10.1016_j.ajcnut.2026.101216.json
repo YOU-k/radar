@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.ajcnut.2026.101216",
+  "title": "Plasma proteomics enhances heart failure risk prediction among individuals with type 2 diabetes: a prospective cohort study.",
+  "url": "https://doi.org/10.1016/j.ajcnut.2026.101216",
+  "abstract": "BACKGROUND\nHeart failure (HF) is a severe complication of type 2 diabetes (T2D), yet the association between plasma proteins and HF in individuals with T2D remains underexplored.\n\n\nOBJECTIVES\nThis study aimed to investigate the association between plasma proteomic profiles and HF, and further evaluate whether proteomic data could enhance HF prediction beyond clinical variables, polygenic risk, and N-terminal prohormone of brain natriuretic peptide (NT-proBNP).\n\n\nMETHODS\nThis cohort study included 2198 participants with T2D from the United Kingdom Biobank. Cox proportional hazards models were employed to examine associations between 2920 plasma proteins and incident HF. Clinical and protein predictors were selected using the least absolute shrinkage and selection operator method based on 10-fold cross-validation. The predictive performance of models was evaluated using Harrell's C-index, calibration slope, net reclassification improvement, integrated discrimination improvement, decision curve analysis, and calibration plots.\n\n\nRESULTS\nDuring a median follow-up of 13.1 y, 298 individuals developed incident HF. A total of 455 proteins (447 positively and 8 inversely) were associated with HF, primarily involved in cell adhesion, extracellular space, signaling receptor activity, and cytokine-cytokine receptor interaction pathways. The top protein associated with increased risk of HF was whey acidic protein (WAP) 4-disulfide core domain protein 2, with a per-SD increment hazard ratio (HR) of 1.90 [95% confidence interval (CI): 1.65, 2.19)]. Conversely, the top protein inversely associated with HF risk was apolipoprotein C-I, with a per-SD increment HR of 0.75 (95% CI: 0.66, 0.85). Seventeen proteins were subsequently selected as proteomic predictors, and the resulting 17-protein risk score improved HF prediction beyond clinical variables, polygenic risk, and NT-proBNP, yielding a maximum C-index of 0.833 with an increment of 0.091.\n\n\nCONCLUSIONS\nThis study identified proteomic biomarkers for HF, highlighted potential pathways that inform biological mechanisms, and demonstrated that proteomic data enhanced HF risk prediction in individuals with T2D.",
+  "authors": "Hancheng Yu, Ji-Juan Zhang, Frank Qian, Jun Liu, Kai Zhu, Zi-Xin Qiu, Ru-Yi Li, Rui Li",
+  "venue": "American Journal of Clinical Nutrition",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2kw:biobank plasma proteomics Olin"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42230086"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank蛋白组提升糖尿病心衰预测，超越PRS与NT-proBNP",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank蛋白组提升糖尿病心衰预测，含PRS与NT-proBNP对比",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Cox模型+LASSO蛋白风险预测",
+  "data": "UK Biobank 2198例T2D，2920血浆蛋白，随访13.1年",
+  "scenario": "2型糖尿病心衰风险预测",
+  "benchmark": "临床变量、多基因风险、NT-proBNP",
+  "results": "298例新发心衰；455蛋白相关；WAP 4-disulfide core domain protein 2风险最高；蛋白组提升预测",
+  "availability": "",
+  "limitations": "样本量有限；仅UK Biobank；需外部验证",
+  "summary": "研究探讨2型糖尿病患者血浆蛋白组与心衰的关联，并评估其能否提升风险预测。基于UK Biobank 2198例T2D、2920个血浆蛋白，采用Cox模型和LASSO筛选预测因子，随访中位13.1年。共298例新发心衰，455个蛋白与心衰相关，其中WAP 4-disulfide core domain protein 2风险最高，蛋白组数据可增强超越临床变量、多基因风险和NT-proBNP的预测。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

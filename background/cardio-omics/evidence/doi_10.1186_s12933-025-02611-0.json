@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s12933-025-02611-0",
+  "title": "Predicting cardiovascular outcomes in Chinese patients with type 2 diabetes by combining risk factor trajectories and machine learning algorithm: a cohort study",
+  "url": "https://doi.org/10.1186/s12933-025-02611-0",
+  "abstract": "Cardiovascular complications are major concerns for Chinese patients with type 2 diabetes. Accurately predicting these risks remains challenging due to limitations in traditional risk models. We aimed to develop a dynamic prediction model using machine learning and longitudinal trajectories of cardiovascular risk factors to improve prediction accuracy. We included 16,378 patients from the Kailuan cohort, splitting them into training and testing datasets. Using baseline characteristics and changes over a four-year observation period, we developed the ML-CVD-C (Machine Learning Cardiovascular Disease in Chinese) score to predict 10-year cardiovascular risk, including cardiovascular death, nonfatal myocardial infarction, and stroke. We compared the discrimination and calibration of ML-CVD-C with models using only baseline variables (ML-CVD-C [base]), China-PAR (Prediction for ASCVD Risk in China), and PREVENT (Predict Risk of cardiovascular disease EVENTs). Risk stratification improvements were assessed through net reclassification improvement (NRI) and integrated discrimination improvement (IDI). Transition analysis examined the changes in risk stratification over time. The ML-CVD-C score achieved a C-index of 0.80 (95% CI: 0.78–0.82) in the testing cohort, significantly outperforming the ML-CVD-C (base) score, China-PAR, and PREVENT, which had C-index values of 0.62–0.65. ML-CVD-C also provided more accurate cardiovascular risk estimates, though all models tended to overestimate the prevalence of high-risk cases. Stratification by the ML-CVD-C score showed substantial improvement, with NRI gains of 57.7%, 44.1%, and 47.3%, and IDI gains of 10.1%, 7.9%, and 8.4% compared to the other three scores. Both the trajectory and machine learning algorithm contributed significantly to the enhancement of model performance. Transition analysis revealed that participants who remained in the same risk category or were reclassified to a lower category exhibited 22% and 86% reductions in cardiovascular risk compared to those reclassified to a higher risk category during the observation period. The ML-CVD-C model, incorporating dynamic cardiovascular risk trajectories and a machine learning algorithm, significantly improves risk prediction accuracy for Chinese patients with diabetes. This model may serve as a valuable tool for more personalized cardiovascular risk management in type 2 diabetes.",
+  "authors": "Qi Huang, Xian-Tong Zou, Zhouhui Lian, Xiang-Hai Zhou, Xue-Yao Han, Yingying Luo, Shuo-Hua Chen, Yanxiu Wang",
+  "venue": "Cardiovascular Diabetology",
+  "year": 2025,
+  "citations": 15,
+  "found_by": [
+   "s2kw:cardiovascular disease risk pr"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:39920715"
+   ],
+   "pmcid": "PMC11806858"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "开滦1.6万人队列机器学习动态CVD预测，中国人群契合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "开滦队列1.6万中国人糖尿病CVD动态预测，东亚人群价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "机器学习+风险因子轨迹预测CVD",
+  "data": "开滦队列16378名中国T2DM患者；4年轨迹",
+  "scenario": "中国T2DM患者心血管风险预测",
+  "benchmark": "PREVENT、China-PAR、SCORE-2D、ADVANCE",
+  "results": "ML-CVD-C整合纵向轨迹，优于仅基线变量模型",
+  "availability": "",
+  "limitations": "单队列中国人群；需外部验证；事件与随访限制",
+  "summary": "研究开发并验证中国2型糖尿病患者动态心血管风险预测模型ML-CVD-C。基于开滦前瞻队列16378人，使用功能主成分分析提取4年风险因子轨迹，并纳入机器学习模型，与PREVENT、China-PAR、SCORE-2D和ADVANCE等比较。整合纵向轨迹的模型优于仅使用基线变量的模型，支持动态风险评估。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

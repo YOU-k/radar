@@ -1,0 +1,53 @@
+# 方向定义（人改；其余文件由流水线生成）——为 ChinaHEART 心血管队列准备：方法从 UKB 等公共队列迁移到中国人群
+name: 心血管队列多组学与临床 AI
+definition: >
+  大规模人群队列 / 生物样本库上的心血管病（冠心病、心衰、房颤、卒中、高血压、动脉粥样硬化）AI 与多组学研究：
+  风险预测与疾病轨迹（相对 PCE / SCORE2 / China-PAR 的增益与跨人群校准）、血浆蛋白组 / 代谢组 / 脂质组 / 多基因风险
+  的预测与机制、孟德尔随机化找靶点、ECG / 影像 AI 与组学 / EHR 联合，以及筛查—干预的临床转化证据。
+include:
+  - ≥万人队列上的心血管风险预测 / 疾病轨迹模型（深度学习、生成式、基础模型、传统评分改进含外部验证）
+  - 心血管多组学：蛋白组（Olink / SomaScan）、代谢组、脂质组、PRS 的风险预测、亚型与机制，含 pQTL / MR 靶点发现
+  - ECG / 心脏影像 AI，尤其与组学、EHR 或队列结局联合的工作
+  - 中国 / 东亚人群心血管队列（ChinaHEART / China PEACE、China Kadoorie Biobank、China-PAR 等）的数据、方法与结果
+  - 筛查—干预闭环、实用性随机试验、真实世界证据中可复用的研究设计
+exclude:
+  - 单中心小样本（<1000 人）的关联研究
+  - 纯介入 / 手术 / 器械临床报告，不涉及建模或组学
+  - 单一生物标志物的横断面描述
+  - 无外部验证也无方法新意的预测模型
+keywords: [cardiovascular, coronary artery disease, heart failure, atrial fibrillation, stroke, hypertension,
+  atherosclerosis, cardiometabolic, risk prediction, SCORE2, China-PAR, ChinaHEART, China Kadoorie Biobank,
+  UK Biobank, plasma proteomics, metabolomics, lipidomics, polygenic risk score, Mendelian randomization,
+  electrocardiogram, ECG, deep learning, foundation model, cohort]
+queries:
+  - "cardiovascular disease risk prediction machine learning cohort"
+  - "plasma proteomics cardiovascular disease prediction"
+  - "metabolomics coronary heart disease cohort"
+  - "polygenic risk score coronary artery disease"
+  - "Mendelian randomization proteome cardiovascular drug target"
+  - "electrocardiogram deep learning cardiovascular outcomes"
+  - "Chinese population cardiovascular cohort"
+  - "heart failure prediction electronic health records deep learning"
+journals: [Nature, Nature Medicine, Nature Cardiovascular Research, European Heart Journal, Circulation,
+  Journal of the American College of Cardiology, The Lancet, Nature Genetics]
+seeds:
+  - doi:10.1016/S0140-6736(17)32478-9      # China PEACE 百万人筛查项目（ChinaHEART 前身）高血压，Lancet 2017
+  - doi:10.1161/CIRCULATIONAHA.116.022367  # China-PAR 中国人群 ASCVD 10 年风险，Circulation 2016
+  - doi:10.1093/eurheartj/ehab309          # SCORE2，EHJ 2021
+  - doi:10.1038/s41586-023-06592-6         # UKB-PPP 血浆蛋白组与遗传/健康，Nature 2023
+  - doi:10.1038/s41591-024-03142-z         # 蛋白组特征改进常见/罕见病风险预测，Nat Med 2024
+  - doi:10.1038/s41591-018-0240-2          # AI-ECG 筛查左室收缩功能不全，Nat Med 2019
+radar_domain: [cardio_omics, population_omics_ai]
+months: 36
+outline:
+  - title: 背景与定义
+  - title: 方法学
+    children:
+      - title: 心血管风险预测与疾病轨迹模型
+      - title: 心血管多组学与遗传整合
+      - title: ECG 与心脏影像 AI
+  - title: 数据与资源
+  - title: 中国人群队列与跨人群迁移
+  - title: 临床转化与评测
+  - title: 空白与趋势
+budget: {rounds: 8, max_candidates: 80, max_screen: 60, max_extract: 40, stop_delta: 0.02}

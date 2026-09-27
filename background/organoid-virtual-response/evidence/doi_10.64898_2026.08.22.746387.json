@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.08.22.746387",
+  "title": "AI-driven framework modeling perturbation in brain organoids reveals candidate genes for autism",
+  "url": "https://doi.org/10.64898/2026.08.22.746387",
+  "abstract": "Autism gene discovery is constrained by the rarity and heterogeneity of damaging variants, requiring large cohorts to identify susceptibility genes. Neural organoids and single-cell foundation models enable perturbation modeling in neurodevelopmental contexts. Here, we show that perturbation-informed foundation modeling of neural organoids can provide functional context for prioritizing candidate genes with genomic and clinical support. We constructed a 3.6-million-cell organoid atlas and trained models to predict genome-wide perturbation responses. Benchmarking 17 models identified a telencephalic neuron-specific model best preserving autism-relevant perturbation structure. Genome-wide profiling revealed two clusters associated with mid-fetal synaptic neuronal processes and early radial glia ubiquitin signaling. These clusters were supported by damaging-variant enrichment and clinical phenotypes across 89,916 family-based samples. Logistic-regression prioritization identified 343 candidates, including 167 in the key clusters, with convergence across TADA signals and recurrent evidence for NBEA and KLHDC10. This framework integrates predicted perturbation effects with genomic evidence to support autism candidate prioritization.",
+  "authors": "I. Koh, E. Chang, Youngseok Choi, Soo-Whee Kim, Yujin Kim, Hyeji Lee, Gaeun Byeon, Yebin Ryu",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:foundation model organoid sing"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "脑类器官扰动建模预测，单细胞基础模型",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "脑类器官扰动基础模型预测自闭症候选基因，代表新范式",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "扰动信息基础模型建模脑类器官",
+  "data": "360万细胞类器官图谱，89,916个家庭样本",
+  "scenario": "自闭症候选基因优先级排序",
+  "benchmark": "17个模型基准测试，TADA信号对比",
+  "results": "识别343个候选基因，167个在关键簇中，NBEA和KLHDC10有复现证据",
+  "availability": "",
+  "limitations": "预测扰动效应需进一步实验验证",
+  "summary": "构建了360万细胞的类器官图谱并训练模型预测全基因组扰动响应。基准测试17个模型，发现端脑神经元特异性模型最佳保留自闭症相关扰动结构。整合预测扰动效应与基因组证据，优先排序出343个自闭症候选基因。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

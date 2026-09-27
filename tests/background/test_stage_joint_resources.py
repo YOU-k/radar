@@ -108,3 +108,15 @@ def test_run_resources_rerender_without_llm(spec):
     R.run_resources(FakeLLM(), root=spec.dir.parent, head=lambda u: 200)
     out = R.run_resources(None, root=spec.dir.parent, head=lambda u: 403)
     assert "blocked" in out.read_text(encoding="utf-8")
+
+
+def test_joint_prompt_asks_every_application_line(spec, monkeypatch):
+    from radar.background import joint
+    monkeypatch.setattr(joint, "_profile", lambda: "## 应用线\n1. 衰老\n2. 心血管队列")
+    seen = []
+
+    class L:
+        def chat(self, prompt, **kw):
+            seen.append(prompt); return "## 全景"
+    joint.joint_report([spec], L())
+    assert "心血管队列" in seen[0] and "每条都必须有" in seen[0] and "类器官等多模态健康衰老模型" not in seen[0]

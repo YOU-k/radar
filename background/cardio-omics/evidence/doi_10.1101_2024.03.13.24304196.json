@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2024.03.13.24304196",
+  "title": "Large-scale plasma proteomics in the UK Biobank modestly improves prediction of major cardiovascular events in a population without previous cardiovascular disease",
+  "url": "https://doi.org/10.1101/2024.03.13.24304196",
+  "abstract": "Background and Aims: Improved identification of individuals at high risk of developing cardiovascular disease would enable targeted interventions and potentially lead to reductions in mortality and morbidity. Our aim was to determine whether use of large-scale proteomics improves prediction of cardiovascular events beyond traditional risk factors (TRFs). Methods: Using proximity extension assays, 2919 plasma proteins were measured in 38 380 participants of the UK Biobank. Both data- and hypothesis-driven feature selection and trained models using extreme gradient boosting machine learning were used to predict risk of major cardiovascular events (MACE: fatal and non-fatal myocardial infarction, stroke and coronary artery revascularisation) during a 10-year follow-up. Area under the curve (AUC) and net reclassification index (NRI) were used to evaluate the additive value of selected protein panels to MACE prediction by Systematic COronary Risk Evaluation 2 (SCORE2) or the 10 TRFs used in SCORE2. Results: SCORE2 and SCORE2 refitted to UK Biobank data predicted MACE with AUCs of 0.740 and 0.749, respectively. Data-driven selection identified 114 proteins of greatest relevance for prediction. Prediction of MACE was not improved by using these proteins alone (AUC of 0.758) but was significantly improved by combining these proteins with SCORE2 or the 10 TRFs (AUC=0.771, p<001, NRI=0.140, and AUC=0.767, p=0.03, NRI 0.053, respectively). Hypothesis-driven protein selection (113 proteins from five previous studies) also improved risk prediction beyond TRFs while a random selection of 114 proteins did not. Conclusions: Large-scale plasma proteomics with data- and hypothesis-driven protein selection modestly improves prediction of future MACE beyond TRFs.",
+  "authors": "Patrick Royer, E. Björnson, M. Adiels, Rebecca Josefson, E. Hagberg, A. Gummesson, G. Bergström",
+  "venue": "medRxiv",
+  "year": 2024,
+  "citations": 39,
+  "found_by": [
+   "s2kw:plasma proteomics cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:38546334"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank近四万人2919蛋白预测MACE，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank近三千蛋白组预测MACE，外部验证，影响力大",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Olink蛋白组+XGBoost特征选择与建模",
+  "data": "UK Biobank 38,380人，2,919血浆蛋白，10年随访",
+  "scenario": "无既往CVD人群MACE预测",
+  "benchmark": "SCORE2及SCORE2的10个传统危险因素",
+  "results": "SCORE2 AUC 0.740；加114蛋白后AUC 0.771，p<0.001，NRI 0.140；加10个TRF后AUC 0.767，p=0.03，NRI 0.053",
+  "availability": "",
+  "limitations": "蛋白组仅适度提升预测；假设驱动选择结果未完整呈现",
+  "summary": "研究评估大规模血浆蛋白组能否在传统危险因素之外提升MACE预测。在UK Biobank 38,380人中测量2,919个蛋白，用XGBoost进行数据驱动和假设驱动特征选择并训练模型。结果显示114个蛋白联合SCORE2或10个传统危险因素可显著提升预测，但单独使用蛋白提升有限。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

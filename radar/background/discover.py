@@ -37,7 +37,7 @@ def _get_json(url: str, params: dict | None = None, timeout: int = 60, retries: 
     for attempt in range(retries + 1):
         r = requests.get(url, params=params, timeout=timeout, headers=headers)
         if r.status_code == 429 and attempt < retries:
-            time.sleep(8 * (attempt + 1))
+            time.sleep(10 * (attempt + 1))
             continue
         r.raise_for_status()
         return r.json()
@@ -178,7 +178,7 @@ class ArxivKeyword:
 class S2Snowball:
     name = "s2"
 
-    def __init__(self, get_json: Callable = _get_json, per_seed: int = 40, sleep: float = 1.1):
+    def __init__(self, get_json: Callable = _get_json, per_seed: int = 40, sleep: float = 2.0):
         self.get_json, self.per_seed, self.sleep = get_json, per_seed, sleep
 
     @staticmethod
@@ -229,7 +229,7 @@ class S2Snowball:
                 except Exception as exc:
                     print(f"[discover:s2] {seed} {rel} failed: {exc}")
                     continue
-                for row in d.get("data", []):
+                for row in d.get("data") or []:
                     c = self._to_cand(row.get(key) or {}, f"s2:{rel}:{seed}")
                     if c:
                         out.append(c)
@@ -241,7 +241,7 @@ class S2Keyword:
     """Semantic Scholar 关键词检索：覆盖 arXiv/会议论文（ML 方向 EuropePMC 没有，arXiv API 本机不可达）。"""
     name = "s2kw"
 
-    def __init__(self, get_json: Callable = _get_json, per_query: int = 40, sleep: float = 1.1):
+    def __init__(self, get_json: Callable = _get_json, per_query: int = 40, sleep: float = 2.0):
         self.get_json, self.per_query, self.sleep = get_json, per_query, sleep
 
     def fetch(self, spec: TopicSpec, plan: DiscoveryPlan) -> list[Candidate]:
@@ -254,7 +254,7 @@ class S2Keyword:
             except Exception as exc:
                 print(f"[discover:s2kw] {q!r} failed: {exc}")
                 continue
-            for row in d.get("data", []):
+            for row in d.get("data") or []:
                 c = S2Snowball._to_cand(S2Snowball(), row, f"s2kw:{q[:30]}")
                 if c:
                     out.append(c)
@@ -277,7 +277,7 @@ class Inbox:
         for line in self.path.read_text(encoding="utf-8").splitlines():
             try:
                 r = json.loads(line)
-                if (r.get("domain") != spec.radar_domain or float(r.get("score", 0)) < self.min_score
+                if (r.get("domain") not in spec.radar_domains or float(r.get("score", 0)) < self.min_score
                         or date.fromisoformat(r["date"]).toordinal() <= cutoff):
                     continue
             except (json.JSONDecodeError, KeyError, ValueError):

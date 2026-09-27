@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.3389/fmed.2026.1852547",
+  "title": "Incremental predictive value of CMR phenotyping for major adverse cardiovascular events: an interpretable machine learning study from UK Biobank",
+  "url": "https://doi.org/10.3389/fmed.2026.1852547",
+  "abstract": "Aims To characterize cardiac magnetic resonance (CMR)-derived phenotypes in a population-based cohort and to evaluate their incremental prognostic value for major adverse cardiovascular events (MACE) beyond traditional risk factors. Methods Participants from the UK Biobank imaging cohort without prior cardiovascular diseases were included. Unsupervised k-means clustering and Kaplan–Meier analyses identified distinct CMR-derived phenotypes. Sequential XGBoost models were developed to evaluate the incremental predictive value of CMR features over conventional risk factors, with SHAP used for interpretation. Cross-modality transportability was assessed in an independent Asian cohort using echocardiographic data as a surrogate for CMR-derived variables. Results Among 27,254 participants, 785 (2.88%) experienced MACE over a median follow-up of approximately 5 years. Two phenotypes were identified, with the higher-risk phenotype characterized by increased cardiac volumes, impaired cardiac function, a tendency toward myocardial hypertrophy, and reduced myocardial strain. The CMR-enhanced model improved MACE prediction compared with traditional risk factors alone (AUC: 0.76, 95% CI: 0.73–0.79; vs. AUC: 0.61, 95% CI: 0.58–0.64, P < 0.001), with strong performance for heart failure (AUC: 0.90, 95% CI: 0.86–0.94). In the cross-modality validation cohort, the simplified model yielded an AUC of 0.69 (95% CI: 0.56–0.83). Higher age, left ventricular mass index, global wall thickness, and lower levels of high-density lipoprotein cholesterol, left atrial ejection fraction, right atrial stroke volume were the key contributors to increased MACE risk. Conclusion CMR-derived phenotypes provide incremental prognostic value beyond traditional risk factors and may improve early identification of individuals at elevated cardiovascular risk.",
+  "authors": "Pei Liu, Chang Liu, Yao Ma, Zhi Lv, Ke-Xin Li, Zi Kou, Peirui Wang, Fuxian Ren",
+  "venue": "Frontiers in Medicine",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1371/journal.pone.0213653"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42601981"
+   ],
+   "pmcid": "PMC13472935"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank CMR表型+机器学习，跨种族外部验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank CMR表型+机器学习预测MACE，含亚洲队列外部验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "可解释机器学习整合CMR表型与临床风险因子",
+  "data": "UKBB CMR 27,254人；西安交大附二院522人超声队列",
+  "scenario": "无症状人群MACE风险预测",
+  "benchmark": "传统临床风险因子模型及Framingham等回归模型",
+  "results": "CMR表型联合临床因子提升MACE预测；跨模态超声队列用于可迁移性评估",
+  "availability": "",
+  "limitations": "超声替代CMR存在测量精度和定义差异，非直接外部验证",
+  "summary": "研究评估心脏磁共振表型对主要不良心血管事件的增量预测价值。利用UKBB 27,254名基线无MACE参与者，采用可解释机器学习整合CMR指标与15个临床风险因子，并在中国超声队列中做跨模态可迁移性评估。发现CMR表型可提升MACE风险预测，跨模态评估提示资源受限场景下的潜在应用。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

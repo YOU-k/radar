@@ -7,7 +7,8 @@ from .. import llm
 from ..config import load_profile
 from ..schema import Item
 
-PREFILTER_TOP = 40
+PREFILTER_TOP = 56   # 7 个领域 × 8（原 5 领域 × 8 = 40）
+PER_DOMAIN_FLOOR = 6  # 每个领域至少保底几条进 LLM，避免小领域被大领域的关键词分挤掉
 BATCH = 20
 
 
@@ -37,7 +38,15 @@ def prefilter(items: list[Item], cfg: dict) -> list[Item]:
     for it in items:
         it.score = keyword_score(it, cfg)
     items.sort(key=lambda x: x.score, reverse=True)
-    return items[:PREFILTER_TOP]
+    keep, per = [], {}
+    for it in items:  # 先按领域保底
+        if per.get(it.domain, 0) < PER_DOMAIN_FLOOR:
+            keep.append(it)
+            per[it.domain] = per.get(it.domain, 0) + 1
+    chosen = {id(it) for it in keep}
+    keep += [it for it in items if id(it) not in chosen][:max(0, PREFILTER_TOP - len(keep))]
+    keep.sort(key=lambda x: x.score, reverse=True)
+    return keep
 
 
 JOURNAL_SLOT = 40  # 整刊订阅条目直通 LLM：关键词表永远追不上期刊新发，靠 LLM 筛

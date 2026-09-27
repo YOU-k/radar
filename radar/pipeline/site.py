@@ -65,6 +65,9 @@ details.day>.daybody{padding-top:8px}
 .badge.mid{background:#fff8c5;color:#9a6700}
 .badge.lo{background:#eaeef2;color:#57606a}
 .badge.res{background:#ddf4ff;color:#0969da}
+.vt{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:0 5px;margin-right:4px}
+.vt.jr{background:#dafbe1;color:#1a7f37}
+.vt.pp{background:#fff1e5;color:#bc4c00}
 .reason{color:#4b5563;font-size:13.5px;margin-top:5px}
 .meta{color:#57606a;font-size:12px;margin-top:5px}
 .bgline{color:#8250df;font-size:12.5px;margin-top:4px;border-left:3px solid #8250df;padding-left:6px}
@@ -120,6 +123,14 @@ DEEP_RE = re.compile(
     re.DOTALL)
 
 WEEKDAYS = "一二三四五六日"
+
+
+def _meta_html(meta: str) -> str:
+    """〔期刊〕/〔预印本〕前缀渲染成小标签，其余原样转义。"""
+    for tag, cls in (("〔期刊〕", "jr"), ("〔预印本〕", "pp")):
+        if meta.startswith(tag):
+            return f'<span class="vt {cls}">{tag[1:-1]}</span>' + html.escape(meta[len(tag):])
+    return html.escape(meta)
 
 
 def _score_class(score: float) -> str:
@@ -202,7 +213,7 @@ def _render_digest(path: Path, first: bool) -> str:
             if it["reason"]:
                 parts.append(f'<div class="reason">{html.escape(it["reason"])}</div>')
             if it["meta"]:
-                parts.append(f'<div class="meta">{html.escape(it["meta"])}</div>')
+                parts.append(f'<div class="meta">{_meta_html(it["meta"])}</div>')
             if it.get("bg"):
                 parts.append(f'<div class="bgline">{html.escape(it["bg"])}</div>')
             if it["deep"]:

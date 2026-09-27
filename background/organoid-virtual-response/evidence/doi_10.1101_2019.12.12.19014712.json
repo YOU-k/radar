@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2019.12.12.19014712",
+  "title": "Patient-Derived Ovarian Cancer Organoids Mimic Clinical Response and Exhibit Heterogeneous Inter- and Intrapatient Drug Responses.",
+  "url": "https://doi.org/10.1101/2019.12.12.19014712",
+  "abstract": "There remains an unmet need for preclinical models to enable personalized therapy for ovarian cancer (OC) patients. Here we evaluate the capacity of patient-derived organoids (PDOs) to predict clinical drug response and functional consequences of tumor heterogeneity. We included 36 whole-genome-characterized PDOs from 23 OC patients with known clinical histories. OC PDOs maintain the genomic features of the original tumor lesion and recapitulate patient response to neoadjuvant carboplatin/paclitaxel combination treatment. PDOs display inter- and intrapatient drug response heterogeneity to chemotherapy and targeted drugs, which can be partially explained by genetic aberrations. PDO drug screening identifies high responsiveness to at least one drug for 88% of patients. PDOs are valuable preclinical models that can provide insights into drug response for individual patients with OC, complementary to genetic testing. Generating PDOs of multiple tumor locations can improve clinical decision making and increase our knowledge of genetic and drug response heterogeneity.",
+  "authors": "C. J. de Witte, Jose Espejo Valle-Inclán, N. Hami, K. Lõhmussaar, O. Kopper, C. Vreuls, G. Jonges, P. V. van Diest",
+  "venue": "Cell Reports",
+  "year": 2019,
+  "citations": 250,
+  "found_by": [
+   "s2:references:doi:10.1038/s41698-021-00168-1"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:32553164"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "卵巢癌类器官药敏复现临床响应，含异质性建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell Reports，卵巢癌类器官复现临床响应，被广泛引用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "卵巢癌PDO药物筛选与临床反应对比",
+  "data": "23例卵巢癌患者的36个全基因组特征PDO",
+  "scenario": "卵巢癌个性化治疗预测",
+  "benchmark": "与患者新辅助卡铂/紫杉醇临床反应对比",
+  "results": "PDO保留原肿瘤基因组特征，88%患者对至少一种药物高响应，药物反应异质性可部分由遗传变异解释",
+  "availability": "",
+  "limitations": "样本量有限，异质性机制未完全阐明",
+  "summary": "评估了卵巢癌PDO预测临床药物反应和肿瘤异质性功能后果的能力。对36个PDO进行全基因组特征分析和药物筛选，与患者临床病史对比。发现PDO可重现患者反应，显示患者间和患者内药物反应异质性，88%患者可找到有效药物。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

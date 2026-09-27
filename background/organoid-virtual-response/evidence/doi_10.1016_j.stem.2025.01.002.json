@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.stem.2025.01.002",
+  "title": "Individualized patient tumor organoids faithfully preserve human brain tumor ecosystems and predict patient response to therapy.",
+  "url": "https://doi.org/10.1016/j.stem.2025.01.002",
+  "abstract": "Tumor organoids are important tools for cancer research, but current models have drawbacks that limit their applications for predicting response to therapy. Here, we developed a fast, efficient, and complex culture system (IPTO, individualized patient tumor organoid) that accurately recapitulates the cellular and molecular pathology of human brain tumors. Patient-derived tumor explants were cultured in induced pluripotent stem cell (iPSC)-derived cerebral organoids, thus enabling culture of a wide range of human tumors in the central nervous system (CNS), including adult, pediatric, and metastatic brain cancers. Histopathological, genomic, epigenomic, and single-cell RNA sequencing (scRNA-seq) analyses demonstrated that the IPTO model recapitulates cellular heterogeneity and molecular features of original tumors. Crucially, we showed that the IPTO model predicts patient-specific drug responses, including resistance mechanisms, in a prospective patient cohort. Collectively, the IPTO model represents a major breakthrough in preclinical modeling of human cancers, which provides a path toward personalized cancer therapy.",
+  "authors": "Peng T, Ma X, Hua W, Wang C, Chu Y, Sun M, Fermi V, Hamelmann S, Lindner K, Shao C, Zaman J, Tian W, Zhuo Y, Harim Y, Stöffler N, Hammann L, Xiao Q, Jin X, Warta R, Lotsch C, Zhuang X, Feng Y, Fu M, Zhang X, Zhang J, Xu H, Qiu F, Xie L, Zhang Y, Zhu W, Du Z, Salgueiro L, Schneider M, Eichhorn F, Lefevre A, Pusch S, Grinevich V, Ratliff M, Loges S, Bunse L, Sahm F, Xiang Y, Unterberg A, von Deimling A, Platten M, Herold-Mende C, Wu Y, Liu HK, Mao Y.",
+  "venue": "Cell stem cell",
+  "year": 2025,
+  "citations": 67,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "",
+   "is_oa": false,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Mao Y",
+   "last_affil": "Department of Neurosurgery, Huashan Hospital, Shanghai Medical College, Fudan University; National Center for Neurological Disorders, Shanghai 200040, China. Electronic address: maoying@fudan.edu.cn."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "患者肿瘤类器官保留生态系统并预测治疗响应，含单细胞读出与建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell子刊，患者类器官预测脑瘤治疗响应，临床对应强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "iPSC脑类器官共培养构建IPTO",
+  "data": "成人/儿童/转移性脑肿瘤组织及多组学数据",
+  "scenario": "脑肿瘤个体化药敏预测",
+  "benchmark": "原发肿瘤病理、基因组、表观组和scRNA-seq",
+  "results": "IPTO保留原肿瘤细胞异质性和分子特征，并前瞻性预测患者特异药物响应及耐药机制",
+  "availability": "",
+  "limitations": "未提及培养通量、成本及长期稳定性",
+  "summary": "建立快速高效的IPTO培养系统，将患者肿瘤外植体培养于iPSC来源脑类器官中，覆盖成人、儿童和转移性脑癌。通过组织病理、基因组、表观基因组和scRNA-seq证明IPTO重现原肿瘤细胞异质性和分子特征。在前瞻性患者队列中，IPTO可预测患者特异药物响应及耐药机制，推动个性化癌症治疗。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-27"
+}

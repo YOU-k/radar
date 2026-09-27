@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/s2468-2667(24)00043-4",
+  "title": "Early adulthood BMI and cardiovascular disease: a prospective cohort study from the China Kadoorie Biobank",
+  "url": "https://doi.org/10.1016/s2468-2667(24)00043-4",
+  "abstract": "Summary Background The associations of early adulthood BMI with cardiovascular diseases have yet to be completely delineated. There is little reliable evidence about these associations among east Asian populations, that differ in fat distribution, disease patterns, and lifestyle factors from other populations. We aimed to study the associations between early adulthood BMI and cardiovascular diseases in a Chinese population, and the effect of midlife lifestyle factors on outcomes. Methods In this prospective analysis, we used data from the China Kadoorie Biobank, a large and long-term cohort from five urban areas and five rural areas, using participants aged 35–70 years. The primary outcome was the incidence of cardiovascular diseases as a group, ischaemic heart disease, haemorrhagic stroke, and ischaemic stroke, which were obtained mainly through linkage to disease registries and the national database for health insurance claims. Early adulthood BMI was assessed through self-report at baseline survey. We used Cox proportional hazards regression models to examine the prospective associations. We also undertook multiplicative and additive interaction analyses to investigate the potential modification effect of midlife healthy lifestyle factors (a combined score covering smoking, drinking, physical activity, and diet). Findings Participants were recruited for baseline survey between June, 2004, and July, 2008. During a median follow-up of 12·0 years (IQR 11·3–13·1), we documented 57 203 (15·9%) of incident cardiovascular diseases in 360 855 participants. After adjustment for potential confounders, monotonic dose–response associations were observed between higher early adulthood BMI and increased risks of incident cardiovascular diseases. Compared with an early adulthood BMI of 20·5–22·4 kg/m2 (the reference group), the hazard ratios for a BMI of less than 18·5 kg/m2 was 0·97 (95% CI 0·94–1·00), 18·5–20·4 kg/m2 was 0·97 (0·95–0·99), 22·5–23·9 kg/m2 was 1·04 (1·02–1·07), 24·0–25·9 kg/m2 was 1·12 (1·09–1·15), 26·0–27·9 kg/m2 was 1·19 (1·14–1·24), 28·0–29·9 kg/m2 was 1·34 (1·25–1·44), and ≥30·0 kg/m2 was 1·58 (1·42–1·75). Except for haemorrhagic stroke, lower early adulthood BMI (<20·5 kg/m2) was associated with decreased incident cardiovascular disease risks. No significant interaction was found between midlife healthy lifestyle factors and early adulthood BMI on cardiovascular disease risks. Interpretation Increased risks of cardiovascular disease incidence were found among participants with high early adulthood adiposity, including ischaemic heart disease, haemorrhagic stroke, and ischaemic stroke. Our findings suggest early adulthood as an important time to focus on weight management and obesity prevention for cardiovascular health later in life. Funding National Natural Science Foundation of China, National Key Research and Development Program of China, Chinese Ministry of Science and Technology, Kadoorie Charitable Foundation, and the Wellcome Trust.",
+  "authors": "Yuan-Yuan Chen, Wei Yu, Jun Lv, Dianjianyi Sun, P. Pei, H. Du, Ling Yang, Yi-Ping Chen",
+  "venue": "Lancet Public Health",
+  "year": 2024,
+  "citations": 43,
+  "found_by": [
+   "s2kw:China Kadoorie Biobank cardiov"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:38885669"
+   ],
+   "pmcid": "PMC11617502"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "China Kadoorie Biobank 50万人队列，东亚人群BMI与CVD轨迹，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "China Kadoorie五十万人队列，东亚人群BMI与CVD轨迹，Lancet子刊",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "前瞻性队列分析，Cox模型",
+  "data": "China Kadoorie Biobank中国成人长期随访",
+  "scenario": "早成年期BMI与CVD风险",
+  "benchmark": "正常体重组；中年健康生活方式因素",
+  "results": "早成年期BMI升高与CVD风险呈单调剂量反应；独立于后续体重变化；出血性卒中风险也升高；中年健康生活方式无显著交互",
+  "availability": "",
+  "limitations": "观察性研究；早成年期BMI多为回忆或历史数据；残余混杂可能存在",
+  "summary": "研究探讨早成年期BMI与后续心血管疾病风险的关系。基于中国慢性病前瞻性队列，分析早成年期BMI、后续体重变化、中年健康生活方式与CVD发病的关联。发现早成年期超重肥胖显著增加CVD和出血性卒中风险，且该关联基本独立于后续体重变化，中年健康生活方式未显著减弱风险。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.08.750024",
+  "title": "LucaCell: a sequence-centric foundation model for cross-species single-cell analysis",
+  "url": "https://doi.org/10.64898/2026.09.08.750024",
+  "abstract": "Single-cell foundation models have transformed transcriptomic analysis, yet most rely on fixed gene identifiers that limit transfer across species and data types. Here we present LucaCell, a sequence-centric foundation model that represents genes through pre-trained mRNA sequence embeddings rather than static gene annotations. Gene expression is discretized into bins and modeled with a Transformer encoder, enabling sequence-informed cell representation without a fixed gene-ID vocabulary. Pre-training on 85 million human and mouse single cells, LucaCell is evaluated on human, mouse and lemur gene expression profiles, human chromatin accessibility data, unaligned reads from more than 50 prokaryotic taxa, and five influenza A virus genomes. LucaCell enables manual-mapping-free cross-species cell type annotation and an alignment-free microbial embedding framework that simultaneously distinguishes bacterial species identity and intra-species physiological states. It also improves gene expression reconstruction by incorporating donor-specific exonic SNP information into mRNA sequence embeddings, and predicts cellular viral load across influenza A virus strains while highlighting infection-like transcriptional states in mock-infected cells. These results show that sequence-informed gene representation can improve the generalization of single-cell foundation models across species, data types, and predictive tasks.",
+  "authors": "Yan Sun, Yong He, Min-Si Ren, Yan-Hui Wang, Peng-Hao Xu, Yong Hou, Yu Kang, Tingjun Hou",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:cross-species single-cell foun"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种单细胞序列中心基础模型，契合跨物种迁移方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨物种单细胞序列基础模型，契合跨物种迁移方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "序列中心基础模型LucaCell，mRNA序列嵌入+Transformer",
+  "data": "预训练8500万人/鼠单细胞；人、鼠、狐猴、染色质、50+原核、5株流感",
+  "scenario": "跨物种单细胞分析与病毒预测",
+  "benchmark": "固定基因ID单细胞基础模型；跨物种注释与微生物嵌入",
+  "results": "实现无手动映射跨物种注释；区分细菌种与生理状态；改善表达重建并预测流感病毒载量",
+  "availability": "",
+  "limitations": "依赖预训练mRNA序列嵌入；未覆盖所有物种与数据模态",
+  "summary": "作者提出序列中心基础模型LucaCell以克服固定基因ID限制。用预训练mRNA序列嵌入表示基因，将表达离散分箱并用Transformer编码，在8500万人鼠单细胞上预训练。发现其支持跨物种细胞注释、无对齐微生物嵌入、结合SNP改善表达重建，并能预测流感病毒载量。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

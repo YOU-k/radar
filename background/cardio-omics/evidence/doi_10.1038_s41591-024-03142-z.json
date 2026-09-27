@@ -1,0 +1,58 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41591-024-03142-z",
+  "title": "Proteomic signatures improve risk prediction for common and rare diseases.",
+  "url": "https://doi.org/10.1038/s41591-024-03142-z",
+  "abstract": "For many diseases there are delays in diagnosis due to a lack of objective biomarkers for disease onset. Here, in 41,931 individuals from the United Kingdom Biobank Pharma Proteomics Project, we integrated measurements of ~3,000 plasma proteins with clinical information to derive sparse prediction models for the 10-year incidence of 218 common and rare diseases (81–6,038 cases). We then compared prediction models developed using proteomic data with models developed using either basic clinical information alone or clinical information combined with data from 37 clinical assays. The predictive performance of sparse models including as few as 5 to 20 proteins was superior to the performance of models developed using basic clinical information for 67 pathologically diverse diseases (median delta C-index = 0.07; range = 0.02–0.31). Sparse protein models further outperformed models developed using basic information combined with clinical assay data for 52 diseases, including multiple myeloma, non-Hodgkin lymphoma, motor neuron disease, pulmonary fibrosis and dilated cardiomyopathy. For multiple myeloma, single-cell RNA sequencing from bone marrow in newly diagnosed patients showed that four of the five predictor proteins were expressed specifically in plasma cells, consistent with the strong predictive power of these proteins. External replication of sparse protein models in the EPIC-Norfolk study showed good generalizability for prediction of the six diseases tested. These findings show that sparse plasma protein signatures, including both disease-specific proteins and protein predictors shared across several diseases, offer clinically useful prediction of common and rare diseases. Proteomic prediction models developed using a large-scale dataset from the UK Biobank Pharma Proteomics Project were superior to clinical models for assessing the 10-year risk of 67 diseases across different types of pathology, including multiple myeloma, motor neuron disease, pulmonary fibrosis, celiac disease and dilated cardiomyopathy.",
+  "authors": "Carrasco-Zanini J, Pietzner M, Davitte J, Surendran P, Croteau-Chonka DC, Robins C, Torralbo A, Tomlinson C, Grünschläger F, Fitzpatrick N, Ytsma C, Kanno T, Gade S, Freitag D, Ziebell F, Haas S, Denaxas S, Betts JC, Wareham NJ, Hemingway H, Scott RA, Langenberg C.",
+  "venue": "Nature medicine",
+  "year": 2024,
+  "citations": 202,
+  "found_by": [
+   "eupmc:cardiovascular disease risk pr",
+   "eupmc:plasma proteomics cardiovascul",
+   "eupmc:heart failure prediction elect",
+   "journal-retro",
+   "seed"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11405273",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Langenberg C",
+   "last_affil": "MRC Epidemiology Unit, School of Clinical Medicine, Institute of Metabolic Science, University of Cambridge, Cambridge, UK. claudia.langenberg@qmul.ac.uk."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "4万人蛋白组稀疏模型预测218病，含CAD等，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "蛋白组签名提升多病种风险预测，Nat Med，方向转折点",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "稀疏蛋白特征+临床模型预测218种疾病10年风险",
+  "data": "UKB-PPP随机子集41931人，Olink 2923蛋白/2941检测",
+  "scenario": "多疾病10年发病风险预测与筛查",
+  "benchmark": "基础临床模型、临床检测及多基因风险评分",
+  "results": "临床模型中位C-index=0.64；163种疾病5蛋白即媲美临床模型，另30种更优；67种疾病加5-20蛋白显著提升，中位ΔC-index=0.07(0.02-0.31)；多发性骨髓瘤Δ=0.25，非霍奇金淋巴瘤Δ=0.21",
+  "availability": "",
+  "limitations": "部分疾病病例数有限；初级保健数据仅部分个体可得",
+  "summary": "该研究利用UKB-PPP最大规模蛋白组数据，系统评估血浆蛋白组对218种病理多样疾病10年发病的预测潜力。研究在41931人随机子集中开发稀疏蛋白预测模型(5-20个蛋白)，并与基础临床模型、临床检测及多基因风险评分比较。结果显示蛋白特征可显著改善67种疾病预测，中位C-index提升0.07，部分疾病如多发性骨髓瘤提升达0.25。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

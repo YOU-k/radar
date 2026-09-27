@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circ.152.suppl_3.4354222",
+  "title": "Abstract 4354222: Deep Learning Prediction of Left Atrial Structure and Function from 12-lead Electrocardiograms",
+  "url": "https://doi.org/10.1161/circ.152.suppl_3.4354222",
+  "abstract": "\n Introduction:\n Abnormalities in the function and structure of the left atrium, called atrial cardiopathy, are a precursor of atrial fibrillation (AF) and an important risk factor for several other cardiovascular outcomes, yet detecting abnormalities is challenging due to the cost and limited accessibility of high-quality cardiac imaging.\n \n \n Objective:\n To develop and validate a deep learning model (ECG-AI) that estimates left atrial (LA) structure and function from the resting 12-lead electrocardiogram and reliably predicts cardiovascular outcomes.\n \n \n Methods:\n We trained ECG-AI models on cardiac magnetic resonance imaging data from the UK Biobank (n=21,749) to estimate LA minimum volumes, maximum volumes and ejection fraction. Volumes were indexed to body surface area. Cox regression models adjusting for clinical risk factors evaluated associations of LA with incident AF, ischemic stroke and cardioembolic stroke in an external cohort of adults aged ≥ 65, the Cardiovascular Health Study. We compared prediction models for incident AF and cardioembolic stroke that included [1] age and sex only (base), [2] base + ECG-AI LA measures (ECG-AI), [3] CHARGE-AF risk score alone, and [4] CHARGE-AF + ECG-AI (combined).\n \n \n Results:\n ECG-AI estimates were moderately correlated with direct imaging measures (r=0.40-0.50) but demonstrated strong independent associations with outcomes in the external cohort and outperformed a conventional ECG measure of atrial cardiopathy, P terminal force in V1. In the Cardiovascular Health Study, each standard deviation increase in ECG-AI LA minimum volume yielded HRs of 1.44 (95% CI 1.35-1.47) for AF, 1.45 (95% CI 1.37-1.53) for ischemic stroke, and 1.66 (95% CI 1.47-1.86) for cardioembolic stroke, the hallmark complication of AF and atrial cardiopathy (Figure 1). In contrast, none of the ECG-AI measures was associated with large-artery atherosclerotic or small vessel stroke. In 5-year prediction models (Figure 2), the ECG-AI measures outperformed the CHARGE-AF risk prediction tool for both AF (delta AUC 0.03, 95% CI 0.01-0.05) and cardioembolic stroke (delta AUC 0.01, 95% CI -0.05-0.08).\n \n \n Conclusion:\n Our fully-trained ECG-AI tool estimates LA function and identifies individuals at elevated-risk for cardiovascular disease using only standard data from the inexpensive and widely-available 12-lead ECG.\n",
+  "authors": "Jennifer A. Brody, Vidhushei Yogeswaran, Kerri L. Wiggins, C. Sitlani, Joshua C. Bis, S. Heckbert, W. Longstreth, Bruce M. Psaty",
+  "venue": "Circulation",
+  "year": 2025,
+  "citations": 0,
+  "found_by": [
+   "s2kw:electrocardiogram deep learnin"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank两万人ECG-AI估左房结构功能并预测结局，队列大",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank两万人ECG-AI估左房结构功能，队列结局验证，方向代表",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度学习ECG-AI从12导联ECG估计左房结构与功能",
+  "data": "UKB心脏MRI 21749人训练；外部心血管健康研究≥65岁",
+  "scenario": "ECG预测左房异常及心血管结局",
+  "benchmark": "对比年龄性别基础模型、CHARGE-AF评分及联合模型",
+  "results": "ECG-AI估计与直接影像测量中度相关(r=0.40-0.50)；与AF、缺血性卒中、心源性卒中强独立相关；优于传统P波终末电势指标",
+  "availability": "",
+  "limitations": "全文未获取；与影像相关性仅中等(r=0.40-0.50)",
+  "summary": "该研究开发并验证深度学习模型(ECG-AI)，从静息12导联ECG估计左房结构与功能并预测心血管结局。模型在UKB 21749人的心脏MRI数据上训练，估计左房最小/最大容积和射血分数，并在≥65岁的心血管健康研究外部队列中评估。结果显示ECG-AI估计与影像中度相关(r=0.40-0.50)，但与AF及卒中强独立相关，且优于传统P波终末电势指标。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

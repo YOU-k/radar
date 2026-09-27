@@ -1,0 +1,52 @@
+{
+ "candidate": {
+  "id": "doi:10.1136/heartjnl-2022-321231",
+  "title": "Independent external validation of the QRISK3 cardiovascular disease risk prediction model using UK Biobank",
+  "url": "https://doi.org/10.1136/heartjnl-2022-321231",
+  "abstract": "Objective To externally evaluate the performance of QRISK3 for predicting 10 year risk of cardiovascular disease (CVD) in the UK Biobank cohort. Methods We used data from the UK Biobank, a large-scale prospective cohort study of 403 370 participants aged 40–69 years recruited between 2006 and 2010 in the UK. We included participants with no previous history of CVD or statin treatment and defined the outcome to be the first occurrence of coronary heart disease, ischaemic stroke or transient ischaemic attack, derived from linked hospital inpatient records and death registrations. Results Our study population included 233 233 women and 170 137 men, with 9295 and 13 028 incident CVD events, respectively. Overall, QRISK3 had moderate discrimination for UK Biobank participants (Harrell’s C-statistic 0.722 in women and 0.697 in men) and discrimination declined by age (<0.62 in all participants aged 65 years or older). QRISK3 systematically overpredicted CVD risk in UK Biobank, particularly in older participants, by as much as 20%. Conclusions QRISK3 had moderate overall discrimination in UK Biobank, which was best in younger participants. The observed CVD risk for UK Biobank participants was lower than that predicted by QRISK3, particularly for older participants. It may be necessary to recalibrate QRISK3 or use an alternate model in studies that require accurate CVD risk prediction in UK Biobank.",
+  "authors": "Ruth E. Parsons, Xiao-Nan Liu, J. Collister, D. Clifton, B. Cairns, L. Clifton",
+  "venue": "Heart",
+  "year": 2023,
+  "citations": 47,
+  "found_by": [
+   "s2kw:ChinaHEART cohort cardiovascul",
+   "s2kw:China Kadoorie Biobank cardiov"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:37423742"
+   ],
+   "pmcid": "PMC10646868"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 40万人外部验证QRISK3，大规模队列校准证据",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "QRISK3在UK Biobank 40万人外部验证，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "QRISK3模型独立外部验证",
+  "data": "UK Biobank参与者",
+  "scenario": "英国人群10年CVD风险预测",
+  "benchmark": "QRISK3原始推导队列(CPRD)",
+  "results": "QRISK3在UKB中区分度中等且随年龄下降，系统性高估CVD风险，老年参与者高估达20%",
+  "availability": "",
+  "limitations": "QRISK3在UKB中校准差，需重新校准或开发定制模型",
+  "summary": "研究对QRISK3模型在UK Biobank中进行独立外部验证。应用QRISK3于UKB参与者并评估区分度和校准。发现QRISK3区分度中等且随年龄下降，系统性高估风险，老年人群高估达20%，建议重新校准或开发定制模型。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

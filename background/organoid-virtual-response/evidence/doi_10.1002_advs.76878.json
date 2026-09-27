@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1002/advs.76878",
+  "title": "Deciphering Anti‐Cancer Drug Efficacy Through Nanomechanical Vibrations in Living Gastric Cancer Organoids",
+  "url": "https://doi.org/10.1002/advs.76878",
+  "abstract": "ABSTRACT Cancer poses a severe threat to human health. The limited sensitivity and efficiency of conventional drug screening methods create a pressing need for novel anti‐cancer drug screening platforms. This study developed a drug efficacy assessment platform that integrates patient‐derived gastric cancer organoids, atomic force microscopy (AFM)‐based nanomechanical vibration detection, deep learning analysis and an organoid mechanical model. The platform enables non‐destructive detection of intrinsic nano‐vibrations of organoids, revealing that their amplitude and spectral characteristics are sensitive to the cytoskeleton, cell‐cell junctions, and cellular metabolism. Through the optimization of a deep learning model, we achieved high‐precision classification of organoids under pharmacological perturbation. The classification requires only 0.1 s of vibration data and achieves an overall accuracy of 97%. Applied to gastric cancer organoids, our platform detected the effects of picomolar (pM) concentrations of paclitaxel, notably preceding any observable morphological changes or apoptosis signals. Furthermore, the organoid mechanical model accurately predicted drug‐induced alterations in both the nanomechanical vibration amplitude and spectrum. These findings validate the platform's advantage for the highly sensitive, non‐destructive, and efficient screening of anti‐cancer drugs. Collectively, this work establishes a paradigm for organoid‐based drug evaluation through dynamic biophysical profiling and holds promise for advancing personalized cancer treatment strategies.",
+  "authors": "Ting Zhang, Qiubo Chen, Shihai Lan, Liang Zhu, Shuai-Yu Liu, Yan Xia, Yalu Zhang, Hanhui Yao",
+  "venue": "Advancement of science",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1016/j.xcrm.2024.101627"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42579611"
+   ],
+   "pmcid": "PMC13460407"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "类器官药敏+深度学习建模，含影像读出与预测",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "类器官药敏加深度学习建模，符合扰动响应预测",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "AFM纳米机械振动+CNN药效分类",
+  "data": "患者来源胃类器官，振动信号与药敏数据",
+  "scenario": "胃癌个体化药效评估",
+  "benchmark": "传统细胞活力与形态学终点检测",
+  "results": "pM级紫杉醇即可检测振动变化，早于形态改变，CNN分类准确率97%",
+  "availability": "",
+  "limitations": "依赖AFM设备，通量有限，临床样本验证规模有限",
+  "summary": "研究将患者来源胃类器官与纳米机械振动传感结合用于抗癌药效评估。作者检测类器官振动特征，结合细胞骨架、连接与代谢扰动解析信号来源，并用CNN分类药物反应。结果显示可在超低浓度下高准确率检测药效，早于形态变化。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

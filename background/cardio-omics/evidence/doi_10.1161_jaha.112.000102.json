@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/jaha.112.000102",
+  "title": "Simple Risk Model Predicts Incidence of Atrial Fibrillation in a Racially and Geographically Diverse Population: the CHARGE‐AF Consortium",
+  "url": "https://doi.org/10.1161/JAHA.112.000102",
+  "abstract": "Background Tools for the prediction of atrial fibrillation (AF) may identify high‐risk individuals more likely to benefit from preventive interventions and serve as a benchmark to test novel putative risk factors. Methods and Results Individual‐level data from 3 large cohorts in the United States (Atherosclerosis Risk in Communities [ARIC] study, the Cardiovascular Health Study [CHS], and the Framingham Heart Study [FHS]), including 18 556 men and women aged 46 to 94 years (19% African Americans, 81% whites) were pooled to derive predictive models for AF using clinical variables. Validation of the derived models was performed in 7672 participants from the Age, Gene and Environment—Reykjavik study (AGES) and the Rotterdam Study (RS). The analysis included 1186 incident AF cases in the derivation cohorts and 585 in the validation cohorts. A simple 5‐year predictive model including the variables age, race, height, weight, systolic and diastolic blood pressure, current smoking, use of antihypertensive medication, diabetes, and history of myocardial infarction and heart failure had good discrimination (C‐statistic, 0.765; 95% CI, 0.748 to 0.781). Addition of variables from the electrocardiogram did not improve the overall model discrimination (C‐statistic, 0.767; 95% CI, 0.750 to 0.783; categorical net reclassification improvement, −0.0032; 95% CI, −0.0178 to 0.0113). In the validation cohorts, discrimination was acceptable (AGES C‐statistic, 0.664; 95% CI, 0.632 to 0.697 and RS C‐statistic, 0.705; 95% CI, 0.664 to 0.747) and calibration was adequate. Conclusion A risk model including variables readily available in primary care settings adequately predicted AF in diverse populations from the United States and Europe.",
+  "authors": "Á. Alonso, B. Krijthe, T. Aspelund, Katherine A. Stepas, M. Pencina, C. Moser, Moritz F. Sinner, N. Sotoodehnia",
+  "venue": "Journal of the American Heart Association : Cardiovascular and Cerebrovascular Disease",
+  "year": 2013,
+  "citations": 805,
+  "found_by": [
+   "s2:references:doi:10.1161/circulationaha.121.057480"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:23537808"
+   ],
+   "pmcid": "PMC3647274"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "CHARGE-AF多队列房颤风险模型，外部验证充分，可作基准",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "CHARGE-AF多队列房颤风险模型，成为该方向基准必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CHARGE-AF多队列临床风险评分",
+  "data": "推导18,556例；验证7,672例，5队列",
+  "scenario": "房颤/房扑发病风险预测",
+  "benchmark": "FHS、ARIC既有房颤风险评分",
+  "results": "摘要未给AUC等具体数值；模型含常规临床变量，部分无需12导联ECG",
+  "availability": "",
+  "limitations": "仅白人/非裔；年龄46–94；排除肾功能差者",
+  "summary": "研究在CHARGE-AF联盟5个美欧队列中开发并验证房颤（含房扑）预测评分。将ARIC、CHS、FHS数据合并推导，在AGES与Rotterdam研究验证，纳入18,556例推导和7,672例验证。目标是提供地理与种族更多样、且部分无需12导联ECG的简易房颤风险模型，以识别高危个体并作为新危险因素基准。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

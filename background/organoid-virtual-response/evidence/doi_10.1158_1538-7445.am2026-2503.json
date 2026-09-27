@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1158/1538-7445.am2026-2503",
+  "title": "Abstract 2503: Lung cancer organoid-based diagnostic response prediction (CODRP) for predicting anticancer drug response and progression-free survival",
+  "url": "https://doi.org/10.1158/1538-7445.am2026-2503",
+  "abstract": "\n \n \n Anticancer drug sensitivity analysis using patient-derived lung cancer organoids is being actively investigated as a means to predict individual responses to anticancer therapies. Conventional drug sensitivity analysis methods typically rely on the area under the dose-response curve (AUC) or the half-maximal inhibitory concentration (IC50) to distinguish drug-sensitive and drug-resistant phenotypes, yet these approaches have notable accuracy limitations. To address this issue, we developed Cancer Organoid-based Diagnostic Response Prediction (CODRP), a multiparametric analytical method that integrates AUC values, patient-derived organoid (PDO) growth rates, cancer stage. In progression-free survival (PFS) analyses, CODRP demonstrated superior prognostic accuracy compared with conventional AUC-based methods.\n \n \n \n Lung cancer cells obtained from patient-derived tissue were used to generate PDOs that mimic the characteristics of the original lung cancer tissue. Because patient-derived lung cancer cells could only be obtained in limited amounts, a disposable nozzle-type cell spotter, which enables the precise distribution of minimal cell numbers, was employed for high-throughput screening. The key characteristics of the PDOs were validated through pathological comparison with the corresponding patient tissue slides. Anticancer drug sensitivity testing was performed using the PDOs, and PFS was analyzed according to the therapeutic agents prescribed to the patients.\n \n \n \n Anticancer drug sensitivity analysis was performed using lung cancer PDOs derived from 12 patients. The conventional AUC-based approach failed to clearly differentiate drug-sensitive from drug-resistant cases. In contrast, the CODRP index showed strong concordance with actual clinical treatment outcomes. Moreover, whereas AUC analysis revealed only modest differences in PFS between responders and non-responders, CODRP identified a distinct separation, demonstrating its superior predictive capability.\n \n \n \n CODRP-based anticancer drug response analysis using lung cancer PDOs provides an effective approach for forecasting and evaluating treatment outcomes in patients with lung cancer. This method has the potential to be incorporated into precision medicine workflows, supporting more individualized treatment planning and enhancing the clinical relevance of therapeutic decision-making.\n \n \n \n Seung Joon Kim, Sang-Yun Lee, Yu-Jeong Seong, Yongki Hwang, Hyobin Won, Eunyoung Lee, Dong Woo Lee. Lung cancer organoid-based diagnostic response prediction (CODRP) for predicting anticancer drug response and progression-free survival [abstract]. In: Proceedings of the American Association for Cancer Research Annual Meeting 2026; Part 1 (Regular Abstracts); 2026 Apr 17-22; San Diego, CA. Philadelphia (PA): AACR; Cancer Res 2026;86(7 Suppl):Abstract nr 2503.\n",
+  "authors": "Seung Joon Kim, Sang-Yun Lee, Yuchang Seong, Y. Hwang, Hyobin Won, Eunyoung Lee, Dong-Woo Lee",
+  "venue": "Cancer Research",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:cardiac organoid drug sensitiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "类器官药敏多参数建模预测无进展生存，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "肺癌类器官药敏预测模型对应无进展生存，临床转化价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多参数CODRP药敏预测法",
+  "data": "患者来源肺癌类器官及药敏与PFS数据",
+  "scenario": "肺癌药物反应与PFS预测",
+  "benchmark": "传统AUC/IC50药敏分析方法",
+  "results": "CODRP在PFS预后分析中优于传统AUC方法",
+  "availability": "",
+  "limitations": "患者来源细胞量有限，样本规模未明确，需进一步验证",
+  "summary": "针对传统AUC/IC50药敏分析准确性有限的问题，开发整合AUC、类器官生长率与癌症分期的多参数方法CODRP。用患者来源肺癌组织建立类器官，经病理验证后行药敏检测并分析PFS。结果显示CODRP在PFS预后准确性上优于传统AUC方法。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

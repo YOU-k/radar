@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.jacep.2019.07.016",
+  "title": "Development and Validation of a Prediction Model for Atrial Fibrillation Using Electronic Health Records.",
+  "url": "https://doi.org/10.1016/j.jacep.2019.07.016",
+  "abstract": "OBJECTIVES\nThis study sought to determine whether the risk of atrial fibrillation AF can be estimated accurately by using routinely ascertained features in the electronic health record (EHR) and whether AF risk is associated with stroke.\n\n\nBACKGROUND\nEarly diagnosis of AF and treatment with anticoagulation may prevent strokes.\n\n\nMETHODS\nUsing a multi-institutional EHR, this study identified 412,085 individuals 45 to 95 years of age without prevalent AF between 2000 and 2014. A prediction model was derived and validated for 5-year AF risk by using split-sample validation and model performance was compared with other methods of AF risk assessment.\n\n\nRESULTS\nWithin 5 years, 14,334 individuals developed AF. In the derivation sample (7,216 AF events of 206,042 total), the optimal risk model included sex, age, race, smoking, height, weight, diastolic blood pressure, hypertension, hyperlipidemia, heart failure, coronary heart disease, valvular disease, prior stroke, peripheral arterial disease, chronic kidney disease, hypothyroidism, and quadratic terms for height, weight, and age. In the validation sample (7,118 AF events of 206,043 total) the AF risk model demonstrated good discrimination (C-statistic: 0.777; 95% confidence interval [CI:] 0.771 to 0.783) and calibration (0.99; 95% CI: 0.96 to 1.01). Model discrimination and calibration were superior to CHARGE-AF (Cohorts for Heart and Aging Research in Genomic Epidemiology AF) (C-statistic: 0.753; 95% CI: 0.747 to 0.759; calibration slope: 0.72; 95% CI: 0.71 to 0.74), C2HEST (Coronary artery disease / chronic obstructive pulmonary disease; Hypertension; Elderly [age ≥75 years]; Systolic heart failure; Thyroid disease [hyperthyroidism]) (C-statistic: 0.754; 95% CI: 0.747 to 0.762; calibration slope: 0.44; 95% CI: 0.43 to 0.45), and CHA2DS2-VASc (Congestive heart failure, Hypertension, Age ≥75 years, Diabetes mellitus, Prior stroke, transient ischemic attack [TIA], or thromboembolism, Vascular disease, Age 65-74 years, Sex category [female]) scores (C-statistic: 0.702; 95% CI: 0.693 to 0.710; calibration slope: 0.37; 95% CI: 0.36 to 0.38). AF risk discriminated incident stroke (n = 4,814; C-statistic: 0.684; 95% CI: 0.677 to 0.692) and stroke within 90 days of incident AF (n = 327; C-statistic: 0.789; 95% CI: 0.764 to 0.814).\n\n\nCONCLUSIONS\nA model developed from a real-world EHR database predicted AF accurately and stratified stroke risk. Incorporating AF prediction into EHRs may enable risk-guided screening for AF.",
+  "authors": "Olivia L. Hulme, S. Khurshid, Lu-Chen Weng, Christopher D. Anderson, Elizabeth Y. Wang, J. Ashburner, D. Ko, D. McManus",
+  "venue": "JACC Clinical Electrophysiology",
+  "year": 2019,
+  "citations": 88,
+  "found_by": [
+   "s2:references:doi:10.1161/circulationaha.121.057480"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:31753441"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "EHR大规模房颤预测模型，40万人群，含验证与卒中关联",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "41万人EHR房颤预测模型，含验证与卒中关联，实用性强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "EHR常规变量5年房颤风险预测模型",
+  "data": "412,085例45–95岁，2000–2014，14,334例新发AF",
+  "scenario": "5年房颤风险预测与卒中关联",
+  "benchmark": "CHARGE-AF等房颤风险评估方法",
+  "results": "验证C-statistic 0.777（95%CI 0.771–0.783），校准0.99；优于CHARGE-AF 0.753",
+  "availability": "",
+  "limitations": "EHR回顾性；变量依赖编码；外部验证有限",
+  "summary": "研究利用多机构电子健康记录开发并验证5年房颤风险预测模型。纳入412,085名45–95岁无 prevalent AF 个体，拆分样本推导与验证，模型含性别、年龄、种族、吸烟、身高体重、血压、合并症等及非线性项。验证集C-statistic 0.777、校准0.99，判别与校准优于CHARGE-AF，并探讨房颤风险与卒中关联。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

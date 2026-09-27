@@ -47,6 +47,11 @@ class TopicSpec:
     budget: dict = field(default_factory=lambda: dict(DEFAULT_BUDGET))
     root: Path | None = None
 
+    @property
+    def radar_domains(self) -> list[str]:
+        """radar_domain 可写一个或多个（yaml 列表 / 逗号分隔）：renew 与日报定位从这些 domain 收条目。"""
+        return [x.strip() for x in self.radar_domain.split(",") if x.strip()]
+
     # ---- 路径约定：区块之间用这些路径交接 ----
     @property
     def dir(self) -> Path:
@@ -119,7 +124,8 @@ def load_spec(slug_or_path: str | Path, root: Path | None = None) -> TopicSpec:
         include=list(d.get("include") or []), exclude=list(d.get("exclude") or []),
         keywords=list(d.get("keywords") or []), queries=list(d.get("queries") or []),
         journals=list(d.get("journals") or []), seeds=list(d.get("seeds") or []),
-        radar_domain=d.get("radar_domain", ""), months=int(d.get("months", 24)),
+        radar_domain=(", ".join(d["radar_domain"]) if isinstance(d.get("radar_domain"), list)
+                      else d.get("radar_domain", "") or ""), months=int(d.get("months", 24)),
         outline=list(d.get("outline") or []), roles=roles, budget=budget,
         root=p.parent)
     errs = spec.validate()

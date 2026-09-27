@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/science.aao2774",
+  "title": "Patient-derived organoids model treatment response of metastatic gastrointestinal cancers",
+  "url": "https://doi.org/10.1126/science.aao2774",
+  "abstract": "Cancer organoids to model therapy response Cancer organoids are miniature, three-dimensional cell culture models that can be made from primary patient tumors and studied in the laboratory. Vlachogiannis et al. asked whether such “tumor-in-a-dish” approaches can be used to predict drug responses in the clinic. They generated a live organoid biobank from patients with metastatic gastrointestinal cancer who had previously been enrolled in phase I or II clinical trials. This allowed the authors to compare organoid drug responses with how the patient actually responded in the clinic. Encouragingly, the organoids had similar molecular profiles to those of the patient tumor, reinforcing their value as a platform for drug screening and development. Science, this issue p. 920 Organoids can recapitulate patient responses in the clinic, with potential for drug screening and personalized medicine. Patient-derived organoids (PDOs) have recently emerged as robust preclinical models; however, their potential to predict clinical outcomes in patients has remained unclear. We report on a living biobank of PDOs from metastatic, heavily pretreated colorectal and gastroesophageal cancer patients recruited in phase 1/2 clinical trials. Phenotypic and genotypic profiling of PDOs showed a high degree of similarity to the original patient tumors. Molecular profiling of tumor organoids was matched to drug-screening results, suggesting that PDOs could complement existing approaches in defining cancer vulnerabilities and improving treatment responses. We compared responses to anticancer agents ex vivo in organoids and PDO-based orthotopic mouse tumor xenograft models with the responses of the patients in clinical trials. Our data suggest that PDOs can recapitulate patient responses in the clinic and could be implemented in personalized medicine programs.",
+  "authors": "G. Vlachogiannis, S. Hedayat, A. Vatsiou, Y. Jamin, J. Fernández-Mateos, K. Khan, A. Lampis, Katherine Eason",
+  "venue": "Science",
+  "year": 2018,
+  "citations": 1852,
+  "found_by": [
+   "s2:references:doi:10.1038/s41698-021-00168-1",
+   "s2:references:doi:10.1016/j.xcrm.2024.101627"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:29472484"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "患者来源类器官药敏与临床结局对应，含建模预测，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Science里程碑，类器官药敏对应患者临床结局，必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "患者来源类器官药物反应与临床对比",
+  "data": "转移性胃肠癌PDO活体生物库，I/II期临床试验患者",
+  "scenario": "转移性胃肠癌药物反应预测",
+  "benchmark": "与患者实际临床试验反应对比",
+  "results": "PDO分子谱与原始肿瘤高度相似，可补充现有方法定义癌症治疗反应",
+  "availability": "",
+  "limitations": "样本来自重度预处理患者，未明确前瞻性验证",
+  "summary": "构建了来自转移性胃肠癌患者的类器官活体生物库。对类器官进行表型和基因型分析并与药物筛选结果匹配。发现类器官与原肿瘤高度相似，可预测临床反应并用于药物筛选和个性化医疗。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

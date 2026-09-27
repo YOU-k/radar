@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.07.08.663729",
+  "title": "BrainBeacon: A Cross-Species Foundation Model for Single-cell Resolved Brain Spatial Transcriptomics",
+  "url": "https://doi.org/10.1101/2025.07.08.663729",
+  "abstract": "The brain’s functional complexity emerges from spatiotemporal heterogeneity in molecular, cellular, and circuit organization, shaped by evolution, aging, and disease. Single-cell spatial transcriptomics provides a transformative framework to decode this complexity, resolving cell-type-specific expression patterns, region-specific regulation, evolutionary divergence, and disease-associated disruptions. Despite recent advances in spatial transcriptomics, a unified foundation model capturing cross-species, whole-brain cellular architecture remains lacking. Here, we introduce BrainBeacon, the first cross-species foundation model for whole-brain spatial transcriptomics. Trained on 133 million spatially resolved cells covering a total area of 210194 mm2 from human, macaque, marmoset and mouse brains profiled across five major platforms, BrainBeacon integrates gene expression rankings, spatial cellular organization, and evolutionarily conserved genetic relationships into a unified transformer-based architecture. A two-stage training strategy captures both intra-cellular transcriptional dependencies and inter-cellular spatial interactions, yielding biologically grounded and interpretable representations of brain structure. Subsequently, BrainBeacon enables cross-species alignment of brain cell types and anatomical regions, facilitating integrative analyses of conserved and divergent cellular architectures. Moreover, it uncovers spatial regulatory mechanisms of aging by predicting bidirectional perturbation responses between cells and their local niche. Together, BrainBeacon serves as a foundational cross-species model for whole-brain spatial transcriptomics, enabling virtual brain atlas construction, systematic in silico perturbation studies, and mechanistic insights into brain disease pathogenesis.",
+  "authors": "Chengming Zhang, Yiwen Yang, Yi-Feng Jiao, Qianqian Yang, Xin Guo, Jing Xu, Jiyang Li, Yuan-Yuan Zhou",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 6,
+  "found_by": [
+   "s2kw:cross-species single-cell foun"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种脑空间转录组基础模型，契合跨物种建模。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨物种脑空间转录组基础模型，契合迁移建模",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "BrainBeacon跨物种脑空间转录组基础模型",
+  "data": "1.33亿空间分辨细胞，210194 mm²，人/猕猴/狨猴/小鼠，5平台",
+  "scenario": "跨物种全脑空间转录组分析",
+  "benchmark": "",
+  "results": "实现跨物种脑细胞类型与解剖区域对齐，揭示衰老空间调控机制",
+  "availability": "",
+  "limitations": "全文未获取，局限未明确",
+  "summary": "提出BrainBeacon，首个跨物种全脑空间转录组基础模型。基于1.33亿空间分辨细胞、四物种五平台数据，采用两阶段训练整合基因表达排序、空间组织与保守遗传关系。实现跨物种脑细胞类型与区域对齐，并揭示衰老相关空间调控机制。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

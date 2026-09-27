@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circulationaha.121.057480",
+  "title": "Electrocardiogram-based Deep Learning and Clinical Risk Factors to Predict Atrial Fibrillation",
+  "url": "https://doi.org/10.1161/CIRCULATIONAHA.121.057480",
+  "abstract": "Supplemental Digital Content is available in the text. Background: Artificial intelligence (AI)–enabled analysis of 12-lead ECGs may facilitate efficient estimation of incident atrial fibrillation (AF) risk. However, it remains unclear whether AI provides meaningful and generalizable improvement in predictive accuracy beyond clinical risk factors for AF. Methods: We trained a convolutional neural network (ECG-AI) to infer 5-year incident AF risk using 12-lead ECGs in patients receiving longitudinal primary care at Massachusetts General Hospital (MGH). We then fit 3 Cox proportional hazards models, composed of ECG-AI 5-year AF probability, CHARGE-AF clinical risk score (Cohorts for Heart and Aging in Genomic Epidemiology–Atrial Fibrillation), and terms for both ECG-AI and CHARGE-AF (CH-AI), respectively. We assessed model performance by calculating discrimination (area under the receiver operating characteristic curve) and calibration in an internal test set and 2 external test sets (Brigham and Women’s Hospital [BWH] and UK Biobank). Models were recalibrated to estimate 2-year AF risk in the UK Biobank given limited available follow-up. We used saliency mapping to identify ECG features most influential on ECG-AI risk predictions and assessed correlation between ECG-AI and CHARGE-AF linear predictors. Results: The training set comprised 45 770 individuals (age 55±17 years, 53% women, 2171 AF events) and the test sets comprised 83 162 individuals (age 59±13 years, 56% women, 2424 AF events). Area under the receiver operating characteristic curve was comparable using CHARGE-AF (MGH, 0.802 [95% CI, 0.767–0.836]; BWH, 0.752 [95% CI, 0.741–0.763]; UK Biobank, 0.732 [95% CI, 0.704–0.759]) and ECG-AI (MGH, 0.823 [95% CI, 0.790–0.856]; BWH, 0.747 [95% CI, 0.736–0.759]; UK Biobank, 0.705 [95% CI, 0.673–0.737]). Area under the receiver operating characteristic curve was highest using CH-AI (MGH, 0.838 [95% CI, 0.807 to 0.869]; BWH, 0.777 [95% CI, 0.766 to 0.788]; UK Biobank, 0.746 [95% CI, 0.716 to 0.776]). Calibration error was low using ECG-AI (MGH, 0.0212; BWH, 0.0129; UK Biobank, 0.0035) and CH-AI (MGH, 0.012; BWH, 0.0108; UK Biobank, 0.0001). In saliency analyses, the ECG P-wave had the greatest influence on AI model predictions. ECG-AI and CHARGE-AF linear predictors were correlated (Pearson r: MGH, 0.61; BWH, 0.66; UK Biobank, 0.41). Conclusions: AI-based analysis of 12-lead ECGs has similar predictive usefulness to a clinical risk factor model for incident AF and the approaches are complementary. ECG-AI may enable efficient quantification of future AF risk.",
+  "authors": "S. Khurshid, S. Friedman, C. Reeder, Paolo Di Achille, N. Diamant, Pulkit Singh, Lia X. Harrington, Xin Wang",
+  "venue": "Circulation",
+  "year": 2021,
+  "citations": 248,
+  "found_by": [
+   "s2:references:doi:10.1016/s2589-7500(24)00172-9"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:34743566"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "ECG-AI预测房颤，超越临床评分，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Circulation，ECG-AI预测房颤超越临床评分，高被引必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "卷积神经网络ECG-AI+Cox比例风险模型",
+  "data": "MGH训练45,770例，测试83,162例，外部BWH与UKB",
+  "scenario": "5年新发房颤风险预测",
+  "benchmark": "CHARGE-AF临床风险评分",
+  "results": "ECG-AI与CHARGE-AF联合模型(CH-AI)在内部和外部测试集中评估区分度与校准，具体AUC数值未在摘要给出",
+  "availability": "",
+  "limitations": "UKB随访有限，模型需重新校准为2年房颤风险",
+  "summary": "研究评估AI分析12导联ECG能否在临床风险因素之外提升房颤预测。训练CNN推断5年新发房颤风险，构建ECG-AI、CHARGE-AF及联合Cox模型并在内部和两个外部测试集验证。发现AI可提供超越临床风险因素的预测增益，但需进一步明确其泛化性。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

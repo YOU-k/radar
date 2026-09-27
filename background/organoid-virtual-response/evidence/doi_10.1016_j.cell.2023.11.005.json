@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2023.11.005",
+  "title": "Trellis tree-based analysis reveals stromal regulation of patient-derived organoid drug responses.",
+  "url": "https://doi.org/10.1016/j.cell.2023.11.005",
+  "abstract": "Patient-derived organoids (PDOs) can model personalized therapy responses; however, current screening technologies cannot reveal drug response mechanisms or how tumor microenvironment cells alter therapeutic performance. To address this, we developed a highly multiplexed mass cytometry platform to measure post-translational modification (PTM) signaling, DNA damage, cell-cycle activity, and apoptosis in >2,500 colorectal cancer (CRC) PDOs and cancer-associated fibroblasts (CAFs) in response to clinical therapies at single-cell resolution. To compare patient- and microenvironment-specific drug responses in thousands of single-cell datasets, we developed \"Trellis\"-a highly scalable, tree-based treatment effect analysis method. Trellis single-cell screening revealed that on-target cell-cycle blockage and DNA-damage drug effects are common, even in chemorefractory PDOs. However, drug-induced apoptosis is rarer, patient-specific, and aligns with cancer cell PTM signaling. We find that CAFs can regulate PDO plasticity-shifting proliferative colonic stem cells (proCSCs) to slow-cycling revival colonic stem cells (revCSCs) to protect cancer cells from chemotherapy.",
+  "authors": "María Ramos Zapatero, Alexander Tong, James W. Opzoomer, Rhianna O’Sullivan, Ferran Cardoso Rodriguez, J. Sufi, P. Vlckova, C. Nattress",
+  "venue": "Cell",
+  "year": 2023,
+  "citations": 12,
+  "found_by": [
+   "s2kw:organoid drug screening benchm"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:38065081"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PDO药敏单细胞质谱读出并开发Trellis建模，方法新且可复用。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell正刊，PDO药敏+微环境建模，方法可复用，必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Trellis树基治疗效应分析+多重质谱流式",
+  "data": ">2500个CRC PDO与CAF单细胞PTM/凋亡数据",
+  "scenario": "结直肠癌类器官药物响应",
+  "benchmark": "患者与微环境特异药物响应比较",
+  "results": "靶向细胞周期阻断和DNA损伤常见；凋亡罕见且患者特异；CAF促proCSC向revCSC转变以耐药",
+  "availability": "",
+  "limitations": "未明确体内验证及Trellis泛化性",
+  "summary": "开发高多重质谱流式平台，在单细胞水平检测2500余个CRC类器官和CAF对临床治疗的PTM信号、DNA损伤、细胞周期和凋亡。提出Trellis树基治疗效应分析方法，用于比较患者和微环境特异药物响应。发现靶向细胞周期和DNA损伤效应常见，但凋亡罕见且患者特异，CAF可通过促进proCSC向revCSC转变保护癌细胞抵抗化疗。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-27"
+}

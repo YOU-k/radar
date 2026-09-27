@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1177/20552076231187247",
+  "title": "Mortality risk prediction of the electrocardiogram as an informative indicator of cardiovascular diseases",
+  "url": "https://doi.org/10.1177/20552076231187247",
+  "abstract": "Background The electrocardiogram (ECG) may be the most popular test in the management of cardiovascular disease (CVD). Although wide applications of artificial intelligence (AI)-enabled ECG have been developed, an integrating indicator for CVD risk stratification was not investigated. Since mortality may be the most important global outcome, this study aimed to develop a survival deep learning model (DLM) to establish a critical ECG value and explore the associations with various CVD events. Methods We trained a DLM with 451,950 12-lead resting ECGs obtained from 210,552 patients, for whom 23,592 events occurred. The internal validation set included 27,808 patients with one ECG for each patient. The external validations were performed in a community hospital with 33,047 patients and two transnational data sets with 233,647 and 1631 ECGs. We distinguished the cause of mortality and additionally investigated CVD-related outcomes, including new-onset acute myocardial infarction (AMI), stroke (STK), and heart failure (HF). Results The DLM achieved C-indices of 0.858/0.836 in internal/external validation sets by using ECG over a 10-year period. The high-mortality-risk group identified by the proposed DLM presented a hazard ratio (HR) of 14.16 (95% confidence interval (CI): 11.33–17.70) compared to the low-risk group in the internal validation and presented a higher risk of cardiovascular (CV) mortality (HR: 18.50, 95% CI: 9.82–34.84), non-CV mortality (HR: 13.68, 95% CI: 10.76–17.38), AMI (HR: 4.01, 95% CI: 2.24–7.17), STK (HR: 2.15, 95% CI: 1.70–2.72), and HF (HR: 6.66, 95% CI: 4.54–9.77), which was consistent in an independent community hospital. The transnational validation also revealed HRs of 4.91 (95% CI: 2.63–9.16) and 2.29 (95% CI: 2.15–2.44) for all-cause mortality in the SaMi-Trop and Clinical Outcomes in Digital Electrocardiography 15% (CODE15) cohorts. Conclusions The mortality risk by AI-enabled ECG may be applied in passive electronic-health-record-based CVD risk screening, which may identify more asymptomatic and unaware high-risk patients.",
+  "authors": "Dung-Jang Tsai, Yu-Sheng Lou, Chin Lin, Wen-Hui Fang, Chia-Cheng Lee, C. Ho, Chih-Hung Wang, Chin Lin",
+  "venue": "Digital Health",
+  "year": 2023,
+  "citations": 24,
+  "found_by": [
+   "s2kw:electrocardiogram deep learnin"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:37448781"
+   ],
+   "pmcid": "PMC10336769"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "45万ECG深度学习生存模型，大规模队列，契合ECG AI方向",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "21万人ECG生存深度学习预测CVD，大样本队列有传播价值",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "深度学习生存模型基于12导联ECG预测死亡风险",
+  "data": "两家医院291778患者；外部CODE15(233647)与SaMi-Trop(1631)",
+  "scenario": "ECG死亡风险用于CVD被动风险分层",
+  "benchmark": "对比ECG年龄及1年死亡率模型风险评分",
+  "results": "开发集451950份ECG；调优89302份；内部验证27808人；外部验证33047人；国际验证CODE15与SaMi-Trop",
+  "availability": "",
+  "limitations": "回顾性设计；跨种族/地区外推性需进一步验证",
+  "summary": "该研究探索基于深度学习的ECG死亡风险作为CVD综合风险分层指标，假设其优于ECG年龄。研究使用两家医院291778名患者数据训练生存深度学习模型，并在内部、外部及国际队列(CODE15、SaMi-Trop)验证。研究还比较了生存模型与1年死亡率模型风险评分的性能。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

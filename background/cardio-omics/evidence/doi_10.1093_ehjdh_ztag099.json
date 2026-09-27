@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/ehjdh/ztag099",
+  "title": "Deep learning analysis of single-lead electrocardiograms enables pragmatic heart failure risk assessment in the general population",
+  "url": "https://doi.org/10.1093/ehjdh/ztag099",
+  "abstract": "Abstract Aims Effective heart failure (HF) prevention requires early identification of high-risk individuals, yet population-wide stratification remains difficult. We evaluated whether deep learning using single-lead (lead I) electrocardiograms (ECGs), obtainable from medical systems and wearables, enables population-scale risk assessment. We developed AI-HF to estimate incident clinical HF risk using UK Biobank (UKB) data, validating in the prospective SHIP-START and SHIP-TREND cohorts. Methods and results The analysis included 31 740 UKB participants (median age 64, 5.2 year follow-up, 243 events), 3025 SHIP-START participants (age 50, 15 year follow-up, 166 events), and 1342 SHIP-TREND participants (age 51, 9 year follow-up, 84 events). Participants with prevalent HF were excluded. Performance was evaluated at a harmonized 5-year prediction horizon. C-indices for incident clinical HF were 0.693 [95% confidence interval (CI) 0.654–0.732] in UKB, 0.715 (0.652–0.777) in SHIP-START, and 0.791 (0.749–0.833) in SHIP-TREND. Hazard ratios per standard deviation increase in AI-HF output were 1.67 (1.56–1.79), 1.43 (1.25–1.65), and 1.46 (1.34–1.59), respectively (all P < 0.001). Adding biometric variables improved discrimination modestly (C-indices: 0.714, 0.718, and 0.77). Conclusion Across cohorts, AI-HF identified individuals at elevated 5-year incident clinical HF risk using single-lead ECGs. Given the ubiquity of wearables, this method may enable population-scale assessment to support targeted prevention and early intervention.",
+  "authors": "M. Neyazi, Jan P. Bremer, J. Brederecke, M. Knorr, Ferdinand Seum, Carla Reinbold, Stefan Gross, D. Csengeri",
+  "venue": "European Heart Journal - Digital Health",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1093/eurheartj/ehae914"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42396383"
+   ],
+   "pmcid": "PMC13326632"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB单导联ECG深度学习预测心衰，外部队列验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB+SHIP单导联ECG深度学习预测心衰，可穿戴人群筛查价值高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "单导联ECG深度学习模型AI-HF",
+  "data": "UKB训练，SHIP-START(4308)与SHIP-TREND(4420)外部验证",
+  "scenario": "一般人群心衰风险筛查",
+  "benchmark": "传统心衰风险预测模型",
+  "results": "AI-HF模型可预测新发临床心衰，加入生物特征和生活方式参数可能改善区分度，具体数值未在摘要给出",
+  "availability": "",
+  "limitations": "无法区分基于射血分数的心衰表型；缺乏超声心动图",
+  "summary": "研究探索用单导联ECG深度学习模型在一般人群中进行心衰风险筛查。从UKB多导联ECG提取I导联训练AI-HF模型，并在SHIP两个外部队列验证。发现单导联ECG可实现务实的心衰风险预测，加入生物特征或生活方式参数可能进一步提升。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.bioactmat.2025.12.030",
+  "title": "Artificial Intelligence Virtual Organoids (AIVOs).",
+  "url": "https://doi.org/10.1016/j.bioactmat.2025.12.030",
+  "abstract": "Organoid platforms have reshaped in vitro human biology yet remain constrained by batch variability, sparse longitudinal readouts and barriers to scale. This review introduces Artificial Intelligence Virtual Organoids (AIVOs), also termed silicon organoids: organoid-scale digital twins instantiated in the computational space, with virtual cells-and, where appropriate, virtual organoids-serving as the minimal executable units. AIVOs fuse multimodal and longitudinal measurements into universal state representations and use virtual instruments constrained by biophysical priors to emulate assays and perturbations, while hybrid mechanistic modules (agent-based, continuum, finite-element) capture cell-cell, cell-matrix and transport dynamics. The article defines conceptual boundaries, formalizes a data-model-interaction architecture and construction strategies, and synthesizes evaluation and standardization practices. Applications span drug screening and dosing design, disease subtyping and resistance mapping, integration with organoid-on-chip systems and clinical decision support. Principal challenges include the acquisition and harmonization of high-quality longitudinal data, scalable computation and model reduction, interpretability and causal reasoning, and governance addressing privacy, safety and fairness. Virtual organoids ultimately provide a silicon-grounded, transparent and reproducible bridge between physical organoids and clinical practice, enabling high-throughput in silico experiments and active experiment design without added experimental burden and accelerating precise therapy, mechanism discovery and regulatory translation.",
+  "authors": "Bai L, Su J.",
+  "venue": "Bioactive materials",
+  "year": 2025,
+  "citations": 16,
+  "found_by": [
+   "eupmc:organoid image-based phenotypi"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12796111",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Su J",
+   "last_affil": "Institute of Translational Medicine, Shanghai University, Shanghai, 200444, China."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "虚拟类器官数字孪生框架，契合虚拟响应建模方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "虚拟类器官数字孪生综述，方向核心概念必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述提出AI虚拟类器官框架",
+  "data": "多模态组学、高内涵成像、空间 profiling 等文献综合",
+  "scenario": "类器官数字孪生与药物筛选",
+  "benchmark": "传统类器官、AIVC、器官数字孪生",
+  "results": "提出数据层-模型层-交互层框架；虚拟干细胞、功能细胞、肿瘤细胞作为可复用基元",
+  "availability": "",
+  "limitations": "类器官依赖Matrigel、批次差异大、手动操作、终点测量、伦理成本与可扩展性限制",
+  "summary": "综述提出人工智慧虚拟类器官（AIVOs）框架，将虚拟细胞扩展为组织尺度数字模型。以数据层-模型层-交互层为主线，整合多模态数据、计算模型并与物理类器官和临床决策闭环耦合。指出虚拟干细胞、功能细胞和肿瘤细胞可作为可复用基元，用于连接单细胞表征与类器官乃至患者尺度模拟。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

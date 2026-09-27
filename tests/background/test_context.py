@@ -46,3 +46,25 @@ def test_background_slugs_all(monkeypatch, tmp_path):
     monkeypatch.setattr(spec_mod, "BASE", tmp_path)
     assert run_mod.background_slugs("all") == ["a-topic", "b-topic"]
     assert run_mod.background_slugs("a-topic") == ["a-topic"]
+
+
+def test_annotate_picks_topic_when_domain_has_several(spec, topic_dir, tmp_path):
+    import shutil
+    o = Outline.from_spec(spec); o.attach("2.1", ["doi:10.1000/paper1"]); spec.outline_path.write_text(o.to_markdown(), encoding="utf-8")
+    EvidenceStore(spec.evidence_dir, spec.rejected_path).add(Evidence(candidate=make_cand(1), panel=[]))
+    other = topic_dir.parent / "cardio"
+    shutil.copytree(topic_dir, other)
+    y = (other / "topic.yaml").read_text(encoding="utf-8").replace("name: 人群健康与多组学 AI", "name: 心血管方向")
+    y = y.replace("radar_domain: population_omics_ai", "radar_domain: [cardio_omics, population_omics_ai]")
+    (other / "topic.yaml").write_text(y, encoding="utf-8")
+
+    class L:
+        def __init__(self): self.calls = []
+        def chat(self, prompt, **kw):
+            self.calls.append(prompt)
+            return json.dumps([{"id": 0, "topic": "心血管方向", "section": "2.2 多组学与遗传整合", "delta": "新蛋白组 CVD"}])
+    llm = L()
+    items = [Item(id="a", source="s", domain="population_omics_ai", title="Proteomics CAD", url="u", score=7.0)]
+    assert annotate(items, {}, llm=llm, base=topic_dir.parent) == 1
+    assert items[0].extra["bg"].startswith("心血管方向 › 2.2") and '"topic"' in llm.calls[0]
+    assert len(llm.calls) == 1  # cardio_omics 域无条目，不调用

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.isci.2026.115827",
+  "title": "Application of spatial transcriptomics across organoids for a high-resolution, spatial whole-transcriptome benchmarking dataset",
+  "url": "https://doi.org/10.1016/j.isci.2026.115827",
+  "abstract": "Summary Stem cell-derived organoids hold promise to model tissue-specific diseases. To enable this, it is crucial to assess how transcriptional signatures, cellular organization, and composition of organoids compare to in vivo counterparts. However, spatial transcriptomics has been challenging to apply to organoids to elucidate regional molecular identity. This study presents the first systematic profiling of multiple stem cell-derived organoid models (brain, heart muscle, heart valve, kidney, lung, cartilage, and hematopoietic) with stereo-seq, a full transcriptome, spatial assay using on-chip in situ RNA capture. It describes assay optimization for characterization, use of multiple organoid samples on a single chip, assesses limitations in RNA capture efficiency compared to reference tissues. Furthermore, it introduces a bespoke analysis method that partitions samples into regions for characterization. These findings inform future works to characterize organoids using spatial transcriptomics, providing insights into optimizing RNA capture of multiple organoids across a chip and regional analysis.",
+  "authors": "M. Nucera, N. Charitakis, Ryan F. Leung, Anna L. Leichter, N. Tuano, M. Walkiewicz, V. Sawant, L. Rowley",
+  "venue": "iScience",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2kw:organoid spatial transcriptomi"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42164865"
+   ],
+   "pmcid": "PMC13186086"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多器官类器官空间转录组基准数据集，公开可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多器官类器官空间转录组基准数据集，资源价值高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Stereo-seq多类器官空间转录组基准",
+  "data": "8种人源类器官，10张芯片，含参考组织",
+  "scenario": "类器官空间转录组比较",
+  "benchmark": "E13.5小鼠头与21 PCW小鼠心脏组织",
+  "results": "优化poly-L-赖氨酸包被与通透，评估UMI/基因捕获，保留5种类器官分析，4种用于区域分析",
+  "availability": "",
+  "limitations": "造血与悬浮肾类器官转录扩散，单细胞注释困难",
+  "summary": "该研究用Stereo-seq系统分析多种人源类器官空间全转录组。作者优化芯片包被与组织通透，将同类不同条件类器官共置单芯片并与体内参考组织比较。结果显示可区分类器官转录特征，并通过区域分析揭示空间特异表达模式。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41591-023-02429-x",
+  "title": "A multi-ancestry polygenic risk score improves risk prediction for coronary artery disease",
+  "url": "https://doi.org/10.1038/s41591-023-02429-x",
+  "abstract": "A polygenic risk score for coronary artery disease developed using data from individuals of five different ancestries has increased accuracy across diverse populations. Identification of individuals at highest risk of coronary artery disease (CAD)—ideally before onset—remains an important public health need. Prior studies have developed genome-wide polygenic scores to enable risk stratification, reflecting the substantial inherited component to CAD risk. Here we develop a new and significantly improved polygenic score for CAD, termed GPS_Mult, that incorporates genome-wide association data across five ancestries for CAD (>269,000 cases and >1,178,000 controls) and ten CAD risk factors. GPS_Mult strongly associated with prevalent CAD (odds ratio per standard deviation 2.14, 95% confidence interval 2.10–2.19, P  < 0.001) in UK Biobank participants of European ancestry, identifying 20.0% of the population with 3-fold increased risk and conversely 13.9% with 3-fold decreased risk as compared with those in the middle quintile. GPS_Mult was also associated with incident CAD events (hazard ratio per standard deviation 1.73, 95% confidence interval 1.70–1.76, P  < 0.001), identifying 3% of healthy individuals with risk of future CAD events equivalent to those with existing disease and significantly improving risk discrimination and reclassification. Across multiethnic, external validation datasets inclusive of 33,096, 124,467, 16,433 and 16,874 participants of African, European, Hispanic and South Asian ancestry, respectively, GPS_Mult demonstrated increased strength of associations across all ancestries and outperformed all available previously published CAD polygenic scores. These data contribute a new GPS_Mult for CAD to the field and provide a generalizable framework for how large-scale integration of genetic association data for CAD and related traits from diverse populations can meaningfully improve polygenic risk prediction.",
+  "authors": "A. Patel, Min-Xian Wang, Y. Ruan, S. Koyama, S. Clarke, Xiong Yang, C. Tcheandjieu, Saaket Agrawal",
+  "venue": "Nature Medicine",
+  "year": 2023,
+  "citations": 265,
+  "found_by": [
+   "s2kw:polygenic risk score coronary "
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:37414900"
+   ],
+   "pmcid": "PMC10353935"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多祖先PRS显著提升CAD预测，跨人群校准，方法新意强",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Medicine多祖先PRS显著提升CAD跨人群预测，高被引转折点",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多祖先GWAS汇总统计+stepAIC+logistic加权构建GPS Mult",
+  "data": "269,000 CAD病例、1,178,000对照；相关性状>200万人；UKB训练116,649人，验证325,991人",
+  "scenario": "冠脉疾病遗传风险预测",
+  "benchmark": "既往单祖先多基因评分及临床风险估计器",
+  "results": "整合多祖先与相关性状信息，提升CAD风险预测，尤其在非欧洲祖先和年轻人群中表现更优",
+  "availability": "",
+  "limitations": "非欧洲祖先预测性能仍较低；对 incident disease 预测较弱；遗传与临床风险整合不足",
+  "summary": "研究开发了多祖先冠脉疾病多基因风险评分GPS Mult。方法上整合269,000例CAD病例、1,178,000例对照及200万人相关性状GWAS数据，在UKB中训练并独立验证。结果显示该评分改善CAD风险预测，尤其有助于非欧洲祖先和年轻人群的早期风险识别。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

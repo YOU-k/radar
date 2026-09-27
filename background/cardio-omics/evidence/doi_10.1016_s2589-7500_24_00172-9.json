@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/s2589-7500(24)00172-9",
+  "title": "Artificial intelligence-enabled electrocardiogram for mortality and cardiovascular risk estimation: a model development and validation study.",
+  "url": "https://doi.org/10.1016/s2589-7500(24)00172-9",
+  "abstract": "Background Artificial intelligence (AI)-enabled electrocardiography (ECG) can be used to predict risk of future disease and mortality but has not yet been adopted into clinical practice. Existing model predictions do not have actionability at an individual patient level, explainability, or biological plausibi. We sought to address these limitations of previous AI-ECG approaches by developing the AI-ECG risk estimator (AIRE) platform. Methods The AIRE platform was developed in a secondary care dataset (Beth Israel Deaconess Medical Center [BIDMC]) of 1 163 401 ECGs from 189 539 patients with deep learning and a discrete-time survival model to create a patient-specific survival curve with a single ECG. Therefore, AIRE predicts not only risk of mortality, but also time-to-mortality. AIRE was validated in five diverse, transnational cohorts from the USA, Brazil, and the UK (UK Biobank [UKB]), including volunteers, primary care patients, and secondary care patients. Findings AIRE accurately predicts risk of all-cause mortality (BIDMC C-index 0·775, 95% CI 0·773-0·776; C-indices on external validation datasets 0·638-0·773), future ventricular arrhythmia (BIDMC C-index 0·760, 95% CI 0·756-0·763; UKB C-index 0·719, 95% CI 0·635-0·803), future atherosclerotic cardiovascular disease (0·696, 0·694-0·698; 0·643, 0·624-0·662), and future heart failure (0·787, 0·785-0·789; 0·768, 0·733-0·802). Through phenome-wide and genome-wide association studies, we identified candidate biological pathways for the prediction of increased risk, including changes in cardiac structure and function, and genes associated with cardiac structure, biological ageing, and metabolic syndrome. Interpretation AIRE is an actionable, explainable, and biologically plausible AI-ECG risk estimation platform that has the potential for use worldwide across a wide range of clinical contexts for short-term and long-term risk estimation. Funding British Heart Foundation, National Institute for Health and Care Research, and Medical Research Council.",
+  "authors": "Sau A, Pastika L, Sieliwonczyk E, Patlatzoglou K, Ribeiro AH, McGurk KA, Zeidaabadi B, Zhang H, Macierzanka K, Mandic D, Sabino E, Giatti L, Barreto SM, Camelo LDV, Tzoulaki I, O'Regan DP, Peters NS, Ware JS, Ribeiro ALP, Kramer DB, Waks JW, Ng FS.",
+  "venue": "The Lancet. Digital health",
+  "year": 2024,
+  "citations": 61,
+  "found_by": [
+   "eupmc:electrocardiogram deep learnin"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "",
+   "is_oa": false,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Ng FS",
+   "last_affil": "National Heart and Lung Institute, Imperial College London, London, UK; Department of Cardiology, Imperial College Healthcare NHS Trust, London, UK; Department of Cardiology, Chelsea and Westminster Hospital NHS Foundation Trust, London, UK. Electronic address: f.ng@imperial.ac.uk."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI-ECG风险估计平台，大规模验证且具可解释性",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Lancet Digital Health AI-ECG风险估计平台，大规模验证可解释",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度学习+离散时间生存模型构建AI-ECG风险估计平台AIRE",
+  "data": "BIDMC 1,163,401份ECG、189,539例患者；外部验证5个跨国队列含UKB",
+  "scenario": "ECG预测死亡与心血管风险",
+  "benchmark": "现有AI-ECG模型及多队列外部验证",
+  "results": "全因死亡BIDMC C-index 0.775，外部0.638-0.773；室性心律失常0.760/0.719；ASCVD 0.696/0.643；心衰0.787/0.768",
+  "availability": "",
+  "limitations": "现有模型缺乏个体可操作性、可解释性和生物学合理性；需进一步临床落地验证",
+  "summary": "研究开发AIRE平台，用深度学习与离散时间生存模型从单份ECG预测死亡风险和生存曲线。在BIDMC大规模数据训练，并在美国、巴西、英国五个队列验证。结果显示AIRE可准确预测全因死亡、室性心律失常、ASCVD和心衰风险。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

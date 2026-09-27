@@ -6,6 +6,7 @@ from pathlib import Path
 
 from ..config import ROOT, load_sources
 from ..schema import Item
+from .enrich import venue_line
 from .resources import is_resource
 
 MIN_SCORE = float(os.environ.get("DIGEST_MIN_SCORE", "6"))  # 低于此分不进 digest：领域噪音多，只呈现高价值条目
@@ -41,9 +42,12 @@ def write_digest(items: list[Item], day: date) -> Path:
             reason = f" — {it.reason_zh}" if it.reason_zh else ""
             tag = "〔资源〕" if is_resource(it) else ""
             lines.append(f"- **[{it.title}]({it.url})** `{it.score:.1f}`{tag}{reason}")
-            journal = it.extra.get("journal")
-            src = f"{journal} · {it.source}" if journal else it.source
-            lines.append(f"  <sub>{src} · {it.published} · {it.authors[:80]}</sub>")
+            if it.extra.get("venue_type") or it.extra.get("pi"):
+                lines.append(f"  <sub>{venue_line(it)} · {it.authors[:60]}</sub>")
+            else:  # 非论文（GitHub/HF/博客）或未补全
+                journal = it.extra.get("journal")
+                src = f"{journal} · {it.source}" if journal else it.source
+                lines.append(f"  <sub>{src} · {it.published} · {it.authors[:80]}</sub>")
             if it.extra.get("bg"):
                 lines.append(f"  <sub>定位：{it.extra['bg']}</sub>")
             if it.deepread:

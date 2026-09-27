@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1142/9789819824755_0045",
+  "title": "Integrating Imaging-Derived Clinical Endotypes with Plasma Proteomics and External Polygenic Risk Scores Enhances Coronary Microvascular Disease Risk Prediction",
+  "url": "https://doi.org/10.1142/9789819824755_0045",
+  "abstract": "Coronary microvascular disease (CMVD) is an underdiagnosed but significant contributor to the burden of ischemic heart disease, characterized by angina and myocardial infarction. The development of risk prediction models such as polygenic risk scores (PRS) for CMVD has been limited by a lack of large-scale genome-wide association studies (GWAS). However, there is significant overlap between CMVD and enrollment criteria for coronary artery disease (CAD) GWAS. In this study, we developed CMVD PRS models by selecting variants identified in a CMVD GWAS and applying weights from an external CAD GWAS, using CMVD-associated loci as proxies for the genetic risk. We integrated plasma proteomics, clinical measures from perfusion PET imaging, and PRS to evaluate their contributions to CMVD risk prediction in comprehensive machine and deep learning models. We then developed a novel unsupervised endotyping framework for CMVD from perfusion PET-derived myocardial blood flow data, revealing distinct patient subgroups beyond traditional case-control definitions. This imaging-based stratification substantially improved classification performance alongside plasma proteomics and PRS, achieving AUROCs between 0.65 and 0.73 per class, significantly outperforming binary classifiers and existing clinical models, highlighting the potential of this stratification approach to enable more precise and personalized diagnosis by capturing the underlying heterogeneity of CMVD. This work represents the first application of imaging-based endotyping and the integration of genetic and proteomic data for CMVD risk prediction, establishing a framework for multimodal modeling in complex diseases.",
+  "authors": "R. Venkatesh, T. Cherlin, P. Biobank, M. Ritchie, M. Guerraty, S. Verma",
+  "venue": "medRxiv",
+  "year": 2025,
+  "citations": 1,
+  "found_by": [
+   "s2kw:plasma proteomics cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:40894134"
+   ],
+   "pmcid": "PMC12952676"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "整合影像内型、蛋白组与外部PRS预测冠脉微血管病，多组学方法新",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "影像内型+蛋白组+PRS预测冠脉微血管病，多组学整合",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "影像内型分层+蛋白组+外部PRS机器学习",
+  "data": "Penn Medicine BioBank 57,170人；4,007例PET压力测试",
+  "scenario": "冠状动脉微血管病早期风险预测",
+  "benchmark": "Prescott等临床模型，AUROC 0.61–0.66",
+  "results": "提出首个无需临床输入的CMVD机器学习框架；结合影像内型分层改善分类性能",
+  "availability": "",
+  "limitations": "缺乏大规模CMVD GWAS和专用PRS；使用CAD PRS替代",
+  "summary": "研究构建整合基因组和蛋白组、无需临床输入的CMVD风险预测机器学习框架。基于Penn Medicine BioBank影像衍生内型分层，并评估外部CAD PRS的跨表型效用。结果显示内型分层可改善分类性能，并可在临床特征出现前预测风险。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

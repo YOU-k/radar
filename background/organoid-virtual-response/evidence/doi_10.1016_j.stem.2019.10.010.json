@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.stem.2019.10.010",
+  "title": "Patient-Derived Organoids Predict Chemoradiation Responses of Locally Advanced Rectal Cancer.",
+  "url": "https://doi.org/10.1016/j.stem.2019.10.010",
+  "abstract": "Accumulating evidence indicates that patient-derived organoids (PDOs) can predict drug responses in the clinic, but the ability of PDOs to predict responses to chemoradiation in cancer patients remains an open question. Here we generate a living organoid biobank from patients with locally advanced rectal cancer (LARC) treated with neoadjuvant chemoradiation (NACR) enrolled in a phase III clinical trial. Our co-clinical trial data confirm that rectal cancer organoids (RCOs) closely recapitulate the pathophysiology and genetic changes of corresponding tumors. Chemoradiation responses in patients are highly matched to RCO responses, with 84.43% accuracy, 78.01% sensitivity, and 91.97% specificity. These data imply that PDOs predict LARC patient responses in the clinic and may represent a companion diagnostic tool in rectal cancer treatment.",
+  "authors": "Ye Yao, Xiao-Ya Xu, Li-Feng Yang, Ji Zhu, J. Wan, Li-Jun Shen, F. Xia, G. Fu",
+  "venue": "Cell Stem Cell",
+  "year": 2019,
+  "citations": 630,
+  "found_by": [
+   "s2:references:doi:10.1038/s41698-021-00168-1",
+   "s2:references:doi:10.1016/j.xcrm.2024.101627"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:31761724"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "类器官药敏预测患者放化疗响应，定量支撑",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell Stem Cell里程碑，PDO预测直肠癌放化疗响应，高被引必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "直肠癌PDO预测新辅助化放疗反应",
+  "data": "局部晚期直肠癌PDO活体生物库，III期临床试验",
+  "scenario": "局部晚期直肠癌化放疗反应预测",
+  "benchmark": "与III期临床试验患者化放疗反应对比",
+  "results": "预测准确率84.43%，灵敏度78.01%，特异性91.97%",
+  "availability": "",
+  "limitations": "样本来源单一临床试验，需更多验证",
+  "summary": "从接受新辅助化放疗的局部晚期直肠癌患者中建立类器官活体生物库。共临床试验数据证实RCO重现肿瘤病理生理和遗传变化。化放疗反应与RCO反应高度匹配，准确率84.43%，可作为直肠癌治疗的伴随诊断工具。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

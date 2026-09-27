@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehad655.2920",
+  "title": "A deep-learning-based retinal cardiovascular disease biomarker and risk of stroke, myocardial infarction, atrial fibrillation, and heart failure in the UK Biobank",
+  "url": "https://doi.org/10.1093/eurheartj/ehad655.2920",
+  "abstract": "\n \n \n Retinal photographs allow a non-invasive way to see the human vasculature and provide insights into cardiovascular disease (CVD). In our previous study, we developed the Reti-CVD, a deep-learning algorithm to predict the future CVD events from retinal photographs.\n \n \n \n In this study, we extend the application of Reti-CVD by investigating the association between the Reti-CVD score and the occurrence of individual cardiovascular events, including stroke, myocardial infarction (MI), atrial fibrillation (AF), and heart failure (HF).\n \n \n \n The Reti-CVD scores were calculated and stratified into three risk groups based on optimized cut-off values from the UK Biobank. The cumulative incidence of cardiovascular events (stroke, MI, AF, and all-cause HF each) rate was evaluated across the three groups (low, moderate, and high risk) defined by the Reti-CVD score. Cox proportional hazards model was used to estimate the adjusted hazard ratios (aHRs), trends in HRs, and respective p-values were examined by fitting a linear model for the three categories after adjustment of age, gender, diabetes, hypertension, hyperlipidemia, and smoking. C-statistics was used to assess the prognostic value of the Reti-CVD score.\n \n \n \n A total of 44,677 participants were included at baseline and tracked for up to 7 years. There were 277 (0.62%) strokes, 506 (1.13%) MIs, 1053 (2.32%) AFs, and 431 (0.94%) HFs. An increase in Reti-CVD score was significantly associated with increased risk of stroke (adjusted hazard ratio [aHR] trends, 1.40; 95% confidence interval [CI], 1.09-1.80, p=0.008), MI (aHR trends, 1.22; 95% CI, 1.01-1.08, p<0.001), and AF (aHR trends, 1.33; 95% CI, 1.17-1.52, p<0.001). However, the association of Reti-CVD score-based three-risk groups and the occurrence of HF showed a trend for increased risk without statistical significance (aHR trends, 1.17; 95% CI, 0.96-1.43, p=0.123). C statistics based on Reti-CVD alone were 0.65 (0.63-0.68) for stroke, 0.64 (0.62-0.66) for MI, 0.66 (0.65-0.67) for AF, and 0.65 (0.60-0.70) for HF.\n \n \n \n A deep-learning-based retinal CVD biomarker, the Reti-CVD has the potential to identify individuals with a risk of stroke, MI, and AF, who are likely to benefit from earlier preventative CVD interventions. For the relationship between the Reti-CVD and HF, it seems necessary to analyze by HF subtypes.\n",
+  "authors": "C. Lee, T. Rim, H. G. Kang, G. Lee, M. Yu, Y. Tham, T. Wong, C.-Y. Cheng",
+  "venue": "European Heart Journal",
+  "year": 2023,
+  "citations": 2,
+  "found_by": [
+   "s2kw:heart failure atrial fibrillat"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank大队列，视网膜深度学习标志物预测多种心血管结局，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank万人队列，视网膜AI生物标志物预测多种心血管结局，方向新颖",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Reti-CVD深度学习视网膜CVD评分",
+  "data": "UK Biobank 44,677人，随访7年",
+  "scenario": "视网膜照片预测CVD事件",
+  "benchmark": "按Reti-CVD评分低/中/高风险分层，Cox模型",
+  "results": "卒中277例(0.62%)、MI 506例(1.13%)、AF 1053例(2.32%)、HF 431例(0.94%)；评分升高与事件风险显著增加相关",
+  "availability": "",
+  "limitations": "仅UK Biobank人群，随访7年，事件数相对有限",
+  "summary": "本研究扩展Reti-CVD深度学习算法，评估其评分与卒中、心梗、房颤和心衰的关联。基于UK Biobank 44,677名参与者，将Reti-CVD评分分为低、中、高三组，用Cox比例风险模型估计校正风险比并用C统计量评估预后价值。结果显示Reti-CVD评分升高与四类心血管事件风险显著增加相关，提示视网膜深度学习生物标志物可用于个体心血管事件风险分层。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 5,
+ "added_on": "2026-09-27"
+}

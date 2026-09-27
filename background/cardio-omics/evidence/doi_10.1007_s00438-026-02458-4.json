@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1007/s00438-026-02458-4",
+  "title": "Cross-population proteome-wide mendelian randomization study identifies likely causal proteins for cardiovascular diseases",
+  "url": "https://doi.org/10.1007/s00438-026-02458-4",
+  "abstract": "Blood proteins may play causal roles in cardiovascular diseases (CVDs) such as heart failure (HF) and peripheral artery disease (PAD). Proteome-wide Mendelian randomization (MR) has been widely used to prioritize drug targets for CVD in European populations, but its application to non-European populations remains limited. We conducted a proteome-wide MR analysis to evaluate the potential causal effects of 2,922 plasma proteins on five CVDs—atrial fibrillation (AF), coronary artery disease (CAD), HF, ischemic heart disease (IHD), and PAD. Analyses were performed across African (n = 931), East Asian (n = 262), and European (n = 10,840) populations using genetic instrument data from the UK Biobank cohort. Significant associations were further examined with genetic colocalization to strengthen causal inference. Using MR and colocalization analyses, we identified 53 significant protein–CVD associations across multi-populations, including 16 in African, six in East Asian, and 31 in European populations, respectively. Cross-population comparisons revealed four protein–CVD associations unique to African population and another four specific to East Asian population. Integration with clinical trial data prioritized 14 protein–disease pairs as promising candidates for therapeutic development or drug repurposing. Our findings highlight the value of proteome-wide MR in evaluating drug target applicability across populations. Several protein–disease associations were population-specific, emphasizing the need for inclusive genetic research to inform precision medicine in CVD prevention and treatment.",
+  "authors": "Hua Zhong, Jingjing Zhu, Shuai Liu, Hoi Tung Hilton Wong, Yi-Qiang Zhang, H. Luu, Qing Wu, Xuexia Wang",
+  "venue": "Zeitschrift für Induktive Abstammungs- und Vererbungslehre",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:Mendelian randomization proteo"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42545500"
+   ],
+   "pmcid": "PMC13433639"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨人群蛋白组MR找心血管靶点，含东亚数据，契合多组学方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨人群蛋白组MR找CVD因果靶点，东亚人群补充，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨人群蛋白组孟德尔随机化+共定位",
+  "data": "UKB-PPP 2,922蛋白；非洲、东亚、欧洲人群GWAS",
+  "scenario": "五类CVD因果蛋白与药物靶点发现",
+  "benchmark": "人群特异pQTL、跨人群一致性、共定位和临床试验证据",
+  "results": "系统评估2,922个循环蛋白对AF、CAD、HF、IHD、PAD的潜在因果作用",
+  "availability": "",
+  "limitations": "既往研究多聚焦欧洲人群；跨人群遗传结构评估仍不完整",
+  "summary": "研究开展跨非洲、东亚和欧洲人群的蛋白组范围孟德尔随机化，评估循环蛋白对五类CVD的因果效应。使用人群特异pQTL工具、跨人群一致性和异质性评估，并整合共定位、通路富集和临床试验证据。目标是提高蛋白-CVD关联的疾病特异性、生物学解释和转化相关性。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1371/journal.pone.0213653",
+  "title": "Cardiovascular disease risk prediction using automated machine learning: A prospective study of 423,604 UK Biobank participants",
+  "url": "https://doi.org/10.1371/journal.pone.0213653",
+  "abstract": "Background Identifying people at risk of cardiovascular diseases (CVD) is a cornerstone of preventative cardiology. Risk prediction models currently recommended by clinical guidelines are typically based on a limited number of predictors with sub-optimal performance across all patient groups. Data-driven techniques based on machine learning (ML) might improve the performance of risk predictions by agnostically discovering novel risk predictors and learning the complex interactions between them. We tested (1) whether ML techniques based on a state-of-the-art automated ML framework (AutoPrognosis) could improve CVD risk prediction compared to traditional approaches, and (2) whether considering non-traditional variables could increase the accuracy of CVD risk predictions. Methods and findings Using data on 423,604 participants without CVD at baseline in UK Biobank, we developed a ML-based model for predicting CVD risk based on 473 available variables. Our ML-based model was derived using AutoPrognosis, an algorithmic tool that automatically selects and tunes ensembles of ML modeling pipelines (comprising data imputation, feature processing, classification and calibration algorithms). We compared our model with a well-established risk prediction algorithm based on conventional CVD risk factors (Framingham score), a Cox proportional hazards (PH) model based on familiar risk factors (i.e, age, gender, smoking status, systolic blood pressure, history of diabetes, reception of treatments for hypertension and body mass index), and a Cox PH model based on all of the 473 available variables. Predictive performances were assessed using area under the receiver operating characteristic curve (AUC-ROC). Overall, our AutoPrognosis model improved risk prediction (AUC-ROC: 0.774, 95% CI: 0.768-0.780) compared to Framingham score (AUC-ROC: 0.724, 95% CI: 0.720-0.728, p < 0.001), Cox PH model with conventional risk factors (AUC-ROC: 0.734, 95% CI: 0.729-0.739, p < 0.001), and Cox PH model with all UK Biobank variables (AUC-ROC: 0.758, 95% CI: 0.753-0.763, p < 0.001). Out of 4,801 CVD cases recorded within 5 years of baseline, AutoPrognosis was able to correctly predict 368 more cases compared to the Framingham score. Our AutoPrognosis model included predictors that are not usually considered in existing risk prediction models, such as the individuals’ usual walking pace and their self-reported overall health rating. Furthermore, our model improved risk prediction in potentially relevant sub-populations, such as in individuals with history of diabetes. We also highlight the relative benefits accrued from including more information into a predictive model (information gain) as compared to the benefits of using more complex models (modeling gain). Conclusions Our AutoPrognosis model improves the accuracy of CVD risk prediction in the UK Biobank population. This approach performs well in traditionally poorly served patient subgroups. Additionally, AutoPrognosis uncovered novel predictors for CVD disease that may now be tested in prospective studies. We found that the “information gain” achieved by considering more risk factors in the predictive model was significantly higher than the “modeling gain” achieved by adopting complex predictive models.",
+  "authors": "Ahmed M. Alaa, T. Bolton, E. di Angelantonio, James H. F. Rudd, M. van der Schaar",
+  "venue": "PLoS ONE",
+  "year": 2019,
+  "citations": 506,
+  "found_by": [
+   "s2:references:doi:10.1136/svn-2023-002332"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:31091238"
+   ],
+   "pmcid": "PMC6519796"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 42万人AutoML风险预测，方法新意与外部验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "42万人UKB自动化ML风险预测，高被引，该方向奠基性工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "AutoPrognosis自动化机器学习风险预测",
+  "data": "UK Biobank 423,604人，473个变量，9类特征",
+  "scenario": "首发致死或非致死CVD预测",
+  "benchmark": "Framingham风险评分等传统模型",
+  "results": "在总体及糖尿病等亚组中评估ML模型预测性能；ML可自动识别复杂交互并提升风险预测表现",
+  "availability": "",
+  "limitations": "UK Biobank变量缺失严重；部分血脂数据当时未发布；模型外部验证有限",
+  "summary": "研究评估自动化机器学习能否改善心血管疾病风险预测。利用UK Biobank 423,604名无CVD参与者，采用AutoPrognosis构建模型，并与Framingham等传统算法比较。结果显示机器学习可整合大量变量和复杂交互，在总体及临床相关亚组中具有潜在预测优势。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

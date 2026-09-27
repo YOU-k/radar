@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-023-02040-5",
+  "title": "Causal identification of single-cell experimental perturbation effects with CINEMA-OT.",
+  "url": "https://doi.org/10.1038/s41592-023-02040-5",
+  "abstract": "Recent advancements in single-cell technologies allow characterization of experimental perturbations at single-cell resolution. While methods have been developed to analyze such experiments, the application of a strict causal framework has not yet been explored for the inference of treatment effects at the single-cell level. Here we present a causal-inference-based approach to single-cell perturbation analysis, termed CINEMA-OT (causal independent effect module attribution + optimal transport). CINEMA-OT separates confounding sources of variation from perturbation effects to obtain an optimal transport matching that reflects counterfactual cell pairs. These cell pairs represent causal perturbation responses permitting a number of novel analyses, such as individual treatment-effect analysis, response clustering, attribution analysis, and synergy analysis. We benchmark CINEMA-OT on an array of treatment-effect estimation tasks for several simulated and real datasets and show that it outperforms other single-cell perturbation analysis methods. Finally, we perform CINEMA-OT analysis of two newly generated datasets: (1) rhinovirus and cigarette-smoke-exposed airway organoids, and (2) combinatorial cytokine stimulation of immune cells. In these experiments, CINEMA-OT reveals potential mechanisms by which cigarette-smoke exposure dulls the airway antiviral response, as well as the logic that governs chemokine secretion and peripheral immune cell recruitment.",
+  "authors": "Dong M, Wang B, Wei J, de O Fonseca AH, Perry CJ, Frey A, Ouerghi F, Foxman EF, Ishizuka JJ, Dhodapkar RM, van Dijk D.",
+  "venue": "Nature methods",
+  "year": 2023,
+  "citations": 87,
+  "found_by": [
+   "eupmc:foundation model organoid sing"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC10630139",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "van Dijk D",
+   "last_affil": "Interdepartmental Program in Computational Biology and Bioinformatics, Yale University, New Haven, CT, USA. david.vandijk@yale.edu."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞扰动因果建模方法，可迁移至类器官扰动",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nat Methods单细胞扰动因果推断通用方法，影响力高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CINEMA-OT因果扰动效应估计",
+  "data": "模拟与真实scRNA-seq，气道类器官与PBMC扰动数据",
+  "scenario": "单细胞扰动因果分析",
+  "benchmark": "现有单细胞扰动分析方法",
+  "results": "通过ICA与加权最优传输实现因果细胞配对，支持个体治疗效应、协同与扰动归因分析",
+  "availability": "",
+  "limitations": "依赖独立性与线性假设，潜在混杂因素可能影响估计",
+  "summary": "研究提出CINEMA-OT用于单细胞水平因果扰动效应识别。方法用独立成分分析与功能依赖统计分离混杂与处理相关因素，再通过加权最优传输进行因果细胞配对。在模拟和真实数据中优于现有方法，并用于气道类器官病毒感染/烟雾及PBMC细胞因子组合刺激分析。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

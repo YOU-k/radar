@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-026-72436-2",
+  "title": "A self-supervised electrocardiogram foundation model for empowering cardiovascular disease prediction and genetic factor discovery",
+  "url": "https://doi.org/10.1038/s41467-026-72436-2",
+  "abstract": "Electrocardiogram (ECG) has been widely used in the diagnosis of cardiovascular disease (CVD). Current deep learning methods for CVD prediction using ECG often lack generalizability and interpretability, resulting in limited performance. Here, we have developed a self-supervised Electrocardiogram Large-scale Foundation Model (ECG-LFM) through pre-training over ten million 12-lead ECGs from multiple ECG datasets. To enhance ECG representation, ECG-LFM integrates contrastive learning with masked language modeling in a self-supervised manner, enabling the model to capture both global contextual information and fine-grained patterns within ECG signals. It was fine-tuned to predict eight types of CVDs and achieved an average area under the receiver operating characteristic curve (AUROC) of 0.930 from multiple datasets, which demonstrates improved performance compared to existing methods. The important ECG-LFM derived features (EDFs) are able to represent known CVD biomarkers, indicating the high interpretability of ECG-LFM. Applications of the EDFs in genome-wide association study identified 24 significant single nucleotide polymorphisms (SNPs) (P-value < 5×10-8, LD r2 < 0.01) associated with ECG, including 8 novel findings. The genetic causal effects of EDFs on the CVDs were evaluated by Mendelian randomization, indicating 2 CVDs and 4 EDFs having causal relationships. Overall, ECG-LFM provides accurate prediction for CVDs and novel genetic insights for ECG. This study presents ECG-LFM, an AI model trained on more than 10 million electrocardiograms to predict cardiovascular diseases and uncover novel genetic markers for heart health.",
+  "authors": "Siying Lin, Zhaoqi Li, Qifan Wu, Yifeng Chen, Yue-Dong Yang, Hui-Ying Zhao",
+  "venue": "Nature Communications",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "s2kw:ECG deep learning foundation m"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42045241"
+   ],
+   "pmcid": "PMC13324761"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "千万级ECG自监督基础模型，跨队列预测并关联遗传因素",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "千万级ECG基础模型，Nat Commun，含遗传因子发现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "自监督ECG基础模型ECG-LFM，多任务对比+掩码语言建模",
+  "data": "1157万份12导联ECG，197.9万人（HEEDB+MIMIC-IV-ECG）",
+  "scenario": "心血管病预测与遗传因子发现",
+  "benchmark": "对比SOTA方法；外部测试PTB-XL、Chapman、CODE-15、CPSC-2018、UK Biobank",
+  "results": "平均AUROC 0.930；PheWAS关联167个心功能因子；GWAS发现11个位点12个SNP，1024个EDF共8个新SNP；MR示4个EDF与2种CVD有因果",
+  "availability": "",
+  "limitations": "预测可解释性仍有限；基因-ECG关系挖掘尚待深入",
+  "summary": "研究提出自监督ECG大规模基础模型ECG-LFM，用于心血管病预测与遗传因子发现。方法上用超千万份12导联ECG预训练，结合对比损失、掩码语言建模与多段对比学习提取表征。结果显示其在多数据集上平均AUROC达0.930，并通过PheWAS、GWAS与孟德尔随机化揭示ECG特征的表型与遗传关联。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 4,
+ "added_on": "2026-09-27"
+}

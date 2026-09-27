@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circ.152.suppl_3.4372183",
+  "title": "Abstract 4372183: Cross-species single-cell reconstruction of atherosclerosis reveals predictive monocytes for acute coronary events",
+  "url": "https://doi.org/10.1161/circ.152.suppl_3.4372183",
+  "abstract": "\n Background:\n Vulnerable plaques are the immediate cause of acute coronary syndromes such as acute myocardial infarction (AMI). However, current preventive strategies including lipid-lowering and imaging-based approaches focus on overall cardiovascular risk and lack precision in identifying high-risk plaques before clinical events. One major limitation is the insufficient understanding of cell-type heterogeneity and dynamic changes across the full course of atherosclerosis.\n \n \n Methods and Results:\n We established a cross-species, multi-stage framework integrating human single-cell data from advanced stable and unstable plaques with multi-timepoint mouse models. This allowed reconstruction of a continuous trajectory of atherosclerosis and led to identification of a monocyte-derived population, Plaque Instability Monocytes (PIMs), enriched in unstable lesions and characterized by inflammatory and matrix-remodeling programs.\n \n To validate their relevance, we profiled additional lesions across multiple arteries and disease states, including in-stent restenosis. PIM signatures were consistently recovered, and spatial transcriptomics revealed preferential localization to fibrous caps, confirmed by confocal imaging. Circulating PIM-like cells were also elevated in patients with unstable plaques.\n From the PIM transcriptome, we derived a 362-gene blood signature, and used interpretable deep learning to identify a stable 20-gene panel distinguishing unstable from stable cases (AUC = 0.907). A composite risk score built using L1-logistic regression was validated in an independent cohort (n = 338, AUC = 0.92). Cytokine genes within the panel showed elevated plasma levels in AMI patients (n = 26), and UK Biobank proteomics (n = 3,798) confirmed upregulation of key panel proteins in myocardial infarction.\n \n Conclusions:\n By bridging single-cell discoveries with peripheral biomarker modeling and clinical validation, this study identifies a conserved monocyte subset associated with plaque vulnerability and provides a practical tool for early detection and risk stratification in coronary artery disease.\n",
+  "authors": "Jin-Meng Jia, Xuegong Zhang",
+  "venue": "Circulation",
+  "year": 2025,
+  "citations": 0,
+  "found_by": [
+   "s2kw:cross-species single-cell foun"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种单细胞重建动脉粥样硬化，预测冠脉事件",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨物种单细胞重建动脉粥样硬化，预测冠脉事件，契合方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨物种单细胞轨迹重建与深度学习建模",
+  "data": "人晚期稳定/不稳定斑块单细胞数据；多时间点小鼠模型",
+  "scenario": "动脉粥样硬化斑块不稳定与急性冠脉事件预测",
+  "benchmark": "稳定与不稳定斑块病例对比",
+  "results": "鉴定PIM单核细胞群；构建362基因血液特征；20基因panel区分不稳定与稳定病例，AUC",
+  "availability": "",
+  "limitations": "缺乏全文；AUC数值不完整；临床验证规模未明",
+  "summary": "研究建立跨物种多阶段框架以重建动脉粥样硬化连续轨迹。整合人晚期稳定与不稳定斑块单细胞数据及多时间点小鼠模型，鉴定富集于不稳定病变的PIM单核细胞群。进一步从PIM转录组衍生362基因血液特征，并用可解释深度学习筛选20基因panel区分不稳定与稳定病例。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

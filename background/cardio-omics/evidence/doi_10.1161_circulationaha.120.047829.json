@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circulationaha.120.047829",
+  "title": "Deep Neural Networks Can Predict New-Onset Atrial Fibrillation From the 12-Lead ECG and Help Identify Those at Risk of Atrial Fibrillation–Related Stroke",
+  "url": "https://doi.org/10.1161/CIRCULATIONAHA.120.047829",
+  "abstract": "Supplemental Digital Content is available in the text. Background: Atrial fibrillation (AF) is associated with substantial morbidity, especially when it goes undetected. If new-onset AF could be predicted, targeted screening could be used to find it early. We hypothesized that a deep neural network could predict new-onset AF from the resting 12-lead ECG and that this prediction may help identify those at risk of AF-related stroke. Methods: We used 1.6 M resting 12-lead digital ECG traces from 430 000 patients collected from 1984 to 2019. Deep neural networks were trained to predict new-onset AF (within 1 year) in patients without a history of AF. Performance was evaluated using areas under the receiver operating characteristic curve and precision-recall curve. We performed an incidence-free survival analysis for a period of 30 years following the ECG stratified by model predictions. To simulate real-world deployment, we trained a separate model using all ECGs before 2010 and evaluated model performance on a test set of ECGs from 2010 through 2014 that were linked to our stroke registry. We identified the patients at risk for AF-related stroke among those predicted to be high risk for AF by the model at different prediction thresholds. Results: The area under the receiver operating characteristic curve and area under the precision-recall curve were 0.85 and 0.22, respectively, for predicting new-onset AF within 1 year of an ECG. The hazard ratio for the predicted high- versus low-risk groups over a 30-year span was 7.2 (95% CI, 6.9–7.6). In a simulated deployment scenario, the model predicted new-onset AF at 1 year with a sensitivity of 69% and specificity of 81%. The number needed to screen to find 1 new case of AF was 9. This model predicted patients at high risk for new-onset AF in 62% of all patients who experienced an AF-related stroke within 3 years of the index ECG. Conclusions: Deep learning can predict new-onset AF from the 12-lead ECG in patients with no previous history of AF. This prediction may help identify patients at risk for AF-related strokes.",
+  "authors": "S. Raghunath, John M. Pfeifer, Alvaro E Ulloa-Cerna, Arun Nemani, T. Carbonati, Linyuan Jing, D. vanMaanen, Dustin N. Hartzel",
+  "venue": "Circulation",
+  "year": 2021,
+  "citations": 248,
+  "found_by": [
+   "s2:references:doi:10.1161/circulationaha.121.057480"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:33588584"
+   ],
+   "pmcid": "PMC7996054"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "43万例ECG深度网络预测新发房颤及卒中风险，经典可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "43万例ECG深度网络预测新发房颤及卒中，Circulation高引",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度神经网络预测新发房颤",
+  "data": "Geisinger 280万ECG，保留160万ECG/43.1万人",
+  "scenario": "新发房颤及房颤相关卒中风险",
+  "benchmark": "无明确对比模型；模拟监测部署场景",
+  "results": "近2/3无房颤史房颤相关卒中患者卒中前被预测高风险",
+  "availability": "数据合理请求可获；代码不公开",
+  "limitations": "回顾性；单中心；房颤表型依赖电子病历",
+  "summary": "研究训练深度神经网络利用12导联ECG预测无房颤史患者的新发房颤。从Geisinger提取280万份ECG，筛选160万份用于建模，并回顾性模拟部署场景以识别后续发生房颤相关卒中的患者。结果显示，在无房颤史且发生房颤相关卒中的患者中，近三分之二在卒中前被模型预测为高风险。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

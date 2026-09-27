@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-022-01284-9",
+  "title": "Cross-ancestry genome-wide analysis of atrial fibrillation unveils disease biology and enables cardioembolic risk prediction",
+  "url": "https://doi.org/10.1038/s41588-022-01284-9",
+  "abstract": "Genome-wide analyses in BioBank Japan and populations of European ancestry identify new risk loci for atrial fibrillation. A polygenic risk score constructed from the cross-ancestry meta-analysis is associated with increased risk of long-term cardiovascular mortality. Atrial fibrillation (AF) is a common cardiac arrhythmia resulting in increased risk of stroke. Despite highly heritable etiology, our understanding of the genetic architecture of AF remains incomplete. Here we performed a genome-wide association study in the Japanese population comprising 9,826 cases among 150,272 individuals and identified East Asian-specific rare variants associated with AF. A cross-ancestry meta-analysis of >1 million individuals, including 77,690 cases, identified 35 new susceptibility loci. Transcriptome-wide association analysis identified IL6R as a putative causal gene, suggesting the involvement of immune responses. Integrative analysis with ChIP-seq data and functional assessment using human induced pluripotent stem cell-derived cardiomyocytes demonstrated ERRg as having a key role in the transcriptional regulation of AF-associated genes. A polygenic risk score derived from the cross-ancestry meta-analysis predicted increased risks of cardiovascular and stroke mortalities and segregated individuals with cardioembolic stroke in undiagnosed AF patients. Our results provide new biological and clinical insights into AF genetics and suggest their potential for clinical applications.",
+  "authors": "K. Miyazawa, K. Ito, Masamichi Ito, Zhao-Nan Zou, Masayuki Kubota, S. Nomura, Hiroshi Matsunaga, S. Koyama",
+  "venue": "Nature Genetics",
+  "year": 2023,
+  "citations": 104,
+  "found_by": [
+   "s2kw:East Asian cardiovascular poly"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:36653681"
+   ],
+   "pmcid": "PMC9925380"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨祖先GWAS房颤，PRS预测心源性风险，BioBank Japan大规模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Genetics跨祖先房颤GWAS与PRS，东亚人群机制与预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨祖先GWAS与房颤多基因风险评分",
+  "data": "日本BBJ 9,826例/140,446对照；欧洲77,690例/1,167,040对照",
+  "scenario": "房颤遗传机制与心源性栓塞风险预测",
+  "benchmark": "欧洲GWAS衍生PRS；既往AF位点",
+  "results": "日本GWAS发现31个位点，5个新位点；跨祖先共49个信号；SNP h² 6.1%，liability h² 11.7%",
+  "availability": "",
+  "limitations": "PRS跨祖先可迁移性仍有限；功能验证不足",
+  "summary": "研究开展日本房颤GWAS并与欧洲大规模GWAS进行跨祖先荟萃分析，解析房颤遗传结构。BBJ发现31个全基因组显著位点，其中5个新位点并在独立日本队列复制，条件分析后共49个独立信号。进一步构建跨祖先PRS并评估其与相关表型及长期死亡风险关联，支持房颤精准医学与心源性栓塞风险预测。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

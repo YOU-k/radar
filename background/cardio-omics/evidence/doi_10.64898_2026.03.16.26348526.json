@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.03.16.26348526",
+  "title": "CARDIAC-FM: A Multimodal Foundation Model for Cardiovascular Risk Prediction Using ECG and Cardiac MRI",
+  "url": "https://doi.org/10.64898/2026.03.16.26348526",
+  "abstract": "Atrial fibrillation and heart failure impose substantial health burdens worldwide, yet existing prediction models lack sufficient accuracy and generalizability. We developed CARDIAC-FM, a multimodal foundation model that learns joint representations of 12-lead electrocardiogram (ECG) and cardiac magnetic resonance imaging (MRI) through contrastive learning. We trained CARDIAC-FM on 57,609 paired ECG-cardiac MRI samples from UK Biobank and evaluated it in two external cohorts: the Cardiovascular Health Study (CHS) and the Multi-Ethnic Study of Atherosclerosis (MESA). CARDIAC-FM consistently outperformed unimodal models across all cohorts, and jointly incorporating ECG features with established clinical risk scores yielded additive gains in discrimination, indicating that ECG and traditional risk factors capture complementary dimensions of cardiovascular risk. The learned representations improved prediction across a range of cardiovascular outcomes with minimal task-specific fine-tuning, reflecting real-world settings where many diseases have limited positive samples and lack dedicated risk models. Although trained on paired ECG and MRI data, CARDIAC-FM generates predictions using ECG alone or ECG combined with established risk scores, enabling broad clinical deployment without MRI. These findings demonstrate the promise of multimodal pre-training for generalizable cardiovascular risk prediction.",
+  "authors": "Fumin Li, Siting Li, Yuhan Qian, Bo Chen, J. Brody, Vidhushei Yogeswaran, K. Wiggins, C. Sitlani",
+  "venue": "medRxiv",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "s2kw:ECG deep learning foundation m"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41891027"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank多模态基础模型，ECG+MRI联合，含两个外部队列验证。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "ECG+MRI多模态基础模型，UKB训练双外部验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "ECG与心脏MRI对比学习多模态基础模型",
+  "data": "UK Biobank 57,609对ECG-CMR；CHS、MESA外部",
+  "scenario": "房颤与心衰等心血管风险预测",
+  "benchmark": "单模态模型；传统临床风险评分",
+  "results": "所有队列均优于单模态；ECG联合临床评分判别力有增益",
+  "availability": "",
+  "limitations": "训练依赖配对MRI，外部队列规模与任务覆盖有限",
+  "summary": "作者开发了CARDIAC-FM，通过对比学习联合建模12导联ECG与心脏MRI表征，用于心血管风险预测。模型在UK Biobank 57,609对样本训练，并在CHS和MESA外部验证。结果显示其持续优于单模态模型，且ECG联合传统风险评分可带来额外判别增益，并可在无MRI时仅用ECG部署。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

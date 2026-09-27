@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2025.02.012",
+  "title": "Simultaneous CRISPR screening and spatial transcriptomics reveal intracellular, intercellular, and functional transcriptional circuits.",
+  "url": "https://doi.org/10.1016/j.cell.2025.02.012",
+  "abstract": "Pooled optical screens have enabled the study of cellular interactions, morphology, or dynamics at massive scale, but they have not yet leveraged the power of highly plexed single-cell resolved transcriptomic readouts to inform molecular pathways. Here, we present a combination of imaging spatial transcriptomics with parallel optical detection of in situ amplified guide RNAs (Perturb-FISH). Perturb-FISH recovers intracellular effects that are consistent with single-cell RNA-sequencing-based readouts of perturbation effects (Perturb-seq) in a screen of lipopolysaccharide response in cultured monocytes, and it uncovers intercellular and density-dependent regulation of the innate immune response. Similarly, in three-dimensional xenograft models, Perturb-FISH identifies tumor-immune interactions altered by genetic knockout. When paired with a functional readout in a separate screen of autism spectrum disorder risk genes in human-induced pluripotent stem cell (hIPSC) astrocytes, Perturb-FISH shows common calcium activity phenotypes and their associated genetic interactions and dysregulated molecular pathways. Perturb-FISH is thus a general method for studying the genetic and molecular associations of spatial and functional biology at single-cell resolution.",
+  "authors": "Binan L, Jiang A, Danquah SA, Valakh V, Simonton B, Bezney J, Manguso RT, Yates KB, Nehme R, Cleary B, Farhi SL.",
+  "venue": "Cell",
+  "year": 2025,
+  "citations": 108,
+  "found_by": [
+   "eupmc:in vivo Perturb-seq mouse"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12135205",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Farhi SL",
+   "last_affil": "Spatial Technology Platform, Broad Institute of MIT and Harvard, Cambridge, MA 02142, USA. Electronic address: sfarhi@broadinstitute.org."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "CRISPR筛选结合空间转录组，含建模读出，契合扰动响应方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell上CRISPR筛选结合空间转录组，扰动建模转折点",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Perturb-FISH：MERFISH结合gRNA原位扩增",
+  "data": "THP1巨噬细胞、hIPSC星形胶质细胞、肿瘤异种移植；空间转录组",
+  "scenario": "CRISPR筛选与空间转录组联合分析",
+  "benchmark": "Perturb-seq及传统MERFISH/Visium",
+  "results": "验证KO效应与Perturb-seq一致；揭示细胞密度和邻居扰动影响；记录ASD风险基因KD对钙活动与表达影响",
+  "availability": "",
+  "limitations": "gRNA仅20bp难以像mRNA一样tiling；需原位扩增；3D组织应用仍有限",
+  "summary": "研究开发Perturb-FISH，将MERFISH与gRNA原位扩增结合，实现扰动与转录组的空间联合读取。在THP1巨噬细胞LPS响应体系中验证KO效应与Perturb-seq一致，并分析细胞密度和邻居扰动对基因回路的影响。进一步在ASD风险基因CRISPRi筛选中同步记录钙活动与表达，并在肿瘤异种移植3D组织中展示适用性。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

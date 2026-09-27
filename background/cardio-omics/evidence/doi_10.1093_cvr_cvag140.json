@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/cvr/cvag140",
+  "title": "Proteomic signatures as biomarkers of atherosclerosis burden.",
+  "url": "https://doi.org/10.1093/cvr/cvag140",
+  "abstract": "AIMS\nAtherosclerosis is currently evaluated by imaging, but scalable circulating biomarkers to detect its presence and quantify overall burden are lacking. We sought to define plasma proteomic signatures that reflect the systemic burden of atherosclerosis.\n\n\nMETHODS AND RESULTS\nIn UK Biobank, we trained machine-learning models on plasma proteomics in a nested, propensity-score-matched case-control sample (1,666 cases; 1,666 controls; Olink Explore 3072, 2,920 proteins) to derive four AtheroBurden signatures: one based on the entire proteome (all 2,920 proteins) and three biologically informed subsets-genetically anchored (n = 402), atherogenesis-related (n = 680), and artery-enriched (n = 248). We then computed individual-level signatures in 41,200 disease-free participants and validated their performance through 1) correlation with carotid plaque burden via ultrasound (n = 1,712); 2) prospective major adverse cardiovascular events (MACE) prediction over 13.7-year follow-up using multivariable Cox models and incremental prediction over Systematic COronary Risk Evaluation version 2 (SCORE2) (ΔC-index; net reclassification improvement [NRI]); as well as in the external Cooperative Health Research in the Region of Augsburg (KORA) S4 (n = 1,361) and Age1 (n = 796) cohorts; and 3) longitudinal trajectories analysis in 1,210 participants with three serial proteomic measurements.All four AtheroBurden signatures robustly discriminated prevalent atherosclerotic disease (ROC-AUC up to 0.91, 95% CI: 0.89-0.93) with their levels significantly increasing with the number of clinically affected vascular beds. We found significant correlations with carotid ultrasound-measured plaque burden. In prospective analysis, each signature exhibited strong associations with incident MACE (HR per SD increase in whole proteome signature: 1.75, 95% CI: 1.68-1.83; HR for Q4 vs. Q1: 3.18, 95% CI: 2.8-3.61), providing significant improvements in risk discrimination (ΔC-index: +0.044; p < 0.0001) and reclassification (NRI: 0.12 (95% CI: 0.09-0.15) at a 10% risk threshold) beyond SCORE2. These results were replicated in the KORA S4 and KORA-Age1 cohorts, where the signatures were associated with risk of future myocardial infarction and stroke. Furthermore, longitudinal analyses demonstrated steeper annual increases in proteomic signature among individuals with higher burden of vascular risk factors and individuals who experienced MACE over follow-up.\n\n\nCONCLUSIONS\nPlasma proteomic signatures effectively capture atherosclerotic burden and improve cardiovascular risk prediction in asymptomatic individuals. They may complement existing risk stratification by serving as a scalable and accessible blood-based screening tool to identify individuals more likely to have subclinical atherosclerosis and may benefit from confirmatory imaging and earlier prevention strategies.",
+  "authors": "Lanyue Zhang, M. Omarov, Lingling Xu, Barnali Das, Hong Luo, Stefanie M. Hauck, A. Petrera, Zhi Yu",
+  "venue": "Cardiovascular Research",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:plasma proteomics cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42367007"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB Olink蛋白组机器学习刻画动脉粥样硬化负荷",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB万人蛋白组机器学习刻画动脉粥样硬化负荷，方法有新颖性",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "机器学习训练血浆蛋白组特征构建四种AtheroBurden评分",
+  "data": "UKB嵌套匹配病例对照1,666对，Olink 2,920蛋白；41,200名无病者验证",
+  "scenario": "动脉粥样硬化负荷无创评估",
+  "benchmark": "SCORE2及KORA S4、Age1外部队列",
+  "results": "四种AtheroBurden特征可稳健区分现患动脉粥样硬化，ROC-AUC最高达较高水平；与颈动脉斑块负荷相关，并提升MACE预测和风险重分类",
+  "availability": "",
+  "limitations": "目前动脉粥样硬化主要依赖影像评估，可扩展循环生物标志物仍缺乏",
+  "summary": "研究在UKB中训练机器学习模型，基于血浆蛋白组学构建四种AtheroBurden特征。在41,200名无病参与者中计算个体评分，并通过颈动脉超声、13.7年MACE随访及KORA外部队列验证。结果显示这些蛋白组特征可反映系统性动脉粥样硬化负荷，并改善MACE预测和风险重分类。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

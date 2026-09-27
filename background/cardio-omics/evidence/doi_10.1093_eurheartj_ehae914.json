@@ -1,0 +1,55 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehae914",
+  "title": "Heart failure risk stratification using artificial intelligence applied to electrocardiogram images: a multinational study.",
+  "url": "https://doi.org/10.1093/eurheartj/ehae914",
+  "abstract": "Background and aims Current heart failure (HF) risk stratification strategies require comprehensive clinical evaluation. In this study, artificial intelligence (AI) applied to electrocardiogram (ECG) images was examined as a strategy to predict HF risk. Methods Across multinational cohorts in the Yale New Haven Health System (YNHHS), UK Biobank (UKB), and Brazilian Longitudinal Study of Adult Health (ELSA-Brasil), individuals without baseline HF were followed for the first HF hospitalization. An AI-ECG model that defines cross-sectional left ventricular systolic dysfunction from 12-lead ECG images was used, and its association with incident HF was evaluated. Discrimination was assessed using Harrell's C-statistic. Pooled cohort equations to prevent HF (PCP-HF) were used as a comparator. Results Among 231 285 YNHHS patients, 4472 had primary HF hospitalizations over 4.5 years (inter-quartile range 2.5-6.6). In UKB and ELSA-Brasil, among 42 141 and 13 454 people, 46 and 31 developed HF over 3.1 (2.1-4.5) and 4.2 (3.7-4.5) years. A positive AI-ECG screen portended a 4- to 24-fold higher risk of new-onset HF [age-, sex-adjusted hazard ratio: YNHHS, 3.88 (95% confidence interval 3.63-4.14); UKB, 12.85 (6.87-24.02); ELSA-Brasil, 23.50 (11.09-49.81)]. The association was consistent after accounting for comorbidities and the competing risk of death. Higher probabilities were associated with progressively higher HF risk. Model discrimination was 0.718 in YNHHS, 0.769 in UKB, and 0.810 in ELSA-Brasil. In YNHHS and ELSA-Brasil, incorporating AI-ECG with PCP-HF yielded a significant improvement in discrimination over PCP-HF alone. Conclusions An AI model applied to a single ECG image defined the risk of future HF, representing a digital biomarker for stratifying HF risk.",
+  "authors": "Dhingra LS, Aminorroaya A, Sangha V, Pedroso AF, Asselbergs FW, Brant LCC, Barreto SM, Ribeiro ALP, Krumholz HM, Oikonomou EK, Khera R.",
+  "venue": "European heart journal",
+  "year": 2025,
+  "citations": 64,
+  "found_by": [
+   "eupmc:electrocardiogram deep learnin",
+   "eupmc:heart failure prediction elect"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12086686",
+   "is_oa": false,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Khera R",
+   "last_affil": "Department of Internal Medicine, Section of Cardiovascular Medicine, Yale School of Medicine, New Haven, CT 06510, USA."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨国队列ECG图像AI预测心衰，含UKB外部验证，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨国队列ECG图像AI预测心衰，多队列外部验证，代表性强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "AI-ECG图像模型预测心衰",
+  "data": "YNHHS 231285；UKB 42141；ELSA-Brasil 13454",
+  "scenario": "无心衰人群新发心衰风险分层",
+  "benchmark": "PCP-HF心衰预防 pooled equations",
+  "results": "AI-ECG阳性HR 3.88-23.50；C统计量0.718/0.769/0.810",
+  "availability": "",
+  "limitations": "部分队列事件少；需外部验证与临床落地评估",
+  "summary": "研究评估AI应用于12导联心电图图像能否预测新发心衰风险。在YNHHS、UK Biobank和ELSA-Brasil多国队列中，对基线无心衰者随访首次心衰住院，并与PCP-HF比较。AI-ECG阳性者新发心衰风险高4至24倍，区分度C统计量达0.718至0.810。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

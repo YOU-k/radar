@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/cvr/cvag095",
+  "title": "Shared proteomic landscape between arteriosclerosis and cardiovascular endpoints: a Mendelian randomization and observational study integrating AlphaFold3 for structural prediction",
+  "url": "https://doi.org/10.1093/cvr/cvag095",
+  "abstract": "Background Atherosclerosis and arteriosclerosis are major contributors to cardiovascular disease (CVD), yet their shared and distinct molecular underpinnings remain incompletely understood. This study integrates proteomics, Bayesian colocalization, and Mendelian randomization (MR), and structural modelling to explore the shared and distinct plasma proteome associated with arteriosclerosis and atherosclerosis across different vascular beds. Methods We leveraged cis-pQTLs for 5,813 unique proteins from the UK Biobank (UKB) Pharma Proteomics Project (N=54,219) and deCODE genetics (N=35,559) and assessed the association with five arteriosclerotic/atherosclerotic markers, as well as eight cardiovascular events, using Bayesian colocalization and bidirectional MR. We validated the findings through tissue-specific transcriptomics, observational data from UKB, and AlphaFold3 for structural prediction. Finally, mediation analysis evaluated the role of vascular traits in linking proteins to CVD risk. Results We prioritized ten proteins potentially causally associated with both the arteriosclerotic/atherosclerotic markers and cardiovascular events. Five of them (ANGPTL4, APOB, BRAP, LPA, and ZPR1), were associated with increased levels of arteriosclerosis/ atherosclerosis and risk of CVD, whereas four (DUSP13, FN1, IL6R, and MMP12) were associated with reduced levels of arteriosclerosis/ atherosclerosis and risk of CVD. ABO was associated with increased risk of peripheral artery disease (PAD) and CVD but inversely related to ASI. Mediation analyses estimated that LPA's effect on stroke was primarily mediated through carotid plaque (92.4%), while DUSP13's effect on coronary artery disease was primarily mediated via PAD (91.0%). Observational analyses and transcriptomic validation corroborated these associations. Structural modelling using AlphaFold3 identified key functional variants in several proteins, including ANGPTL4 and FN1, potentially underlying the pathogenic mechanists. Conclusions The present study elucidates the shared and distinct proteomic signatures across arteriosclerosis, atherosclerosis, and cardiovascular disease, underscoring the importance of vascular-bed-specific mechanisms. These identified proteins offer promising avenues for biomarker-driven risk stratification and therapeutic interventions, with potential for dual-purpose interventions across vascular territories.",
+  "authors": "Jingxian Huang, D. Meena, Margaux Achtari, Alexander G. Smith, R. Judy, N. Mimouni, J. Bis, N. Franceschini",
+  "venue": "medRxiv",
+  "year": 2025,
+  "citations": 0,
+  "found_by": [
+   "s2kw:plasma proteomics cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42133815"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB/deCODE万人级pQTL+MR+共定位，多组学靶点发现契合方向",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB/deCODE万人pQTL孟德尔随机化找动脉硬化共享靶点，方向必读",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "孟德尔随机化+贝叶斯共定位+AlphaFold3结构预测+中介分析",
+  "data": "UKB Pharma Proteomics 54,219人及deCODE 35,559人，5,813个蛋白cis-pQTL",
+  "scenario": "动脉硬化与CVD共享蛋白组机制",
+  "benchmark": "五种动脉硬化/粥样硬化标志物及八种心血管事件",
+  "results": "优先筛选出10个蛋白与动脉硬化/粥样硬化标志物及CVD事件相关；ANGPTL4、APOB、BRAP、LPA、ZPR1升高风险，DUSP13、FN1、IL6R、MMP12降低风险；ABO与外周动脉病风险升高相关",
+  "availability": "",
+  "limitations": "动脉硬化与粥样硬化分子机制仍未完全阐明，需进一步验证",
+  "summary": "研究整合蛋白组学、贝叶斯共定位、孟德尔随机化和AlphaFold3，探索动脉硬化与粥样硬化共享及特异血浆蛋白。利用UKB和deCODE的cis-pQTL数据评估与血管标志物和心血管事件关联。结果优先筛选出10个潜在因果蛋白，并揭示其与CVD风险的方向性关联。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

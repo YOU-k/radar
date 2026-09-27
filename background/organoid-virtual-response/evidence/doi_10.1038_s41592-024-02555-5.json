@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-024-02555-5",
+  "title": "Multiplexing cortical brain organoids for the longitudinal dissection of developmental traits at single-cell resolution.",
+  "url": "https://doi.org/10.1038/s41592-024-02555-5",
+  "abstract": "Dissecting human neurobiology at high resolution and with mechanistic precision requires a major leap in scalability, given the need for experimental designs that include multiple individuals and, prospectively, population cohorts. To lay the foundation for this, we have developed and benchmarked complementary strategies to multiplex brain organoids by pooling cells from different pluripotent stem cell (PSC) lines either during organoid generation (mosaic models) or before single-cell RNA sequencing (scRNA-seq) library preparation (downstream multiplexing). We have also developed a new computational method, SCanSNP, and a consensus call to deconvolve cell identities, overcoming current criticalities in doublets and low-quality cell identification. We validated both multiplexing methods for charting neurodevelopmental trajectories at high resolution, thus linking specific individuals' trajectories to genetic variation. Finally, we modeled their scalability across different multiplexing combinations and showed that mosaic organoids represent an enabling method for high-throughput settings. Together, this multiplexing suite of experimental and computational methods provides a highly scalable resource for brain disease and neurodiversity modeling.",
+  "authors": "Caporale N, Castaldi D, Rigoli MT, Cheroni C, Valenti A, Stucchi S, Lessi M, Bulgheresi D, Trattaro S, Pezzali M, Vitriolo A, Lopez-Tobon A, Bonfanti M, Ricca D, Schmid KT, Heinig M, Theis FJ, Villa CE, Testa G.",
+  "venue": "Nature methods",
+  "year": 2024,
+  "citations": 35,
+  "found_by": [
+   "eupmc:organoid spatial transcriptomi"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11810796",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Testa G",
+   "last_affil": "Department of Oncology and Hemato-Oncology, University of Milan, Milan, Italy. giuseppe.testa@fht.org."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "脑类器官多重单细胞纵向建模，方法学新且可复用",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Methods多重脑类器官单细胞方法，含计算反卷积，方向必读",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "两种多重化策略+SCanSNP去卷积",
+  "data": "人多能干细胞系来源CBO，scRNA-seq，50/100/300天",
+  "scenario": "脑类器官纵向发育建模",
+  "benchmark": "现有多重化策略与去卷积工具对比",
+  "results": "建立mosaic与下游多重化范式，SCanSNP形成共识流程，可关联遗传变异与发育轨迹表型",
+  "availability": "",
+  "limitations": "成本与工作量大，批次间变异，尚未系统应用于类器官",
+  "summary": "该研究旨在实现人多能干细胞来源皮层脑类器官的单细胞分辨率多重化纵向建模。作者比较了在类器官生成时混合细胞系的mosaic策略与单细胞建库前混合的下游策略，并开发SCanSNP去卷积方法进行基因型识别。结果表明两种范式均可重建神经发育轨迹，并可将遗传变异与发育轨迹表型关联，为群体尺度脑类器官建模提供资源。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

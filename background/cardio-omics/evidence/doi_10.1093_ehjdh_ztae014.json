@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/ehjdh/ztae014",
+  "title": "Decoding 2.3 million ECGs: interpretable deep learning for advancing cardiovascular diagnosis and mortality risk stratification.",
+  "url": "https://doi.org/10.1093/ehjdh/ztae014",
+  "abstract": "Aims Electrocardiogram (ECG) is widely considered the primary test for evaluating cardiovascular diseases. However, the use of artificial intelligence (AI) to advance these medical practices and learn new clinical insights from ECGs remains largely unexplored. We hypothesize that AI models with a specific design can provide fine-grained interpretation of ECGs to advance cardiovascular diagnosis, stratify mortality risks, and identify new clinically useful information. Methods and results Utilizing a data set of 2 322 513 ECGs collected from 1 558 772 patients with 7 years follow-up, we developed a deep-learning model with state-of-the-art granularity for the interpretable diagnosis of cardiac abnormalities, gender identification, and hypertension screening solely from ECGs, which are then used to stratify the risk of mortality. The model achieved the area under the receiver operating characteristic curve (AUC) scores of 0.998 (95% confidence interval (CI), 0.995-0.999), 0.964 (95% CI, 0.963-0.965), and 0.839 (95% CI, 0.837-0.841) for the three diagnostic tasks separately. Using ECG-predicted results, we find high risks of mortality for subjects with sinus tachycardia (adjusted hazard ratio (HR) of 2.24, 1.96-2.57), and atrial fibrillation (adjusted HR of 2.22, 1.99-2.48). We further use salient morphologies produced by the deep-learning model to identify key ECG leads that achieved similar performance for the three diagnoses, and we find that the V1 ECG lead is important for hypertension screening and mortality risk stratification of hypertensive cohorts, with an AUC of 0.816 (0.814-0.818) and a univariate HR of 1.70 (1.61-1.79) for the two tasks separately. Conclusion Using ECGs alone, our developed model showed cardiologist-level accuracy in interpretable cardiac diagnosis and the advancement in mortality risk stratification. In addition, it demonstrated the potential to facilitate clinical knowledge discovery for gender and hypertension detection which are not readily available.",
+  "authors": "Lu L, Zhu T, Ribeiro AH, Clifton L, Zhao E, Zhou J, Ribeiro ALP, Zhang YT, Clifton DA.",
+  "venue": "European heart journal. Digital health",
+  "year": 2024,
+  "citations": 20,
+  "found_by": [
+   "eupmc:ECG deep learning foundation m"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11104458",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Clifton DA",
+   "last_affil": "Institute of Biomedical Engineering, Department of Engineering Science, University of Oxford, Oxford, OX3 7DQ, UK."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "230万ECG可解释深度学习，诊断与死亡风险分层，规模大方法新",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "230万ECG大规模可解释深度学习，EHJ子刊，心血管诊断与风险分层必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "可解释深度神经网络，多诊断与死亡风险分层",
+  "data": "230万份ECG，155万患者，巴西",
+  "scenario": "ECG诊断与死亡风险分层",
+  "benchmark": "心律失常、性别识别、高血压筛查任务",
+  "results": "基于230万ECG训练，识别细粒度ECG特征并推导简化导联，用于多诊断任务及死亡风险分层",
+  "availability": "",
+  "limitations": "数据主要来自单一巴西网络，外部泛化性未充分验证",
+  "summary": "研究构建可解释深度神经网络，对230万份ECG进行多种医学诊断和死亡风险分层。模型先验证心律失常识别，再测试性别识别和高血压筛查，并提取细粒度ECG特征以推导简化导联。结果表明该模型可提供细粒度解释、识别新的临床有用信息，并用于心律失常、性别差异和高血压人群的死亡风险分层。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 5,
+ "added_on": "2026-09-27"
+}

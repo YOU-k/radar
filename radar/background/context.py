@@ -23,8 +23,8 @@ def topics_by_domain(base=None) -> dict[str, list[TopicSpec]]:
         if p.parent.name.startswith("_"):
             continue
         spec = load_spec(p)
-        if spec.radar_domain:
-            out.setdefault(spec.radar_domain, []).append(spec)
+        for dom in spec.radar_domains:
+            out.setdefault(dom, []).append(spec)
     return out
 
 
@@ -53,35 +53,49 @@ def annotate(items: list[Item], cfg: dict, llm: LLM | None = None, base=None,
     by_dom = topics_by_domain(base)
     n = 0
     for dom, specs in by_dom.items():
-        spec = specs[0]
-        group = [it for it in items if it.domain == dom and it.score >= min_score]
-        brief = _outline_brief(spec)
-        if not group or not brief:
+        group = [it for it in items if it.domain == dom and it.score >= min_score
+                 and "bg" not in it.extra]
+        briefs = [(s, b) for s in specs if (b := _outline_brief(s))]
+        if not group or not briefs:
             continue
         payload = [{"id": i, "title": it.title, "abstract": (it.abstract or "")[:500],
                     "reason": it.reason_zh} for i, it in enumerate(group)]
+        multi = len(briefs) > 1
+        if multi:  # 一个 domain 挂多个方向（如单细胞 + 虚拟细胞窄主题）：让 LLM 先选方向
+            outline_txt = ("以下几个方向的背景报告大纲（方向 → 子题 → 已有证据数与代表工作）：\n"
+                           + json.dumps([{"topic": s.name, "outline": b} for s, b in briefs], ensure_ascii=False)
+                           + "\n\n下面是今天新出现的条目。对每条判断：topic（最贴切的方向名，照抄）；")
+            fmt = '[{"id":0,"topic":"方向名","section":"2.1 ...","delta":"..."}]'
+        else:
+            s0, b0 = briefs[0]
+            outline_txt = (f"方向「{s0.name}」的背景报告大纲（子题 → 已有证据数与代表工作）：\n"
+                           + json.dumps(b0, ensure_ascii=False)
+                           + "\n\n下面是今天新出现的条目。对每条判断：")
+            fmt = '[{"id":0,"section":"2.1 ...","delta":"..."}]'
         prompt = tagged("context", (
-            f"方向「{spec.name}」的背景报告大纲（子题 → 已有证据数与代表工作）：\n"
-            + json.dumps(brief, ensure_ascii=False)
-            + "\n\n下面是今天新出现的条目。对每条判断：section（落在哪个子题，抄大纲里的编号+名称；都不合适写「新子题」）；"
+            outline_txt
+            + "section（落在哪个子题，抄大纲里的编号+名称；都不合适写「新子题」）；"
               "delta（≤40 字中文：相对该子题已有证据，它新增了什么——新数据/新方法/更大规模/相反结论；"
               "若只是重复已有工作，直说「与 X 重复」）。\n\n【条目】\n" + json.dumps(payload, ensure_ascii=False)
-            + '\n\n只输出 JSON 数组：[{"id":0,"section":"2.1 ...","delta":"..."}]'))
+            + f"\n\n只输出 JSON 数组：{fmt}"))
         try:
             rows = parse_json_array(llm.chat(prompt, task="context", temperature=0.2, timeout=180))
         except Exception as exc:
-            print(f"[context] {spec.slug} failed: {exc}")
+            print(f"[context] {dom} failed: {exc}")
             continue
+        names = {s.name for s, _ in briefs}
         for r in rows:
             try:
                 i = int(r.get("id", -1))
             except (TypeError, ValueError):
                 continue
             if 0 <= i < len(group):
+                topic = str(r.get("topic", "")).strip()
+                topic = topic if topic in names else briefs[0][0].name
                 sec = str(r.get("section", "")).strip()[:60]
                 delta = str(r.get("delta", "")).strip()[:80]
                 if sec or delta:
-                    group[i].extra["bg"] = f"{spec.name} › {sec} · {delta}".strip(" ·")
+                    group[i].extra["bg"] = f"{topic} › {sec} · {delta}".strip(" ·")
                     n += 1
     return n
 

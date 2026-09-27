@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-020-19058-4",
+  "title": "Automated microfluidic platform for dynamic and combinatorial drug screening of tumor organoids",
+  "url": "https://doi.org/10.1038/s41467-020-19058-4",
+  "abstract": "Three-dimensional (3D) cell culture technologies, such as organoids, are physiologically relevant models for basic and clinical applications. Automated microfluidics offers advantages in high-throughput and precision analysis of cells but is not yet compatible with organoids. Here, we present an automated, high-throughput, microfluidic 3D organoid culture and analysis system to facilitate preclinical research and personalized therapies. Our system provides combinatorial and dynamic drug treatments to hundreds of cultures and enables real-time analysis of organoids. We validate our system by performing individual, combinatorial, and sequential drug screens on human-derived pancreatic tumor organoids. We observe significant differences in the response of individual patient-based organoids to drug treatments and find that temporally-modified drug treatments can be more effective than constant-dose monotherapy or combination therapy in vitro. This integrated platform advances organoids models to screen and mirror real patient treatment courses with potential to facilitate treatment decisions for personalized therapy. The use of organoids in personalized medicine is promising but high throughput platforms are needed. Here the authors develop an automated, high-throughput, microfluidic 3D organoid culture system that allows combinatorial and dynamic drug treatments and real-time analysis of organoids.",
+  "authors": "Brooke Schuster, M. Junkin, S. Kashaf, I. Romero-Calvo, Kori Kirby, Jonathan Matthews, Christopher R. Weber, A. Rzhetsky",
+  "venue": "Nature Communications",
+  "year": 2020,
+  "citations": 367,
+  "found_by": [
+   "s2:references:doi:10.1038/s41698-021-00168-1"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:33077832"
+   ],
+   "pmcid": "PMC7573629"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "微流控类器官组合药筛平台，含实时读出与建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nat Commun高通量类器官药筛平台，被广泛跟进引用高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "自动化微流控动态组合药筛平台",
+  "data": "肿瘤类器官，3D凝胶培养，动态药物灌注",
+  "scenario": "肿瘤类器官高通量药筛",
+  "benchmark": "传统2D培养、PDX及现有微流控/器官芯片",
+  "results": "兼容Matrigel，支持长期培养、动态程序化刺激与实时监测，降低试剂与人工消耗",
+  "availability": "",
+  "limitations": "系统复杂性与通量仍受凝胶和微流控限制",
+  "summary": "研究开发自动化微流控平台用于肿瘤类器官动态组合药物筛选。作者设计兼容凝胶培养的流体结构，实现高通量培养、程序化刺激、检测与收获。结果表明该系统可长期实时监测并动态改变培养条件，提高3D药筛可重复性与效率。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

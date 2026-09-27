@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.amjcard.2021.02.032",
+  "title": "Validation of an Integrated Risk Tool, Including Polygenic Risk Score, for Atherosclerotic Cardiovascular Disease in Multiple Ethnicities and Ancestries.",
+  "url": "https://doi.org/10.1016/j.amjcard.2021.02.032",
+  "abstract": "The American College of Cardiology / American Heart Association pooled cohort equations tool (ASCVD-PCE) is currently recommended to assess 10-year risk for atherosclerotic cardiovascular disease (ASCVD). ASCVD-PCE does not currently include genetic risk factors. Polygenic risk scores (PRSs) have been shown to offer a powerful new approach to measuring genetic risk for common diseases, including ASCVD, and to enhance risk prediction when combined with ASCVD-PCE. Most work to date, including the assessment of tools, has focused on performance in individuals of European ancestries. Here we present evidence for the clinical validation of a new integrated risk tool (IRT), ASCVD-IRT, which combines ASCVD-PCE with PRS to predict 10-year risk of ASCVD across diverse ethnicity and ancestry groups. We demonstrate improved predictive performance of ASCVD-IRT over ASCVD-PCE, not only in individuals of self-reported White ethnicities (net reclassification improvement (NRI) (with 95% confidence interval) = 2.7% (1.1 - 4.2)) but also Black / African American / Black Caribbean / Black African (NRI = 2.5% (0.6 - 4.3)) and South Asian (Indian, Bangladeshi or Pakistani) ethnicities (NRI = 8.7% (3.1 - 14.4)). NRI confidence intervals were wider and included zero for ethnicities with smaller sample sizes, including Hispanic (NRI = 7.5% (-1.4 - 16.5)), but PRS effect sizes in these ethnicities were significant and of comparable size to those seen in individuals of White ethnicities. Comparable results were obtained when individuals were analysed by genetically inferred ancestry. Together, these results validate the performance of ASCVD-IRT in multiple ethnicities and ancestries, and favour their generalisation to all ethnicities and ancestries.",
+  "authors": "M. Weale, Fernando Riveros-Mckay, Saskia Selzam, P. Seth, R. Moore, William A. Tarran, Eva Gradovich, C. Giner-Delgado",
+  "venue": "American Journal of Cardiology",
+  "year": 2021,
+  "citations": 68,
+  "found_by": [
+   "s2:references:doi:10.1161/cir.0000000000001077",
+   "s2:references:doi:10.1038/s41591-023-02429-x"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:33675770"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PRS整合风险工具跨族裔验证，ASCVD预测增益，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "PRS整合风险工具跨族裔验证，ASCVD预测临床转化证据",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "整合PRS与PCE的ASCVD风险工具",
+  "data": "多族裔/祖源人群，具体样本量摘要未给",
+  "scenario": "10年ASCVD风险预测",
+  "benchmark": "ASCVD-PCE（ACC/AHA pooled cohort equations）",
+  "results": "NRI：白人2.7%、黑人2.5%、南亚8.7%；西班牙裔7.5%但CI含0",
+  "availability": "",
+  "limitations": "部分族裔样本小、CI宽；摘要缺校准与绝对风险",
+  "summary": "研究验证整合风险工具ASCVD-IRT，将多基因风险评分与ASCVD-PCE结合用于多族裔10年ASCVD预测。比较ASCVD-IRT与单独ASCVD-PCE，在白人、黑人、南亚及西班牙裔等群体评估重分类改善。结果显示多个族裔NRI提升，南亚最明显，但小样本族裔置信区间较宽，PRS效应量仍显著。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

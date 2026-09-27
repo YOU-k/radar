@@ -51,6 +51,10 @@ def cmd_daily(days: int, use_llm: bool) -> None:
         from .background.context import annotate
         n = annotate(scored, cfg)
         print(f"[context] {n} items placed against background")
+    from .pipeline.digest import MIN_SCORE
+    from .pipeline.enrich import enrich
+    n = enrich(scored, MIN_SCORE)
+    print(f"[enrich] {n} items with venue / date / PI institution")
     n = append_resources(scored, date.today())
     print(f"[resources] {n} new")
     if use_llm:
@@ -81,7 +85,8 @@ def cmd_weekly(use_llm: bool) -> None:
     if body is None:
         body = _weekly_fallback(texts)
     from .background.context import weekly_changes
-    out.write_text(header + body + weekly_changes(), encoding="utf-8")
+    from .pipeline.enrich import venue_stats
+    out.write_text(header + body + venue_stats(texts) + weekly_changes(), encoding="utf-8")
     print(f"[weekly] wrote {out}")
     if use_llm:
         n = mine_infrastructure(extract.load_since(30), today)

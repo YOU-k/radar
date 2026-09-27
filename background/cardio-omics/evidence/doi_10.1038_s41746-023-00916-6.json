@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41746-023-00916-6",
+  "title": "A deep learning-based electrocardiogram risk score for long term cardiovascular death and disease",
+  "url": "https://doi.org/10.1038/s41746-023-00916-6",
+  "abstract": "The electrocardiogram (ECG) is the most frequently performed cardiovascular diagnostic test, but it is unclear how much information resting ECGs contain about long term cardiovascular risk. Here we report that a deep convolutional neural network can accurately predict the long-term risk of cardiovascular mortality and disease based on a resting ECG alone. Using a large dataset of resting 12-lead ECGs collected at Stanford University Medical Center, we developed SEER, the Stanford Estimator of Electrocardiogram Risk. SEER predicts 5-year cardiovascular mortality with an area under the receiver operator characteristic curve (AUC) of 0.83 in a held-out test set at Stanford, and with AUCs of 0.78 and 0.83 respectively when independently evaluated at Cedars-Sinai Medical Center and Columbia University Irving Medical Center. SEER predicts 5-year atherosclerotic disease (ASCVD) with an AUC of 0.67, similar to the Pooled Cohort Equations for ASCVD Risk, while being only modestly correlated. When used in conjunction with the Pooled Cohort Equations, SEER accurately reclassified 16% of patients from low to moderate risk, uncovering a group with an actual average 9.9% 10-year ASCVD risk who would not have otherwise been indicated for statin therapy. SEER can also predict several other cardiovascular conditions such as heart failure and atrial fibrillation. Using only lead I of the ECG it predicts 5-year cardiovascular mortality with an AUC of 0.80. SEER, used alongside the Pooled Cohort Equations and other risk tools, can substantially improve cardiovascular risk stratification and aid in medical decision making.",
+  "authors": "J. Hughes, J. Tooley, Jessica Torres Soto, A. Ostropolets, T. Poterucha, M. Christensen, Neal Yuan, Ben Ehlert",
+  "venue": "npj Digit. Medicine",
+  "year": 2023,
+  "citations": 71,
+  "found_by": [
+   "s2:references:doi:10.1016/s2589-7500(24)00172-9"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:37700032"
+   ],
+   "pmcid": "PMC10497604"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "大规模ECG深度学习风险评分，含外部验证，契合ECG AI。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "ECG深度学习长期心血管风险评分，多队列验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CNN基于12导联ECG训练SEER风险评分",
+  "data": "Stanford 312,422 ECG训练；三中心多测试集",
+  "scenario": "长期心血管死亡与ASCVD风险分层",
+  "benchmark": "PCE；传统风险因素；多中心外部验证",
+  "results": "5年心血管死亡AUC 0.83/0.78/0.83；C-statistic 0.82/0.78/0.81",
+  "availability": "",
+  "limitations": "回顾性多中心数据，需前瞻验证与临床工作流整合",
+  "summary": "作者开发SEER，一种基于CNN的12导联ECG风险评分，用于预测长期心血管死亡和疾病。模型在Stanford 312,422份ECG上训练，并在Stanford、Cedars-Sinai和Columbia测试集评估。结果显示5年心血管死亡AUC为0.83、0.78、0.83，且与PCE联合可重分类患者，改善CVD和死亡预测。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s13073-021-00894-y",
+  "title": "Deconvolution of cell type-specific drug responses in human tumor tissue with single-cell RNA-seq",
+  "url": "https://doi.org/10.1186/s13073-021-00894-y",
+  "abstract": "Preclinical studies require models that recapitulate the cellular diversity of human tumors and provide insight into the drug sensitivities of specific cellular populations. The ideal platform would enable rapid screening of cell type-specific drug sensitivities directly in patient tumor tissue and reveal strategies to overcome intratumoral heterogeneity. We combine multiplexed drug perturbation in acute slice culture from freshly resected tumors with single-cell RNA sequencing (scRNA-seq) to profile transcriptome-wide drug responses in individual patients. We applied this approach to drug perturbations on slices derived from six glioblastoma (GBM) resections to identify conserved drug responses and to one additional GBM resection to identify patient-specific responses. We used scRNA-seq to demonstrate that acute slice cultures recapitulate the cellular and molecular features of the originating tumor tissue and the feasibility of drug screening from an individual tumor. Detailed investigation of etoposide, a topoisomerase poison, and the histone deacetylase (HDAC) inhibitor panobinostat in acute slice cultures revealed cell type-specific responses across multiple patients. Etoposide has a conserved impact on proliferating tumor cells, while panobinostat treatment affects both tumor and non-tumor populations, including unexpected effects on the immune microenvironment. Acute slice cultures recapitulate the major cellular and molecular features of GBM at the single-cell level. In combination with scRNA-seq, this approach enables cell type-specific analysis of sensitivity to multiple drugs in individual tumors. We anticipate that this approach will facilitate pre-clinical studies that identify effective therapies for solid tumors.",
+  "authors": "Wen-Ting Zhao, Athanassios Dovas, E. Spinazzi, H. M. Levitin, M. Banu, P. Upadhyayula, Tejaswi D. Sudhakar, T. Marie",
+  "venue": "Genome Medicine",
+  "year": 2020,
+  "citations": 94,
+  "found_by": [
+   "s2:references:doi:10.1038/s41592-023-01969-x"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:33975634"
+   ],
+   "pmcid": "PMC8114529"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "患者肿瘤切片药物扰动加单细胞读出，建模细胞类型特异响应",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "患者肿瘤切片扰动加单细胞，药敏建模有预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "急性切片培养结合 microwell scRNA-seq 去卷积",
+  "data": "7例GBM手术标本；500μm切片；多药扰动scRNA-seq",
+  "scenario": "人肿瘤组织细胞类型特异性药物反应",
+  "benchmark": "急性分离活检与切片培养同一肿瘤不同区域对比",
+  "results": "24小时内完成药敏筛选；去卷积细胞类型特异药物反应；保留肿瘤微环境与异质性",
+  "availability": "",
+  "limitations": "样本量7例；短期培养24小时；可能无法完全反映长期治疗反应",
+  "summary": "研究利用急性切片培养和单细胞RNA测序去卷积人肿瘤组织中的细胞类型特异性药物反应。从7例GBM手术标本制备500μm切片，在24小时内完成多药扰动并通过microwell scRNA-seq分析。方法保留肿瘤微环境和异质性，可快速解析不同细胞类型对药物的响应，为临床决策提供时间相关数据。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

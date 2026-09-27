@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s13046-025-03541-1",
+  "title": "Personalized prediction of chemotherapy efficacy in osteosarcoma through patient-derived organoids: correlation with survival and tumor proliferation potential",
+  "url": "https://doi.org/10.1186/s13046-025-03541-1",
+  "abstract": "Neoadjuvant chemotherapy (NAT) is the standard treatment for osteosarcoma (OS), but patient responses vary, and conventional imaging or pathology offers limited predictive accuracy. Patient-derived organoids (PDOs) are promising models for assessing drug sensitivity and tumor viability ex vivo. This study evaluated the potential of PDO-based drug sensitivity testing and organoid formation potential (OFP) to predict therapeutic outcomes in OS. Tumor samples from OS patients collected before and after NAT were cultured as 3D PDOs. Chemosensitivity to first-line agents was quantified via a cell inhibition weighted score (CIWS), whereas OFP was used to reflect residual tumor viability. Clinical response was assessed via RECIST 1.1 and, for the primary analysis, dichotomized as responder (CR+PR+SD) versus nonresponder (PD); survival (OS/DFS) was tracked for up to 5 years. Correlations between PDO metrics and clinical outcomes were analyzed. PDOs were established from 31 samples (18 pre-NAT samples and 13 post-NAT samples), including 8 paired pre/post-NAT samples. CIWS predicted NAT response assessed by RECIST 1.1 with 83.3% accuracy (pre-NAT, 15/18; 95% CI 58.6–96.4) and 5-year DFS with 84.6% accuracy (post-NAT, 11/13; 95% CI 54.6–98.1). With predefined CIWS/OFP cutoffs, Kaplan–Meier analyses showed longer DFS/OS in CIWS-sensitive and OFP-II/III (low growth) groups (P<0.05). PDOs demonstrated promise as an ex vivo approach to evaluate whether ex vivo chemosensitivity and residual tumor viability measured by PDOs are associated with imaging response and 5-year survival. Their correlation with clinical outcomes highlights the potential of PDO testing to complement existing evaluation methods and to inform individualized treatment strategies. • Patient-derived organoids (PDOs) were successfully established from 31 osteosarcoma samples (18 pre- and 13 post-neoadjuvant chemotherapies) collected from 23 patients. • PDO-based drug sensitivity and organoid formation potential reflect tumor viability and resistance. • CIWS based on PDOs achieved 84.6% (11/13) accuracy, outperforming RECIST evaluation. • CIWS and OFP were significantly associated with 5-year DFS and OS.",
+  "authors": "Jun-Hua Nie, Cheng Wan, Hong Li, Jie Zhou, Guoliang Zhong, Tao Yang, Meng-Yu Yao, Wenshi Huang",
+  "venue": "Journal of experimental & clinical cancer research : CR",
+  "year": 2025,
+  "citations": 2,
+  "found_by": [
+   "s2kw:patient-derived organoid drug "
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41382267"
+   ],
+   "pmcid": "PMC12817525"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "患者来源类器官药敏预测生存结局，含建模与临床对应",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "患者来源类器官药敏预测生存，符合类器官药敏与临床对应",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "OS PDO药物敏感性检测",
+  "data": "23份骨肉瘤肿瘤样本（20成骨型、3软骨母细胞型）",
+  "scenario": "骨肉瘤新辅助化疗疗效预测",
+  "benchmark": "RECIST影像、组织学肿瘤坏死分级及临床随访",
+  "results": "PDO可预测新辅助化疗反应与长期生存，整合类器官活力指标提供功能性精准肿瘤学框架",
+  "availability": "",
+  "limitations": "肉瘤3D培养启动技术挑战、化疗后残留肿瘤增殖能力低、缺乏验证的功能性指标",
+  "summary": "研究旨在建立骨肉瘤患者来源类器官（OS PDO）作为可临床操作的治疗诊断工具，预测新辅助化疗反应与长期结局。作者从23份骨肉瘤样本建立PDO，进行药物筛选并结合类器官活力指标，与临床反应及生存关联分析。结果显示PDO可模拟体内肿瘤行为并提供及时药物敏感性数据，整合活力指标形成功能性精准肿瘤学框架，支持将PDO平台纳入临床试验设计、风险分层与治疗定制。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

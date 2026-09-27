@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1001/jamacardio.2023.3701",
+  "title": "Deep Learning of Electrocardiograms in Sinus Rhythm From US Veterans to Predict Atrial Fibrillation.",
+  "url": "https://doi.org/10.1001/jamacardio.2023.3701",
+  "abstract": "Importance Early detection of atrial fibrillation (AF) may help prevent adverse cardiovascular events such as stroke. Deep learning applied to electrocardiograms (ECGs) has been successfully used for early identification of several cardiovascular diseases. Objective To determine whether deep learning models applied to outpatient ECGs in sinus rhythm can predict AF in a large and diverse patient population. Design, setting, and participants This prognostic study was performed on ECGs acquired from January 1, 1987, to December 31, 2022, at 6 US Veterans Affairs (VA) hospital networks and 1 large non-VA academic medical center. Participants included all outpatients with 12-lead ECGs in sinus rhythm. Main outcomes and measures A convolutional neural network using 12-lead ECGs from 2 US VA hospital networks was trained to predict the presence of AF within 31 days of sinus rhythm ECGs. The model was tested on ECGs held out from training at the 2 VA networks as well as 4 additional VA networks and 1 large non-VA academic medical center. Results A total of 907 858 ECGs from patients across 6 VA sites were included in the analysis. These patients had a mean (SD) age of 62.4 (13.5) years, 6.4% were female, and 93.6% were male, with a mean (SD) CHA2DS2-VASc (congestive heart failure, hypertension, age, diabetes mellitus, prior stroke or transient ischemic attack or thromboembolism, vascular disease, age, sex category) score of 1.9 (1.6). A total of 0.2% were American Indian or Alaska Native, 2.7% were Asian, 10.7% were Black, 4.6% were Latinx, 0.7% were Native Hawaiian or Other Pacific Islander, 62.4% were White, 0.4% were of other race or ethnicity (which is not broken down into subcategories in the VA data set), and 18.4% were of unknown race or ethnicity. At the non-VA academic medical center (72 483 ECGs), the mean (SD) age was 59.5 (15.4) years and 52.5% were female, with a mean (SD) CHA2DS2-VASc score of 1.6 (1.4). A total of 0.1% were American Indian or Alaska Native, 7.9% were Asian, 9.4% were Black, 2.9% were Latinx, 0.03% were Native Hawaiian or Other Pacific Islander, 74.8% were White, 0.1% were of other race or ethnicity, and 4.7% were of unknown race or ethnicity. A deep learning model predicted the presence of AF within 31 days of a sinus rhythm ECG on held-out test ECGs at VA sites with an area under the receiver operating characteristic curve (AUROC) of 0.86 (95% CI, 0.85-0.86), accuracy of 0.78 (95% CI, 0.77-0.78), and F1 score of 0.30 (95% CI, 0.30-0.31). At the non-VA site, AUROC was 0.93 (95% CI, 0.93-0.94); accuracy, 0.87 (95% CI, 0.86-0.88); and F1 score, 0.46 (95% CI, 0.44-0.48). The model was well calibrated, with a Brier score of 0.02 across all sites. Among individuals deemed high risk by deep learning, the number needed to screen to detect a positive case of AF was 2.47 individuals for a testing sensitivity of 25% and 11.48 for 75%. Model performance was similar in patients who were Black, female, or younger than 65 years or who had CHA2DS2-VASc scores of 2 or greater. Conclusions and relevance Deep learning of outpatient sinus rhythm ECGs predicted AF within 31 days in populations with diverse demographics and comorbidities. Similar models could be used in future AF screening efforts to reduce adverse complications associated with this disease.",
+  "authors": "Yuan N, Duffy G, Dhruva SS, Oesterle A, Pellegrini CN, Theurer J, Vali M, Heidenreich PA, Keyhani S, Ouyang D.",
+  "venue": "JAMA cardiology",
+  "year": 2023,
+  "citations": 54,
+  "found_by": [
+   "eupmc:electrocardiogram deep learnin"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC10585587",
+   "is_oa": false,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Ouyang D",
+   "last_affil": "Division of Cardiology, San Francisco Veterans Affairs Medical Center, San Francisco, California."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "退伍军人多中心ECG深度学习预测房颤，大样本可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "VA大队列深度学习ECG预测房颤，JAMA子刊，可复用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "卷积神经网络基于窦性心律12导联ECG预测AF",
+  "data": "6个VA网络及1个非VA中心，907858份ECG",
+  "scenario": "窦性心律ECG早期预测房颤",
+  "benchmark": "在2个VA网络训练，另4个VA及1个非VA中心测试",
+  "results": "纳入907858份ECG；平均年龄62.4岁，女性6.4%，男性93.6%，平均CHA2DS2-VASc 1.9；预测31天内AF",
+  "availability": "",
+  "limitations": "全文未获取；队列以男性退伍军人为主(93.6%)，女性代表性不足",
+  "summary": "该研究旨在评估深度学习模型能否从窦性心律门诊ECG预测房颤。研究使用2个VA网络的12导联ECG训练卷积神经网络预测31天内AF，并在另外4个VA网络及1个大型非VA学术中心测试。共纳入907858份ECG，人群以男性退伍军人为主，平均年龄62.4岁。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

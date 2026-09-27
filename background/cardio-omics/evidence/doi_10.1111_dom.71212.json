@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1111/dom.71212",
+  "title": "Validation and Comparison of 10-Year Cardiovascular Risk Prediction Models in Two Chinese Prospective Cohorts: The General Population and Patients With Type 2 Diabetes.",
+  "url": "https://doi.org/10.1111/dom.71212",
+  "abstract": "BACKGROUND\nTo evaluate and recalibrate commonly used 10-year cardiovascular disease (CVD) risk prediction models in two Chinese cohorts: the general population and adults with type 2 diabetes.\n\n\nMETHODS\nWe analysed data from the Wuzhong subcohort of the China Kadoorie Biobank (CKB) and the Jiangsu Biobank for the Prevention and Control of Diabetes (JBPCD). After excluding participants with baseline CVD, baseline diabetes in CKB or missing predictors, 42 937 CKB participants and 14 125 JBPCD participants were included. We evaluated CKB-CVD, Globorisk, Framingham General CVD and WHO 2019 in both cohorts, and SCORE2-Diabetes in JBPCD. Performance of original and recalibrated models was assessed by 10-year inverse probability of censoring weighting (IPCW) C-statistic, calibration measures including the expected-to-observed (E/O) event ratio and Brier score. In JBPCD, overlap in high-risk classification was examined using a 20% predicted 10-year risk threshold.\n\n\nRESULTS\nDuring a median follow-up of 11.96 years in the general population cohort and 10.03 years in the type 2 diabetes cohort, 3740 and 2794 ischemic heart disease or stroke events occurred, with 10-year risks of 6.04% and 19.72%, respectively. Discrimination was higher in the general population cohort than in the type 2 diabetes cohort (C-statistic 0.723-0.778 vs. 0.584-0.629). Original models were poorly calibrated, with systematic overprediction in the general population cohort (E/O 1.47-3.78) and heterogeneous miscalibration in the type 2 diabetes cohort (E/O 0.32-2.70). Recalibration markedly improved calibration and reduced Brier scores, with little change in discrimination. In the type 2 diabetes cohort, recalibrated CKB-CVD classified 48.4% as high risk, with an observed 10-year risk of 25.7%.\n\n\nCONCLUSION\nWidely used 10-year CVD risk models showed acceptable or modest discrimination but substantial miscalibration in Chinese populations, especially among adults with type 2 diabetes. Recalibration is essential before threshold-based clinical or public-health use.",
+  "authors": "Xikang Fan, Jia-Xi Zhou, Mengxia Li, Yu Qin, P. Pei, Dianjianyi Sun, Canquing Yu, J. Lv",
+  "venue": "Diabetes, obesity and metabolism",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:China Kadoorie Biobank cardiov"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42571983"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "中国万人队列外部验证并重校准CVD风险模型，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "中国CKB与糖尿病队列外部验证并重校准SCORE2等模型",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "10年CVD风险模型验证与重校准",
+  "data": "CKB 42,937人；JBPCD 14,125人，随访约10–12年",
+  "scenario": "中国一般人群与T2D患者CVD风险预测",
+  "benchmark": "CKB-CVD、Globorisk、Framingham、WHO 2019、SCORE2-Diabetes",
+  "results": "一般人群C统计量0.723–0.778，T2D人群0.584–0.629；原模型校准差，一般人群E/O 1.47–3.78，系统性高估风险",
+  "availability": "",
+  "limitations": "T2D队列区分度较低；部分模型校准异质，需重校准",
+  "summary": "研究评估中国一般人群和2型糖尿病人群中常用10年心血管风险预测模型的表现。基于CKB和JBPCD两个前瞻队列，比较多个模型并用IPCW C统计量、E/O和Brier评分评价。结果显示一般人群区分度优于T2D人群，原模型普遍校准不良并存在系统性高估。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

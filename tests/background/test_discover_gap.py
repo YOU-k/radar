@@ -132,3 +132,20 @@ def test_gap_fallback_and_llm(spec, tmp_path):
     assert plan2.snowball_ids == ["doi:10.1000/paper1"]
     plan3 = plan_round(spec, st, Outline.from_spec(spec), 2, FakeLLM(fail_tasks={"gap"}))
     assert plan3.queries == spec.queries  # LLM 失败退化到规则
+
+
+def test_s2_snowball_tolerates_null_data():
+    """S2 对出版商屏蔽参考文献的论文（如 Lancet）返回 {"data": null}，不能让整个源崩掉。"""
+    from radar.background.discover import S2Snowball
+    from radar.background.models import DiscoveryPlan
+    from radar.background.spec import TopicSpec
+
+    def get(url, params=None):
+        if url.endswith("/references"):
+            return {"data": None}
+        if url.endswith("/citations"):
+            return {"data": [{"citingPaper": {"title": "C", "externalIds": {"DOI": "10.1/c"}}}]}
+        return {"title": "Seed", "externalIds": {"DOI": "10.1/s"}}
+    spec = TopicSpec(slug="t", name="t", seeds=["doi:10.1/s"])
+    out = S2Snowball(get_json=get, sleep=0).fetch(spec, DiscoveryPlan(snowball_ids=["doi:10.1/s"]))
+    assert {c.id for c in out} == {"doi:10.1/s", "doi:10.1/c"}

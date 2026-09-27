@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehad161",
+  "title": "Proteomics and lipidomics in atherosclerotic cardiovascular disease risk prediction",
+  "url": "https://doi.org/10.1093/eurheartj/ehad161",
+  "abstract": "Graphical Abstract Graphical Abstract Proteomics and lipidomics improve traditional ASCVD risk prediction. Plasma proteomics and lipidomics hold a major promise in improving ASCVD risk prediction offering high-throughput assessment using different techniques. Albeit retrospectively, large proteomic and lipidomic studies have consistently demonstrated improved ASCVD risk prediction in terms of discrimination and reclassification benefit compared to risk scoring with clinical characteristics. Future studies into clinical utility are needed for widespread clinical implementation. ASCVD, atherosclerotic cardiovascular disease; AUC, area under the receiver operating curve; non-HDL-C, non-high-density lipoprotein cholesterol; SCORE2, Systematic COronary Risk Evaluation 2 system; SMART2, Second Manifestations of ARTerial disease 2; LC-MS, liquid chromatography–mass spectrometry; MS, mass spectrometry.",
+  "authors": "N. Nurmohamed, J. Kraaijenhof, M. Mayr, Stephen J. Nicholls, W. Koenig, A. Catapano, E. Stroes",
+  "venue": "European Heart Journal",
+  "year": 2023,
+  "citations": 133,
+  "found_by": [
+   "s2kw:plasma proteomics cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:36988179"
+   ],
+   "pmcid": "PMC10163980"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "EHJ综述，系统总结蛋白组脂质组改善ASCVD风险预测，方法学参考价值高",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHJ综述，蛋白组脂质组改善ASCVD预测，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述：蛋白组与脂质组风险预测证据整合",
+  "data": "综述，涵盖血浆蛋白组和脂质组研究",
+  "scenario": "ASCVD一级和二级预防风险分层",
+  "benchmark": "Framingham、SCORE2、SMART2等临床风险算法",
+  "results": "指出现有临床评分准确性有限；蛋白组和脂质组有潜力但尚未被指南采纳",
+  "availability": "",
+  "limitations": "为综述，无原始模型验证；靶向panel尚未进入指南",
+  "summary": "文章综述靶向血浆蛋白组和脂质组能否改善ASCVD风险预测。讨论发现、靶向检测流程及现有临床评分局限，并总结蛋白和脂质标志物研究进展。结论认为这些组学方法有前景，但尚未被当前预防指南采用。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehac093",
+  "title": "A polygenic risk score improves risk stratification of coronary artery disease: a large-scale prospective Chinese cohort study",
+  "url": "https://doi.org/10.1093/eurheartj/ehac093",
+  "abstract": "Abstract Aims To construct a polygenic risk score (PRS) for coronary artery disease (CAD) and comprehensively evaluate its potential in clinical utility for primary prevention in Chinese populations. Methods and results Using meta-analytic approach and large genome-wide association results for CAD and CAD-related traits in East Asians, a PRS comprising 540 genetic variants was developed in a training set of 2800 patients with CAD and 2055 controls, and was further assessed for risk stratification for CAD integrating with the guideline-recommended clinical risk score in large prospective cohorts comprising 41 271 individuals. During a mean follow-up of 13.0 years, 1303 incident CAD cases were identified. Individuals with high PRS (the highest 20%) had about three-fold higher risk of CAD than the lowest 20% (hazard ratio 2.91, 95% confidence interval 2.43–3.49), with the lifetime risk of 15.9 and 5.8%, respectively. The addition of PRS to the clinical risk score yielded a modest yet significant improvement in C-statistic (1%) and net reclassification improvement (3.5%). We observed significant gradients in both 10-year and lifetime risk of CAD according to the PRS within each clinical risk strata. Particularly, when integrating high PRS, intermediate clinical risk individuals with uncertain clinical decision for intervention would reach the risk levels (10-year of 4.6 vs. 4.8%, lifetime of 17.9 vs. 16.6%) of high clinical risk individuals with intermediate (20–80%) PRS. Conclusion The PRS could stratify individuals into different trajectories of CAD risk, and further refine risk stratification for CAD within each clinical risk strata, demonstrating a great potential to identify high-risk individuals for targeted intervention in clinical utility.",
+  "authors": "Xiangfeng Lu, Zhongying Liu, Qingmei Cui, Fang-Chao Liu, Jianxin Li, Xiaoge Niu, Chong Shen, D. Hu",
+  "venue": "European Heart Journal",
+  "year": 2022,
+  "citations": 18,
+  "found_by": [
+   "s2:references:doi:10.1161/cir.0000000000001077"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:35195259"
+   ],
+   "pmcid": "PMC9076396"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "中国4万人队列CAD PRS，东亚人群临床效用验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "中国 4 万人队列 CAD PRS，东亚人群关键证据",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "东亚人群metaPRS构建与前瞻验证",
+  "data": "训练2800 CAD/2055对照；验证China-PAR 41271人",
+  "scenario": "中国人群冠心病风险分层",
+  "benchmark": "China-PAR临床风险方程",
+  "results": "metaPRS可改善CAD风险分层；评估终生风险轨迹及超越临床风险预测",
+  "availability": "",
+  "limitations": "主要中国人群；需更多种族验证；PRS临床效用待明确",
+  "summary": "研究构建东亚人群冠心病多基因风险评分并在大型中国前瞻队列中验证其风险分层价值。利用2800例CAD和2055例对照训练metaPRS，在China-PAR项目41271名参与者中评估其与临床风险评分结合对CAD终生风险轨迹的影响。结果显示metaPRS可改善CAD风险分层，并可能超越现有临床风险预测。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.eclinm.2026.104159",
+  "title": "Integration of lipidomic and polygenic risk scores within contemporary clinical cardiovascular risk assessment pathways: a multi-cohort development and validation study",
+  "url": "https://doi.org/10.1016/j.eclinm.2026.104159",
+  "abstract": "Summary Background Guideline-recommended clinical risk scores such as AusCVDRisk underestimate cardiovascular disease (CVD) risk in a substantial proportion of individuals who later experience events, with up to 65% initially classified as low or intermediate risk. This limitation is most consequential in the intermediate-risk group, where treatment decisions are uncertain and additional risk refinement could alter management. Circulating lipid species and inherited genetic variation capture complementary molecular aspects of atherosclerotic risk that are not fully reflected by conventional clinical variables, but are not routinely incorporated into primary-care risk assessment. We investigated whether selective integration of lipidomic and genomic risk signals into AusCVDRisk improves 5-year CVD prediction and reclassification, with a focus on individuals at intermediate clinical risk. Methods A lipidomic score comprising 689 lipid species measured by liquid chromatography–tandem mass spectrometry was derived using regularised Cox regression in 8082 participants from the Australian Diabetes, Obesity and Lifestyle Study (1999–2000). A genome-wide coronary artery disease polygenic score (PGS002048; 762,124 variants) was optimised in 3328 participants from the Busselton Health Study (1994–95). Each score was adjusted for AusCVDRisk predictors to isolate independent effects and incorporated into Cox models retaining the AusCVDRisk linear predictor as a fixed offset, generating lipidomic-enhanced (L.CVDRisk), genomic-enhanced (G.CVDRisk), and combined (LG.CVDRisk) scores. Internal and external validation was performed across five Australian cohorts totalling 13,521 adults without baseline CVD. Discrimination (Harrell’s concordance index; C-statistic), calibration, categorical net reclassification improvement (NRI), and decision-curve analyses were assessed. Findings LG.CVDRisk showed modest gains in discrimination compared with AusCVDRisk (pooled ΔC among intermediate-risk individuals 0.071, 95% CI 0.033–0.109; overall 0.012, 95% CI 0.000–0.024). Risk classification improved substantially (pooled NRI in the intermediate-risk group 0.305, 95% CI 0.212–0.397; overall 0.080, 95% CI 0.031–0.129), with net event and non-event reclassification of 38.2% (95% CI 29.3–47.0%) and −6.8% (95% CI −9.3 to −4.2%) among intermediate-risk individuals. Decision-curve analysis showed the greatest net benefit when molecular profiling was selectively applied to individuals with intermediate AusCVDRisk (5–<10%). In a coronary imaging cohort, LG.CVDRisk reclassified 17 (41%) of 41 intermediate-risk individuals with extensive coronary calcification into the high-risk category. Interpretation Selective augmentation of an established clinical risk algorithm with lipidomic and genomic information improves cardiovascular risk stratification among individuals at intermediate baseline risk. This approach supports targeted molecular testing within existing primary-care pathways to inform personalised prevention. Funding National Heart Foundation, Australia, Australian Government Medical Research Future Fund, National Health and Medical Research Council, Victorian Government.",
+  "authors": "Aleksandar Dakic, Jing-Qin Wu, Ting-Ting Wang, Thomas G Meikle, K. Huynh, C. Yi, Habtamu B. Beyene, Agus Salim",
+  "venue": "EClinicalMedicine",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1093/eurheartj/ehab309"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42676848"
+   ],
+   "pmcid": "PMC13528312"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "脂质组+PRS多队列开发验证，契合多组学风险预测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "脂质组+PRS多队列开发验证，改进临床风险分层，方向核心",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "脂质组学+多基因风险评分整合临床风险模型",
+  "data": "多澳大利亚队列；AusCVDRisk路径；外部验证队列",
+  "scenario": "中间风险人群CVD风险再分层",
+  "benchmark": "AusCVDRisk等指南推荐临床风险评分",
+  "results": "联合脂质组学-基因组模型显著改善中间风险者再分层，正确上调未来事件，识别亚临床斑块负担者；条件性检测临床获益最大",
+  "availability": "",
+  "limitations": "需前瞻性真实世界验证；脂质组学平台可扩展性受限",
+  "summary": "研究将脂质组学和多基因风险组分嵌入现有临床心血管风险评估路径。基于多澳大利亚队列，在AusCVDRisk基础上加入高维脂质组学和基因组信息，并用机器学习与生存模型整合。发现联合模型可改善中间风险人群再分层，尤其能正确上调未来事件并识别亚临床斑块负担者。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

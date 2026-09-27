@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1001/jamacardio.2024.1178",
+  "title": "High Throughput Plasma Proteomics and Risk of Heart Failure and Frailty in Late Life.",
+  "url": "https://doi.org/10.1001/jamacardio.2024.1178",
+  "abstract": "Importance\nHeart failure (HF) and frailty frequently coexist and may share a common pathobiology, although the underlying mechanisms remain unclear. Understanding these mechanisms may provide guidance for preventing and treating both conditions.\n\n\nObjective\nTo identify shared pathways between incident HF and frailty in late life using large-scale proteomics.\n\n\nDesign, Setting, and Participants\nIn this cohort study, 4877 aptamers (Somascan v4) were measured among participants in the community-based longitudinal Atherosclerosis Risk In Communities (ARIC) cohort study at visit 3 (V3; 1993-1995; n = 10 638) and at visit 5 (V5; 2011-2013; n = 3908). Analyses were externally replicated among 3189 participants in the Cardiovascular Health Study (CHS). Data analysis was conducted from February 2022 to June 2023.\n\n\nExposures\nProtein aptamers, measured at study V3 and V5.\n\n\nMain Outcomes and Measures\nOutcomes assessed included incident HF hospitalization after V3 and after V5, prevalent frailty at V5, and incident frailty between V5 and visit 6 (V6; 2016-2017; n = 4131). Frailty was assessed using the Fried criteria. Analyses were adjusted for age, gender, race, field center, hypertension, diabetes, smoking status, body mass index, estimated glomerular filtration rate, prevalent coronary heart disease, prevalent atrial fibrillation, and history of myocardial infarction. Mendelian randomization (MR) analysis was performed to assess potential causal effects of candidate proteins on HF and frailty.\n\n\nResults\nA total of 4877 protein aptamers were measured among 10 638 participants at V3 (mean [SD] age, 60 [6] years; 4886 [46%] men). Overall, 286 proteins were associated with incident HF after V3 (822 events; P < 1.0 × 10-5), 83 of which were also associated with incident after V5 (336 events; P < 1.7 × 10-4). Among HF-free participants at V5 (n = 3908; mean [SD] age, 75 [5] years; 1861 [42%] men), 48 of 83 HF-associated proteins were associated with prevalent frailty (223 cases; P < 6.0 × 10-4), 18 of which were also associated with incident frailty at V6 (152 cases; P < 1.0 × 10-3). These proteins enriched fibrosis and inflammation pathways and demonstrated stronger associations with incident HF with preserved ejection fraction (HFpEF) than HF with reduced ejection fraction. All 18 proteins were associated with both prevalent frailty and incident HF in CHS. MR identified potential causal effects of several proteins on frailty and HF.\n\n\nConclusions and Relevance\nIn this study, the proteins associated with risk of HF and frailty enrich for pathways related to inflammation and fibrosis as well as risk of HFpEF. Several of these proteins could potentially contribute to the shared pathophysiology of frailty and HF.",
+  "authors": "D. Ramonfaur, Leo F. Buckley, V. Arthur, Yimin Yang, B. Claggett, C. Ndumele, Keenan A. Walker, Thomas R. Austin",
+  "venue": "JAMA cardiology",
+  "year": 2024,
+  "citations": 21,
+  "found_by": [
+   "s2kw:biobank plasma proteomics Olin"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:38809565"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "ARIC万人队列SomaScan蛋白组，心衰与衰弱共享通路，外部重复验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "ARIC万人队列SomaScan蛋白组，心衰与衰弱共享通路，JAMA子刊",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "大规模血浆蛋白组学+孟德尔随机化",
+  "data": "ARIC队列4877个aptamer，V3 n=10638、V5 n=3908；CHS n=3189",
+  "scenario": "社区老年心衰与衰弱风险",
+  "benchmark": "外部复制CHS队列；MR评估因果",
+  "results": "识别心衰与衰弱共享通路；MR评估候选蛋白对心衰/衰弱的潜在因果效应",
+  "availability": "",
+  "limitations": "观察性设计；蛋白检测平台与时间点差异；因果推断依赖MR假设",
+  "summary": "研究旨在利用大规模血浆蛋白组学识别老年新发心衰与衰弱的共享通路。在ARIC队列V3和V5测量4877个Somascan v4 aptamer，并在CHS外部复制，同时用孟德尔随机化评估候选蛋白的潜在因果效应。分析发现心衰与衰弱存在共享生物学通路，并提示部分蛋白可能具有因果作用。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circulationaha.116.022367",
+  "title": "Predicting the 10-Year Risks of Atherosclerotic Cardiovascular Disease in Chinese Population: The China-PAR Project (Prediction for ASCVD Risk in China)",
+  "url": "https://doi.org/10.1161/CIRCULATIONAHA.116.022367",
+  "abstract": "Background: The accurate assessment of individual risk can be of great value to guiding and facilitating the prevention of atherosclerotic cardiovascular disease (ASCVD). However, prediction models in common use were formulated primarily in white populations. The China-PAR project (Prediction for ASCVD Risk in China) is aimed at developing and validating 10-year risk prediction equations for ASCVD from 4 contemporary Chinese cohorts. Methods: Two prospective studies followed up together with a unified protocol were used as the derivation cohort to develop 10-year ASCVD risk equations in 21 320 Chinese participants. The external validation was evaluated in 2 independent Chinese cohorts with 14 123 and 70 838 participants. Furthermore, model performance was compared with the Pooled Cohort Equations reported in the American College of Cardiology/American Heart Association guideline. Results: Over 12 years of follow-up in the derivation cohort with 21 320 Chinese participants, 1048 subjects developed a first ASCVD event. Sex-specific equations had C statistics of 0.794 (95% confidence interval, 0.775–0.814) for men and 0.811 (95% confidence interval, 0.787–0.835) for women. The predicted rates were similar to the observed rates, as indicated by a calibration &khgr;2 of 13.1 for men (P=0.16) and 12.8 for women (P=0.17). Good internal and external validations of our equations were achieved in subsequent analyses. Compared with the Chinese equations, the Pooled Cohort Equations had lower C statistics and much higher calibration &khgr;2 values in men. Conclusions: Our project developed effective tools with good performance for 10-year ASCVD risk prediction among a Chinese population that will help to improve the primary prevention and management of cardiovascular disease.",
+  "authors": "Xueli Yang, Jianxin Li, D. Hu, Ji-Chun Chen, Y. Li, Jian-Feng Huang, Xiao-qing Liu, Fang-Chao Liu",
+  "venue": "Circulation",
+  "year": 2016,
+  "citations": 582,
+  "found_by": [
+   "seed"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:27682885"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "China-PAR中国万人队列ASCVD预测方程，含外部验证，方向核心参考",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "中国人群ASCVD风险方程，跨人群校准必读，被广泛引用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "前瞻性队列推导并验证10年ASCVD风险方程",
+  "data": "4个中国队列，推导21320人，外部验证14123与70838人",
+  "scenario": "中国人群10年ASCVD风险预测",
+  "benchmark": "对比ACC/AHA指南Pooled Cohort Equations",
+  "results": "男性C统计量0.794，女性0.811；校准χ²男13.1(P=0.16)、女12.8(P=0.17)；12年随访1048例首发ASCVD",
+  "availability": "",
+  "limitations": "全文未获取，仅摘要；模型主要基于中国人群，外推性待验证",
+  "summary": "该研究旨在为中国人群开发并验证10年动脉粥样硬化性心血管疾病(ASCVD)风险预测方程。研究基于4个中国当代队列，以21320人推导方程，并在14123人和70838人的独立队列中外部验证，同时与美国Pooled Cohort Equations比较。结果显示性别特异性方程区分度良好(男性C=0.794，女性C=0.811)，预测率与观察率接近，校准良好。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

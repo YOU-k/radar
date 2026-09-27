@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.ahj.2023.06.009",
+  "title": "Incorporating a Polygenic Risk Score-Triaged Coronary Calcium Score into Cardiovascular Disease Examinations to Identify SubClinicAL coronAry arTEry Disease (ESCALATE): Protocol for a Prospective, Non-Randomised Implementation Trial.",
+  "url": "https://doi.org/10.1016/j.ahj.2023.06.009",
+  "abstract": "BACKGROUND\nIdentifying and targeting established modifiable risk factors has been a successful strategy for reducing the burden of coronary artery disease (CAD) at the population-level. However, up to one-in-four patients who present with ST elevation myocardial infarction do so in the absence of such risk factors. Polygenic risk scores (PRS) have demonstrated an ability to improve risk prediction models independent of traditional risk factors and self-reported family history, but a pathway for implementation has yet to be clearly identified. The aim of this study is to examine the utility of a CAD PRS to identify individuals with subclinical CAD via a novel clinical pathway, triaging low or intermediate absolute risk individuals for non-invasive coronary imaging, and examining the impact on shared treatment decisions and participant experience.\n\n\nTRIAL DESIGN\nThe ESCALATE study is a 12-month, prospective, multi-centre implementation study incorporating PRS into otherwise standard primary care CVD risk assessments, to identify patients at increased lifetime CAD risk for non-invasive coronary imaging. One-thousand eligible participants aged 45-65 years old will enter the study, which applies PRS to those considered low or moderate 5-year absolute CVD risk and triages those with CAD PRS ≥80% for a coronary calcium scan. The primary outcome will be the identification of subclinical CAD, defined as a coronary artery calcium score (CACS) >0 Agatston units (AU). Multiple secondary outcomes will be assessed, including baseline CACS ≥100 AU or ≥75th age-/sex-matched percentile, the use and intensity of lipid- and blood pressure-lowering therapeutics, cholesterol and blood pressure levels, and health-related quality of life (HRQOL).\n\n\nCONCLUSION\nThis novel trial will generate evidence on the ability of a PRS-triaged CACS to identify subclinical CAD, as well as subsequent differences in traditional risk factor medical management, pharmacotherapy utilisation, and participant experience.\n\n\nTRIAL REGISTRATION\nAustralian New Zealand Clinical Trials Registry, ACTRN12622000436774. Trial was prospectively registered on 18th March 2022. https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=383134.",
+  "authors": "M. Gray, Y. Berman, G. Bottà, S. Grieve, A. Ho, Jessica Hu, K. Hyun, J. Ingles",
+  "venue": "American Heart Journal",
+  "year": 2023,
+  "citations": 20,
+  "found_by": [
+   "s2kw:polygenic risk score coronary "
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:37364748"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PRS分层冠脉钙化筛查实施试验方案，含临床转化路径",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "PRS分诊冠脉钙化筛查实施试验方案，转化路径可复用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PRS分诊冠脉钙化评分实施试验",
+  "data": "1000名45-65岁低/中危人群；12个月多中心",
+  "scenario": "初级保健识别亚临床冠脉病",
+  "benchmark": "标准初级保健CVD风险评估",
+  "results": "CAD PRS≥80%者转诊CACS；主要结局CACS>0 AU",
+  "availability": "",
+  "limitations": "非随机；样本1000；实施与随访期短",
+  "summary": "ESCALATE研究将冠脉多基因风险评分纳入初级保健CVD风险评估，以识别亚临床冠脉病。1000名45-65岁低或中等5年绝对风险者接受PRS，PRS≥80%者转诊非侵入性冠脉钙化扫描。主要结局为CACS>0 AU，并评估共享治疗决策和参与者体验。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

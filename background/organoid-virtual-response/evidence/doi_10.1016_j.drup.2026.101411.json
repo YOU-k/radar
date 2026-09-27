@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.drup.2026.101411",
+  "title": "Patient-derived ovarian cancer organoids as platforms for predicting platinum resistance and screening tumor stem cell inhibitors.",
+  "url": "https://doi.org/10.1016/j.drup.2026.101411",
+  "abstract": "BACKGROUND\nOvarian cancer is the deadliest gynecological malignancy, with platinum-based chemotherapy being the standard treatment. However, most patients develop resistance to platinum treatment, making it essential to evaluate chemotherapy sensitivity.\n\n\nMETHODS\nPatient-derived ovarian cancer organoids (OCOs) from primary or metastatic tumor tissues and malignant effusions were validated by histopathological and molecular profiling. The correlation between organoid drug sensitivity test results and clinical outcomes was evaluated based on longitudinal follow-up data. An AI model integrating multimodal omics data and treatment trajectories was developed to predict platinum-sensitive versus resistant recurrence following therapy. Aldehyde Dehydrogenase 1 Family Member A1 (ALDH1A1) -related analysis identified genes associated with chemotherapy prognosis, and these findings informed AI-assisted high-throughput screening of candidate inhibitors, which were subsequently validated in cell lines and OCOs.\n\n\nRESULTS\nA total of 191 patient-derived organoid models were generated from 123 ovarian cancer patients, including those from primary tumors, metastatic lesions, and malignant effusion. In vitro sensitivity testing with platinum-based chemotherapy agents was conducted with follow-ups. Organoids derived from primary tumors showed the highest predictive accuracy, followed by metastatic lesions, while ascites-derived organoids demonstrated lower predictive ability. Additionally, long-term organoid culture and chemotherapy resistance were strongly associated with tumor stem cell ALDH1A1 expression, then inhibitors against ALDH1A1 were screened and validated in ovarian cancer cells and organoids.\n\n\nCONCLUSIONS\nOvarian cancer organoid drug sensitivity testing represents a potential precision medicine tool for predicting platinum response in patients, which could serve as a preclinical model for drug screening and validation. ALDH1A1, a key molecular marker of cancer stem cells, presents a viable therapeutic target; its inhibitors demonstrate potential efficacy against platinum-resistant ovarian tumors.",
+  "authors": "Ming-Xia Ye, Yawen Wu, Zexin Chen, Qing-Zhi Zhai, Li'an Li, Zhifeng Yan, Mingxia Li, Chenglei Gu",
+  "venue": "Drug resistance updates",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "s2:citations:doi:10.1101/2019.12.12.19014712"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42128460"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "患者来源卵巢癌类器官药敏预测铂耐药，含AI多模态建模与临床对应",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "患者来源卵巢癌类器官药敏预测铂耐药，含AI建模与临床结局对应",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "患者来源类器官药敏+AI多模态预测",
+  "data": "191个卵巢癌类器官，来自123例患者；多模态组学",
+  "scenario": "卵巢癌铂耐药预测与筛选",
+  "benchmark": "临床随访结局；原发灶、转移灶、腹水类器官对比",
+  "results": "原发肿瘤类器官预测准确性最高，其次转移灶，腹水来源类器官预测能力较低",
+  "availability": "",
+  "limitations": "腹水来源类器官预测能力较低；摘要未完整展示AI模型性能",
+  "summary": "研究评估患者来源卵巢癌类器官预测铂耐药和筛选肿瘤干细胞抑制剂的能力。作者构建191个类器官模型，结合药敏试验、随访数据和多模态组学AI模型预测铂敏感与耐药复发。结果显示原发肿瘤来源类器官预测准确性最高，转移灶次之，腹水来源较低。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2024.09.13.24313652",
+  "title": "A plasma proteomic signature for atherosclerotic cardiovascular disease risk prediction in the UK Biobank cohort",
+  "url": "https://doi.org/10.1101/2024.09.13.24313652",
+  "abstract": "Background: While risk stratification for atherosclerotic cardiovascular disease (ASCVD) is essential for primary prevention, current clinical risk algorithms demonstrate variability and leave room for further improvement. The plasma proteome holds promise as a future diagnostic and prognostic tool that can accurately reflect complex human traits and disease processes. We assessed the ability of plasma proteins to predict ASCVD. Method: Clinical, genetic, and high-throughput plasma proteomic data were analyzed for association with ASCVD in a cohort of 41,650 UK Biobank participants. Selected features for analysis included clinical variables such as a UK-based cardiovascular clinical risk score (QRISK3) and lipid levels, 36 polygenic risk scores (PRSs), and Olink protein expression data of 2,920 proteins. We used least absolute shrinkage and selection operator (LASSO) regression to select features and compared area under the curve (AUC) statistics between data types. Randomized LASSO regression with a stability selection algorithm identified a smaller set of more robustly associated proteins. The benefit of plasma proteins over standard clinical variables, the QRISK3 score, and PRSs was evaluated through the derivation of {Delta} AUC values. We also assessed the incremental gain in model performance using proteomic datasets with varying numbers of proteins. To identify potential causal proteins for ASCVD, we conducted a two-sample Mendelian randomization (MR) analysis. Result: The mean age of our cohort was 54.3 years, 53.3% were female, and 9.9% developed incident ASCVD over a median follow-up of 6.9 years. A protein-only LASSO model selected 294 proteins and returned an AUC of 0.723 (95% CI 0.708-0.737). A clinical variable and PRS-only LASSO model selected 4 clinical variables and 20 PRSs and achieved an AUC of 0.726 (95% CI 0.712-0.741). The addition of the full proteomic dataset to clinical variables and PRSs resulted in a {Delta} AUC of 0.010 (95% CI 0.003-0.018). Fifteen proteins selected by a stability selection algorithm offered improvement in ASCVD prediction over the QRISK3 risk score [{Delta} AUC: 0.013 (95% CI 0.005-0.021)]. Filtered and clustered versions of the full proteomic dataset (consisting of 600-1,500 proteins) performed comparably to the full dataset for ASCVD prediction. Using MR, we identified 12 proteins as potentially causal for ASCVD. Conclusion: A plasma proteomic signature performs well for incident ASCVD prediction but only modestly improves prediction over clinical and genetic factors. Further studies are warranted to better elucidate the clinical utility of this signature in predicting the risk of ASCVD over the standard practice of using the QRISK3 score.",
+  "authors": "Trisha P. Gupte, Z. Azizi, P. F. Kho, Jia-Yan Zhou, Ming-Li Chen, D. Panyard, R. Guarischi-Sousa, A. T. Hilliard",
+  "venue": "medRxiv",
+  "year": 2024,
+  "citations": 5,
+  "found_by": [
+   "s2kw:China Kadoorie Biobank cardiov",
+   "s2kw:UK Biobank plasma proteomics O"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:39314942"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 4万人血浆蛋白组预测ASCVD，契合蛋白组方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB四万人血浆蛋白组ASCVD风险预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LASSO与稳定性选择筛选血浆蛋白，MR分析",
+  "data": "UKB 41,650人；2,920 Olink蛋白；36 PRS",
+  "scenario": "ASCVD风险预测与因果蛋白识别",
+  "benchmark": "QRISK3、血脂、PRS；AUC与ΔAUC",
+  "results": "",
+  "availability": "",
+  "limitations": "摘要未给完整结果，蛋白检测成本高，因果推断依赖MR假设",
+  "summary": "研究评估血浆蛋白组对UK Biobank中ASCVD风险的预测价值。方法整合临床变量、QRISK3、血脂、36个PRS和2,920个Olink蛋白，采用LASSO及稳定性选择，并用两样本MR识别潜在因果蛋白。摘要未报告具体AUC或ΔAUC结果，但设计用于比较蛋白组相对传统临床评分和PRS的增量价值。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

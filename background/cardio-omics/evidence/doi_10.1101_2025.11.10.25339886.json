@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.11.10.25339886",
+  "title": "Multimodal Electronic Health Record Foundation Models with Electrocardiogram for Cardiovascular Disease Prediction",
+  "url": "https://doi.org/10.1101/2025.11.10.25339886",
+  "abstract": "Electronic health record (EHR) foundation models (FMs) have improved clinical task performance by learning comprehensive clinical context from sequential medical records called patient trajectories. However, existing multimodal approaches generate representations separately for each modality and integrate them only at the final prediction stage, without capturing temporal relationships across data types. Here, we propose TRIM, text-based representations for integrated multimodal trajectories, which converts unstructured data into text-based representations via their diagnostic reports and integrates them directly into patient trajectories. This enables EHR FMs to simultaneously analyze structured and unstructured longitudinal data while preserving temporal context. To develop and evaluate TRIM, we trained EHR FMs with electrocardiogram data to predict cardiovascular diseases (CVDs). TRIM-integrated EHR FMs improved overall CVD prediction performance. Model interpretation revealed that models prioritized ECG diagnostic information, focusing on clinically established risk factors. Survival analysis validated model decisions, with TRIM integration consistently increasing hazard ratios. TRIM provides a generalizable framework for integrating multimodal medical data into EHR FMs.",
+  "authors": "Junmo Kim, Young-Kwang Kim, Kwangsoo Kim",
+  "venue": "medRxiv",
+  "year": 2025,
+  "citations": 1,
+  "found_by": [
+   "s2kw:ECG deep learning foundation m"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "EHR+ECG多模态基础模型预测CVD，方法有整合新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHR+ECG多模态基础模型预测CVD，方法有创新",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "TRIM：将非结构化报告转为文本表征融入EHR轨迹",
+  "data": "EHR基础模型+ECG数据，预测心血管病",
+  "scenario": "多模态EHR心血管病预测",
+  "benchmark": "对比现有多模态EHR基础模型",
+  "results": "TRIM整合提升整体CVD预测性能；生存分析中风险比一致升高",
+  "availability": "",
+  "limitations": "仅摘要信息；未报告具体样本规模与外部验证",
+  "summary": "研究提出TRIM框架，将非结构化数据经诊断报告转为文本表征并直接融入患者轨迹。方法上训练带ECG的EHR基础模型预测心血管病，保留跨模态时间上下文。结果显示TRIM整合提升整体CVD预测性能，模型优先关注ECG诊断信息，生存分析验证其决策并使风险比一致升高。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-27"
+}

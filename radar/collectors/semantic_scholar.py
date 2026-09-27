@@ -60,7 +60,7 @@ def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
         except Exception as exc:
             print(f"[s2] citations for {pid} failed: {exc}")
             continue
-        for row in data.get("data", []):
+        for row in data.get("data") or []:
             p = row.get("citingPaper") or {}
             pub = p.get("publicationDate")
             if pub and pub < cutoff:
@@ -76,7 +76,7 @@ def collect(cfg: dict, freqs: dict[str, int]) -> list[Item]:
         except Exception as exc:
             print(f"[s2] author {aid} failed: {exc}")
             continue
-        for p in data.get("data", []):
+        for p in data.get("data") or []:
             pub = p.get("publicationDate")
             if pub and pub < cutoff:
                 continue

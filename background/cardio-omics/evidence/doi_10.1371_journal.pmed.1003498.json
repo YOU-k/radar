@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1371/journal.pmed.1003498",
+  "title": "Polygenic risk scores in cardiovascular risk prediction: A cohort study and modelling analyses",
+  "url": "https://doi.org/10.1371/journal.pmed.1003498",
+  "abstract": "Background Polygenic risk scores (PRSs) can stratify populations into cardiovascular disease (CVD) risk groups. We aimed to quantify the potential advantage of adding information on PRSs to conventional risk factors in the primary prevention of CVD. Methods and findings Using data from UK Biobank on 306,654 individuals without a history of CVD and not on lipid-lowering treatments (mean age [SD]: 56.0 [8.0] years; females: 57%; median follow-up: 8.1 years), we calculated measures of risk discrimination and reclassification upon addition of PRSs to risk factors in a conventional risk prediction model (i.e., age, sex, systolic blood pressure, smoking status, history of diabetes, and total and high-density lipoprotein cholesterol). We then modelled the implications of initiating guideline-recommended statin therapy in a primary care setting using incidence rates from 2.1 million individuals from the Clinical Practice Research Datalink. The C-index, a measure of risk discrimination, was 0.710 (95% CI 0.703–0.717) for a CVD prediction model containing conventional risk predictors alone. Addition of information on PRSs increased the C-index by 0.012 (95% CI 0.009–0.015), and resulted in continuous net reclassification improvements of about 10% and 12% in cases and non-cases, respectively. If a PRS were assessed in the entire UK primary care population aged 40–75 years, assuming that statin therapy would be initiated in accordance with the UK National Institute for Health and Care Excellence guidelines (i.e., for persons with a predicted risk of ≥10% and for those with certain other risk factors, such as diabetes, irrespective of their 10-year predicted risk), then it could help prevent 1 additional CVD event for approximately every 5,750 individuals screened. By contrast, targeted assessment only among people at intermediate (i.e., 5% to <10%) 10-year CVD risk could help prevent 1 additional CVD event for approximately every 340 individuals screened. Such a targeted strategy could help prevent 7% more CVD events than conventional risk prediction alone. Potential gains afforded by assessment of PRSs on top of conventional risk factors would be about 1.5-fold greater than those provided by assessment of C-reactive protein, a plasma biomarker included in some risk prediction guidelines. Potential limitations of this study include its restriction to European ancestry participants and a lack of health economic evaluation. Conclusions Our results suggest that addition of PRSs to conventional risk factors can modestly enhance prediction of first-onset CVD and could translate into population health benefits if used at scale.",
+  "authors": "Luan-Luan Sun, L. Pennells, S. Kaptoge, C. Nelson, S. Ritchie, Gad Abraham, M. Arnold, S. Bell",
+  "venue": "PLoS Medicine",
+  "year": 2021,
+  "citations": 151,
+  "found_by": [
+   "s2:references:doi:10.1038/s41591-023-02429-x"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:33444330"
+   ],
+   "pmcid": "PMC7808664"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 30万人PRS增益建模，含定量重分类分析。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB三十万人PRS增益与建模分析",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "构建PRS并建模他汀治疗人群影响",
+  "data": "UKB 306,654人；CPRD 210万人建模",
+  "scenario": "CVD一级预防风险分层与他汀决策",
+  "benchmark": "传统风险因素；CRP；指南他汀策略",
+  "results": "",
+  "availability": "",
+  "limitations": "PRS临床效用不确定，主要基于欧洲人群，建模依赖假设",
+  "summary": "研究评估多基因风险评分加入传统风险因素后对CVD预测和人群健康的影响。使用UKB 306,654人分析CHD和卒中PRS的判别与重分类增益，并用CPRD 210万人模拟按指南启动他汀的临床影响。研究还比较PRS与CRP的增量价值，以判断其在初级预防中的潜在收益。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

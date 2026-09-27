@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.jacadv.2025.102041",
+  "title": "Electrocardiogram-Based Artificial Intelligence to Identify Coronary Artery Disease.",
+  "url": "https://doi.org/10.1016/j.jacadv.2025.102041",
+  "abstract": "Background Coronary artery disease (CAD) results in substantial morbidity and mortality. Objectives The purpose of this study was to develop a deep learning model to detect CAD defined using diagnostic codes (\"ECG2CAD\") and identify people at risk for adverse events using electrocardiograms (ECGs) in a primary care setting. Methods ECG2CAD was trained on 764,670 ECGs representing 137,199 individuals at Massachusetts General Hospital (MGH). Model performance for discrimination of prevalent CAD was measured using area under the receiver operating characteristic curve (AUROC) and area under the precision-recall curve (AUPRC), and compared against model of age and sex, and Pooled Cohort Equations, in 3 test sets: MGH, Brigham and Women's Hospital (BWH), and UK Biobank. Subgroups were assessed for incident CAD-related events in a BWH primary care cohort. Results ECG2CAD was evaluated in MGH (N = 18,706 [6,051 cases], age 57 ± 16 years), BWH (N = 88,270 [27,898 cases], age 57 ± 16 years), and UK Biobank (N = 42,147 [1,509 cases], age 65 ± 8 years). ECG2CAD consistently discriminated prevalent CAD (MGH AUROC: 0.782; AUPRC: 0.639; BWH: AUROC: 0.747; AUPRC: 0.588; UK Biobank AUROC: 0.760; AUPRC: 0.155) and incrementally vs models based on age and sex or Pooled Cohort Equations (P  Conclusions Artificial intelligence-enabled analysis of the ECG may facilitate identification of individuals with possible undiagnosed CAD and inform downstream testing and preventive measures.",
+  "authors": "Kany S, Friedman SF, Al-Alusi M, Khurshid S, Rämö JT, Pipilas D, Pirruccello JP, Reeder C, Philippakis AA, Ho JE, Maddah M, Ellinor PT, Fahed AC.",
+  "venue": "JACC. Advances",
+  "year": 2025,
+  "citations": 7,
+  "found_by": [
+   "eupmc:ECG deep learning foundation m"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12337187",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Fahed AC",
+   "last_affil": "Cardiovascular Disease Initiative, Broad Institute of MIT and Harvard, Cambridge, Massachusetts, USA; Cardiovascular Research Center, Massachusetts General Hospital, Boston, Massachusetts, USA; Cardiology Division, Massachusetts General Hospital, Boston, Massachusetts, USA; Harvard Medical School, Boston, Massachusetts, USA. Electronic address: afahed@mgh.harvard.edu."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "137万人级ECG深度学习预测CAD，与PCE对比，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JACC子刊，76万ECG大队列CAD深度学习模型，含外部验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "卷积神经网络ECG2CAD，基于12导联ECG检测CAD",
+  "data": "MGB队列52.1万+9.9万人；外部UK Biobank 50.3万人",
+  "scenario": "初级保健CAD风险估计",
+  "benchmark": "对比临床风险评分及年龄性别模型",
+  "results": "",
+  "availability": "",
+  "limitations": "CAD定义依赖ICD编码；回顾性、单系统为主",
+  "summary": "研究假设基于标准12导联ECG的深度学习模型可检测冠脉疾病。方法上用C3PO与EWOC队列训练ECG2CAD卷积网络，并在MGH、BWH及UK Biobank外部验证。结果显示该模型对CAD具有判别力，且不劣于临床风险或年龄性别模型，并与CAD相关不良事件相关。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 4,
+ "added_on": "2026-09-27"
+}

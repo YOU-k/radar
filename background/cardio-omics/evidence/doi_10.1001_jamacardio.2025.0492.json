@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1001/jamacardio.2025.0492",
+  "title": "Artificial Intelligence-Enabled Prediction of Heart Failure Risk From Single-Lead Electrocardiograms.",
+  "url": "https://doi.org/10.1001/jamacardio.2025.0492",
+  "abstract": "Importance Despite the availability of disease-modifying therapies, scalable strategies for heart failure (HF) risk stratification remain elusive. Portable devices capable of recording single-lead electrocardiograms (ECGs) may enable large-scale community-based risk assessment. Objective To evaluate whether an artificial intelligence (AI) algorithm can predict HF risk from noisy single-lead ECGs. Design, setting, and participants A retrospective cohort study of individuals without HF at baseline was conducted among individuals with conventionally obtained outpatient ECGs in the integrated Yale New Haven Health System (YNHHS) and prospective population-based cohorts of the UK Biobank (UKB) and the Brazilian Longitudinal Study of Adult Health (ELSA-Brasil). Data analysis was performed from September 2023 to February 2025. Exposure AI-ECG-defined risk of left ventricular systolic dysfunction (LVSD). Main outcomes and measures Among individuals with ECGs, lead I ECGs were isolated and a noise-adapted AI-ECG model (to simulate ECG signals from wearable devices) trained to identify LVSD was deployed. The association of the model probability with new-onset HF, defined as the first HF hospitalization, was evaluated. The discrimination of AI-ECG was compared against 2 risk scores for new-onset HF (Pooled Cohort Equations to Prevent Heart Failure [PCP-HF] and Predicting Risk of Cardiovascular Disease Events [PREVENT] equations) using the Harrel C statistic, integrated discrimination improvement, and net reclassification improvement. Results There were 192 667 YNHHS patients (median [IQR] age, 56 [41-69] years; 111 181 women [57.7%]), 42 141 UKB participants (median [IQR] age, 65 [59-71] years; 21 795 women [51.7%]), and 13 454 ELSA-Brasil participants (median [IQR] age, 51 [45-58] years; 7348 women [54.6%]) with baseline ECGs. A total of 3697 (1.9%) developed HF in YNHHS over a median (IQR) of 4.6 (2.8-6.6) years, 46 (0.1%) in UKB over a median (IQR) of 3.1 (2.1-4.5) years, and 31 (0.2%) in ELSA-Brasil over a median (IQR) of 4.2 (3.7-4.5) years. A positive AI-ECG screening result for LVSD was associated with a 3- to 7-fold higher risk for HF, and each 0.1 increment in the model probability was associated with a 27% to 65% higher hazard across cohorts, independent of age, sex, comorbidities, and competing risk of death. AI-ECG's discrimination for new-onset HF was 0.723 (95% CI, 0.694-0.752) in YNHHS, 0.736 (95% CI, 0.606-0.867) in UKB, and 0.828 (95% CI, 0.692-0.964) in ELSA-Brasil. Across cohorts, incorporating AI-ECG predictions alongside PCP-HF and PREVENT equations was associated with a higher Harrel C statistic (difference in addition to PCP-HF, 0.080-0.107; difference in addition to PREVENT, 0.069-0.094). AI-ECG had an integrated discrimination improvement of 0.091 to 0.205 vs PCP-HF and 0.068 to 0.192 vs PREVENT; it had a net reclassification improvement of 18.2% to 47.2% vs PCP-HF and 11.8% to 47.5% vs PREVENT. Conclusions and relevance Across multinational cohorts, a noise-adapted AI-ECG model estimated HF risk using lead I ECGs, suggesting a potential HF risk-stratification strategy requiring prospective study using wearable and portable ECG devices.",
+  "authors": "Dhingra LS, Aminorroaya A, Pedroso AF, Khunte A, Sangha V, McIntyre D, Chow CK, Asselbergs FW, Brant LCC, Barreto SM, Ribeiro ALP, Krumholz HM, Oikonomou EK, Khera R.",
+  "venue": "JAMA cardiology",
+  "year": 2025,
+  "citations": 48,
+  "found_by": [
+   "eupmc:ECG deep learning foundation m"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12004248",
+   "is_oa": false,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Khera R",
+   "last_affil": "Section of Cardiovascular Medicine, Department of Internal Medicine, Yale School of Medicine, New Haven, Connecticut."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单导联ECG AI预测心衰，YNHHS与UK Biobank多队列验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "JAMA Cardiol，单导联ECG AI预测心衰，UKB外部验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "噪声自适应AI-ECG模型，从单导联I导预测LVSD风险",
+  "data": "YNHHS门诊ECG队列、UK Biobank、ELSA-Brasil前瞻队列",
+  "scenario": "社区心衰风险分层",
+  "benchmark": "对比PCP-HF与PREVENT心衰风险评分（Harrell C统计量）",
+  "results": "",
+  "availability": "",
+  "limitations": "回顾性设计；单导联模拟可穿戴信号存在噪声",
+  "summary": "研究评估AI算法能否用噪声单导联ECG预测心衰风险。方法上从门诊ECG分离I导联，部署噪声自适应AI-ECG模型识别左室收缩功能障碍，并在多队列中评估其与新发心衰的关联。结果显示该模型可对社区人群进行大规模心衰风险分层，并与现有风险评分进行比较。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-27"
+}

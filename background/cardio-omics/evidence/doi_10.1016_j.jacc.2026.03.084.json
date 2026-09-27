@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.jacc.2026.03.084",
+  "title": "ECG Signatures and Long-Term Ischemic Stroke Risk: A Deep Learning Analysis of 200,000 Patients.",
+  "url": "https://doi.org/10.1016/j.jacc.2026.03.084",
+  "abstract": "BACKGROUND\nScalable risk stratification for ischemic stroke remains an unmet need.\n\n\nOBJECTIVES\nIn this study, the authors sought to assess whether deep learning of 12-lead electrocardiograms (ECGs) can estimate longitudinal ischemic stroke risk and quantify the extent to which risk signals reflect plausible mechanisms (eg, atrial cardiopathy).\n\n\nMETHODS\nWe trained a convolutional neural network to estimate the 10-year risk of incident ischemic stroke with the use of 12-lead ECG among patients receiving longitudinal care at Massachusetts General Hospital (MGH). Neural network-derived stroke probabilities, age, and sex were integrated into a Cox proportional hazards model (\"ECG2Stroke\"). Within an MGH test set (\"MGH Test\"), as well as independent samples from Brigham and Women's Hospital (BWH) and Beth Israel Deaconess Medical Center (BIDMC), we assessed model discrimination (area under the curve [AUC]) and calibration (integrated calibration index [ICI]). ECG2Stroke was compared with the revised Framingham Stroke Risk Profile (FSRP). Saliency mapping, associations with clinical factors and structured ECG features, and performance across stroke subtypes were assessed.\n\n\nRESULTS\nECG2Stroke was developed in 101,496 individuals from MGH (age 57 ± 16 years, 48% women), and evaluated in MGH Test (n = 4,771; age 57 ± 16 years, 49% women), BWH (n = 68,884; age 57 ± 16 years, 55% women), and BIDMC (n = 29,882; age 56 ± 17 years, 54% women). At 10 years, there were 346 stroke events in MGH Test, 3,209 in BWH, and 1,236 in BIDMC. ECG2Stroke demonstrated moderate discrimination of incident stroke (10-year AUCs: MGH Test, 0.795; BWH, 0.774; BIDMC, 0.772) and low calibration error (ICIs: MGH Test, 0.030; BWH, 0.005; BIDMC, 0.026). In patients with available data, 10-year AUC for ECG2Stroke was similar to FSRP (MGH/BWH Test: ECG2Stroke, 0.791; FSRP, 0.779; BIDMC: ECG2Stroke, 0.745; FSRP, 0.728). Stratification persisted across subgroups, including patients with and without atrial fibrillation. Saliency maps highlighted the ECG P-wave, and risk estimates correlated with structured P-wave indices. ECG2Stroke was strongly associated with cardioembolic stroke (cause-specific HR: 2.17 per 1-SD of logit-transformed probability; 95% CI: 1.64-2.87) but not noncardioembolic stroke.\n\n\nCONCLUSIONS\nECG-based artificial intelligence (AI) can predict 10-year ischemic stroke with performance similar to a validated clinical score, possibly by encoding markers of abnormal atrial substrate linked to cardioembolism. AI-enabled ECG analysis may enable efficient prioritization for stroke prevention.",
+  "authors": "Rahul Mahajan, Danielle F. Pace, S. Friedman, S. Kany, V. Dsouza, A. Roshandelpoor, T. Kimball, Savvina Prapiadou",
+  "venue": "Journal of the American College of Cardiology",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2:citations:doi:10.1161/circulationaha.121.057480"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42126358"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "20万例ECG深度学习预测10年缺血性卒中，机制与外部验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "20万例ECG深度学习预测卒中，JACC，机制与筛查价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "12导联ECG卷积神经网络+Cox模型",
+  "data": "MGH 101496人训练；MGH Test 4771、BWH 68884、BIDMC 29882",
+  "scenario": "10年缺血性卒中风险分层",
+  "benchmark": "修订版Framingham卒中风险谱FSRP",
+  "results": "MGH 10年346例卒中；评估AUC与校准ICI；外部验证BWH/BIDMC；分析卒中亚型",
+  "availability": "",
+  "limitations": "回顾性；需更多前瞻验证；机制解释有限",
+  "summary": "研究评估深度学习12导联ECG能否估计长期缺血性卒中风险并反映潜在机制。在MGH训练卷积神经网络预测10年新发缺血性卒中，并将ECG概率、年龄和性别整合入Cox模型形成ECG2Stroke，在MGH测试集及BWH、BIDMC外部验证。模型与修订版Framingham卒中风险谱比较，评估区分度、校准、显著图及卒中亚型表现。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

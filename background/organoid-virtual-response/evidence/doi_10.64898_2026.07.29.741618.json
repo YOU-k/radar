@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.07.29.741618",
+  "title": "Systematic modeling of phenotypic drug response profiles in patient-derived organoids",
+  "url": "https://doi.org/10.64898/2026.07.29.741618",
+  "abstract": "Patient-derived tumor organoids provide a physiologically relevant 3D disease model for preclinical drug discovery, surpassing the limitations of conventional 2D cell lines. To better capture the dynamic nature of organoid drug responses, we developed a new systematic evaluation method called SCOPE (Systematic Classification of Organoids for Phenotypic Evaluation), harnessing phenotypic assessments from multi-timepoint 3D imaging data. By integrating artificial intelligence (AI)-based image analysis of organoid viability with tracking and mathematical modeling of organoid growth over time, we captured temporal-and dose-dependent dynamics of phenotypic changes, culminating in two novel metrics: a combined growth and viability (GV) score as well as a cytostatic-cytotoxic transition range (CCTR) that separates drug effects on organoid growth and viability. Our approach supports classification of specific drug responses into four distinct phenotypic groups: (1) cytotoxic, (2) cytostatic plus cytotoxic, (3) late cytotoxic, and (4) cytostatic. This novel drug evaluation system can identify previously unknown drug effects or new therapeutic use cases for existing drugs, facilitating the design of alternative therapeutic options to overcome efficacy or drug resistance challenges and improving the clinical applicability of organoid-based drug discovery results.",
+  "authors": "Seung-Jin Kim, E. Gunnarsson, Michael E. Doche, Yu-Yuan Zhou, Yu-Kai Huang, Scott Valena, Pratiksha Kshetri, Elizabeth Elton",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41698-021-00168-1"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42619910"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "类器官表型药响应系统建模，含AI与数学建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "类器官表型药响应系统建模，多时间点影像预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SCOPE系统分类类器官表型评估",
+  "data": "多时间点3D成像类器官表型数据",
+  "scenario": "类器官药物反应表型分类",
+  "benchmark": "",
+  "results": "提出GV评分与CCTR两个新指标，将药物反应分为四类：细胞毒、细胞静止加细胞毒、延迟细胞毒、细胞静止",
+  "availability": "",
+  "limitations": "",
+  "summary": "为更好捕捉类器官药物反应的动态特性，作者开发了SCOPE（Systematic Classification of Organoids for Phenotypic Evaluation）系统评估方法。该方法整合AI图像分析类器官活力与类器官生长追踪及数学建模，捕捉表型变化的时间与剂量依赖动态，提出GV评分和CCTR两个新指标。该体系可将药物反应分为四种表型组，识别既往未知药物效应或老药新用，提升类器官药物发现的临床适用性。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

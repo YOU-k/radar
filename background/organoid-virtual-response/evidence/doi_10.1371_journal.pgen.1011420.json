@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1371/journal.pgen.1011420",
+  "title": "Mouse-Geneformer: A deep learning model for mouse single-cell transcriptome and its cross-species utility",
+  "url": "https://doi.org/10.1371/journal.pgen.1011420",
+  "abstract": "Deep learning techniques are increasingly utilized to analyze large-scale single-cell RNA sequencing (scRNA-seq) data, offering valuable insights from complex transcriptome datasets. Geneformer, a pre-trained model using a Transformer Encoder architecture and human scRNA-seq datasets, has demonstrated remarkable success in human transcriptome analysis. However, given the prominence of the mouse, Mus musculus, as a primary mammalian model in biological and medical research, there is an acute need for a mouse-specific version of Geneformer. In this study, we developed a mouse-specific Geneformer (mouse-Geneformer) by constructing a large transcriptome dataset consisting of 21 million mouse scRNA-seq profiles and pre-training Geneformer on this dataset. The mouse-Geneformer effectively models the mouse transcriptome and, upon fine-tuning for downstream tasks, enhances the accuracy of cell type classification. In silico perturbation experiments using mouse-Geneformer successfully identified disease-causing genes that have been validated in in vivo experiments. These results demonstrate the feasibility of analyzing mouse data with mouse-Geneformer and highlight the robustness of the Geneformer architecture, applicable to any species with large-scale transcriptome data available. Furthermore, we found that mouse-Geneformer can analyze human transcriptome data in a cross-species manner. After the ortholog-based gene name conversion, the analysis of human scRNA-seq data using mouse-Geneformer, followed by fine-tuning with human data, achieved cell type classification accuracy comparable to that obtained using the original human Geneformer. In in silico simulation experiments using human disease models, we obtained results similar to human-Geneformer for the myocardial infarction model but only partially consistent results for the COVID-19 model, a trait unique to humans (laboratory mice are not susceptible to SARS-CoV-2). These findings suggest the potential for cross-species application of the Geneformer model while emphasizing the importance of species-specific models for capturing the full complexity of disease mechanisms. Despite the existence of the original Geneformer tailored for humans, human research could benefit from mouse-Geneformer due to its inclusion of samples that are ethically or technically inaccessible for humans, such as embryonic tissues and certain disease models. Additionally, this cross-species approach indicates potential use for non-model organisms, where obtaining large-scale single-cell transcriptome data is challenging. Author Summary Researchers have developed Geneformer, a powerful tool that utilizes advanced deep learning techniques and large-scale single-cell transcriptome data to analyze human cell genetic activity. However, given the extensive use of mice (Mus musculus) in medical and biology research, there is a need for a similar tool tailored to this model organism. To address this gap, we developed mouse-Geneformer, an adaptation of Geneformer trained on a large dataset of mouse single-cell RNA sequencing data obtained from 20 million cells. Mouse-Geneformer demonstrates high accuracy in identifying distinct cell types and predicting disease-causing genes in gene manipulation simulation experiments. Moreover, mouse-Geneformer exhibited comparable accuracy to the original human Geneformer, even when applied to human cell data, suggesting its potential for cross-species use. For instance, it performed well in studying heart disease but was less consistent with COVID-19, likely due to the differences between species in how they react to the virus. Overall, mouse-Geneformer could be a valuable resource for studying not only mice but also other animals, especially when large-scale data are challenging to obtain. Furthermore, this cross-species approach may probe beneficial in human research, especially for tissues that are difficult to access, such as embryonic samples.",
+  "authors": "Keita Ito, Tsubasa Hirakawa, S. Shigenobu, H. Fujiyoshi, Takayoshi Yamashita",
+  "venue": "bioRxiv",
+  "year": 2024,
+  "citations": 8,
+  "found_by": [
+   "s2kw:cross-species single-cell foun"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:40106407"
+   ],
+   "pmcid": "PMC11964219"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "小鼠单细胞基础模型并具跨物种效用，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "小鼠单细胞基础模型及跨物种迁移，契合方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "小鼠版Geneformer预训练Transformer模型",
+  "data": "小鼠scRNA-seq，1089数据集，过滤前1.19亿细胞",
+  "scenario": "小鼠转录组与跨物种应用",
+  "benchmark": "原始人类Geneformer",
+  "results": "构建mouse-Genecorpus-20M，实现细胞类型分类与in silico扰动，并探索跨物种应用",
+  "availability": "",
+  "limitations": "仅用健康野生型小鼠数据；跨物种应用需进一步验证",
+  "summary": "构建小鼠版Geneformer，基于Transformer编码器与Rank Value Encoding。使用1089个数据集、过滤前1.19亿细胞构建mouse-Genecorpus-20M进行自监督预训练。评估其在细胞类型分类与in silico扰动中的效用，并探索跨物种应用潜力。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

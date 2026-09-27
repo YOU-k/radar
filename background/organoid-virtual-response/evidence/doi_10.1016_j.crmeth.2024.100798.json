@@ -1,0 +1,55 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.crmeth.2024.100798",
+  "title": "Design optimization of geometrically confined cardiac organoids enabled by machine learning techniques.",
+  "url": "https://doi.org/10.1016/j.crmeth.2024.100798",
+  "abstract": "Summary Stem cell organoids are powerful models for studying organ development, disease modeling, drug screening, and regenerative medicine applications. The convergence of organoid technology, tissue engineering, and artificial intelligence (AI) could potentially enhance our understanding of the design principles for organoid engineering. In this study, we utilized micropatterning techniques to create a designer library of 230 cardiac organoids with 7 geometric designs. We employed manifold learning techniques to analyze single organoid heterogeneity based on 10 physiological parameters. We clustered and refined the cardiac organoids based on their functional similarity using unsupervised machine learning approaches, thus elucidating unique functionalities associated with geometric designs. We also highlighted the critical role of calcium transient rising time in distinguishing organoids based on geometric patterns and clustering results. This integration of organoid engineering and machine learning enhances our understanding of structure-function relationships in cardiac organoids, paving the way for more controlled and optimized organoid design.",
+  "authors": "Kowalczewski A, Sun S, Mai NY, Song Y, Hoang P, Liu X, Yang H, Ma Z.",
+  "venue": "Cell reports methods",
+  "year": 2024,
+  "citations": 11,
+  "found_by": [
+   "eupmc:organoid image-based phenotypi",
+   "s2kw:cardiac organoid drug screenin"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11228370",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Ma Z",
+   "last_affil": "Department of Biomedical & Chemical Engineering, Syracuse University, Syracuse, NY, USA; BioInspired Syracuse Institute for Material and Living Systems, Syracuse University, Syracuse, NY, USA. Electronic address: zma112@syr.edu."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "机器学习优化几何约束心脏类器官设计，含建模与功能读出",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "机器学习优化心脏类器官几何设计，含建模与功能预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "微图案化+流形学习/聚类/集成学习",
+  "data": "230个心脏类器官，7种几何设计，10项功能变量",
+  "scenario": "心脏类器官几何设计优化",
+  "benchmark": "不同几何设计间功能比较；无监督聚类与监督ML",
+  "results": "基于收缩运动与钙瞬变分析10变量；无监督细化降低异质性并识别形状决定功能属性",
+  "availability": "",
+  "limitations": "仅分化第20天；样本量与几何设计有限；未验证长期功能",
+  "summary": "作者构建7种几何设计的心脏类器官库并评估几何对功能影响。用微图案化生成230个类器官，采集收缩运动与钙瞬变10项变量，结合流形学习、无监督聚类和集成学习分析。发现AI流程可无偏降低异质性并识别形状决定生理属性，为类器官设计优化提供依据。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

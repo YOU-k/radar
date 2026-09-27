@@ -1,0 +1,34 @@
+[
+ {
+  "seed_hit": 0.5,
+  "saturation": 0.444,
+  "highcite": 0.4,
+  "score": 0.443,
+  "n_evidence": 35,
+  "round": 1
+ },
+ {
+  "seed_hit": 0.5,
+  "saturation": 0.444,
+  "highcite": 0.48,
+  "score": 0.475,
+  "n_evidence": 71,
+  "round": 2
+ },
+ {
+  "seed_hit": 0.5,
+  "saturation": 0.444,
+  "highcite": 0.46,
+  "score": 0.467,
+  "n_evidence": 90,
+  "round": 3
+ },
+ {
+  "seed_hit": 0.5,
+  "saturation": 0.444,
+  "highcite": 0.46,
+  "score": 0.467,
+  "n_evidence": 94,
+  "round": 4
+ }
+]

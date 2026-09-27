@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1158/1538-7445.am2026-494",
+  "title": "Abstract 494: Multi-omics patient-derived organoid embeddings predict targeted therapy response and KRAS inhibitor sensitivity.",
+  "url": "https://doi.org/10.1158/1538-7445.am2026-494",
+  "abstract": "\n Clinical trials remain a major bottleneck in contemporary drug development. Functional assays based on patient-derived organoids (PDOs) are a promising tool to derisk clinical trials, but their impact has been limited by small cohort sizes and a lack of systematic validation. Using the largest cohort of matched PDOs, longitudinal clinical data, transcriptomic data and WGS data, we generate multi-modal patient representations. We then evaluate how large collections of these representations can be used to characterize drug response phenotypes and to map how tumor-intrinsic features relate to sensitivity to targeted therapies, with a particular emphasis on KRAS inhibition. Methods: We assembled 135 PDOs from colorectal (CRC) and pancreatic (PDAC) cancers, derived from primary tumors and metastatic biopsies. Patients were 31-89 years old and had received a mean of 2.6 prior lines of treatment at the time of tissue sampling. Each PDO underwent WES and bulk RNA-seq and was profiled in functional drug screens with a panel of targeted agents, including KRAS inhibitors. We generated embeddings from omics features for each PDO. These embeddings were used as inputs to machine-learning models trained to predict drug AUC values, enabling in silico estimation of PDO drug sensitivity from baseline molecular profiles. Within the same framework, we analysed KRAS inhibitor response by identifying molecular neighborhoods in the embedding space enriched for sensitive or resistant PDOs and stratifying samples accordingly. Results: Embeddings captured major axes of biological variation across the PDO collection, including tumor type, key oncogenic alterations and clinically relevant subgroups, and enabled accurate prediction of AUC values for multiple targeted agents, including KRAS inhibitors. Predicted sensitivities were concordant with experimentally measured responses and reflected known dependencies associated with specific mutational backgrounds. We identified biomarkers and pathway-level signatures associated with response to different KRAS-targeted treatments. These signatures were reproducible across cross-validation procedures and aligned with reported mechanisms of KRAS inhibitor activity and escape. Conclusions: Large, clinically annotated PDO collections coupled with multi-omics profiling support the construction of embeddings that both predict ex vivo drug response and highlight molecular contexts associated with sensitivity to targeted agents. Integrating these predictive models with systematic pathway interpretation provides a rigorous framework to uncover transcriptomic and genomic markers of response and resistance. For drug developers, this approach shows how PDO-based functional genomics combined with AI driven analysis can be used to derisk development of targeted therapies and inform patient stratification and trial design.\n \n \n Lelia Polit, Nico Trummer, Rafal Pietrzak, Mateo Longarini, Alexis Finkbeiner, Anna-Rose Gryspeert, Jean Bouteiller, Jérome Caron, Gustave Ronteix. Multi-omics patient-derived organoid embeddings predict targeted therapy response and KRAS inhibitor sensitivity [abstract]. In: Proceedings of the American Association for Cancer Research Annual Meeting 2026; Part 1 (Regular Abstracts); 2026 Apr 17-22; San Diego, CA. Philadelphia (PA): AACR; Cancer Res 2026;86(7 Suppl):Abstract nr 494.\n",
+  "authors": "L. Polit, Nico Trummer, R. Pietrzak, M. Longarini, A. Finkbeiner, A-R. Gryspeert, J. Bouteiller, J. Caron",
+  "venue": "Cancer Research",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:patient-derived organoid drug "
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多组学类器官嵌入预测靶向治疗与KRAS抑制响应，含建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多组学PDO嵌入预测靶向治疗与KRAS抑制响应，建模成分明确",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多组学类器官嵌入+机器学习预测",
+  "data": "135个CRC/PDAC PDO；WES、bulk RNA-seq、药敏",
+  "scenario": "靶向治疗与KRAS抑制剂响应预测",
+  "benchmark": "PDO药物AUC；KRAS抑制剂敏感/耐药分子邻域",
+  "results": "用基线分子特征进行计算机模拟PDO药敏估计；识别KRAS抑制剂敏感或耐药富集分子邻域",
+  "availability": "",
+  "limitations": "摘要未提；队列仍有限，需系统验证临床转化价值",
+  "summary": "研究利用患者来源类器官多组学嵌入预测靶向治疗和KRAS抑制剂敏感性。作者整合135个结直肠癌和胰腺癌PDO的WES、RNA-seq和功能药敏数据，生成多模态患者表征并训练机器学习模型预测药物AUC。该框架可在嵌入空间中识别KRAS抑制剂敏感或耐药富集的分子邻域。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

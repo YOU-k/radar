@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/s0140-6736(19)31721-0",
+  "title": "An artificial intelligence-enabled ECG algorithm for the identification of patients with atrial fibrillation during sinus rhythm: a retrospective analysis of outcome prediction.",
+  "url": "https://doi.org/10.1016/S0140-6736(19)31721-0",
+  "abstract": "BACKGROUND\nAtrial fibrillation is frequently asymptomatic and thus underdetected but is associated with stroke, heart failure, and death. Existing screening methods require prolonged monitoring and are limited by cost and low yield. We aimed to develop a rapid, inexpensive, point-of-care means of identifying patients with atrial fibrillation using machine learning.\n\n\nMETHODS\nWe developed an artificial intelligence (AI)-enabled electrocardiograph (ECG) using a convolutional neural network to detect the electrocardiographic signature of atrial fibrillation present during normal sinus rhythm using standard 10-second, 12-lead ECGs. We included all patients aged 18 years or older with at least one digital, normal sinus rhythm, standard 10-second, 12-lead ECG acquired in the supine position at the Mayo Clinic ECG laboratory between Dec 31, 1993, and July 21, 2017, with rhythm labels validated by trained personnel under cardiologist supervision. We classified patients with at least one ECG with a rhythm of atrial fibrillation or atrial flutter as positive for atrial fibrillation. We allocated ECGs to the training, internal validation, and testing datasets in a 7:1:2 ratio. We calculated the area under the curve (AUC) of the receiver operatoring characteristic curve for the internal validation dataset to select a probability threshold, which we applied to the testing dataset. We evaluated model performance on the testing dataset by calculating the AUC and the accuracy, sensitivity, specificity, and F1 score with two-sided 95% CIs.\n\n\nFINDINGS\nWe included 180 922 patients with 649 931 normal sinus rhythm ECGs for analysis: 454 789 ECGs recorded from 126 526 patients in the training dataset, 64 340 ECGs from 18 116 patients in the internal validation dataset, and 130 802 ECGs from 36 280 patients in the testing dataset. 3051 (8·4%) patients in the testing dataset had verified atrial fibrillation before the normal sinus rhythm ECG tested by the model. A single AI-enabled ECG identified atrial fibrillation with an AUC of 0·87 (95% CI 0·86-0·88), sensitivity of 79·0% (77·5-80·4), specificity of 79·5% (79·0-79·9), F1 score of 39·2% (38·1-40·3), and overall accuracy of 79·4% (79·0-79·9). Including all ECGs acquired during the first month of each patient's window of interest (ie, the study start date or 31 days before the first recorded atrial fibrillation ECG) increased the AUC to 0·90 (0·90-0·91), sensitivity to 82·3% (80·9-83·6), specificity to 83·4% (83·0-83·8), F1 score to 45·4% (44·2-46·5), and overall accuracy to 83·3% (83·0-83·7).\n\n\nINTERPRETATION\nAn AI-enabled ECG acquired during normal sinus rhythm permits identification at point of care of individuals with atrial fibrillation.\n\n\nFUNDING\nNone.",
+  "authors": "Z. Attia, P. Noseworthy, F. Lopez-Jimenez, S. Asirvatham, A. Deshmukh, B. Gersh, R. Carter, Xiao-Xi Yao",
+  "venue": "The Lancet",
+  "year": 2019,
+  "citations": 1352,
+  "found_by": [
+   "s2:references:doi:10.1161/circulationaha.121.057480"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:31378392"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI-ECG识别窦律下房颤，大规模验证，方法新意与临床转化价值高",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Lancet发表AI-ECG识别窦律房颤，开创性筛查范式，被广泛跟进",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CNN检测窦律ECG中房颤特征",
+  "data": "Mayo 1993–2017年10秒12导联窦律ECG，7:1:2划分",
+  "scenario": "窦律期房颤识别筛查",
+  "benchmark": "内部验证集选阈值后测试集评估",
+  "results": "报告测试集AUC、准确度、敏感度等，具体数值摘要未完整给出",
+  "availability": "",
+  "limitations": "回顾性单中心；仅摘要，缺完整性能与外部验证",
+  "summary": "研究开发AI增强心电图算法，用卷积神经网络从标准10秒12导联窦律ECG中识别房颤电信号特征。纳入Mayo Clinic 1993至2017年成人窦律ECG，按7:1:2划分训练、内部验证与测试，并以验证集AUC选阈值。结果在测试集评估AUC、准确度与敏感度，旨在提供快速低成本床旁房颤识别手段。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

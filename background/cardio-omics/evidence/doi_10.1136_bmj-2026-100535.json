@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1136/bmj-2026-100535",
+  "title": "Simultaneous derivation, validation, and comparison of predictor hazard ratios for cardiovascular risk prediction equations in patients with diabetes from high versus non-high income countries: cohort study",
+  "url": "https://doi.org/10.1136/bmj-2026-100535",
+  "abstract": "Abstract Objective To directly test the generalisability of cardiovascular disease (CVD) risk predictor effects across populations in a high income versus non-high income country, derive comparable risk equations, and identify more effective strategies for prediction across populations. Design Population based cohort study. Setting Primary prevention cohorts in New Zealand and China. Participants Equivalent New Zealand and Chinese cohorts of people aged 30-74 years with diabetes and no CVD based on electronic health records. Main outcome measures Country specific five year equations were derived using standardised methods to predict first cardiovascular events; predictor hazard ratios were compared. New Zealand equations were applied to the Chinese cohort, with performance assessed before and after standard recalibration, followed by the updating of predictor hazard ratios that differed statistically significantly. Results Between 2004 and 2018, 47 958 New Zealand participants had 5622 (11.7%) first CVD events. Between 2010 and 2018, 46 558 Chinese participants had 3650 (7.8%) first CVD events. Sex specific equations included 16 predictors. Hazard ratios for most predictors were similar between New Zealand and Chinese equations but differed markedly for age (eg, women: 1.61, 95% confidence interval 1.51 to 1.71 per 10 years in New Zealand, 2.51 (2.32 to 2.72) per 10 years in China). Standard recalibration of New Zealand equations did not improve calibration in the Chinese cohort (expected to observed ratio: 0.938 in men, 0.809 in women). Replacing New Zealand age coefficients with Chinese coefficients noticeably improved calibration (expected to observed ratio 1.027 in men, 1.025 in women). Conclusions Applying a high income country derived CVD risk prediction equation to a population from a non-high income country with diabetes may introduce systematic errors, primarily driven by differences in the effect of age. Moving beyond simple recalibration to updating key predictor coefficients, particularly age, should be considered for more accurate risk stratification. This study highlights potential limitations of high income country equation updating practices and proposes a feasible approach to improve their accuracy when used in populations from non-high income countries.",
+  "authors": "Jing-Yuan Liang, Y. Choi, Peng Shen, Susan Wells, Katrina K. Poppe, Zhang-Ping Fu, M. Harwood, Xiao-Fei Liu",
+  "venue": "British medical journal",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1093/eurheartj/ehab309"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42727977"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "中新高收入队列外部验证，跨人群CVD风险方程校准",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "BMJ上跨国糖尿病CVD风险方程推导与外部验证，跨人群校准关键",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨国队列风险方程推导、验证与重校准",
+  "data": "新西兰47,958人；中国46,558人，T2D无CVD",
+  "scenario": "高收入与非高收入国家糖尿病CVD预测",
+  "benchmark": "新西兰方程应用于中国队列，标准重校准及预测因子更新",
+  "results": "新西兰5,622例（11.7%）CVD事件，中国3,650例（7.8%）；年龄风险比差异显著，女性每10年NZ 1.61 vs 中国2.51",
+  "availability": "",
+  "limitations": "标准重校准未改善中国队列校准；预测因子效应跨人群不完全一致",
+  "summary": "研究直接检验糖尿病CVD风险预测因子在高收入与非高收入国家间的可推广性。基于新西兰和中国电子健康记录队列，用标准化方法推导5年风险方程并比较风险比。发现多数预测因子风险比相似，但年龄等差异显著，标准重校准未能改善中国队列校准。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

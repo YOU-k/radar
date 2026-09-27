@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s12967-025-07112-y",
+  "title": "Patient-derived organoids predict responses to chemotherapy and PARP inhibitors in advanced ovarian cancer",
+  "url": "https://doi.org/10.1186/s12967-025-07112-y",
+  "abstract": "While tumor organoids hold promise for personalized medicine, clinical validation of epithelial ovarian cancer (EOC) organoids as predictors of therapeutic efficacy-particularly for PARP inhibitors (PARPi)-remains unestablished. Patient-derived organoids (PDOs) were established from treatment-naive EOC specimens and characterized by H&E staining, immunohistochemistry, and whole-exome sequencing. Drug sensitivity testing (DST) was performed using carboplatin, paclitaxel, and PARPi (olaparib and niraparib). Clinical homologous recombination deficiency (HRD) status was assessed by tumor sequencing. Organoid responses were prospectively compared to patient outcomes after first-line chemotherapy (carboplatin/paclitaxel) and PARPi maintenance. PDOs were successfully established from 21 of 30 patients (70%) across multiple EOC subtypes and preserved the histopathological features and genomic landscapes of their corresponding primary tumors. Organoid-based DST accurately predicted responses to first-line carboplatin/paclitaxel, with a sensitivity of 100% (95% CI 62.88–100%), specificity of 66.67% (95% CI 12.53–98.23%), accuracy of 91.67% (95% CI 61.52–99.79%), AUC of 0.95 (95% CI 0.85–1.00), and Cohen’s kappa of 0.75 (95% CI 0.30–1.00). In evaluating PARPi response, organoids revealed discrepancies between genomic HRD status and actual drug responses. One HRD-positive PDO was PARPi-resistant, consistent with patient non-response, while two HRR-proficient PDOs showed PARPi sensitivity and corresponding clinical benefit. EOC-derived PDOs provide a robust platform for predicting chemotherapy response and offer added value in assessing PARPi efficacy beyond genomic profiling. Combination of organoid-based testing with genomic analysis may improve precision treatment strategies in EOC.",
+  "authors": "Hai-Xia Wang, Ling Wang, Xue-Ping Zhu, Mi-Si He, Lin Zhong, Yuyu Lv, Qiao-Ling Li, Q. Jiang",
+  "venue": "Journal of Translational Medicine",
+  "year": 2026,
+  "citations": 9,
+  "found_by": [
+   "s2:citations:doi:10.1101/2019.12.12.19014712"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41491716"
+   ],
+   "pmcid": "PMC12797791"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "卵巢癌类器官药敏前瞻对应患者结局",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "卵巢癌类器官药敏前瞻预测临床响应，验证充分",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "EOC_Os药物敏感性检测",
+  "data": "21例初治晚期上皮性卵巢癌患者类器官",
+  "scenario": "卵巢癌化疗与PARP抑制剂反应预测",
+  "benchmark": "gBRCA突变等传统PARPi疗效预测标志物",
+  "results": "类器官重现原发肿瘤组织病理与分子特征，维持肿瘤异质性，突变谱与亲本肿瘤一致，可用于指导个体化治疗决策",
+  "availability": "",
+  "limitations": "EOC_Os药物敏感性检测指导个体化治疗的临床应用仍待确定",
+  "summary": "研究报告成功建立并表征21例初治晚期上皮性卵巢癌患者来源类器官（EOC_Os），旨在预测化疗与PARP抑制剂反应。作者对类器官进行组织病理与分子特征分析，并开展药物敏感性检测以指导个体化治疗。结果显示EOC_Os紧密重现原发肿瘤组织病理与分子特征、维持肿瘤异质性且突变谱一致，展示其作为功能模型指导晚期EOC个体化治疗策略的潜力。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

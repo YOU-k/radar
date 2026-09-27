@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehaf784.4471",
+  "title": "Multimodal foundation model for evaluating cardiovascular disease from electrocardiography and echocardiography",
+  "url": "https://doi.org/10.1093/eurheartj/ehaf784.4471",
+  "abstract": "\n \n \n Clinicians leverage information from multiple data sources, such as the electrocardiogram (ECG) and echocardiogram to diagnose and manage cardiovascular disease. Deep learning models have shown immense potential to enhance these clinical processes by capturing digital biomarkers of cardiovascular disease from diagnostic modalities. However, the development of multimodal algorithms capable of making joint inferences from multiple modalities, mirroring the clinicians’ decision-making, has remained an unmet need.\n \n \n \n We aimed to develop a multimodal foundation model of ECG and echocardiogram as an integrative deep learning approach to evaluating cardiovascular conditions.\n \n \n \n Twelve-lead ECGs and transthoracic echocardiograms performed at a large academic health system between 2001-2021 were collected. Individuals with paired ECGs and echocardiograms recorded within 3 years were identified and the data was split at the individual level into training, validation, and test sets (80/10/10%). Using paired ECGs and echocardiograms, we developed a deep learning model in a self-supervised setting with contrastive loss and merged embeddings in a joint latent space (Figure 1). We evaluated the performance of this foundation model after fine-tuning for left ventricular systolic dysfunction (LVSD defined as left ventricular ejection fraction of 40% or less), atrial fibrillation, age, and sex as auxiliary tasks. The performance of the multimodal model was compared with those of supervised unimodal ECG-only and echocardiography-only models for each task.\n \n \n \n In total, 4,391,610 videos from 129,424 echocardiography studies paired with 1,094,656 ECGs from 53,876 unique individuals were included (67 ± 14 years of age, 43% female, Figure 1). The multimodal algorithm demonstrated excellent discrimination for disease classification in the test set. In classification of LVSD, for example, it achieved an area under the receiver operating characteristic (AUROC) curve of 0.94, area under precision recall curve (AUPRC) of 0.99 among individuals with LV ejection fraction greater than 40%, and AUPRC of 0.72 among those with LV ejection fraction of 40% or less. The multimodal model consistently outperformed the unimodal algorithms, including the ECG-only and echocardiography-only models in classification of LVSD (AUROC ECG+Echo 0.94, ECG 0.89, Echo 0.89), atrial fibrillation (AUROC ECG+Echo 0.95, ECG, 0.94, Echo 0.75), sex (AUROC ECG+Echo 0.93, ECG 0.87, Echo 0.78) and age (R for variance ECG+Echo 0.75, ECG 0.67, Echo 0.58, Figure 2).\n \n \n \n We have developed a multimodal foundation model for joint inference from ECGs and echocardiograms for diagnosis of cardiovascular conditions. This novel approach outperforms the conventional unimodal models in disease diagnosis and represents an advance in integrating the clinical applications of artificial intelligence.Figure 1  Figure 2\n",
+  "authors": "A. Nargesi, S. Friedman, T. Shnitzer Dery, V. D'souza, C. Andrews, S. Khurshid, J. Ho, M. Maddah",
+  "venue": "European Heart Journal",
+  "year": 2025,
+  "citations": 1,
+  "found_by": [
+   "s2kw:ECG deep learning foundation m"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "ECG+超声多模态基础模型，EHJ发表，契合影像AI方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHJ多模态ECG+超声基础模型，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "ECG与超声心动图多模态基础模型，对比损失联合嵌入",
+  "data": "2001-2021年配对12导联ECG与经胸超声，按80/10/10划分",
+  "scenario": "多模态心血管病评估",
+  "benchmark": "与单模态模型对比（LVSD、房颤、年龄、性别任务）",
+  "results": "",
+  "availability": "",
+  "limitations": "仅限单一学术医疗系统；配对时间窗3年",
+  "summary": "研究旨在开发ECG与超声心动图的多模态基础模型以整合评估心血管疾病。方法上收集配对检查数据，以自监督对比损失在联合潜空间融合嵌入，并针对LVSD、房颤、年龄、性别微调。结果显示该多模态模型可联合推断多种心血管状况，性能与单模态模型进行比较。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-27"
+}

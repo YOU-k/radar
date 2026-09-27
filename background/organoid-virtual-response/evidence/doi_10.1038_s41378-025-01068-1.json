@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41378-025-01068-1",
+  "title": "Single-Cell-Derived Tumor Organoid (STO) arrays on a microfluidic chip for personalized drug screening to address heterogeneity-induced drug resistance in colorectal cancer",
+  "url": "https://doi.org/10.1038/s41378-025-01068-1",
+  "abstract": "Tumor heterogeneity drives chemotherapy resistance in cancer, necessitating the development of strategies to target diverse cellular subpopulations. Single-cell-derived tumor organoids (STOs), derived from individual tumor stem cells (TSCs), retain well-defined genomic and phenotypic attributes, making them instrumental in elucidating unique diversification. Here, we developed a microfluidic approach that utilizes STO arrays for personalized drug screening, aimed at overcoming heterogeneity induced drug resistance in colorectal cancer. We utilized a microwell array format microfluidic chip to the generation of a high scale STO array. This array encompasses two key features: (1) STOs in individual microwells are derived from single TSCs, which allows for a high-resolution display of cellular heterogeneity; (2) it exhibits thousands of STOs at predefined locations on the same focal plane, thereby facilitating automated, high-content analyses using imaging data. Utilizing the STO array, we assess the responses of various subpopulations of colorectal cancer to a conventional chemotherapeutic regimen, facilitating the phenotypic identification of resistant STOs. Through the analysis of RNA sequencing data from the resistant STOs, candidate drugs targeting resistance-associated pathways were identified for individual patients. Furthermore, the candidate drugs were validated through STO-array drug testing, demonstrating enhanced clearance effects when combined with the conventional regimen. Our study establishes a scalable, patient-specific drug screening approach that integrates phenotypic and molecular analyses, offering a transformative strategy to overcome heterogeneity-driven drug resistance in colorectal cancer. The microfluidic platform presented herein holds significant potential for advancing precision oncology and personalized therapeutic design.",
+  "authors": "Dongguo Lin, Yanzhang Luo, Jueming Chen, Ziqing Ma, H. Kang, Xiaogang Wang, Lihui Wang, Da-Yu Liu",
+  "venue": "Microsystems & Nanoengineering",
+  "year": 2025,
+  "citations": 10,
+  "found_by": [
+   "s2kw:cardiac organoid drug screenin"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41423451"
+   ],
+   "pmcid": "PMC12719388"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞来源类器官阵列微流控药敏筛选，含患者异质性建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞来源类器官阵列+微流控药敏筛选，含个性化预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "微流控单细胞阵列+STO药物筛选+转录组",
+  "data": "CRC患者单细胞来源STO阵列；高通量成像与测序",
+  "scenario": "个性化药筛与异质性耐药",
+  "benchmark": "与多细胞来源类器官MTO比较；耐药STO与敏感STO对比",
+  "results": "实现数千STO同焦面培养；识别耐药STO及差异表达基因；候选药再验证有效",
+  "availability": "",
+  "limitations": "通量与标准化仍受限；单细胞来源代表性需更多临床验证",
+  "summary": "作者开发微流控STO阵列用于结直肠癌个性化药筛以应对异质性耐药。用亲水涂层微孔阵列随机捕获单细胞，藻酸-壳聚糖膜包裹原位培养数千STO，并进行药物测试和转录组分析。发现STO保留肿瘤表型与遗传特征，可识别耐药亚群及潜在靶点，候选药物经STO阵列验证有效。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

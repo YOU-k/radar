@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circresaha.117.311312",
+  "title": "Cardiovascular Event Prediction by Machine Learning: The Multi-Ethnic Study of Atherosclerosis",
+  "url": "https://doi.org/10.1161/CIRCRESAHA.117.311312",
+  "abstract": "Rationale: Machine learning may be useful to characterize cardiovascular risk, predict outcomes, and identify biomarkers in population studies. Objective: To test the ability of random survival forests, a machine learning technique, to predict 6 cardiovascular outcomes in comparison to standard cardiovascular risk scores. Methods and Results: We included participants from the MESA (Multi-Ethnic Study of Atherosclerosis). Baseline measurements were used to predict cardiovascular outcomes over 12 years of follow-up. MESA was designed to study progression of subclinical disease to cardiovascular events where participants were initially free of cardiovascular disease. All 6814 participants from MESA, aged 45 to 84 years, from 4 ethnicities, and 6 centers across the United States were included. Seven-hundred thirty-five variables from imaging and noninvasive tests, questionnaires, and biomarker panels were obtained. We used the random survival forests technique to identify the top-20 predictors of each outcome. Imaging, electrocardiography, and serum biomarkers featured heavily on the top-20 lists as opposed to traditional cardiovascular risk factors. Age was the most important predictor for all-cause mortality. Fasting glucose levels and carotid ultrasonography measures were important predictors of stroke. Coronary Artery Calcium score was the most important predictor of coronary heart disease and all atherosclerotic cardiovascular disease combined outcomes. Left ventricular structure and function and cardiac troponin-T were among the top predictors for incident heart failure. Creatinine, age, and ankle-brachial index were among the top predictors of atrial fibrillation. TNF-&agr; (tissue necrosis factor-&agr;) and IL (interleukin)-2 soluble receptors and NT-proBNP (N-Terminal Pro-B-Type Natriuretic Peptide) levels were important across all outcomes. The random survival forests technique performed better than established risk scores with increased prediction accuracy (decreased Brier score by 10%–25%). Conclusions: Machine learning in conjunction with deep phenotyping improves prediction accuracy in cardiovascular event prediction in an initially asymptomatic population. These methods may lead to greater insights on subclinical disease markers without apriori assumptions of causality. Clinical Trial Registration: URL: http://www.clinicaltrials.gov. Unique identifier: NCT00005487.",
+  "authors": "B. Ambale-Venkatesh, Xiaoying Yang, Colin O. Wu, Kiang Liu, W. Hundley, R. McClelland, Antoinette S. Gomes, A. Folsom",
+  "venue": "Circulation Research",
+  "year": 2017,
+  "citations": 548,
+  "found_by": [
+   "s2:references:doi:10.1371/journal.pone.0213653"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:28794054"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "MESA经典ML心血管预测，方法学奠基性高被引",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "MESA 万人队列 ML 预测，该方向经典必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "随机生存森林机器学习",
+  "data": "MESA 6814人，45-84岁，4种族，735变量，随访12年",
+  "scenario": "多心血管结局预测",
+  "benchmark": "标准心血管风险评分",
+  "results": "影像、ECG、血清标志物进入top-20；年龄预测全因死亡；CAC预测CHD/ASCVD；空腹血糖和颈动脉超声预测卒中",
+  "availability": "",
+  "limitations": "仅MESA队列；预测变量多；需外部验证",
+  "summary": "研究测试随机生存森林能否预测MESA队列6种心血管结局并优于标准风险评分。纳入6814名无心血管病参与者，使用735个影像、非侵入检查和生物标志物变量，随访12年。影像、ECG和血清标志物在top-20预测因子中突出，年龄预测全因死亡，CAC预测冠心病和ASCVD，空腹血糖与颈动脉超声预测卒中。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

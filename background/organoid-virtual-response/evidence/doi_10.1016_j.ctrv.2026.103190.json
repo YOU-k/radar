@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.ctrv.2026.103190",
+  "title": "Comparative analysis of patient-derived organoids and patient-derived xenografts as avatar models for predicting response to anti-cancer therapy.",
+  "url": "https://doi.org/10.1016/j.ctrv.2026.103190",
+  "abstract": "Patient-derived xenografts (PDX) and patient-derived organoids (PDO) are widely used to model cancer and predict treatment response in matched patients. However, their predictive accuracy has not been systematically studied nor compared. We conducted a systematic review and meta-analysis of studies using PDX or PDO from solid tumors treated with identical anti-cancer agents as the matched patient, identifying 411 patient-model pairs (267 PDX, 144 PDO). Overall concordance in treatment response between patients and matched models was 70%, with no significant differences between PDX and PDO. Sensitivity, specificity, and positive and negative predictive value were also comparable. Patients whose matched PDO responded to therapy had prolonged progression-free survival. For PDX, this association held only when analyses were restricted to patient-model pairs with low risk of bias after applying a bias assessment metric. Together, these findings suggest that in some contexts, PDO perform similarly to PDX in predicting matched-patient response while potentially offering lower financial and ethical burdens. Given that both platforms have distinct strengths and weaknesses, they continue to serve complementary roles in translational cancer research. Additional prospective studies will be required before definitive recommendations can be made.",
+  "authors": "J. M. Romero, Jamie Magrill, Nikita Kalashnikov, Yi Luo, Owen J. Chen, Sandrine Busque, Rong Ma, Aline Atallah",
+  "venue": "Cancer Treatment Reviews",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2:citations:doi:10.1126/scitranslmed.aay2574",
+   "s2:citations:doi:10.1038/s41698-021-00168-1"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42497819"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PDO与PDX预测疗效的系统比较，含定量meta分析",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "系统比较PDO/PDX预测患者响应，方向必读的基准性meta分析",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "系统综述与荟萃分析",
+  "data": "411对患者-模型配对（267 PDX、144 PDO）",
+  "scenario": "抗癌治疗反应预测模型比较",
+  "benchmark": "PDX与PDO相互比较",
+  "results": "患者与匹配模型总体治疗反应一致率70%，PDX与PDO无显著差异；敏感性、特异性、阳性与阴性预测值相当；PDO应答者无进展生存延长，PDX仅在低偏倚风险配对中成立",
+  "availability": "",
+  "limitations": "需更多前瞻性研究才能给出确定性推荐",
+  "summary": "研究系统比较患者来源异种移植（PDX）与患者来源类器官（PDO）预测匹配患者治疗反应的准确性。作者开展系统综述与荟萃分析，纳入使用相同抗癌药物治疗的实体瘤PDX或PDO研究，共411对患者-模型配对。结果显示总体一致率70%，PDX与PDO无显著差异，敏感性、特异性及预测值相当；PDO应答者无进展生存延长，PDX仅在低偏倚风险配对中成立，提示两者在转化研究中互补。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

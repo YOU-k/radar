@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.05.04.651803",
+  "title": "Application of spatial transcriptomics across organoids: a high-resolution spatial whole-transcriptome benchmarking dataset",
+  "url": "https://doi.org/10.1101/2025.05.04.651803",
+  "abstract": "Stem cell-derived organoids hold promise to model tissue-specific disease. To enable this, it is crucial to assess how transcriptional signatures, cellular organisation and composition of organoids compare to in vivo counterparts. However, technologies which elucidate regional molecular identity, like spatial transcriptomics, have been challenging to apply to organoids. This study presents the first systematic profiling of multiple stem cell derived organoid models (brain, heart muscle, heart valve, kidney, lung, cartilage, and haematopoietic) with Stereo-seq, a full transcriptome, spatial transcriptomics assay using on-chip in situ RNA capture at subcellular resolution. It describes optimisation of this assay to characterise organoids, use of multiple organoid samples on a single chip, assess differences in RNA capture efficiency compared to reference tissues and its limitations. This study introduces a bespoke analysis method that partitions samples into regions and further characterises them. These findings inform future works to characterise organoids using spatial transcriptomics, providing insights in optimising RNA capture of multiple organoids across a chip and novel methods for regional analysis.",
+  "authors": "Nucera, N. Charitakis, R. Leung, A. Leichter, N. Tuano, M. Walkiewicz, V. Sawant, L. Rowley",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 7,
+  "found_by": [
+   "s2kw:organoid spatial transcriptomi"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多器官类器官空间转录组基准数据资源，可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多器官类器官空间转录组基准数据集，资源价值高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Stereo-seq空间全转录组优化与区域分析",
+  "data": "脑、心、肾、肺、软骨、造血等类器官，多芯片",
+  "scenario": "类器官空间转录组基准",
+  "benchmark": "E13.5小鼠头与21 PCW小鼠心脏参考组织",
+  "results": "实现单芯片多样本类器官空间转录组，评估RNA捕获效率与局限，提出区域分区分析方法",
+  "availability": "",
+  "limitations": "小类器官捕获偏低，单细胞分辨率与细胞注释困难",
+  "summary": "该研究系统评估Stereo-seq在多种干细胞来源类器官中的应用。作者优化芯片包被与通透条件，将多个类器官共置于单芯片并与体内参考组织比较RNA捕获效率。结果显示可区分不同类器官转录特征，并提出区域分区分析以识别空间特异表达模式。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

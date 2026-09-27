@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41591-018-0240-2",
+  "title": "Screening for cardiac contractile dysfunction using an artificial intelligence–enabled electrocardiogram",
+  "url": "https://doi.org/10.1038/s41591-018-0240-2",
+  "abstract": "",
+  "authors": "Z. Attia, S. Kapa, F. Lopez-Jimenez, P. McKie, Dorothy J. Ladewig, Gaurav Satam, P. Pellikka, M. Enriquez-Sarano",
+  "venue": "Nature Medicine",
+  "year": 2019,
+  "citations": 1266,
+  "found_by": [
+   "seed"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:30617318"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI-ECG筛查收缩功能障碍，ECG AI临床转化经典工作",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "AI-ECG筛查心功能不全开创性工作，被广泛跟进",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "AI增强心电图筛查心脏收缩功能障碍",
+  "data": "",
+  "scenario": "心电图AI筛查心脏收缩功能障碍",
+  "benchmark": "",
+  "results": "",
+  "availability": "",
+  "limitations": "全文未获取，无法评估方法与结果细节",
+  "summary": "该研究提出使用人工智能增强的心电图筛查心脏收缩功能障碍。因全文未获取，具体方法、数据规模、基准与定量结果无法提取。仅从标题可知其方向为AI心电图用于心脏收缩功能障碍筛查。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

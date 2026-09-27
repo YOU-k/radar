@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1136/bmjopen-2025-110220",
+  "title": "Protein biomarkers for predicting incident carotid plaque: a nested case-control study in the ChinaHEART cohort with transportability assessment in the UK Biobank.",
+  "url": "https://doi.org/10.1136/bmjopen-2025-110220",
+  "abstract": "Objectives Carotid plaque is an early manifestation of atherosclerosis and is closely associated with the risk of myocardial ischaemia, ischaemic stroke and other atherosclerotic cardiovascular diseases (ASCVDs). To identify new protein biomarkers associated with carotid plaque, which will enhance early warning of ASCVDs DESIGN: Nested case-control study within a prospective cohort, with external assessment of transportability in an independent population-based cohort. Participants and data sources The development cohort is from China, which is a nationwide, community-based cohort and the external validation cohort is from the UK Biobank in the UK. In the development cohort, 292 participants without carotid plaque at baseline were included, comprising 145 incident cases and 147 matched controls selected based on age, sex, low-density lipoprotein cholesterol, systolic blood pressure, body mass index, smoking status and diabetes history. In the validation dataset, 30 800 participants without baseline cardiovascular disease were included from a large population-based cohort. Results A total of 11 biomarkers, including thrombomodulin, intercellular cell adhesion molecule-3, P-selectin, growth differentiation factor-15, adiponectin, monocyte chemoattractant protein-1, IL-10, placental growth factor, tyrosine kinase receptor-2, vascular endothelial growth factor-D and vascular cell adhesion molecule-1, were selected by least absolute shrinkage and selection operator regression and used to construct a prediction model for the carotid plaque. The area under the receiver operator characteristic curve (AUC) of the eventual model is 0.761, and it showed good calibration capability graphically with a Brier score of 0.192. In the UK Biobank cohort, when these biomarkers were added to a traditional predictive model, a better predictive power was generated, with an AUC improvement of 0.021 (p Conclusions The identified protein biomarkers were used to predict carotid plaque and may provide modest incremental value for risk stratification beyond traditional risk factors. However, the findings should be interpreted with caution and further studies are needed to evaluate their clinical utility.",
+  "authors": "Jin B, Lin C, Wu C, Chen B, Han Y, Zhang X, Bai X, Yang Y, Cui J, Xu W, Song L, Yang H, He W, Zhang Y, Gao Y, Li X.",
+  "venue": "BMJ open",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "eupmc:ChinaHEART cohort cardiovascul"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13311748",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Li X",
+   "last_affil": "National Clinical Research Center of Cardiovascular Diseases, State Key Laboratory of Cardiovascular Disease, National Center for Cardiovascular Diseases, Chinese Academy of Medical Sciences and Peking Union Medical College, Fuwai Hospital, Beijing, China xi.li@nccd.org.cn gaoyan@fuwai.com."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "ChinaHEART万人队列蛋白组学，UK Biobank外部验证，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "ChinaHEART万人队列蛋白组+UKB外部验证，契合多组学预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "巢式病例对照+预测模型+跨队列可迁移性评估",
+  "data": "ChinaHEART血浆28蛋白，UK Biobank外部验证",
+  "scenario": "颈动脉斑块发生预测",
+  "benchmark": "传统风险因素模型；UK Biobank ASCVD风险预测",
+  "results": "筛选与血管损伤、炎症、血管生成相关候选蛋白；评估对传统模型的增量预测价值；在UK Biobank评估可迁移性",
+  "availability": "",
+  "limitations": "两队列人群特征、结局定义和检测平台差异影响可比性；可用蛋白标志物数量有限",
+  "summary": "研究旨在识别预测新发颈动脉斑块的蛋白标志物并评估其增量预测价值。基于ChinaHEART队列开展巢式病例对照研究，使用MSD检测28种蛋白，构建并验证预测模型，并在UK Biobank评估可迁移性。研究发现候选蛋白与颈动脉斑块发生相关，但其跨人群预测效果受队列差异和标志物数量限制。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

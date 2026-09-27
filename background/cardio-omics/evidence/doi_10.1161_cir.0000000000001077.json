@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/cir.0000000000001077",
+  "title": "Polygenic Risk Scores for Cardiovascular Disease: A Scientific Statement From the American Heart Association",
+  "url": "https://doi.org/10.1161/CIR.0000000000001077",
+  "abstract": "Cardiovascular disease is the leading contributor to years lost due to disability or premature death among adults. Current efforts focus on risk prediction and risk factor mitigation‚ which have been recognized for the past half-century. However, despite advances, risk prediction remains imprecise with persistently high rates of incident cardiovascular disease. Genetic characterization has been proposed as an approach to enable earlier and potentially tailored prevention. Rare mendelian pathogenic variants predisposing to cardiometabolic conditions have long been known to contribute to disease risk in some families. However, twin and familial aggregation studies imply that diverse cardiovascular conditions are heritable in the general population. Significant technological and methodological advances since the Human Genome Project are facilitating population-based comprehensive genetic profiling at decreasing costs. Genome-wide association studies from such endeavors continue to elucidate causal mechanisms for cardiovascular diseases. Systematic cataloging for cardiovascular risk alleles also enabled the development of polygenic risk scores. Genetic profiling is becoming widespread in large-scale research, including in health care–associated biobanks, randomized controlled trials, and direct-to-consumer profiling in tens of millions of people. Thus, individuals and their physicians are increasingly presented with polygenic risk scores for cardiovascular conditions in clinical encounters. In this scientific statement, we review the contemporary science, clinical considerations, and future challenges for polygenic risk scores for cardiovascular diseases. We selected 5 cardiometabolic diseases (coronary artery disease, hypercholesterolemia, type 2 diabetes, atrial fibrillation, and venous thromboembolic disease) and response to drug therapy and offer provisional guidance to health care professionals, researchers, policymakers, and patients.",
+  "authors": "J. O’Sullivan, S. Raghavan, Carla Márquez-Luna, Jasmine A. Luzum, S. Damrauer, E. Ashley, Christopher J. O'Donnell, C. Willer",
+  "venue": "Circulation",
+  "year": 2022,
+  "citations": 298,
+  "found_by": [
+   "s2:references:doi:10.1038/s41591-023-02429-x"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:35862132"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AHA官方PRS科学声明，权威背景，契合多基因风险方向",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "AHA官方科学声明，PRS心血管应用必读背景，高被引",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "科学声明：综述多基因风险评分",
+  "data": "GWAS、双生子、家系聚集、生物样本库等证据",
+  "scenario": "CVD遗传风险评估与临床预防",
+  "benchmark": "传统临床风险预测；罕见孟德尔致病突变",
+  "results": "多基因风险评分可捕捉群体遗传易感性；成本下降推动大规模遗传分析；临床转化仍待完善",
+  "availability": "",
+  "limitations": "全文未提供；多基因风险评分的临床效用、公平性和实施路径仍不明确",
+  "summary": "该科学声明总结心血管疾病多基因风险评分的研究基础和临床应用前景。文章综述GWAS、家系和双生子研究证据，说明多种CVD具有群体遗传易感性，并讨论遗传谱分析在生物样本库、随机试验和直接面向消费者检测中的应用。声明指出多基因风险评分正进入临床场景，但其风险预测精度和临床转化仍需进一步验证。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

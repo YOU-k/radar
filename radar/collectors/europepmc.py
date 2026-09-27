@@ -50,6 +50,10 @@ def _to_item(r: dict, domain: str, journal_watch: bool = False) -> Item:
     doi = (r.get("doi") or "").strip()
     url = f"https://doi.org/{doi}" if doi else f"https://europepmc.org/article/{src}/{uid}"
     journal = ((r.get("journalInfo") or {}).get("journal") or {}).get("title", "")
+    authors = (r.get("authorList") or {}).get("author") or []
+    last = authors[-1] if authors else {}
+    affs = [a.get("affiliation", "") for a in
+            (last.get("authorAffiliationDetailsList") or {}).get("authorAffiliation", [])]
     return Item(
         id=(f"doi:{doi.lower()}" if doi else f"eupmc:{src}:{uid}"),
         source="europepmc", domain=domain,
@@ -61,7 +65,12 @@ def _to_item(r: dict, domain: str, journal_watch: bool = False) -> Item:
         extra={"journal": journal or r.get("journalTitle", "") or "",
                "journal_watch": journal_watch,
                "pmcid": r.get("pmcid", "") or "",
-               "is_oa": (r.get("isOpenAccess") == "Y")},
+               "is_oa": (r.get("isOpenAccess") == "Y"),
+               # 以下供 pipeline/enrich 用：预印本平台、末位作者（多为 PI）及单位
+               "epmc_src": src,
+               "preprint_server": (r.get("bookOrReportDetails") or {}).get("publisher", "") if src == "PPR" else "",
+               "last_author": last.get("fullName", "") or "",
+               "last_affil": next((a for a in affs if a), "")},
     )
 
 

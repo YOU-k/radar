@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.jare.2026.06.034",
+  "title": "Integrating clinical, proteomics, and polygenic scores to improve cardiovascular risk prediction: a prospective cohort study.",
+  "url": "https://doi.org/10.1016/j.jare.2026.06.034",
+  "abstract": "INTRODUCTION\nTraditional cardiovascular disease (CVD) risk assessment relies on clinical scores like SCORE2 and AHA PREVENT equations. However, these tools often miss dynamic molecular shifts preceding clinical events, leaving substantial residual risk undetected. High-dimensional proteomics provides a real-time snapshot of physiological states that may bridge the gap between genetic predisposition and clinical outcomes.\n\n\nOBJECTIVES\nThis study aimed to evaluate if high-dimensional proteomics enhances cardiovascular risk stratification beyond established clinical standards and polygenic risk scores, identifying significant residual risk through an integrated multi-omics framework.\n\n\nMETHODS\nWe analyzed 44,431 CVD-free participants from the UK Biobank Pharma Proteomics Project. Plasma levels of 1,460 proteins were quantified via the Olink Explore platform. A Protein Risk Score (ProtRS) was developed using LASSO-penalized Cox regression with stability selection (1,000 resamples). We evaluated the incremental value of ProtRS when added to a baseline model comprising clinical scores (SCORE2, PREVENT, FRS), standard biomarkers (CRP, NT-proBNP), and a CVD-specific PRS.\n\n\nRESULTS\nThe 117-protein ProtRS demonstrated superior individual discrimination (C-index 0.769) over SCORE2 (0.667), PREVENT (0.645), and FRS (0.672). Adding ProtRS to the baseline clinical model improved predictive performance, increasing the C-index from 0.669 to 0.774 (Delta C = 0.105). ProtRS effectively captured the prognostic information of CRP and NT-proBNP. The integrated multi-omics model achieved a significant total Net Reclassification Improvement of 3.1% and an Integrated Discrimination Improvement of 0.018. Decision Curve Analysis confirmed the highest clinical net benefit for the integrated model. Functional enrichment showed ProtRS captures a critical immune-metabolic nexus involving cytokine signaling and lipid handling.\n\n\nCONCLUSIONS\nIntegrating dynamic proteomics with genetic and clinical factors offers predictive power far superior to traditional standards. This multi-omics approach identifies significant residual risk, supporting a shift toward molecular phenotyping for precision cardiovascular prevention.",
+  "authors": "Yu-Bo Ding, Guolin Hong, Zhicheng Wang, Lindan Huang, Qun Chen, Yunyun Yang, Jing-Jing Yang, Wan-Shan Ning",
+  "venue": "Journal of Advanced Research",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:plasma proteomics cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42386074"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "大队列蛋白组+PRS整合，超越SCORE2风险预测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "前瞻队列整合蛋白组与PRS超越SCORE2，多组学风险预测代表工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LASSO惩罚Cox回归+稳定性选择构建蛋白风险评分ProtRS",
+  "data": "UKB Pharma Proteomics Project 44,431名无CVD参与者，Olink 1,460蛋白",
+  "scenario": "CVD风险分层与残余风险识别",
+  "benchmark": "SCORE2、PREVENT、FRS、CRP、NT-proBNP及CVD PRS",
+  "results": "117蛋白ProtRS C-index 0.769，优于SCORE2 0.667、PREVENT 0.645、FRS 0.672；加入基线模型后C-index由0.669升至0.774，ΔC=0.105",
+  "availability": "",
+  "limitations": "传统临床评分遗漏临床事件前动态分子变化，残余风险未被充分识别",
+  "summary": "研究评估高维蛋白组学能否在临床评分和多基因风险评分之外改善CVD风险分层。基于UKB 44,431名无CVD参与者，用LASSO-Cox和稳定性选择构建117蛋白ProtRS。结果显示ProtRS判别力优于SCORE2、PREVENT和FRS，并显著提升基线模型预测性能。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

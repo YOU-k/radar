@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circulationaha.124.070454",
+  "title": "A Proteomics-Based Approach for Prediction of Different Cardiovascular Diseases and Dementia",
+  "url": "https://doi.org/10.1161/CIRCULATIONAHA.124.070454",
+  "abstract": "BACKGROUND: Many studies have explored whether individual plasma protein biomarkers improve cardiovascular disease risk prediction. We sought to investigate the use of a plasma proteomics-based approach in predicting different cardiovascular outcomes. METHODS: Among 51 859 UK Biobank participants (mean age, 56.7 years; 45.5% male) without cardiovascular disease and with proteomics measurements, we examined the primary composite outcome of fatal and nonfatal coronary heart disease, stroke, or heart failure (major adverse cardiovascular events), as well as additional secondary cardiovascular outcomes. An exposome-wide association study was conducted using relative protein concentrations, adjusted for a range of classic, demographic, and lifestyle risk factors. A prediction model using only age, sex, and protein markers (protein model) was developed using a least absolute shrinkage and selection operator–regularized approach (derivation: 80% of cohort) and validated using split-sample testing (20% of cohort). Their performance was assessed by comparing calibration, net reclassification index, and c statistic with the PREVENT (Predicting Risk of CVD Events) risk score. RESULTS: Over a median 13.6 years of follow-up, 4857 participants experienced first major adverse cardiovascular events. After adjustment, the proteins most strongly associated with major adverse cardiovascular events included NT-proBNP (N-terminal pro B-type natriuretic peptide; hazard ratio [HR], 1.68 per SD increase), proADM (pro-adrenomedullin; HR, 1.60), GDF-15 (growth differentiation factor-15; HR, 1.47), WFDC2 (WAP four-disulfide core domain protein 2; HR, 1.46), and IGFBP4 (insulin-like growth factor-binding protein 4; HR, 1.41). In total, 222 separate proteins were predictors of all outcomes of interest in the protein model, and 86 were selected for the primary outcome specifically. In the validation cohort, compared with the PREVENT risk factor model, the protein model improved net reclassification (net reclassification index +0.09), and c statistic (+0.051) for major adverse cardiovascular events. The protein model also improved the prediction of other outcomes, including ASCVD (c statistic +0.035), myocardial infarction (+0.023), stroke (+0.024), aortic stenosis (+0.015), heart failure (+0.060), abdominal aortic aneurysm (+0.024), and dementia (+0.068). CONCLUSIONS: Measurement of targeted protein biomarkers produced superior prediction of aggregated and disaggregated cardiovascular events. This study represents proof of concept for the application of targeted proteomics in predicting a range of cardiovascular outcomes.",
+  "authors": "Frederick K. Ho, Patrick B. Mark, J. Lees, Jill P. Pell, R. Strawbridge, D. Kimenai, N. Mills, Mark Woodward",
+  "venue": "Circulation",
+  "year": 2024,
+  "citations": 59,
+  "found_by": [
+   "s2kw:plasma proteomics cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:39540306"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB五万人血浆蛋白组预测多种CVD，蛋白组学契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "五万人蛋白组学预测多种CVD，Circulation，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "血浆蛋白组学+LASSO预测CVD",
+  "data": "UK Biobank 51859人；平均56.7岁；13.6年随访",
+  "scenario": "预测MACE及多种心血管结局",
+  "benchmark": "PREVENT风险评分",
+  "results": "4857例MACE；NT-proBNP HR 1.68/SD；蛋白模型改善校准、NRI和C统计量",
+  "availability": "",
+  "limitations": "仅UK Biobank；需外部验证；蛋白检测成本",
+  "summary": "研究探索血浆蛋白组学方法预测不同心血管疾病和痴呆结局。在51859名无CVD的UK Biobank参与者中开展暴露组关联分析，并用年龄、性别和蛋白标志物构建LASSO预测模型，与PREVENT评分比较。中位13.6年随访发生4857例MACE，NT-proBNP等蛋白强相关，蛋白模型在校准、重分类和C统计量上优于PREVENT。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

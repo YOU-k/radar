@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1001/jamacardio.2020.5398",
+  "title": "Clinical Utility of Lipoprotein(a) and LPA Genetic Risk Score in Risk Prediction of Incident Atherosclerotic Cardiovascular Disease",
+  "url": "https://doi.org/10.1001/jamacardio.2020.5398",
+  "abstract": "Key Points Question Does measurement of lipoprotein(a) and/or LPA genetic risk score (GRS) have clinical utility in risk prediction of incident atherosclerotic cardiovascular disease (ASCVD)? Findings In this cohort of 283 540 adults recruited by the UK Biobank, both measured lipoprotein(a) and LPA GRS were associated with comparable risk of incident ASCVD events. The LPA GRS did not yield additional prognostic information beyond measured lipoprotein(a), and both measured lipoprotein(a) and LPA GRS yielded modest improvements in the discrimination of ASCVD risk relative to the Pooled Cohort Equations or QRISK3. Meaning Cardiovascular risk assessment with lipoprotein(a) may be achieved with either direct measurement or an LPA GRS.",
+  "authors": "M. Trinder, M. Uddin, Phoebe Finneran, Krishna G. Aragam, P. Natarajan",
+  "venue": "JAMA cardiology",
+  "year": 2020,
+  "citations": 160,
+  "found_by": [
+   "s2:references:doi:10.1161/cir.0000000000001077"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:33021622"
+   ],
+   "pmcid": "PMC7539232"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank大规模Lp(a)与LPA GRS风险预测，含PCE/QRISK3增益评估",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 28万人Lp(a)与GRS风险预测，含PCE对比",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LPA遗传风险评分与Lp(a)水平风险预测",
+  "data": "UK Biobank约50万成人，40–69岁，随访至2020",
+  "scenario": "新发ASCVD风险预测与分层",
+  "benchmark": "直接测量Lp(a)水平；LDL-C相关风险",
+  "results": "LPA GRS与Lp(a)强相关；≥120 nmol/L为升高；用于Cox模型预测ASCVD",
+  "availability": "",
+  "limitations": "主要欧洲人群；观察性；他汀使用与残余混杂",
+  "summary": "研究评估Lp(a)直接测量与LPA遗传风险评分在ASCVD风险预测中的临床效用。基于UK Biobank无基线ASCVD且未用降脂药成人，计算43个SNP加权LPA GRS，并用Cox模型分析心梗、冠心病、缺血性卒中、外周动脉病及心血管死亡。发现LPA GRS与Lp(a)水平相关，可反映终生暴露，可能补充Lp(a)测量用于一级预防风险分层。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

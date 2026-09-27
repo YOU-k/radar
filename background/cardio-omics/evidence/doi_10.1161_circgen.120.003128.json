@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circgen.120.003128",
+  "title": "Interactions between Enhanced Polygenic Risk Scores and Lifestyle for Cardiovascular Disease, Diabetes Mellitus and Lipid Levels",
+  "url": "https://doi.org/10.1161/CIRCGEN.120.003128",
+  "abstract": "Background - Both lifestyle and genetic factors confer risk for cardiovascular diseases, type 2 diabetes (T2D), and dyslipidemia. However, the interactions between these two groups of risk factors were not comprehensively understood due to previous poor estimation of genetic risk. Here we set out to develop enhanced polygenic risk scores (PRS), and systematically investigate multiplicative and additive interactions between PRS and lifestyle for coronary artery disease, atrial fibrillation, T2D, total cholesterol, triglyceride, and LDL-cholesterol. Methods - Our study included 276,096 unrelated white British participants from the UK Biobank. We investigated several PRS methods (P+T, LDpred, PRS-CS, and AnnoPred), and showed that AnnoPred achieved consistently improved prediction accuracy for all six diseases/traits. With enhanced PRS and combined lifestyle status categorized by smoking, body mass index, physical activity, and diet, we investigated both multiplicative and additive interactions between PRS and lifestyle using regression models. Results - We observed that healthy lifestyle reduced disease incidence by similar multiplicative magnitude across different PRS groups. The absolute risk reduction (ARR) from lifestyle adherence was however significantly greater in individuals with higher PRS. Specifically, for T2D, the ARR from lifestyle adherence was 12.4% (95% CI, 10.0%−14.9%) in the top 1% PRS versus 2.8% (95% CI, 2.3%−3.3%) in the bottom PRS decile, leading to a ratio of more than 4.4. We also observed a significant interaction effect between PRS and lifestyle on triglyceride level. Conclusions - By leveraging functional annotations, AnnoPred outperforms state-of-the-art methods on quantifying genetic risk through PRS. Our analyses based on enhanced PRS suggest that individuals with high genetic risk may derive similar relative but greater absolute benefit from lifestyle adherence.",
+  "authors": "Yi-Xuan Ye, Xi Chen, James Han, Wei Jiang, P. Natarajan, Hong-Yu Zhao",
+  "venue": "Circulation Genomic and Precision Medicine",
+  "year": 2021,
+  "citations": 91,
+  "found_by": [
+   "s2:references:doi:10.1161/cir.0000000000001077",
+   "s2:references:doi:10.1038/s41591-023-02429-x"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:33433237"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB 27万人PRS与生活方式交互，契合多基因风险方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB 27 万人 PRS×生活方式交互，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "增强多基因风险评分+生活方式交互分析",
+  "data": "UK Biobank 276096名无亲缘关系白人",
+  "scenario": "CAD、房颤、T2D和血脂风险",
+  "benchmark": "P+T、LDpred、PRS-CS、AnnoPred比较",
+  "results": "AnnoPred预测最优；健康生活方式相对风险降低相似；高PRS绝对风险降低更大；T2D最高1% PRS ARR 12.4% vs 最低十分位2.8%",
+  "availability": "",
+  "limitations": "仅白人；观察性；生活方式测量误差",
+  "summary": "研究开发增强多基因风险评分并系统评估其与生活方式对心血管病、糖尿病和血脂的交互作用。纳入UK Biobank 276096名白人，比较P+T、LDpred、PRS-CS和AnnoPred，发现AnnoPred预测最优，并用回归模型分析乘法和加法交互。健康生活方式在不同PRS组相对风险降低相似，但高PRS者绝对风险降低更大，如T2D最高1% PRS组ARR为12.4%，最低十分位为2.8%。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

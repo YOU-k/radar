@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s12933-025-03036-5",
+  "title": "Improved sex-specific cardiovascular risk prediction with multi-omics data in people with type 2 diabetes",
+  "url": "https://doi.org/10.1186/s12933-025-03036-5",
+  "abstract": "To evaluate whether integrating proteomics, metabolomics, and a cardiovascular disease specific polygenic risk score (CVD-PRS) in the SCORE2-Diabetes model improves sex-specific 10-year prediction of major adverse cardiovascular events (MACE) in individuals with type 2 diabetes (T2D). Genome-wide association study (GWAS), plasma proteomics (with the Olink Explore 3072 platform), and metabolomics (with nuclear magnetic resonance spectroscopy by Nightingale Health) data were measured in the UK Biobank. A novel sex-specific protein algorithm was developed using bootstrap-LASSO (Least absolute shrinkage and selection operator) regression. The CVD-PRS and sex-specific metabolite algorithms were used from previous UK Biobank projects. In a subset of 990 participants with T2D, age 40–69 years, with no prior MACE, and complete multi-omics data, we evaluated, which omics data improved the SCORE2-Diabetes model performance using Harrell’s C-index. Overall 9 proteins were selected for males and 7 for females and adding them to the SCORE2-Diabetes model significantly improved discrimination in the total population (C-index increase from 0.766 to 0.835 (P < 0.001)). Further adding of metabolites significantly improved model performance (C-index, 0.846, P = 0.035), which was mostly attributable to model improvement among males (∆C-index, 0.012, P = 0.078) but not among females (∆C-index, 0.004, P = 0.723). Further adding the CVD-PRS did not statistically significantly improve the SCORE2-Diabetes + proteomics + metabolomics model further in the total population (C-index, 0.848 (P = 0.070)). Sex-specific proteomic signatures markedly improved 10-year MACE risk prediction in individuals with T2D. In men but not in women, further integration of metabolomics may enhance model performance whereas adding the CVD-PRS is not needed. External validation is warranted.",
+  "authors": "R. Xie, C. Herder, S. Sha, H. Brenner, Sigrid V. Carlsson, B. Schöttker",
+  "venue": "Cardiovascular Diabetology",
+  "year": 2025,
+  "citations": 4,
+  "found_by": [
+   "s2kw:plasma proteomics cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41444601"
+   ],
+   "pmcid": "PMC12837037"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank多组学整合SCORE2-Diabetes，含PRS与性别特异预测，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank多组学整合SCORE2-Diabetes，性别特异预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "性别特异性蛋白组+代谢组+PRS风险建模",
+  "data": "UKB T2D：蛋白组1,751人；多组学990人",
+  "scenario": "2型糖尿病10年MACE风险预测",
+  "benchmark": "SCORE2-Diabetes模型",
+  "results": "构建性别特异蛋白组特征提升SCORE2-Diabetes；加入7个性别特异代谢物和CVD-PRS进一步改善预测",
+  "availability": "",
+  "limitations": "样本量较小；主要为White人群；需外部验证",
+  "summary": "研究开发性别特异性蛋白组特征以提升T2D患者10年MACE预测。基于UK Biobank蛋白组数据，在SCORE2-Diabetes基础上加入蛋白、代谢物和CVD-PRS。结果显示多组学整合可进一步细化性别特异心血管风险模型。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

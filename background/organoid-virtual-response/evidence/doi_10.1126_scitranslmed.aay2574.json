@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/scitranslmed.aay2574",
+  "title": "Patient-derived organoids can predict response to chemotherapy in metastatic colorectal cancer patients",
+  "url": "https://doi.org/10.1126/scitranslmed.aay2574",
+  "abstract": "Tumor organoids from individual patients with metastatic colorectal cancer can help predict response to irinotecan with or without 5-fluorouracil. Dishing out treatment recommendations The number of treatment options for cancer patients keeps expanding, but it remains difficult to predict which tumors will be sensitive to which treatments. As a result, most patients receive treatment according to standardized protocols. With this approach, some patients respond to treatment, but others only experience side effects. To help address this situation, Ooft et al. developed a method of testing drugs in patient-derived organoids, biopsy-derived cells from individual patients grown in a dish. In a clinical study, the responses of organoids to irinotecan correlated with patients’ responses to the drug, suggesting that organoids could help avoid giving irinotecan to patients who would not benefit. There is a clear and unmet clinical need for biomarkers to predict responsiveness to chemotherapy for cancer. We developed an in vitro test based on patient-derived tumor organoids (PDOs) from metastatic lesions to identify nonresponders to standard-of-care chemotherapy in colorectal cancer (CRC). In a prospective clinical study, we show the feasibility of generating and testing PDOs for evaluation of sensitivity to chemotherapy. Our PDO test predicted response of the biopsied lesion in more than 80% of patients treated with irinotecan-based therapies without misclassifying patients who would have benefited from treatment. This correlation was specific to irinotecan-based chemotherapy, however, and the PDOs failed to predict outcome for treatment with 5-fluorouracil plus oxaliplatin. Our data suggest that PDOs could be used to prevent cancer patients from undergoing ineffective irinotecan-based chemotherapy.",
+  "authors": "S. Ooft, F. Weeber, K. Dijkstra, C. McLean, S. Kaing, E. V. van Werkhoven, L. Schipper, L. Hoes",
+  "venue": "Science Translational Medicine",
+  "year": 2019,
+  "citations": 694,
+  "found_by": [
+   "s2:references:doi:10.1038/s41698-021-00168-1"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:31597751"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PDO预测转移性结直肠癌化疗响应，临床对应经典工作",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Science Translational Medicine，类器官药敏预测患者化疗响应，里程碑",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "PDO药物测试预测转移性结直肠癌化疗反应",
+  "data": "转移性结直肠癌患者活检来源PDO，前瞻性临床研究",
+  "scenario": "转移性结直肠癌化疗反应预测",
+  "benchmark": "与患者伊立替康±5-FU临床反应对比",
+  "results": "PDO测试预测活检病灶反应准确率>80%，无误分类不应治疗患者",
+  "availability": "",
+  "limitations": "前瞻性研究样本量有限，需扩大验证",
+  "summary": "开发了基于转移性结直肠癌PDO的体外测试以识别标准化疗非响应者。在前瞻性临床研究中证明PDO生成和测试的可行性。PDO测试对伊立替康为基础治疗的活检病灶反应预测准确率超过80%，且未误分类不应治疗的患者。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

@@ -1,4 +1,4 @@
-# 信息源定义。按 5 个领域分组。
+# 信息源定义。按 7 个领域分组。
 # 新增来源：在对应 domain 下加关键词 / query / feed 即可，collector 会自动拾取。
 # 节奏：每个源可标 cadence: daily(默认) / weekly(周日收) / monthly(每月1号收)。
 #   论文类保持 daily；格局型源（github/hf/blog）建议 weekly 或 monthly 降噪。
@@ -121,6 +121,54 @@ domains:
     hf_queries:
       - electronic health records
       - biobank
+    hf_cadence: monthly
+
+  - name: cardio_omics
+    label_zh: 心血管队列与临床多组学
+    # 2026-09 新增：为 ChinaHEART 心血管队列做准备。大队列心血管风险预测、心血管多组学（蛋白/代谢/脂质/PRS）、
+    # MR 找靶点、ECG/影像 AI 与组学/EHR 联合、中国人群队列。周量（CREATION_DATE）：关键词 ~110、整刊 ~30。
+    keywords_zh: [心血管, 冠心病, 心力衰竭, 心房颤动, 卒中, 高血压, 动脉粥样硬化, 心血管风险预测, 心电图, 孟德尔随机化, 中国人群队列, 心脏代谢]
+    keywords_en: [cardiovascular, coronary artery disease, heart failure, atrial fibrillation, stroke, hypertension, atherosclerosis, cardiometabolic, cardiovascular risk prediction, ECG, electrocardiogram, Mendelian randomization, China Kadoorie Biobank, ChinaHEART, SCORE2, China-PAR, plasma proteomics, lipoprotein, polygenic risk, UK Biobank]
+    arxiv:
+      categories: [cs.LG, q-bio.QM, eess.SP, stat.AP]
+      queries:
+        - "cardiovascular risk prediction deep learning"
+        - "electrocardiogram foundation model"
+        - "heart failure machine learning cohort"
+        - "atrial fibrillation deep learning"
+    europepmc_query: '(cardiovascular OR "coronary artery disease" OR "heart failure" OR "atrial fibrillation" OR stroke OR hypertension OR atherosclerosis OR cardiometabolic) AND ("deep learning" OR "machine learning" OR "foundation model" OR "risk prediction" OR proteomic OR proteomics OR metabolomic OR polygenic OR "Mendelian randomization" OR "multi-omics") AND (cohort OR biobank OR "population-based" OR "electronic health records")'
+    journals:
+      - Nature Cardiovascular Research
+      - European Heart Journal
+      - Circulation
+    rss: []
+    github_queries:
+      - ecg-deep-learning
+      - cardiovascular-risk
+    github_cadence: weekly
+    hf_queries:
+      - ecg
+    hf_cadence: monthly
+
+  - name: organoid_models
+    label_zh: 类器官与模式生物扰动响应
+    # 2026-09 新增：类器官 / 器官芯片 / 模式生物上的扰动实验与虚拟响应建模、跨物种迁移。
+    # 细胞系层面的虚拟细胞仍归 data_models。
+    keywords_zh: [类器官, 器官芯片, 模式生物, 斑马鱼, 线虫, 果蝇, 小鼠模型, 扰动响应, 药物响应, 跨物种, 虚拟组织, 心脏类器官]
+    keywords_en: [organoid, organoids, organ-on-a-chip, organ-on-chip, zebrafish, C. elegans, Drosophila, mouse model, perturbation, drug response, CRISPR screen, Perturb-seq, cross-species, virtual tissue, virtual organism, cardiac organoid, single-cell]
+    arxiv:
+      categories: [q-bio.QM, q-bio.CB, q-bio.TO, cs.LG]
+      queries:
+        - "organoid deep learning"
+        - "organoid perturbation"
+        - "cross-species single-cell"
+        - "virtual organism"
+    europepmc_query: '(organoid OR organoids OR "organ-on-a-chip" OR "organ-on-chip" OR zebrafish OR "C. elegans" OR "Caenorhabditis elegans" OR Drosophila OR "mouse model") AND (perturbation OR "drug response" OR "drug screening" OR "CRISPR screen" OR "Perturb-seq") AND ("single-cell" OR "deep learning" OR "machine learning" OR "foundation model" OR "virtual cell" OR "cross-species" OR predictive)'
+    rss: []
+    github_queries:
+      - organoid
+    github_cadence: weekly
+    hf_queries: []
     hf_cadence: monthly
 
   - name: ml_algorithms

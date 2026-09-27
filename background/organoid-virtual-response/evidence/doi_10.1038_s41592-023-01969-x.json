@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-023-01969-x",
+  "title": "Learning single-cell perturbation responses using neural optimal transport",
+  "url": "https://doi.org/10.1038/s41592-023-01969-x",
+  "abstract": "CellOT combines the benefits of optimal transport and input convex neural architectures to directly learn and uncover maps between control and perturbed cell states at the single-cell level. Understanding and predicting molecular responses in single cells upon chemical, genetic or mechanical perturbations is a core question in biology. Obtaining single-cell measurements typically requires the cells to be destroyed. This makes learning heterogeneous perturbation responses challenging as we only observe unpaired distributions of perturbed or non-perturbed cells. Here we leverage the theory of optimal transport and the recent advent of input convex neural architectures to present CellOT, a framework for learning the response of individual cells to a given perturbation by mapping these unpaired distributions. CellOT outperforms current methods at predicting single-cell drug responses, as profiled by scRNA-seq and a multiplexed protein-imaging technology. Further, we illustrate that CellOT generalizes well on unseen settings by (1) predicting the scRNA-seq responses of holdout patients with lupus exposed to interferon-β and patients with glioblastoma to panobinostat; (2) inferring lipopolysaccharide responses across different species; and (3) modeling the hematopoietic developmental trajectories of different subpopulations.",
+  "authors": "Charlotte Bunne, Stefan G. Stark, Gabriele Gut, Jacobo Sarabia del Castillo, Mitchell P. Levesque, K. Lehmann, L. Pelkmans, Andreas Krause",
+  "venue": "bioRxiv",
+  "year": 2021,
+  "citations": 364,
+  "found_by": [
+   "seed"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:37770709"
+   ],
+   "pmcid": "PMC10630137"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "神经最优传输建模单细胞扰动响应，方法新且可复用。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞扰动响应建模通用方法，被广泛跟进引用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "神经最优传输CellOT学习扰动响应映射",
+  "data": "单细胞多组学/成像数据，黑色素瘤、狼疮、胶质瘤、多物种LPS、造血",
+  "scenario": "单细胞扰动响应预测",
+  "benchmark": "当前SOTA方法（线性潜空间位移类方法）",
+  "results": "在黑色素瘤药物响应、狼疮与胶质瘤患者活检、跨物种LPS响应及造血命运演化任务上优于现有方法",
+  "availability": "",
+  "limitations": "依赖未配对数据假设；需捕获训练队列异质性才能泛化到新患者",
+  "summary": "提出CellOT，用神经最优传输从非时间分辨的未配对单细胞数据学习扰动响应。通过输入凸神经网络参数化对偶势，学习控制态与扰动态之间的最优传输映射。在黑色素瘤药物、狼疮与胶质瘤患者、跨物种LPS及造血等任务上验证，性能优于现有SOTA方法。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

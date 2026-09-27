@@ -30,6 +30,7 @@ jobs:
           SCORE_MODEL: ${{ vars.SCORE_MODEL }}
           DEEP_MODEL: ${{ vars.DEEP_MODEL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
         run: python -m radar.run daily --days ${{ inputs.days || 1 }}
       - name: build site
         run: python -m radar.run site

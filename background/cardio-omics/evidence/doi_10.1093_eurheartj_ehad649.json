@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehad649",
+  "title": "Neutrophil counts and cardiovascular disease.",
+  "url": "https://doi.org/10.1093/eurheartj/ehad649",
+  "abstract": "Background and aims Anti-inflammatory trials have shown considerable benefits for cardiovascular disease. High neutrophil counts, an easily accessible inflammation biomarker, are associated with atherosclerosis in experimental studies. This study aimed to investigate the associations between neutrophil counts and risk of nine cardiovascular endpoints using observational and genetic approaches. Methods Observational studies were conducted in the Copenhagen General Population Study (n = 101 730). Genetic studies were firstly performed using one-sample Mendelian randomization (MR) with individual-level data from the UK Biobank (n = 365 913); secondly, two-sample MR analyses were performed using summary-level data from the Blood Cell Consortium (n = 563 085). Outcomes included ischaemic heart disease, myocardial infarction, peripheral arterial disease, ischaemic cerebrovascular disease, ischaemic stroke, vascular-related dementia, vascular dementia, heart failure, and atrial fibrillation. Results Observational analyses showed associations between high neutrophil counts with high risks of all outcomes. In the UK Biobank, odds ratios (95% confidence intervals) per 1-SD higher genetically predicted neutrophil counts were 1.15 (1.08, 1.21) for ischaemic heart disease, 1.22 (1.12, 1.34) for myocardial infarction, and 1.19 (1.04, 1.36) for peripheral arterial disease; similar results were observed in men and women separately. In two-sample MR, corresponding estimates were 1.14 (1.05, 1.23) for ischaemic heart disease and 1.11 (1.02, 1.20) for myocardial infarction; multiple sensitivity analyses showed consistent results. No robust associations in two-sample MR analyses were found for other types of leucocytes. Conclusions Observational and genetically determined high neutrophil counts were associated with atherosclerotic cardiovascular disease, supporting that high blood neutrophil counts is a causal risk factor for atherosclerotic cardiovascular disease.",
+  "authors": "Luo J, Thomassen JQ, Nordestgaard BG, Tybjærg-Hansen A, Frikke-Schmidt R.",
+  "venue": "European heart journal",
+  "year": 2023,
+  "citations": 153,
+  "found_by": [
+   "journal-retro"
+  ],
+  "extra": {
+   "journal_watch": true,
+   "pmcid": "PMC10719495",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Frikke-Schmidt R",
+   "last_affil": "Department of Clinical Biochemistry, Copenhagen University Hospital-Rigshospitalet, Blegdamsvej 9, DK-2100 Copenhagen, Denmark."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "十万人队列+UKB MR，中性粒细胞与CVD因果关联，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "十万人队列加MR，中性粒细胞与CVD因果证据，方法可复用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "观察性队列+孟德尔随机化",
+  "data": "CGPS 101730人；9种心血管终点；白细胞计数",
+  "scenario": "中性粒细胞与心血管病因果推断",
+  "benchmark": "观察性关联 vs 遗传因果；其他白细胞亚型",
+  "results": "中性粒细胞高与9种CVD风险升高相关；MR支持因果；其他亚型结果不一致",
+  "availability": "",
+  "limitations": "仅丹麦白人；观察性残余混杂；MR假设限制",
+  "summary": "研究检验高血中性粒细胞计数是否增加九类心血管疾病风险。采用Copenhagen General Population Study观察性队列并结合孟德尔随机化遗传分析，同时评估淋巴、单核、嗜碱和嗜酸细胞。发现中性粒细胞升高与广泛心血管终点风险增加一致相关，遗传证据支持潜在因果性，而其他白细胞亚型关联不一致。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

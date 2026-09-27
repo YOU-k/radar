@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1002/smll.202409571",
+  "title": "Heart‐on‐a‐Miniscope: A Miniaturized Solution for Electrophysiological Drug Screening in Cardiac Organoids",
+  "url": "https://doi.org/10.1002/smll.202409571",
+  "abstract": "Abstract Cardiovascular toxicity remains a primary concern in drug development, accounting for a significant portion of post‐market drug withdrawals due to adverse reactions such as arrhythmias. Traditional preclinical models, predominantly based on animal cells, often fail to replicate human cardiac physiology accurately, complicating the prediction of drug‐induced effects. Although human‐induced pluripotent stem cell‐derived cardiomyocytes (hiPSC‐CMs) provide a more genetically relevant system, their use in 2D, static cultures does not sufficiently mimic the dynamic, 3D environment of the human heart. 3D cardiac organoids made from human iPSC‐CMs can potentially bridge this gap. However, most traditional electrophysiology assays, developed for single cells or 2D monolayers, are not readily adaptable to 3D organoids. This study uses optical calcium analysis of human organoids combined with miniaturized fluorescence microscopy (miniscope) and heart‐on‐a‐chip technology. This simple, inexpensive, and efficient platform provides robust on‐chip calcium imaging of human cardiac organoids. The versatility of the system is demonstrated through cardiotoxicity assay of drugs known to impact cardiac electrophysiology, including dofetilide, quinidine, and thapsigargin. The platform promises to advance drug testing by providing a more reliable and physiologically relevant assessment of cardiovascular toxicity, potentially reducing drug‐related adverse effects in clinical settings.",
+  "authors": "Pouria Tirgar, Abigail Vikstrom, José Miguel Romero Sepúlveda, L. K. Srivastava, Ali Amini, T. Tabata, Shuichiro Higo, Gil Bub",
+  "venue": "Small",
+  "year": 2024,
+  "citations": 16,
+  "found_by": [
+   "s2kw:cardiac organoid drug screenin"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:39937454"
+   ],
+   "pmcid": "PMC11817906"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "心脏类器官电生理药筛芯片，含建模读出",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "心脏类器官电生理药筛平台，心脏优先且含建模读出",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LWD-Miniscope长工作距离微型荧光显微镜",
+  "data": "心脏类器官钙瞬变荧光成像数据",
+  "scenario": "心脏类器官电生理药物筛选",
+  "benchmark": "传统MEA、膜片钳及常规荧光显微镜系统",
+  "results": "可在芯片上以高时空分辨率成像人心脏钙瞬变，分辨率达228 lp/mm@60帧/秒",
+  "availability": "",
+  "limitations": "既往微型显微镜因GRIN透镜工作距离近零，不适用于芯片底部成像；需适配体外芯片应用",
+  "summary": "针对药物诱导心脏毒性评估需求，作者将开源微型荧光显微镜与heart-on-a-chip平台整合，开发了长工作距离Miniscope（LWD-Miniscope）。通过采用商用GRIN透镜并改造原有设计以适应体外应用，实现了对芯片上人类心脏类器官钙瞬变的高时空分辨率光学成像与刺激。该设备紧凑、简单且成本高效，可解决传统MEA和膜片钳劳动密集、低通量且不适用于3D类器官的问题。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

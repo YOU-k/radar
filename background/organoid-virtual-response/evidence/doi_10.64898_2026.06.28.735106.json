@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.06.28.735106",
+  "title": "Tabular Foundation Models Are Competitive Cellular Perturbation Predictors Across Biological Scales",
+  "url": "https://doi.org/10.64898/2026.06.28.735106",
+  "abstract": "Predicting how cells respond to genetic and chemical perturbations is a central challenge in drug discovery and functional genomics. A growing ecosystem of specialized single-cell foundation models has been developed to address this problem, yet their practical advantage over domain-agnostic approaches remains unclear. Here we evaluate the power of Tabular Foundation Models such as TabICL and TabPFN, general-purpose pre-trained regression models, against domain-specific architectures including PRESAGE, scGPT, scLAMBDA, STACK and Prophet across four complementary evaluation settings: cell-level in-context cross-cell-type prediction, pseudobulk perturbation prediction on five Perturb-seq datasets of cell-lines, a genome-wide CRISPR screen in primary human CD4+ T cells, and embryo-level cell-type composition prediction in a zebrafish developmental perturbation atlas. In the cell-level cross-cell type perturbation prediction, Tabular Foundation Models perform on par or better than specialized models. On pseudobulk perturbation prediction, Tabular Foundation Models consistently out-perform specialized baselines across multiple evaluation metrics and datasets. On whole-embryo cell-type composition prediction, Tabular Foundation Models are competitive with specialized baselines. These results demonstrate that general-purpose tabular in-context learning provides a strong and scalable alternative to bespoke biological architectures for perturbation response modeling across cell systems and scales.",
+  "authors": "G. Palla, Alexander Hillsley, Yang-Joon Kim, Loic A. Royer",
+  "venue": "bioRxiv",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2kw:zebrafish perturbation single-"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "表格基础模型跨生物尺度预测扰动响应，含基准评测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "表格基础模型跨尺度扰动预测，通用方法但直击扰动建模核心",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "表格基础模型TabICL/TabPFN对比专用模型",
+  "data": "四个评估设置；五个Perturb-seq数据集；CD4+ T全基因组CRISPR；斑马鱼图谱",
+  "scenario": "细胞扰动响应预测",
+  "benchmark": "PRESAGE、scGPT、scLAMBDA、STACK、Prophet",
+  "results": "细胞水平跨类型预测持平或更优；伪bulk扰动预测持续优于专用基线；胚胎组成预测具竞争力",
+  "availability": "",
+  "limitations": "未覆盖所有生物尺度；专用模型在部分任务仍可能更优",
+  "summary": "作者评估通用表格基础模型在细胞扰动预测中的表现。将TabICL和TabPFN与PRESAGE、scGPT等专用模型在四个互补设置中比较，包括跨细胞类型、Perturb-seq、CRISPR筛选和斑马鱼胚胎组成预测。发现表格基础模型在细胞水平持平或更优，在伪bulk扰动预测持续优于专用基线，在胚胎水平具竞争力。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

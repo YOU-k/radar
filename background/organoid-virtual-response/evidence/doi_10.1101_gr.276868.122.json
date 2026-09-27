@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/gr.276868.122",
+  "title": "Cross-species cell-type assignment from single-cell RNA-seq data by a heterogeneous graph neural network",
+  "url": "https://doi.org/10.1101/gr.276868.122",
+  "abstract": "Cross-species comparative analyses of single-cell RNA sequencing (scRNA-seq) data allow us to explore, at single-cell resolution, the origins of cellular diversity and the evolutionary mechanisms that shape cellular form and function. Here, we aimed to utilize a heterogeneous graph neural network to learn aligned and interpretable cell and gene embeddings for cross-species cell type assignment and gene module extraction (CAME) from scRNA-seq data. A systematic evaluation study on 649 pairs of cross-species datasets showed that CAME outperformed six benchmarking methods in terms of cell-type assignment and model robustness to insufficiency and inconsistency of sequencing depths. Comparative analyses of the major types of human and mouse brains by CAME revealed shared cell type-specific functions in homologous gene modules. Alignment of the trajectories of human and macaque spermatogenesis by CAME revealed conservative gene expression dynamics during spermatogenesis between humans and macaques. Owing to the utilization of non-one-to-one homologous gene mappings, CAME made a significant improvement on cell-type characterization cross zebrafish and other species. Overall, CAME can not only make an effective cross-species assignment of cell types on scRNA-seq data but also reveal evolutionary conservative and divergent features between species.",
+  "authors": "Xing-Yan Liu, Qunlun Shen, Shihua Zhang",
+  "venue": "bioRxiv",
+  "year": 2021,
+  "citations": 52,
+  "found_by": [
+   "s2:references:doi:10.1038/s41422-024-01034-y"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:36526433"
+   ],
+   "pmcid": "PMC9977153"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种单细胞细胞类型映射方法，契合跨物种迁移方向",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨物种细胞类型映射方法，属跨物种迁移建模",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "半监督异构图神经网络CAME",
+  "data": "两物种scRNA-seq表达矩阵+同源基因映射",
+  "scenario": "跨物种细胞类型注释",
+  "benchmark": "Seurat-v3、Cell BLAST、ItClust、scArches、LIGER、CSMF等",
+  "results": "实现跨物种细胞与基因对齐嵌入，支持一对多/多对多同源映射，可提取基因模块",
+  "availability": "",
+  "limitations": "依赖同源基因映射质量，跨物种转录组差异与测序深度不一致仍影响整合",
+  "summary": "针对非模式物种缺乏细胞标志物、跨物种标签转移困难的问题，提出半监督异构图神经网络CAME。该方法将参考与查询物种的表达矩阵及同源基因映射编码为异质细胞-基因图，并加入种内KNN细胞-细胞边，学习对齐且可解释的细胞与基因嵌入。结果实现跨物种细胞类型注释与基因模块提取，支持非一对一同源关系。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

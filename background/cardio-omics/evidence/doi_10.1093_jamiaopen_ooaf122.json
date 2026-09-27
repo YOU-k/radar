@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/jamiaopen/ooaf122",
+  "title": "ECG-FM: an open electrocardiogram foundation model.",
+  "url": "https://doi.org/10.1093/jamiaopen/ooaf122",
+  "abstract": "Objectives To develop ECG-FM, an open-weight foundation model for electrocardiogram (ECG) analysis, rigorously evaluate its performance on clinically salient tasks, and openly release it alongside a public benchmark. Materials and methods In a study using 1.5 million 12-lead ECGs, we present ECG-FM, a transformer-based foundation model pretrained with hybrid self-supervision that combines masked reconstruction and contrastive learning with ECG-specific augmentation. Downstream, we evaluate multi-label ECG interpretation and prediction of reduced left ventricular ejection fraction (LVEF), introducing an openly available benchmark on the MIMIC-IV-ECG dataset. We assess ECG-FM's capabilities through data scaling experiments, latent-space structure analysis, and attention-based saliency. Results Finetuned ECG-FM models outperform task-specific baselines in the small-to-medium-scale data regime, exhibit strong label efficiency and cross-dataset generalizability, and achieve high AUROC on salient labels, including atrial fibrillation (0.996) and LVEF ≤40% (0.929). The pretrained encoder showcases competitive linear probing performance, with functionally discriminative embeddings. Discussion Findings indicate that ECG-FM is generalizable, label-efficient, and discriminative for screening, risk stratification, and monitoring. Its representations capture low-level morphology and high-order cardiac semantics, and the pretrained encoder serves as a robust feature-set generator. This work mitigates reliance on large labeled datasets, reduces compute and data requirements, and lowers barriers to reproducibility and cross-study comparison. Conclusion ECG-FM is an open, rigorously validated ECG foundation model intended to accelerate transparent, comparable research in the ECG analysis subfield. It is designed for rapid integration and evaluation, especially for delivering practical gains in low-label settings. We release our code, model weights, tutorials, and benchmark at https://github.com/bowang-lab/ECG-FM/.",
+  "authors": "McKeen K, Masood S, Toma A, Rubin B, Wang B.",
+  "venue": "JAMIA open",
+  "year": 2025,
+  "citations": 21,
+  "found_by": [
+   "eupmc:ECG deep learning foundation m"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12530324",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Wang B",
+   "last_affil": "Toronto General Hospital Research Institute, University Health Network, Toronto, M5G 2C4, Canada."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "150万ECG开源基础模型，公开权重与基准，契合ECG AI方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "150万ECG开源基础模型，公开基准，方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "ECG-FM：Transformer自监督基础模型",
+  "data": "140万ECG片段，UHN/PhysioNet/MIMIC-IV",
+  "scenario": "ECG多标签解读与LVEF预测",
+  "benchmark": "UHN-ECG外部验证，多标签与降低LVEF任务",
+  "results": "在UHN多标签解读和降低LVEF预测中表现强、标签高效且具泛化性",
+  "availability": "公开权重、代码、教程和基准",
+  "limitations": "预训练数据以公开集为主，UHN为私有单机构数据",
+  "summary": "研究提出ECG-FM，一个基于Transformer的ECG基础模型，用混合自监督目标在140万ECG片段上预训练。模型在UHN-ECG外部机构队列上验证多标签解读和降低LVEF预测任务，评估性能、标签效率和跨数据集泛化。结果显示ECG-FM表现强且标签高效，并公开权重、代码、教程和基准以促进可复现与比较。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 5,
+ "added_on": "2026-09-27"
+}

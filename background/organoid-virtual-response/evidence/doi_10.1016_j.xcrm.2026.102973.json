@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.xcrm.2026.102973",
+  "title": "Biomarker-guided responses in patient-derived organoids predict effective therapies in breast cancer",
+  "url": "https://doi.org/10.1016/j.xcrm.2026.102973",
+  "abstract": "Summary Poor therapeutic response in subsets of breast cancer (BC) patients poses an ongoing challenge. Here, we present a biomarker-guided characterization of 40 patient-derived BC organoids, with the aim of modeling resistant disease with greater fidelity and developing an in vitro system grounded in clinical data for testing alternative treatment strategies. We utilize patient data from the I-SPY2 clinical trial (NCT01042379) to develop predictive models of response to a range of therapies, using only organoid-detectable biomarkers as input, and validate a model predicting response to veliparib-platinum chemotherapy (VP) in triple-negative BC (TNBC) organoids. A drug screen in VP-resistant TNBC organoids reveals combination treatments that overcome resistance to cisplatin, including pro-apoptotic therapies. Another class of hits, HSP90 inhibitors, links organoid drug sensitivity to improved recurrence-free survival in a biomarker-defined patient subset. These findings establish organoid-based functional modeling as a bridge between clinical biomarkers and precision treatment strategies in breast cancer.",
+  "authors": "T. B. Bui, D. Wolf, M. Bruck, Kaitlin Moore, Jessica Lien, Sarah Choi, Shruti Warhadpande, Amirabbas Parizadeh",
+  "venue": "Cell Reports Medicine",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1073/pnas.1911273116"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42561946"
+   ],
+   "pmcid": "PMC13522806"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "类器官药敏结合临床数据建模预测疗效，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "乳腺癌类器官生物标志物预测模型对接临床试验，临床对应强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "I-SPY2生物标志物类器官预测模型",
+  "data": "26个乳腺癌类器官及386化合物10剂量筛选",
+  "scenario": "乳腺癌治疗耐药与用药预测",
+  "benchmark": "I-SPY2临床试验患者生物标志物与RPS分型",
+  "results": "类器官重现多数亚型，耐药类器官筛选出多/单药方案，亚型匹配患者显示生存获益",
+  "availability": "",
+  "limitations": "类器官样本量有限，需更大临床队列验证预测模型",
+  "summary": "针对乳腺癌治疗耐药与生物标志物预测问题，评估早期乳腺癌类器官能否模拟I-SPY2临床预测生物标志物。将HUB类器官RNA-seq与TCGA数据整合，构建类器官定制预测模型识别耐药培养物，并进行386化合物10剂量高通量筛选。结果显示类器官重现多数亚型，耐药模型筛选出有效方案并在亚型匹配患者中显示生存获益。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

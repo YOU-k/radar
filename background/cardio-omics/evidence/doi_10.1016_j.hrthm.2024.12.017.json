@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.hrthm.2024.12.017",
+  "title": "Prediction of Atrial and Ventricular Arrhythmias using Multiple Cardiovascular Risk Factor Polygenic Risk Scores.",
+  "url": "https://doi.org/10.1016/j.hrthm.2024.12.017",
+  "abstract": "BACKGROUND\nAtrial fibrillation (AF) prediction improves by combining clinical scores with a polygenic risk score (PRS) for AF (AF-PRS), but there are limited studies of PRS for ventricular arrhythmia (VA) prediction.\n\n\nOBJECTIVE\nWe assessed the value of including multiple PRS for cardiovascular risk factors (CV-PRS) for incident AF and VA prediction.\n\n\nMETHODS\nWe used 158,733 individuals of European ancestry from UK Biobank to build three models for AF: CHARGE-AF (AF1), AF1 + AF-PRS (AF2), AF2 + CV-PRS (AF3). Models for VA included sex and age (VA1), VA1 + coronary artery disease (CAD) PRS (CAD-PRS, VA2), and VA2 + CV-PRS (VA3), conducting separate analyses in subjects with and without ischemic heart disease (IHD). Performance was evaluated in individuals of European (N=158,733), African (N=7,200), South Asian (N=9,241) and East Asian (N=2,076) ancestry from UK Biobank.\n\n\nRESULTS\nAF2 had a higher C-index than AF1 (0.762 versus 0.746, P<0.001), marginally improving to 0.765 for AF3 (P<0.001, including PRS for heart failure, electrocardiogram and cardiac magnetic resonance measures). In South Asians, AF2 C-index was higher than AF1 (P<0.001). For VA, the C-index for VA2 was greater than VA1 (0.692 versus 0.681, P<0.001) in Europeans, which was also observed in South Asians (P<0.001). VA3 improved prediction of VA in individuals with IHD.\n\n\nCONCLUSION\nCV-PRS improved AF prediction compared to CHARGE-AF and AF-PRS. A CAD-PRS improved VA prediction, while CV-PRS contributed in IHD. AF- and CAD-PRS were transferable to individuals of South Asian ancestry. Our results inform of the use of CV-PRS for personalised screening.",
+  "authors": "Julia Ramírez, S. van Duijvenboden, M. Orini, Pier D. Lambiase, A. Tinker, W. Young, P. Munroe",
+  "venue": "Heart Rhythm",
+  "year": 2024,
+  "citations": 4,
+  "found_by": [
+   "s2kw:East Asian population cardiova"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:39689778"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 15.8万人多PRS预测房颤与室性心律失常",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 15.8万人多PRS预测房颤室性心律失常",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多心血管风险因素PRS+Cox模型",
+  "data": "UKB 158,733欧洲裔，及非洲、南亚、东亚裔",
+  "scenario": "房颤与室性心律失常风险预测",
+  "benchmark": "CHARGE-AF、年龄性别模型",
+  "results": "AF2 C指数0.762 vs AF1 0.746(P<0.001)，AF3 0.765；VA2 C指数0.692 vs VA1 0.681(P<0.001)",
+  "availability": "",
+  "limitations": "非欧洲裔样本量较小，VA预测增益有限",
+  "summary": "研究评估多种心血管风险因素PRS对房颤和室性心律失常预测的价值。在UKB 158,733欧洲裔中构建AF和VA系列模型并在多族裔中验证。发现CV-PRS改善AF预测，CAD-PRS改善VA预测，CV-PRS在缺血性心脏病患者中贡献VA预测。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

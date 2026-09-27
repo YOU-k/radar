@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1371/journal.pbio.3003597",
+  "title": "A deep learning-based computational pipeline predicts developmental outcome in retinal organoids.",
+  "url": "https://doi.org/10.1371/journal.pbio.3003597",
+  "abstract": "Retinal organoids have become important models for studying development and disease, yet stochastic heterogeneity in the formation of cell types, tissues, and phenotypes remains a major challenge. This limits our ability to precisely experimentally address the early developmental trajectories towards these outcomes. Here, we utilize deep learning to predict the differentiation path and resulting tissues in retinal organoids well before they become visually discernible. Our approach effectively bypasses the challenge of organoid-related heterogeneity in tissue formation. For this, we acquired a high-resolution time-lapse imaging dataset comprising about 1,000 organoids and over 100,000 images enabling precise temporal tracking of organoid development. By combining expert annotations with advanced image analysis of organoid morphology, we characterized the heterogeneity of the retinal pigmented epithelium (RPE) and lens tissues, as well as global organoid morphologies over time. Using this training set, our deep learning approach accurately predicts the emergence and size of RPE and lens tissue formation as well as similarities in overall organoid morphology on an organoid-by-organoid basis at early developmental stages, refining our understanding of when early lineage decisions are made. This approach advances knowledge of tissue and phenotype decision-making in organoid development and can inform the design of similar predictive platforms for other organoid systems, paving the way for more standardized and reproducible organoid research. Finally, it provides a direct focus on early developmental time points for in-depth molecular analyses, alleviated from confounding effects of heterogeneity.",
+  "authors": "Afting C, Bhatti N, Schlagheck C, Salvador ES, Herrera-Astorga L, Agarwal R, Suzuki R, Hackert N, Lorenz HM, Zilova L, Wittbrodt J, Exner T.",
+  "venue": "PLoS biology",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "eupmc:organoid benchmark dataset rep"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12843511",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Exner T",
+   "last_affil": "Heidelberg International Biosciences Graduate School HBIGS, Heidelberg, Germany."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "深度学习预测视网膜类器官发育结局，含大规模影像",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "深度学习预测视网膜类器官发育结局，PLoS Biol，建模有影响力",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度学习预测视网膜类器官发育结局",
+  "data": "988个类器官、117249张明场延时图像",
+  "scenario": "视网膜类器官组织结局预测",
+  "benchmark": "传统形态学分析与专家注释",
+  "results": "可在RPE与晶状体组织可见出现前很早期准确预测其发生与大小及整体形态相似性，明确组织结局决定时间窗",
+  "availability": "",
+  "limitations": "监督深度学习需大量标注高质量数据集，是类器官研究主要限制之一",
+  "summary": "针对视网膜类器官（RO）内与间异质性导致结局难以预测的问题，作者开展概念验证研究，利用深度学习在组织结局可见出现前进行预测。研究采集988个类器官、117249张明场延时图像，结合专家注释与形态分析表征RPE、晶状体及整体形态异质性，并训练DL模型预测组织结局。结果显示模型可在极早期准确预测RPE与晶状体的发生与大小及整体形态相似性，明确组织结局决定时间窗，有助于开展不受异质性混杂的分子分析。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

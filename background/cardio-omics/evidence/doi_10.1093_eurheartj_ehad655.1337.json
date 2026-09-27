@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehad655.1337",
+  "title": "Incorporating a polygenic risk score into cardiovascular disease examinations to identify subclinical coronary artery disease: rationale and design of the ESCALATE trial",
+  "url": "https://doi.org/10.1093/eurheartj/ehad655.1337",
+  "abstract": "\n \n \n Identifying and targeting established modifiable risk factors such as hyperlipidaemia, blood pressure, smoking, and diabetes have led to a successful reduction in poor outcomes from coronary artery disease (CAD) at the population-level. However, up to one-in-four patients who present with ST elevation myocardial infarction do so in the absence of such risk factors. There is a significant unmet need for new diagnostic strategies independent of these factors to detect CAD in its subclinical phase. Polygenic risk scores (PRS) have demonstrated an ability in cohort studies to improve risk prediction models independent of traditional risk factors and self-reported family history. However, there is a lack of data from implementation and interventional studies demonstrating efficacy, participant and provider experience, and cost effectiveness of utilising PRS.\n \n \n \n The aim of this study is to examine the incorporation of a CAD PRS during primary care-based cardiovascular disease (CVD) risk assessments to identify low or intermediate risk individuals with newly diagnosed CAD and subsequent impact on shared treatment decisions, participant experience, and provider experience. Our hypothesis is that incorporating a CAD PRS-based decision tool for a coronary calcium scan into CVD risk assessments will identify new, potentially missed individuals with subclinical CAD.\n \n \n \n The ESCALATE study is a 12-month, prospective, multi-centre implementation study incorporating CAD PRS into otherwise standard primary care CVD risk assessments, identifying patients at increased lifetime CAD risk, for non-invasive CT coronary imaging. 1,000 eligible participants aged 45-65 years old will enter the PPP-CAD Diagnostic Pathway, which applies CAD PRS to those considered low or moderate 5-year absolute CVD risk based on traditional risk factors and triages those with CAD PRS ≥80% for a coronary calcium scan (Figure 1). The primary outcome will be the identification of subclinical CAD, defined as a coronary artery calcium score (CACS) >0 Agatston units (AU). Multiple secondary outcomes will be assessed, including baseline CACS ≥100 AU or ≥75th age-/sex-matched percentile, medical management strategies, cholesterol and blood pressure levels, health-related quality of life (HRQOL), and patient experience.\n \n \n \n Study recruitment was initiated recruitment in August 2022 and is actively recruiting across Australia. 298 participants have been enrolled as of 27th February 2022.\n \n \n \n The ESCALATE study is the first prospectively registered clinical trial testing the ability of a CAD PRS to: a) identify individuals with subclinical CAD by non-invasive coronary imaging; and b) measure the impact of this diagnostic strategy on personalised diagnosis and shared decision-making. The top-line study results are expected in mid-2025.\n",
+  "authors": "M. Gray, Y. Berman, S. M. Grieve, A. Ho, J. Hu, K. Hyun, J. Ingles, G. Jennings",
+  "venue": "European Heart Journal",
+  "year": 2023,
+  "citations": 0,
+  "found_by": [
+   "s2kw:polygenic risk score coronary "
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "PRS嵌入冠脉检查的随机试验设计，契合筛查-干预闭环方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHJ上PRS整合筛查CAD的实用性随机试验设计，代表临床转化转折点",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "前瞻性多中心实施研究设计",
+  "data": "12个月、多中心、初级保健CVD风险评估",
+  "scenario": "亚临床冠状动脉疾病识别",
+  "benchmark": "传统CVD风险评估与冠脉钙化扫描决策",
+  "results": "研究方案阶段，尚未报告结果",
+  "availability": "",
+  "limitations": "为研究设计论文，尚无疗效、体验和成本效果结果",
+  "summary": "ESCALATE试验旨在将CAD PRS纳入初级保健CVD风险评估，以识别低或中危人群中的亚临床CAD。研究为12个月前瞻性多中心实施研究，结合PRS决策工具指导冠脉钙化扫描。主要关注新诊断CAD、共同治疗决策以及参与者和提供者体验。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

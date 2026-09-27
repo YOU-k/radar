@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.hrthm.2026.03.1956",
+  "title": "Multicenter validation of an artificial intelligence-enabled ECG model to predict 1-year risk of atrial fibrillation or flutter.",
+  "url": "https://doi.org/10.1016/j.hrthm.2026.03.1956",
+  "abstract": "BACKGROUND\nAtrial fibrillation (AF) is the most common cardiac arrhythmia associated with an increased risk of stroke and heart failure. AF is often asymptomatic and paroxysmal, making diagnosis challenging. Artificial intelligence (AI) applied to electrocardiogram (ECG) interpretation is a promising approach for improved diagnosis. Although ECG-AI studies have shown promise, the common practice of evaluating based on data from single institutions may overestimate performance. External validation is essential to ensure that AI models generalize well to diverse settings and populations.\n\n\nOBJECTIVE\nThis study aimed to externally validate an ECG-AI model for predicting 1-year AF risk.\n\n\nMETHODS\nIn this retrospective study, ECG data from 3 clinical sites were aggregated and patients' charts were manually abstracted to define inclusion and exclusion criteria (age 65+ years with no previous AF or history of pacer/defibrillator use) and endpoints (new AF diagnosis within 1 year or 1 year of AF-free follow-up). The sensitivity and specificity of a risk score from an ECG-AI model were evaluated against prespecified minimum values of 20% and 85%, respectively.\n\n\nRESULTS\nThe analysis included 4017 patients, with 240 (6.0%) developing AF within 1 year. The ECG-AI model returned an \"increased risk\" result for 391 patients (9.7%), including 74 who developed AF (sensitivity 31%; 95% confidence interval 25-37). A total of 3626 patients had a \"no increased risk\" result, with 3460 remaining free from AF (specificity 92%; 95% confidence interval 91-92).\n\n\nCONCLUSION\nThe results validate the performance of the Tempus ECG-AF model and support its clinical use for AF risk stratification.",
+  "authors": "John M. Pfeifer, Greg Lee, S. Raghunath, Arun Nemani, Taylor Green, E. Kaufman, Merrit Pogue, Joseph Banno",
+  "venue": "Heart Rhythm",
+  "year": 2026,
+  "citations": 3,
+  "found_by": [
+   "s2:citations:doi:10.1161/circulationaha.121.057480"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41956270"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多中心外部验证ECG-AI预测房颤，契合ECG AI与队列结局",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多中心外部验证ECG-AI预测房颤，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "ECG-AI模型外部验证",
+  "data": "3中心4017例，65岁以上无房颤史，240例1年内房颤",
+  "scenario": "1年房颤/房扑风险预测",
+  "benchmark": "预设敏感性20%、特异性85%",
+  "results": "391例判为高风险，其中74例发生房颤，敏感性31%（95%CI 25-37）；3626例无高风险，3460例保持无房颤",
+  "availability": "",
+  "limitations": "回顾性；敏感性仅31%；年龄限定65岁以上",
+  "summary": "研究在多中心外部验证ECG-AI模型预测1年房颤或房扑风险的表现。汇总3个临床中心4017例65岁以上无房颤史患者，人工抽象病历定义终点，并与预设敏感性20%、特异性85%比较。模型对391例判为高风险，其中74例发生房颤，敏感性31%，3626例无高风险者中3460例保持无房颤。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

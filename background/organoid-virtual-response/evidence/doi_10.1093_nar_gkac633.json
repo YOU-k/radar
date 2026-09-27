@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/nar/gkac633",
+  "title": "Construction of a cross-species cell landscape at single-cell level",
+  "url": "https://doi.org/10.1093/nar/gkac633",
+  "abstract": "Abstract Individual cells are basic units of life. Despite extensive efforts to characterize the cellular heterogeneity of different organisms, cross-species comparisons of landscape dynamics have not been achieved. Here, we applied single-cell RNA sequencing (scRNA-seq) to map organism-level cell landscapes at multiple life stages for mice, zebrafish and Drosophila. By integrating the comprehensive dataset of > 2.6 million single cells, we constructed a cross-species cell landscape and identified signatures and common pathways that changed throughout the life span. We identified structural inflammation and mitochondrial dysfunction as the most common hallmarks of organism aging, and found that pharmacological activation of mitochondrial metabolism alleviated aging phenotypes in mice. The cross-species cell landscape with other published datasets were stored in an integrated online portal—Cell Landscape. Our work provides a valuable resource for studying lineage development, maturation and aging.",
+  "authors": "Ren-Ying Wang, Peijing Zhang, Jingjing Wang, Lifeng Ma, W. E., Sheng-Bao Suo, Meng-Meng Jiang, Jiaqi Li",
+  "venue": "Nucleic Acids Research",
+  "year": 2022,
+  "citations": 122,
+  "found_by": [
+   "s2:references:doi:10.1038/s41422-024-01034-y"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:35929025"
+   ],
+   "pmcid": "PMC9881150"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种单细胞图谱资源，含小鼠斑马鱼果蝇",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨物种单细胞图谱资源，小鼠斑马鱼果蝇，必读数据",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Microwell-seq构建跨物种细胞图谱",
+  "data": "小鼠、斑马鱼、果蝇等15物种，超260万单细胞",
+  "scenario": "跨物种单细胞发育与衰老比较",
+  "benchmark": "HCL、MCA、Tabula Muris等已发表图谱",
+  "results": "构建跨物种细胞景观，发现结构炎症与线粒体功能障碍为衰老常见标志，激活线粒体代谢缓解小鼠衰老表型",
+  "availability": "在线门户Cell Landscape公开",
+  "limitations": "部分物种与组织覆盖有限，跨物种注释依赖参考数据",
+  "summary": "研究用Microwell-seq构建跨物种单细胞细胞景观。作者分析小鼠、斑马鱼和果蝇不同生命阶段超260万细胞，并结合公开数据整合15物种。发现免疫细胞随发育衰老变化显著，结构炎症与线粒体功能障碍为常见衰老标志，药物激活线粒体代谢可缓解小鼠衰老表型。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

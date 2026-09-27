@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehad655.2380",
+  "title": "Population prevalence of ECG abnormalities and risk of incident CVD outcomes: 5-year follow-up of 25,000 Chinese adults",
+  "url": "https://doi.org/10.1093/eurheartj/ehad655.2380",
+  "abstract": "\n \n \n Little is known about the utility of automated reporting of electrocardiograms (ECGs) for prediction of cardiovascular disease (CVD) types in low- and middle-income countries. We compared derived ECG phenotypes and a clinical risk score for prediction of incident major CVD types in a population study of Chinese adults.\n \n \n \n CVD risk factors were collected and 12-lead ECGs performed with automated interpretation using Mortara’s VERITAS™ algorithm on 25,239 adults in the China Kadoorie Biobank resurvey in 2013-2014. Incident CVD outcomes were recorded prospectively over a median follow-up of 5 years. We examined the prevalence and prognosis of broad ECG phenotypes developed from automated outputs: (i) atrial fibrillation/flutter (AFib); (ii) ischaemia (possible/probable or definite); (iii) left ventricular hypertrophy (LVH); and (iv) normal ECG. Participants were stratified by modified CHA2DS2-VA score (<3 vs ≥3) and by age at resurvey. Kaplan-Meier curves were plotted to display cumulative CVD event rates during follow-up for ECG phenotypes.\n \n \n \n The mean (SD) age at resurvey was 59.5 (10.2) years, 62% were women and 57% were from rural areas. Overall, 44.3% had a normal ECG and 1.2% had AFib (0.4%, 0.9%, and 3.9% at ages <55, 55-69, and 70+). A total of 28.1% had ischaemia, and 13.6% had LVH (Table). The prevalence of all pathological ECG phenotypes increased with age and prior CVD. AFib was more common in individuals with CHA2DS2-VA ≥3 vs <3 (3.6% vs 0.8%). CHA2DS2-VA ≥3 was associated with higher HRs (95% CI) for stroke (1.91; 1.67-2.19), ischaemic heart disease (IHD) (1.79; 1.52-2.11), and heart failure (HF) (1.80; 1.23-2.62), respectively. Compared to CHA2DS2-VA ≥3, HRs for the AFib phenotype were greater for IHD (2.62; 1.97-3.50) and HF (3.79; 2.21-6.49) and similar for stroke (1.88; 1.44-2.77). LVH was most strongly associated with HF (1.83; 1.31-2.55) and positive associations with each CVD type were greater for definite vs probable/possible ischaemic phenotypes. After adjustment for age, 5-year cumulative incidence rates of CVD were 36.8% in individuals with AFib, 19.4% in those with ischaemia (all), 18.0% in those with LVH, and 14.1% in those with normal ECGs. Individuals with CHA2DS2-VA ≥3 had a 3-fold greater cumulative incidence of CVD than those with scores <3 (40.9% vs 13.9%).\n \n \n \n All pathological ECG phenotypes were associated with higher risks of CVD outcomes, but AFib was most strongly predictive and comparable to moderate-high CHA2DS2-VA scores. However, absolute risks of subsequent CVD events were similar in those with ischaemia, LVH and a normal ECG. When combined with clinical risk scores, automated ECG interpretation is a useful adjunct in low-resource settings for CVD risk prediction in population studies and in clinical practice.\n",
+  "authors": "I. Turnbull, C. Camm, J. Halsey, H. Du, Z. Chen, R. Clarke",
+  "venue": "European Heart Journal",
+  "year": 2023,
+  "citations": 1,
+  "found_by": [
+   "s2kw:China Kadoorie Biobank cardiov"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "CKB两万五千人ECG表型预测CVD，契合ECG队列AI",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHJ上2.5万中国成人ECG表型预测CVD，队列代表性强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "自动心电图表型与临床风险评分比较",
+  "data": "中国Kadoorie Biobank 25,239名成人，随访5年",
+  "scenario": "中国成人ECG异常与CVD事件预测",
+  "benchmark": "改良CHA2DS2-VA临床风险评分",
+  "results": "正常ECG 44.3%，房颤1.2%，缺血28.1%，LVH 13.6%；病理ECG随年龄和既往CVD增加",
+  "availability": "",
+  "limitations": "随访仅5年；摘要未完整展示预测性能比较结果",
+  "summary": "研究比较自动解读ECG表型与临床风险评分对中国成人新发心血管事件的预测价值。在CKB复查人群中采集12导联ECG并用Mortara VERITAS算法自动判读，前瞻随访5年。发现正常ECG占44.3%，缺血和LVH常见，病理ECG表型随年龄和既往CVD增加。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

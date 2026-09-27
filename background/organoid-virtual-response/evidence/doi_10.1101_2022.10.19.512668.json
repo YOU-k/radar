@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2022.10.19.512668",
+  "title": "Trellis Single-Cell Screening Reveals Stromal Regulation of Patient-Derived Organoid Drug Responses",
+  "url": "https://doi.org/10.1101/2022.10.19.512668",
+  "abstract": "",
+  "authors": "María Ramos Zapatero, Alexander Tong, J. Sufi, P. Vlckova, F. C. Rodriguez, C. Nattress, X. Qin, D. Hochhauser",
+  "venue": "bioRxiv",
+  "year": 2023,
+  "citations": 7,
+  "found_by": [
+   "s2kw:organoid drug screening benchm"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞筛选揭示基质调控类器官药敏，有建模价值",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞筛选揭示基质调控类器官药敏，含扰动建模",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "Trellis单细胞筛选分析",
+  "data": "",
+  "scenario": "患者来源类器官药物响应",
+  "benchmark": "",
+  "results": "",
+  "availability": "",
+  "limitations": "",
+  "summary": "该文献为Trellis单细胞筛选揭示患者来源类器官药物响应中基质调控的预印本版本。其核心方法与Cell论文一致，基于树基治疗效应分析比较单细胞药物响应。因无全文，具体数据规模、基准和定量结果未提供。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-27"
+}

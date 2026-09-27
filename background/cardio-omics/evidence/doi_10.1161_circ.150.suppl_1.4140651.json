@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circ.150.suppl_1.4140651",
+  "title": "Abstract 4140651: Effect of Statin Therapy on Cardiovascular Events in High-Risk Group Identified by a Coronary Artery Calcium-Trained Deep Learning Model Using Retinal Imaging: A Propensity Score-Matched Study from the UK Biobank",
+  "url": "https://doi.org/10.1161/circ.150.suppl_1.4140651",
+  "abstract": "\n Introduction:\n Cardiovascular disease (CVD) remains the leading cause of mortality globally, necessitating improved risk stratification and preventive strategies. Reti-CVD, a deep learning model, predicts CVD risk by analyzing retinal images to detect subtle vascular changes indicative of coronary artery calcium presence. This study evaluates the efficacy of statin therapy in individuals identified as high-risk by Reti-CVD using propensity score matching and survival analysis.\n \n \n Hypothesis:\n Individuals with high Reti-CVD scores will benefit significantly from statin therapy, resulting in a reduced incidence of cardiovascular events compared to those not receiving statins.\n \n \n Methods:\n Data from the UK Biobank were utilized to perform 1:1 propensity score matching, comparing statin users and non-users. Matching was based on age, gender, race, BMI, systolic blood pressure, diastolic blood pressure, medication use for blood pressure, diabetes status, smoking status, alcohol consumption, and socioeconomic status. Within a cohort identified as high-risk by a deep learning model, survival analysis of a mean follow-up period of 9.83 years for CVD outcomes was conducted, with the hazard ratio calculated for statin users versus non-users.\n \n \n Results:\n In the unmatched cohort, significant differences were observed in several variables including age and gender between statin users (n=3,008) and non-users (n=42,373) as shown in Table 1. Post-matching, the cohort comprised 3,008 statin users and 3,008 non-users, with standardized mean differences significantly reduced for most variables. For the high Reti-CVD cohort, the hazard ratio for CVD outcomes in the statin group was 0.76 (95% CI: 0.50-1.14), indicating a 24% reduction in the risk of cardiovascular events compared to non-users. In comparison, the low to medium Reti-CVD cohort had a hazard ratio of 1.22 (95% CI: 0.90-1.68).\n \n \n Discussion:\n Findings suggest that individuals with high Reti-CVD scores likely benefit from statin therapy, as indicated by a trend towards reduced cardiovascular events. Reti-CVD shows potential in refining risk stratification for guiding statin therapy decisions. The integration of deep learning models like Reti-CVD in clinical practice could provide targeted interventions for high-risk populations.\n \n \n \n",
+  "authors": "Yunnie Cho, T. Rim, C. J. Lee, S. H. Park, Hyeonmin Kim, Chanyang Seo, Marco Yu, Sahil Thakur",
+  "venue": "Circulation",
+  "year": 2024,
+  "citations": 0,
+  "found_by": [
+   "s2kw:ECG deep learning foundation m"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank视网膜DL风险分层联合他汀干预，筛查-干预闭环",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank视网膜DL风险分层联合他汀干预，筛查闭环。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Reti-CVD深度学习+倾向评分匹配生存分析",
+  "data": "UK Biobank，匹配后3,008对，随访9.83年",
+  "scenario": "视网膜模型高危者他汀疗效评估",
+  "benchmark": "他汀使用者vs非使用者1:1倾向评分匹配",
+  "results": "匹配后3,008对，平均随访9.83年，计算他汀使用者CVD事件风险比",
+  "availability": "",
+  "limitations": "观察性研究，倾向评分匹配不能完全消除混杂",
+  "summary": "研究评估由视网膜图像训练的Reti-CVD模型识别的高危人群中他汀治疗对心血管事件的效果。利用UK Biobank数据，按年龄、性别、种族、BMI、血压、用药、糖尿病、吸烟、饮酒和社会经济状态进行1:1倾向评分匹配，比较高危者中他汀使用者与非使用者的CVD结局。匹配后队列为3,008对，平均随访9.83年，计算他汀使用者的风险比以评估获益。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 5,
+ "added_on": "2026-09-27"
+}

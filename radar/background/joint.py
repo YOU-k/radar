@@ -30,27 +30,40 @@ def topic_digest(spec: TopicSpec, max_top: int = 8) -> dict:
     hist = json.loads(spec.metrics_path.read_text(encoding="utf-8")) if spec.metrics_path.exists() else []
     return {"slug": spec.slug, "name": spec.name, "n_evidence": len(evs),
             "coverage": hist[-1]["score"] if hist else None,
-            "tldr": _block(rep, "摘要")[:3000],
-            "stage": _block(rep, "阶段判断")[:3000],
+            "tldr": _block(rep, "摘要")[:1800],
+            "stage": _block(rep, "阶段判断")[:1800],
             "top": [{"title": e.candidate.title[:90], "year": e.candidate.year,
                      "venue": e.candidate.venue} for e in top],
-            "methods": sorted({e.extraction.get("method", "") for e in evs if e.extraction.get("method")})[:40],
-            "data": sorted({e.extraction.get("data", "") for e in evs if e.extraction.get("data")})[:40]}
+            # 每方向定长：旧版整体截 60k，字母序靠后的方向会被截掉
+            "methods": sorted({e.extraction.get("method", "")[:120] for e in evs if e.extraction.get("method")})[:20],
+            "data": sorted({e.extraction.get("data", "")[:120] for e in evs if e.extraction.get("data")})[:20]}
+
+
+def _profile() -> str:
+    try:
+        from ..config import load_profile
+        return load_profile()[:6000]
+    except Exception:
+        return ""
 
 
 def joint_report(specs: list[TopicSpec], llm: LLM, resources_md: str = "") -> str:
     digests = [topic_digest(s) for s in specs]
     prompt = tagged("joint", (
-        "你为一位提供算法支持的生物信息学博后（衰老 + 单细胞/PBMC + 药筛 + AI 方法；合作项目：类器官等多模态健康衰老模型，"
-        "先用公共数据做 demo）做跨方向联合分析。下面是他维护的各方向背景报告的摘要、阶段判断、头部文献、方法与数据清单：\n"
-        + json.dumps(digests, ensure_ascii=False)[:60000]
+        "你为一位提供算法支持的生物信息学博后做跨方向联合分析。他的研究画像（含「应用线」一节）：\n"
+        + _profile()
+        + "\n\n下面是他维护的各方向背景报告的摘要、阶段判断、头部文献、方法与数据清单：\n"
+        + json.dumps(digests, ensure_ascii=False)[:90000]
         + ("\n\n【已核验的共享资源（数据集/模型）】\n" + resources_md[:6000] if resources_md else "")
         + "\n\n请输出 markdown，章节固定：\n"
-        "## 全景\n一张表：方向 | 阶段 | 证据数 | 一句话现状。\n"
+        "## 全景\n一张表：方向 | 阶段 | 证据数 | 一句话现状。每个方向一行，一个不漏。\n"
         "## 方向间交叉点\n哪些方法、数据、问题同时出现在 ≥2 个方向（写明是哪几个方向、哪些具体工作），"
         "哪些方向的进展会直接改变另一方向的做法。\n"
-        "## 联合行动建议\n3-5 个具体项目设想，每个：目标、用到的方向与具体方法/数据、为什么现在、预期产出（可发表点或合作交付）、主要风险。"
-        "优先能与类器官 + 多组学合作项目结合、能先用公共数据做 demo 的。\n"
+        "## 按应用线的联合行动\n画像「应用线」里的每一条应用线各写一个 '### 应用线名' 小节，**每条都必须有，不许空缺**；"
+        "每节 1-2 个具体项目，每个：目标、用到的方向与具体方法/数据、为什么现在、预期产出（可发表点或合作交付）、主要风险。"
+        "项目要以该应用线的数据形态为出发点（如队列应用线从大规模人群、临床表型、纵向随访、血浆组学出发；"
+        "类器官/模式生物应用线从扰动实验与跨物种迁移出发），不要把所有应用线都改写成同一个题目；"
+        "若某应用线还没有对应的方向背景报告，明确写出证据缺口，并从现有方向里找可迁移的部分。\n"
         "## 不要做的事\n2-3 条：看起来热但对他不划算的方向，给依据。\n"
         "关键判断用 **加粗**。只依据给定材料，引用文献时写「方向名：文献标题」。直接从表格开始。"))
     try:

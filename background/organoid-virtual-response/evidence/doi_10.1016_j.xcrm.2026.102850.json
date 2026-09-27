@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.xcrm.2026.102850",
+  "title": "Patient-derived organoids predict personalized drug response and reveal alternative therapeutic options in glioblastoma",
+  "url": "https://doi.org/10.1016/j.xcrm.2026.102850",
+  "abstract": "Summary Glioblastoma remains a highly aggressive brain tumor with limited treatment options and poor prognosis. Temozolomide (TMZ) is the only approved first-line therapy, but frequent resistance limits its efficacy, highlighting the urgent need for alternative treatments. We establish 18 glioblastoma organoid (GBO) lines that preserve the histopathological and genomic features of the parental tumors, enabling comparison with clinical outcomes. GBO-based drug sensitivity testing (GBO-DST) showed a strong correlation with progression-free survival and outperformed O6-methylguanine-DNA methyltransferase (MGMT) methylation status in predicting TMZ response. Transcriptomic analysis reveals mechanisms of TMZ resistance, including mismatch repair deficiency, elevated MGMT expression, and upregulation of genes associated with axonogenesis and cell adhesion. Using GBO-DST, FDA-approved drug screening identifies regorafenib and lazertinib as effective treatment alternatives. Additionally, lazertinib demonstrated superior efficacy to standard therapies in GBO transplantation mouse model. These findings underscore the potential of GBO-DST as a robust platform for precision oncology in glioblastoma.",
+  "authors": "Jisu Park, Meiyu Qiu, E. Cho, S. Seo, Jihoon Moon, Minji Kim, Hyemin Mun, H. Yun",
+  "venue": "Cell Reports Medicine",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "s2:citations:doi:10.1016/j.stem.2019.10.010"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42276053"
+   ],
+   "pmcid": "PMC13400186"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "胶质瘤类器官药敏预测患者结局，定量验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "胶质瘤类器官药敏预测患者结局，临床对应强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "GBO-DST药物敏感性检测流程",
+  "data": "55例患者59份GBM样本的类器官",
+  "scenario": "胶质母细胞瘤个体化用药预测",
+  "benchmark": "MGMT启动子甲基化状态等传统生物标志物",
+  "results": "GBO比MGMT甲基化更准确预测TMZ个体反应；筛选4种FDA批准抗癌药，发现第三代EGFR抑制剂lazertinib可有效抑制GBO生长与存活，并在体内移植模型中验证",
+  "availability": "",
+  "limitations": "GBO-DST预测临床药物反应仍需在结构良好的临床队列中广泛验证，并需深入基因组与转录组分析",
+  "summary": "研究建立基于胶质母细胞瘤类器官（GBO）的药物反应测试流程，用于预测患者个体化治疗反应并发现潜在疗法。作者从55例患者建立59份GBO，进行药物敏感性检测并结合基因组与转录组分析，同时测试4种FDA批准抗癌药并在体内移植模型中验证。结果显示GBO比MGMT甲基化状态更准确预测TMZ反应，并鉴定lazertinib为有效候选药物，支持GBO平台推动GBM精准治疗与药物筛选。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

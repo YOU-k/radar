@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circ.148.suppl_1.18742",
+  "title": "Abstract 18742: Matrilysin (MMP7) as a Robust Predictor of Hypertension Incidence and Complications: Findings From a Proteomic Analysis in the Atherosclerosis Risk in Communities (ARIC) Study",
+  "url": "https://doi.org/10.1161/circ.148.suppl_1.18742",
+  "abstract": "\n Introduction:\n Proteomic techniques can be applied for the discovery of common pathways underlying both incident hypertension and hypertension-related cardiovascular outcomes.\n Research Questions:\n To identify and validate proteins associated with incident hypertension and to examine the association of these validated proteins with hypertension-related cardiovascular events.\n \n \n Methods:\n We quantified the association of 4,955 plasma proteins (measured by SomaScan® Version 4 Assay) with incident hypertension (defined as systolic blood pressure (BP) ≥140, diastolic BP ≥ 90 mmHg, or hypertension medication use) in participants free of hypertension at ARIC visit 3 (1993-95) using Cox regression models adjusted for demographics, clinical characteristics and baseline BP. Significant associations were validated using proteomic measurements at ARIC visit 2 (1990-92). We then examined the association of validated proteins with incident coronary heart disease (CHD), stroke, and heart failure (HF) among participants with hypertension at visit 3 using Cox regression models additionally adjusted for hypertension duration and treatment.\n \n \n Results:\n There were 5,080 participants in the discovery cohort (mean age 59y, 13% Black, 54% women, median follow up 11 y) and 6,810 in the validation cohort (median follow up 3.1y). Four proteins were significantly associated with incident hypertension in the discovery cohort. One protein, Matrilysin (MMP7), remained significantly associated in the validation cohort (HR 1.22 [1.11-1.34]) (Figure1A). MMP7 was also significantly associated with all hypertension-related complications (Figure 1B-D).\n \n \n Conclusions:\n MMP7, a protein involved in extracellular matrix degradation, was robustly associated with incident hypertension and cardiovascular events. Future research examining the pathophysiologic mechanism of MMP7 could potentially yield drug targets for the prevention and treatment of hypertension.\n \n \n \n",
+  "authors": "L. Mathews, Xiao Hu, Frances M. Wang, Jing-Sha Chen, Bing Yu, R. Hoogeveen, C. Ballantyne, E. Selvin",
+  "venue": "Circulation",
+  "year": 2023,
+  "citations": 0,
+  "found_by": [
+   "s2kw:biobank plasma proteomics Olin"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "ARIC万人队列SomaScan蛋白组，高血压预测与结局验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "ARIC万人队列SomaScan蛋白组，MMP7预测高血压及并发症",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SomaScan蛋白质组Cox回归发现与验证",
+  "data": "ARIC研究，4955个血浆蛋白；发现5080人，验证6810人",
+  "scenario": "高血压发病及心血管并发症风险预测",
+  "benchmark": "未明确列出对比模型",
+  "results": "发现队列4个蛋白与高血压发病显著相关；MMP7在验证队列仍显著，并进一步分析与CHD、卒中、HF关联",
+  "availability": "",
+  "limitations": "摘要信息有限；验证随访仅3.1年；全文未获取",
+  "summary": "研究利用ARIC队列的SomaScan蛋白质组数据，寻找与高血压发病及高血压相关心血管结局相关的蛋白。方法在ARIC visit 3无高血压参与者中用Cox模型分析4955个蛋白与高血压发病关联，并在visit 2蛋白质组数据中验证，随后分析验证蛋白与CHD、卒中、HF的关联。发现4个蛋白与高血压发病显著相关，其中MMP7在验证队列中仍显著，并被进一步评估与高血压相关心血管事件的关联。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

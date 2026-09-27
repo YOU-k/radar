@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-025-62818-3",
+  "title": "Large-scale CRISPR screening in primary human 3D gastric organoids enables comprehensive dissection of gene-drug interactions.",
+  "url": "https://doi.org/10.1038/s41467-025-62818-3",
+  "abstract": "Understanding how genes influence drug responses is critical for advancing personalized cancer treatments. However, identifying these gene-drug interactions in a physiologically relevant human system remains a challenge, as it requires a model that reflects the complexity and heterogeneity among individuals. Here we show that large-scale CRISPR-based genetic screens, including knockout, interference (CRISPRi), activation (CRISPRa), and single-cell approaches, can be applied in primary human 3D gastric organoids to systematically identify genes that affect sensitivity to cisplatin. Our screens uncover genes that modulate cisplatin response. By combining CRISPR perturbations with single-cell transcriptomics, we resolve how genetic alterations interact with cisplatin at the level of individual cells and uncover an unexpected link between fucosylation and cisplatin sensitivity. We identify TAF6L as a regulator of cell recovery from cisplatin-induced cytotoxicity. These results highlight the utility of human organoid models for dissecting gene-drug interactions and offer insights into therapeutic vulnerabilities in gastric cancer.",
+  "authors": "Lo YH, Horn HT, Huang MF, Yu WC, Young CM, Liu Q, Tomaske M, Towers M, Dominguez A, Bassik MC, Lee DF, Qi LS, Weissman JS, Chen J, Kuo CJ.",
+  "venue": "Nature communications",
+  "year": 2025,
+  "citations": 28,
+  "found_by": [
+   "eupmc:organoid single-cell perturbat"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12354852",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Kuo CJ",
+   "last_affil": "Division of Hematology, Department of Medicine, Stanford University School of Medicine, Stanford, CA, USA. cjkuo@stanford.edu."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "原代胃类器官大规模CRISPR筛选+单细胞，解析基因-药物互作",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature子刊，原代类器官大规模CRISPR筛选建基因-药物互作，影响力高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "类器官CRISPR切割/CRISPRi/CRISPRa/单细胞筛选",
+  "data": "人胃肿瘤类器官（TP53/APC DKO），顺铂基因-药物互作",
+  "scenario": "类器官基因-药物互作筛选",
+  "benchmark": "2D细胞系CRISPR筛选",
+  "results": "鉴定顺铂敏感性相关基因，揭示DNA修复通路转录组趋同，发现蛋白岩藻糖化与顺铂敏感性关联及TAF6L作用",
+  "availability": "",
+  "limitations": "基于单一工程化类器官模型；3D类器官筛选技术难度较高",
+  "summary": "建立人胃肿瘤类器官全套CRISPR筛选体系（切割、CRISPRi、CRISPRa、单细胞）。在TP53/APC双敲类器官中筛选顺铂基因-药物互作。鉴定DNA修复通路转录组趋同，发现蛋白岩藻糖化与顺铂敏感性关联及TAF6L在DNA损伤恢复期增殖中的作用。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

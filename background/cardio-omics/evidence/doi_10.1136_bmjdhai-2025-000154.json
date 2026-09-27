@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1136/bmjdhai-2025-000154",
+  "title": "Machine learning and deep learning predictive models for prognosis in patients with atrial fibrillation: a systematic review and meta-analysis",
+  "url": "https://doi.org/10.1136/bmjdhai-2025-000154",
+  "abstract": "Objective To summarise the performance of machine learning (ML) and deep learning (DL) prognostic models for atrial fibrillation (AF), compare their relative performances with non-artificial intelligence (AI) methods, and to identify key research gaps. Methods and analysis We searched PubMed, Embase, Scopus, the Cochrane Library, Web of Science, and ProQuest from inception to 21 October 2024 for cohort, case-control, cross-sectional, and randomised controlled studies that used ML or DL models to predict clinical outcomes in AF patients. Studies were excluded if they focused on non-AF populations, lacked model performance evaluation, or were abstracts, reviews, or other non-primary research articles. Extracted information included study characteristics, patient demographics, model details and validation strategies. Reporting quality and risk of bias were assessed using the TRIPOD+AI (Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis for AI) and PROBAST+AI (Prediction model Risk Of Bias ASsessment Tool for AI) checklists. The primary outcome was model discrimination, measured by the area under the receiver operating characteristic curve (AUC). Meta-analyses were conducted, with heterogeneity assessed via Cochran’s Q test and I² statistics. Results Of the 7128 studies identified, 81 fulfilled the selection criteria. Among these, 57 applied ML models (81 models total) and 24 used DL models (31 models total). Commonly predicted outcomes included AF recurrence (n=43), ischaemic stroke (n=20), all-cause mortality (n=15), major bleeding (n=11), heart failure (n=3), major adverse cardiovascular events (MACE) (n=3) and thromboembolic events (n=3). AI models exhibited moderate-to-good predictive performance, ranging from a pooled AUC of 0.71 (95% CI 0.66 to 0.76) for major bleeding to 0.85 (95% CI 0.79 to 0.92) for heart failure. Significant heterogeneity was observed across studies (I² 87%–100%). When evaluated on the same datasets, both AI model types generally outperformed risk scores and regression-based models. PROBAST+AI assessment identified high risk of bias in 66 studies (81%) for model development and 68 studies (84%) for model evaluation, primarily due to inadequate handling of missing data and underpowered datasets. Conclusion AI models show great promise in AF prognosis tasks and generally outperform non-AI prediction methods. The substantial heterogeneity limits the clinical interpretability of pooled AUCs and warrants cautious interpretation. Standardised reporting and multimodal data integration will be essential to improving model reliability and clinical applicability of AI prognostic models for AF. PROSPERO registration number CRD42024606885.",
+  "authors": "Xiao-Yi Wang, T. J. Bampton, D. Dharmaprani, R. Mahajan, L. Palmer",
+  "venue": "BMJ digital health & AI",
+  "year": 2025,
+  "citations": 2,
+  "found_by": [
+   "s2kw:heart failure atrial fibrillat"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42712294"
+   ],
+   "pmcid": "PMC13492536"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "房颤预后ML/DL系统综述与meta分析，可复用证据汇总",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "BMJ子刊系统综述，房颤ML预后模型全景，背景必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "系统综述与Meta分析，ML/DL预后模型",
+  "data": "多数据库截至2024-10-21的AF预后研究",
+  "scenario": "房颤患者预后预测",
+  "benchmark": "对比临床风险评分与传统回归模型",
+  "results": "AI模型总体中等至良好区分度，同数据集上多优于风险评分和回归模型",
+  "availability": "",
+  "limitations": "多数研究缺乏外部验证、偏倚风险高、报告不完整",
+  "summary": "本研究系统综述并Meta分析ML/DL用于房颤患者预后预测的模型，并与非AI方法比较。检索PubMed、Embase等数据库至2024年10月21日，纳入所有AF临床结局的ML/DL预后研究，采用TRIPOD+AI和PROBAST+AI评估报告质量与偏倚。结果显示AI模型总体区分度中等至良好，同数据集上多优于风险评分和回归模型，但许多结局研究不足且外部验证缺乏、偏倚高、报告不完整。"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 5,
+ "added_on": "2026-09-27"
+}

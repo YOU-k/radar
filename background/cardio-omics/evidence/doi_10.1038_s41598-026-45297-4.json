@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41598-026-45297-4",
+  "title": "Explainable machine learning for long-term cardiovascular disease risk prediction in Chinese middle-aged and older adults: a 9-year longitudinal cohort study with web-based risk calculator",
+  "url": "https://doi.org/10.1038/s41598-026-45297-4",
+  "abstract": "Cardiovascular disease represents the leading cause of mortality in China, accounting for over 40% of all deaths. Existing risk prediction models predominantly derive from Western populations, rendering them suboptimally calibrated for the Chinese middle-aged and elderly demographic. Conventional statistical approaches inadequately capture non-linear associations within high-dimensional data, whilst machine learning models, despite superior performance, suffer from insufficient interpretability. This study leveraged a nationally representative cohort to develop an interpretable machine learning-based tool for long-term cardiovascular risk prediction tailored to the Chinese population. To compare the predictive performance of ten machine learning algorithms using data from the China Health and Retirement Longitudinal Study (CHARLS), identify the optimal model, achieve transparent interpretation through SHapley Additive exPlanations (SHAP) methodology, and develop an individualized cardiovascular risk assessment tool for Chinese residents aged 45 years and above. The study enrolled 8,080 participants aged ≥ 45 years without baseline cardiovascular disease from the CHARLS 2011–2020 longitudinal dataset, with 9-year follow-up. The primary outcome was incident cardiovascular disease. From 77 candidate variables, logistic regression analysis identified 11 predictors: geographical region, hypertension, dyslipidaemia, liver disease, asthma, depression score, age, sleep duration, triglycerides, high-density lipoprotein cholesterol, and waist circumference. The cohort was randomly partitioned into training (n = 5,657, 70%) and validation (n = 2,423, 30%) sets. Ten predictive models were constructed, including random forest, gradient boosting machine, and extreme gradient boosting. Model performance was evaluated using area under the receiver operating characteristic curve (AUROC), calibration plots, and decision curve analysis. Feature contributions were elucidated using SHAP values. Incident cardiovascular disease occurred in 1,246 participants (22.0%) within the training cohort. Multivariable analysis identified hypertension (adjusted OR 1.80), waist circumference (adjusted OR 1.05 per 1-cm increment), dyslipidaemia (adjusted OR 1.42), and liver disease (adjusted OR 1.60) as principal independent predictors. Among ten algorithms evaluated, random forest demonstrated superior performance: validation set AUC 0.829 (95% CI 0.809–0.848), accuracy 0.770, sensitivity 0.681, specificity 0.795. The model exhibited excellent calibration and yielded maximal net clinical benefit across the 10%-85% risk threshold spectrum. SHAP analysis revealed waist circumference as the predominant contributor, followed by triglycerides, age, and hypertension. Psychobehavioural factors (depression, sleep duration) demonstrated independent predictive value. A web-based risk calculator was developed, providing real-time individual 9-year cardiovascular disease probability estimates. The random forest model accurately predicts cardiovascular disease risk in the Chinese middle-aged and elderly population, with waist circumference emerging as the most critical predictor. Translated into an online assessment tool, this model facilitates community-based screening and individualized prevention, offering a pragmatic risk stratification approach for resource-constrained settings.",
+  "authors": "Xingyuan Zhu, Wei Li, Xueting Pan, Tao Li, Guo-Liang Yuan",
+  "venue": "Scientific Reports",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "s2kw:cardiovascular disease risk pr"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41882208"
+   ],
+   "pmcid": "PMC13172415"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "中国万人队列可解释ML风险预测，含网络计算器",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "中国全国代表性队列可解释ML长期CVD预测，含外部验证工具",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "十种机器学习算法+SHAP可解释分析，构建网页风险计算器",
+  "data": "CHARLS 2011-2020，约23,000名≥45岁中国中老年人，9年纵向随访",
+  "scenario": "中国中老年长期CVD风险预测",
+  "benchmark": "Framingham、PCE、SCORE、China-PAR等传统模型",
+  "results": "系统比较十种ML算法，SHAP揭示决策机制和关键风险因素，并开发网页风险计算器",
+  "availability": "",
+  "limitations": "传统模型外部验证C-statistic中位仅0.74且校准不佳；机器学习黑箱阻碍临床转化",
+  "summary": "研究基于CHARLS 2011-2020纵向数据，比较十种机器学习算法预测中国中老年长期CVD风险。采用SHAP解释模型决策机制和关键风险因素，并开发网页风险计算器。结果显示可解释机器学习可提升中国人群CVD风险预测与临床可用性。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

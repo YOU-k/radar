@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehaf784.4614",
+  "title": "High-dimensional phenotypic matching with artificial intelligence-enhanced ECG to replicate heart failure trial outcomes in real-world data",
+  "url": "https://doi.org/10.1093/eurheartj/ehaf784.4614",
+  "abstract": "\n \n \n The inference of causal treatment effects from real-world data (RWD) is often limited by confounding that remains unmeasured in structured/tabular data. We hypothesized that a digital-twin framework, leveraging AI-enabled electrocardiography (AI-ECG) to perform high-dimensional matching of individuals, could better emulate randomized-controlled trial (RCT) treatment effects.\n \n \n \n We report our novel DISCO (Digital Inference of Strong Causality from Observational data) approach to emulate RCTs, applied to heart failure (HF) clinical trials (Figure 1). This computational framework uses high-dimensional representations of unstructured data, specifically AI-enabled decomposition of ECGs into an embedding, then phenotypically matches individuals to assess medication effects.\n \n \n \n We curated a cohort of patients from a diverse US-based healthcare network, identifying individuals with HFrEF (ejection fraction<40%) who initiated angiotensin receptor–neprilysin inhibitor (ARNi) or angiotensin-converting-enzyme inhibitor (ACEi) treatment, and measured clinical outcomes including all-cause mortality. Patients meeting PARADIGM-HF trial criteria were assigned to \"intervention\" (ARNi) or \"control\" (ACEi) arms. Hazard ratios (HR) were estimated using traditional survival analysis techniques, adjusting for measurable baseline differences including age, sex, and cardiovascular risk factors (hypertension, diabetes) and history (myocardial infarction, ischemic heart disease, stroke). For each patient, a digital twin was created by leveraging embeddings from a convolutional neural network AI-ECG algorithm tuned to left ventricular ejection fraction. K-means clusters were defined in this embedding space (K=10), with treatment effects evaluated in each homogenous cluster.\n \n \n \n Among 4,705 individuals with HFrEF (mean age 68.9, 36% women), the RCT-defined HR for ARNi vs ACEi of 0.84 was not mimicked by traditional methods for estimating treatment effects from RWD (Table 1). In Cox regression, the HR was >1 in unadjusted analysis, as well as in analyses adjusted for age, sex, and cardiovascular risk factors and history. When we used an AI-driven approach for phenotypic matching of individuals, the digital-twin cohorts parallel the published HR <1. We further support this finding by comparing the balance of prognostic factors between arms in the digital-twin cohorts, observing that these approximated randomized conditions. Subgroup analyses of AI-ECG defined phenotypes revealed significant heterogeneity in response to ARNi therapy, suggesting some subpopulations may derive larger benefit.\n \n \n \n We demonstrate the use of high-dimensional digital twins for emulating RCTs using real-world data. The work suggests a role for robust causal inference for healthcare interventions in RWD and the potential role for AI-ECG in novel pragmatic RCT designs, including those leveraging synthetic controls.Figure 1  Table 1\n",
+  "authors": "D. Biswas, L. Dhingra, Ashraf Aminorroaya, P. Croon, E. Oikonomou, R. Khera",
+  "venue": "European Heart Journal",
+  "year": 2025,
+  "citations": 0,
+  "found_by": [
+   "s2kw:pragmatic randomized trial car"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "AI-ECG数字孪生模拟心衰RCT，真实世界因果推断新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHJ AI-ECG数字孪生模拟心衰RCT，真实世界因果推断",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "DISCO数字孪生框架，AI-ECG嵌入高维表型匹配",
+  "data": "美国多元医疗网络HFrEF患者，ARNi vs ACEi",
+  "scenario": "真实世界数据模拟心衰RCT",
+  "benchmark": "对比PARADIGM-HF试验结果；传统生存分析校正",
+  "results": "",
+  "availability": "",
+  "limitations": "观察性数据残余混杂；仅摘要信息",
+  "summary": "研究假设利用AI-ECG高维匹配的数字孪生框架能更好模拟RCT治疗效应。方法上提出DISCO，将ECG分解为嵌入进行表型匹配，在符合PARADIGM-HF标准的HFrEF患者中比较ARNi与ACEi。结果显示该框架可估计药物效应风险比，并校正年龄、性别及心血管危险因素等基线差异。"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-27"
+}

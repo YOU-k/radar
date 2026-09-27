@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s12933-025-03049-0",
+  "title": "Chronic kidney disease onset, progression, and cardiovascular outcomes: proteomics informs biology and risk stratification",
+  "url": "https://doi.org/10.1186/s12933-025-03049-0",
+  "abstract": "Large-scale proteomics provides an opportunity to understand chronic kidney disease (CKD) and cardiovascular disease, yet research in this field is limited. This study utilized proteomics to inform biology and risk stratification for these diseases. This cohort study included 44,779 participants free of prevalent CKD, and 3,749–4,272 participants with prevalent CKD from the UK Biobank. The Olink Explore 3072 platform quantified 2,923 plasma proteins. Cox proportional hazards models were used to assess associations of proteins with kidney diseases including CKD and end stage kidney disease, and cardiovascular diseases including coronary heart disease (CHD), stroke, and heart failure (HF). Mendelian randomization examined genetic associations, pathway analyses identified biological pathways, and predictive models were developed for incident diseases. Median follow-up periods were 12.2–12.6 years. We identified 598 (20.5%) proteins shared across ≥ 2 diseases, with 595 (20.4%) showing consistent directions of associations, and 471 (16.1%) unique to a single disease. CKD and HF specifically shared the largest number of 279 (9.6%) proteins. POLR2F, TNFRSF10B, and IGFBP2 were positively associated with all five diseases, with Mendelian randomization supporting genetic associations of POLR2F with CHD and IGFBP2 with hypertensive renal disease. Pathway analyses highlighted cell adhesion, signal transduction, and cytokine-cytokine receptor interaction for disease-associated proteins. Incorporating predictive proteins into clinical models improved risk prediction for CKD, CHD, stroke, and HF, yielding Harrell’s C indices of 0.750–0.818 (corresponding increases of 0.027–0.090). This study deepens insights into disease biology and provides a foundation for early detection and integrated risk stratification in CKD and cardiovascular disease.",
+  "authors": "Ji-Juan Zhang, Hancheng Yu, Xingyue Song, Xianli Li, Jinchi Xie, Yu-Xiang Wang, Yue Li, Kun Xu",
+  "venue": "Cardiovascular Diabetology",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2kw:biobank plasma proteomics Olin"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41559658"
+   ],
+   "pmcid": "PMC12903537"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "4.5万人UK Biobank Olink蛋白组关联CKD与心血管结局",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 4.5万人Olink蛋白组，CKD与心血管风险分层",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "大规模血浆蛋白质组关联分析、孟德尔随机化与LASSO预测建模",
+  "data": "UK Biobank，Olink 2920蛋白，CKD分析44779人",
+  "scenario": "CKD、ESKD及CVD风险分层与机制",
+  "benchmark": "传统临床风险因素模型；既往CKD/CVD蛋白研究",
+  "results": "598个蛋白跨≥2种疾病共享，471个疾病特异；POLR2F、TNFRSF10B、IGFBP2与五种疾病正相关；加入预测蛋白改善CKD、CHD、卒中、HF预测",
+  "availability": "",
+  "limitations": "主要为欧洲人群；部分结局样本量较小；观察性设计因果推断有限",
+  "summary": "研究在UK Biobank中开展大规模血浆蛋白质组分析，系统识别CKD、ESKD、CHD、卒中和心衰相关蛋白。方法包括Olink检测2920个蛋白、Cox关联分析、孟德尔随机化、年龄性别及合并症效应修饰分析、通路推断和LASSO预测模型构建。发现598个蛋白跨至少两种疾病共享、471个疾病特异，POLR2F、TNFRSF10B和IGFBP2与全部五种疾病正相关，且将预测蛋白纳入临床模型可改善CKD、CHD、卒中和心衰预测。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

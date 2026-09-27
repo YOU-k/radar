@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2025.12.09.693267",
+  "title": "Reinforcement learning enables single-cell foundation models to learn cellular differentiation",
+  "url": "https://doi.org/10.64898/2025.12.09.693267",
+  "abstract": "While single-cell foundation models excel at static representation learning and single-step perturbation prediction, their capacity to model and control dynamic, sequential cell state transitions remains underexplored. Here, we introduce Differentiation with Reinforcement Learning (DiRL), a framework that transforms foundation models into predictive environments for optimizing multi-step perturbation strategies. By formulating differentiation as a goal-conditioned sequential decision-making problem, DiRL trains agents to navigate the high-dimensional latent landscape of gene expression, learning policies that direct stem cells toward specific terminal fates. Evaluated on iPSC-derived organoid datasets, DiRL outperforms random perturbation baselines with a 69% win rate, with performance scaling systematically as the planning horizon increases. Beyond optimization, DiRL offers interpretable insights into the mechanics of cell fate transitions: the learned policies successfully recover known sequential regulators in Wnt and Hedgehog signaling pathways, while the value function from the critic model recapitulates biological pseudotime orderings comparable to established trajectory inference methods. These results demonstrate that coupling reinforcement learning with foundation models enables a paradigm shift from static embedding analysis to dynamic trajectory modeling, providing a powerful engine for discovering sequential perturbation strategies in regenerative medicine.",
+  "authors": "Kai-Li Chang, Hu Chen, Zhan-Dong Liu",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 0,
+  "found_by": [
+   "s2kw:foundation model organoid sing"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "强化学习在iPSC类器官上优化多步扰动，契合建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "强化学习驱动类器官分化扰动预测，建模创新且方向相关",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "强化学习框架DiRL",
+  "data": "iPSC来源类器官数据集",
+  "scenario": "细胞分化多步扰动策略优化",
+  "benchmark": "随机扰动基线及轨迹推断方法",
+  "results": "对随机扰动胜率69%，随规划步长提升；恢复Wnt与Hedgehog通路调控因子",
+  "availability": "",
+  "limitations": "依赖基础模型环境建模，真实生物验证有限",
+  "summary": "针对单细胞基础模型难以建模动态连续细胞状态转变的问题，提出强化学习框架DiRL，将分化建模为目标条件序列决策问题。在iPSC来源类器官数据上训练智能体导航基因表达潜空间，学习导向特定终末命运的策略。结果对随机扰动胜率69%，恢复已知Wnt/Hedgehog顺序调控因子，价值函数重现伪时间排序。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

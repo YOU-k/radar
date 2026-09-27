@@ -1,0 +1,55 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s13059-023-03084-8",
+  "title": "In-organoid single-cell CRISPR screening reveals determinants of hepatocyte differentiation and maturation.",
+  "url": "https://doi.org/10.1186/s13059-023-03084-8",
+  "abstract": "Background Harnessing hepatocytes for basic research and regenerative medicine demands a complete understanding of the genetic determinants underlying hepatocyte differentiation and maturation. Single-cell CRISPR screens in organoids could link genetic perturbations with parallel transcriptomic readout in single cells, providing a powerful method to delineate roles of cell fate regulators. However, a big challenge for identifying key regulators during data analysis is the low expression levels of transcription factors (TFs), which are difficult to accurately estimate due to noise and dropouts in single-cell sequencing. Also, it is often the changes in TF activities in the transcriptional cascade rather than the expression levels of TFs that are relevant to the cell fate transition. Results Here, we develop Organoid-based Single-cell CRISPR screening Analyzed with Regulons (OSCAR), a framework using regulon activities as readouts to dissect gene knockout effects in organoids. In adult-stem-cell-derived liver organoids, we map transcriptomes in 80,576 cells upon 246 perturbations associated with transcriptional regulation of hepatocyte formation. Using OSCAR, we identify known and novel positive and negative regulators, among which Fos and Ubr5 are the top-ranked ones. Further single-gene loss-of-function assays demonstrate that Fos depletion in mouse and human liver organoids promote hepatocyte differentiation by specific upregulation of liver metabolic genes and pathways, and conditional knockout of Ubr5 in mouse liver delays hepatocyte maturation. Conclusions Altogether, we provide a framework to explore lineage specifiers in a rapid and systematic manner, and identify hepatocyte determinators with potential clinical applications.",
+  "authors": "Liang J, Wei J, Cao J, Qian J, Gao R, Li X, Wang D, Gu Y, Dong L, Yu J, Zhao B, Wang X.",
+  "venue": "Genome biology",
+  "year": 2023,
+  "citations": 24,
+  "found_by": [
+   "eupmc:organoid single-cell perturbat",
+   "s2kw:organoid single-cell perturbat"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC10617096",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Wang X",
+   "last_affil": "State Key Laboratory of Common Mechanism Research for Major Diseases, Department of Biochemistry and Molecular Biology, Institute of Basic Medical Sciences Chinese Academy of Medical Sciences, School of Basic Medicine Peking, Union Medical College, Beijing, 100005, China. wxy@ibms.pumc.edu.cn."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "类器官内单细胞CRISPR筛选，扰动加转录组建模。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "类器官内单细胞CRISPR筛选，扰动加读出建模",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "OSCAR类器官单细胞CRISPR筛选（调控网络读出）",
+  "data": "小鼠与人ICO类器官scCRISPR筛选，肝细胞分化成熟",
+  "scenario": "类器官肝细胞分化调控筛选",
+  "benchmark": "现有scCRISPR直接扰动效应估计工具",
+  "results": "鉴定c-Fos扰动加速肝细胞分化成熟，Ubr5缺失起相反作用，并按调控效应排序",
+  "availability": "",
+  "limitations": "单细胞噪声与dropout影响低丰度转录本估计；依赖regulon活性读出",
+  "summary": "建立OSCAR方法，在3D类器官中以调控网络变化为读出进行scCRISPR筛选。应用于肝细胞分化成熟，鉴定增强或减弱该过程的调控因子并排序。发现c-Fos扰动加速分化成熟，Ubr5缺失起相反作用，证明该筛选可扩展且通用。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

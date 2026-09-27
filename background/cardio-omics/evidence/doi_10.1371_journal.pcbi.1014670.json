@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1371/journal.pcbi.1014670",
+  "title": "Improving the reliability of polygenic risk score-based prediction for cardiovascular and renal complications across ancestries in type 2 diabetes using Mondrian Cross-Conformal Prediction",
+  "url": "https://doi.org/10.1371/journal.pcbi.1014670",
+  "abstract": "Polygenic risk scores (PRS) developed in European populations often show reduced predictive performance in non-European populations, limiting their clinical utility. This lack of transferability across ancestries remains a major challenge in genomic medicine and raises concerns about health equity. We aimed to evaluate whether uncertainty-aware prediction, implemented through Mondrian Cross-Conformal Prediction, improves the performance and reliability of polygenic risk score-based predictions across ancestries for nephropathy, stroke, and myocardial infarction in individuals with type 2 diabetes in a multi-ethnic cohort. We leveraged Mondrian Cross-Conformal Prediction (MCCP), an uncertainty quantification framework, combined with logistic regression applied to a multi-polygenic risk score (multiPRS) to predict the risk of nephropathy, stroke, and myocardial infarction in individuals with type 2 diabetes. Two training frameworks were evaluated: one using 4,098 individuals with type 2 diabetes of European ancestry from the ADVANCE trial for training and 17,574 White British, 1,145 South Asian, and 749 African UK Biobank participants for testing; and another using the 17,574 White British UK Biobank participants for training and the South Asian and African participants for testing. Logistic regression provided robust baseline performance across populations. On top of this baseline, MCCP did not improve performance but added capabilities absent from probability-based stratification: for each individual, it issued a prediction together with an explicit confidence and credibility level; it allowed a tolerated error level to be set in advance and delivered prediction sets respecting it in the majority of settings; and it flagged individuals for whom no reliable prediction could be made. Applying MCCP to PRS-based prediction thus enables uncertainty-aware risk stratification and improves the reliability of risk prediction across ancestries, providing a more equitable framework for clinical use.",
+  "authors": "E. Kodji, R. Attaoua, M. Haloui, C. Hishmih, Mirjam Seitz, Mark Woodward, Julie G. Hussin, P. Hamet",
+  "venue": "PLoS Computational Biology",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:East Asian cardiovascular poly"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42594161"
+   ],
+   "pmcid": "PMC13497289"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨族裔PRS不确定性校准方法，契合多组学预测新意",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨种族PRS不确定性校准方法，PLoS Comput Biol，方法有推广价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Mondrian交叉共形预测+机器学习PRS建模",
+  "data": "UKBB T2D 19,468人：WB 17,574、SA 1,145、AFR 749；ADVANCE试验",
+  "scenario": "跨祖源T2D心肾并发症风险预测",
+  "benchmark": "逻辑回归及常规概率分层模型",
+  "results": "MCCP提升跨祖源PRS预测可靠性与不确定性量化，可控制预设错误率并识别不可可靠预测个体",
+  "availability": "",
+  "limitations": "非欧人群样本量较小；PRS原始开发主要基于欧洲人群",
+  "summary": "研究旨在改善欧洲来源多基因风险评分在T2D心肾并发症中的跨祖源可迁移性。使用UKBB和ADVANCE数据，比较MCCP与逻辑回归等模型预测低eGFR、卒中和心梗。发现MCCP可提供不确定性感知预测，提高可靠性和错误率控制，并识别无法可靠预测的个体。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

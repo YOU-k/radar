@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1158/0008-5472.can-25-5315",
+  "title": "Single-Cell Analysis Guides Organoid CRISPR Screening to Reveal NF1 as a Gatekeeper of Cervical Squamous Malignant Transformation.",
+  "url": "https://doi.org/10.1158/0008-5472.CAN-25-5315",
+  "abstract": "Cervical cancer progresses from high-grade squamous intraepithelial lesions driven by persistent HPV infection. Identifying the gatekeepers restraining malignant transformation could reveal strategies to prevent and treat cervical cancer. Here, we integrated single-cell transcriptomics, CRISPR-Cas9 screening, and organoid modeling to dissect this process. Single-cell analysis of patient samples revealed progressive activation of RAS and proliferation programs along epithelial differentiation paths. A focused CRISPR screen in HPV-positive pre-tumoroids identified NF1 as the top suppressor of malignant transition. NF1 loss accelerated carcinogenesis in organoids, compressing a 5~10-year process into 3~6 months, recapitulating basal cell expansion, dedifferentiation, and tumorigenicity. Mechanistically, NF1 loss enhanced RAS-MAPK and PI3K-AKT signaling, promoted proliferative programs, and remodeled chromatin accessibility at AP-1/E2F motifs. Conversely, NF1 restoration in cancer organoids induced apoptosis and suppressed malignant maintenance. AI-guided modeling was used to design a minimal NF1-mimetic peptide that engaged RAS-GTP to inhibit RAS signaling, reduce tumor burden in HPV16-driven mouse models, and restore local immune permissiveness without systemic activation. Together, these findings establish NF1 as a critical constraint on HPV-associated epithelial evolution and provide a time-compressed organoid model of cervical carcinogenesis, offering proof-of-concept for therapeutic RAS pathway interception via NF1 restoration.",
+  "authors": "Bai Hu, Liang Chen, Ren-Jie Wang, Zhi-Jun Zhou, Guang-Mei Zhang, Jing-Han Ruan, Ling Xi, Yuan-Zhen Zhang",
+  "venue": "Cancer Research",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:organoid single-cell perturbat"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42691240"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "类器官CRISPR筛选+单细胞，建模恶性转化门控因子",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞引导类器官CRISPR筛选，揭示恶性转化关卡，建模成分强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "单细胞分析+类器官CRISPR筛选+AI肽设计",
+  "data": "患者样本单细胞转录组、HPV阳性前瘤类器官、HPV16小鼠模型",
+  "scenario": "宫颈鳞癌恶性转化机制",
+  "benchmark": "",
+  "results": "NF1为恶性转化首要抑制因子，其缺失将5~10年癌变压缩至3~6个月；NF1恢复诱导凋亡；NF1模拟肽降低肿瘤负荷",
+  "availability": "",
+  "limitations": "全文未获取，局限未明确",
+  "summary": "整合单细胞转录组、CRISPR-Cas9筛选与类器官建模解析宫颈癌恶性转化。发现NF1是HPV相关上皮演化的关键限制因子，其缺失将5~10年癌变压缩至3~6个月。机制上增强RAS-MAPK与PI3K-AKT信号并重塑染色质，AI设计的NF1模拟肽可抑制RAS信号并降低肿瘤负荷。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

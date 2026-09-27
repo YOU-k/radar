@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1097/cm9.0000000000002694",
+  "title": "Minimal improvement in coronary artery disease risk prediction in Chinese population using polygenic risk scores: evidence from the China Kadoorie Biobank",
+  "url": "https://doi.org/10.1097/CM9.0000000000002694",
+  "abstract": "Abstract Background: Several studies have reported that polygenic risk scores (PRSs) can enhance risk prediction of coronary artery disease (CAD) in European populations. However, research on this topic is far from sufficient in non-European countries, including China. We aimed to evaluate the potential of PRS for predicting CAD for primary prevention in the Chinese population. Methods: Participants with genome-wide genotypic data from the China Kadoorie Biobank were divided into training (n = 28,490) and testing sets (n = 72,150). Ten previously developed PRSs were evaluated, and new ones were developed using clumping and thresholding or LDpred method. The PRS showing the strongest association with CAD in the training set was selected to further evaluate its effects on improving the traditional CAD risk-prediction model in the testing set. Genetic risk was computed by summing the product of the weights and allele dosages across genome-wide single-nucleotide polymorphisms. Prediction of the 10-year first CAD events was assessed using hazard ratios (HRs) and measures of model discrimination, calibration, and net reclassification improvement (NRI). Hard CAD (nonfatal I21–I23 and fatal I20–I25) and soft CAD (all fatal or nonfatal I20–I25) were analyzed separately. Results: In the testing set, 1214 hard and 7201 soft CAD cases were documented during a mean follow-up of 11.2 years. The HR per standard deviation of the optimal PRS was 1.26 (95% CI:1.19–1.33) for hard CAD. Based on a traditional CAD risk prediction model containing only non-laboratory-based information, the addition of PRS for hard CAD increased Harrell's C index by 0.001 (–0.001 to 0.003) in women and 0.003 (0.001 to 0.005) in men. Among the different high-risk thresholds ranging from 1% to 10%, the highest categorical NRI was 3.2% (95% CI: 0.4–6.0%) at a high-risk threshold of 10.0% in women. The association of the PRS with soft CAD was much weaker than with hard CAD, leading to minimal or no improvement in the soft CAD model. Conclusions: In this Chinese population sample, the current PRSs minimally changed risk discrimination and offered little improvement in risk stratification for soft CAD. Therefore, this may not be suitable for promoting genetic screening in the general Chinese population to improve CAD risk prediction.",
+  "authors": "Song-Chun Yang, Dong Sun, Zhi-Jia Sun, Can-Qing Yu, Yu Guo, J. Si, Dianjianyi Sun, Y. Pang",
+  "venue": "Chinese Medical Journal",
+  "year": 2023,
+  "citations": 4,
+  "found_by": [
+   "s2kw:China Kadoorie Biobank cardiov"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:37200020"
+   ],
+   "pmcid": "PMC10586831"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "CKB十万人队列评估PRS对CAD预测增益，东亚人群",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "CKB十万人队列评估PRS对中国CAD预测，东亚人群必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多基因风险评分构建与验证(C+T、LDpred)",
+  "data": "中国CKB队列约10万例全基因组基因型数据",
+  "scenario": "中国人群冠心病风险预测",
+  "benchmark": "CKB-CVD传统风险模型、China-PAR模型",
+  "results": "最优PRS加入传统模型后Harrell's C仅小幅提升，参考东亚PRS研究C指数提升约0.01、NRI 3.5%",
+  "availability": "",
+  "limitations": "中国人群缺乏大规模CAD GWAS，PRS预测增益有限",
+  "summary": "研究评估多基因风险评分能否在中国人群中改善冠心病风险预测。基于CKB近10万例基因型数据，验证10个既往PRS并开发新PRS，筛选最优者加入传统模型。发现PRS对中国人群CAD风险预测的改善幅度很小。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1371/journal.pmed.1005039",
+  "title": "Identification of lipid quantitative trait loci linked with cardiometabolic disease in Asian Indians and Europeans: A genome-wide association study and Mendelian randomization",
+  "url": "https://doi.org/10.1371/journal.pmed.1005039",
+  "abstract": "Background Genetic mechanisms that predispose people to type 2 diabetes (T2D) and cardiovascular disease (CVD) remain poorly understood, partly because of a lack of sufficient data on non-European ethnic groups. Extending these evaluations to diverse cohorts is essential for gaining insights into the molecular pathways involved in disease development among human populations. In this study, we aimed to evaluate the genetic connection between the human lipidome and cardiometabolic disorders. We conducted a metabolite genome-wide association study (mGWAS) in a Punjabi population from India, along with multi-layer replication studies using the UK Biobank and other independent European and non-European cohorts. Methods and findings We performed mGWAS using 516 lipid metabolites in 3,000 Punjabi Sikh individuals, and validation was performed in 1.13M Europeans and 15K individuals from Asian Indian ancestry using independent cohorts of the UK Biobank, GeneRISK, DIAMANT, PROMIS, and other studies. We identified 609 SNP-metabolite associations representing 236 SNP-metabolite pairs that attained genome-wide significance (p </= 5 × 10−8). Of the 36 SNP-lipid metabolite signals that survived multiple testing correction (p </= 1.92 × 10−10), 33 associations were not reported before, and 3 associations were confirmed to be ancestry-specific. Using colocalization analysis, polygenic risk scores, and Mendelian randomization approaches, we identified a causal association of LPC O-16:0 with T2D, represented by a lead variant in CD45, a key regulator of T- and B-cell antigen receptor signaling, and is already used as a therapeutic target. Another possible causal relationship of PC 38:4 (C) in protecting against coronary artery disease risk in Asian Indians, attributed to a variant in the untranslated region in the FADS1/2 genes, may be specific to ancestry and/or could not be confirmed in Europeans because of extensive pleiotropy in this region. The main limitation of this study was the absence of an independent validation cohort of Asian Indians from India. Conclusions The mGWAS of Asian Indians offers new insights into the diverse molecular origins of cardiometabolic diseases and suggests potential pathways for innovative treatments. Our findings highlight the need for additional research on human lipidomics to better understand the downstream effects of the genome and its impact on cardiometabolic health.",
+  "authors": "Madhusmita Rout, C. E. Aston, R. Duggirala, H. Goring, Oliver Fiehn, D. Sanghera",
+  "venue": "PLoS Medicine",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2kw:UK Biobank metabolomics lipido"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42024661"
+   ],
+   "pmcid": "PMC13105358"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨族裔脂质组mGWAS+MR，UKB复制，契合多组学靶点发现",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "PLoS Med上跨种族脂质组GWAS+MR，UKB验证，多组学靶点发现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "代谢物GWAS+精细定位+共定位+孟德尔随机化",
+  "data": "AIDHS/SDS 3000人；UKBB 468,515人（EU 459,143，SA 9,372）",
+  "scenario": "南亚裔血脂遗传与心脏代谢病",
+  "benchmark": "欧洲人群GWAS及已发表独立队列",
+  "results": "识别血脂代谢物新遗传关联，验证已知关联，发现祖源特异性差异；MR提示代谢物与T2D/CVD共享因果变异",
+  "availability": "",
+  "limitations": "样本以旁遮普锡克族为主，外推性受限；部分验证依赖已发表汇总数据",
+  "summary": "研究针对亚洲印度人群缺乏血脂组学与全基因组数据的问题，开展血脂表型代谢物GWAS。方法上结合UKBB与AIDHS/SDS队列，使用精细定位、共定位和孟德尔随机化分析。发现新的血脂遗传关联及祖源特异性差异，并识别与T2D和心血管病共享的候选因果变异。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

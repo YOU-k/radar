@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1073/pnas.1911273116",
+  "title": "Pancreatic cancer organoids recapitulate disease and allow personalized drug screening",
+  "url": "https://doi.org/10.1073/pnas.1911273116",
+  "abstract": "Significance We describe a biobank of patient-derived pancreatic cancer organoids, characterized by whole-genome DNA sequencing, RNA sequencing, and histology. The organoid biobank will be made publicly available and thus can serve as a resource for others. Pancreatic cancer organoids have been described previously; however, here we expose organoids to extensive drug screens to reveal unique drug sensitivity profiles for individual organoid lines. These findings underscore the importance of personalized approaches when using targeted agents to treat cancer in the clinic. We report the derivation of 30 patient-derived organoid lines (PDOs) from tumors arising in the pancreas and distal bile duct. PDOs recapitulate tumor histology and contain genetic alterations typical of pancreatic cancer. In vitro testing of a panel of 76 therapeutic agents revealed sensitivities currently not exploited in the clinic, and underscores the importance of personalized approaches for effective cancer treatment. The PRMT5 inhibitor EZP015556, shown to target MTAP (a gene commonly lost in pancreatic cancer)-negative tumors, was validated as such, but also appeared to constitute an effective therapy for a subset of MTAP-positive tumors. Taken together, the work presented here provides a platform to identify novel therapeutics to target pancreatic tumor cells using PDOs.",
+  "authors": "E. Driehuis, A. van Hoeck, K. Moore, S. Kolders, H. Francies, M. Gulersonmez, E. Stigter, B. Burgering",
+  "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+  "year": 2019,
+  "citations": 403,
+  "found_by": [
+   "s2:references:doi:10.1038/s41578-021-00279-y"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:31818951"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "胰腺癌类器官生物库与个性化药敏筛选，公开数据资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "胰腺癌类器官生物库+药敏筛选，高引经典资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "患者来源胰腺癌类器官库+药物筛选",
+  "data": "30例PDO；76种治疗药物；WGS/RNA-seq/组织学",
+  "scenario": "胰腺癌个性化药筛",
+  "benchmark": "临床常用治疗；MTAP状态与PRMT5抑制剂反应",
+  "results": "PDO重现肿瘤组织学与遗传改变；发现临床未用敏感性；EZP015556对MTAP阴性及部分阳性肿瘤有效",
+  "availability": "类器官库将公开",
+  "limitations": "样本量30例；体外药敏与临床相关性需进一步验证",
+  "summary": "作者建立胰腺癌患者来源类器官生物库并进行个性化药筛。对30例PDO行WGS、RNA-seq和组织学表征，测试76种药物敏感性。发现PDO重现肿瘤特征，揭示临床未利用的敏感性，并验证PRMT5抑制剂EZP015556对MTAP阴性及部分阳性肿瘤有效。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

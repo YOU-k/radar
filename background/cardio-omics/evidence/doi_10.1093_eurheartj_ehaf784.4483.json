@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehaf784.4483",
+  "title": "Prospective validation of an ensemble deep learning algorithm for detecting structural heart disease using real-world 12-lead electrocardiogram images",
+  "url": "https://doi.org/10.1093/eurheartj/ehaf784.4483",
+  "abstract": "\n \n \n Timely diagnosis of clinically actionable structural heart disease (SHD) can enable early treatment and improve patient outcomes. We previously developed an ensemble deep learning algorithm to detect a range of SHDs from images of 12-lead electrocardiograms (ECGs) in a large US health system. We sought to evaluate its performance in a prospective clinical setting.\n \n \n \n We assessed the performance of the artificial intelligence-enhanced interpretation of ECG (AI-ECG) to detect components of SHD, including left ventricular systolic dysfunction (LVSD) and valvular heart disease, in an outpatient population undergoing transthoracic echocardiogram (TTE) in Iran.\n \n \n \n Consecutive individuals presenting to a tertiary care center to receive an outpatient TTE during September–December 2024 were eligible. We recruited patients ≥45 years with either ischemic heart disease or cardiovascular risk factors (hypertension, diabetes, or overweight/obesity [body mass index ≥25 kg/m2]) to define a high-risk cohort. Study outcome was a composite of LVSD (LV ejection fraction <40%), severe left-sided valvular disease, and severe LV hypertrophy (interventricular septal diameter >15 mm and moderate/severe LV diastolic dysfunction). We prospectively obtained a 12-lead ECG for all participants, with images captured using a smartphone camera and processed by our AI-ECG model with a standard preprocessing approach.\n \n \n \n We enrolled 879 participants with a median age of 62 years [IQR, 55–69] and 445 (50.6%) women. Of these, 194 (37.0%) had one or more SHDs represented in the composite, including 152 (17.3%) with LVSD and 55 (7.6%) with severe left-sided valvular disease. The model demonstrated an area under the receiver operating characteristic curve (AUROC) of 0.866 (95% CI: 0.833–0.898) for detecting composite SHD, with an AUROC of 0.890 (0.859–0.920) for detecting LVSD and 0.817 (0.759–0.874) for detecting valvular disease. The model was well calibrated with a Brier score of 0.146. The AI-ECG model reduced the number needed to screen to find one individual with SHD by 51.4%.\n \n \n \n An AI-ECG algorithm accurately detected clinically significant SHD from real-world images of 12-lead ECGs in a prospectively enrolled outpatient population undergoing TTE. An AI-ECG approach has the potential to increase the yield of echocardiography, particularly in low-resource settings, and to enable triage for timely diagnosis and treatment.Figure\n",
+  "authors": "Ashraf Aminorroaya, A. G. Jolfayi, A. Poopak, M. Parsaee, M. Shojaeifard, M. Farrashi, A. Alizadehasl, K. Mehdizadeh",
+  "venue": "European Heart Journal",
+  "year": 2025,
+  "citations": 1,
+  "found_by": [
+   "s2kw:electrocardiogram deep learnin"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "万人级真实世界ECG影像深度学习，前瞻外部验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "EHJ前瞻外部验证ECG-AI筛查结构性心脏病，临床转化价值高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "集成深度学习算法从12导联ECG图像检测结构性心脏病",
+  "data": "伊朗三级中心前瞻性连续879例≥45岁高危门诊患者，中位62岁",
+  "scenario": "结构性心脏病前瞻性筛查",
+  "benchmark": "既往美国大型医疗系统开发的AI-ECG模型",
+  "results": "在真实世界前瞻性门诊人群中评估AI-ECG检测LVSD、瓣膜病和严重LV肥厚的性能",
+  "availability": "",
+  "limitations": "样本来自单中心伊朗高危人群，需更广泛人群验证",
+  "summary": "研究前瞻性验证集成深度学习AI-ECG算法，用智能手机拍摄的12导联ECG图像检测结构性心脏病。在伊朗三级中心纳入879例≥45岁高危门诊患者。结果显示该算法可在真实临床环境中评估LVSD、瓣膜病和严重LV肥厚。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

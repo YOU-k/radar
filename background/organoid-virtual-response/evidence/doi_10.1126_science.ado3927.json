@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/science.ado3927",
+  "title": "Cross-species single-cell spatial transcriptomic atlases of the cerebellar cortex",
+  "url": "https://doi.org/10.1126/science.ado3927",
+  "abstract": "The molecular and cellular organization of the primate cerebellum remains poorly characterized. We obtained single-cell spatial transcriptomic atlases of macaque, marmoset, and mouse cerebella and identified primate-specific cell subtypes, including Purkinje cells and molecular-layer interneurons, that show different expression of the glutamate ionotropic receptor Delta type subunit 2 (GRID2) gene. Distinct gene expression profiles were found in anterior, posterior, and vestibular regions in all species, whereas region-selective gene expression was predominantly observed in the granular layer of primates and in the Purkinje layer of mice. Gene expression gradients in the cerebellar cortex matched well with functional connectivity gradients revealed with awake functional magnetic resonance imaging, with more lobule-specific differences between primates and mice than between two primate species. These comprehensive atlases and comparative analyses provide the basis for understanding cerebellar evolution and function. Editor’s summary The cerebellum plays a major role in coordinating body movements, and damage to this area leads to impairments in fine movements, motor learning, and posture. Complete knowledge of the cerebellar architecture and its evolution is paramount for elucidating its organization and functions. Hao et al. performed spatial transcriptomics of the entire cerebellar cortex in two primates and one rodent species and produced a three-dimensional reconstruction of the cerebellar cytoarchitecture at single-cell resolution. They described similarities and differences between rodents and primates, providing valuable knowledge regarding cerebellar evolution. Moreover, the spatial expression was found to be correlated with intracerebellar functional connectivity. These results provide a solid foundation for our understanding of cerebellar function among species. —Mattia Maroso INTRODUCTION The cerebellum is essential for motor control and cognitive functions. Single-cell transcriptomics have revealed substantial molecular and cellular diversity of cerebellar cells, but most studies focused on the mouse cerebellum. Understanding the distinct cellular and molecular features of primate cerebella, which may underlie primate-specific functions, represents a substantial scientific interest. RATIONALE In this study, we used large-scale single-nucleus RNA-sequencing (sn-RNA-seq) and spatial transcriptome methods to map gene expression in the cerebellar cortices of macaques, marmosets, and mice. Our objectives were to identify primate-specific cell subtypes and their spatial organization, compare 3D gene expression patterns across species, and elucidate the relationship of these patterns with functional connectivity of the cerebellar cortex. RESULTS Using sn-RNA-seq and spatial transcriptome methods, we generated comprehensive single-cell spatial transcriptomic cerebellar atlases of macaques, marmosets, and mice. Our analysis identified two primate-specific subtypes of Purkinje cells (the only output neurons of the cerebellar cortex) that expressed distinct levels of the gene GRID2, which encodes a delta2 glutamate receptor. Primate Purkinje cells with high and low GRID2 expression levels were distributed in distinct microdomains with varying abundance across cerebellar lobules. These subtypes showed differences in the expression patterns of other glutamate receptor subunits and long-term depression (LTD)–related genes, suggesting their potential variability in synaptic plasticity and learning mechanisms. We also identified primate-specific subtypes of molecular-layer interneurons and granule cells that were associated with different expression levels of GRID2 and neurexins, respectively, indicating cellular diversity across the entire primate cerebellum. Our high-resolution 3D spatial transcriptomic analysis revealed distinct spatial patterns of gene expression across various cerebellar layers and regions with notable species-specific differences. For all three species, we found that the gene expression pattern was more distinctly different between the anterior and posterior regions than between the vermis and hemisphere, and that the vestibular region showed the greatest region-specific gene expression. In primates, region-enriched gene expression was predominantly observed in the granular layer, whereas it was more pronounced in the Purkinje layer in mice. By means of functional magnetic resonance imaging (MRI) of awake animals, we obtained functional connectivity patterns of the cerebellar cortex and integrated the connectivity information with spatial transcriptomic data in all three species. The 3D integrated analysis revealed that the overall gene expression patterns in the cerebellar cortex matched closely with functional connectivity patterns. For both patterns, we observed more substantial lobule-specific differences between primates and mice than between the two primate species. Many genes enriched in specific regions correlated with functional connectivity patterns, suggesting their potential roles in establishing cerebellar connectivity and function. CONCLUSION Our study provides comprehensive single-cell spatial transcriptomic atlases of the cerebellar cortex of macaques, marmosets, and mice, revealing primate-specific cell types and spatial gene expression patterns, as well as the relationship between the cerebellar transcriptome and its functional connectivity. These findings enhance our understanding of cellular and molecular features in the cerebellar cortex, providing a valuable resource for future research into cerebellar functions and diseases. Cross-species comparison of the molecular and cellular organization of the cerebellar cortex. Comprehensive single-cell spatial transcriptomic atlases were created for the cerebellar cortex of mice, marmosets, and macaques. These atlases depicted primate-specific cell types, their spatial distribution patterns, and region-enriched gene expression. By integrating awake functional MRI (fMRI), the analysis revealed a close association between the transcriptome and functional connectivity of the cerebellar cortex.",
+  "authors": "Shijie Hao, Xiaojia Zhu, Zhi Huang, Qianqian Yang, Hean Liu, Yan Wu, Ya-Feng Zhan, Yu Dong",
+  "venue": "Science",
+  "year": 2024,
+  "citations": 44,
+  "found_by": [
+   "s2kw:cross-species single-cell foun"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:39325889"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种单细胞空间图谱，支撑跨物种迁移建模资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Science跨物种空间图谱，跨物种迁移必读资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨物种单细胞空间转录组图谱构建",
+  "data": "猕猴、狨猴、小鼠小脑皮层；单细胞空间转录组",
+  "scenario": "小脑皮层进化与功能比较",
+  "benchmark": "灵长类与小鼠小脑区域基因表达及fMRI连接梯度",
+  "results": "发现灵长类特异Purkinje细胞和分子层中间神经元亚型；GRID2表达差异；区域选择性表达在灵长类颗粒层、小鼠Purkinje层",
+  "availability": "",
+  "limitations": "缺乏全文；未明确数据公开性与功能验证深度",
+  "summary": "研究获得猕猴、狨猴和小鼠小脑皮层的单细胞空间转录组图谱。比较发现灵长类特异细胞亚型及GRID2表达差异，区域选择性基因表达在灵长类主要位于颗粒层、小鼠位于Purkinje层。基因表达梯度与清醒fMRI功能连接梯度匹配，揭示小脑皮层进化与功能组织差异。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

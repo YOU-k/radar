@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circulationaha.124.073457",
+  "title": "Proteomic Signatures for Risk Prediction of Atrial Fibrillation.",
+  "url": "https://doi.org/10.1161/circulationaha.124.073457",
+  "abstract": "Background Proteomic signatures might improve disease prediction and enable targeted disease prevention and management. We explored whether a protein risk score derived from large-scale proteomics data improves risk prediction of atrial fibrillation (AF). Methods A total of 51 680 individuals with 1459 unique plasma protein measurements and without a history of AF were included from the UKB-PPP (UK Biobank Pharma Proteomics Project). A protein risk score was developed with lasso-penalized Cox regression from a random subset of 70% (36 176 individuals, 54.4% women, 2155 events) and was tested on the remaining 30% (15 504 individuals, 54.4% women, 910 events). The protein risk score was externally replicated with the ARIC study (Atherosclerosis Risk in Communities; 11 012 individuals, 54.8% women, 1260 events). Results The protein risk score formula developed from the UKB-PPP derivation set was composed of 165 unique plasma proteins, and 15 of them were associated with atrial remodeling. In the UKB-PPP test set, a 1-SD increase in protein risk score was associated with a hazard ratio of 2.20 (95% CI, 2.05-2.41) for incident AF. The C index for a model including CHARGE-AF (Cohorts for Heart and Aging Research in Genomic Epidemiology Atrial Fibrillation), NT-proBNP (N-terminal B-type natriuretic peptide), polygenic risk score, and protein risk score was 0.816 (95% CI, 0.802-0.829) compared with 0.771 (95% CI, 0.755-0.787) for a model including CHARGE-AF, NT-proBNP, and polygenic risk score (C-index change, 0.044 [95% CI, 0.039-0.055]). Protein risk score added to CHARGE-AF, NT-proBNP, and polygenic risk score resulted in a risk reclassification of 5.4% (95% CI, 2.9%-7.9%) with a 5-year risk threshold of 5%. In the decision curve, the predicted net benefit before and after the addition of protein risk score to a model including CHARGE-AF, NT-proBNP, and polygenic risk score was 3.8 and 5.4 per 1000 people, respectively, at a 5-year risk threshold of 5%. External replication of a protein risk score in the ARIC study showed consistent improvement in risk stratification of AF. Conclusions Protein risk score derived from a single plasma sample improved risk prediction of AF. Further research using proteomic signatures in AF screening and prevention is needed.",
+  "authors": "Park H, Norby FL, Kim D, Jang E, Yu HT, Kim TH, Uhm JS, Sung JH, Pak HN, Lee MH, Yang PS, Joung B.",
+  "venue": "Circulation",
+  "year": 2025,
+  "citations": 14,
+  "found_by": [
+   "eupmc:UK Biobank plasma proteomics O"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC12303763",
+   "is_oa": false,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Joung B",
+   "last_affil": "Division of Cardiology, Department of Internal Medicine, Yonsei University College of Medicine, Seoul, Republic of Korea (H.P., D.K., E.J., H.T.Y., T.-H.K., J.-S.U., H.-N.P., M.-H.L., B.J.)."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB-PPP 5万人蛋白组风险评分预测房颤，含外部验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB-PPP五万人蛋白组AF风险评分，Circulation，外部验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Lasso-Cox蛋白风险评分，训练/测试+外部验证",
+  "data": "UKB-PPP 51,680人，1,459蛋白；ARIC 11,012人",
+  "scenario": "房颤发生风险预测",
+  "benchmark": "CHARGE-AF+NT-proBNP+多基因风险评分",
+  "results": "蛋白风险评分含165个蛋白；1-SD风险比2.20；加入蛋白评分后C指数0.816 vs 0.771",
+  "availability": "",
+  "limitations": "全文未提供；蛋白检测平台和人群差异可能影响外推；需更多外部验证",
+  "summary": "研究评估大规模血浆蛋白组数据能否提升房颤风险预测。基于UKB-PPP 51,680人开发Lasso-Cox蛋白风险评分，并在ARIC外部队列验证。结果显示165蛋白评分显著提升房颤预测，加入CHARGE-AF、NT-proBNP和多基因风险评分后C指数由0.771升至0.816。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.06.22.26356289",
+  "title": "Performance of Cardiovascular Polygenic Risk Scores in Carotid Stenosis Identification",
+  "url": "https://doi.org/10.64898/2026.06.22.26356289",
+  "abstract": "Background: Clinically significant carotid stenosis remains a major cause of ischemic stroke (IS), yet prediction of disease progression is limited. Polygenic risk scores (PRSs) for coronary artery disease (CAD) and peripheral artery disease (PAD) have demonstrated associations with atherosclerosis burden and major cardiovascular disease (CVD) events, but whether these insights extend to carotid stenosis is unclear. We evaluated the association and discriminative performance of validated PRSs for CAD, PAD, IS, and carotid intima-media thickness (cIMT) with carotid stenosis. Methods: Carotid stenosis was identified in genotyped Mass General Brigham Biobank participants using validated ICD- and CPT-based phenotyping algorithms. Logistic regression adjusted for age, sex, and 10 ancestry principal components assessed PRS associations. Incremental discrimination was evaluated using changes in Harrell's C-statistic. Results: Compared with 52,636 controls, 670 participants with carotid stenosis were more frequently male (61.5% vs 44.1%), older (70.8 SD 9.0 vs 53.4 SD 17.2 years), and more likely to be European (95.7% vs 84.1%). The IS (OR 1.31, 95% CI 1.21?1.41), CAD (OR 1.62, 95% CI 1.50?1.75), and PAD (OR 1.66, 95% CI 1.54?1.80) PRSs were each associated with carotid stenosis (all p<0.0001), while the cIMT PRS was not (p=0.28). The PAD PRS demonstrated the greatest improvement in discrimination beyond age, sex, and ancestry (?C-statistic 0.017; C-statistic 0.845, 95% CI 0.833?0.856). A fully adjusted model incorporating established CVD risk factors achieved a C-statistic of 0.852 (95% CI 0.841?0.862), with modest improvement after PAD PRS inclusion (?C-statistic 0.008). Individuals in the top 5% of the PAD PRS and top 4% of CAD PRS distribution demonstrated 3-fold greater odds of carotid stenosis. Conclusions: A PAD and CAD PRS may help identify individuals at high likelihood for carotid stenosis, though broad discriminative performance remains limited. These findings support further investigation of CVD PRSs as adjunctive risk stratification tools.",
+  "authors": "T. Bellomo, A. Misra, Tianrun Cai, Lucía Sánchez García, Aniruddh P. Patel, A. Flores, Taylor Nordan, T. Nakao",
+  "venue": "medRxiv",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1038/s41591-023-02429-x"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42396298"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "生物库PRS评估颈动脉狭窄，多PRS与影像表型结合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "生物库PRS评估颈动脉狭窄，多血管床PRS比较有传播价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "已验证PRS与颈动脉狭窄关联及判别分析",
+  "data": "Mass General Brigham Biobank：670例颈动脉狭窄，52,636对照",
+  "scenario": "颈动脉狭窄遗传风险识别",
+  "benchmark": "年龄、性别和10个祖源主成分校正模型",
+  "results": "IS PRS OR 1.31，CAD PRS OR 1.62，PAD PRS OR 1.66，均p<0.0001；cIMT PRS无关联；PAD PRS ΔC统计量0.017，C 0.845",
+  "availability": "",
+  "limitations": "病例以欧洲裔为主；颈动脉狭窄表型依赖ICD/CPT算法",
+  "summary": "研究评估CAD、PAD、IS和cIMT多基因风险评分与颈动脉狭窄的关联和判别能力。在Mass General Brigham Biobank中识别670例颈动脉狭窄和52,636例对照，校正年龄、性别和祖源主成分后分析。发现IS、CAD和PAD PRS均与颈动脉狭窄显著相关，PAD PRS判别提升最大，而cIMT PRS无关联。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

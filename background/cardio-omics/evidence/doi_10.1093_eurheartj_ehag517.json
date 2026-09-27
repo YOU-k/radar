@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/eurheartj/ehag517",
+  "title": "Transformer-based models for predicting cardiovascular risk in Chinese adults: development and validation.",
+  "url": "https://doi.org/10.1093/eurheartj/ehag517",
+  "abstract": "BACKGROUND AND AIMS\nTraditional Cox proportional hazards models show suboptimal performance for cardiovascular disease (CVD) risk prediction in Chinese populations. Transformer-based deep learning models have demonstrated promise in clinical risk prediction. In this study, sex-specific transformer-based models (China-AIHeart) for 10-year CVD risk prediction among Chinese adults were developed and validated.\n\n\nMETHODS\nThe derivation cohort included 156 790 participants [34.6% men; mean [SD] age, 56.7 [8.9] years) without CVD from the China Cardiometabolic Disease and Cancer Cohort. External validation was conducted in two independent Chinese cohorts (Xinjiang and CHARLS). Transformer-based time-to-event prediction models were developed, including a full model (22 predictors) and a simplified model (15 predictors). Performance was compared with Cox models using identical predictors and established risk scores (China-PAR, PREVENT-ASCVD, and SCORE2 Asia-Pacific equations).\n\n\nRESULTS\nChina-AIHeart demonstrated good discrimination (C-statistic [95% confidence interval, CI]: .767 [.754-.779] in men; .780 [.769-.791] in women), calibration (calibration χ2: 14.806 in men; 9.326 in women; Brier score: .104 in men; .077 in women), and net clinical benefit in predicting CVD risk. Predicted event rates closely matched observed risks across strata. Compared with Cox models with identical predictors, China-AIHeart showed improved discrimination (ΔC-statistic [95% CI]: .027 [.025-.028] in men; .031 [.029-.033] in women) and reclassification (net reclassification index [95% CI]: .478 [.466-.492] in men; .560 [.551-.572] in women), and outperformed China-PAR, PREVENT-ASCVD, and SCORE2 Asia-Pacific equations. External validation demonstrated robust performance, with C-statistics of .781/.825 (men/women) and .748/.820 for the full and simplified models in the Xinjiang cohort, and .740/.771 for the simplified model in the CHARLS cohort.\n\n\nCONCLUSIONS\nThe transformer-based China-AIHeart models predicted 10-year CVD risk and outperformed traditional Cox-based approaches, providing a practical tool for risk stratification in Chinese adults.",
+  "authors": "Qiuyu Cao, Xingkun Xu, Hong Lin, Yue Yin, Sheng-Li Wu, Mian Li, Yu Xu, Shaoxin Li",
+  "venue": "European Heart Journal",
+  "year": 2026,
+  "citations": 2,
+  "found_by": [
+   "s2:citations:doi:10.1161/circulationaha.116.022367"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42425502"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "15万人中国队列Transformer风险预测，含两个外部验证队列",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "中国15万人队列Transformer模型，EHJ发表，跨队列验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于Transformer的性别特异性时间事件预测模型",
+  "data": "中国CKMCC队列156790人，外部队列新疆与CHARLS",
+  "scenario": "中国成人10年CVD风险预测",
+  "benchmark": "相同预测因子的Cox模型；China-PAR、PREVENT-ASCVD、SCORE2亚太",
+  "results": "C统计量男性0.767、女性0.780；校准χ2男14.806、女9.326；Brier男0.104、女0.077；较Cox模型ΔC统计量男性0.027",
+  "availability": "",
+  "limitations": "全文未获取，外部验证队列细节与泛化性未充分展示",
+  "summary": "研究开发并验证了针对中国成人10年心血管疾病风险预测的性别特异性Transformer模型China-AIHeart。方法基于中国心脏代谢疾病与癌症队列156790名无CVD参与者建模，并在新疆和CHARLS两个独立中国队列进行外部验证，同时与Cox模型及China-PAR、PREVENT-ASCVD、SCORE2亚太方程比较。结果显示模型具有良好区分度、校准度和净临床获益，预测事件率与观察风险高度一致，且优于使用相同预测因子的Cox模型。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

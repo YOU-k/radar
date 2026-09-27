@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.compbiomed.2024.108322",
+  "title": "Image-based profiling and deep learning reveal morphological heterogeneity of colorectal cancer organoids",
+  "url": "https://doi.org/10.1016/j.compbiomed.2024.108322",
+  "abstract": "Patient-derived organoids have proven to be a highly relevant model for evaluating of disease mechanisms and drug efficacies, as they closely recapitulate in vivo physiology. Colorectal cancer organoids, specifically, exhibit a diverse range of morphologies, which have been analyzed with image-based profiling. However, the relationship between morphological subtypes and functional parameters of the organoids remains underexplored. Here, we identified two distinct morphological subtypes (\"cystic\" and \"solid\") across 31360 bright field images using image-based profiling, which correlated differently with viability and apoptosis level of colorectal cancer organoids. Leveraging object detection neural networks, we were able to categorize single organoids achieving higher viability scores as \"cystic\" than \"solid\" subtype. Furthermore, a deep generative model was proposed to predict apoptosis intensity based on a apoptosis-featured dataset encompassing over 17000 bright field and matched fluorescent images. Notably, a significant correlation of 0.91 between the predicted value and ground truth was achived, underscoring the feasibility of this generative model as a potential means for assessing organoid functional parameters. The underlying cellular heterogeneity of the organoids, i.e., conserved colonic cell types and rare immune components, was also verified with scRNA sequencing, implying a compromised tumor microenvironment. Additionally, the \"cystic\" subtype was identified as a relapse phenotype featuring intestinal stem cell signatures, suggesting that this visually discernible relapse phenotype shows potential as a novel biomarker for colorectal cancer diagnosis and prognosis. In summary, our findings demonstrate that the morphological heterogeneity of colorectal cancer organoids explicitly recapitulate the association of phenotypic features and exogenous perturbations through the image-based profiling, providing new insights into disease mechanisms.",
+  "authors": "Kai Huang, Ming-Yue Li, Qi-Wei Li, Zao-Zao Chen, Ying Zhang, Zhong-Ze Gu",
+  "venue": "Comput. Biol. Medicine",
+  "year": 2024,
+  "citations": 22,
+  "found_by": [
+   "s2kw:organoid image-based phenotypi"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:38554658"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "结直肠癌类器官影像profiling+深度学习，形态与功能建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "影像profiling+深度学习预测类器官形态与药效关联，建模明确",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "图像profiling+目标检测+深度生成模型",
+  "data": "31360张明场图；17000+明场与荧光配对图",
+  "scenario": "结直肠癌类器官形态与功能预测",
+  "benchmark": "与真实凋亡强度对比；形态亚型与活性/凋亡关联",
+  "results": "识别囊性/实性两亚型；囊性活性更高；凋亡预测与真值相关0.91",
+  "availability": "",
+  "limitations": "样本来源与泛化性未充分验证；仅明场与荧光配对数据",
+  "summary": "作者研究结直肠癌类器官形态异质性与功能参数关系。用图像profiling分析31360张明场图，结合目标检测网络和深度生成模型预测凋亡强度，并用scRNA-seq验证细胞异质性。发现囊性与实性两亚型，囊性活性更高，凋亡预测相关达0.91。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,55 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41422-024-01034-y",
+  "title": "GeneCompass: deciphering universal gene regulatory mechanisms with a knowledge-informed cross-species foundation model.",
+  "url": "https://doi.org/10.1038/s41422-024-01034-y",
+  "abstract": "Deciphering universal gene regulatory mechanisms in diverse organisms holds great potential for advancing our knowledge of fundamental life processes and facilitating clinical applications. However, the traditional research paradigm primarily focuses on individual model organisms and does not integrate various cell types across species. Recent breakthroughs in single-cell sequencing and deep learning techniques present an unprecedented opportunity to address this challenge. In this study, we built an extensive dataset of over 120 million human and mouse single-cell transcriptomes. After data preprocessing, we obtained 101,768,420 single-cell transcriptomes and developed a knowledge-informed cross-species foundation model, named GeneCompass. During pre-training, GeneCompass effectively integrated four types of prior biological knowledge to enhance our understanding of gene regulatory mechanisms in a self-supervised manner. By fine-tuning for multiple downstream tasks, GeneCompass outperformed state-of-the-art models in diverse applications for a single species and unlocked new realms of cross-species biological investigations. We also employed GeneCompass to search for key factors associated with cell fate transition and showed that the predicted candidate genes could successfully induce the differentiation of human embryonic stem cells into the gonadal fate. Overall, GeneCompass demonstrates the advantages of using artificial intelligence technology to decipher universal gene regulatory mechanisms and shows tremendous potential for accelerating the discovery of critical cell fate regulators and candidate drug targets.",
+  "authors": "Yang X, Liu G, Feng G, Bu D, Wang P, Jiang J, Chen S, Yang Q, Miao H, Zhang Y, Man Z, Liang Z, Wang Z, Li Y, Li Z, Liu Y, Tian Y, Liu W, Li C, Li A, Dong J, Hu Z, Fang C, Cui L, Deng Z, Jiang H, Cui W, Zhang J, Yang Z, Li H, He X, Zhong L, Zhou J, Wang Z, Long Q, Xu P, X-Compass Consortium, Wang H, Meng Z, Wang X, Wang Y, Wang Y, Zhang S, Guo J, Zhao Y, Zhou Y, Li F, Liu J, Chen Y, Yang G, Li X.",
+  "venue": "Cell research",
+  "year": 2024,
+  "citations": 92,
+  "found_by": [
+   "eupmc:in vivo Perturb-seq mouse",
+   "s2kw:cross-species single-cell foun"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11615217",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Li X",
+   "last_affil": "State Key Laboratory of Stem Cell and Reproductive Biology, Institute of Zoology, Chinese Academy of Sciences, Beijing, China. xinli@ioz.ac.cn."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种单细胞基础模型，含人鼠迁移建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell Research跨物种单细胞基础模型，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "知识注入跨物种基础模型GeneCompass",
+  "data": "scCompass-126M；1.017亿人/鼠单细胞；启动子、GRN、基因家族、共表达",
+  "scenario": "跨物种基因调控机制解析",
+  "benchmark": "scGPT、Geneformer、UCE、scFoundation等SOTA",
+  "results": "在细胞注释、扰动预测、剂量响应、GRN推断等任务达优或可比；预训练语料超1.2亿细胞",
+  "availability": "",
+  "limitations": "主要限于人和鼠；知识注入依赖先验质量；下游任务覆盖有限",
+  "summary": "作者提出知识注入跨物种基础模型GeneCompass解析通用基因调控机制。在scCompass-126M的1.017亿人鼠单细胞上预训练，整合启动子、GRN、基因家族和共表达四类先验知识。微调后在细胞注释、扰动预测、剂量响应和GRN推断等任务达到或接近SOTA，促进跨物种调控机制与药物靶点发现。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

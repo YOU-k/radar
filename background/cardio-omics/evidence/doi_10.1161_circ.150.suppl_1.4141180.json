@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circ.150.suppl_1.4141180",
+  "title": "Abstract 4141180: Opportunistic assessment of cardiovascular risk using deep learning of the heart and aorta on non-contrast chest computed tomography",
+  "url": "https://doi.org/10.1161/circ.150.suppl_1.4141180",
+  "abstract": "\n Purpose:\n Primary prevention of cardiovascular (CV) disease relies on accurate risk estimation. The coronary artery calcium score (CAC) can be measured on routine chest computed tomography (CT); however, it is unclear whether the heart and thoracic aorta regions on CT can provide additional information about future risk beyond calcium and risk factors.\n \n \n Methods:\n We applied the open-source TotalSegmentator tool to extract heart and thoracic aorta volumes from 27,943 non-contrast non-ECG gated chest CTs from 17,241 National Lung Screening Trial participants. We used the segmented volumes from 10,356 participants as input to train a new 3D Densenet169 deep learning model to predict 12-year CV mortality. Independent testing was performed in 5,165 individuals not used for model training with no history of type 2 diabetes, myocardial infarction, or stroke (eligible for primary prevention). The deep learning score was compared to a regression model using demographics, smoking, BMI, comorbidities, and the radiologist’s findings from the CT. We stratified the CAC and deep learning scores into high vs. low-risk groups using a CAC>100 and deep learning >10% risk threshold, respectively.\n \n \n Results:\n In the independent testing dataset, (N=5165; median age 60.0±8.0 years; 62.6% male), 3.3% died of CV disease. The deep learning score had higher discrimination for CV mortality than risk factors and CT findings (deep learning AUC 0.72 [0.68,0.76] vs. baseline AUC 0.66 [0.61,0.69], p < 0.001). Similar results were found for secondary outcomes of fatal myocardial infarction and fatal stroke. In a subset of 2,972 testing set individuals with measured CAC, those with high CAC and a high deep learning score had a 10.8% rate of 12-year CV mortality, higher than those with high CAC alone (4.1%, p<0.001).\n \n \n Conclusion:\n Based on the heart and thoracic aorta regions from CT, a deep learning model predicted 12-year CV mortality beyond prevalent risk factors, CAC, and imaging findings.\n \n \n Clinical Relevance:\n Opportunistic screening of chest CT using deep learning may enhance risk assessment to guide decisions for preventing CV events. External validation in population-representative cohorts is needed before clinical use.\n \n \n \n",
+  "authors": "V. Raghu, A. Sturniolo, Douglas P. Kiel, H. Aerts, Pradeep Natarajan, Michael Lu",
+  "venue": "Circulation",
+  "year": 2024,
+  "citations": 0,
+  "found_by": [
+   "s2kw:ECG deep learning foundation m"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "万人CT队列深度学习预测心血管风险，方法可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "NLST两万余人CT深度学习，机会性心血管风险预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "TotalSegmentator分割联合3D DenseNet169深度学习",
+  "data": "NLST 27943例胸部CT，训练10356例，测试5165例",
+  "scenario": "非增强胸部CT机会性心血管风险预测",
+  "benchmark": "人口学、吸烟、BMI、合并症及CT放射科发现的回归模型；CAC>100",
+  "results": "测试集N=5165，中位年龄60.0±8.0岁，男性62.6%，CV死亡3.3%；深度学习AUC 0.72 vs 基线0.66，p值未完整显示",
+  "availability": "TotalSegmentator为开源工具",
+  "limitations": "摘要结果截断；非ECG门控CT；外部验证不足",
+  "summary": "研究探索非增强胸部CT中心脏和胸主动脉区域能否在钙化和传统风险因素之外提供额外心血管风险信息。方法使用开源TotalSegmentator从NLST的27943例非增强非ECG门控胸部CT中提取心脏和胸主动脉体积，并用10356例训练3D DenseNet169模型预测12年心血管死亡，在5165例独立测试集中评估。结果显示深度学习评分对心血管死亡的区分度AUC为0.72，高于基于人口学、吸烟、BMI、合并症和CT放射科发现的基线模型AUC 0.66。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

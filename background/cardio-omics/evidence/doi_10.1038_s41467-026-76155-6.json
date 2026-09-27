@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-026-76155-6",
+  "title": "Deep learning prediction of left atrial structure and function from 12-lead electrocardiograms",
+  "url": "https://doi.org/10.1038/s41467-026-76155-6",
+  "abstract": "Abnormal cardiac atrial structure and function, termed atrial cardiopathy, typically precedes atrial fibrillation and downstream cardiovascular complications, yet detection is limited by the cost and accessibility of high-quality cardiac imaging. Here we show that a deep learning model trained on 12-lead electrocardiograms paired with 21,749 cardiac magnetic resonance scans from the UK Biobank predicts left atrial structure and function. Model-derived measures of atrial cardiopathy are strongly associated with new-onset atrial fibrillation, heart failure, and ischemic stroke after adjustment for clinical risk factors and biomarkers in two external cohorts, with magnitudes comparable to or greater than those for direct imaging measures and clinical risk factors. The risk of cardioembolic stroke, the hallmark complication of atrial fibrillation, increases 66% per standard deviation of left atrial volume. In exploratory analyses, model measures predict cardiac monitor-detected atrial fibrillation more accurately than a clinical risk prediction tool and NT-proBNP levels. This model is an inexpensive, accessible tool that identifies individuals at high-risk for atrial fibrillation and related complications. Atrial cardiopathy precedes atrial fibrillation and stroke, yet it is detected through costly, inaccessible cardiac imaging. Here, the authors show that a deep learning model estimates left atrial structure and function from a 12-lead ECG and independently predicts adverse cardiovascular outcomes.",
+  "authors": "Jennifer A. Brody, Vidhushei Yogeswaran, Kerri L. Wiggins, C. Sitlani, J. Bis, Lin-Yee Chen, S. Heckbert, J. Lima",
+  "venue": "Nature Communications",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "s2kw:ECG deep learning foundation m"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42669665"
+   ],
+   "pmcid": "PMC13527101"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank ECG深度学习预测心房结构，两外部队列验证结局。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "ECG深度学习预测心房结构，UKB加双外部队列",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度学习ECG-AI预测左房容积与射血分数",
+  "data": "UKB 48,300配对ECG-CMR；2个外部队列",
+  "scenario": "房颤、卒中、心衰风险筛查",
+  "benchmark": "CMR测量；AF风险工具；NT-proBNP",
+  "results": "LAVmin/LAVmax r=0.50，LAEF r=0.40；预测监测房颤优于对照",
+  "availability": "",
+  "limitations": "与CMR相关性仅中等，极端值存在回归均值偏差",
+  "summary": "研究开发ECG-AI模型，从静息12导联ECG预测CMR来源的左房结构和功能。模型在UK Biobank 48,300名配对参与者上训练，并在两个大型人群队列外部验证。结果显示预测与CMR仅中等相关，但与新发房颤、卒中和心衰独立相关，且在14天监测中预测房颤优于现有工具和NT-proBNP。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

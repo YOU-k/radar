@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s12933-025-02581-3",
+  "title": "Improving 10-year cardiovascular risk prediction in patients with type 2 diabetes with metabolomics",
+  "url": "https://doi.org/10.1186/s12933-025-02581-3",
+  "abstract": "Existing cardiovascular risk prediction models still have room for improvement in patients with type 2 diabetes who represent a high-risk population. This study evaluated whether adding metabolomic biomarkers could enhance the 10-year prediction of major adverse cardiovascular events (MACE) in these patients. Data from 10,257 to 1,039 patients with type 2 diabetes from the UK Biobank (UKB) and the German ESTHER cohort, respectively, were used for model derivation, internal and external validation. A total of 249 metabolites were measured with nuclear magnetic resonance (NMR) spectroscopy. Sex-specific LASSO regression with bootstrapping identified significant metabolites. The enhanced model’s predictive performance was evaluated using Harrell’s C-index. Seven metabolomic biomarkers were selected by LASSO regression for enhanced MACE risk prediction (three for both sexes, three male- and one female-specific metabolite(s)). Especially albumin and the omega-3-fatty-acids-to-total-fatty-acids-percentage among males and lactate among females improved the C-index. In internal validation with 30% of the UKB, adding the selected metabolites to the SCORE2-Diabetes model increased the C-index statistically significantly (P = 0.037) from 0.660 to 0.678 in the total sample. In external validation with ESTHER, the C-index increase was higher (+ 0.043) and remained statistically significant (P = 0.011). Incorporating seven metabolomic biomarkers in the SCORE2-Diabetes model enhanced its ability to predict MACE in patients with type 2 diabetes. Given the latest cost reduction and standardization efforts, NMR metabolomics has the potential for translation into the clinical routine.",
+  "authors": "R. Xie, T. Seum, S. Sha, K. Trares, B. Holleczek, H. Brenner, B. Schöttker",
+  "venue": "Cardiovascular Diabetology",
+  "year": 2024,
+  "citations": 30,
+  "found_by": [
+   "s2kw:ChinaHEART cohort cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:39806417"
+   ],
+   "pmcid": "PMC11730797"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB万人队列代谢组增强糖尿病CVD风险预测，含外部验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB+ESTHER万人队列，代谢组增强糖尿病CVD风险预测，含外部验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "性别特异性代谢物筛选+Cox风险模型",
+  "data": "UKB 274,353例+ESTHER 8,308例，249种NMR代谢物",
+  "scenario": "2型糖尿病10年MACE风险预测",
+  "benchmark": "SCORE2-Diabetes模型",
+  "results": "加入性别特异性代谢物标志物后，SCORE2-Diabetes对10年MACE预测能力提升，具体C指数改善数值未在摘要中给出",
+  "availability": "",
+  "limitations": "既往研究样本小、随访短、缺外部验证；本研究仅欧洲人群",
+  "summary": "研究旨在评估NMR代谢组学标志物能否提升2型糖尿病患者10年心血管风险预测。利用UKB和ESTHER两个欧洲大队列，按性别特异性筛选249种代谢物并整合入SCORE2-Diabetes模型。发现性别特异性代谢物标志物可改善SCORE2-Diabetes对10年MACE的预测能力。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

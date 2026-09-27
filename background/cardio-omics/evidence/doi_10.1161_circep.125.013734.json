@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circep.125.013734",
+  "title": "Prediction of Atrial Fibrillation from the Electrocardiogram in the Community Using Deep Learning: A Multinational Study",
+  "url": "https://doi.org/10.1161/CIRCEP.125.013734",
+  "abstract": "\n \n \n Deep-learning models from the electrocardiogram (ECG) can identify individuals with high AF risk, however evaluations in community-based studies are still scarce. Early identification of individuals at higher risk of AF is the first step to implement tailored prevention strategies and may also facilitate diagnosis and prevent complications by enhancing screening of high-risk individuals.\n \n \n \n We aimed to refine an ECG-AF model in the Framingham Heart Study (FHS) and compare its performance to predict AF to a clinical risk prediction score in samples from FHS and the UK Biobank. We also evaluated whether ECG-AF could predict other cardiovascular outcomes.\n \n \n \n We refined the ECG-AF model for AF risk prediction in 60% of the FHS samples free of AF or atrial flutter. We then tested the model’s performance in the remaining FHS samples and in the UK Biobank, comparing it to a clinical risk prediction score (CHARGE). Discrimination was assessed by the area under the receiver operating characteristic curve (AUC) and reclassification by the discrete net reclassification index (NRI). The association of ECG-AF with other cardiovascular outcomes and mortality was assessed using Cox proportional hazards models.\n \n \n \n The study sample included 10,097 FHS participants (mean baseline age 53±12 years; 54.9% women) with 28,151 ECGs, and 49,280 participants from the UK Biobank (mean age 64±8 years, 47.9% women). The ECG-AF model showed moderate discrimination for incident AF (AUC=0.82, 95% CI 0.80-0.84) in the FHS test set, comparable to the CHARGE score (AUC=0.83, 95% CI 0.81-0.85), and incremental when combined (AUC=0.85, 95% CI 0.83-0.87) (Figure 1). In the UK Biobank, the integrative score (CHARGE + ECG-AF) was also incremental to CHARGE alone (AUC=0.81, 95% CI 0.79-0.82 and AUC=0.78, 95% CI 0.76-0.79, respectively) (Figure 2). Compared to CHARGE score alone, the addition of ECG-AF demonstrated improved reclassification for the prediction of AF cases with NRI of 0.08 (95% CI 0.04-0.11) in the FHS and 0.12 (95% CI 0.07-0.14) in the UK Biobank. A higher ECG-AF score was also significantly associated with a higher risk of heart failure, myocardial infarction, and all-cause mortality in both the FHS and UK Biobank.\n \n \n \n In a community-based study, a deep-learning model from ECG had a good performance in predicting AF and other cardiovascular outcomes. This performance was comparable to a multivariable clinical risk score and was incremental when combined. Considering that ECGs are low-cost and widely available, even in areas with limited health access through telemedicine, ECG-AF could be used alone or in combination for AF risk prediction, potentially enabling tailored prevention strategies and more efficient screening.ROC curves for AF risk prediction in FHS  ROC curves for AF risk prediction in UKB\n",
+  "authors": "Luisa C. C. Brant, A. Ribeiro, O. Eromosele, M. M. Pinto-Filho, S. Barreto, B. B. Duncan, Martin D. Larson, Emelia J. Benjamin",
+  "venue": "Circulation: Arrhythmia and Electrophysiology",
+  "year": 2025,
+  "citations": 7,
+  "found_by": [
+   "s2kw:electrocardiogram deep learnin"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:41025252"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "FHS与UKB多国社区队列ECG深度学习预测房颤",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "FHS+UKB多国ECG-AI预测房颤，社区队列验证，方向代表",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度学习ECG-AF模型优化与外部验证",
+  "data": "FHS 10,097人28,151份ECG；UKB 49,280人",
+  "scenario": "社区人群房颤风险预测",
+  "benchmark": "CHARGE临床风险评分",
+  "results": "ECG-AF对 incident AF 显示中等区分度，AUC=0.（摘要截断）",
+  "availability": "",
+  "limitations": "全文摘要截断，结果不完整；社区验证仍较少",
+  "summary": "研究旨在优化ECG-AF模型并在社区队列中比较其预测房颤性能。在FHS 60%样本中优化模型，并在剩余FHS样本和UK Biobank中测试，与CHARGE评分比较。ECG-AF显示中等区分度，并进一步评估其与其他心血管结局和死亡率的关联。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

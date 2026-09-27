@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41698-021-00168-1",
+  "title": "Patient-derived organoids as a predictive biomarker for treatment response in cancer patients",
+  "url": "https://doi.org/10.1038/s41698-021-00168-1",
+  "abstract": "Effective predictive biomarkers are needed to enable personalized medicine and increase treatment efficacy and survival for cancer patients, thereby reducing toxic side effects and treatment costs. Patient-derived organoids (PDOs) enable individualized tumour response testing. Since 2018, 17 publications have examined PDOs as a potential predictive biomarker in the treatment of cancer patients. We review and provide a pooled analysis of the results regarding the use of PDOs in individualized tumour response testing, focusing on evidence for analytical validity, clinical validity and clinical utility. We identify future perspectives to accelerate the implementation of PDOs as a predictive biomarker in the treatment of cancer patients.",
+  "authors": "G. Wensink, S. Elias, J. Mullenders, M. Koopman, S. Boj, O. Kranenburg, J. Roodhart",
+  "venue": "npj Precision Oncology",
+  "year": 2021,
+  "citations": 282,
+  "found_by": [
+   "s2:references:doi:10.1038/s43586-022-00174-y"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:33846504"
+   ],
+   "pmcid": "PMC8042051"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "汇总17项PDO药敏与患者结局对应分析，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "npj子刊，PDO预测患者响应的汇总分析，临床转化必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "系统综述PDO药敏与临床反应关联",
+  "data": "17项肿瘤学研究；多癌种；PDO药筛与临床队列",
+  "scenario": "PDO作为治疗反应预测生物标志物",
+  "benchmark": "基因组生物标志物；临床治疗反应",
+  "results": "PDO可预测治疗反应；需满足分析效度、临床效度和临床效用；建立率与周转时间影响可行性",
+  "availability": "",
+  "limitations": "研究异质性大；多数为观察性；临床效用证据有限",
+  "summary": "作者系统综述PDO药敏作为癌症治疗反应预测标志物的证据。检索17项研究，评估药筛方法、临床相关性、患者内异质性及临床可行性。发现PDO有潜力预测治疗反应，但需满足分析效度、临床效度和临床效用，建立率与周转时间仍影响临床落地。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43856-025-00872-0",
+  "title": "Interpretable machine learning leverages proteomics to improve cardiovascular disease risk prediction and biomarker identification",
+  "url": "https://doi.org/10.1038/s43856-025-00872-0",
+  "abstract": "Cardiovascular diseases (CVDs) rank amongst the leading causes of long-term disability and mortality. Predicting CVD risk and identifying associated genes are crucial for prevention, early intervention, and drug discovery. The recent availability of UK Biobank Proteomics data enables investigation of blood proteins and their association with a variety of diseases. We sought to predict 10 year CVD risk using this data modality and known CVD risk factors. We focused on the UK Biobank participants that were included in the UK Biobank Pharma Proteomics Project. After applying exclusions, 50,057 participants were included, aged 40–69 years at recruitment. We employed the Explainable Boosting Machine (EBM), an interpretable machine learning model, to predict the 10 year risk of primary coronary artery disease, ischemic stroke or myocardial infarction. The model had access to 2978 features (2923 proteins and 55 risk factors). Model performance was evaluated using 10-fold cross-validation. The EBM model using proteomics outperforms equation-based risk scores such as PREVENT, with a receiver operating characteristic curve (AUROC) of 0.767 and an area under the precision-recall curve (AUPRC) of 0.241; adding clinical features improves these figures to 0.785 and 0.284, respectively. Our models demonstrate consistent performance across sexes and ethnicities and provide insights into individualized disease risk predictions and underlying disease biology. In conclusion, we present a more accurate and explanatory framework for proteomics data analysis, supporting future approaches that prioritize individualized disease risk prediction, and identification of target genes for drug development. Climente-González, Oh et al. introduce an interpretable machine learning model that integrates plasma proteomics with clinical risk factors and employs an explainable boosting machine algorithm for risk prediction. Authors show that their model outperforms existing models in predicting risk for cardiovascular disease. Cardiovascular diseases (CVDs) are a major cause of long-term disability and death. However, current prediction models are limited in their approach. We aimed to predict individual risk of CVD using blood protein markers, or biomarkers, that can serve as indicators of CVDs using an artificial intelligence model. Our findings show that this model was accurate and performed better than traditional risk prediction methods. The model provided personalized insights into disease risk and helped identify genes that could be targeted for prevention or development of new treatments. This research could improve early detection and prevention of CVD, leading to better health outcomes for many people in the future.",
+  "authors": "Héctor Climente-González, Min-Jae Oh, Urszula Chajewska, R. Hosseini, Sudipto Mukherjee, Wei Gan, M. Traylor, Si-Le Hu",
+  "venue": "Communications Medicine",
+  "year": 2024,
+  "citations": 30,
+  "found_by": [
+   "s2kw:plasma proteomics cardiovascul"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:40389651"
+   ],
+   "pmcid": "PMC12089484"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank蛋白组+可解释ML预测CVD，契合多组学方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank蛋白组提升CVD风险预测并识别标志物，方法可复用",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "可解释增强机EBM及梯度提升树+SHAP预测CVD",
+  "data": "UKB>54,000人，Olink Explore 2923血浆蛋白+临床数据",
+  "scenario": "CVD风险预测与生物标志物识别",
+  "benchmark": "LASSO回归及其他梯度提升模型",
+  "results": "EBM具高预测力并可提供全局和个体化解释，识别高预测力蛋白、个体风险因素及不同特征值风险",
+  "availability": "",
+  "limitations": "线性模型难捕捉非线性关系；需统计与文献进一步验证发现",
+  "summary": "研究利用UKB蛋白组学与临床数据，构建可解释机器学习模型预测心血管疾病风险。采用EBM和梯度提升树结合SHAP，实现全局与个体化解释。结果显示模型具高预测力，并识别关键蛋白和个体化风险因素。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

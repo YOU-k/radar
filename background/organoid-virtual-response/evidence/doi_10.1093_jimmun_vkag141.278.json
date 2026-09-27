@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/jimmun/vkag141.278",
+  "title": "Single-Cell Atlas of Microglia Reveals Conserved and Divergent Cell Populations in Mouse and Human Brain 2255696",
+  "url": "https://doi.org/10.1093/jimmun/vkag141.278",
+  "abstract": "\n \n \n Microglia are resident immune cells in the central nervous system and a heterogenous population with notable heterogeneity across development phases, regions, and disease states. While a few ‘microglia’ single cell atlases have recently emerged to profile large microglia datasets, a comprehensive, single cell/nuclei-resolution map of microglial subtypes and functional or activation states across different species remains lacking, especially one that performs an integrative secondary analysis of existing data.\n \n \n \n Here, we present a cross-species single-cell transcriptomic atlas of microglia from mouse and human brains, spanning multiple regions, sexes and ages. We use integrated analysis of single-cell RNA sequencing (scRNA-seq) and spatial transcriptomics datasets and tackle computational challenges like batch effect and modality integration.\n \n \n \n Our dataset encompasses over 200,000 microglial cells from adult human postmortem brains and sex as well as age-matched murine counterparts. We benchmark several integration approaches using anchor-based and deep manifold alignment methods. Our secondary analysis reveals a core set of conserved microglial subtypes, including homeostatic microglia (TMEM119+, P2RY12+), interferon-responsive microglia (ISG15+, IFIT3+), and phagocytic/activated states (CD68+, APOE+, CST7+). Notably, we identify a conserved ‘lipid-associated microglia’ (LAM) state marked by high APOE, TREM2, and GPNMB expression in both species, enriched in aging and neurodegenerative conditions.\n \n \n \n Our dataset collection, which is available via a web-interactive atlas tool, provides a valuable resource for understanding microglial diversity across species and lays the foundation for translating findings from mouse models to human. These findings support the existence of evolutionarily conserved microglial programs and highlight the need for caution when extrapolating mouse microglial states to human contexts.\n \n \n \n NA\n \n \n \n Neuroimmunology (NEUR)\n",
+  "authors": "Marmar R. Moussa, Pearl Daugaard, A. Burghard",
+  "venue": "Journal of Immunology",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:cross-species foundation model"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种小鼠人小胶质细胞单细胞图谱，契合跨物种迁移资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨物种小胶质细胞单细胞图谱，含跨物种保守与差异分析",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨物种单细胞与空间转录组整合",
+  "data": ">20万小胶质细胞；人鼠脑多区域、性别、年龄",
+  "scenario": "人鼠小胶质细胞异质性图谱",
+  "benchmark": "anchor-based与deep manifold alignment整合方法",
+  "results": "识别保守亚型：稳态、干扰素响应、吞噬/激活状态；发现保守LAM状态，高表达APOE、TREM2、GPNMB",
+  "availability": "",
+  "limitations": "摘要未提；依赖已有数据二次分析，可能受批次和模态整合限制",
+  "summary": "研究构建小鼠和人脑小胶质细胞跨物种单细胞转录组图谱。作者整合scRNA-seq和空间转录组数据，处理批次效应和模态整合，并基准比较多种整合方法。分析揭示保守小胶质细胞亚型及保守脂质相关小胶质细胞状态。"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

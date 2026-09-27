@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.oraloncology.2025.107742",
+  "title": "Integrating artificial intelligence-driven digital pathology and genomics to establish patient-derived organoids as new approach methodologies for drug response in head and neck cancer.",
+  "url": "https://doi.org/10.1016/j.oraloncology.2025.107742",
+  "abstract": "Patient-derived organoids (PDOs) emerge as advanced 3D ex vivo New Approach Methodologies (NAM) preclinical models, offering significant advantages over traditional cell lines and monolayer cultures for therapeutic development. In this study, we established PDOs from surgically resected fresh tissues of human papillomavirus (HPV)-negative head and neck squamous cell carcinoma (HNSCC) across anatomical sites, tumor T-categories, and sample types. These PDOs faithfully recapitulate the tumor's pathology, mutational profile, and drug response. To enable rapid classification of PDO identity, we developed a new convolutional neural network (CNN) model, TransferNet-PDO, which accurately distinguished tumor versus normal PDOs in culture using digital histopathology images (AUC ≥ 0.88). PDOs maintained stable cultures and were cryopreserved between passages 5 and 12. Immunohistochemistry (IHC) staining (PanCK, p63, Cytokeratin 13, Ki67) confirmed squamous phenotype and histologic aggression of the original tumor. For tumors harboring TP53 mutations by whole-exome sequencing (WES), PDOs retained the corresponding p53 functional status as confirmed by IHC (enhanced or loss of protein expression). Somatic mutational landscape revealed that PDOs preserved driver somatic mutations, copy number variations (CNVs), and clonal architecture including low-prevalence subclones. Drug sensitivity assessment of PDOs showed that cisplatin reduced cell viability, whereas cetuximab and lenvatinib had minimal effects. Chemoradiation led to greater tumor organoid killing compared to radiation or chemotherapy alone. This study presents an integrated HNSCC PDO platform combining tissue biobanking, organoid establishment, multiomics characterization, functional drug screening, and AI-driven histopathologic classification, providing a comprehensive and scalable system for translational cancer research.",
+  "authors": "Doerfler R, Chen J, Kim C, Smith JD, Harris M, Singh KB, Isett B, Dadey RE, Brown DD, Lee AV, Wang X, Spector ME, Kim S, Sridharan S, Contrera K, Smith K, Reeder C, Lyons M, Luo J, Liu S, Zandberg DP, Skinner HD, Zervantonakis IK, Vujanović L, Ferris RL, Seethala RR, Zevallos JP, Luke JJ, Bao R.",
+  "venue": "Oral oncology",
+  "year": 2025,
+  "citations": 13,
+  "found_by": [
+   "eupmc:patient-derived organoid drug "
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13262258",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Bao R",
+   "last_affil": "Hillman Cancer Center, UPMC, Pittsburgh, PA, USA; Department of Medicine, University of Pittsburgh, Pittsburgh, PA, USA; Division of Malignant Hematology and Medical Oncology, University of Pittsburgh, Pittsburgh, PA, USA. Electronic address: baor@upmc.edu."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "患者来源类器官药敏+CNN影像建模，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "类器官药敏+AI病理建模预测药物响应，符合方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "TransferNet-PDO单细胞CNN分类器",
+  "data": "HPV阴性HNSCC患者PDO的H&E图像与WES数据",
+  "scenario": "HNSCC药物反应预测",
+  "benchmark": "传统病理AI工具（多基于原发人体组织训练）",
+  "results": "准确区分肿瘤与正常PDO；保留原发肿瘤克隆结构含低频亚克隆；对顺铂、西妥昔单抗、仑伐替尼、放疗及放化疗显示临床相关敏感性",
+  "availability": "代码与模型均公开",
+  "limitations": "HNSCC PDO模型仍相对不成熟，正常上皮或基质细胞过度生长，肿瘤异质性与克隆性难以跨传代保持，新鲜手术标本获取受限",
+  "summary": "本研究旨在建立HPV阴性头颈鳞癌患者来源类器官（PDO）作为新方法学用于药物反应预测。作者开发了基于Hover-Net架构与ResNet50骨干的单细胞CNN分类器TransferNet-PDO，结合H&E图像与全外显子测序分析PDO的形态、基因组与克隆结构，并测试多种标准及靶向治疗药物敏感性。结果显示PDO可重现原发肿瘤形态与病理特征、保留克隆结构，并对顺铂、西妥昔单抗、仑伐替尼、放疗及放化疗表现出临床相关敏感性，支持PDO用于临床前治疗测试与精准肿瘤学。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

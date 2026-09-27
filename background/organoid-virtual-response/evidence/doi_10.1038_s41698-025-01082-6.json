@@ -1,0 +1,52 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41698-025-01082-6",
+  "title": "PharmaFormer predicts clinical drug responses through transfer learning guided by patient derived organoid",
+  "url": "https://doi.org/10.1038/s41698-025-01082-6",
+  "abstract": "A major challenge in effective cancer treatment is the variability of drug responses among patients. Patient-derived organoids greatly preserve the genetic and histological characteristics even the drug sensitivities of primary tumor tissues, therefore provide a compelling approach to predict clinical outcome. However, the individual organoid culture and following drug response test are time and cost-consuming, which hinders the potential clinical application. Here, we developed PharmaFormer, a clinical drug response prediction model based on custom Transformer architecture and transfer learning. PharmaFormer was initially pre-trained with the abundant gene expression and drug sensitivity data of 2D cell lines, and was then finalized through a model further fine-tuned with the limited organoid pharmacogenomic data accumulated at the present stage. Our results demonstrate that PharmaFormer, integrating both pan-cancer cell lines and organoids of a specific type of tumor, provides a dramatically improved accurate prediction of clinical drug response. This study highlights that advanced AI models combined with biomimetic organoid models will accelerate precision medicine and future drug development.",
+  "authors": "Yuru Zhou, Quanhui Dai, Yan-Ming Xu, Shuang Wu, Minzhang Cheng, Bing Zhao",
+  "venue": "npj Precision Oncology",
+  "year": 2025,
+  "citations": 41,
+  "found_by": [
+   "s2kw:organoid drug screening deep l",
+   "s2kw:cardiac organoid drug sensitiv"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:40804292"
+   ],
+   "pmcid": "PMC12350944"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "类器官引导迁移学习预测临床药敏",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "类器官迁移学习预测临床药敏，患者结局对应",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "定制Transformer+迁移学习PharmaFormer",
+  "data": "900+细胞系、100+药物AUC及类器官药敏数据",
+  "scenario": "临床药物反应预测",
+  "benchmark": "传统2D细胞系模型及现有药敏预测算法",
+  "results": "在三个肿瘤队列多分子临床药物反应预测中表现更优，优于传统方法",
+  "availability": "",
+  "limitations": "类器官药敏数据不足，依赖细胞系预训练，临床样本规模有限",
+  "summary": "针对临床药物反应预测中类器官数据不足的问题，提出基于定制Transformer与迁移学习的PharmaFormer。模型先在900+细胞系、100+药物的GDSC数据上预训练，再用肿瘤特异性类器官药敏数据微调，融合基因表达与药物SMILES结构。结果显示其在三个肿瘤队列的临床药物反应预测中优于传统方法，展示迁移学习加速类器官精准医疗应用。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

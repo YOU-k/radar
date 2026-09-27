@@ -1,14 +1,15 @@
 # radar — 个人科研情报系统
 
-跨 5 个领域（衰老多模态 / 数据库与模型 / 人群健康与多组学 AI / ML 底层算法 / Agent 进展）自动抓取信息，
+跨 7 个领域（衰老多模态 / 数据库与模型 / 人群健康与多组学 AI / 心血管队列与临床多组学 / 类器官与模式生物扰动响应 / ML 底层算法 / Agent 进展）自动抓取信息，
 按 `config/profile.md` 里的研究画像用 LLM 打分，高分论文自动深读全文，
 生成中文 digest，并发布成一个手机友好的可浏览站点。
 
 - **每日**（GitHub Actions，北京时间 08:23）：arXiv + EuropePMC(PubMed/bioRxiv) +
   Semantic Scholar 引用追踪 + HuggingFace + GitHub + RSS → `digests/YYYY-MM-DD.md`
-  → 深读当日 ≥7.5 分 top 3 篇全文（折叠在条目下）
-- **每周**（北京时间周日 20:41）：汇总一周 digest → 跨域趋势 + 项目启发 +
-  registry 增补建议 → `weekly/YYYY-Www.md`
+  → 深读当日 ≥7.5 分 top 3 篇全文（折叠在条目下）。每条论文带〔期刊〕/〔预印本〕、年月、
+  通讯（无标记时末位）作者及机构（OpenAlex，bioRxiv API / Europe PMC 单位兜底）
+- **每周**（北京时间周日 20:41）：依次 ① 全部方向背景 renew（吃本周日报 ≥7 分条目，评审入库后整篇重编）
+  ② 资源登记重建 ③ 联合分析重写 ④ 周报综合（末尾附本周来源分布表 + 各方向本周变更）⑤ 站点
 - **每月**（1 号 09:17）：对照近 30 天 digest 审查 `registry/` 长期知识库，提增补/修订建议
 
 定时任务刻意避开整点/半点——GitHub Actions 高峰期排队，整点 cron 可能延迟数小时。
@@ -58,6 +59,7 @@ GitHub Actions 设置（一次性）：
 
 ```bash
 gh secret set DEEPSEEK_API_KEY          # 粘贴 key
+gh secret set S2_API_KEY                # Semantic Scholar key（1 req/s，daily 引用追踪 + weekly renew 用）
 gh variable set SCORE_MODEL -b deepseek-chat   # 可选，默认值就是 deepseek-chat
 ```
 
@@ -103,7 +105,7 @@ registry/         长期知识库（人工维护）
 
 ## 已知边界
 
-- Semantic Scholar 无 key 时限速（~1 req/s 共享），seed papers 别超过 ~20 篇
+- Semantic Scholar 有 key 也是 1 req/s（累计全部端点），实测 1-2s 间隔仍偶发 429，靠退避重试兜住；seed papers 别超过 ~20 篇
 - GitHub 搜索未认证限 10 req/min；workflow 里已注入 GITHUB_TOKEN 提速
 - arXiv 请求间隔 3s，daily 全量约 4-6 分钟，正常
 - RSS 源个别会失效，日志里会有 `[rss] ... returned no entries`，换掉即可

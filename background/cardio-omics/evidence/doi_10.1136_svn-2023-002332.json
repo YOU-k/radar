@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1136/svn-2023-002332",
+  "title": "Development of machine learning-based models to predict 10-year risk of cardiovascular disease: a prospective cohort study",
+  "url": "https://doi.org/10.1136/svn-2023-002332",
+  "abstract": "Background Previous prediction algorithms for cardiovascular diseases (CVD) were established using risk factors retrieved largely based on empirical clinical knowledge. This study sought to identify predictors among a comprehensive variable space, and then employ machine learning (ML) algorithms to develop a novel CVD risk prediction model. Methods From a longitudinal population-based cohort of UK Biobank, this study included 473 611 CVD-free participants aged between 37 and 73 years old. We implemented an ML-based data-driven pipeline to identify predictors from 645 candidate variables covering a comprehensive range of health-related factors and assessed multiple ML classifiers to establish a risk prediction model on 10-year incident CVD. The model was validated through a leave-one-center-out cross-validation. Results During a median follow-up of 12.2 years, 31 466 participants developed CVD within 10 years after baseline visits. A novel UK Biobank CVD risk prediction (UKCRP) model was established that comprised 10 predictors including age, sex, medication of cholesterol and blood pressure, cholesterol ratio (total/high-density lipoprotein), systolic blood pressure, previous angina or heart disease, number of medications taken, cystatin C, chest pain and pack-years of smoking. Our model obtained satisfied discriminative performance with an area under the receiver operating characteristic curve (AUC) of 0.762±0.010 that outperformed multiple existing clinical models, and it was well-calibrated with a Brier Score of 0.057±0.006. Further, the UKCRP can obtain comparable performance for myocardial infarction (AUC 0.774±0.011) and ischaemic stroke (AUC 0.730±0.020), but inferior performance for haemorrhagic stroke (AUC 0.644±0.026). Conclusion ML-based classification models can learn expressive representations from potential high-risked CVD participants who may benefit from earlier clinical decisions.",
+  "authors": "Jia You, Yu Guo, Ju-Jiao Kang, Hui-Fu Wang, Ming Yang, Jian-Feng Feng, Jin-Tai Yu, W. Cheng",
+  "venue": "Stroke and vascular neurology",
+  "year": 2023,
+  "citations": 64,
+  "found_by": [
+   "s2kw:cardiovascular disease risk pr"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:37105576"
+   ],
+   "pmcid": "PMC10800279"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB 47万人机器学习CVD风险预测，数据驱动变量筛选，方法新",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank四十万人机器学习CVD预测，方法学有参考价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "机器学习UKCRP预测10年CVD",
+  "data": "UK Biobank 502505人；丰富表型与随访",
+  "scenario": "10年心梗/缺血/出血性卒中风险",
+  "benchmark": "FGCRS、SCORE、QRISK、AHA/ASCVD",
+  "results": "UKCRP优于现有模型；心梗和缺血性卒中可比，出血性卒中较差",
+  "availability": "网页应用；代码/权重未提",
+  "limitations": "随访时间受限；变量多；外推性待验证",
+  "summary": "研究开发机器学习模型UKCRP预测10年心血管疾病风险。基于UK Biobank大规模前瞻队列，采用数据驱动流程筛选预测因子并训练验证，再与FGCRS、SCORE、QRISK和AHA/ASCVD比较。UKCRP总体优于现有风险评分，对心梗和缺血性卒中表现可比，但对出血性卒中预测明显较差。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

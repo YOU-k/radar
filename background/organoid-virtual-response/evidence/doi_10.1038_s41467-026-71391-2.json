@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-026-71391-2",
+  "title": "Accelerating Leigh syndrome drug discovery through deep learning screening in brain organoids.",
+  "url": "https://doi.org/10.1038/s41467-026-71391-2",
+  "abstract": "Leigh syndrome (Leigh) is an untreatable mitochondrial disorder characterized by lactic acidosis and basal ganglia and midbrain pathology, leading to psychomotor regression and early death. We previously uncovered impaired neuronal morphogenesis in Leigh cerebral organoids carrying SURF1 gene variants. Leveraging this phenotype, we here develop a deep learning algorithm tailored for cell type-specific drug repurposing screening. In parallel, we perform a survival drug screen in a yeast model of Leigh. The two approaches independently converge on azole compounds, two of which - talarozole and sertaconazole - rescue neuronal morphogenesis in Leigh neurons and lower lactate release and improve growth rate in Leigh midbrain organoids. Mechanistically, these compounds modulate the retinoic acid pathway and membrane-associate lipid metabolism. The findings highlight azoles as promising candidates for Leigh and demonstrate the potential of combining in silico screens with human brain organoids as new approach methodologies (NAMs) to advance the discovery of therapeutics addressing rare neurodevelopmental disorders.",
+  "authors": "Menacho C, Okawa S, Álvarez-Merz I, Wittich A, Muñoz-Oreja M, Lisowski P, Martín ML, Pentimalli TM, Zakin S, Thevandavakkam M, Jerred C, Lickfett S, Petersilie L, Rybak-Wolf A, Seibt A, Herebian D, Inak G, Brodesser S, Zaliani A, Mlody B, Donnelly J, Woleben K, Soriano FX, Fernandez-Checa JC, Ventura N, Cambridge S, Mayatepek E, Spinazzola A, Schuelke M, Rajewsky N, Rossi A, Peralvarez-Marin A, Distelmaier F, Perlstein E, Holt IJ, Puighermanal E, Pless O, Rose CR, Del Sol A, Prigione A.",
+  "venue": "Nature communications",
+  "year": 2026,
+  "citations": 1,
+  "found_by": [
+   "eupmc:organoid benchmark dataset rep"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC13096141",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Prigione A",
+   "last_affil": "Department of General Pediatrics, Neonatology and Pediatric Cardiology, Medical Faculty and University Hospital Düsseldorf, Heinrich Heine University Düsseldorf, Düsseldorf, Germany. alessandro.prigione@hhu.de."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "脑类器官深度学习药筛，跨酵母模型收敛验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "脑类器官深度学习药筛，Nat Commun，建模+扰动筛选代表工作",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度学习药物重定位+酵母筛选",
+  "data": "Leigh脑类器官scRNAseq；2250种FDA药物；ΔSHY酵母",
+  "scenario": "Leigh综合征药物发现",
+  "benchmark": "同基因对照脑类器官；ΔSHY酵母生长",
+  "results": "唑类化合物中sertaconazole和talarozole促进神经定向，挽救Leigh中脑类器官异常生长率和乳酸释放",
+  "availability": "",
+  "limitations": "依赖已有scRNAseq数据；酵母与人类差异；需进一步临床验证",
+  "summary": "该研究旨在加速Leigh综合征药物发现。作者建立基于Leigh脑类器官scRNAseq的细胞类型特异性深度学习药物重定位算法，并在ΔSHY酵母中筛选2250种FDA药物。两种方法独立识别唑类化合物，其中sertaconazole和talarozole可促进Leigh神经细胞神经定向并挽救中脑类器官生长和乳酸释放异常。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 3,
+ "added_on": "2026-09-27"
+}

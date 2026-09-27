@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1161/circ.148.suppl_1.14071",
+  "title": "Abstract 14071: Plasma Protein Concentrations and Risk of Incident Cardiovascular Diseases in the UK Biobank",
+  "url": "https://doi.org/10.1161/circ.148.suppl_1.14071",
+  "abstract": "\n Introduction:\n Profiling of plasma proteins has the potential to improve diagnosis, predict disease and reveal new biologic pathways for cardiovascular disease (CVD).\n \n \n Objectives:\n We tested the associations of circulating proteins with new-onset coronary artery disease (CAD), atrial fibrillation (AF), heart failure (HF), and aortic stenosis (AS) in the UK Biobank.\n \n \n Methods:\n The initial dataset consisted of 52,705 individuals and 1,463 proteins measured using the Olink platform. A total of 47,665 unrelated individuals without prevalent CVD and 1,459 proteins were retained after quality control. Cox proportional hazards models were used to evaluate associations of protein levels at baseline with incident CAD, AF, HF, and AS. Models were adjusted for age, age\n 2\n , race, first ten principal components of genetic ancestry, sex, smoking, BMI, SBP, antihypertensive and lipid-lowering medication use, DMII, serum creatinine, LDL and HDL cholesterol, and Townsend deprivation index. The four outcomes were incorporated as time-varying covariates.\n \n \n Results:\n Among the 47,665 individuals, mean (SD) age was 56.8 (8.2) years, 25,674 (53.9%) were female, and 44,691 (93.8%) white. Over a median follow-up of 11.1 years, there were 2,941 (6.2%), 2,502 (5.2%), 1,470 (3.1%) and 420 (0.9%) incident cases of CAD, AF, HF, and AS, respectively. Multivariable-adjusted Cox regression revealed 270, 156, 385, and 21 significant associations (P < 8.6 x 10-6) for CAD, AF, HF, and AS, respectively. Fifteen biomarkers overlapped across all outcomes. The strongest associations for CAD, AF, HF, and AS were with GDF-15 (HR = 1.33, 95% CI = 1.28 - 1.39), NT-proBNP (HR = 1.83, 95% CI = 1.75 - 1.91), HE4 (encoded by WFDC2; HR = 1.67, 95% CI = 1.57 - 1.77), and GDF-15 (HR = 1.51, 95% CI = 1.43 - 1.59), respectively. NT-proBNP, IGFBP-4 and HE4 were the strongest overlapping associations.\n \n \n Conclusions:\n High-throughput proteomics may offer new mechanistic insights and improve risk prediction for common CVDs.\n \n \n \n",
+  "authors": "Ashley B Pournamdari, A. Schuermans, Ji-Woo Lee, Rohan Bhukar, Aeron M. Small, W. Hornsby, S. Koyama, M. Honigberg",
+  "venue": "Circulation",
+  "year": 2023,
+  "citations": 0,
+  "found_by": [
+   "s2kw:UK Biobank plasma proteomics O"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank五万人Olink蛋白组预测多种CVD，契合多组学",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank五万人Olink蛋白组与多CVD结局，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Cox比例风险模型，Olink蛋白关联分析",
+  "data": "UK Biobank 47,665人，1,459蛋白，随访11.1年",
+  "scenario": "CAD、AF、HF、AS发生风险",
+  "benchmark": "多变量校正传统风险因素模型",
+  "results": "CAD 270、AF 156、HF 385、AS 21个显著蛋白关联；事件数分别为2,941、2,502、1,470、420",
+  "availability": "",
+  "limitations": "摘要未提供；主要为欧洲白人；观察性关联不能证明因果",
+  "summary": "研究检测血浆蛋白与新发心血管疾病的关联。基于UK Biobank 47,665名无CVD个体和1,459个Olink蛋白，采用Cox模型分析CAD、AF、HF和AS。发现大量蛋白与四种CVD结局显著相关，提示血浆蛋白组可用于疾病预测和机制探索。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

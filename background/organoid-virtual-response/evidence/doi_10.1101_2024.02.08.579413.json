@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2024.02.08.579413",
+  "title": "Decoding morphogen patterning of human neural organoids with a multiplexed single-cell transcriptomic screen",
+  "url": "https://doi.org/10.1101/2024.02.08.579413",
+  "abstract": "Morphogens, secreted signalling molecules that direct cell fate and tissue development, are used to direct neuroepithelial progenitors towards discrete regional identities across the central nervous system. Neural tissues derived from pluripotent stem cells in vitro (neural organoids) provide new models for studying neural regionalization, however, we lack a comprehensive survey of how the developing human neuroepithelium responds to morphogen cues. Here, we produce a detailed map of morphogen-induced effects on the axial and regional specification of human neural organoids using a multiplexed single-cell transcriptomics screen. We find that the timing, concentration, and combination of morphogens strongly influence organoid cell type and regional composition, and that cell line and neural induction method strongly impact the response to a given morphogen condition. We apply concentration gradients in microfluidic chips or a range of static concentrations in multi-well plates to explore how human neuroepithelium interprets morphogen concentrations and observe similar dose-dependent induction of patterned domains in both scenarios. Altogether, we provide a detailed resource that supports the development of new regionalized neural organoid protocols and enhances our understanding of human central nervous system patterning.",
+  "authors": "Fátima Sanchís-Calleja, Akanksha Jain, Zhi-Song He, Ryoko Okamoto, Charlotte Rusimbi, Pedro Rifes, Gaurav Singh Rathore, Małgorzata Santel",
+  "venue": "bioRxiv",
+  "year": 2024,
+  "citations": 16,
+  "found_by": [
+   "s2kw:organoid single-cell perturbat"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "神经类器官形态发生素扰动单细胞筛选建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多重单细胞筛选解析形态发生素，建模成分强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多重单细胞转录组筛选形态发生素梯度",
+  "data": "人神经类器官；单细胞转录组；微流控浓度梯度",
+  "scenario": "人神经类器官区域化 patterning",
+  "benchmark": "静态多孔板浓度与微流控梯度对比",
+  "results": "形态发生素时序、浓度和组合强烈影响类器官细胞类型与区域组成；细胞系和神经诱导方法影响响应",
+  "availability": "",
+  "limitations": "缺乏全文；未明确公开资源与验证范围",
+  "summary": "研究绘制形态发生素对人神经类器官轴向和区域特化的影响图谱。采用多重单细胞转录组筛选，结合微流控浓度梯度和多孔板静态浓度处理类器官。发现形态发生素时序、浓度与组合显著决定区域组成，且细胞系和诱导方法影响响应，为神经类器官区域化协议提供资源。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

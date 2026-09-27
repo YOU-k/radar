@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.1200/jco.2026.44.16_suppl.e15609",
+  "title": "Prospective comparison of patient-derived organoid drug screening with standard guideline recommendations for colorectal cancer liver metastasis.",
+  "url": "https://doi.org/10.1200/jco.2026.44.16_suppl.e15609",
+  "abstract": "\n e15609\n \n \n Background:\n Treatment options for colorectal cancer liver metastasis (CRLM) are limited, and resistance to standard regimens remains a major challenge. Patient-derived tumor organoids (PDTOs)-based drug sensitivity testing offers a promising strategy to guide personalized therapy. This prospective study aimed to evaluate the accuracy of PDTOs drug sensitivity in predicting clinical response to guideline-recommended treatments in CRLM.\n Methods:\n In this prospective observational cohort study, patients with CRLM underwent tumor biopsy for PDTOs generation. Established PDTOs underwent drug sensitivity screening against a panel of clinically relevant agents, including chemotherapies (e.g., oxaliplatin, irinotecan, 5-FU) and targeted therapies (e.g., cetuximab, regorafenib, fruquintinib). Patients concurrently received standard guideline-based treatments. The primary endpoint was the concordance between PDTOs sensitivity (in vitro) and the patient’s objective clinical response (in vivo).\n Results:\n From March 2023 to October 2025, 30 patients with CRLM who successfully established 39 organoids were enrolled in this study (median age 57.9 years). The patients were categorized by their prior treatment history: treatment-naive (n = 14), and those with failure of first-line (n = 5), second-line (n = 4), third-line (n = 4), fourth-line (n = 2), or fifth-line (n = 1) therapy. Fresh tumor biopsies were obtained from colon (n = 10), rectum (n = 4), liver (n = 21), lung (n = 2), ascites (n = 1), and bone (n = 1). A total of 39 organoids were used for drug sensitivity screening, which performed at a median PDTOs age of 48 days (range 41-58). Of note, organoids were successfully established from both primary colorectal cancers and their paired liver metastases in 9 patients. The organoids faithfully recapitulated the key characteristics, including pathological morphology, immunohistochemical markers, and mutational profiles, of their original tumors. Overall, PDTOs-based prediction of clinical outcome was more accurate for combination regimens (FOLFOX/FOLFIRI) than for monotherapy, which was partly due to the antagonistic (28.2%, 11/39) treatment interactions in combined treatments. For combinations versus monotherapy, the predictive metrics were as follows: accuracy, 79.5% vs 64.1%; sensitivity, 92.3% vs 61.5%; specificity, 73.1% vs 65.4%; positive predictive value (PPV), 63.2% vs 47.1%; and negative predictive value (NPV), 95.0% vs 77.3%.\n Conclusions:\n This study confirms the clinical feasibility of biopsy-derived PDTOs and highlights their clinical utility: they not only predict response to combination regimens more accurately than to monotherapy but also provide a high NPV, thereby preventing ineffective treatments and unnecessary toxicity, and guiding precision therapy selection. Clinical trial information: ChiCTR2300068842.\n",
+  "authors": "D. Sha, Ziwei Yu, Xiaoya Xu, Xin-Yu Li, Xiao-Gang Sun, Jin-Shen Wang, Xu Zhou, Le-Ping Li",
+  "venue": "Journal of Clinical Oncology",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2kw:organoid drug screening deep l",
+   "s2kw:cardiac organoid drug sensitiv"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "类器官药敏前瞻性对照临床结局，契合患者对应",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "类器官药敏前瞻性对照临床指南，患者结局对应价值高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "患者来源类器官药敏前瞻性对比",
+  "data": "30例CRLM患者、39个类器官",
+  "scenario": "结直肠癌肝转移个体化用药",
+  "benchmark": "标准指南推荐治疗方案",
+  "results": "评估PDTO药敏与临床客观反应一致性，涵盖化疗与靶向药物",
+  "availability": "",
+  "limitations": "样本量小（30例），观察性研究，随访时间有限",
+  "summary": "针对结直肠癌肝转移治疗选择有限的问题，开展前瞻性观察研究，评估患者来源类器官药敏预测临床反应的准确性。30例患者成功建立39个类器官，对化疗与靶向药物进行药敏筛查，患者同期接受指南治疗。主要终点为体外药敏与体内客观反应的一致性。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

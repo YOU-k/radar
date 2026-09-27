@@ -1,0 +1,52 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.jare.2025.08.009",
+  "title": "Longitudinal prediction of drug response in high-grade serous ovarian cancer organoid cultures aligning with clinical responses",
+  "url": "https://doi.org/10.1016/j.jare.2025.08.009",
+  "abstract": "High-grade serous ovarian cancer (HGSOC) ranks among the most aggressive gynecological malignancies. Its high mortality stems from frequent recurrence post-primary treatments and development of platinum resistance. Since, traditional drug development via animal models is time-consuming and lacks reproducibility, in precision cancer medicine, primary patient-derived organoids (PDOs) offer a solution by replicating disease pathophysiology and expediting drug screening. We developed an expandable HGSOC organoid platform for rapid drug screening and resistance testing. Our study aimed to validate the stability of seven PDO pairs in predicting drug responses over time. Organoids underwent low- and high-passage drug screenings over nine months, involving 21 conventional and FDA-approved drugs and proteomic analyses. Comparison of in vitro outcomes with clinical data confirmed the platform’s predictive capacity. Notably, a PDO with BRCA1 mutation exhibited resistance to Carboplatin and PARP inhibitors, highlighting organoid models’ clinical relevance for novel targeted therapies such as the Peptidylprolyl Cis/Trans Isomerase, NIMA-Interacting 1 (Pin1), a valuable target for HGSOC patients.",
+  "authors": "E. Cavarzerani, I. Caligiuri, M. Bartoletti, Giuseppe Corona, Tiziana Perin, A. Palumbo, A. Ditto, Tommaso Occhiali",
+  "venue": "bioRxiv",
+  "year": 2024,
+  "citations": 4,
+  "found_by": [
+   "s2kw:organoid drug screening deep l",
+   "s2kw:cardiac organoid drug sensitiv"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:40783069"
+   ],
+   "pmcid": "PMC13131508"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "卵巢癌类器官药敏纵向预测并与临床响应对应",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "卵巢癌类器官药敏纵向预测对齐临床响应",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "HGSOC类器官长期培养与药敏纵向检测",
+  "data": "HGSOC患者来源类器官，长期培养药敏数据",
+  "scenario": "卵巢癌药物反应预测",
+  "benchmark": "临床反应及既往结直肠癌类器官药敏研究",
+  "results": "评估长期培养后药敏稳定性，探索Pin1抑制剂等新靶向治疗",
+  "availability": "",
+  "limitations": "长期培养后药敏变化研究不足，样本与临床验证有限",
+  "summary": "研究聚焦高级别浆液性卵巢癌类器官用于药物反应预测。作者建立患者来源类器官并进行长期培养与药敏测试，比较临床反应并探索新抑制剂。发现类器官可反映患者异质性与化疗耐药，但长期药敏稳定性仍需进一步验证。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

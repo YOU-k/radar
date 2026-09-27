@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cardfail.2026.07.003",
+  "title": "Deep learning interpretation of echocardiographic images predicts incident heart failure and subtypes",
+  "url": "https://doi.org/10.1016/j.cardfail.2026.07.003",
+  "abstract": "Background: Accurate prediction of incident heart failure (HF) may help prioritize HF preventive therapies. Deep learning interpretation of echocardiograms may improve HF risk prediction beyond clinical risk models. We trained and validated a deep learning model to predict incident HF from transthoracic echocardiographic images (Echocardiogram-to-Heart Failure, “Echo2HF”) Methods: Echo2HF was developed using 4,057,664 echocardiogram videos from 70,763 patients receiving longitudinal ambulatory care at Massachusetts General Hospital (MGH). Performance for 10-year incident HF was evaluated in an internal MGH test set and an external test set of 34,802 individuals without prevalent HF from Brigham and Women’s Hospital (BWH). Model performance was evaluated using area under the receiver operating characteristic curves (AUROC) and compared with the Pooled Cohorts Equations to Prevent Heart Failure (PCP-HF) and the Predicting Risk of cardiovascular disease EVENTs (PREVENT) clinical risk scores. Results: Echo2HF was trained in 64,167 individuals and evaluated in a hold-out sample of 6,394 individuals from MGH (279 HF events, age 62 ± 17 years, 48% women) and 34,802 individuals from BWH (1280 events, age 62 ± 15 years, 56% women). Echo2HF discriminated incident HF, with 10-year AUROC of 0.83 (95% CI0.81–0.85] and 0.82 (95% CI 0.81–0.83) at BWH, with numerically higher discrimination versus both PCP-HF and PREVENT. Conclusion: Deep learning analysis of echocardiograms accurately discriminated future HF risk, with favorable performance over current clinical HF scores. Future work should assess whether broader use of artificial intelligence-enabled echocardiographic risk stratification may improve HF prevention and clinical outcomes, including among individuals who do not have a clinical indication for echocardiography.",
+  "authors": "Emily S. Lau, Tal Shnitzer, A. Roshandelpoor, S. Friedman, C. Andrews, M. Al-Alusi, Jonathan W. Cunningham, A. Nargesi",
+  "venue": "Journal of Cardiac Failure",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "s2:citations:doi:10.1161/circulationaha.121.057480"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42457081"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "大规模超声深度学习预测心衰，含外部验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "大规模超声深度学习预测心衰，含外部验证，临床转化潜力",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "深度学习超声心动图预测心衰（Echo2HF）",
+  "data": "4,057,664段超声视频，70,763例；外部34,802例",
+  "scenario": "10年新发心衰风险预测",
+  "benchmark": "PCP-HF、PREVENT临床风险评分",
+  "results": "内部AUROC 0.83（95%CI 0.81–0.85），外部BWH 0.82（0.81–0.83），优于PCP-HF与PREVENT",
+  "availability": "",
+  "limitations": "仅回顾性；外部仅单中心；缺代码与权重公开信息",
+  "summary": "研究训练深度学习模型Echo2HF，从经胸超声心动图视频预测新发心衰。基于MGH 405万段视频、7万余例患者开发，并在MGH内部与BWH外部3.4万例验证。结果显示10年AUROC达0.83与0.82，判别力数值上优于PCP-HF和PREVENT临床评分。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

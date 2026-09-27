@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2024.04.29.24306593",
+  "title": "Metabolomics data improve 10-year cardiovascular risk prediction with the SCORE2 algorithm for the general population without cardiovascular disease or diabetes",
+  "url": "https://doi.org/10.1101/2024.04.29.24306593",
+  "abstract": "BACKGROUND: The value of metabolomic biomarkers for cardiovascular risk prediction is unclear. This study aimed to evaluate the potential of improved prediction of the 10-year risk of major adverse cardiovascular events (MACE) in large population-based cohorts by adding metabolomic biomarkers to the novel SCORE2 model, which was introduced in 2021 for the European population without previous cardiovascular disease or diabetes. METHODS: Data from 187,039 and 5,578 participants from the UK Biobank (UKB) and the German ESTHER cohort, respectively, were used for model derivation, internal and external validation. A total of 249 metabolites were measured with nuclear magnetic resonance (NMR) spectroscopy. LASSO regression with bootstrapping was used to identify metabolites in sex-specific analyses and the predictive performance of metabolites added to the SCORE2 model was primarily evaluated with Harrell's C-index. RESULTS: Thirteen metabolomic biomarkers were selected by LASSO regression for enhanced MACE risk prediction (three for both sexes, six male- and four female-specific metabolites) in the UKB derivation set. In internal validation with the UKB, adding the selected metabolites to the SCORE2 model increased the C-index statistically significantly (P<0.001) from 0.691 to 0.710. In external validation with ESTHER, the C-index increase was similar (from 0.673 to 0.688, P=0.042). The inflammation biomarker, glycoprotein acetyls, contributed the most to the increased C-index in both men and women. CONCLUSIONS: The integration of metabolomic biomarkers into the SCORE2 model markedly improves the prediction of 10-year cardiovascular risk. With recent advancements in reducing costs and standardizing processes, NMR metabolomics holds considerable promise for implementation in clinical practice.",
+  "authors": "R. Xie, S. Sha, Lei Peng, B. Holleczek, H. Brenner, B. Schöttker",
+  "venue": "medRxiv",
+  "year": 2024,
+  "citations": 13,
+  "found_by": [
+   "s2kw:ChinaHEART cohort cardiovascul",
+   "s2kw:China Kadoorie Biobank cardiov"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:40269530"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "18.7万人代谢组增强SCORE2，含外部验证，契合多组学预测。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "代谢组增强SCORE2，18万人含外部验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LASSO+自举筛选代谢物，加入SCORE2",
+  "data": "UKB 187,039人；ESTHER 5,578人；249代谢物",
+  "scenario": "无CVD/糖尿病10年MACE风险预测",
+  "benchmark": "SCORE2模型；内部与外部验证",
+  "results": "UKB C-index 0.691升至0.710；ESTHER 0.673升至0.688",
+  "availability": "",
+  "limitations": "代谢物增益有限，外部队列样本量较小",
+  "summary": "研究评估将NMR代谢组生物标志物加入SCORE2能否改善无CVD或糖尿病人群10年MACE预测。基于UKB 187,039人和ESTHER 5,578人，使用LASSO筛选249个代谢物并进行性别特异分析。结果选出13个代谢物，使UKB C-index由0.691升至0.710，ESTHER由0.673升至0.688，其中糖蛋白乙酰基贡献最大。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 2,
+ "added_on": "2026-09-27"
+}

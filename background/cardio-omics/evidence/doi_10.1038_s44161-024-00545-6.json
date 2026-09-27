@@ -1,0 +1,54 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s44161-024-00545-6",
+  "title": "Measured and genetically predicted protein levels and cardiovascular diseases in UK Biobank and China Kadoorie Biobank.",
+  "url": "https://doi.org/10.1038/s44161-024-00545-6",
+  "abstract": "Several large-scale studies have measured plasma levels of the proteome in individuals with cardiovascular diseases (CVDs) 1-7 . However, since the majority of such proteins are interrelated 2 , it is difficult for observational studies to distinguish which proteins are likely to be of etiological relevance. Here we evaluate whether plasma levels of 2,919 proteins measured in 52,164 UK Biobank participants are associated with incident myocardial infarction, ischemic stroke or heart failure. Of those proteins, 126 were associated with all three CVD outcomes and 118 were associated with at least one CVD in the China Kadoorie Biobank. Mendelian randomization and colocalization analyses indicated that genetically determined levels of 47 and 18 proteins, respectively, were associated with CVDs, including FGF5, PROCR and FURIN. While the majority of protein-CVD observational associations were noncausal, these three proteins showed evidence to support potential causality and are therefore promising targets for drug treatment for CVD outcomes.",
+  "authors": "Lind L, Mazidi M, Clarke R, Bennett DA, Zheng R.",
+  "venue": "Nature cardiovascular research",
+  "year": 2024,
+  "citations": 31,
+  "found_by": [
+   "eupmc:Mendelian randomization proteo"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11473359",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Zheng R",
+   "last_affil": "Department of Medical Sciences, Uppsala University, Uppsala, Sweden. rui.zheng@uu.se."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UKB与CKB蛋白组+MR共定位找CVD靶点，跨人群",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nat Cardiovasc Res，UKB+CKB跨人群蛋白组MR靶点，必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "观察性Cox回归+孟德尔随机化+共定位",
+  "data": "UKB 52,164人2,919蛋白；CKB 1,937人复制",
+  "scenario": "MI、IS、HF风险与药物靶点发现",
+  "benchmark": "FDR<0.05、Bonferroni校正及CKB复制",
+  "results": "636蛋白与任一CVD相关，126与三类CVD相关，118在CKB复制；MR提示47个蛋白与CVD相关，18个共定位",
+  "availability": "",
+  "limitations": "多数观察性蛋白-CVD关联非因果；部分MR蛋白在心脏或动脉表达弱",
+  "summary": "研究结合观察性和遗传分析评估血浆蛋白与MI、IS、HF的关联。在UKB测量2,919个蛋白并用MR和共定位分析，随后在中国慢性病前瞻性队列复制。发现636个蛋白与CVD相关，47个具遗传预测关联，FGF5、PROCR和FURIN等显示潜在因果性。"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/cardio-omics/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}

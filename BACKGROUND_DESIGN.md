@@ -120,3 +120,14 @@ RADAR_LIVE=1 python -m pytest tests/background/test_live.py             # 真 AP
 已知限制：S2 无 key 时限速严重，ML/agent 方向的种子与滚雪球受影响，配 `S2_API_KEY` 后会明显改善。
 
 下一步：其余四个方向放开到 8 轮；站点入口；weekly 接 renew；PaperQA2 插件可选。
+
+## 6. 2026-09-27 调整
+
+- 新方向：`cardio-omics`（心血管队列多组学与临床 AI，为 ChinaHEART 准备，months 36）、
+  `organoid-virtual-response`（类器官与模式生物虚拟响应建模，months 36）；对应日报新增 `cardio_omics` / `organoid_models` 两个 domain。
+- `radar_domain` 可写列表：cardio-omics 同时收 `cardio_omics` + `population_omics_ai` 的日报条目，
+  organoid 同时收 `organoid_models` + `data_models`。
+- 日报定位：一个 domain 挂多个方向时（data_models → 单细胞 / 虚拟细胞 / 类器官），LLM 先选方向再选子题；此前只用字母序第一个方向，虚拟细胞从未被挂靠。
+- 联合分析：画像 `config/profile.md` 新增「应用线」一节，联合分析按应用线逐条给项目、每条必须覆盖；
+  此前 prompt 写死「优先类器官衰老合作」，五个项目全是衰老题。每方向输入定长，不再整体截 60k 截掉靠后的方向。
+- 关键词粗筛：每领域保底 6 条进 LLM，总量 40 → 56。

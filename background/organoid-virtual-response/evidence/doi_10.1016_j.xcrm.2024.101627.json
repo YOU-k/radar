@@ -1,0 +1,55 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.xcrm.2024.101627",
+  "title": "Personalized drug screening using patient-derived organoid and its clinical relevance in gastric cancer.",
+  "url": "https://doi.org/10.1016/j.xcrm.2024.101627",
+  "abstract": "Summary The efficacy of chemotherapy varies significantly among patients with gastric cancer (GC), and there is currently no effective strategy to predict chemotherapeutic outcomes. In this study, we successfully establish 57 GC patient-derived organoids (PDOs) from 73 patients with GC (78%). These organoids retain histological characteristics of their corresponding primary GC tissues. GC PDOs show varied responses to different chemotherapeutics. Through RNA sequencing, the upregulation of tumor suppression genes/pathways is identified in 5-fluorouracil (FU)- or oxaliplatin-sensitive organoids, whereas genes/pathways associated with proliferation and invasion are enriched in chemotherapy-resistant organoids. Gene expression biomarker panels, which could distinguish sensitive and resistant patients to 5-FU and oxaliplatin (area under the dose-response curve [AUC] >0.8), are identified. Moreover, the drug-response results in PDOs are validated in patient-derived organoids-based xenograft (PDOX) mice and are consistent with the actual clinical response in 91.7% (11/12) of patients with GC. Assessing chemosensitivity in PDOs can be utilized as a valuable tool for screening chemotherapeutic drugs in patients with GC.",
+  "authors": "Zhao Y, Li S, Zhu L, Huang M, Xie Y, Song X, Chen Z, Lau HC, Sung JJ, Xu L, Yu J, Li X.",
+  "venue": "Cell reports. Medicine",
+  "year": 2024,
+  "citations": 87,
+  "found_by": [
+   "eupmc:patient-derived organoid drug ",
+   "s2kw:cardiac organoid drug screenin"
+  ],
+  "extra": {
+   "journal_watch": false,
+   "pmcid": "PMC11293329",
+   "is_oa": true,
+   "epmc_src": "MED",
+   "preprint_server": "",
+   "last_author": "Li X",
+   "last_affil": "Institute of Precision Medicine, The First Affiliated Hospital, Sun Yat-sen University, Guangzhou, China. Electronic address: lixiaox23@mail.sysu.edu.cn."
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "胃癌PDO药敏与临床结局对应，含转录组分析",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell Reports Medicine，PDO药敏对应胃癌临床结局",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "患者来源类器官药敏检测与PDOX验证",
+  "data": "73例胃癌组织，建成57个类器官；RNA-seq与药敏数据",
+  "scenario": "胃癌个体化化疗药敏预测",
+  "benchmark": "PDOX模型及患者实际治疗反应",
+  "results": "类器官建成成功率78%(57/73)；高增殖类器官富集REG4、KLF4、ERBB3、HRAS、NOTCH1、MYC；可传至17代",
+  "availability": "",
+  "limitations": "既往研究样本量小且缺乏化疗敏感性相关基因表达分析",
+  "summary": "研究建立胃癌患者来源类器官生物库并评估其预测化疗反应的能力。通过73例胃癌组织构建57个类器官，结合RNA-seq、药敏试验、PDOX模型及患者实际治疗反应进行验证。发现类器官可保留肿瘤组织学特征，高增殖类器官富集干性与增殖相关基因，提示类器官可用于胃癌个体化药敏预测。"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "/data/yy_data/radar/background/organoid-virtual-response/cache",
+ "added_round": 1,
+ "added_on": "2026-09-27"
+}
