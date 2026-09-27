@@ -276,6 +276,14 @@ def _background_one(args, slug: str, llm) -> None:
     from .background.runner import Pipeline
     from .background.spec import load_spec
     spec = load_spec(slug)
+    if args.action == "reextract":  # 只重抽取、写回证据 JSON；不编译（编译是单独的 compile 一步）
+        if llm is None:
+            raise SystemExit("[background] reextract 需要 LLM")
+        from .background.extract import reextract
+        from .background.store import EvidenceStore
+        reextract(spec, EvidenceStore(spec.evidence_dir, spec.rejected_path), llm,
+                  only_flagged=getattr(args, "only_flagged", False))
+        return
     pipe = Pipeline(spec, llm, fetch_text=not args.no_fulltext)
     if args.action == "bootstrap":
         for res in pipe.bootstrap(args.rounds or None):
@@ -308,12 +316,15 @@ def main() -> None:
         p.add_argument("--days", type=int, default=1)
         p.add_argument("--no-llm", action="store_true")
     p = sub.add_parser("background", help="方向背景库：init / bootstrap / renew / compile")
-    p.add_argument("action", choices=["init", "bootstrap", "renew", "compile", "refetch", "resources", "prioritize", "joint", "principles"])
+    p.add_argument("action", choices=["init", "bootstrap", "renew", "compile", "refetch", "resources", "prioritize", "joint", "principles",
+                                   "reextract"])
     p.add_argument("--topic", required=True, help="slug，如 population-omics-ai；all = 全部方向")
     p.add_argument("--name", default="", help="init 用：方向中文名")
     p.add_argument("--rounds", type=int, default=0, help="bootstrap 轮数，0 = topic.yaml 的 budget.rounds")
     p.add_argument("--no-fulltext", action="store_true")
     p.add_argument("--redo", action="store_true", help="prioritize 用：全部重打优先级")
+    p.add_argument("--only-flagged", action="store_true",
+                   help="reextract 用：只重抽取数字在摘要/全文里对不上的证据")
     p.add_argument("--no-llm", action="store_true", help="只检索/去重，不评审不编译（冒烟用）")
     p = sub.add_parser("retag", help="已有日报补主题标签与今日要点、按主题重排")
     p.add_argument("--days", type=int, default=0, help="只处理最近 N 份，0 = 全部")

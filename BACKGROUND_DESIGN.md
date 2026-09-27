@@ -31,13 +31,13 @@ WebWeaver 的"动态大纲 + 按节只喂该节证据"写法、多角色 AND 规
 | 去重 | `dedup.py` | 批内合并（同 id 或同标题，合并 found_by）+ 对照证据库/落选表 | 否 | `test_store_dedup.py` |
 | 评审团 | `screen.py` | 角色独立投票 → 分歧项互看理由可修订一次 → `all` 规则 → `Decision`（accepted / borderline） | 是 | `test_screen.py`：规则真值表、一致免讨论、分歧触发讨论并可翻转、缺票记 no、边缘记录 |
 | 全文 | `fetch.py` | Europe PMC OA XML / arXiv PDF → 文本，缓存；失败返回空 | 否 | `test_extract_fetch.py`：缓存命中一次网络、失败不落盘、无来源不请求 |
-| 抽取 | `extract.py` | 8 字段（method/data/scenario/benchmark/results/availability/limitations/summary），有全文用全文 | 是 | 字段对齐、全文标记、失败留空 |
+| 抽取 | `extract.py` | 8 字段（method/data/scenario/benchmark/results/availability/limitations/summary）；输入永远带摘要，有全文再加 Results 节；抽取后数字回摘要+全文核对（`grounding.py`）：引用他人的数字删分句，找不到的记 `_unverified_numbers` | 是 | 字段对齐、摘要+Results、引用数字被删、`test_batch2_grounding.py` |
 | 证据库 | `store.py` | 每篇一个 JSON；`rejected.jsonl`；`is_seen`；`CorpusIndex` 插件（默认 Null，可换 PaperQA2） | 否 | 增删查、拒绝记录、统计 |
 | 大纲 | `outline.py` | markdown ↔ 节树；LLM 只输出操作（attach/add_section/rename/detach），程序执行；漏挂进「未归类」 | 可选 | `test_outline.py`：编号、往返、操作幂等、未归类兜底、无 LLM 路径 |
-| 编译 | `compile.py` | 每节只喂该节证据 → 节文本（逐句 `[id]`）→ TL;DR → 装配 → 未知引用剔除 → 编号 + 参考文献 | 是 | `test_compile_metrics.py`：幻觉引用被删、编号、节隔离、空节占位、头部统计 |
+| 编译 | `compile.py` | 每节只喂该节证据（含摘要截短）→ 节文本（逐句 `[id]`）→ 数字核验（带数字带引用的句子，数字须出现在所引证据里，否则删句，记 `claim_check.json`）→ TL;DR → 装配（跨节去重段落）→ 未知引用剔除 → 编号 + 参考文献 | 是 | `test_compile_metrics.py`：幻觉引用被删、编号、节隔离、空节占位、头部统计 |
 | 指标 | `metrics.py` | 覆盖度 = 种子 0.3 + 饱和 0.3 + 高引 0.4；历史；平台期停止 | 否 | 数值、历史追加、停止判据 |
-| 阶段判断 | `stage.py` | 程序算每个子题的近两年占比 / 年份跨度 / 引用中位数 / CNS 占比 / 逐轮新增衰减 → LLM 打 萌芽/朝阳/成熟/夕阳 并给"算法提供方怎么切入" | 是 | `test_stage_joint_resources.py`：统计正确、综合节不计、报告含该节 |
-| 联合分析 | `joint.py` | 各方向报告的 TL;DR + 阶段判断 + 头部文献 → 全景表 / 交叉点 / 联合项目 / 不要做的事 → `background/_joint/report.md` | 是 | 摘要块提取、报告头、跳过无报告方向 |
+| 阶段判断 | `stage.py` | 程序算每个子题的近两年占比 / 年份跨度 / 引用中位数 / CNS 占比（`radar/journals.py` 精确白名单），标为「雷达检索统计，非领域属性」，逐轮入库数与覆盖度不进 prompt；每行须引 ≥2 篇证据否则判「证据不足」→ LLM 打 萌芽/朝阳/成熟/夕阳 并给"算法提供方怎么切入" | 是 | `test_stage_joint_resources.py`：统计正确、综合节不计、报告含该节 |
+| 联合分析 | `joint.py` | 各方向报告的 TL;DR（再过一遍数字核验）+ 阶段判断（标注检索统计）+ 头部文献 + `config/trial_status.yaml` 试验状态表 → 全景表 / 交叉点 / 联合项目 / 不要做的事 → `background/_joint/report.md` | 是 | 摘要块提取、报告头、跳过无报告方向 |
 | 资源登记 | `resources.py` | 全部证据的 data/availability 字段 → 命名资源（数据集/模型/基准/数据库/工具）→ 按名合并、方向数与证据数投票 → 链接可达性核验 → 分类型表 | 是 | 挖掘过滤非法类型、合并并集、核验 ok/dead/n/a、渲染 |
 | 日报/周报挂靠 | `context.py` | 日报 ≥6 分条目对照方向大纲 → "落在哪个子题 · 相对已有证据的增量"；周报末尾汇总各方向「本次变更」 | 是 | `test_context.py` |
 | 编排 | `runner.py` | `bootstrap(rounds)` / `renew(inbox)`；日志、指标、末轮编译、平台期提前收尾 | — | `test_runner.py`：2 轮 + renew 端到端、平台期仍编译、无 LLM 只采集、注入全文抓取 |
@@ -63,6 +63,7 @@ python -m radar.run background init --topic <slug> --name <中文名>   # 生成
 python -m radar.run background bootstrap --topic <slug> [--rounds N] [--no-llm] [--no-fulltext]
 python -m radar.run background renew --topic <slug>                    # 吃 data/extractions.jsonl 近 7 天
 python -m radar.run background compile --topic <slug>                  # 只重编报告
+python -m radar.run background reextract --topic <slug|all> [--only-flagged]  # 重抽取（摘要+Results、数字回原文），不编译
 python -m pytest                                                        # 40 个离线测试
 RADAR_LIVE=1 python -m pytest tests/background/test_live.py             # 真 API 契约
 ```

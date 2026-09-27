@@ -102,7 +102,8 @@ class FakeLLM:
             return json.dumps([{"op": "attach", "section": "2.1", "ids": ids}])
         if t == "stage":
             ids = re.findall(r'"id": "((?:doi|arxiv|pmid):[^"]+)"', prompt)
-            return "| 细分 | 阶段 | 依据 |\n|---|---|---|\n| 2.1 | **朝阳** | 近两年占比高 [" + (ids[0] if ids else "doi:none") + "] |\n\n**整体判断**：上升期。\n\n**接下来怎么做**：\n- 建议一"
+            cite = "".join(f"[{i}]" for i in (ids[:2] or ["doi:none"]))
+            return "| 细分 | 阶段 | 依据 |\n|---|---|---|\n| 2.1 | **朝阳** | 近两年占比高 " + cite + " |\n\n**整体判断**：上升期。\n\n**接下来怎么做**：\n- 建议一"
         if t == "joint":
             return "## 全景\n| 方向 | 阶段 |\n|---|---|\n| A | 朝阳 |\n## 方向间交叉点\n**交叉** x\n## 联合行动建议\n- 项目一\n## 不要做的事\n- 别做"
         if t == "resources":

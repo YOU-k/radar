@@ -37,7 +37,8 @@ def test_stage_section_in_report(spec):
     rep = compile_report(spec, o, evs, llm, 0.5, 2, hist=[{"n_evidence": 4, "score": .5}])
     assert "## 阶段判断与行动建议" in rep and "**朝阳**" in rep
     sp = next(p for t, p in llm.calls if t == "stage")
-    assert '"accepted_per_round"' in sp and "算法支持" in sp
+    assert '"accepted_per_round"' not in sp and '"coverage"' not in sp and "算法支持" in sp
+    assert "雷达检索统计，非领域属性" in sp
     assert "**" in rep  # 加粗保留
 
 

@@ -4,8 +4,9 @@
 - 预印本：预印本平台 + 年月 + 通讯作者（无标记时取末位作者，通常是 PI）及其机构
 期刊论文同样附通讯/末位作者机构，便于判断团队。
 
-数据源：OpenAlex（无 key，覆盖 DOI / arXiv / 当周新 bioRxiv），
-缺机构时 bioRxiv/medRxiv 官方 API 兜底，再退到 Europe PMC 的作者单位字符串。
+数据源：bioRxiv/medRxiv DOI（10.1101 / 10.64898）先查官方 API 的通讯作者与机构，
+其余用 OpenAlex（无 key，覆盖 DOI / arXiv / 当周新 bioRxiv），再退到 Europe PMC 的末位作者单位字符串。
+机构宁缺毋错：PI 自己没有机构时不再借用其他共同作者的机构（审计里约 14% 的机构错来自这条兜底）。
 只对进 digest 的条目（每天十来条）查询，单条失败不影响整体。
 """
 from __future__ import annotations
@@ -99,12 +100,8 @@ def pi_from_openalex(w: dict) -> tuple[str, str, bool]:
         return "", "", False
     corr = [a for a in au if a.get("is_corresponding")]
     a = corr[-1] if corr else au[-1]
+    # 只取该作者本人的机构；没有就留空（不借共同作者的机构）
     insts = [i.get("display_name", "") for i in a.get("institutions") or [] if i.get("display_name")]
-    if not insts:  # 该作者无机构时，退到任一有机构的作者（多为同组）
-        for b in reversed(au):
-            insts = [i.get("display_name", "") for i in b.get("institutions") or [] if i.get("display_name")]
-            if insts:
-                break
     return (a.get("author") or {}).get("display_name", ""), (insts[0] if insts else ""), bool(corr)
 
 
@@ -116,6 +113,15 @@ def biorxiv_corresponding(doi: str, get=_get) -> tuple[str, str]:
             r = rows[-1]
             return r.get("author_corresponding", ""), r.get("author_corresponding_institution", "")
     return "", ""
+
+
+def _same_person(a: str, b: str) -> bool:
+    """"Li X" / "Xiang Li"：姓（任一端的最长词）相同即认为同一人。"""
+    if not a or not b:
+        return False
+    wa = {w.lower() for w in re.sub(r"[^\w\s-]", " ", a).split() if len(w) > 1}
+    wb = {w.lower() for w in re.sub(r"[^\w\s-]", " ", b).split() if len(w) > 1}
+    return bool(wa & wb)
 
 
 def enrich_item(it: Item, get=_get) -> None:
@@ -133,18 +139,21 @@ def enrich_item(it: Item, get=_get) -> None:
             server = venue
         ym = (w.get("publication_date") or "")[:7]
         pi, inst, corr = pi_from_openalex(w)
+    if doi.startswith(("10.1101/", "10.64898/")):
+        # bioRxiv/medRxiv 自报的通讯作者比 OpenAlex 的消歧准（"Sylvana Research" 这类错机构来自 OpenAlex）
+        p, i = biorxiv_corresponding(doi, get=get)
+        if p:
+            pi, inst, corr = p, i, True
     if server:
         ex["venue_type"] = "preprint"
         # OpenAlex 的仓库名带括号全称（"bioRxiv (Cold Spring Harbor Laboratory)"），取短名
         ex["venue"] = (venue.split(" (")[0] if venue else "") or ex.get("preprint_server") or server
-        if doi.startswith(("10.1101/", "10.64898/")) and not inst:
-            p, i = biorxiv_corresponding(doi, get=get)
-            pi, inst, corr = (p or pi), i, bool(p) or corr
     else:
         ex["venue_type"] = "journal" if (venue or ex.get("journal")) else ""
         ex["venue"] = venue or ex.get("journal", "")  # OpenAlex 大小写规范（EPMC 是 "Nature medicine"）
     ex["pub_ym"] = ex.get("pub_ym") or ym or (it.published or "")[:7]
-    if not inst and ex.get("last_affil"):
+    if not inst and ex.get("last_affil") and (not pi or _same_person(pi, ex.get("last_author", ""))):
+        # EPMC 的单位串属于末位作者：PI 是别人时不能拿来当 PI 的机构
         inst = short_inst(ex["last_affil"])
         pi = pi or ex.get("last_author", "")
     if pi:

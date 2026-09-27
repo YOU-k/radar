@@ -84,7 +84,8 @@ def test_section_prompt_states_length(spec):
     o = Outline.from_spec(spec); o.attach("2.1", [e.id for e in evs])
     llm = FakeLLM(); compile_report(spec, o, evs, llm, 0.1, 1)
     p21 = next(p for t, p in llm.calls if "生成式疾病轨迹模型" in p and "综合节" not in p)
-    assert "9 篇证据" in p21 and "约 3 段、不少于 1620 字" in p21
+    assert "9 篇证据" in p21 and "最多约 3 段" in p21
+    assert "不少于" not in p21 and "每篇证据都要被实质" not in p21  # 不再用篇幅压力逼 LLM 注水
 
 
 def test_strip_headings():

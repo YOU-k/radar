@@ -7,10 +7,12 @@ from tests.background.conftest import FakeLLM, make_cand
 def test_extract_fields_and_alignment(spec, cands):
     llm = FakeLLM()
     out = ex.extract(cands, spec, llm, fulltexts={cands[0].id: "FULL TEXT " * 100})
-    assert len(out) == len(cands) and set(out[0]) == set(ex.KEYS)
+    assert len(out) == len(cands) and set(out[0]) == set(ex.KEYS) | {"_unverified_numbers", "_basis"}
     assert out[3]["summary"].endswith(cands[3].title)
+    assert out[0]["_basis"] == "abstract+results" and out[1]["_basis"] == "abstract"
     prompt = llm.calls[0][1]
-    assert '"has_fulltext": true' in prompt and '"has_fulltext": false' in prompt
+    assert prompt.count('"abstract"') == len(cands) and prompt.count('"results_text"') == 1  # 摘要永远在
+    assert "只抽取本文自身的结果" in prompt
 
 
 def test_extract_failure_leaves_empty(spec, cands):

@@ -1,0 +1,105 @@
+# 关键心血管试验状态表：全局判断（principles）与联合分析（joint）的 [常识] 只能按这张表陈述
+# 2025 年之后读出（或待读出）的试验；表里没有的试验不得断言结果。
+#
+# 维护：有新读出时改这里（日期、状态、来源链接），不要让模型凭记忆写。
+# 来源：background/cardio-omics/deep/2026-09-27-心血管靶点与ChinaHEART策略.md、
+#       2026-09-27-专家评审综合.md，以及 notes/audit-2026-09-27/content.md 的核验更正
+#       （OCEAN(a)-Outcomes 完成时间以 ClinicalTrials.gov 为准，改为 2028-03-31 预计）。
+# verified: true = 已回原始来源核实；false = 仅深度调研评审人提供，写进报告前需再核。
+as_of: 2026-09-27
+trials:
+  - name: Lp(a)HORIZON
+    drug: pelacarsen（Lp(a) 反义寡核苷酸）
+    nct: NCT04023552
+    status: 已读出·未达主要终点
+    date: 2026-09-04
+    result: 顶线结果，8,323 名已确诊 CVD、Lp(a) ≥70 mg/dL 患者；Lp(a) 下降未转化为心血管事件减少；HR 与共同主要分析人群（Lp(a) ≥90 mg/dL）结果未公布
+    source: https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd
+    verified: true
+  - name: ZEUS
+    drug: ziltivekimab（IL-6 配体抗体）
+    status: 已读出·失败
+    date: 2026-07-31
+    result: 顶线结果，6,300 多名 ASCVD + CKD + hsCRP ≥2 患者；MACE HR 0.99（0.88–1.11）；IL-6、hsCRP 按预期下降；严重感染增多。IL-6 轴不能再作为"遗传学→试验已兑现"的支持性例子
+    source: https://www.globenewswire.com/news-release/2026/07/31/3336733/0/en/novo-nordisk-provides-update-on-the-zeus-phase-3-trial-in-people-with-ascvd-ckd-and-inflammation.html
+    verified: true
+  - name: HERMES / ARTEMIS
+    drug: ziltivekimab（HFpEF / 心梗后）
+    status: 进行中
+    date: 预计 2027 上半年读出
+    result: 与 ZEUS 同一药物，尚未读出
+    source: https://www.globenewswire.com/news-release/2026/07/31/3336733/0/en/novo-nordisk-provides-update-on-the-zeus-phase-3-trial-in-people-with-ascvd-ckd-and-inflammation.html
+    verified: false
+  - name: VESALIUS-CV
+    drug: evolocumab（PCSK9 单抗）
+    status: 已读出·阳性
+    date: 2025-11（AHA 2025）
+    result: 12,257 名无既往心梗或卒中、但有动脉粥样硬化证据或高危糖尿病的患者，中位随访 4.6 年，三点 MACE 降 25%；属"首次事件预防"，不是传统以危险因素定义的一级预防
+    source: https://www.acc.org/latest-in-cardiology/clinical-trials/2025/11/20/21/09/vesalius-cv
+    verified: true
+  - name: OCEANIC-STROKE
+    drug: asundexian 50 mg（FXIa 抑制剂）
+    status: 已读出·阳性
+    date: 2026（NEJM；ACC journal scan 2026-04-22）
+    result: 非心源性缺血性卒中或高危 TIA，缺血性卒中 6.2% vs 8.4%（HR 0.74）；ISTH 大出血 1.9% vs 1.7%，无显著增加
+    source: https://www.acc.org/latest-in-cardiology/journal-scans/2026/04/22/11/23/oceanic-stroke
+    verified: true
+  - name: PREVAIL
+    drug: obicetrapib（CETP 抑制剂）
+    nct: NCT05202509
+    status: 进行中
+    date: 期中分析 2026 Q4；结果预计 2027 Q1
+    result: 入组 9,541 例，尚无结局数据。obicetrapib 已于 2026-09-21 在欧盟以降 LDL-C 获批（非结局适应证）
+    source: https://www.globenewswire.com/news-release/2026/05/07/3289808/0/en/newamsterdam-pharma-provides-corporate-update-and-reports-first-quarter-financial-results.html
+    verified: true
+  - name: OCEAN(a)-Outcomes
+    drug: olpasiran（Lp(a) siRNA）
+    nct: NCT05581303
+    status: 进行中
+    date: 预计主要完成 2028-03-31（ClinicalTrials.gov）
+    result: 7,297 例，尚未读出。深度调研曾写"约 2026-12 完成"，审计按 ClinicalTrials.gov 更正
+    source: https://clinicaltrials.gov/study/NCT05581303
+    verified: true
+  - name: ACCLAIM-Lp(a)
+    drug: lepodisiran（Lp(a) siRNA）
+    nct: NCT06292013
+    status: 进行中
+    date: 约 2029 完成
+    result: 计划入组 >17,300 例，尚未读出
+    source: https://clinicaltrials.gov/study/NCT06292013
+    verified: true
+  - name: ODYSSEY-HCM
+    drug: mavacamten（非梗阻性 HCM）
+    status: 已读出·阴性
+    date: 2025-08
+    result: 峰值 VO2 差值 0.47（P=0.07），未达主要终点；失败与缺少可测替代读数有关，与递送无关
+    source: https://doi.org/10.1056/nejmoa2505927
+    verified: true
+  - name: ORION-4
+    drug: inclisiran（PCSK9 siRNA）
+    status: 进行中
+    date: 预计 2027 年初读出
+    result: 约 16,000 例，尚未读出
+    source: https://www.sciencedirect.com/science/article/pii/S0002870326002085
+    verified: false
+  - name: CORALreef Outcomes
+    drug: enlicitide（口服 PCSK9）
+    status: 进行中
+    date: 读出时间未公布；药物据报 2026-07-16 获 FDA 批准降 LDL-C
+    result: 入组 >14,500 例，尚未读出
+    source: https://www.merck.com/news/mercks-lipfendra-enlicitide-is-the-first-and-only-once-daily-oral-pcsk9-inhibitor-approved-by-the-u-s-fda-to-reduce-ldl-c-in-adults-with-hypercholesterolemia/
+    verified: false
+  - name: baxdrostat 获批
+    drug: baxdrostat（醛固酮合酶抑制剂）
+    status: 监管事件·获批（降压）
+    date: 2026-05-18（FDA）
+    result: 据 AstraZeneca 新闻稿获 FDA 批准；非心血管结局试验
+    source: https://www.astrazeneca.com/media-centre/press-releases/2026/Baxdrostat-MNR-2026.html
+    verified: false
+  - name: ZENITH
+    drug: zilebesiran（AGT siRNA）
+    status: 进行中
+    date: 在研（CVOT 约 11,000 例）
+    result: 尚未读出
+    source: https://www.roche.com/media/releases/med-cor-2025-08-30
+    verified: false
