@@ -82,6 +82,17 @@ details.deep .deepbody h2,details.deep .deepbody h3{font-size:13.5px;color:#1a7f
 details.deep .deepbody p{margin:4px 0}
 .empty{color:#57606a;font-size:13px;padding:6px 2px}
 .hide{display:none!important}
+.sec{margin:18px 2px 8px}
+.sec-t{font-size:15px;font-weight:700}
+.sec-d{font-size:12.5px;color:#57606a}
+a.ov{display:block;background:#fff;border:1px solid #d0d7de;border-left:4px solid #d0d7de;border-radius:10px;padding:8px 12px;margin:0 0 8px;color:#1f2328;font-size:13px}
+.ov-h{display:flex;align-items:center;flex-wrap:wrap;gap:2px}
+.ov-n{font-weight:700;font-size:14px}
+.ov-deep{margin-left:auto;font-size:11px;color:#0969da;border:1px solid #0969da55;border-radius:8px;padding:0 6px}
+.ov-s{color:#57606a;font-size:12px;margin:2px 0}
+.ov-l{margin-top:2px;line-height:1.5}
+.ov-l b{color:#57606a;font-weight:600;margin-right:4px}
+details.bg.sub{border-style:dashed;margin:0 0 10px;background:#f6f8fa}
 .th{display:inline-block;font-size:11.5px;font-weight:600;border-radius:10px;padding:0 7px;margin:0 4px 2px 0;line-height:18px;white-space:nowrap}
 .card.tagged{border-left:4px solid var(--tc,#d0d7de)}
 .tags{margin-top:5px}
@@ -143,6 +154,7 @@ function bindChips(bar,onPick){
   }));
 }
 bindChips(document.getElementById('fbar-day'),v=>{dayTheme=v;applyDay();});
+document.querySelectorAll('a.ov').forEach(a=>a.addEventListener('click',()=>{const d=document.getElementById(a.getAttribute('href').slice(1));if(d)d.open=true;}));
 let resTheme='',resKind='';
 function applyRes(){
   document.querySelectorAll('.rcard').forEach(c=>{
@@ -336,17 +348,18 @@ def _render_weekly(path: Path) -> str:
 BG_HEAD_RE = re.compile(r"^# (?P<name>.+?) · 方向背景报告\n+(?P<stats>[^\n]+)", re.M)
 
 
-def _render_background(report: Path) -> str:
-    """background/<slug>/report.md → 折叠卡片；标题行取方向名，副行取统计行。"""
+def _render_background(report: Path, title: str = "", chip: str = "", anchor: str = "", prefix: str = "") -> str:
+    """background/<slug>/report.md → 折叠卡片；标题行取方向名（或 title），副行取统计行；prefix 放在正文前（深度调研）。"""
     text = report.read_text(encoding="utf-8")
     m = BG_HEAD_RE.match(text)
-    name = m.group("name") if m else report.parent.name
+    name = title or (m.group("name") if m else report.parent.name)
     stats = m.group("stats") if m else ""
     body = text[m.end():] if m else text
     html_body = markdown.markdown(body, extensions=["extra", "sane_lists", "tables"])
-    return (f'<details class="bg"><summary>{html.escape(name)}'
+    ident = f' id="{anchor}"' if anchor else ""
+    return (f'<details class="bg"{ident}><summary>{_chip(chip) if chip else ""}{html.escape(name)}'
             f'<span class="cnt">{html.escape(stats)}</span></summary>'
-            f'<div class="bgbody">{html_body}</div></details>')
+            f'<div class="bgbody">{prefix}{html_body}</div></details>')
 
 
 KIND_ZH = {"dataset": "数据集", "model": "模型", "benchmark": "基准", "database": "数据库", "tool": "工具"}
@@ -407,7 +420,7 @@ def _day_theme_counts(paths: list[Path]) -> dict[str, int]:
     return counts
 
 
-def _render_deep(path: Path) -> str:
+def _render_deep(path: Path, nested: bool = False) -> str:
     """background/<slug>/deep/*.md：会话里用 deep-research + expert-panel 做的深度调研（人工触发，不自动更新）。"""
     text = path.read_text(encoding="utf-8")
     m = re.match(r"# (?P<t>[^\n]+)\n", text)
@@ -415,9 +428,82 @@ def _render_deep(path: Path) -> str:
     body = text[m.end():] if m else text
     stats = f"深度调研 · {path.parent.parent.name} · {path.name[:10]}"
     html_body = markdown.markdown(body, extensions=["extra", "sane_lists", "tables"])
-    return (f'<details class="bg"><summary>〔深度〕{html.escape(title)}'
+    cls = "bg sub" if nested else "bg"
+    return (f'<details class="{cls}"><summary>〔深度〕{html.escape(title)}'
             f'<span class="cnt">{html.escape(stats)}</span></summary>'
             f'<div class="bgbody">{html_body}</div></details>')
+
+
+def _md_table_rows(text: str, heading: str) -> list[list[str]]:
+    """取 '## heading' 下第一张 markdown 表的数据行（去表头、分隔行），单元格去掉加粗与 [证据]/[常识] 标注。"""
+    m = re.search(rf"^## {re.escape(heading)}[^\n]*\n(.*?)(?=^## |\Z)", text, re.S | re.M)
+    rows = []
+    for line in (m.group(1) if m else "").splitlines():
+        if not line.startswith("|") or re.match(r"^\|[\s:|-]+\|$", line):
+            continue
+        cells = [re.sub(r"\*\*|\[(证据|常识)\]", "", c).strip() for c in line.strip("|").split("|")]
+        rows.append(cells)
+    return rows[1:]  # 第一行是表头
+
+
+def _match_row(name: str, rows: list[list[str]]) -> list[str]:
+    """表里的方向名常被缩写（"LLM 科研智能体与可验证奖励 RL"），按相似度匹配。"""
+    import difflib
+    keys = [r[0] for r in rows]
+    hit = difflib.get_close_matches(name, keys, n=1, cutoff=0.45)
+    return rows[keys.index(hit[0])] if hit else []
+
+
+def _short(text: str, n: int) -> str:
+    text = re.sub(r"\s+", " ", text).strip()
+    return text if len(text) <= n else text[:n - 1] + "…"
+
+
+SECTION = '<div class="sec"><div class="sec-t">{t}</div><div class="sec-d">{d}</div></div>'
+
+
+def _render_overview() -> tuple[str, int]:
+    """总览页三层：一页总览（每主题一张小卡）→ 跨方向（为什么 / 做什么）→ 各方向（深度调研收在所属方向里）。"""
+    base = ROOT / "background"
+    principles, joint = base / "_principles" / "report.md", base / "_joint" / "report.md"
+    p_rows = _md_table_rows(principles.read_text(encoding="utf-8"), "总判断") if principles.exists() else []
+    j_rows = _md_table_rows(joint.read_text(encoding="utf-8"), "全景") if joint.exists() else []
+    topics = []  # (theme, spec_name, report_path, stats, deep_paths)
+    for t in themes.load_themes():
+        rp = base / t.get("topic", "") / "report.md"
+        if not rp.exists():
+            continue
+        m = BG_HEAD_RE.match(rp.read_text(encoding="utf-8"))
+        deep = sorted((rp.parent / "deep").glob("*.md"),
+                      key=lambda p: (p.name[:10], "评审" not in p.name, p.name), reverse=True)
+        topics.append((t, m.group("name") if m else rp.parent.name, rp, m.group("stats") if m else "", deep))
+
+    out = [SECTION.format(t="一页总览", d="每个主题一行：处在什么阶段、真正要回答的问题、卡在哪。点主题名跳到该方向的完整报告。")]
+    for t, name, rp, stats, deep in topics:
+        pr, jr = _match_row(name, p_rows), _match_row(name, j_rows)
+        c = t["color"]
+        stage = _short(jr[1], 28) if len(jr) > 1 else ""
+        q = _short(pr[1], 70) if len(pr) > 1 else ""
+        neck = _short(pr[2], 70) if len(pr) > 2 else ""
+        deep_tag = f'<span class="ov-deep">深度调研 {len(deep)}</span>' if deep else ""
+        out.append(
+            f'<a class="ov" href="#topic-{t["key"]}" style="border-left-color:{c}">'
+            f'<div class="ov-h">{_chip(t["key"])}<span class="ov-n">{html.escape(name)}</span>{deep_tag}</div>'
+            + (f'<div class="ov-s">{html.escape(stage)}</div>' if stage else "")
+            + (f'<div class="ov-l"><b>问题</b> {html.escape(q)}</div>' if q else "")
+            + (f'<div class="ov-l"><b>瓶颈</b> {html.escape(neck)}</div>' if neck else "")
+            + "</a>")
+
+    out.append(SECTION.format(t="跨方向", d="两份报告分工不同：一份讲为什么（底层逻辑，每月更新），一份讲做什么（联合项目建议，每周更新）。"))
+    for path, label in ((principles, "为什么 · 全局判断（第一性原理）"), (joint, "做什么 · 联合行动建议")):
+        if path.exists():
+            out.append(_render_background(path, title=label))
+
+    out.append(SECTION.format(t="各方向", d="每个方向一份证据综述（每周吃日报增量重编）。有深度调研的，放在该方向卡片最上面。"))
+    for t, name, rp, stats, deep in topics:
+        extra = "".join(_render_deep(p, nested=True) for p in deep)
+        out.append(_render_background(rp, title=name, chip=t["key"], anchor=f"topic-{t['key']}", prefix=extra))
+    return "\n".join(out), len(topics)
 
 
 def build_site(today: date | None = None) -> Path:
@@ -429,16 +515,7 @@ def build_site(today: date | None = None) -> Path:
                  if weeklies else '<div class="empty">暂无周报。</div>')
     day_html = ("\n".join(_render_digest(p, i == 0) for i, p in enumerate(digests))
                 if digests else '<div class="empty">暂无日报。</div>')
-    pinned = {"_principles": 0, "_joint": 1}  # 全局判断置顶，联合分析第二，其余按方向名
-    bg_reports = sorted((ROOT / "background").glob("*/report.md"),
-                        key=lambda p: (pinned.get(p.parent.name, 2), p.parent.name))
-    # 文件名以 YYYY-MM-DD- 开头：新的在前；同一天里正文报告在前、评审综合在后（mtime 在 CI checkout 后不可靠）
-    deep = sorted((ROOT / "background").glob("*/deep/*.md"),
-                  key=lambda p: (p.name[:10], "评审" not in p.name, p.name), reverse=True)
-    cards = [_render_background(p) for p in bg_reports]
-    cut = sum(1 for p in bg_reports if p.parent.name in pinned)  # 深度调研排在全局判断/联合分析之后、各方向之前
-    cards[cut:cut] = [_render_deep(p) for p in deep]
-    bg_html = "\n".join(cards) if cards else '<div class="empty">暂无方向背景报告。</div>'
+    bg_html, n_topics = _render_overview()
     res_parts = []
     reg_json = ROOT / "background" / "_resources" / "registry.json"
     if reg_json.exists():
@@ -457,9 +534,9 @@ def build_site(today: date | None = None) -> Path:
         f"<style>{CSS}</style></head><body><main>",
         '<div class="top"><h1>radar · 科研情报</h1>',
         f'<div class="meta">更新至 {today.isoformat()} · '
-        f'{len(bg_reports)} 个方向背景 / {len(weeklies)} 份周报 / {len(digests)} 份日报</div>',
+        f'{n_topics} 个方向 / {len(weeklies)} 份周报 / {len(digests)} 份日报</div>',
         '<div class="tabs">'
-        '<div class="tab on" data-tab="bg">方向背景</div>'
+        '<div class="tab on" data-tab="bg">总览</div>'
         '<div class="tab" data-tab="week">周报</div>'
         '<div class="tab" data-tab="day">日报</div>'
         '<div class="tab" data-tab="res">资源库</div>'
