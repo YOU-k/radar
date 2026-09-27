@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.22.752128",
+  "title": "Speciesformer learns conserved cellular states for cross-species generative virtual cell modeling",
+  "url": "https://doi.org/10.64898/2026.09.22.752128",
+  "abstract": "针对现有单细胞基础模型多局限于单物种、判别任务或特定生成形式的问题，提出跨物种生成式单细胞基础模型Speciesformer，将进化表征学习与虚拟细胞状态生成结合。模型在包含1.31亿细胞的SpeciesCorpus上预训练，旨在学习可迁移的细胞状态与状态转变，并区分保守生物学原理与物种、组织及细胞环境特异变异。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种生成式单细胞基础模型，1.31亿细胞预训练，契合虚拟细胞",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨物种生成式单细胞基础模型，1.31亿细胞预训练，契合虚拟细胞方向。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "跨物种生成式单细胞基础模型Speciesformer",
+  "data": "单细胞数据，SpeciesCorpus，1.31亿细胞",
+  "scenario": "跨物种虚拟细胞状态生成",
+  "benchmark": "现有单物种、判别任务或特定生成形式单细胞基础模型",
+  "results": "在1.31亿细胞上预训练，学习可迁移细胞状态与状态转变，区分保守原理与物种/组织/细胞环境特异变异",
+  "availability": "",
+  "limitations": "仅提供摘要信息，未给出代码、权重、数据公开情况，也缺少定量基准结果",
+  "summary": "提出Speciesformer，用于跨物种生成式虚拟细胞建模。将进化表征学习与虚拟细胞状态生成结合，并在包含1.31亿细胞的SpeciesCorpus上预训练。目标是学习可迁移的细胞状态与状态转变，并区分保守生物学原理与物种、组织及细胞环境特异变异。"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 6,
+ "added_on": "2026-09-27"
+}

@@ -3,6 +3,13 @@
 「领域基础设施」：用量挖掘——被多篇高分工作反复用于训练/评测的数据集与基准，附使用证据。
 「新发布资源」：只收确认公开可获取、打分 ≥7 的新数据集/模型，按场景分组。资讯请看日报。
 
+## 领域基础设施（被多篇高分工作反复使用）
+
+- **UKB-PPP** — 2920蛋白 · 血浆蛋白质组遗传关联研究
+  被 2 篇高分工作使用：Robust cis-by-trans epistasis in the hum / Multi-ancestry MHC-pQTL mapping reveals  · 2026-09-27 收录
+- **UK Biobank** — 42万参与者/43762人 · 血浆蛋白组与分子表型关联分析
+  被 3 篇高分工作使用：Robust cis-by-trans epistasis in the hum / Multi-ancestry MHC-pQTL mapping reveals  / Molecular Circadian Disturbance in Human · 2026-09-27 收录
+
 ## 单细胞 / 空间组学
 
 - [Speciesformer learns conserved cellular states for cross-species generative virtual cell modeling](https://doi.org/10.64898/2026.09.22.752128) — 跨物种单细胞基础模型，学习保守细胞状态，用于虚拟细胞生成与跨物种迁移研究。
