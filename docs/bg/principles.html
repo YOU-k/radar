@@ -1,0 +1,555 @@
+<!doctype html><html lang=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><title>为什么 · 全局判断（第一性原理） · radar</title><style>
+:root{color-scheme:light dark;--bg:#f6f8fa;--card:#fff;--fg:#1f2328;--muted:#57606a;--muted2:#4b5563;--border:#d0d7de;
+--link:#0969da;--accent:#1f6feb;--green:#1a7f37;--purple:#8250df;--topbg:rgba(246,248,250,.94);--thbg:#f6f8fa;
+--hi-bg:#dafbe1;--hi-fg:#1a7f37;--mid-bg:#fff8c5;--mid-fg:#9a6700;--lo-bg:#eaeef2;--lo-fg:#57606a;--res-bg:#ddf4ff;--res-fg:#0969da;
+--pp-bg:#fff1e5;--pp-fg:#bc4c00;--new:#cf222e;--warn-bg:#fff8c5;--warn-fg:#9a6700;--shadow:0 1px 2px rgba(31,35,40,.04)}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--fg:#e6edf3;--muted:#9198a1;--muted2:#b1bac4;--border:#30363d;
+--link:#4493f8;--accent:#1f6feb;--green:#3fb950;--purple:#bc8cff;--topbg:rgba(13,17,23,.92);--thbg:#1c2128;
+--hi-bg:#12361f;--hi-fg:#56d364;--mid-bg:#3a2e0a;--mid-fg:#e3b341;--lo-bg:#262c36;--lo-fg:#9198a1;--res-bg:#0c2d4b;--res-fg:#79c0ff;
+--pp-bg:#3d1f0a;--pp-fg:#ffa657;--new:#ff7b72;--warn-bg:#3a2e0a;--warn-fg:#e3b341;--shadow:none}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,"PingFang SC","Noto Sans SC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:0 12px 80px}
+a{color:var(--link);text-decoration:none}
+a:active{opacity:.7}
+[id]{scroll-margin-top:150px}
+.top{position:sticky;top:0;z-index:9;background:var(--topbg);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:12px 12px 10px;border-bottom:1px solid var(--border);margin:0 -12px 16px}
+.top h1{font-size:17px;margin:0 0 2px}
+.top .meta{color:var(--muted);font-size:12px;margin-bottom:10px}
+.tabs{display:flex;gap:8px}
+.tab{flex:1;text-align:center;padding:9px 0;border:1px solid var(--border);border-radius:20px;background:var(--card);color:var(--muted);font:600 14.5px/1.4 inherit;cursor:pointer;user-select:none;position:relative}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab .nb{position:absolute;top:-6px;right:4px;background:var(--new);color:#fff;border-radius:9px;font-size:10.5px;line-height:17px;min-width:17px;padding:0 4px}
+.panel{display:none}.panel.on{display:block}
+details.bg{background:var(--card);border:1px solid var(--border);border-radius:12px;margin:0 0 10px;padding:0 16px}
+details.bg>summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:600;font-size:15px}
+details.bg>summary::-webkit-details-marker{display:none}
+details.bg>summary .cnt{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
+.bgbody{font-size:14.5px;padding-bottom:14px;overflow-wrap:anywhere}
+.bgbody h2{font-size:15px;color:var(--green)}
+.bgbody h3{font-size:14.5px;color:var(--purple);margin-bottom:4px}
+.bgbody ol{padding-left:20px;font-size:13px;color:var(--muted2)}
+.bgbody li:target{background:var(--mid-bg)}
+a.cite{font-size:.85em;vertical-align:.1em}
+a.full{display:inline-block;font-size:13px;margin-top:6px}
+.lazy .empty{padding:10px 0}
+#q{width:100%;padding:9px 14px;border:1px solid var(--border);border-radius:20px;background:var(--card);color:var(--fg);font-size:14px;outline:none;margin-bottom:12px}
+#q:focus{border-color:var(--link)}
+.wk{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:4px 16px 14px;margin:0 0 10px;font-size:14.5px;box-shadow:var(--shadow);overflow-wrap:anywhere}
+.wk h2{font-size:15px;color:var(--green)}
+.wk h3{font-size:14.5px;color:var(--purple);margin-bottom:4px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0;max-width:100%}
+.tw table{border-collapse:collapse;font-size:12.5px;width:max-content;max-width:none}
+.tw th,.tw td{border:1px solid var(--border);padding:4px 6px;text-align:left;vertical-align:top;min-width:7em;max-width:22em;overflow-wrap:anywhere}
+.tw th{background:var(--thbg)}
+details.day{margin:0 0 10px}
+details.day>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;padding:11px 4px;border-bottom:1px solid var(--border);font-weight:600;font-size:15px}
+details.day>summary::-webkit-details-marker{display:none}
+details.day>summary .cnt{font-weight:400;color:var(--muted);font-size:12px;margin-left:auto}
+details.day>summary::after{content:"›";color:var(--muted);transition:transform .15s}
+details.day[open]>summary::after{transform:rotate(90deg)}
+details.day>.daybody{padding-top:8px}
+.newdot{display:none;font-size:11px;font-weight:700;color:#fff;background:var(--new);border-radius:8px;padding:0 6px;line-height:18px}
+.isnew .newdot{display:inline-block}
+.dom{color:var(--purple);font-size:13px;font-weight:600;margin:14px 2px 6px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:11px 13px;margin:0 0 10px;box-shadow:var(--shadow)}
+.card .t{font-size:15px;line-height:1.5}
+.card .t a{color:var(--fg);font-weight:600}
+.badge{display:inline-block;min-width:34px;text-align:center;font-size:12px;font-weight:700;border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+.badge.hi{background:var(--hi-bg);color:var(--hi-fg)}
+.badge.mid{background:var(--mid-bg);color:var(--mid-fg)}
+.badge.lo{background:var(--lo-bg);color:var(--lo-fg)}
+.badge.res{background:var(--res-bg);color:var(--res-fg)}
+.vt{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:0 5px;margin-right:4px}
+.vt.jr{background:var(--hi-bg);color:var(--hi-fg)}
+.vt.pp{background:var(--pp-bg);color:var(--pp-fg)}
+.reason{color:var(--muted2);font-size:13.5px;margin-top:5px}
+.meta{color:var(--muted);font-size:12px;margin-top:5px}
+.legend{color:var(--muted);font-size:11.5px;margin:-4px 2px 10px}
+.bgline{color:var(--purple);font-size:12.5px;margin-top:4px;border-left:3px solid var(--purple);padding-left:6px}
+details.deep{margin-top:8px;border-top:1px dashed var(--border);padding-top:6px}
+details.deep>summary{cursor:pointer;list-style:none;color:var(--link);font-size:13px;padding:4px 0}
+details.deep>summary::-webkit-details-marker{display:none}
+details.deep>summary::before{content:"▸ "}
+details.deep[open]>summary::before{content:"▾ "}
+details.deep .deepbody{font-size:13.5px;color:var(--muted2);padding-top:4px;overflow-wrap:anywhere}
+details.deep .deepbody h2,details.deep .deepbody h3{font-size:13.5px;color:var(--green);margin:10px 0 2px}
+details.deep .deepbody p{margin:4px 0}
+.empty{color:var(--muted);font-size:13px;padding:6px 2px}
+.hide{display:none!important}
+.health{font-size:12px;color:var(--warn-fg);background:var(--warn-bg);border-radius:6px;padding:2px 8px;margin:2px 0 6px}
+.sec{margin:18px 2px 8px}
+.sec-t{font-size:15px;font-weight:700}
+.sec-d{font-size:12.5px;color:var(--muted)}
+a.ov{display:block;background:var(--card);border:1px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:8px 12px;margin:0 0 8px;color:var(--fg);font-size:13px}
+.ov-h{display:flex;align-items:center;flex-wrap:wrap;gap:2px}
+.ov-n{font-weight:700;font-size:14px}
+.ov-deep{margin-left:auto;font-size:11px;color:var(--link);border:1px solid var(--border);border-radius:8px;padding:0 6px}
+.ov-s{color:var(--muted);font-size:12px;margin:2px 0}
+.ov-l{margin-top:2px;line-height:1.5}
+.ov-l b{color:var(--muted);font-weight:600;margin-right:4px}
+details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
+.th{display:inline-block;font-size:11.5px;font-weight:600;border-radius:10px;padding:0 7px;margin:0 4px 2px 0;line-height:18px;white-space:nowrap;color:var(--c);background:var(--cb);border:1px solid var(--cl)}
+.card.tagged{border-left:4px solid var(--tc,var(--border))}
+.tags{margin-top:5px}
+.fbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.fchip{font:600 12.5px/1.4 inherit;border-radius:16px;padding:6px 12px;cursor:pointer;user-select:none;border:1px solid var(--cl,var(--border));background:var(--card);color:var(--c,var(--muted))}
+.fchip.on{box-shadow:inset 0 0 0 2px currentColor}
+.fchip .n{font-weight:400;opacity:.75;margin-left:3px}
+@media (prefers-color-scheme:dark){.th[data-t],.fchip[data-t]{--c:var(--cd);--cb:var(--cbd)}}
+.sum{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:8px 14px;margin:0 0 12px;font-size:14px}
+.sum h4{margin:4px 0 2px;font-size:13px;color:var(--muted)}
+.sum ul{margin:4px 0;padding-left:18px}
+.sum li{margin:3px 0}
+.pri{font-size:13px;font-weight:700;margin:16px 2px 6px}
+.pri.p0{color:var(--new)}.pri.p1{color:var(--mid-fg)}.pri.p2{color:var(--muted)}.pri.pn{color:var(--link)}
+.rcard{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 12px;margin:0 0 8px;font-size:13.5px;overflow-wrap:anywhere}
+.rcard .rn{font-weight:700;font-size:14.5px}
+.rcard .rk{font-size:11.5px;color:var(--muted);border:1px solid var(--border);border-radius:4px;padding:0 4px;margin-left:6px;font-weight:400}
+.rcard .why{color:var(--fg);margin-top:3px}
+.rcard .rm{color:var(--muted);font-size:12px;margin-top:3px}
+.rcard.new{border-style:dashed}
+.st{display:inline-block;font-size:11px;border-radius:4px;padding:0 5px;margin-left:4px;font-weight:600}
+.st.ok{background:var(--hi-bg);color:var(--hi-fg)}.st.warn{background:var(--mid-bg);color:var(--mid-fg)}.st.bad{background:var(--pp-bg);color:var(--pp-fg)}
+.arch{margin:16px 2px;font-size:13.5px}
+.arch a{display:inline-block;margin:4px 10px 4px 0}
+.back{display:inline-block;margin:10px 0}
+[data-t=aging]{--c:#1a7f37;--cb:#1a7f3714;--cl:#1a7f3755;--cd:#81b891;--cbd:#81b8911f}[data-t=cohort]{--c:#0969da;--cb:#0969da14;--cl:#0969da55;--cd:#77acea;--cbd:#77acea1f}[data-t=cardio]{--c:#cf222e;--cb:#cf222e14;--cl:#cf222e55;--cd:#e4858c;--cbd:#e4858c1f}[data-t=organoid]{--c:#9a6700;--cb:#9a670014;--cl:#9a670055;--cd:#c7ab72;--cbd:#c7ab721f}[data-t=singlecell]{--c:#8250df;--cb:#8250df14;--cl:#8250df55;--cd:#ba9eed;--cbd:#ba9eed1f}[data-t=vcell]{--c:#bf3989;--cb:#bf398914;--cl:#bf398955;--cd:#db92be;--cbd:#db92be1f}[data-t=ssl]{--c:#1b7c83;--cb:#1b7c8314;--cl:#1b7c8355;--cd:#81b6ba;--cbd:#81b6ba1f}[data-t=agent]{--c:#bc4c00;--cb:#bc4c0014;--cl:#bc4c0055;--cd:#da9c72;--cbd:#da9c721f}</style></head><body><main><a class="back" href="../index.html">← 返回 radar</a><h1 style="font-size:18px;margin:4px 0">为什么 · 全局判断（第一性原理）</h1><div class="meta">8 个领域 · 每月更新 · 更新 2026-09-27 · [证据] = 来自方向背景报告；[常识] = 模型领域知识，需核实</div><article class="bgbody" id="doc"><section id="doc-rest">
+<h2>总判断</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>领域</th>
+<th>核心生物学问题（一句）</th>
+<th>主要瓶颈层（因果链上的哪一层 + 瓶颈类型）</th>
+<th>主流角度的盲点</th>
+<th>最值得补的策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多模态衰老时钟与生物年龄</td>
+<td>生物年龄是否独立实在，时钟回拨是否等于衰老与结局改善？</td>
+<td><strong>分子/测量层缺金标准；干预/转化层因果识别不足；遗传层几乎缺席</strong> [证据]</td>
+<td>把日历年龄代理当生物年龄、把预测性能当机制、把 clock 变化等同衰老 [证据]</td>
+<td><strong>cis-pQTL/MR 锚定因果 + 类器官随机化扰动时钟 + 硬终点 RCT/负对照</strong> [证据][常识]</td>
+</tr>
+<tr>
+<td>心血管队列多组学与临床 AI</td>
+<td>哪些循环分子对 CAD/心衰/房颤/卒中有因果效应，且跨东亚可复现、可干预？</td>
+<td><strong>遗传→分子因果识别不足；分子→组织测量不足；人群→干预转化落地缺失</strong> [证据]</td>
+<td>观察关联当因果；复合终点掩盖异质性；AUC 增量当临床效用；跨族裔只校准不重验 [证据]</td>
+<td>东亚 pQTL+MR/coloc；中间风险条件性检测+嵌套 RCT；纵向多模态自然史；疾病分解 GWAS/MR [证据][常识]</td>
+</tr>
+<tr>
+<td>类器官与模式生物虚拟响应</td>
+<td>扰动响应哪些由保守网络决定、哪些由背景决定，能否因果预测患者结局？</td>
+<td><strong>因果识别不足 + 数据多样性不足；缺匹配扰动、跨物种基准、前瞻结局</strong> [证据]</td>
+<td>离体≈患者、单终点（凋亡/ATP）、表征对齐=因果迁移、群体平均忽略微环境 [证据]</td>
+<td>跨物种匹配扰动基准；iPSC 类器官编辑 GWAS/pQTL；空间/邻居感知扰动；主动学习闭环+负结果基准 [证据]</td>
+</tr>
+<tr>
+<td>人群健康与多组学 AI</td>
+<td>疾病是否存在少数可重复、可校准、可干预的分子轨迹与共病亚型？</td>
+<td><strong>分子→个体因果识别不足；生成轨迹数据多样性不足；EHR 基础模型转化落地缺失</strong> [证据]</td>
+<td>EHR 编码=生物状态；生成自回归=反事实；规模扩张=可验证；PRS 选择不是问题 [证据]</td>
+<td>cis-pQTL 药物靶点 MR+队列复现；小 n 长 t 深表型；家系内设计；EHR→连续生物学读出；前瞻实用试验 [证据][常识]</td>
+</tr>
+<tr>
+<td>LLM 科研智能体与可验证奖励 RL</td>
+<td>智能体假设能否独立复现，过程奖励能否达到专家因果验证水平？</td>
+<td><strong>分子→细胞过程验证缺失；因果识别与验证信号缺失；转化落地缺失</strong> [证据]</td>
+<td>虚假奖励也提升推理；工具调用=科学正确；自改进递归；纯 RLVR 算法增量 [证据]</td>
+<td>过程级可验证奖励（单细胞/多组学流程）；批判性验证器+反事实基准；跨模态智能体+类器官闭环；重加权 vs 扩展判别 [证据]</td>
+</tr>
+<tr>
+<td>单细胞/空间基础模型与虚拟细胞</td>
+<td>扰动如何跨供体/平台/物种把细胞从 A 推到 B，非转录模态能否约束状态？</td>
+<td><strong>分子→细胞因果识别不足+测量不足；细胞→组织数据多样性不足；转化落地不足</strong> [证据]</td>
+<td>更大+最终层=更好；零样本被 HVG/scVI 击败；扰动预测未跑赢简单基线；无清晰 scaling law [证据]</td>
+<td>干预锚定因果表征；低参数跨模态继续预训练；任务条件层选择/标准化探针；人群自然实验+多组学 MR；跨物种扰动 [证据]</td>
+</tr>
+<tr>
+<td>虚拟细胞与扰动响应预测</td>
+<td>扰动效应多少可由调控网络预测，多少必须实测，跨语境哪些不变？</td>
+<td><strong>因果识别不足+跨语境测量不足；原代/体内稀疏；干预转化靠试验</strong> [证据]</td>
+<td>生成质量≠生物学正确；KNN/知识图谱可击败复杂模型；随机划分泄漏；世界模型包装 [证据]</td>
+<td>跨语境效度地图；衰老作为条件扰动轴；主动学习闭环实验；跨物种迁移；从风险预测到干预因果 [证据][常识]</td>
+</tr>
+<tr>
+<td>世界模型与自监督表征学习</td>
+<td>细胞/组织/健康轨迹是否是可由扰动干预的可预测隐状态？</td>
+<td><strong>分子→细胞测量不足；细胞→个体因果识别不足；人群跨队列多样性不足；落地瓶颈</strong> [证据]</td>
+<td>隐空间平滑、马尔可夫、干预可泛化假设；潜距离近≠干预有效；JEPA 路线冲突；表格 SSL 未稳赢 [证据]</td>
+<td>纵向干预类器官图谱；遗传自然实验锚定因果隐空间；跨物种扰动迁移；生物多模态 SSL 基准/负对照；test-time 临床适配 [证据][常识]</td>
+</tr>
+</tbody>
+</table></div>
+<h2>跨领域的共同规律</h2>
+<ol>
+<li>
+<p><strong>关联到因果的鸿沟是共同天花板，且在不同领域表现为 MR 缩水、时钟回拨不等结局、生成轨迹无反事实、扰动预测不泛化。</strong> 心血管 UKB 中 636 个蛋白与 CVD 相关，但 MR 仅支持 47 个、共定位 18 个 [证据]；衰老领域 ClockBase 扫描 500+ 干预降低生物年龄，但均依赖时钟预测 [证据]；Delphi 类模型学的是 P(下一编码|历史)，不是 P(疾病|干预) [证据][常识]；虚拟细胞 PerturbBench 显示深度学习扰动预测尚未跑赢简单基线 [证据]。</p>
+</li>
+<li>
+<p><strong>测量先于建模：没有金标准、原位读出、纵向配对或连续生物学读出，算法只能优化代理。</strong> 生物年龄不可观测，训练标签只能是日历年龄或死亡替代 [证据]；血浆蛋白无法定位心肌、血管、电传导系统 [证据]；EHR 记录的是就诊行为，不是生物学状态 [证据]；组学破坏性采样使世界模型缺时序配对数据 [证据]。</p>
+</li>
+<li>
+<p><strong>扰动是因果的硬通货：遗传自然实验、CRISPR/药物扰动、RCT 与负对照不可被模型替代。</strong> pQTL/MR 能把 PCSK9、IL-6R 等靶点锚定到随机试验方向 [常识]；类器官/模式生物是少数能实证“clock 变化=衰老变化”的实验体系 [证据]；虚拟细胞必须走主动学习闭环实验 [证据]；Co-Scientist 仍依赖湿实验验证和人类介入 [证据]。</p>
+</li>
+<li>
+<p><strong>人群异质性与跨队列/跨物种迁移是普遍失败点，必须把校准、重验、本土参考面板当第一类产出。</strong> 跨组织甲基化差异可接近 30 年 [证据]；UKB→中国人群最优 PRS 加入传统模型后 Harrell’s C 仅提升约 0.01、NRI 3.5% [证据]；空间平台异质性强，SEA-AD 虽整合 340 万核/84 供体但主要聚焦 MTG [证据]；医学基础模型跨体系泛化普遍未验证 [证据]。</p>
+</li>
+<li>
+<p><strong>“更大模型+最终层+预测 SOTA”不是可靠策略；效度地图、层探针、低参数归纳偏置、基准与过程验证是当前高杠杆。</strong> 400 个模型、6400 次实验未发现清晰缩放定律 [证据]；70M 跨模态蛋白模型在多数基准匹配或超过 1B/3B RNA-only 模型 [证据]；轨迹和扰动任务中中间层可优于最终层达 31% [证据]；RLVR 中虚假奖励仍使 MATH-500 提升 21.4 点 [证据]；评测/可复现性板块在多个领域仍 n=0 或 n=2 [证据]。</p>
+</li>
+</ol>
+<h2>研究策略地图</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>策略</th>
+<th>它最能打破哪个领域的哪个瓶颈</th>
+<th>数据/成本门槛</th>
+<th>他能否先用公共数据起步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人类遗传学/MR + pQTL/coloc</td>
+<td><strong>打破衰老遗传层缺席、心血管观察关联非因果、人群多组学因果识别、虚拟细胞/世界模型因果锚定</strong> [证据][常识]</td>
+<td>UKB-PPP、deCODE、FinnGen 可申请；成本中低；中国人群需 ChinaHEART/CKB 蛋白-遗传参考</td>
+<td><strong>能。</strong> 先做 UKB/deCODE cis-pQTL MR+coloc，再迁 ChinaHEART [证据][常识]</td>
+</tr>
+<tr>
+<td>天然扰动与准实验（家系、target trial emulation、药物靶点随机化）</td>
+<td>打破混杂、反向因果、EHR 假信号、PRS 选择与共病亚型争议 [证据][常识]</td>
+<td>生物库家系/登记/EHR；成本中高，需审批</td>
+<td><strong>部分能。</strong> MR/TTE 可用 UKB、FinnGen、All of Us；家系需 deCODE/MoBa [常识]</td>
+</tr>
+<tr>
+<td>类器官/iPSC 扰动筛选</td>
+<td>打破“clock 回拨=衰老回拨”、类器官虚拟响应、心血管 MR→机制、虚拟细胞跨语境 [证据]</td>
+<td>湿实验，成本高，通量低，需合作</td>
+<td><strong>只能部分起步。</strong> 可先做公共 Perturb-seq 基准/分析，但最终需湿实验 [证据]</td>
+</tr>
+<tr>
+<td>模式生物扰动与跨物种映射</td>
+<td>打破跨物种迁移、衰老干预机制、虚拟细胞留出物种、世界模型隐状态共享 [证据][常识]</td>
+<td>动物实验，成本中高，周期长</td>
+<td><strong>部分能。</strong> 可先做公共小鼠/斑马鱼/线虫图谱与同源映射基准，验证需实验 [证据]</td>
+</tr>
+<tr>
+<td>纵向深表型队列（重复采血/影像/ECG/可穿戴）</td>
+<td>打破人群轨迹、衰老时钟、CVD 自然史、EHR 测量偏倚与时间箭头问题 [证据][常识]</td>
+<td>大队列，成本高，依赖 ChinaHEART/UKB 重复测量</td>
+<td><strong>部分能。</strong> UKB 重复测量/All of Us 可先做；ChinaHEART 需合作 [证据][常识]</td>
+</tr>
+<tr>
+<td>实用性试验与真实世界（嵌套 RCT、筛查-干预闭环、数字孪生外部对照）</td>
+<td>打破转化落地、临床效用、干预时机、EHR 生成模型因果 [证据][常识]</td>
+<td>极高成本、长周期、监管</td>
+<td><strong>不能。</strong> 只能先做设计、仿真、目标试验模拟 [证据][常识]</td>
+</tr>
+<tr>
+<td>基础模型与表征学习（多模态整合、缺失模态、跨队列校正、JEPA/SSL）</td>
+<td>打破数据/表征层、跨队列泛化、虚拟细胞状态、世界模型隐状态 [证据]</td>
+<td>公共多组学+计算，成本中</td>
+<td><strong>能。</strong> 但必须外部验证、层探针、负对照，不能只追 AUROC [证据]</td>
+</tr>
+<tr>
+<td>过程级验证/LLM 科研智能体</td>
+<td>打破 LLM 过程验证缺失、科研工作流自动化、过程奖励空白 [证据]</td>
+<td>公共代码/文献/单细胞流程，计算中</td>
+<td><strong>能。</strong> 先做单细胞流程中间奖励与 R-Judge 式验证器 [证据]</td>
+</tr>
+<tr>
+<td>基准与效度地图（跨队列/跨模态/跨物种/留出扰动）</td>
+<td>打破所有领域的不可比、泄漏、泛化未验证、评测标准未定 [证据]</td>
+<td>公共数据为主，成本低</td>
+<td><strong>能，且最优先。</strong> 可定义 ChinaHEART/类器官专属 benchmark [证据][常识]</td>
+</tr>
+<tr>
+<td>主动学习闭环实验</td>
+<td>打破类器官通量低、因果识别、虚拟细胞扰动选择、世界模型实验设计 [证据]</td>
+<td>需湿实验+算法，成本高</td>
+<td><strong>先离线模拟，再实验。</strong> 公共数据可做假设排序，不能替代扰动验证 [证据]</td>
+</tr>
+</tbody>
+</table></div>
+<h2>如果只做一件事</h2>
+<p><strong>最该押注的研究问题：在中国人群心血管衰老轨迹中，哪些由遗传因果锚定的循环蛋白/分子轴真正驱动 CAD、心衰、房颤或卒中，并能在人源心脏/血管类器官的随机扰动中被复现？</strong></p>
+<p>为什么是它：<br />
+- 它把应用线 2（ChinaHEART/中国人群心血管）与应用线 1/3（类器官多模态、虚拟扰动响应）焊在一起，同时服务方法线 4，而不是再做一个孤立模型 [常识]。<br />
+- 它命中三个结构性空白：<strong>衰老领域遗传层几乎缺席</strong> [证据]；<strong>心血管观察性蛋白组关联多数非因果，且中国人群缺本土 pQTL/PRS 参考</strong> [证据][常识]；<strong>类器官缺“因果扰动+临床终点”锚定</strong> [证据]。<br />
+- 算法在这里不可替代：跨队列 MR/coloc、重校准、缺失模态整合、不确定性量化。实验提供因果硬通货。<strong>这是因果问题，不是又一个预测模型问题。</strong></p>
+<p>第一步：<br />
+1. 用 UKB-PPP、deCODE、FinnGen 对 CAD、心衰、房颤、卒中和衰老相关终点做 cis-pQTL MR+coloc，筛可药物靶点与衰老蛋白轴，如 PCSK9、IL-6R、LPA、ANGPTL3 等 [证据][常识]。<br />
+2. 与 ChinaHEART/CKB 合作建立或接入蛋白-遗传参考面板，做外部复现与重校准，比较 China-PAR、SCORE2、PCE 的增量，用 NRI、决策曲线，不只报 AUC [证据]。<br />
+3. 选 2–3 条 top 因果轴，在 iPSC 心脏/血管类器官做 CRISPRi/药物扰动，读出单细胞、空间、功能（钙瞬变、收缩、电生理）[常识]。<br />
+4. 冻结方案，加入负对照结局和跨模态基准，为后续嵌套 RCT 或筛查-干预闭环提供可检验假设源 [证据][常识]。</p>
+<h2>分领域分析</h2>
+<h3>多模态衰老时钟与生物年龄</h3>
+<ol>
+<li><strong>"生物年龄"是不是一个独立于日历年龄的实在变量？</strong> 可证伪表述：同一受试者的 age gap 在不同组织、不同模态、不同队列间显著相关（跨模态 ρ 稳定 &gt;0.3）。实测跨组织甲基化差异接近 30 年 [证据]，提示这个假设尚未被支持。</li>
+<li><strong>时钟捕捉的是损伤累积、代偿性适应，还是两者的净和？</strong> 因果拆分问题（damage vs adaptation）[证据]。可证伪：干预后时钟回拨若伴随功能指标改善，"适应"解释成立；若功能不变甚至恶化，说明时钟读数偏离了衰老本身。</li>
+<li><strong>衰老（senescence）是否存在通用分子标志物，还是严格细胞类型/组织特异？</strong> SenePy 基于小鼠 328K、人 1.6M 单细胞主张"不存在通用标志物"，与 hUSI 学习通用衰老特征的努力直接冲突 [证据]。可证伪：在一个组织训练的 signature，能否在另一组织、另一物种、有 SA-β-gal + 生长停滞 + SASP 三重金标准的样本中复现。</li>
+<li><strong>干预造成的时钟回拨等不等于结局改善？</strong> ClockBase 扫描 43,602 个干预-对照比较、500+ 干预显著降低生物年龄，但均依赖时钟预测 [证据]。可证伪：时钟回拨幅度是否与硬终点（死亡、CVD 事件、功能评分）呈剂量-反应。</li>
+</ol>
+<h4>卡在因果链的哪一层</h4>
+<ul>
+<li><strong>分子/测量层：瓶颈是因果识别不足 + 缺金标准。</strong> 生物年龄不可观测，训练标签只能是日历年龄或死亡替代；技术重现性无法预测生物学可靠性 [证据]。</li>
+<li><strong>细胞状态层：靶点与机制未知。</strong> 单细胞时钟出现"预测年龄"与"衰老分数"的语义分歧，二者可否互换无证据 [证据]。</li>
+<li><strong>组织/器官层：因果识别不足。</strong> 同用 UKB 蛋白组的两项工作给出不同器官划分 [证据]——解剖归因是建模选择，不是生物学识别。</li>
+<li><strong>个体/疾病层：关联强、因果弱。</strong> GrimAge v2 与 DunedinPACE 各 72 个显著疾病关联，但"最优"取决于终点与校正策略 [证据]。混杂与反向因果未解。</li>
+<li><strong>干预/转化层：转化落地不足。</strong> IPF 试验六种蛋白组时钟一致指向治疗组更年轻，但疾病混杂未独立解决 [证据]。</li>
+<li><strong>遗传层几乎缺席。</strong> 材料未见 pQTL/MR/PRS 锚定时钟的因果工作 [证据]——这是结构性空白。</li>
+</ul>
+<h4>主流研究角度为什么成立、在哪里失效</h4>
+<p><strong>大队列关联建模（时钟训练+age gap 关联疾病）</strong>：隐含假设是"日历年龄是生物年龄的可迁移代理"。它成立因为标签无噪声、样本可推到 23.9 万–30.3 万人 [证据]；失效在极端年龄误差可达 ±40 年 [证据]，且跨队列泛化未解决——GOLD BioAge 与 OMICmAge 给出不同答案 [证据]。它能回答"谁排序靠前"，答不了"为什么"和"敲哪个靶点"。</p>
+<p><strong>多组学整合/多模态</strong>：隐含"存在共享衰老因子"。蛋白组器官时钟 r² 高，但代谢组与 MRI 的预测相关性普遍更低 [证据]——共享因子的假设只在部分模态对成立。</p>
+<p><strong>基础模型/基准路线</strong>：LongevityBench 覆盖 17 项任务、5 个域，识别组学年龄预测为最难任务；ComputAgeBench 仅限血液甲基化 [证据]。隐含"任务是可定义的"，但标签本身是待求量，存在循环论证风险。</p>
+<p><strong>扰动/agent 扫描</strong>：把"时钟变化"等同于"衰老改变"，疾病混杂未独立解决 [证据]。这是最大的逻辑跳跃。</p>
+<h4>被低估的其他研究策略</h4>
+<ol>
+<li><strong>遗传自然实验锚定因果</strong>：用 cis-pQTL（UKB-PPP、deCODE、Fenland）作工具变量，做蛋白↔age gap 双向 MR，把"因"与"果"钉死 [常识]。它不依赖生物年龄作为金标准，靠排他性假设做方向性识别；GDF15、IL-6R、PCSK9 等已有 MR 先例 [常识]。材料中此层完全缺席 [证据]。</li>
+<li><strong>类器官/模式生物的随机化扰动时钟</strong>：同一遗传背景、同一组织，逐个基因/药物扰动（CRISPR 文库、senolytic、partial reprogramming OSK）[常识]，读出多组学 + 功能（SA-β-gal、生长停滞、收缩功能）。这是唯一能把"clock 变化 = 衰老变化"这一等号做实证的实验体系，而该方向仅 1 篇综述、近乎空白 [证据]；metformin 延缓猴时钟是少数锚点 [证据]。</li>
+<li><strong>结局锚定的实用试验 + 阴性对照结局</strong>：不把时钟当终点，把硬终点（CVD 事件、死亡、认知）当终点，用"与衰老无关的结局"（外伤、感染）做特异度负对照；在 RCT 内嵌时钟作早期方向性读数 [常识]。</li>
+<li><strong>空间多模态共定位定义衰老细胞坐标</strong>：转录 + 蛋白 + 原位 SA-β-gal 三读数共定位，配跨物种同源映射，替代纯转录组 signature [证据支持其空缺：空间图谱特异性未解决]。</li>
+<li><strong>把"跨队列/跨模态泛化评测"本身做成产出</strong>：section 5 证据为 0，验证需求仅 10 次引用 [证据]。方法定义权窗口约 12–18 个月 [证据]。</li>
+</ol>
+<h4>对他的含义</h4>
+<p><strong>他能做出不可替代贡献的层</strong>：(a) 数据/方法层——跨队列校正、缺失模态对齐、不确定性量化、把"age"与"aging"的语义形式化（hUSI 类通用衰老量 vs 年龄预测的区分）；(b) 细胞组成混杂下去卷积 + 细胞类型特异时钟（2.3 是 median_citations=28、cns_share=0.67 的最高影响力区且未标准化 [证据]）；(c) 基准与评测框架（2.4/5 萌芽，median_citations=2 [证据]）；(d) 对 ChinaHEART 做 MR/pQTL 的遗传锚定——把人群队列的时序信息接到蛋白层因果 [常识]。</p>
+<p><strong>算法帮不上的</strong>：定义真实生物年龄（无金标准，任何损失函数都只是代理）；从血液蛋白的统计结构里识别器官归因；"时钟回拨是否等于衰老回拨"只能由随机化试验和硬终点回答；衰老细胞识别必须原位验证。算法给出假设排序，不给出因果结论——<strong>在这个领域，把预测性能当机制证据是当前最大的系统性风险</strong>。</p>
+<h3>心血管队列多组学与临床 AI</h3>
+<ol>
+<li><strong>哪些循环分子对冠心病、心衰、房颤、卒中有因果效应，而不是仅有关联，且在东亚人群可复现、可干预？</strong> UKB 中 636 个蛋白与 CVD 相关，但 MR 仅支持 47 个、共定位 18 个，说明多数观察关联非因果 [证据]。可证伪路径是 cis-pQTL 工具变量、共定位、药物靶点随机化，如 PCSK9、IL-6R、LPA、CETP、ANGPTL3 [常识]。</li>
+<li><strong>亚临床电、结构、分子轨迹能否在传统危险因素之外提前识别事件？</strong> AI-ECG 已能识别无症状左室收缩功能障碍和房颤风险 [证据]；但问题是它是否独立于年龄、血压、糖尿病，并改变筛查路径。</li>
+<li><strong>复合 CVD 终点是否掩盖了不同病理机制？</strong> UKCRP 对心梗和缺血性卒中可比，对出血性卒中明显较差 [证据]；糖尿病人群 C 统计量仅 0.584–0.629 [证据]，提示异质性被平均掉。</li>
+<li><strong>欧洲队列训练的 PRS、蛋白评分、AI 模型迁移到中国人群，增益来自真实生物学还是校准？</strong> CKB 最优 PRS 加入传统模型后 Harrell’s C 仅提升约 0.01、NRI 3.5% [证据]；SCORE2 区域间 10 年风险 5.9%–14.0% [证据]。</li>
+</ol>
+<h4>卡在因果链的哪一层</h4>
+<ul>
+<li><strong>遗传变异→分子：因果识别不足。</strong> 观察性蛋白组关联多数非因果，MR 与共定位大幅缩水 [证据]。这是当前最大瓶颈之一，尤其对心衰、房颤、出血性卒中，靶点与机制仍未知 [证据][常识]。</li>
+<li><strong>分子→细胞/组织：测量手段不足。</strong> 血浆蛋白无法定位心肌、血管、电传导系统；ECG/影像 AI 属朝阳但极新 [证据]。心脏类器官、iPSC-CM、器官芯片可补机制，但通量低 [常识]。</li>
+<li><strong>个体→人群：数据规模与多样性不足。</strong> 跨族裔 PRS 迁移差，归因于中国人群缺大规模 CAD GWAS [证据]；中国队列证据仅 n=2 [证据]。</li>
+<li><strong>人群→干预与转化：转化落地缺失。</strong> 临床转化子方向 median citations 为 0，组学方法尚未被指南采纳 [证据]。预测不等于干预，中间风险重分类后是否启动他汀、降压、抗凝仍缺硬终点。</li>
+<li>分病种看：ASCVD 的因果靶点较清楚，瓶颈在残余风险与跨人群校准；心衰/房颤瓶颈在测量与机制；糖尿病合并 CVD 判别力骤降 [证据]；出血性卒中预测差，机制与治疗都缺 [证据]。</li>
+</ul>
+<h4>主流研究角度为什么成立、在哪里失效</h4>
+<ul>
+<li><strong>大队列关联建模与风险评分</strong>：假设风险因素可加、关系稳定、可跨人群校准。它能回答个体风险分层，不能回答因果与干预时机。QRISK3 在 UKB 系统性高估，老年达 20% [证据]；新西兰与中国 EHR 年龄风险比差异显著，标准重校准未改善中国队列 [证据]。</li>
+<li><strong>多组学风险评分</strong>：假设分子签名捕捉病理，判别增量等于临床效用。实际增量有争议：117 蛋白使 C-index 0.669→0.774 [证据]，114 蛋白仅使 AUC 0.740→0.771 [证据]。<strong>组学价值更可能在中间风险重分类，而非整体 AUC</strong> [证据]。</li>
+<li><strong>ECG/影像 AI</strong>：假设电/结构信号先于临床事件且可泛化。能筛查无症状者，但硬终点、假阳性、成本、监管未解决 [证据][常识]。</li>
+<li><strong>EHR 基础模型/生成轨迹</strong>：假设数据全面、缺失随机。Delphi、ALADYNOULLI 能预测多病轨迹 [常识]，但不能证明干预有效；EHR 编码偏倚和测量频率偏倚会放大假信号 [常识]。</li>
+<li><strong>扰动预测/类器官</strong>：能回答分子到细胞机制，但跨到人群疾病与临床终点仍远 [常识]。</li>
+</ul>
+<h4>被低估的其他研究策略</h4>
+<ol>
+<li><strong>东亚 pQTL + MR 靶点验证</strong>：用 UKB-PPP、deCODE 发现，在 ChinaHEART/CKB 做 cis-pQTL 与共定位；围绕 PCSK9、IL-6R、LPA 等药物靶点验证。能同时打破因果识别与跨族裔瓶颈 [证据][常识]。</li>
+<li><strong>中间风险条件性检测 + 嵌套 RCT</strong>：多组学重分类中间风险者，随机强化他汀/降压/抗凝，硬终点读出。材料显示条件性检测临床获益最大 [证据]。</li>
+<li><strong>纵向多模态自然史</strong>：可穿戴 ECG/PPG、重复影像、重复蛋白组，捕捉事件前轨迹。UKB 重复测量、All of Us、ChinaHEART 随访可做 [常识]。</li>
+<li><strong>疾病分解 GWAS/MR</strong>：用 CARDIoGRAMplusC4D、HERMES、AFGen、MEGASTROKE 把复合 CVD 拆成 CAD、心衰、房颤、卒中亚型 [常识]。</li>
+<li><strong>iPSC-CM/心脏类器官扰动验证</strong>：CRISPRi 候选基因，读出钙瞬变、收缩力、电生理，桥接 MR 到机制 [常识]。</li>
+</ol>
+<h4>对他的含义</h4>
+<p>作为算法提供者，<strong>不可替代的贡献在跨队列校准与迁移、多模态缺失整合、因果推断算法和不确定性量化</strong>。UKB→ChinaHEART 可用域适应、层次贝叶斯、联邦学习；增量评估应用 NRI、决策曲线、校准曲线，而非只报 AUC [证据][常识]。MR/共定位/多效性检测是算法强项，但<strong>算法不能证明因果</strong>，必须靠实验、药物靶点随机化和 RCT [常识]。算法帮不上靶点生物学验证、临床干预闭环、成本效益与监管审批。</p>
+<h3>类器官与模式生物虚拟响应建模</h3>
+<ol>
+<li><strong>同一扰动在不同物种、个体和组织背景下的响应，哪些由保守调控网络决定，哪些由背景决定？</strong> 可证伪：若跨物种迁移模型在未见扰动上不能优于同源基因最近邻基线，则“可迁移表示”假设不成立。</li>
+<li><strong>类器官/器官芯片的药敏与扰动响应，能否因果预测患者临床结局，效应量多大？</strong> 需要前瞻性队列，而非仅回顾性相关。</li>
+<li><strong>组织/器官层面的响应，能否由早期单细胞、空间或影像读出预测？</strong> 关键在区分细胞毒、细胞静止、延迟凋亡，[证据] 提示以凋亡为终点可能系统性误判。</li>
+<li><strong>遗传变异→分子→细胞状态→组织形态的因果链中，哪个节点可干预？</strong> 例如 iPSC 类器官中编辑 GWAS/pQTL 位点，观察药物响应是否被逆转 [常识]。</li>
+</ol>
+<h4>卡在因果链的哪一层</h4>
+<p>不能一概而论。<strong>类器官扰动建模（2.1）主要卡在“因果识别不足”，部分卡在“转化与落地”。</strong> 测量已能到单细胞/空间，但 CINEMA-OT 依赖独立性与线性假设 [证据]，Perturb-FISH 发现邻居扰动和细胞密度影响响应 [证据]，说明群体平均因果估计会混淆微环境。临床对应虽成熟，但效应量不稳定、缺大规模前瞻验证 [证据]。</p>
+<p><strong>跨物种迁移（2.3）卡在“因果识别不足 + 数据多样性不足”。</strong> 现有工作多为表征对齐，CAME 依赖同源映射质量，SATURN 受嵌入质量与宏基因可解释性限制 [证据]；小鼠→人响应泛化边界未被验证 [证据]。<strong>模式生物扰动模型（2.2）卡在数据规模/多样性不足</strong>，仅 3 篇、中位引用 1 [证据]。<strong>虚拟组织（2.4）和评测/基准（3、5）卡在测量与数据不足</strong>，section 3 为 0 条，仅 AIVOs、VCBench 等零星工作 [证据]。因此，分子层测量不是唯一瓶颈；<strong>缺少匹配扰动、跨物种基准和前瞻结局，才是真正卡点</strong>。</p>
+<h4>主流研究角度为什么成立、在哪里失效</h4>
+<p><strong>患者来源类器官药敏预测</strong>成立，是因为它保留了患者遗传背景和组织结构，能回答“药物在离体组织水平是否有效”。但它隐含“离体响应≈患者结局”，且常以凋亡/ATP 为终点；SCOPE 与 Trellis 提示药敏可分为细胞毒、细胞静止、延迟细胞毒等，CAF 可保护癌细胞抵抗化疗 [证据]，因此单终点会失效。</p>
+<p><strong>跨物种基础模型/细胞嵌入</strong>成立，是因为细胞类型和调控网络有保守性，可做注释迁移。但它回答的是“表示是否对齐”，不是“扰动响应是否因果可迁移”；依赖同源映射和嵌入质量 [证据]。<strong>影像深度学习</strong>成立，是因为形态与分子状态相关，能预测凋亡强度、ATP 或组织结局 [证据]，但依赖大量标注，且对机制静默、瞬时响应和 3D 微环境失效。<strong>最优传输/因果配对</strong>能估计扰动效应，但独立性与线性假设在 3D 组织、邻居效应下常不成立 [证据]。</p>
+<h4>被低估的其他研究策略</h4>
+<ol>
+<li><strong>跨物种匹配扰动基准</strong>：在小鼠/斑马鱼/人源类器官施加同一药物或遗传扰动，scRNA+空间+影像读出，评估留出扰动迁移。已有跨物种细胞图谱和 Universal Cell Embeddings 可作底座 [证据]，但缺统一基准 [证据]。</li>
+<li><strong>人源遗传因果锚定</strong>：iPSC 类器官 + CRISPR 编辑 GWAS/pQTL 位点，做同基因背景、剂量-时间响应。NF1 在 HPV 相关上皮演化中的类器官工作提示该路径可行 [证据]，但全文未获取、局限未明。</li>
+<li><strong>空间/邻居感知扰动</strong>：用 Perturb-FISH 类方法在 3D 类器官中同时读 gRNA 与转录组 [证据]，显式建模细胞密度、邻居扰动和 niche，打破群体平均的因果混淆。</li>
+<li><strong>主动学习 + 虚拟组织/数字孪生</strong>：用影像/组学选择下一个最有信息量的扰动，Heart-on-a-Miniscope 已展示高时空钙成像能力 [证据]；关键是前瞻验证患者结局，而非仅拟合公共数据。</li>
+<li><strong>负结果与可复现性基准</strong>：标准化类器官空间转录组协议 [证据]，建立公开的类器官药敏、跨物种迁移和 VCBench 式评测 [证据]。没有基准，就没有可比较 SOTA [证据]。</li>
+</ol>
+<h4>对他的含义</h4>
+<p>作为算法提供者，他最不可替代的贡献在<strong>细胞状态表征、跨模态/跨物种对齐、因果推断、不确定性量化和基准设计</strong>这一层：例如用不变性学习区分保守与背景特异响应，用工具变量/负对照增强因果识别，用主动学习减少实验通量，输出“可迁移性分数”和校准置信区间。<strong>算法帮不上</strong>的问题包括：没有湿实验的因果扰动验证、前瞻临床结局、协议标准化，以及患者异质性背后的真实干预时机。他必须从实验设计阶段介入，要求匹配扰动、留出物种/队列、负对照和结局随访；否则只能做公共数据 demo，无法回答上述生物学问题。</p>
+<h3>人群健康与多组学 AI</h3>
+<ol>
+<li>
+<p><strong>疾病在个体层面是否存在少数可重复、有先后顺序的分子轨迹，使未来 5–20 年的发病与共病顺序可被预测、且跨医疗体系校准？</strong> 可证伪形式：训练队列之外校准斜率与 AUROC 不掉出预设阈值，且轨迹的时间箭头能被干预实验逆转。目前 Foresight-England 有 243M 参数、约 6100 万人训练数据，却因 NHS England 暂停数据访问导致定量结果不可得 [证据]。</p>
+</li>
+<li>
+<p><strong>共病是同一上游分子过程的多个下游表现，还是独立过程的叠加？</strong> 可证伪形式：亚型能否由独立于 EHR 共病标签的多组学特征重现，并对不同干预有差异化响应。ATM 在 UKB 282,957 人与 All of Us 211,908 人中识别 52 种共病异质性疾病、18 个亚型 PRS 显著异于同病其他亚型，但仅基于 EHR 共病信息、未纳入多组学 [证据]。</p>
+</li>
+<li>
+<p><strong>"遗传变异 → 分子 → 疾病"链条上未被加性常见变异解释的部分（隐性、CNV、非加性、性别/祖源特异）占多大比例？</strong> FinnGen 176,899 人隐性关联扫描显示同一变异杂合与纯合表型可不同，UKB 472,228 人 CNV 全表型关联发现 16p11.2、22q11.2 [证据]；69.1% 的蛋白存在性别差异，仅 15.3%/20.5% 可由已知生理通路解释 [证据]。</p>
+</li>
+<li>
+<p><strong>低成本生成的多组学（从稀疏血检生成代谢组/蛋白组）是否保有因果可用性？</strong> PULSE 在 251 个标志物上优于所有基准、6 种常见病 AUC 0.72–0.83，但可能继承训练队列偏差 [证据]。证伪形式：生成特征能否在外部队列复现 pQTL 方向与 MR 因果估计。</p>
+</li>
+</ol>
+<h4>卡在因果链的哪一层</h4>
+<p>分病种、分子问题分开说：</p>
+<ul>
+<li><strong>多组学+遗传整合（成熟子块，n=38，CNS_share=0.79）卡在"分子 → 组织/个体表型"的因果识别层。</strong> 测量与规模已不是瓶颈：UKB-PPP 54,219 人测 2,941 个蛋白，罕见编码变异路径鉴定 5,433 个罕见基因型-蛋白关联（81% 为既往 GWAS 未检出）[证据]。但 53,026 人、2,920 种蛋白关联 406 种现患与 660 种新发疾病、183 种疾病 AUC&gt;0.80 的结果，是在同一人群、缺乏外部验证下取得，<strong>不能等同于临床可用性</strong> [证据]。</li>
+<li><strong>生成式轨迹模型（朝阳，CNS_share=0.4）卡在"数据多样性 + 因果识别"的双重缺口。</strong> NOAH（559M 事件、299,000 患者）与 MiGHT-EHR 主要基于 MIMIC，ALADYNOULLI 仅覆盖三个生物库 [证据]；而结构化 EHR 的编码语义统一本身仍是争议（GRASP 用 LLM 语义嵌入在英芬美超 100 万…数据上做对齐）[证据]——<strong>EHR 记录的是就诊行为，不是生物学状态</strong>。</li>
+<li><strong>医学/EHR 基础模型（萌芽→朝阳）卡在转化与落地层，并且顶刊缺位。</strong> n=5、CNS_share=0.0、median_citations=15，Med-BERT、BEHRT 是高引奠基但新作引用尚低 [证据]，说明<strong>还没有任何一个被证明能改变临床决策的医学基础模型</strong>。</li>
+<li><strong>组学衰老时钟（朝阳）卡在因果识别</strong>：纵向蛋白组衰老指数可预测死亡/共病 [证据]，但"衰老是原因还是结果"需扰动实验区分；运动逆转蛋白组衰老 [证据] 是少有的人类扰动证据。</li>
+<li><strong>干预层卡在"仿真—真实"鸿沟</strong>：EHR-MPC 用生成式数字孪生+模型预测控制在 8 家医院 ICU 脓毒症队列上离线策略与强化学习基线相当，但仿真到真实的差距仍是主要局限 [证据]。</li>
+<li><strong>心血管/中国人群线下，瓶颈更偏"测量与人群多样性 + 转化"。</strong> 中国人群缺本土 pQTL/PRS 参考，China-PAR、China Kadoorie Biobank 已提供队列基础，但蛋白组-遗传参考面板待建 [常识]。</li>
+</ul>
+<h4>主流研究角度为什么成立、在哪里失效</h4>
+<ul>
+<li><strong>大队列关联建模（GWAS/pQTL/PheWAS）</strong>：成立，因为它把相关结构变成可假设生成的公共资源；失效在加性常见变异假设、单队列单祖源（UKB 欧洲裔为主），并且它给不出干预后效应。PCSK9 抑制（evolocumab/inclisiran）、IL-6 配体抑制（ziltivekimab 的 ZEUS 试验，待核实）之所以重要，正是因为它们把人类遗传学关联锚定成了真实干预效应量 [常识]。</li>
+<li><strong>生成式自回归轨迹模型</strong>：隐含假设是"纵向 EHR 的转移结构 = 疾病自然史"。它学到的是 P(下一个编码|历史)，不是 P(疾病|干预)，<strong>因此天然无法做反事实外推</strong>；且规模扩张与可验证性存在结构性张力 [证据]。</li>
+<li><strong>医学基础模型/自监督</strong>：假设表征可迁移；但 EHR token 语义不统一、缺失非随机，跨体系泛化普遍未验证 [证据]。</li>
+<li><strong>扰动预测（类器官/模式生物）</strong>：假设体外响应可映射到体内，失效在组织/器官层面的微环境、免疫与灌注丢失——它应被用作 MR 的中间表型锚点，而非终点替身 [常识]。</li>
+<li><strong>PRS 临床化</strong>：171,095 人、48 个冠心病 PRS 评估显示群体表现相似者个体一致性差（ICC 与 Light κ 低），<strong>"选哪个 PRS"本身成了临床决策问题</strong> [证据]。</li>
+</ul>
+<h4>被低估的其他研究策略</h4>
+<ol>
+<li><strong>cis-pQTL 作工具变量的"药物靶点锚定 MR"+ 队列复现</strong>：用 UKB-PPP、deCODE 蛋白组，对已上市靶点（PCSK9、IL-6R、ANGPTL3）检验队列估计是否复现随机试验的方向与量级 [常识]。<strong>它把关联升级为"可干预性先验"</strong>，且人类天然随机化解决混杂与反向因果。</li>
+<li><strong>小 n、长 t 的高密度纵向个体，与大队列互补</strong>：用重复采样的深表型个体学时序结构，再外推给稀疏队列，而不是相反。稀疏时间点区分不了先后，这是 Delphi 类模型的根本限制 [证据]。</li>
+<li><strong>家系内设计（同胞对、三人组 TDT、within-family GWAS）</strong>：直接估计非加性、隐性、CNV 与去混杂的家系内效应，绕开群体分层与 dynastic effects。材料已指出非加性与双等位效应覆盖明显不足 [证据]；冰岛 deCODE、挪威 MoBa 是可行平台 [常识]。</li>
+<li><strong>测量升级路线：把 EHR 编码换成连续生物学读出</strong>（ECG、影像、可穿戴）。Mayo 的 AI-ECG 低射血分数筛查、房颤机会性筛查已证明 ECG 可携带未被编码的生物学信息 [常识]；ChinaHEART 含心电与血生化，是天然试验场 [证据]。</li>
+<li><strong>前瞻性实用性试验 + 数字孪生外部对照</strong>：把模型直接放进决策链，用模型预测对照提升随机化效率（如 Unlearn.AI 数字孪生对照，待核实）。EHR-MPC 已示范离线路线 [证据]，缺的是真实前瞻。</li>
+</ol>
+<h4>对他的含义</h4>
+<p><strong>他能做出不可替代贡献的层：数据与表征层，以及评测层。</strong> 材料明确指出外部验证不足是系统性短板 [证据]，而评测/可复现性板块 n=2、CNS_share=0.0，是整个方向最明显的结构性缺口 [证据]。这意味着：跨队列校准、缺失模态处理、模态增量对齐、个体级一致性与不确定性量化——<strong>这些恰好是"算法支持者"拥有主场、且能定义领域标准的位置</strong>。</p>
+<p>具体可迁移的四件事：(a) 把类器官项目的缺失模态/持续学习技术直接迁到人群队列的多模态整合；(b) 为跨祖源（UKB→ChinaHEART）建可复现的迁移与重校准基准；(c) 把因果约束嵌入生成模型（MR 锚定、去混杂表征），而非只追预测 AUROC；(d) 做 PRS/模型个体一致性的聚合框架 [证据]。</p>
+<p><strong>算法帮不上、必须靠实验与临床设计的</strong>：生成数据的因果有效性（需真实扰动或独立多组学验证）；干预时机与人群选择（需 RCT 与实用性试验）；跨祖源测量偏倚（需真实抽样与本土测序参考面板，如中国人群 pQTL）；类器官响应向体内映射（需动物或临床锚定）[常识]。把这些当作模型的<strong>输入约束</strong>而不是建模对象，是这个角色最省力的正确姿势。</p>
+<h3>LLM 科研智能体与可验证奖励强化学习</h3>
+<ol>
+<li><strong>LLM 智能体提出的生物医学假设，能否在独立湿实验或独立队列中复现？</strong> Co-Scientist 在 AML 药物重定位、肝纤维化靶点、细菌基因转移机制上获体外验证，但仅 3 个案例且依赖人类介入 [证据]。可证伪形式：把智能体输出冻结后，由第三方实验室盲测，复现率是否显著高于专家基线。</li>
+<li><strong>可验证奖励与真实生物学因果一致时，RL 微调是否带来可迁移的因果推理，而非策略重加权？</strong> 虚假奖励仍使 MATH-500 提升 21.4 点，单样本 RLVR 从 36.0% 升至 73.6% [证据]。可证伪形式：在 Perturb-seq、pQTL（如 UKB-PPP、deCODE）或 MR 任务上，用随机/负奖励对照，看增益是否消失 [常识]。</li>
+<li><strong>科研智能体的过程级验证信号能否从公共多组学数据自动构造，并达到专家水平？</strong> R-Judge 显示最佳 GPT-4o 仅 74.42%、多数模型未显著超随机 [证据]。可证伪形式：在单细胞聚类注释、批次校正、差异表达每一步设自动判定，测智能体是否在无人工干预下稳定通过。</li>
+<li><strong>跨模态（EHR+蛋白组+甲基化+单细胞）智能体能否在跨队列（UKB→ChinaHEART）上生成校准良好的疾病轨迹并指导筛查？</strong> Delphi、ALADYNOULLI 展示生成式轨迹与亚型发现潜力 [常识]，但跨人群可复现性未证。可证伪形式：在 ChinaHEART 上外部验证，比较对 PCE/SCORE2/China-PAR 的增量 [常识]。</li>
+</ol>
+<h4>卡在因果链的哪一层</h4>
+<p>因果链：遗传变异 → 分子 → 细胞状态 → 组织/器官 → 个体表型与疾病 → 人群 → 干预与转化。</p>
+<ul>
+<li><strong>遗传变异→分子</strong>：测量已成熟（UKB、FinnGen、Olink/SomaScan、甲基化芯片），MR、pQTL 可做因果推断 [常识]。瓶颈是<strong>因果识别不足</strong>：智能体擅长文献综合，但不能替代工具变量假设与混杂控制 [证据]。</li>
+<li><strong>分子→细胞状态</strong>：单细胞与扰动数据（Perturb-seq、CellxGene）增长快，但过程验证缺失。2.4 信用分配与验证仅 n=2、一篇 0 引用 [证据]，说明智能体无法判断中间步骤对错。</li>
+<li><strong>细胞→组织/器官</strong>：类器官、空间转录组可测，但跨尺度实验设计仍依赖人。Co-Scientist 三个案例均需人类介入 [证据]，瓶颈是<strong>转化与落地</strong>及部分测量手段不足 [常识]。</li>
+<li><strong>个体→人群</strong>：EHR/大队列数据丰富，Delphi 学 40 万 UKB + 190 万丹麦人 EHR [常识]，但跨队列校准与可复现仍是瓶颈，尤其中国人群 ChinaHEART [常识]。</li>
+<li><strong>人群→干预转化</strong>：RCT、目标试验模拟是金标准（如 FOURIER、IMPROVE-IT）[常识]，智能体目前只辅助假设生成。瓶颈是<strong>转化与落地（干预时机、人群、成本）</strong>。</li>
+</ul>
+<p><strong>主要瓶颈不是数据规模，而是因果识别与验证信号缺失</strong>。RLVR 在数学有收敛主线，但生物医学奖励稀疏、昂贵、噪声大，2.4 几乎空白 [证据]。</p>
+<h4>主流研究角度为什么成立、在哪里失效</h4>
+<p>主流做法：提示式推理-行动（ReAct）、端到端 AI Scientist、科学家在环多智能体（Co-Scientist）、RLVR/GRPO、自我改进、工具自动生成。隐含假设有四条：</p>
+<ol>
+<li><strong>语言模型内的世界知识足够生成可验证假设</strong>。ReAct 在 ALFWorld 提升 34%、WebShop 提升 10% [证据]，但依赖提示与外部 API、未大规模 RL 训练 [证据]。在生物医学，Co-Scientist 仅 3 案例 [证据]，可扩展性未证。</li>
+<li><strong>奖励正确性决定增益</strong>。虚假奖励仍提升 21.4 点，单样本 RLVR 从 36.0% 到 73.6% [证据]，<strong>说明增益可能主要来自策略梯度对既有行为的放大，而非新推理能力</strong>。失效点：生物医学无法像数学用规则验证，奖励一错，RL 放大的是错误模式。</li>
+<li><strong>自改进可递归提升</strong>。自改进编码智能体在 SWE Bench Verified 从 17% 升至 53% [证据]，但 AI4AI-Bench 平均仅 0.166、RSIBench-Data 中 78.26% 继续搜索以更低分收尾 [证据]，说明开放科研任务存在能力断层。</li>
+<li><strong>工具调用等于科学正确</strong>。ToolMaker 正确实现 80% 任务、MatClaw 每步 API 准确率约 99% [证据]，但生物医学工具（Seurat、Scanpy、DESeq2）有大量隐含假设，自动调用不等于因果正确 [常识]。</li>
+</ol>
+<p>能回答到：文献综合、代码执行、部分假设生成。回答不了：因果识别、湿实验闭环、跨队列可复现、临床转化。</p>
+<h4>被低估的其他研究策略</h4>
+<ol>
+<li><strong>过程级可验证奖励 + 单细胞/多组学流程</strong>：用 Cell-o1 的单细胞推理任务 + BixBench 计算生物学任务 [证据]，把聚类注释、批次校正、差异表达每一步做成自动判定的中间奖励。2.2 有 40 条但 2.4 仅 2 条 [证据]，生物医学过程奖励窗口约 18–24 月 [证据]。</li>
+<li><strong>批判性验证器与反事实基准</strong>：把 R-Judge 类安全风险基准 [证据] 扩展为生物医学因果验证器，用 UKB 的 MR、FinnGen 的 pQTL、ChinaHEART 随访作自然实验 [常识]。验证器本身待验证，GPT-4o 仅 74.42% [证据]。</li>
+<li><strong>跨模态科研智能体 + 类器官闭环</strong>：类器官扰动 + 单细胞读出，让智能体设计扰动、预测响应、再实验验证，参考 Perturb-seq、Cell Painting [常识]。生物医学智能体 n=4、CNS 占比 0.0 [证据]，空白大。</li>
+<li><strong>人群生成式轨迹 + 智能体审计</strong>：Delphi、ALADYNOULLI [常识] 生成 20 年健康轨迹、找亚型；用 LLM 智能体做跨队列可复现性审计，优先 ChinaHEART 中国人群 [常识]。</li>
+<li><strong>RLVR 的“重加权 vs 扩展”判别实验</strong>：设计单样本、虚假/负奖励对照，在生物医学任务上重复 [证据] 的发现。若只是重加权，应转向数据与验证器设计，而非大规模 RL [证据]。</li>
+</ol>
+<h4>对他的含义</h4>
+<p>作为算法提供者，<strong>在验证信号构造与信用分配层能做出不可替代的贡献</strong>：做过程奖励模型、树搜索（TreeRL [证据]）、最小信用分配（PURE [证据]），把生物医学流程拆成可自动判定的中间奖励。2.4 萌芽且 n=2 [证据]，窗口 18–24 月 [证据]。</p>
+<p><strong>在多模态/跨队列整合层也是强项</strong>：结合衰老、PBMC、单细胞、药物筛选背景，把 LLM 智能体与单细胞基础模型、蛋白语言模型、aging clock 结合，处理缺失模态、跨队列校正、持续学习。这是合作项目直接需要的。</p>
+<p><strong>可建评测基准</strong>：ScienceAgentBench、CORE-Bench、BixBench、BioKGBench [证据] 还小，可做 ChinaHEART/类器官专属 benchmark，但 CNS 占比 0.0 [证据]，影响力待建立。</p>
+<p>算法帮不上的：湿实验验证、临床 RCT、干预时机与人群选择、伦理监管。R-Judge 显示验证器上限有限 [证据]，Co-Scientist 仍需人类介入 [证据]。<strong>必须靠实验或临床设计提供真实因果锚点</strong>。</p>
+<p><strong>不要陷入纯 RLVR 算法增量</strong>：窗口约 6–12 月 [证据]，且 [84] 质疑 RL 是否真正扩展推理 [证据]。应转向生物医学过程级验证 + 多模态闭环，那里有 18–24 月窗口 [证据]。</p>
+<h3>单细胞与空间组学基础模型与虚拟细胞</h3>
+<ol>
+<li><strong>在给定遗传背景和细胞状态下，哪些分子扰动是充分/必要的，能把细胞从状态 A 推到状态 B，并跨供体、平台、物种复现？</strong> 可证伪：留出扰动/供体预测效应量，必须优于均值、HVG、线性基线 [证据]。</li>
+<li><strong>非转录模态（蛋白、空间、形态）能否唯一约束细胞状态与细胞间通讯？</strong> 可证伪：在 Visium HD、Xenium、CosMx、Stereo-seq 等平台间，同一组织的状态标签与邻接关系应可复现 [证据]。</li>
+<li><strong>遗传变异到疾病表型的效应，是否由特定蛋白/代谢/细胞状态中介，并可用于风险分层与干预选择？</strong> 可证伪：pQTL-MR 预测的靶点方向应与随机试验一致，如 PCSK9、IL-6 通路 [常识]。</li>
+<li><strong>类器官/模式生物的扰动响应能否映射到人的临床终点？</strong> 可证伪：跨物种扰动效应相关，且预测的干预在类器官、小鼠、人群随访中方向一致 [常识]。</li>
+</ol>
+<h4>卡在因果链的哪一层</h4>
+<ul>
+<li><strong>遗传变异 → 分子</strong>：人群 pQTL/meQTL 已可测，但多效性、连锁不平衡和反向因果使因果识别不足；MR、colocalization 可部分解决 [常识]。</li>
+<li><strong>分子 → 细胞状态</strong>：<strong>主要瓶颈是因果识别不足叠加测量手段不足</strong>。Perturb-seq 数据常受限于数百分子、少数细胞系与供体 [证据]；深度学习扰动预测尚未跑赢简单基线，PerturBench 显示泛化受限 [证据]。</li>
+<li><strong>细胞状态 → 组织/器官</strong>：<strong>测量手段与数据多样性不足</strong>。空间平台性能差异显著，SEA-AD 虽整合 340 万核/84 供体但主要聚焦 MTG [证据]。这限制细胞状态到组织空间因果的推断。</li>
+<li><strong>个体表型/人群 → 干预与转化</strong>：<strong>转化落地不足</strong>。虚拟细胞路线图已被提出，但尚未给出模型结果，临床验证缺失 [证据]；大队列风险预测可做，但跨人群校准必须重做，ChinaHEART 不能直接套 UKB 模型 [常识]。</li>
+</ul>
+<h4>主流研究角度为什么成立、在哪里失效</h4>
+<p>主流基础模型隐含三个假设：细胞“语言”可自监督学；规模越大泛化越好；最终层嵌入默认最优。它能回答注释、整合、检索，Geneformer/scGPT 已成默认基线 [证据]，SCimilarity 在 2340 万细胞上做检索也成立 [证据]。但零样本评估中 Geneformer、scGPT 多数指标低于 HVG、Harmony、scVI [证据]；400 个模型、6400 次实验未发现清晰缩放定律 [证据]；轨迹推断中间层优于最终层达 31%，扰动最优层随 T 细胞激活偏移 0–96% [证据]。<strong>所以“更大+最终层”不是可靠因果策略。</strong> 扰动预测假设留出扰动精度等于泛化，但 2025 年明确“未跑赢基线” [证据]。空间多模态假设配对对齐可迁移，但平台异质性强，CellWorld 仅 5.74M 参数就在 11 个线性探针和 7 个空间基准上超基线 [证据]。大队列关联建模能预测风险，不能识别机制；必须用 MR、负对照、随机试验补因果 [常识]。</p>
+<h4>被低估的其他研究策略</h4>
+<ol>
+<li><strong>干预锚定的因果表征学习</strong>：用 genome-scale Perturb-seq、Tahoe-100M、CRISPRi 作为真实扰动，目标不是重建表达，而是预测未见扰动的效应方向与效应量。代表：Replogle 等 genome-scale Perturb-seq [证据]。可结合心脏类器官敲低 MYH7、TTN，直接测状态转移 [常识]。</li>
+<li><strong>低参数跨模态继续预训练</strong>：70M 参数跨模态蛋白质组模型在多数基准匹配或超过 1B/3B RNA-only 模型 [证据]；CellWorld 以 5.74M 参数超基线 [证据]。<strong>归纳偏置和模态先验可能比参数规模更关键。</strong></li>
+<li><strong>任务条件层选择与标准化探针</strong>：逐层分析显示中间层在轨迹和扰动任务上更优 [证据]。应把“哪一层、哪一探针、哪一基线”做成公共基准，而不是默认最终层。</li>
+<li><strong>人群自然实验 + 多组学 MR</strong>：用 UKB-PPP、deCODE pQTL、ChinaHEART 随访，把 PCSK9、Lp(a)、IL-6 等通路锚定到冠心病/心衰结局，再用 FOURIER、CANTOS 等试验交叉验证 [常识]。这能打破“关联多、因果少”。</li>
+<li><strong>类器官与模式生物跨物种扰动</strong>：用心脏类器官、斑马鱼、小鼠做扰动，读出单细胞/空间/蛋白；如 IL-11 抑制延长小鼠健康寿命 [常识]。跨物种映射可补人类扰动数据不足，但需同源基因与剂量校准。</li>
+</ol>
+<h4>对他的含义</h4>
+<p>作为算法提供者，<strong>不可替代的贡献在跨队列/跨平台校正、缺失模态处理、持续学习、层探针标准化、因果表征与评测基准</strong>。类器官项目不要只追大模型，先建“扰动锚定 + 留出扰动/供体”的基准；ChinaHEART 上可先做 pQTL/PRS+EHR 生成式轨迹，但必须做中国人群校准与外部验证 [常识]。算法帮不上的是：实验扰动验证、临床终点 adjudication、随机试验、样本多样性与平台质控——这些必须靠实验和临床设计。</p>
+<h3>虚拟细胞与扰动响应预测</h3>
+<ul>
+<li>给定细胞类型、组织、年龄、遗传背景与微环境，遗传/药物/环境扰动引起的分子状态改变，有多少可由调控网络和当前状态决定，多少必须实测？留出扰动、留出上下文后还能否预测？[证据]</li>
+<li>扰动效应是因果效应，还是选择、组成、批次或培养条件造成的关联？剂量、时间、组合扰动下的因果响应函数是什么？[证据][常识]</li>
+<li>响应函数是否跨语境可迁移：细胞系→原代/类器官/体内，小鼠→人，年轻→衰老，健康→疾病？哪些维度不变，哪些上下文依赖？[证据]</li>
+<li>多扰动组合（CRISPR 互作、药物联用）能否由单扰动响应组合预测，上位效应在什么条件下出现？[常识：Norman 2019、Replogle 2022]</li>
+</ul>
+<h4>卡在因果链的哪一层</h4>
+<p>因果链：遗传变异 → 分子 → 细胞状态 → 组织/器官 → 个体表型与疾病 → 人群 → 干预与转化。</p>
+<ul>
+<li><strong>遗传变异→分子</strong>：pQTL/MR 可识别部分因果，但多效性、连锁、组织特异性限制。扰动预测的主要瓶颈不是数据规模，而是<strong>因果识别不足 + 跨语境测量不足</strong>。[证据][常识]</li>
+<li><strong>分子→细胞状态</strong>：当前模型多停在表达 Δ，静态表达谱、轨迹重塑、状态比例、治疗前分层定义不一，导致基准不可比；生成质量与生物学正确性脱节，需额外因果约束。[证据]</li>
+<li><strong>细胞状态→组织/器官</strong>：原代与体内覆盖稀疏，空间维度刚起步，类器官/器官芯片缺大规模扰动读出。这是<strong>测量手段不足 + 数据多样性不足</strong>。[证据]</li>
+<li><strong>个体表型/人群→干预</strong>：EHR/队列模型能预测风险，但干预时机、剂量、成本、人群校准仍靠试验；随机细胞划分和患者队列泄漏足以推翻临床结论。[证据][常识]</li>
+<li><strong>衰老子问题</strong>：瓶颈在跨语境因果识别。衰老是慢变量，常与供体、炎症、批次混淆；类器官可做扰动但缺纵向多组学。[常识]</li>
+</ul>
+<h4>主流研究角度为什么成立、在哪里失效</h4>
+<ul>
+<li><strong>大规模预训练基础模型</strong>（scGPT/scFoundation）：假设“细胞语言”可迁移、规模换泛化。能答表征与部分扰动预测；但未针对扰动设计归纳偏置，预训练规模/多样性未必有用，平台期且无明确 scaling law。[证据]</li>
+<li><strong>生成模型</strong>（flow matching/diffusion/OT；D²R²、scBalFlow、SCALE、X-Cell）：假设扰动响应是可学的条件分布。能处理非配对、不平衡、生成表达；但 KNN/知识图谱强基线可击败复杂模型，药物盲性能骤降，生成质量≠生物学正确。[证据]</li>
+<li><strong>知识注入 GRN/TF 先验</strong>（scKITE、D-SPIN、RegVelo）：假设调控网络是机制骨架。低数据下高效、可解释；但 GRN 上下文依赖、不唯一，静态网络难外推组合与时间。[证据][常识]</li>
+<li><strong>世界模型/闭环智能体</strong>（VCWM、Chreode、CellScientist）：假设细胞是可规划动态系统。方向吸引人；但定量结果少、无引用积累，概念包装风险高。[证据]</li>
+<li><strong>基准与效度批判</strong>：正把领域从“刷模型”推向“验效度”；但评测标准未定，随机划分泄漏使结论不稳定。[证据]</li>
+</ul>
+<h4>被低估的其他研究策略</h4>
+<ol>
+<li><strong>跨语境效度地图</strong>：固定模型与扰动，系统留出细胞类型、供体、器官、物种、年龄；用公共 Perturb-seq、空间 CRISPR、类器官多组学。产出“哪些扰动在哪类语境可预测”的边界。代表：scArchon、系统比较。[证据]</li>
+<li><strong>衰老作为条件扰动轴</strong>：在类器官/PBMC/小鼠中用 rapamycin、senolytics、partial reprogramming 等扰动，纵向单细胞多组学读出；检验衰老是否改变扰动响应函数。代表：X-Cell/RegVelo 的条件化扩展思路。[证据][常识]</li>
+<li><strong>主动学习闭环实验</strong>：算法选最有信息量的 CRISPR/药物组合与时间点，类器官做 Perturb-seq/蛋白组/成像。直接打破因果识别与数据多样性瓶颈。代表：CellScientist 的假设—实现闭环。[证据]</li>
+<li><strong>跨物种扰动迁移</strong>：小鼠/斑马鱼/类器官→人，用同源映射与保守 GRN 约束；读出扰动转录组和表型。原代/体内稀疏使这类工作稀缺。[证据][常识]</li>
+<li><strong>从风险预测到干预因果</strong>：在 UKB/ChinaHEART 等队列用 MR、target trial emulation、pQTL 锚定可干预靶点，再用类器官验证。代表：ALADYNOULLI 式生成模型可作轨迹假设源。[证据][常识]</li>
+</ol>
+<h4>对他的含义</h4>
+<ul>
+<li><strong>算法不可替代处</strong>：跨模态/跨队列对齐、缺失模态、供体/批次校正、持续学习；构建效度地图与基准；用因果表示、负对照、MR/试验模拟做因果识别。你已有类器官多模态合作，边际成本最低的是做“跨语境评测 + 类器官扰动”。[证据][常识]</li>
+<li><strong>能帮上但需实验闭环</strong>：主动学习选扰动、剂量、时间；世界模型做假设生成；生成模型做候选轨迹。这些只能排序假设，不能单独证明机制。[证据]</li>
+<li><strong>算法帮不上</strong>：未测混杂、真实因果机制、体内组织互作、干预成本/伦理/终点。必须靠 CRISPR/药物扰动、类器官/模式生物、临床试验设计。<strong>不要再用另一个生成模型追 SOTA；应把模型当实验设计器和效度检验器。</strong> [证据][常识]</li>
+</ul>
+<h3>世界模型与自监督表征学习</h3>
+<ul>
+<li><strong>细胞/组织状态是不是一个可预测的隐状态</strong>：给定当前多模态快照和已知扰动，能否预测未见过时间点、供体或扰动下的分子与细胞状态？可证伪：在类器官/小鼠扰动数据中留出扰动、供体、时间点，比较 JEPA 式隐空间预测与重建/监督基线。</li>
+<li><strong>衰老与心血管轨迹能否被低维隐状态生成并在独立队列复现</strong>：用 UKB、ChinaHEART 等纵向 EHR+蛋白组，隐状态能否预测 10–20 年病种发生，且外部校准优于 PCE/China-PAR/SCORE2？可证伪：跨队列校准、决策曲线、时间外推。</li>
+<li><strong>遗传变异是否通过特定分子中介改变细胞状态并导致疾病</strong>：顺式 pQTL/MR 锚定蛋白后，隐空间干预方向是否与遗传预测一致，并复现下游疾病风险？可证伪：用 UKB-PPP、deCODE 等 pQTL 做留出验证 [常识]。</li>
+</ul>
+<h4>卡在因果链的哪一层</h4>
+<p>因果链：遗传变异 → 分子 → 细胞状态 → 组织/器官 → 个体表型与疾病 → 人群 → 干预与转化。</p>
+<ul>
+<li><strong>分子→细胞：测量手段不足。</strong> 世界模型需要时序、干预、配对多模态；但组学多为破坏性采样，纵向同细胞轨迹稀缺。证据材料里“向科学数据迁移”仅 7 条，而“数据与基准”为 0 条 [证据]。</li>
+<li><strong>细胞→组织/个体：因果识别不足。</strong> 隐空间距离近不等于干预有效；D-JEPA 已指出潜距离更近的动作可能实际失败 [证据]。生物中混杂、供体效应、批次会放大这种伪因果。</li>
+<li><strong>个体→人群：数据规模与多样性不足，尤其跨队列。</strong> UKB 偏欧洲，ChinaHEART、China Kadoorie Biobank 等中国人群多组学仍在建设 [常识]。世界模型方法尚未证明跨人群校准。</li>
+<li><strong>干预与转化：落地瓶颈。</strong> 风险预测若不接入筛查-干预闭环和实用性 RCT，临床增量有限；PCSK9、Lp(a)、IL-6 等靶点已有试验范式，但算法预测本身不产生干预证据 [常识]。</li>
+</ul>
+<h4>主流研究角度为什么成立、在哪里失效</h4>
+<p>主流做法是 JEPA/世界模型、掩码/自蒸馏、基础模型、大队列关联建模、扰动预测。它们隐含假设：隐空间平滑、时间近似马尔可夫、干预可泛化、缺失模态可对齐、数据分布内。V-JEPA 2 在百万小时视频上验证了规模化隐空间预测 [证据]；MAE/DINO 等经典自监督也已成熟 [证据]。</p>
+<p>但在生物数据上，这些假设常失效：生物状态非平稳、干预异质、测量破坏性、混杂强。防坍塌机制仍有路线冲突，LeJEPA 与 SiamJEPA 评测域不同，无法统一裁决 [证据]；表格基础模型上 JEPA 臂甚至落后于仅值目标臂 [证据]；评测协议不同使“跨模态优于纯 3D 自监督”不能简单成立 [证据]。大队列关联能回答风险分层，回答不了分子机制与干预时机；Delphi/ALADYNOULLI 类生成轨迹模型可生成合成健康轨迹，但生物学可解释性仍弱 [常识，待核实]。</p>
+<h4>被低估的其他研究策略</h4>
+<ol>
+<li><strong>纵向干预类器官图谱</strong>：用 CRISPRi/药物/衰老诱导扰动心脏、血管类器官，多时间点读单细胞+蛋白+影像。它能打破“数据与基准为 0”的空档 [证据]。代表：Perturb-seq、Cell Painting、器官芯片 [常识]。</li>
+<li><strong>遗传自然实验锚定因果隐空间</strong>：在 UKB-PPP、deCODE、ChinaHEART 中用 pQTL/MR，读出 Olink/SomaScan 蛋白组与 EHR 终点，找可复现蛋白-疾病轴，如 PCSK9、Lp(a)、IL-6 [常识]。这直接补因果识别层。</li>
+<li><strong>跨物种扰动迁移</strong>：小鼠、斑马鱼、线虫、果蝇加人类器官，做同源映射，测试隐表示是否共享。它能把机制发现从模式生物推到组织/个体层 [常识]。</li>
+<li><strong>生物多模态 SSL 基准与负对照</strong>：设计模态丢弃、队列留出、时间切分、批次负对照，测下游临床与机制任务。当前该板块 n=0 [证据]，谁先建谁定标准。</li>
+<li><strong>Test-time 临床适配</strong>：在 ChinaHEART 随访中滚动校准、持续学习，处理分布漂移。证据材料仅单条相关线索 [证据]，但很可能成为落地关键。</li>
+</ol>
+<h4>对他的含义</h4>
+<p>作为算法提供者，不可替代的贡献在<strong>测量→表征→跨队列泛化</strong>这一层：设计带因果正则的隐空间预测、缺失模态对齐、跨队列校正、持续学习、评测基准和科研智能体工作流。他能把高维多模态压成可迁移状态，生成假设，做风险分层和扰动响应预测。</p>
+<p>但算法帮不上三类事：没有纵向干预/配对数据时，<strong>算法不能造因果</strong>；靶点机制必须靠 Perturb-seq、类器官、MR 等实验或自然实验；临床落地必须靠 RCT、筛查-干预闭环和真实世界证据。<strong>算法能压缩状态、生成假设，不能替代实验扰动与临床终点。</strong></p></section></article></main></body></html>
