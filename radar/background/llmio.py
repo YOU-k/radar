@@ -19,11 +19,20 @@ class RadarLLM:
     """走 radar/llm.py（OpenAI 兼容端点）。task 决定模型档位。"""
 
     def __init__(self, cheap: str | None = None, strong: str | None = None):
+        import os
         self.cheap = cheap or radar_llm.SCORE_MODEL
         self.strong = strong or radar_llm.SYNTH_MODEL
+        # 全局判断要推理，默认用 DeepSeek 推理模型；换了服务商时设 PRINCIPLES_MODEL，调用失败自动退回 strong
+        self.reason = os.environ.get("PRINCIPLES_MODEL") or "deepseek-reasoner"
 
     def chat(self, prompt: str, *, task: str = "", temperature: float = 0.2,
              timeout: int = 180) -> str:
+        if task == "principles":
+            try:
+                return radar_llm.chat(prompt, model=self.reason, temperature=temperature, timeout=timeout)
+            except Exception as exc:
+                print(f"[llm] {self.reason} failed ({exc}); fallback to {self.strong}")
+                return radar_llm.chat(prompt, model=self.strong, temperature=temperature, timeout=timeout)
         model = self.strong if task in ("compile", "outline", "gap") else self.cheap
         return radar_llm.chat(prompt, model=model, temperature=temperature, timeout=timeout)
 

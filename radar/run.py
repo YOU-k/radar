@@ -188,6 +188,12 @@ def cmd_background(args) -> None:
     llm = llmio.RadarLLM() if (llmio.available() and not args.no_llm) else None
     if llm is None:
         print("[background] 无 LLM key：只做检索/去重，不评审、不编译")
+    if args.action == "principles":
+        if llm is None:
+            raise SystemExit("[background] principles 需要 LLM")
+        from .background.principles import run_principles
+        print(f"[background] wrote {run_principles(llm)}")
+        return
     if args.action == "prioritize":
         if llm is None:
             raise SystemExit("[background] prioritize 需要 LLM")
@@ -239,7 +245,7 @@ def main() -> None:
         p.add_argument("--days", type=int, default=1)
         p.add_argument("--no-llm", action="store_true")
     p = sub.add_parser("background", help="方向背景库：init / bootstrap / renew / compile")
-    p.add_argument("action", choices=["init", "bootstrap", "renew", "compile", "refetch", "resources", "prioritize", "joint"])
+    p.add_argument("action", choices=["init", "bootstrap", "renew", "compile", "refetch", "resources", "prioritize", "joint", "principles"])
     p.add_argument("--topic", required=True, help="slug，如 population-omics-ai；all = 全部方向")
     p.add_argument("--name", default="", help="init 用：方向中文名")
     p.add_argument("--rounds", type=int, default=0, help="bootstrap 轮数，0 = topic.yaml 的 budget.rounds")

@@ -416,7 +416,9 @@ def build_site(today: date | None = None) -> Path:
                  if weeklies else '<div class="empty">暂无周报。</div>')
     day_html = ("\n".join(_render_digest(p, i == 0) for i, p in enumerate(digests))
                 if digests else '<div class="empty">暂无日报。</div>')
-    bg_reports = sorted((ROOT / "background").glob("*/report.md"))
+    pinned = {"_principles": 0, "_joint": 1}  # 全局判断置顶，联合分析第二，其余按方向名
+    bg_reports = sorted((ROOT / "background").glob("*/report.md"),
+                        key=lambda p: (pinned.get(p.parent.name, 2), p.parent.name))
     bg_html = ("\n".join(_render_background(p) for p in bg_reports)
                if bg_reports else '<div class="empty">暂无方向背景报告。</div>')
     res_parts = []

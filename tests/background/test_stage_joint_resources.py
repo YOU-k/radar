@@ -140,3 +140,25 @@ def test_prioritize_and_themes(monkeypatch):
     assert reg["uk biobank"]["priority"] == "P0" and reg["scgpt"]["why"] == "旧理由"
     md = R.render(reg)
     assert md.index("## P0 优先上手（1）") < md.index("## P1 值得登记（1）") and "#心血管 #人群队列" in md
+
+
+def test_principles_report(spec, monkeypatch):
+    from radar.background import principles as P
+    monkeypatch.setattr(P, "_profile", lambda: "应用线：心血管")
+    evs = _evs()
+    o = Outline.from_spec(spec); o.attach("2.1", [e.id for e in evs])
+    spec.report_path.write_text(compile_report(spec, o, evs, FakeLLM(), 0.5, 2), encoding="utf-8")
+    calls = []
+
+    class L:
+        def chat(self, prompt, task="", **kw):
+            calls.append((task, prompt))
+            if "跨领域的全局判断" in prompt:
+                return "## 总判断\n| 领域 | 问题 |\n|---|---|\n| A | b |"
+            return "## 某方向\n### 这个领域真正想回答的生物学问题\n- 问题 [常识]\n### 对他的含义\n- x [证据]"
+    out = P.principles_report([spec], L())
+    assert all(t == "principles" for t, _ in calls) and len(calls) == 2
+    assert "[证据]" in calls[0][1] and "[常识]" in calls[0][1] and spec.name in calls[1][1]
+    assert out.startswith("# 全局判断：从第一性原理看各领域 · 方向背景报告")
+    assert out.index("## 总判断") < out.index("## 分领域分析") < out.index(f"### {spec.name}")
+    assert "#### 这个领域真正想回答的生物学问题" in out and "## 某方向" not in out  # 小节降级、重复标题剥掉

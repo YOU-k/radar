@@ -141,3 +141,13 @@ RADAR_LIVE=1 python -m pytest tests/background/test_live.py             # 真 AP
 - 资源库：registry 每项带 `themes`（由所属方向映射）与 `priority`（P0 优先上手 / P1 值得登记 / P2 了解即可）+ `why`，
   按画像「应用线」由 LLM 判定；每周 resources 重挖时保留已有优先级，只给新资源打分；`background prioritize --redo` 全部重打。
   站点资源库页直接读 registry.json，按优先级分组、可按主题与类型筛选。
+
+## 8. 全局判断：第一性原理层（2026-09-27）
+
+方向报告是自下而上的证据综述，只回答"大家在做什么"。`principles.py` 补自上而下一层：
+每个方向一次推理（方向定义 + 报告摘要 + 阶段判断 + 头部文献），固定五问——真正想回答的生物学问题、
+卡在因果链哪一层（遗传 → 分子 → 细胞 → 组织 → 个体 → 人群 → 干预）、主流角度为什么成立与在哪失效、
+被低估的其他研究策略、对算法提供者的含义；再跨方向综合出总判断表、共同规律、研究策略地图、"如果只做一件事"。
+[证据] 来自方向报告，[常识] 来自模型领域知识（需核实）。默认 `deepseek-reasoner`（`PRINCIPLES_MODEL` 可换，失败退回 SYNTH_MODEL）。
+产物 `background/_principles/report.md`，站点方向背景 tab 置顶；每月 1 号随 landscape 任务更新，手动：
+`python -m radar.run background principles --topic all`。
