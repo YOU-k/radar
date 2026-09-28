@@ -259,6 +259,8 @@ def cmd_background(args) -> None:
             except GenerationFailed as exc:
                 print(f"::warning::[joint] {exc}; kept previous report")
         return
+    if args.action == "add" and args.topic == "all":
+        raise SystemExit("[background] add 只针对单个方向，--topic 不能是 all")
     slugs = background_slugs(args.topic)
     for slug in slugs:
         if len(slugs) > 1:
@@ -285,6 +287,15 @@ def _background_one(args, slug: str, llm) -> None:
                   only_flagged=getattr(args, "only_flagged", False))
         return
     pipe = Pipeline(spec, llm, fetch_text=not args.no_fulltext)
+    if args.action == "add":  # 人工补录：跳过评审直接入库 + 大纲挂载；不编译
+        if llm is None:
+            raise SystemExit("[background] add 需要 LLM（抽取与大纲挂载）")
+        ids = [x.strip() for x in (args.ids or "").split(",") if x.strip()]
+        if not ids:
+            raise SystemExit("[background] add 需要 --ids doi:10.xxx,arxiv:2505.13400")
+        res = pipe.add_manual(ids, note=args.note)
+        print(res.log.to_markdown())
+        return
     if args.action == "bootstrap":
         for res in pipe.bootstrap(args.rounds or None):
             print(res.log.to_markdown())
@@ -317,7 +328,7 @@ def main() -> None:
         p.add_argument("--no-llm", action="store_true")
     p = sub.add_parser("background", help="方向背景库：init / bootstrap / renew / compile")
     p.add_argument("action", choices=["init", "bootstrap", "renew", "compile", "refetch", "resources", "prioritize", "joint", "principles",
-                                   "reextract"])
+                                   "reextract", "add"])
     p.add_argument("--topic", required=True, help="slug，如 population-omics-ai；all = 全部方向")
     p.add_argument("--name", default="", help="init 用：方向中文名")
     p.add_argument("--rounds", type=int, default=0, help="bootstrap 轮数，0 = topic.yaml 的 budget.rounds")
@@ -326,6 +337,8 @@ def main() -> None:
     p.add_argument("--only-flagged", action="store_true",
                    help="reextract 用：只重抽取数字在摘要/全文里对不上的证据")
     p.add_argument("--no-llm", action="store_true", help="只检索/去重，不评审不编译（冒烟用）")
+    p.add_argument("--ids", default="", help="add 用：逗号分隔的 id，如 doi:10.1038/xxx,arxiv:2505.13400")
+    p.add_argument("--note", default="", help="add 用：补录理由，记入 panel 与轮次日志")
     p = sub.add_parser("retag", help="已有日报补主题标签与今日要点、按主题重排")
     p.add_argument("--days", type=int, default=0, help="只处理最近 N 份，0 = 全部")
     p.add_argument("--no-llm", action="store_true")

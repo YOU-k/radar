@@ -715,18 +715,20 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 <li>在四个 Perturb-seq 数据集上，差分空间的 Train Mean 基线（0.711/0.557/0.373/0.628）优于 scGPT（0.641/0.554/0.327/0.596）与 scFoundation（0.552/0.459/0.269/0.471），而结合 GO 特征的随机森林最佳（0.739/0.586/0.480/0.648）[<a class="cite" href="#ref-singlecell-10">10</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/singlecell.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" id="topic-vcell" data-src="bg/vcell.html"><summary><span class="th" data-t="vcell">虚拟细胞</span>虚拟细胞与扰动响应预测<span class="cnt">证据 37 篇 · 覆盖度 0.56 · 第 3 轮 · 更新 2026-09-27</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-vcell" data-src="bg/vcell.html"><summary><span class="th" data-t="vcell">虚拟细胞</span>虚拟细胞与扰动响应预测<span class="cnt">证据 44 篇 · 覆盖度 0.56 · 第 4 轮 · 更新 2026-09-28</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>扰动响应生成模型可分为基础模型、扩散/流匹配生成模型与引入生物先验或强化学习的约束式方法三类，其中 scGPT 在超过 3300万个 单细胞RNA测序图谱上预训练 [<a class="cite" href="#ref-vcell-1">1</a>]。</li>
-<li>scKITE 仅用 179,067 个预训练样本（不足先前强模型 0.5%）即在多下游任务上超越 Geneformer、scGPT、scFoundation 等，知识增强训练带来平均 28.8% 的相对提升 [<a class="cite" href="#ref-vcell-2">2</a>]。</li>
-<li>扩散与流匹配成为扰动响应生成的主流建模范式，但 OCOO-T 指出基于扩散/流匹配的方法学习对照到扰动分布仍具挑战 [<a class="cite" href="#ref-vcell-3">3</a>]。</li>
-<li>SCALE 针对对照与处理细胞为非配对群体的问题，在CRISPR数据 7项指标 上优于竞争方法，其预测的细胞因子差异经 3名 供体PBMC实验验证 [<a class="cite" href="#ref-vcell-4">4</a>]。</li>
-<li>X-Cell 配套的 X-Atlas/Pisces 含 2560万 扰动单细胞、16种 生物学情境，在 Pearson Δ 等关键指标上优于现有最先进模型最高达 五倍 [<a class="cite" href="#ref-vcell-5">5</a>]。</li>
-<li>知识图谱KNN+RL-LLM 的工作证明，利用知识图谱的最简KNN模型在分布外扰动预测上击败几乎所有方法，用强化学习优化推理LLM调整邻域后在 Replogle 2022 细胞系上达到当前SOTA水平 [<a class="cite" href="#ref-vcell-6">6</a>]。</li>
-<li>该领域在建模假设上存在明显分歧：一类方法依赖大规模预训练与数据缩放 [<a class="cite" href="#ref-vcell-1">1</a>][<a class="cite" href="#ref-vcell-2">2</a>]，另一类强调生物先验与知识图谱的杠杆作用，甚至主张最简KNN即可击败复杂模型 [<a class="cite" href="#ref-vcell-6">6</a>]。</li>
-<li>Chreode 提出一步式细胞世界模型，在 240万细胞小鼠胚胎图谱、7个数据集 上预训练，GEARS 上 DE20 MSE 从 0.2121 降至 0.1858（相对提升 12.4%）[<a class="cite" href="#ref-vcell-7">7</a>]。</li>
-<li>一项研究用 2220万细胞 语料预训练400个模型并开展6400次实验，发现性能在远小于现有语料的数据规模即达平台期，且无明确数据缩放定律 [<a class="cite" href="#ref-vcell-8">8</a>]。</li>
-<li>多数方法的验证仍局限于有限数据集，跨情境与零样本外推能力尚待更广泛检验 [<a class="cite" href="#ref-vcell-3">3</a>][<a class="cite" href="#ref-vcell-9">9</a>]。</li>
+<li>早期范式以潜空间扰动向量为代表，scGen 用变分自编码器在潜空间中加减扰动向量，实现跨细胞类型与跨物种的响应预测 [<a class="cite" href="#ref-vcell-1">1</a>]。</li>
+<li>scGPT 在超过 3300 万个单细胞 RNA 测序图谱上预训练生成式 Transformer，通过迁移学习适配扰动响应预测等下游任务 [<a class="cite" href="#ref-vcell-2">2</a>]。</li>
+<li>State 的细胞嵌入训练于 1.67 亿细胞，在大型数据集上效应区分度提升超过 30%，且嵌入可识别训练中未观察扰动的细胞环境 [<a class="cite" href="#ref-vcell-3">3</a>]。</li>
+<li>Tahoe-x1 将扰动训练的单细胞基础模型扩展到最高 30 亿参数，计算效率比先前细胞状态模型实现高 3–30 倍 [<a class="cite" href="#ref-vcell-4">4</a>]。</li>
+<li>X-Atlas/Pisces 构建了迄今最大的全基因组 CRISPRi Perturb-seq 数据集，含 2560 万扰动单细胞转录组、16 种生物学情境，其 X-Cell 在 Pearson Δ 等关键指标上优于现有最先进模型最高达五倍 [<a class="cite" href="#ref-vcell-5">5</a>]。</li>
+<li>scKITE 仅用 179,067 个预训练样本（不足先前强模型 0.5%）即在多下游任务超越 Geneformer、scGPT 等，知识增强训练带来平均 28.8% 相对提升 [<a class="cite" href="#ref-vcell-6">6</a>]。</li>
+<li>一项工作证明利用知识图谱的最简 KNN 模型在分布外扰动预测上击败几乎所有方法，并用强化学习优化推理 LLM 调整邻域，在 Replogle 2022 细胞系上达到当前 SOTA 水平 [<a class="cite" href="#ref-vcell-7">7</a>]。</li>
+<li>争议之一在于模型复杂度与性能是否匹配，OCOO-T 的极简流匹配与知识图谱 KNN 的“简单却有效”同 X-Cell、Tahoe-x1 等大规模多模态基础模型在不同基准上各自报告优势，尚缺乏统一评测 [<a class="cite" href="#ref-vcell-8">8</a>][<a class="cite" href="#ref-vcell-7">7</a>][<a class="cite" href="#ref-vcell-5">5</a>][<a class="cite" href="#ref-vcell-4">4</a>]。</li>
+<li>多项独立工作一致发现简单基线常匹配或超越复杂基础模型，在单/双基因扰动转录组预测中五种基础模型与两种深度学习模型均未优于简单线性基线 [<a class="cite" href="#ref-vcell-9">9</a>]。</li>
+<li>用 2220 万细胞预训练 400 个模型并开展 6400 次实验，性能在数据规模远小于现有语料时即达平台期，无明确数据缩放定律 [<a class="cite" href="#ref-vcell-10">10</a>]。</li>
+<li>2026 年虚拟细胞挑战赛提出跨多个独立细胞情境的零样本预测，参赛者需在 Arc 生成的新数据集上预测未见细胞系中的基因敲低响应 [<a class="cite" href="#ref-vcell-11">11</a>]。</li>
+<li>AIVC 仍处于早期阶段，数据异质性与模型可解释性等挑战尚未解决 [<a class="cite" href="#ref-vcell-12">12</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/vcell.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
 <details class="bg" id="topic-ssl" data-src="bg/ssl.html"><summary><span class="th" data-t="ssl">世界模型</span>世界模型与自监督表征学习<span class="cnt">证据 65 篇 · 覆盖度 0.46 · 第 3 轮 · 更新 2026-09-27</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
@@ -743,18 +745,18 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 <li>医疗世界模型综述提出 L1 时序预测到 L4 规划控制的分级，发现多数系统仅达 L1–L2，少数 L3，L4 罕见，并指出动作空间不明确、干预验证薄弱等跨领域缺口 [<a class="cite" href="#ref-ssl-10">10</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/ssl.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" id="topic-agent" data-src="bg/agent.html"><summary><span class="th" data-t="agent">Agent</span>LLM 科研智能体与可验证奖励强化学习<span class="cnt">证据 91 篇 · 覆盖度 0.69 · 第 3 轮 · 更新 2026-09-27 · 数字核验删句 1</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-agent" data-src="bg/agent.html"><summary><span class="th" data-t="agent">Agent</span>LLM 科研智能体与可验证奖励强化学习<span class="cnt">证据 102 篇 · 覆盖度 0.69 · 第 4 轮 · 更新 2026-09-28 · 数字核验删句 1</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>早期科研智能体以提示式协同为主，ReAct 在 ALFWorld 成功率绝对提升 <strong>34%</strong>、WebShop 提升 <strong>10%</strong>，但依赖提示与外部 API、未做大规模 RL 训练 [<a class="cite" href="#ref-agent-1">1</a>]。</li>
-<li>The AI Scientist 让 LLM 独立完成全流程且每篇论文成本低于 <strong>15 美元</strong>，但仅在三个 ML 子领域验证且依赖自动评审器、未含真实同行评审 [<a class="cite" href="#ref-agent-2">2</a>]。</li>
-<li>Co-Scientist 基于 Gemini 构建多专门智能体，其针对三个生物医学问题的候选均经独立体外实验验证，但验证限于三个生物医学案例并依赖科学家在环 [<a class="cite" href="#ref-agent-3">3</a>]。</li>
-<li>The Little Scientist 在 ProteinGym 零样本排行榜五项指标均列第一、超 VenusREM <strong>+0.033</strong> 平均 Spearman，但仅两个案例研究且全程消耗 704M token [<a class="cite" href="#ref-agent-4">4</a>]。</li>
-<li>ToolMaker 在含 15 个任务和 100+ 单元测试的基准上正确实现 <strong>80%</strong> 任务，但任务规模有限且依赖公开代码仓库 [<a class="cite" href="#ref-agent-5">5</a>]。</li>
-<li>ScalePRM 以扩展验证计算替代真值，其训练的 PRM 在 <strong>ProcessBench</strong> 上达 <strong>67.5 F1</strong>，超过有真值的参考引导 66.4 F1 与 GPT-4o critic 61.9 F1 [<a class="cite" href="#ref-agent-6">6</a>]。</li>
-<li>PURE 将奖励黑客根源定位为 RL 中求和形式的信用分配，把价值函数改为未来奖励的最小值，仅用 <strong>30%</strong> 步数即达到可验证奖励方法相当的推理性能 [<a class="cite" href="#ref-agent-7">7</a>]。</li>
-<li>Spurious Rewards 发现 RLVR 训练用 GRPO 时随机分配奖励可使 Qwen2.5-Math-7B 在 MATH-500 提升 <strong>21.4 个百分点</strong>，接近真实奖励的 29.1 点，但该现象对 Llama3、OLMo2 等无效 [<a class="cite" href="#ref-agent-8">8</a>]。</li>
-<li>围绕 RLVR 是否真正扩展基座推理能力的争议，该工作用大 k 的 pass@k 发现小 k 时 RLVR 模型更优、但大 k 时基座模型的 pass@k 更高 [<a class="cite" href="#ref-agent-9">9</a>]。</li>
-<li>在 <strong>12 个不同场景</strong>的推理任务上，Cliff 一致提升推理性能，<strong>优于 on-policy distillation 15%、优于标准 GRPO 7%</strong>，但依赖教师模型定位首个错误、未讨论教师错误带来的影响 [<a class="cite" href="#ref-agent-10">10</a>]。</li>
+<li>早期科研智能体以提示式协同为主，ReAct 在 ALFWorld 成功率绝对提升 34%、WebShop 提升 10%，但依赖提示与外部 API、未做大规模 RL 训练 [<a class="cite" href="#ref-agent-1">1</a>]。</li>
+<li>The AI Scientist 实现端到端全自动流水线，每篇论文成本低于 15 美元，但仅在三个 ML 子领域验证且依赖自动评审器 [<a class="cite" href="#ref-agent-2">2</a>]。</li>
+<li>Co-Scientist 在 AML 药物重定位、肝纤维化靶点、抗菌素耐药机制三个问题上提出候选并经独立体外实验验证，但验证限于三个案例且依赖科学家在环 [<a class="cite" href="#ref-agent-3">3</a>]。</li>
+<li>Robin 单次运行约读 551 篇论文、认知时间 &lt;2h 对比人类 359–424h，但系统为半自主、需实验室闭环验证且仅体外验证 [<a class="cite" href="#ref-agent-4">4</a>]。</li>
+<li>Kosmos 独立科学家评估其 79.4% 陈述准确（数据分析 85.5%、文献 82.1%、综合 57.9%），但综合陈述准确率仅 57.9% 且需科学家指定目标与数据集 [<a class="cite" href="#ref-agent-5">5</a>]。</li>
+<li>PURE 指出 PRM 引发奖励黑客的根源是 RL 中求和形式的信用分配，最小形式仅用 30% 步数即达到可验证奖励方法相当的推理性能 [<a class="cite" href="#ref-agent-6">6</a>]。</li>
+<li>一项研究用 GRPO 比较真实奖励、随机奖励和虚假奖励，发现随机奖励使 MATH-500 提升 21.4 个百分点，接近真实奖励的 29.1 点，但该现象对 Llama3、OLMo2 等无效 [<a class="cite" href="#ref-agent-7">7</a>]。</li>
+<li>单样本 RLVR 研究显示，对 Qwen2.5-Math-1.5B 用单个可验证奖励样本，MATH500 从 36.0% 升至 73.6%（超格式修正 8.6%）[<a class="cite" href="#ref-agent-8">8</a>]。</li>
+<li>有工作用大 k 的 pass@k 系统探测 RLVR 的推理能力边界，核心发现是小 k 时 RLVR 模型更优，但大 k 时基座模型的 pass@k 更高 [<a class="cite" href="#ref-agent-9">9</a>]。</li>
+<li>该工作还报告六种 RLVR 算法表现相近且远未达基座潜力上限，而蒸馏能真正扩展推理能力 [<a class="cite" href="#ref-agent-9">9</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/agent.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details></div>
 <div id="panel-res" class="panel"><div class="lazy" id="res-lazy" data-src="res.html"><div class="empty">正在加载资源库…</div></div><a class="full" href="res.html" target="_blank" rel="noopener">单独打开资源库 →</a></div>

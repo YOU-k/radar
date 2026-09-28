@@ -22,5 +22,13 @@
   "score": 0.613,
   "n_evidence": 110,
   "round": 3
+ },
+ {
+  "seed_hit": 0.75,
+  "saturation": 0.556,
+  "highcite": 0.74,
+  "score": 0.688,
+  "n_evidence": 130,
+  "round": 4
  }
 ]

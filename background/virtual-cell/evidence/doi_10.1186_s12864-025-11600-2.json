@@ -1,0 +1,72 @@
+{
+ "candidate": {
+  "id": "doi:10.1186/s12864-025-11600-2",
+  "title": "Benchmarking foundation cell models for post-perturbation RNA-seq prediction",
+  "url": "https://doi.org/10.1186/s12864-025-11600-2",
+  "abstract": "Accurately predicting cellular responses to perturbations is essential for understanding cell behaviour in both healthy and diseased states. While perturbation data is ideal for building such predictive models, its availability is considerably lower than baseline (non-perturbed) cellular data. To address this limitation, several foundation cell models have been developed using large-scale single-cell gene expression data. These models are fine-tuned after pre-training for specific tasks, such as predicting post-perturbation gene expression profiles, and are considered state-of-the-art for these problems. However, proper benchmarking of these models remains an unsolved challenge. In this study, we benchmarked two recently published foundation models, scGPT and scFoundation, against baseline models. Surprisingly, we found that even the simplest baseline model-taking the mean of training examples-outperformed scGPT and scFoundation. Furthermore, basic machine learning models that incorporate biologically meaningful features outperformed scGPT by a large margin. Additionally, we identified that the current Perturb-Seq benchmark datasets exhibit low perturbation-specific variance, making them suboptimal for evaluating such models. Our results highlight important limitations in current benchmarking approaches and provide insights into more effectively evaluating post-perturbation gene expression prediction models.",
+  "authors": "Csendes G, Sanz G, Szalay KZ, Szalai B.",
+  "venue": "BMC genomics",
+  "year": 2025,
+  "citations": 47,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:40269681"
+   ],
+   "pmcid": "PMC12016270"
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基准测试scGPT、scFoundation与基线及机器学习模型",
+  "data": "Perturb-seq单细胞：Adamson 68,603；Norman 91,205；Replogle K562 162,751；RPE1 162,733",
+  "scenario": "扰动后RNA-seq表达预测",
+  "benchmark": "Train Mean、Elastic-Net、kNN、Random Forest、GO特征",
+  "results": "Train Mean Pearson Delta 0.711/0.557/0.373/0.628；scGPT 0.641/0.554/0.327/0.596；scFoundation 0.552/0.459/0.269/0.471；RF+GO 0.739/0.586/0.480/0.648",
+  "availability": "使用原发表预训练模型",
+  "limitations": "当前Perturb-Seq基准数据集扰动特异性方差低，不适合评估此类模型",
+  "summary": "本文基准测试两个基础细胞模型scGPT和scFoundation与多种基线在扰动后RNA-seq预测中的表现。作者在Adamson、Norman和Replogle等Perturb-seq数据集上微调模型，并用Pearson Delta等指标评估未见扰动预测。结果发现最简单Train Mean即优于基础模型，带GO特征的随机森林大幅领先，且现有基准数据扰动特异性方差低。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "68,603",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "data",
+    "number": "91,205",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "data",
+    "number": "162,751",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "data",
+    "number": "162,733",
+    "reason": "cited",
+    "dropped": true
+   }
+  ],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

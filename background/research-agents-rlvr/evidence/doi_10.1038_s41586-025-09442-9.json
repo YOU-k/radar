@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-025-09442-9",
+  "title": "The Virtual Lab of AI agents designs new SARS-CoV-2 nanobodies",
+  "url": "https://doi.org/10.1038/s41586-025-09442-9",
+  "abstract": "Science frequently benefits from teams of interdisciplinary researchers 1-3 , but many scientists do not have easy access to experts from multiple fields 4,5 . Although large language models (LLMs) have shown an impressive ability to aid researchers across diverse domains, their uses have been largely limited to answering specific scientific questions rather than performing open-ended research 6-11 . Here we expand the capabilities of LLMs for science by introducing the Virtual Lab, an artificial intelligence (AI)-human research collaboration to perform sophisticated, interdisciplinary science research. The Virtual Lab consists of an LLM Principal Investigator agent guiding a team of LLM scientist agents through a series of research meetings, with a human researcher providing high-level feedback. We applied the Virtual Lab to design nanobody binders to recent variants of SARS-CoV-2. The Virtual Lab created a novel computational nanobody design pipeline that incorporates the protein language model ESM, the protein folding model AlphaFold-Multimer and the computational biology software Rosetta and designed 92 new nanobodies. Experimental validation reveals a range of functional nanobodies with promising binding profiles across SARS-CoV-2 variants. In particular, two new nanobodies exhibit improved binding to the recent JN.1 or KP.3 variants 12,13 while maintaining strong binding to the ancestral viral spike protein, suggesting that these are suitable candidates for further investigation. This work demonstrates how the Virtual Lab can rapidly make an impactful, real-world scientific discovery.",
+  "authors": "Swanson K, Wu W, Bulaong NL, Pak JE, Zou J.",
+  "venue": "Nature",
+  "year": 2025,
+  "citations": 76,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "doi:10.1101/2024.11.11.623004",
+    "pmid:40730228"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Virtual Lab：LLM PI智能体带领科学家智能体团队",
+  "data": "设计92个新纳米抗体并进行实验验证",
+  "scenario": "SARS-CoV-2变异株纳米抗体设计",
+  "benchmark": "与近期JN.1、KP.3及祖先株结合谱对比",
+  "results": "设计92个纳米抗体；两个新纳米抗体对JN.1或KP.3结合改善，同时保持对祖先刺突蛋白强结合",
+  "availability": "",
+  "limitations": "人类提供高层反馈；候选仍需进一步研究",
+  "summary": "Virtual Lab是LLM首席研究员智能体带领科学家智能体团队、由人类提供高层反馈的AI-人类协作系统。它构建了结合ESM、AlphaFold-Multimer和Rosetta的纳米抗体设计流程，针对SARS-CoV-2变异株设计92个新纳米抗体。实验验证发现多个功能性纳米抗体，其中两个对JN.1或KP.3结合改善且保持对祖先株强结合。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

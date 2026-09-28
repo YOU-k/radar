@@ -64,6 +64,7 @@ python -m radar.run background bootstrap --topic <slug> [--rounds N] [--no-llm] 
 python -m radar.run background renew --topic <slug>                    # 吃 data/extractions.jsonl 近 7 天
 python -m radar.run background compile --topic <slug>                  # 只重编报告
 python -m radar.run background reextract --topic <slug|all> [--only-flagged]  # 重抽取（摘要+Results、数字回原文），不编译
+python -m radar.run background add --topic <slug> --ids <id1,id2> [--note "..."]  # 人工补录：取元数据（Europe PMC→S2→Crossref/arXiv），panel 记 manual 一票，抓全文+有据抽取+大纲 revise+记一轮，不编译
 python -m pytest                                                        # 40 个离线测试
 RADAR_LIVE=1 python -m pytest tests/background/test_live.py             # 真 API 契约
 ```

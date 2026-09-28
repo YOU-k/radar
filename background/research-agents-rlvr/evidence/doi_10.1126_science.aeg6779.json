@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/science.aeg6779",
+  "title": "The Virtual Biotech: A multi-agent AI framework for therapeutic discovery and development",
+  "url": "https://doi.org/10.1126/science.aeg6779",
+  "abstract": "Drug development requires evidence integration across biological scales and modalities, but relevant tools are fragmented. We introduce the Virtual Biotech, an organization of artificial intelligence (AI) agents modeled on a drug-development company, with agentic divisions spanning target discovery, safety assessment, modality selection, and clinical development. We demonstrate its utility at three drug-development decision points. First, over 37,000 agents annotated outcomes from 55,984 trials and found that drugs targeting cell-type-specific genes were 48% more likely to reach market with 32% fewer adverse events. Second, it integrated multimodal evidence to propose a therapeutic strategy in lung cancer. Third, it analyzed a terminated ulcerative colitis trial and inferred potential mechanisms of failure. These results demonstrate that human-guided multi-agent systems can conduct transparent, multiscale analyses to inform therapeutic-development decisions.",
+  "authors": "Zhang HG, Eckmann P, Miao J, Mahon AB, Zou J.",
+  "venue": "Science (New York, N.Y.)",
+  "year": 2026,
+  "citations": 0,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42752167"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Virtual Biotech：模拟药企的多智能体AI框架",
+  "data": "37,000+智能体标注55,984项试验结果",
+  "scenario": "药物开发决策（靶点发现、安全性、临床开发）",
+  "benchmark": "三个药物开发决策点案例",
+  "results": "靶向细胞类型特异基因的药物上市可能性高48%、不良事件少32%；提出肺癌治疗策略；推断溃疡性结肠炎试验失败机制",
+  "availability": "",
+  "limitations": "人类引导；案例数量有限",
+  "summary": "Virtual Biotech是模拟药物开发公司的多智能体AI框架，智能体部门覆盖靶点发现、安全性评估、模态选择和临床开发。它在三个药物开发决策点展示用途：37,000+智能体标注55,984项试验，发现靶向细胞类型特异基因的药物上市可能性高48%、不良事件少32%。此外还提出肺癌治疗策略并推断终止的溃疡性结肠炎试验失败机制。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

@@ -40,6 +40,7 @@ python -m radar.run site                       # 重新生成 docs/
 python -m radar.run retag                      # 旧日报按主题表重排
 python -m radar.run background reextract --topic all --only-flagged   # 数字未能在原文找到的证据重新抽取
 python -m radar.run background compile --topic all                    # 重编方向报告
+python -m radar.run background add --topic <slug> --ids doi:10.x,arxiv:2505.13400 --note "理由"  # 人工补录：跳过评审直接入库并挂大纲，不编译
 ```
 
 无 `LLM_API_KEY` 时自动降级为关键词打分、跳过深读，不会崩。

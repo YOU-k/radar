@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41587-025-02777-8",
+  "title": "Systema: a framework for evaluating genetic perturbation response prediction beyond systematic variation",
+  "url": "https://doi.org/10.1038/s41587-025-02777-8",
+  "abstract": "Predicting transcriptional responses to genetic perturbations is challenging in functional genomics. While recent methods aim to infer effects of untested perturbations, their true predictive power remains unclear. Here, we show that current methods struggle to generalize beyond systematic variation, the consistent transcriptional differences between perturbed and control cells arising from selection biases or confounders. We quantify this variation in ten datasets, spanning three technologies and five cell lines, and show that common metrics are susceptible to these biases, leading to overestimated performance. To address this, we introduce Systema, an evaluation framework that emphasizes perturbation-specific effects and identifies predictions that correctly reconstruct the perturbation landscape. Using this framework, we uncover insights into the predictive capabilities of existing methods and show that predicting responses to unseen perturbations is substantially harder than standard metrics suggest. Our work highlights the importance of heterogeneous gene panels and disentangles predictive performance from systematic effects, enabling biologically meaningful developments in perturbation response modeling.",
+  "authors": "Viñas Torné R, Wiatrak M, Piran Z, Fan S, Jiang L, Teichmann SA, Nitzan M, Brbić M.",
+  "venue": "Nature biotechnology",
+  "year": 2026,
+  "citations": 31,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:40854979"
+   ],
+   "pmcid": "PMC13271886"
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出Systema评估框架并基准测试扰动响应预测方法",
+  "data": "十个单细胞扰动数据集，三种技术、五种细胞系；测试扰动数63–1,362不等",
+  "scenario": "未见遗传扰动响应预测",
+  "benchmark": "CPA、GEARS、scGPT、perturbed mean、matching mean",
+  "results": "perturbed mean在Pearson Δ上跨所有数据集优于其他方法；Pearson Δ20除Frangieh外也更高或相当；双基因扰动中matching mean显著更优",
+  "availability": "",
+  "limitations": "当前方法难以泛化超越系统性变异，常见指标高估性能",
+  "summary": "本文揭示当前扰动响应预测方法难以泛化到系统性变异之外，并量化十个数据集中该变异。作者提出Systema评估框架，强调扰动特异性效应，并比较CPA、GEARS、scGPT与简单基线。结果显示简单perturbed mean和matching mean常优于最先进方法，预测未见扰动比标准指标所示更难。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

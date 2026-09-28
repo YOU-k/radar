@@ -19,7 +19,7 @@ from .discover import Inbox, S2Snowball, Source, default_sources, discover
 from .fetch import fetch_fulltext
 from .gap import plan_round
 from .llmio import LLM
-from .models import Candidate, DiscoveryPlan, Evidence, RoundLog
+from .models import Candidate, DiscoveryPlan, Evidence, RoundLog, Vote, normalize_id
 from .outline import Outline, revise
 from .screen import screen
 from .spec import TopicSpec
@@ -159,31 +159,8 @@ class Pipeline:
                 n_rej += 1
                 n_bord += int(d.borderline)
 
-        fulltexts: dict[str, str] = {}
-        if self.fetch_text:
-            for c in accepted_c:
-                t = self.fetcher(c, self.spec.cache_dir)
-                if t:
-                    fulltexts[c.id] = t
-        extractions = extract_mod.extract(accepted_c, self.spec, self.llm, fulltexts) if accepted_c else []
-
-        accepted: list[Evidence] = []
-        for c, ex, d in zip(accepted_c, extractions, [d for d in decisions if d.accepted]):
-            ev = Evidence(candidate=c, panel=d.votes, extraction=ex,
-                          fulltext_path=("cache" if c.id in fulltexts else ""),  # 只作布尔用，不记机器路径
-                          added_round=round_no, added_on=date.today().isoformat())
-            self.store.add(ev, fulltexts.get(c.id, ""))
-            accepted.append(ev)
-
-        outline = self.load_outline()
-        retry = [self.store.get(i) for i in outline.unsorted_ids()]
-        retry = [e for e in retry if e and e.id not in {a.id for a in accepted}]
-        outline, ops = revise(outline, accepted + retry, self.spec, self.llm)
-        # 挂载信息回写证据记录
-        for ev in accepted:
-            ev.sections = [s.id for s in outline.walk() if ev.id in s.evidence_ids]
-            self.store.update(ev)
-        self.save_outline(outline)
+        accepted = self._ingest(accepted_c, [d.votes for d in decisions if d.accepted], round_no)
+        outline, ops = self._attach(accepted)
 
         cov = metrics_mod.coverage(self.spec, self.store, outline, top_cited, round_no)
         hist = metrics_mod.append_metrics(self.spec.metrics_path, cov)
@@ -206,6 +183,85 @@ class Pipeline:
             except GenerationFailed as exc:
                 print(f"::warning::[compile] {exc}; kept previous report")
         return RoundResult(log=log, accepted=accepted, report_path=report_path)
+
+    def _ingest(self, cands: list[Candidate], panels: list[list[Vote]], round_no: int) -> list[Evidence]:
+        """已通过（评审或人工）的候选：抓全文 → 有据抽取 → 入库。"""
+        fulltexts: dict[str, str] = {}
+        if self.fetch_text:
+            for c in cands:
+                t = self.fetcher(c, self.spec.cache_dir)
+                if t:
+                    fulltexts[c.id] = t
+        extractions = extract_mod.extract(cands, self.spec, self.llm, fulltexts) if cands else []
+        accepted: list[Evidence] = []
+        for c, ex, votes in zip(cands, extractions, panels):
+            ev = Evidence(candidate=c, panel=votes, extraction=ex,
+                          fulltext_path=("cache" if c.id in fulltexts else ""),  # 只作布尔用，不记机器路径
+                          added_round=round_no, added_on=date.today().isoformat())
+            self.store.add(ev, fulltexts.get(c.id, ""))
+            accepted.append(ev)
+        return accepted
+
+    def _attach(self, accepted: list[Evidence]) -> tuple[Outline, list[dict]]:
+        """大纲 revise：新证据 + 上次留在「未归类」的一起重新归位；挂载节点回写证据记录。"""
+        outline = self.load_outline()
+        retry = [self.store.get(i) for i in outline.unsorted_ids()]
+        retry = [e for e in retry if e and e.id not in {a.id for a in accepted}]
+        outline, ops = revise(outline, accepted + retry, self.spec, self.llm)
+        for ev in accepted:
+            ev.sections = [s.id for s in outline.walk() if ev.id in s.evidence_ids]
+            self.store.update(ev)
+        self.save_outline(outline)
+        return outline, ops
+
+    def add_manual(self, ids: list[str], note: str = "", lookup=None) -> RoundResult:
+        """人工补录：按 id 取元数据 + 摘要，跳过评审团（panel 记一票 manual），
+        抓全文、有据抽取、入库、大纲 revise、记一轮日志。不编译（compile 单独跑）。
+        已在库里的（主 id / alt id / 标题指纹）跳过；落选记录不挡人工补录。"""
+        if self.llm is None:
+            raise RuntimeError("add_manual 需要 LLM（抽取与大纲挂载）")
+        from .manual import lookup as default_lookup
+        lookup = lookup or default_lookup
+        from .models import title_key
+        known, titles = self.store.all_ids(), self.store.title_keys()
+        todo: list[Candidate] = []
+        skipped: list[str] = []
+        for raw in ids:
+            eid = normalize_id(raw)
+            if eid in known:
+                skipped.append(f"{eid}（已在库）")
+                continue
+            c = lookup(eid)
+            if c is None:
+                skipped.append(f"{eid}（取不到元数据）")
+                continue
+            mine = {c.id, *(c.extra.get("alt_ids") or [])}
+            if mine & known or title_key(c.title) in titles:
+                skipped.append(f"{eid}（已在库，别名/标题命中）")
+                continue
+            todo.append(c)
+            known |= mine
+            titles.add(title_key(c.title))
+        for s in skipped:
+            print(f"[manual] skip {s}")
+        r = self.round_no() + 1
+        if not todo:
+            print(f"[manual] {self.spec.slug}: nothing to add")
+            return RoundResult(log=RoundLog(round=r - 1, focus="人工补录：无新条目", n_candidates=len(ids),
+                                            n_new=0, n_accepted=0, n_rejected=0, n_borderline=0, coverage=0.0))
+        reason = note or "人工补录"
+        accepted = self._ingest(todo, [[Vote(role="manual", vote="yes", reason=reason)] for _ in todo], r)
+        outline, ops = self._attach(accepted)
+        cov = metrics_mod.coverage(self.spec, self.store, outline, self.top_cited(), r)
+        metrics_mod.append_metrics(self.spec.metrics_path, cov)
+        log = RoundLog(round=r, focus="人工补录" + (f"：{note}" if note else ""), n_candidates=len(ids),
+                       n_new=len(todo), n_accepted=len(accepted), n_rejected=0, n_borderline=0,
+                       coverage=cov.score, note=f"人工补录 {len(accepted)} 篇；大纲操作 {len(ops)} 条")
+        with self.spec.log_path.open("a", encoding="utf-8") as f:
+            f.write(log.to_markdown())
+        for ev in accepted:
+            print(f"[manual] added {ev.id} → {','.join(ev.sections) or '未归类'} | {ev.candidate.title}")
+        return RoundResult(log=log, accepted=accepted)
 
     def refetch(self, limit: int = 80) -> int:
         """给还没有全文的证据补全文并重新抽取（不改评审结果、不改大纲）。"""

@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/science.adz4351",
+  "title": "Autonomous biomedical research with an artificial intelligence agent",
+  "url": "https://doi.org/10.1126/science.adz4351",
+  "abstract": "Biomedical research is increasingly constrained by repetitive, fragmented workflows that slow discovery. We introduce Biomni, a general-purpose biomedical artificial intelligence agent that autonomously executes diverse research tasks. To map the biomedical action space, Biomni's action-discovery agent mines tools, databases, and protocols from thousands of publications across 25 domains, building a unified agentic environment. Its general-purpose architecture integrates large language model reasoning with retrieval-augmented planning and code-based execution, dynamically composing workflows without predefined templates. Systematic benchmarking shows strong generalization across heterogeneous tasks-causal gene prioritization, drug repurposing, rare-disease diagnosis, microbiome analysis, and molecular cloning-without task-specific tuning. Real-world case studies demonstrate Biomni interpreting multimodal datasets, optimizing protein stability, orchestrating wet-lab instruments, and generating experimentally testable protocols. Biomni envisions artificial intelligence augmenting human scientists and accelerating discovery.",
+  "authors": "Huang K, Zhang S, Wang H, Qu Y, Lu Y, Li R, Roohani Y, Qiu L, Cao S, Li G, Zhang J, Yin D, Wierenga R, Kavi D, Liu S, She T, Marwaha S, Carter JN, Zhou X, Wheeler MT, Bernstein JA, Wang M, He P, Zhou J, Snyder MP, Cong L, Regev A, Leskovec J.",
+  "venue": "Science (New York, N.Y.)",
+  "year": 2026,
+  "citations": 14,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "doi:10.1101/2025.05.30.656746",
+    "pmid:42424436"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Biomni：通用生物医学AI智能体，检索增强规划+代码执行",
+  "data": "从25个领域数千篇文献挖掘工具、数据库与协议",
+  "scenario": "通用生物医学研究任务自动化",
+  "benchmark": "因果基因优先排序、药物重定位、罕见病诊断、微生物组分析、分子克隆等异构任务",
+  "results": "在多种异构任务上展现强泛化，无需任务特定微调；案例包括解读多模态数据、优化蛋白稳定性、编排湿实验仪器、生成可测试协议",
+  "availability": "",
+  "limitations": "",
+  "summary": "Biomni是通用生物医学AI智能体，通过动作发现智能体从25个领域数千篇文献挖掘工具、数据库和协议，构建统一智能体环境。其架构结合LLM推理、检索增强规划与代码执行，动态组合工作流。系统在因果基因优先排序、药物重定位、罕见病诊断等异构任务上展现强泛化，并完成多模态数据解读、蛋白稳定性优化和湿实验编排等案例。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-025-02772-6",
+  "title": "Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines",
+  "url": "https://doi.org/10.1038/s41592-025-02772-6",
+  "abstract": "Recent research in deep-learning-based foundation models promises to learn representations of single-cell data that enable prediction of the effects of genetic perturbations. Here we compared five foundation models and two other deep learning models against deliberately simple baselines for predicting transcriptome changes after single or double perturbations. None outperformed the baselines, which highlights the importance of critical benchmarking in directing and evaluating method development.",
+  "authors": "Ahlmann-Eltze C, Huber W, Anders S.",
+  "venue": "Nature methods",
+  "year": 2025,
+  "citations": 179,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:40759747"
+   ],
+   "pmcid": "PMC12328236"
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "五种基础模型与两种深度学习模型对比简单线性基线",
+  "data": "单/双基因扰动单细胞转录组；1,000读出基因、62双扰动、5,035遗传互作",
+  "scenario": "单/双基因扰动转录组预测",
+  "benchmark": "简单线性基线、均值基线、加性期望",
+  "results": "无模型优于简单基线；识别5,035个遗传互作（潜在124,000）；单扰动测试134、210、24个未见扰动",
+  "availability": "图1源数据提供",
+  "limitations": "深度学习基础模型未超越简单线性基线，当前方法预测能力有限",
+  "summary": "本文比较五种基础模型和两种深度学习模型与简单基线在单/双基因扰动后转录组变化预测上的表现。作者使用单细胞扰动数据，在未见单扰动和双扰动上评估预测误差、遗传互作识别及加性期望偏离。结果显示没有任何模型优于简单基线，强调关键基准测试对方法开发的重要性。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

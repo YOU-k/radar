@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.06.03.657517",
+  "title": "CellVoyager: AI CompBio Agent Generates New Insights by Autonomously Analyzing Biological Data",
+  "url": "https://doi.org/10.1101/2025.06.03.657517",
+  "abstract": "Modern biology increasingly relies on complex, high dimensional datasets such as single-cell RNA sequencing (scRNA-seq). However, the richness of such data means that conventional analyses may only scratch its surface. Extracting meaningful insights from these datasets often requires advanced computational methods and domain expertise. Current AI agents for biology are primarily focused on executing user-specified commands and are therefore limited by the user’s creativity and familiarity with which kinds of analyses are useful. Furthermore, these agents do not account for prior analyses already attempted by researchers, reducing their ability to build upon existing work. To address these limitations, we introduce CellVoyager, an AI agent that autonomously explores scRNA-seq datasets in novel directions conditioned on prior user-ran analyses. Built on large language models, CellVoyager ingests both the dataset and a record of prior analyses to generate and test new hypotheses within a Jupyter notebook environment. We evaluate CellVoyager on CellBench, a new benchmark based on 50 published scRNA-seq studies encompassing 483 analyses. Given only the background sections of these papers, CellVoyager outperformed GPT-4o and o3-mini by up to 20% in predicting which analyses the authors eventually conducted. We then carried out three in-depth case studies where CellVoyager is given previously published papers with their scRNA-seq datasets and conducts analyses to generate new findings. The original authors of each study evaluated these findings and consistently rated them as creative and sound; 80% of the agent’s hypotheses were deemed scientifically interesting. For example, in one case study, the agent found that CD8 + T cells in COVID-19 infection are more primed for pyroptosis, which was not explored by the original researchers. CellVoyager also reanalyzed a brain aging dataset to discover a previously unreported association between increased transcriptional noise and aging in the subventricular zone of the brain. These results demonstrate that CellVoyager can act both autonomously and collaboratively to accelerate hypothesis generation and computational biology. It also highlights the potential of agents like CellVoyager to unlock new biological insights by reanalyzing the vast existing biological data at scale.",
+  "authors": "Alber S, Chen B, Sun E, Isakova A, Wilk AJ, Zou J.",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 10,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "doi:10.1038/s41592-026-03029-6"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CellVoyager：基于LLM自主探索scRNA-seq的AI智能体",
+  "data": "CellBench含50项已发表scRNA-seq研究的483项分析；3个案例研究",
+  "scenario": "单细胞RNA测序数据自主分析",
+  "benchmark": "CellBench；对比GPT-4o与o3-mini",
+  "results": "预测作者后续分析比GPT-4o和o3-mini高至多20%；80%假设被评为科学有趣；发现COVID-19中CD8+T细胞更易焦亡",
+  "availability": "",
+  "limitations": "依赖用户先前分析记录；案例研究数量有限",
+  "summary": "CellVoyager是自主探索scRNA-seq数据的AI智能体，基于LLM并纳入数据集与先前分析记录，在Jupyter环境中生成并检验新假设。它在基于50项研究483项分析的CellBench上评估，预测作者后续分析比GPT-4o和o3-mini高至多20%。三个案例研究中80%假设被评为科学有趣，如发现COVID-19中CD8+T细胞更易发生焦亡。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

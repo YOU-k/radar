@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2604.09554",
+  "title": "LABBench2: An Improved Benchmark for AI Systems Performing Biology Research",
+  "url": "https://doi.org/10.48550/arXiv.2604.09554",
+  "abstract": "Optimism for accelerating scientific discovery with AI continues to grow. Current applications of AI in scientific research range from training dedicated foundation models on scientific data to agentic autonomous hypothesis generation systems to AI-driven autonomous labs. The need to measure progress of AI systems in scientific domains correspondingly must not only accelerate, but increasingly shift focus to more real-world capabilities. Beyond rote knowledge and even just reasoning to actually measuring the ability to perform meaningful work. Prior work introduced the Language Agent Biology Benchmark LAB-Bench as an initial attempt at measuring these abilities. Here we introduce an evolution of that benchmark, LABBench2, for measuring real-world capabilities of AI systems performing useful scientific tasks. LABBench2 comprises nearly 1,900 tasks and is, for the most part, a continuation of LAB-Bench, measuring similar capabilities but in more realistic contexts. We evaluate performance of current frontier models, and show that while abilities measured by LAB-Bench and LABBench2 have improved substantially, LABBench2 provides a meaningful jump in difficulty (model-specific accuracy differences range from -26% to -46% across subtasks) and underscores continued room for performance improvement. LABBench2 continues the legacy of LAB-Bench as a de facto benchmark for AI scientific research capabilities and we hope that it continues to help advance development of AI tools for these core research functions. To facilitate community use and development, we provide the task dataset at https://huggingface.co/datasets/futurehouse/labbench2 and a public eval harness at https://github.com/EdisonScientific/labbench2.",
+  "authors": "Jon M. Laurent, Albert Bou, Michael Pieler, C. Igoe, A. Andonian, Siddharth Narayanan, James D. Braza, Alexandros Sanchez Vassopoulos",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citations": 6,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "doi:10.48550/arxiv.2604.09554"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LABBench2：近1,900项更真实生物学研究任务基准",
+  "data": "近1,900项任务，含CloningQA、LitQA3、Patent/TrialQA、FigQA2、DbQA2等",
+  "scenario": "评估AI系统执行真实科研任务能力",
+  "benchmark": "与LAB-Bench对应任务族对比；多个前沿模型",
+  "results": "相比LAB-Bench准确率下降26%–46%；工具增强对检索类任务帮助大；DbQA2仍最具挑战；图/表理解在提供图像时表现强，检索模式差",
+  "availability": "数据集于HuggingFace，评测框架于GitHub",
+  "limitations": "检索类任务表现仍差；部分任务依赖工具",
+  "summary": "LABBench2是LAB-Bench的演进版，包含近1,900项任务，在更真实情境下测量AI科研能力，如CloningQA要求端到端设计分子克隆协议。它评估多个前沿模型，发现相比LAB-Bench准确率下降26%–46%，工具增强对检索类任务帮助显著。DbQA2仍最具挑战，图表理解在直接提供图像时表现强但检索模式下差距明显。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

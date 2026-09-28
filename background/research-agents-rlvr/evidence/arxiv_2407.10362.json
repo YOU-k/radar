@@ -1,0 +1,46 @@
+{
+ "candidate": {
+  "id": "arxiv:2407.10362",
+  "title": "LAB-Bench: Measuring Capabilities of Language Models for Biology Research",
+  "url": "https://doi.org/10.48550/arXiv.2407.10362",
+  "abstract": "There is widespread optimism that frontier Large Language Models (LLMs) and LLM-augmented systems have the potential to rapidly accelerate scientific discovery across disciplines. Today, many benchmarks exist to measure LLM knowledge and reasoning on textbook-style science questions, but few if any benchmarks are designed to evaluate language model performance on practical tasks required for scientific research, such as literature search, protocol planning, and data analysis. As a step toward building such benchmarks, we introduce the Language Agent Biology Benchmark (LAB-Bench), a broad dataset of over 2,400 multiple choice questions for evaluating AI systems on a range of practical biology research capabilities, including recall and reasoning over literature, interpretation of figures, access and navigation of databases, and comprehension and manipulation of DNA and protein sequences. Importantly, in contrast to previous scientific benchmarks, we expect that an AI system that can achieve consistently high scores on the more difficult LAB-Bench tasks would serve as a useful assistant for researchers in areas such as literature search and molecular cloning. As an initial assessment of the emergent scientific task capabilities of frontier language models, we measure performance of several against our benchmark and report results compared to human expert biology researchers. We will continue to update and expand LAB-Bench over time, and expect it to serve as a useful tool in the development of automated research systems going forward. A public subset of LAB-Bench is available for use at the following URL: https://huggingface.co/datasets/futurehouse/lab-bench",
+  "authors": "Jon M. Laurent, Joseph D. Janizek, Michael Ruzo, Michaela M. Hinks, M. Hammerling, Siddharth Narayanan, Manvitha Ponnapati, Andrew D. White",
+  "venue": "arXiv.org",
+  "year": 2024,
+  "citations": 182,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "doi:10.48550/arxiv.2407.10362"
+   ]
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LAB-Bench：2,400+道生物学研究能力多选题基准",
+  "data": "2,400+多选题，涵盖LitQA2、FigQA、TableQA、SuppQA、DbQA、SeqQA等",
+  "scenario": "评估LLM生物学研究实践能力",
+  "benchmark": "多个前沿语言模型对比人类专家生物研究者",
+  "results": "构建2,400+多选题；RAG系统在LitQA上显著优于LLM；报告多个前沿模型与人类专家对比结果",
+  "availability": "公开子集于HuggingFace",
+  "limitations": "多为多选题，非真实开放任务；部分任务可程序化生成",
+  "summary": "LAB-Bench是包含2,400多道多选题的基准，用于评估AI系统在文献检索、图表解读、数据库导航和序列操作等实际生物学研究能力。它通过程序化与人工专家结合方式构建LitQA2、FigQA、TableQA、SuppQA、DbQA、SeqQA等任务。初步评估显示RAG系统在LitQA上显著优于LLM，并报告了多个前沿模型与人类专家的对比结果。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

@@ -1,0 +1,48 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-026-10652-y",
+  "title": "A multi-agent system for automating scientific discovery",
+  "url": "https://doi.org/10.1038/s41586-026-10652-y",
+  "abstract": "Scientific discovery is driven by the iterative process of observation, hypothesis generation, experimentation and data analysis. Despite recent advancements in applying artificial intelligence (AI) to biology, no system has yet automated all these stages 1-3 . Here we introduce Robin, a multi-agent system capable of fully automating both hypothesis generation and data analysis for experimental biology. By integrating literature search agents with data analysis agents, Robin can generate hypotheses, propose experiments, interpret experimental results and generate updated hypotheses, achieving a semi-autonomous approach to scientific discovery. By applying this system, we were able to identify promising therapeutic candidates for dry age-related macular degeneration, the major cause of blindness in the developed world 4,5 . Robin proposed enhancing retinal pigment epithelium phagocytosis as a therapeutic strategy, and identified and confirmed in vitro efficacy for ripasudil and KL001. Ripasudil is a clinically used Rho kinase inhibitor that, to our knowledge, has never previously been proposed for the treatment of dry age-related macular degeneration. To elucidate the mechanism of ripasudil-induced upregulation of phagocytosis, Robin then proposed and analysed a follow-up RNA sequencing experiment, which revealed upregulation of ABCA1, which encodes a lipid efflux pump and represents a possible novel target. All hypotheses, experimental directions, data analyses and data figures in the main text of this report were produced by Robin. As one of the first AI systems to autonomously discover and validate novel therapeutic candidates within an iterative lab-in-the-loop framework, Robin establishes a new paradigm for AI-driven scientific discovery.",
+  "authors": "Ghareeb AE, Chang B, Mitchener L, Yiu A, Szostkiewicz CJ, Shved D, Gyimesi GJ, Laurent JM, Wright SM, Razzak MT, White AD, Finnemann SC, Hinks MM, Rodriques SG.",
+  "venue": "Nature",
+  "year": 2026,
+  "citations": 40,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "arxiv:2505.13400",
+    "pmid:42156546"
+   ],
+   "pmcid": "PMC13346116"
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多智能体系统Robin：文献检索+数据分析智能体",
+  "data": "ARPE-19细胞与单供体RPE-SC；n=52次运行",
+  "scenario": "干性年龄相关性黄斑变性药物发现",
+  "benchmark": "与人类科学家手动流程时间对比（Table 1）",
+  "results": "确认ripasudil与KL001体外增强RPE吞噬；RNA-seq显示ABCA1上调；单次运行约551篇论文，认知时间<2h vs 人类359–424h",
+  "availability": "",
+  "limitations": "半自主，需实验室闭环验证；仅体外验证",
+  "summary": "Robin是整合文献检索与数据分析智能体的多智能体系统，可自动完成假设生成与数据分析。它通过迭代提出假设、设计实验、解读结果并更新假设，应用于干性AMD治疗靶点发现。结果确认ripasudil和KL001体外增强RPE吞噬，并揭示ABCA1上调这一潜在新靶点。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

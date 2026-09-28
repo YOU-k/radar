@@ -1,0 +1,42 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.09.01.673319",
+  "title": "BioML-bench: Evaluation of AI Agents for End-to-End Biomedical ML",
+  "url": "https://doi.org/10.1101/2025.09.01.673319",
+  "abstract": "Large language model (LLM) agents hold promise for accelerating biomedical research and development (R&D). Several biomedical agents have recently been proposed, but their evaluation has largely been restricted to question answering (e.g., LAB-Bench) or narrow bioinformatics tasks. Presently, there remains a lack of benchmarks evaluating agent capability in multi-step data analysis workflows or in solving the machine learning (ML) challenges central to AI-driven therapeutics development, such as perturbation response modeling or drug toxicity prediction. We introduce BioML-bench , the first benchmarking suite for evaluating AI agents on end-to-end biomedical ML tasks. BioML-bench spans four domains (protein engineering, single-cell omics, biomedical imaging, and drug discovery) with tasks that require agents to parse a task description, build a pipeline, implement models, and submit predictions graded by established metrics (e.g., AUROC, Spearman). We evaluate four open-source agents: two biomedical specialists (STELLA, Biomni) and two generalists (AIDE, MLAgentBench). On average, agents underperform relative to human baselines, and biomedical specialization does not confer a consistent advantage. We also found that agents which employed more diverse ML strategies more often tended to score highest, suggesting that architecture and scaffolding may be stronger determinants of performance. These findings underscore both the potential and current limits of agentic systems for biomedical ML, and highlight the need for systematic, reproducible evaluations. BioML-bench is provided open-source at github.com/science-machine/biomlbench .",
+  "authors": "Miller HE, Greenig M, Tenmann B, Wang B.",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 1,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "提出BioML-bench基准，评测四类端到端生物医学ML智能体",
+  "data": "四个领域任务，评测4个开源智能体（STELLA、Biomni、AIDE、MLAgentBench）",
+  "scenario": "端到端生物医学ML任务",
+  "benchmark": "BioML-bench；对比人类基线及4个开源智能体",
+  "results": "智能体平均低于人类基线，生物医学专精无一致优势；ML策略更多样的智能体得分最高",
+  "availability": "开源：github.com/science-machine/biomlbench",
+  "limitations": "智能体整体仍低于人类基线，生物医学专精未带来稳定优势",
+  "summary": "本文提出BioML-bench，首个评测AI智能体端到端生物医学ML任务的基准。它覆盖蛋白质工程、单细胞组学、生物医学成像和药物发现四个领域，要求智能体解析任务、构建流程、实现模型并提交预测，按AUROC、Spearman等指标评分。评测四个开源智能体发现其平均低于人类基线，生物医学专精无一致优势，采用更多样ML策略的智能体往往得分最高。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}

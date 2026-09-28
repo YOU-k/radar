@@ -1,0 +1,42 @@
+{
+ "candidate": {
+  "id": "doi:10.1101/2025.08.18.670981",
+  "title": "rbio1 - training scientific reasoning LLMs with biological world models as soft verifiers",
+  "url": "https://doi.org/10.1101/2025.08.18.670981",
+  "abstract": "Reasoning models are typically trained against verification mechanisms in formally specified systems such as code or symbolic math. In open domains like biology, however, we lack exact rules to enable large-scale formal verification and instead often rely on lab experiments to test predictions. Such experiments are slow, costly, and cannot scale with computation. In this work, we show that world models of biology or other prior knowledge can serve as approximate oracles for soft verification , allowing reasoning systems to be trained without additional experimental data. We present two paradigms of training models with approximate verifiers: RLEMF : reinforcement learning with experimental model feedback and RLPK : reinforcement learning from prior knowledge. Using these paradigms, we introduce rbio1 , a reasoning model for biology post-trained from a pretrained LLM with reinforcement learning, using learned biological models for verification during training. We demonstrate that soft verification can distill biological world models into rbio1 , enabling it to achieve state-of-the-art performance on perturbation prediction in the PerturbQA benchmark. We further show that composing multiple AI-verifiers improves performance and that models trained with soft biological rewards transfer zero-shot to cross-domain tasks such as disease-state prediction. We present rbio1 as a proof of concept that predictions from biological models can train powerful reasoning systems using simulations rather than experimental data, offering a new paradigm for model training.",
+  "authors": "Istrate A, Milletari F, Castrotorres F, Tomczak JM, Torkar M, Li D, Karaletsos T.",
+  "venue": "bioRxiv",
+  "year": 2025,
+  "citations": 3,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {}
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "CNS 趋势深度调研发现缺失的关键论文（人工补录）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "用生物世界模型作软验证器，RL后训练出rbio1推理模型",
+  "data": "未提及具体样本规模",
+  "scenario": "生物扰动预测与跨域疾病状态预测",
+  "benchmark": "PerturbQA基准",
+  "results": "在PerturbQA扰动预测上达到最先进性能；组合多个AI验证器提升表现；软生物奖励训练模型零样本迁移到疾病状态预测",
+  "availability": "",
+  "limitations": "作为概念验证，依赖近似验证器而非精确形式化验证",
+  "summary": "本文提出用生物世界模型作为近似软验证器来训练推理系统，无需额外实验数据。作者给出RLEMF（实验模型反馈强化学习）和RLPK（先验知识强化学习）两种范式，并据此从预训练LLM后训练出生物推理模型rbio1。结果显示软验证可将生物世界模型蒸馏进rbio1，在PerturbQA扰动预测上达到最先进性能，组合多个AI验证器可进一步提升，且能零样本迁移到疾病状态预测等跨域任务。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 4,
+ "added_on": "2026-09-28"
+}
