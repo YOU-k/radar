@@ -1,0 +1,47 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41586-026-10658-6",
+  "title": "An AI system to help scientists write expert-level empirical software",
+  "url": "https://doi.org/10.1038/s41586-026-10658-6",
+  "abstract": "The cycle of scientific discovery is frequently bottlenecked by the slow, manual creation of software to support computational experiments 1 . To address this, we present Empirical Research Assistance (ERA), an artificial intelligence (AI) system that creates expert-level scientific software whose goal is to maximize a quality metric. The system uses a large language model (LLM) and tree search 2 to systematically improve the quality metric and intelligently navigate the large space of possible solutions. ERA achieves expert-level results when it explores and integrates complex research ideas from external sources. The effectiveness of tree search is demonstrated across a diverse range of tasks. In bioinformatics, ERA discovered 40 new methods for single-cell data analysis that outperformed the top human-developed methods on a public leaderboard. In epidemiology, ERA generated 14 models that outperformed the Centers for Disease Control and Prevention (CDC) ensemble and all other individual models for forecasting COVID-19 hospitalizations. ERA also produced expert-level software for geospatial analysis, neural activity prediction in zebrafish and numerical solution of integrals, as well as a new rule-based construction for time-series forecasting. By devising and implementing new solutions to diverse tasks, ERA represents a notable step towards accelerating scientific progress.",
+  "authors": "Aygün E, Belyaeva A, Comanici G, Coram M, Cui H, Garrison J, Johnston R, Kast A, McLean CY, Norgaard P, Shamsi Z, Smalling D, Thompson J, Venugopalan S, Williams BP, He C, Martinson S, Plomecka M, Wei L, Zhou Y, Zhu QZ, Abraham M, Brand E, Bulanova A, Cardille JA, Co C, Ellsworth S, Joseph G, Kane M",
+  "venue": "Nature",
+  "year": 2026,
+  "citations": 10,
+  "found_by": [
+   "manual"
+  ],
+  "extra": {
+   "alt_ids": [
+    "pmid:42156545"
+   ],
+   "pmcid": "PMC13293872"
+  }
+ },
+ "panel": [
+  {
+   "role": "manual",
+   "vote": "yes",
+   "reason": "Nature 2026-05-19 与 Co-Scientist、Robin 同日刊出的第三篇 agent 论文（科研软件）",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LLM+树搜索自动生成科研软件",
+  "data": "scRNA-seq数据集(≥2000细胞、≥10细胞类型、≥7批次)；COVID-19住院预测",
+  "scenario": "科研软件自动生成",
+  "benchmark": "OpenProblems排行榜、CDC集成模型、GIFT-Eval、best-of-N=128",
+  "results": "40个单细胞方法超越人类最佳；14个模型超越CDC集成；87个方法中40个超越排行榜现有方法；ERA优于BoN",
+  "availability": "",
+  "limitations": "前沿模型提升后部分任务会饱和，树搜索对简单任务作用有限",
+  "summary": "本文提出ERA系统，利用大语言模型与树搜索自动生成专家级科研软件以最大化质量指标。方法上通过树搜索探索解空间，并结合外部研究思路进行重组与整合。结果显示在生物信息学发现40个超越人类最佳的单细胞方法，在流行病学生成14个超越CDC集成的模型，并在多个领域达到专家水平。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 5,
+ "added_on": "2026-09-28"
+}

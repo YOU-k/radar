@@ -745,18 +745,19 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 <li>医疗世界模型综述提出 L1 时序预测到 L4 规划控制的分级，发现多数系统仅达 L1–L2，少数 L3，L4 罕见，并指出动作空间不明确、干预验证薄弱等跨领域缺口 [<a class="cite" href="#ref-ssl-10">10</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/ssl.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" id="topic-agent" data-src="bg/agent.html"><summary><span class="th" data-t="agent">Agent</span>LLM 科研智能体与可验证奖励强化学习<span class="cnt">证据 102 篇 · 覆盖度 0.69 · 第 4 轮 · 更新 2026-09-28 · 数字核验删句 1</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-agent" data-src="bg/agent.html"><summary><span class="th" data-t="agent">Agent</span>LLM 科研智能体与可验证奖励强化学习<span class="cnt">证据 103 篇 · 覆盖度 0.69 · 第 5 轮 · 更新 2026-09-28</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>早期科研智能体以提示式协同为主，ReAct 在 ALFWorld 成功率绝对提升 34%、WebShop 提升 10%，但依赖提示与外部 API、未做大规模 RL 训练 [<a class="cite" href="#ref-agent-1">1</a>]。</li>
-<li>The AI Scientist 实现端到端全自动流水线，每篇论文成本低于 15 美元，但仅在三个 ML 子领域验证且依赖自动评审器 [<a class="cite" href="#ref-agent-2">2</a>]。</li>
-<li>Co-Scientist 在 AML 药物重定位、肝纤维化靶点、抗菌素耐药机制三个问题上提出候选并经独立体外实验验证，但验证限于三个案例且依赖科学家在环 [<a class="cite" href="#ref-agent-3">3</a>]。</li>
-<li>Robin 单次运行约读 551 篇论文、认知时间 &lt;2h 对比人类 359–424h，但系统为半自主、需实验室闭环验证且仅体外验证 [<a class="cite" href="#ref-agent-4">4</a>]。</li>
-<li>Kosmos 独立科学家评估其 79.4% 陈述准确（数据分析 85.5%、文献 82.1%、综合 57.9%），但综合陈述准确率仅 57.9% 且需科学家指定目标与数据集 [<a class="cite" href="#ref-agent-5">5</a>]。</li>
-<li>PURE 指出 PRM 引发奖励黑客的根源是 RL 中求和形式的信用分配，最小形式仅用 30% 步数即达到可验证奖励方法相当的推理性能 [<a class="cite" href="#ref-agent-6">6</a>]。</li>
-<li>一项研究用 GRPO 比较真实奖励、随机奖励和虚假奖励，发现随机奖励使 MATH-500 提升 21.4 个百分点，接近真实奖励的 29.1 点，但该现象对 Llama3、OLMo2 等无效 [<a class="cite" href="#ref-agent-7">7</a>]。</li>
-<li>单样本 RLVR 研究显示，对 Qwen2.5-Math-1.5B 用单个可验证奖励样本，MATH500 从 36.0% 升至 73.6%（超格式修正 8.6%）[<a class="cite" href="#ref-agent-8">8</a>]。</li>
-<li>有工作用大 k 的 pass@k 系统探测 RLVR 的推理能力边界，核心发现是小 k 时 RLVR 模型更优，但大 k 时基座模型的 pass@k 更高 [<a class="cite" href="#ref-agent-9">9</a>]。</li>
-<li>该工作还报告六种 RLVR 算法表现相近且远未达基座潜力上限，而蒸馏能真正扩展推理能力 [<a class="cite" href="#ref-agent-9">9</a>]。</li>
+<li>科研智能体早期以提示式协同为主，ReAct 在 ALFWorld 成功率绝对提升 <strong>34%</strong>、WebShop 提升 <strong>10%</strong>，但未做大规模 RL 训练，复杂环境下动作空间与错误恢复仍受限 [<a class="cite" href="#ref-agent-1">1</a>]。</li>
+<li>The AI Scientist 实现全自动科研流水线，每篇论文成本低于 <strong>15 美元</strong>，但验证仅限三个 ML 子领域且依赖自动评审器、未含真实同行评审 [<a class="cite" href="#ref-agent-2">2</a>]。</li>
+<li>Kosmos 可运行长达 <strong>12 小时</strong>、200 次智能体 rollout，报告 <strong>79.4%</strong> 陈述准确，但综合陈述准确率仅 57.9% 且需科学家指定目标与数据集 [<a class="cite" href="#ref-agent-3">3</a>]。</li>
+<li>Robin 单次运行约读 551 篇论文、认知时间 <strong>&lt;2h</strong>（人类手动流程为 359–424h），但为半自主、需实验室闭环验证且仅体外验证 [<a class="cite" href="#ref-agent-4">4</a>]。</li>
+<li>Virtual Lab 针对 SARS-CoV-2 变异株设计 <strong>92 个</strong>新纳米抗体，实验验证发现多个功能性纳米抗体，其中两个对 JN.1 或 KP.3 结合改善且保持对祖先刺突蛋白强结合 [<a class="cite" href="#ref-agent-5">5</a>]。</li>
+<li>ToolMaker 构建含 <strong>15 个</strong>任务和 <strong>100+</strong> 单元测试的基准，正确实现 <strong>80%</strong> 任务，但仅 15 个任务且依赖公开代码仓库 [<a class="cite" href="#ref-agent-6">6</a>]。</li>
+<li>ERA 在生物信息学发现 <strong>40 个</strong>超越人类最佳的单细胞方法，在流行病学生成 <strong>14 个</strong>超越 CDC 集成的模型，但前沿模型提升后部分任务会饱和、树搜索对简单任务作用有限 [<a class="cite" href="#ref-agent-7">7</a>]。</li>
+<li>Kimi k1.5 报告了一个<strong>不依赖 MCTS、价值函数和过程奖励模型</strong>的简洁 RL 框架，在 AIME 达 <strong>77.5</strong>、MATH500 达 <strong>96.2</strong>，匹配 o1 [<a class="cite" href="#ref-agent-8">8</a>]。</li>
+<li>一项理论结果指出带 ORM 的 GRPO 在温和假设下等价于带 Monte-Carlo PRM 的 RL 目标，即 <strong>GRPO 隐含地就是一个过程奖励模型</strong>，并据此提出 λ-GRPO 修正 [<a class="cite" href="#ref-agent-9">9</a>]。</li>
+<li>一项研究发现用随机分配奖励的 GRPO 训练使 Qwen2.5-Math-7B 在 MATH-500 提升 <strong>21.4 个百分点</strong>，接近真实奖励的 <strong>29.1 点</strong>，但该现象对 Llama3、OLMo2 等无效 [<a class="cite" href="#ref-agent-10">10</a>]。</li>
+<li>一项工作用<strong>大 k 的 pass@k</strong> 探测发现<strong>小 k 时 RLVR 模型更优，但大 k 时基座模型的 pass@k 更高</strong>，据此认为 RLVR 带来的推理能力源自并受限于基座模型上界 [<a class="cite" href="#ref-agent-11">11</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/agent.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details></div>
 <div id="panel-res" class="panel"><div class="lazy" id="res-lazy" data-src="res.html"><div class="empty">正在加载资源库…</div></div><a class="full" href="res.html" target="_blank" rel="noopener">单独打开资源库 →</a></div>
