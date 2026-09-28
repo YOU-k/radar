@@ -1,0 +1,33 @@
+{
+ "date": "2026-09-28",
+ "sources": {
+  "arxiv": 22,
+  "europepmc": 0,
+  "semantic_scholar": 3,
+  "huggingface": 0,
+  "github": 0,
+  "rss": 0
+ },
+ "errors": [],
+ "stages": {
+  "score": {
+   "sent": 22,
+   "unscored": 0
+  },
+  "deepread": 0,
+  "context": 0,
+  "enrich": 0,
+  "resources": 0,
+  "extract": 0
+ },
+ "llm": {
+  "ok": 2,
+  "fail": 0
+ },
+ "problems": [
+  "europepmc 0 条",
+  "huggingface 0 条",
+  "github 0 条",
+  "rss 0 条"
+ ]
+}
