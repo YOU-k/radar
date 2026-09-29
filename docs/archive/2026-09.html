@@ -1,0 +1,151 @@
+<!doctype html><html lang=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><title>日报归档 2026-09 · radar</title><style>
+:root{color-scheme:light dark;--bg:#f6f8fa;--card:#fff;--fg:#1f2328;--muted:#57606a;--muted2:#4b5563;--border:#d0d7de;
+--link:#0969da;--accent:#1f6feb;--green:#1a7f37;--purple:#8250df;--topbg:rgba(246,248,250,.94);--thbg:#f6f8fa;
+--hi-bg:#dafbe1;--hi-fg:#1a7f37;--mid-bg:#fff8c5;--mid-fg:#9a6700;--lo-bg:#eaeef2;--lo-fg:#57606a;--res-bg:#ddf4ff;--res-fg:#0969da;
+--pp-bg:#fff1e5;--pp-fg:#bc4c00;--new:#cf222e;--warn-bg:#fff8c5;--warn-fg:#9a6700;--shadow:0 1px 2px rgba(31,35,40,.04)}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--fg:#e6edf3;--muted:#9198a1;--muted2:#b1bac4;--border:#30363d;
+--link:#4493f8;--accent:#1f6feb;--green:#3fb950;--purple:#bc8cff;--topbg:rgba(13,17,23,.92);--thbg:#1c2128;
+--hi-bg:#12361f;--hi-fg:#56d364;--mid-bg:#3a2e0a;--mid-fg:#e3b341;--lo-bg:#262c36;--lo-fg:#9198a1;--res-bg:#0c2d4b;--res-fg:#79c0ff;
+--pp-bg:#3d1f0a;--pp-fg:#ffa657;--new:#ff7b72;--warn-bg:#3a2e0a;--warn-fg:#e3b341;--shadow:none}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,"PingFang SC","Noto Sans SC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:0 12px 80px}
+a{color:var(--link);text-decoration:none}
+a:active{opacity:.7}
+[id]{scroll-margin-top:150px}
+.top{position:sticky;top:0;z-index:9;background:var(--topbg);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:12px 12px 10px;border-bottom:1px solid var(--border);margin:0 -12px 16px}
+.top h1{font-size:17px;margin:0 0 2px}
+.top .meta{color:var(--muted);font-size:12px;margin-bottom:10px}
+.tabs{display:flex;gap:8px}
+.tab{flex:1;text-align:center;padding:9px 0;border:1px solid var(--border);border-radius:20px;background:var(--card);color:var(--muted);font:600 14.5px/1.4 inherit;cursor:pointer;user-select:none;position:relative}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab .nb{position:absolute;top:-6px;right:4px;background:var(--new);color:#fff;border-radius:9px;font-size:10.5px;line-height:17px;min-width:17px;padding:0 4px}
+.panel{display:none}.panel.on{display:block}
+details.bg{background:var(--card);border:1px solid var(--border);border-radius:12px;margin:0 0 10px;padding:0 16px}
+details.bg>summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:600;font-size:15px}
+details.bg>summary::-webkit-details-marker{display:none}
+details.bg>summary .cnt{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
+.bgbody{font-size:14.5px;padding-bottom:14px;overflow-wrap:anywhere}
+.bgbody h2{font-size:15px;color:var(--green)}
+.bgbody h3{font-size:14.5px;color:var(--purple);margin-bottom:4px}
+.bgbody ol{padding-left:20px;font-size:13px;color:var(--muted2)}
+.bgbody li:target{background:var(--mid-bg)}
+a.cite{font-size:.85em;vertical-align:.1em}
+a.full{display:inline-block;font-size:13px;margin-top:6px}
+.lazy .empty{padding:10px 0}
+#q{width:100%;padding:9px 14px;border:1px solid var(--border);border-radius:20px;background:var(--card);color:var(--fg);font-size:14px;outline:none;margin-bottom:12px}
+#q:focus{border-color:var(--link)}
+.wk{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:4px 16px 14px;margin:0 0 10px;font-size:14.5px;box-shadow:var(--shadow);overflow-wrap:anywhere}
+.wk h2{font-size:15px;color:var(--green)}
+.wk h3{font-size:14.5px;color:var(--purple);margin-bottom:4px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0;max-width:100%}
+.tw table{border-collapse:collapse;font-size:12.5px;width:max-content;max-width:none}
+.tw th,.tw td{border:1px solid var(--border);padding:4px 6px;text-align:left;vertical-align:top;min-width:7em;max-width:22em;overflow-wrap:anywhere}
+.tw th{background:var(--thbg)}
+details.day{margin:0 0 10px}
+details.day>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;padding:11px 4px;border-bottom:1px solid var(--border);font-weight:600;font-size:15px}
+details.day>summary::-webkit-details-marker{display:none}
+details.day>summary .cnt{font-weight:400;color:var(--muted);font-size:12px;margin-left:auto}
+details.day>summary::after{content:"›";color:var(--muted);transition:transform .15s}
+details.day[open]>summary::after{transform:rotate(90deg)}
+details.day>.daybody{padding-top:8px}
+.newdot{display:none;font-size:11px;font-weight:700;color:#fff;background:var(--new);border-radius:8px;padding:0 6px;line-height:18px}
+.isnew .newdot{display:inline-block}
+.dom{color:var(--purple);font-size:13px;font-weight:600;margin:14px 2px 6px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:11px 13px;margin:0 0 10px;box-shadow:var(--shadow)}
+.card .t{font-size:15px;line-height:1.5}
+.card .t a{color:var(--fg);font-weight:600}
+.badge{display:inline-block;min-width:34px;text-align:center;font-size:12px;font-weight:700;border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+.badge.hi{background:var(--hi-bg);color:var(--hi-fg)}
+.badge.mid{background:var(--mid-bg);color:var(--mid-fg)}
+.badge.lo{background:var(--lo-bg);color:var(--lo-fg)}
+.badge.res{background:var(--res-bg);color:var(--res-fg)}
+.vt{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:0 5px;margin-right:4px}
+.vt.jr{background:var(--hi-bg);color:var(--hi-fg)}
+.vt.pp{background:var(--pp-bg);color:var(--pp-fg)}
+.reason{color:var(--muted2);font-size:13.5px;margin-top:5px}
+.meta{color:var(--muted);font-size:12px;margin-top:5px}
+.legend{color:var(--muted);font-size:11.5px;margin:-4px 2px 10px}
+.bgline{color:var(--purple);font-size:12.5px;margin-top:4px;border-left:3px solid var(--purple);padding-left:6px}
+details.deep{margin-top:8px;border-top:1px dashed var(--border);padding-top:6px}
+details.deep>summary{cursor:pointer;list-style:none;color:var(--link);font-size:13px;padding:4px 0}
+details.deep>summary::-webkit-details-marker{display:none}
+details.deep>summary::before{content:"▸ "}
+details.deep[open]>summary::before{content:"▾ "}
+details.deep .deepbody{font-size:13.5px;color:var(--muted2);padding-top:4px;overflow-wrap:anywhere}
+details.deep .deepbody h2,details.deep .deepbody h3{font-size:13.5px;color:var(--green);margin:10px 0 2px}
+details.deep .deepbody p{margin:4px 0}
+.empty{color:var(--muted);font-size:13px;padding:6px 2px}
+.hide{display:none!important}
+.health{font-size:12px;color:var(--warn-fg);background:var(--warn-bg);border-radius:6px;padding:2px 8px;margin:2px 0 6px}
+.sec{margin:18px 2px 8px}
+.sec-t{font-size:15px;font-weight:700}
+.sec-d{font-size:12.5px;color:var(--muted)}
+a.ov{display:block;background:var(--card);border:1px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:8px 12px;margin:0 0 8px;color:var(--fg);font-size:13px}
+.ov-h{display:flex;align-items:center;flex-wrap:wrap;gap:2px}
+.ov-n{font-weight:700;font-size:14px}
+.ov-deep{margin-left:auto;font-size:11px;color:var(--link);border:1px solid var(--border);border-radius:8px;padding:0 6px}
+.ov-s{color:var(--muted);font-size:12px;margin:2px 0}
+.ov-l{margin-top:2px;line-height:1.5}
+.ov-l b{color:var(--muted);font-weight:600;margin-right:4px}
+details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
+.th{display:inline-block;font-size:11.5px;font-weight:600;border-radius:10px;padding:0 7px;margin:0 4px 2px 0;line-height:18px;white-space:nowrap;color:var(--c);background:var(--cb);border:1px solid var(--cl)}
+.card.tagged{border-left:4px solid var(--tc,var(--border))}
+.tags{margin-top:5px}
+.fbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.fchip{font:600 12.5px/1.4 inherit;border-radius:16px;padding:6px 12px;cursor:pointer;user-select:none;border:1px solid var(--cl,var(--border));background:var(--card);color:var(--c,var(--muted))}
+.fchip.on{box-shadow:inset 0 0 0 2px currentColor}
+.fchip .n{font-weight:400;opacity:.75;margin-left:3px}
+@media (prefers-color-scheme:dark){.th[data-t],.fchip[data-t]{--c:var(--cd);--cb:var(--cbd)}}
+.sum{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:8px 14px;margin:0 0 12px;font-size:14px}
+.sum h4{margin:4px 0 2px;font-size:13px;color:var(--muted)}
+.sum ul{margin:4px 0;padding-left:18px}
+.sum li{margin:3px 0}
+.pri{font-size:13px;font-weight:700;margin:16px 2px 6px}
+.pri.p0{color:var(--new)}.pri.p1{color:var(--mid-fg)}.pri.p2{color:var(--muted)}.pri.pn{color:var(--link)}
+.rcard{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 12px;margin:0 0 8px;font-size:13.5px;overflow-wrap:anywhere}
+.rcard .rn{font-weight:700;font-size:14.5px}
+.rcard .rk{font-size:11.5px;color:var(--muted);border:1px solid var(--border);border-radius:4px;padding:0 4px;margin-left:6px;font-weight:400}
+.rcard .why{color:var(--fg);margin-top:3px}
+.rcard .rm{color:var(--muted);font-size:12px;margin-top:3px}
+.rcard.new{border-style:dashed}
+.st{display:inline-block;font-size:11px;border-radius:4px;padding:0 5px;margin-left:4px;font-weight:600}
+.st.ok{background:var(--hi-bg);color:var(--hi-fg)}.st.warn{background:var(--mid-bg);color:var(--mid-fg)}.st.bad{background:var(--pp-bg);color:var(--pp-fg)}
+.arch{margin:16px 2px;font-size:13.5px}
+.arch a{display:inline-block;margin:4px 10px 4px 0}
+.back{display:inline-block;margin:10px 0}
+[data-t=aging]{--c:#1a7f37;--cb:#1a7f3714;--cl:#1a7f3755;--cd:#81b891;--cbd:#81b8911f}[data-t=cohort]{--c:#0969da;--cb:#0969da14;--cl:#0969da55;--cd:#77acea;--cbd:#77acea1f}[data-t=cardio]{--c:#cf222e;--cb:#cf222e14;--cl:#cf222e55;--cd:#e4858c;--cbd:#e4858c1f}[data-t=organoid]{--c:#9a6700;--cb:#9a670014;--cl:#9a670055;--cd:#c7ab72;--cbd:#c7ab721f}[data-t=singlecell]{--c:#8250df;--cb:#8250df14;--cl:#8250df55;--cd:#ba9eed;--cbd:#ba9eed1f}[data-t=vcell]{--c:#bf3989;--cb:#bf398914;--cl:#bf398955;--cd:#db92be;--cbd:#db92be1f}[data-t=ssl]{--c:#1b7c83;--cb:#1b7c8314;--cl:#1b7c8355;--cd:#81b6ba;--cbd:#81b6ba1f}[data-t=agent]{--c:#bc4c00;--cb:#bc4c0014;--cl:#bc4c0055;--cd:#da9c72;--cbd:#da9c721f}</style></head><body><main><a class="back" href="../index.html">← 返回 radar</a><h1 style="font-size:18px;margin:4px 0">日报归档 2026-09</h1><div class="meta">1 份日报</div><details class="day" data-date="2026-09-15" data-first="0"><summary>2026-09-15 · 周二<span class="newdot">新</span><span class="cnt">7 条</span></summary><div class="daybody"><div class="sum"><h4>今日要点</h4><ul><li data-themes="aging"><span class="th" data-t="aging">衰老</span>乳腺组织特异甲基化时钟（Epigenetics）可准确预测时序年龄并揭示去相关，公开数据构建，可作 aging clock 参考。</li><li data-themes="ssl vcell"><span class="th" data-t="ssl">世界模型</span><span class="th" data-t="vcell">虚拟细胞</span>免疫世界模型（arXiv）做动作条件多尺度预测与治疗假设生成，契合多模态衰老建模。</li><li data-themes="singlecell"><span class="th" data-t="singlecell">单细胞</span>MARC（arXiv）提出形态学感知共识回归，用于亚细胞空间转录组细胞分割，可直接接入空转流程。</li><li data-themes="ssl"><span class="th" data-t="ssl">世界模型</span>视频基础模型物理表征探针（arXiv）、神经接口自监督预训练（arXiv）、策略与世界模型协同训练（arXiv）分别提供表征探针、跨被试迁移与扰动响应建模的方法储备。</li><li data-themes=""><b>必读：</b>An immune world model for multiscale forecasting——动作条件多尺度预测与治疗假设生成，与多模态衰老及虚拟扰动响应建模最直接相关。</li></ul></div><div class="dom">衰老</div>
+<div class="card tagged" style="--tc:#1a7f37" data-score="8.0" data-themes="aging"><div class="t"><a href="https://doi.org/10.1080/15592294.2026.2714582" target="_blank" rel="noopener">A breast tissue-specific epigenetic clock provides accurate chronological age predictions and reveals de-correlation of age and DNA methylation in tumor-adjacent and tumor samples.</a><span class="badge hi">8.0</span></div><div class="reason">乳腺组织特异甲基化时钟，公开数据构建，可直接用于aging clock参考。</div><div class="meta"><span class="vt jr">期刊</span>Epigenetics · 2026-09 · 通讯 Miguel Quintela-Fandiño（Spanish National Cancer Research Centre） · Garma LD, Pernas S, Fullana B, Vethencourt A, Vicente Baz D,</div><div class="tags"><span class="th" data-t="aging">衰老</span></div><details class="deep"><summary>深读笔记</summary><div class="deepbody"><h1>深读笔记：Breast Tissue-specific Epigenetic Clock (BTEC)</h1>
+<p><strong>总结</strong>
+该研究基于 7 个研究、553 例健康乳腺组织的 DNA 甲基化数据，构建了乳腺组织特异性表观遗传时钟 BTEC，在年龄预测精度（r=0.91, MAE=3.0y）和跨祖源稳健性上显著优于 Horvath/Hannum 等经典时钟。作者进一步发现肿瘤及瘤旁组织的表观年龄出现系统性"去相关"（肿瘤样本平均偏差 -14~-15 年），且 EAA 与 HR+ 乳腺癌患者生存相关，提示组织特异时钟兼具方法学与临床价值。</p>
+<p><strong>核心方法</strong>
+采用多队列健康乳腺甲基化数据训练组织特异性年龄回归模型（弹性网/惩罚回归类），并系统评估了残差型 EAA 对参考数据集的依赖性。关键分析包括跨祖源偏差比较、肿瘤/瘤旁样本的预测偏差分层（按分子亚型）、以及 BTEC 探针的基因通路注释（JAK1、TP73、PDGFRA、CCND1、STAT5B 及 Wnt/Hedgehog/ErbB 通路）。</p>
+<p><strong>数据与代码可用性</strong>
+摘要未提及代码或模型权重仓库，需查正文/补充材料确认是否公开 BTEC 探针列表与系数（这是能否直接复用的关键）。训练数据来自 7 项已发表研究（多为 GEO 公共甲基化数据集），原则上可重建，但需自行整合与标准化。目前看<strong>不能直接拿来用</strong>，需先确认模型参数与预处理流程是否开源。</p>
+<p><strong>局限</strong>
+仅基于摘要，样本量（553 例健康组织）对组织特异时钟偏小，且缺乏独立外部验证队列的明确说明；EAA 与生存的关联为探索性分析，未做多变量校正或前瞻验证；肿瘤样本的"负向偏差"机制（去甲基化 vs 细胞组成混杂）未在摘要中厘清，可能受肿瘤纯度、细胞类型比例影响。</p>
+<p><strong>对多模态衰老模型合作的启发</strong>
+第一，BTEC 是"组织/模态特异时钟 + 跨队列校正"的现成范例，可直接借鉴其<strong>参考数据集依赖性问题</strong>的处理思路，用于你合作项目中甲基化模态与类器官/蛋白组的对齐。第二，其"肿瘤去相关"现象提示：在多模态衰老模型中，<strong>疾病/扰动状态会系统性扭曲单模态 aging clock 输出</strong>，建议在 demo 阶段就设计 modality-specific 与 shared 表征分离的架构（如 JEPA 式共享潜空间 + 模态私有头）。第三，可执行动作：检索 BTEC 探针列表与系数是否公开，若公开则纳入你公共数据 demo 的甲基化基线；若不公开，则用其"多队列训练 + 跨祖源评估"流程作为你自己训练组织特异时钟的模板。</p></div></details></div>
+<div class="dom">单细胞</div>
+<div class="card tagged" style="--tc:#8250df" data-score="7.0" data-themes="singlecell"><div class="t"><a href="https://arxiv.org/abs/2609.13665" target="_blank" rel="noopener">MARC: Morphology-Aware Regression of Consensus for Cell Segmentation in Subcellular Spatial Transcriptomics</a><span class="badge mid">7.0</span></div><div class="reason">亚细胞空转细胞分割新方法，直接可用于空间转录组流程。</div><div class="meta"><span class="vt pp">预印本</span>arXiv · 2026-09 · 末位 Jinman Kim · Xinyu Shu, Andrew Zhang, Jean Yang, Jinman Kim</div><div class="tags"><span class="th" data-t="singlecell">单细胞</span></div></div>
+<div class="dom">世界模型</div>
+<div class="card tagged" style="--tc:#1b7c83" data-score="8.0" data-themes="ssl vcell"><div class="t"><a href="https://arxiv.org/abs/2609.14709" target="_blank" rel="noopener">An immune world model for multiscale forecasting and therapeutic hypothesis generation</a><span class="badge hi">8.0</span></div><div class="reason">免疫世界模型，动作条件多尺度预测，与多模态衰老建模高度契合。</div><div class="meta"><span class="vt pp">预印本</span>arXiv · 2026-09 · 末位 Yingcheng Wu · Taoyong Cui, Xi Wang, Zonghang Li, Jinchao Ding, Lingsen You</div><div class="tags"><span class="th" data-t="ssl">世界模型</span><span class="th" data-t="vcell">虚拟细胞</span></div><details class="deep"><summary>深读笔记</summary><div class="deepbody"><h1>深读笔记：An immune world model for multiscale forecasting and therapeutic hypothesis generation</h1>
+<p><strong>总结</strong>
+该工作用"受治理的进化式 AI Scientist"（Agent Genesis）自动搜索并冻结了一个<strong>动作条件化的免疫世界模型</strong>，把细胞、组织、个体三个尺度的免疫状态编码为结构化状态 S_t，把干预（细胞因子/CRISPR/药物/检查点）编码为动作 A_t，学习转移 S_{t+1}=F_θ(S_t,A_t)，并解码出可解释读出（细胞比例、通路、DE 方向、NR→R 分数）。模型在冻结后于未见干预/上下文、跨尺度 rollout、动作组合上做了锁定评估，并据此提名 IL-36γ + SIRPα 抑制这一互补轴治疗假设。整体是"世界模型 + AI Scientist 治理流程"在免疫治疗预测上的概念验证。</p>
+<p><strong>核心方法</strong>
+架构上分三层结构化状态（Z_cell / Z_tme / Z_patient）与独立动作编码，用门控残差动作模型做转移，结构化解码器输出表达级预测与生物学读出；消融显示结构化解码器（-0.14）、动作条件动态（-0.10）、多尺度编码器（-0.08）贡献最大。开发流程由 Agent Genesis 驱动：候选 Scientist 工作流在版本化数据清单与预设评估门（如 +0.02 效应量门）下进化，16 个更新被 promote、9 个被 reject，模型冻结后才做独立确认。评估覆盖 builder macro-F1、五项锁定外部能力探针、跨系统审计与动作组合。</p>
+<p><strong>数据与代码可用性</strong>
+摘要与正文未给出代码/权重/数据仓库链接，只提到公开数据来源（Parse PBMC 约 1000 万 PBMC、90 细胞因子图谱、GEARS/scGPT/scFoundation/UCE 等作为基线或 backbone），以及自建的 Immune68 特征表与 TabPFN 组合。<strong>不能直接拿来用</strong>：需要向作者（PhAI Labs / CUHK，通讯作者 Pheng Ann Heng、Ling Yang、Zhenfei Yin、Yingcheng Wu）索取代码与冻结配置；可先复现的线索是 Parse PBMC few-shot 基准与 GEARS 常用扰动数据集，以及 TabPFN 这一现成组件。</p>
+<p><strong>局限</strong>
+全局平均 ∆cos 上并未超过 condition-mean 基线（均 0.46），只在相对 scGPT 的 64% 动作上更优，说明增益主要来自条件特异而非整体表征；抗 PD-1 LOO AUC 在 composition 上仅 0.54，个体层增益普遍很小（+0.005~+0.067）；定量动态基准只评估了一步转移，rollout 与动作组合的定量验证有限；IL-36γ + SIRPα 仍是<strong>未经湿实验验证的假设</strong>，且自校正审计否决了所有筛选的细胞因子对，提示假阳性风险控制仍是开放问题。</p>
+<p><strong>对多模态衰老模型合作的启发</strong>
+1. <strong>可直接迁移的架构范式</strong>：把"结构化状态 + 独立动作编码 + 门控残差转移"套到你的多模态健康衰老模型上——状态层可对应 PBMC 单细胞 / 蛋白组 / 甲基化 / 空间转录组，动作层对应药物、扰动、类器官处理条件，正好匹配你"每模态独立训练再整合"与"持续矫正统一模型"的两条路线。
+2. <strong>治理流程可复用</strong>：Agent Genesis 的"版本化数据清单 + 预设效应量门 + promote/rollback 审计"可直接作为你合作项目的模型更新协议，解决新模态数据进来后"何时该合并、何时该回滚"的决策问题，也契合你关注的增量/持续学习。
+3. <strong>缺失模态与跨队列校正</strong>：其" withhold 整个尺度信息"的泛化评估设计，可借来测试你的模型在缺失蛋白组或甲基化模态时的鲁棒性；跨上下文转移（K562→RPE1、8h→48h）的探针思路可改造为跨队列/跨年龄的 aging clock 验证。
+4. <strong>可执行下一步</strong>：先复现 Parse PBMC few-shot 与 GEARS 扰动预测作为 demo 基线，同时联系作者索取冻结配置；把 IL-36γ+SIRPα 这类"互补轴假设生成"流程，移植到你的类器官 + 扰动响应建模中，作为合作方湿实验的候选优先级排序工具。</p></div></details></div>
+<div class="card tagged" style="--tc:#1b7c83" data-score="6.0" data-themes="ssl"><div class="t"><a href="https://arxiv.org/abs/2606.09646" target="_blank" rel="noopener">How Do Video Foundation Models Encode Intuitive Physics? Probing Across Pretraining Paradigms</a><span class="badge mid">6.0</span></div><div class="reason">V-JEPA等视频基础模型物理表征探针，JEPA范式对表征学习有参考价值。</div><div class="meta"><span class="vt pp">预印本</span>arXiv · 2026-06 · 末位 Mohammadreza Salehi · Samuele Punzo, Niccol\`o Caselli, Ippokratis Pantelidis, Fra</div><div class="tags"><span class="th" data-t="ssl">世界模型</span></div></div>
+<div class="card tagged" style="--tc:#1b7c83" data-score="6.0" data-themes="ssl"><div class="t"><a href="https://arxiv.org/abs/2609.13507" target="_blank" rel="noopener">Pretraining for Sample-Efficient Neural Interfaces</a><span class="badge mid">6.0</span></div><div class="reason">神经接口自监督预训练，跨被试表征思路可迁移到单细胞。</div><div class="meta"><span class="vt pp">预印本</span>arXiv · 2026-09 · 末位 Gregory B. Cogan · Ben Tang, Zachary Spalding, Gregory B. Cogan</div><div class="tags"><span class="th" data-t="ssl">世界模型</span></div></div>
+<div class="dom">Agent</div>
+<div class="card tagged" style="--tc:#bc4c00" data-score="6.0" data-themes="agent ssl"><div class="t"><a href="https://arxiv.org/abs/2606.02388" target="_blank" rel="noopener">Policy and World Modeling Co-Training for Language Agents</a><span class="badge mid">6.0</span></div><div class="reason">策略与世界模型协同训练，方法学可迁移到扰动响应建模。</div><div class="meta"><span class="vt pp">预印本</span>arXiv · 2026-06 · 末位 Ke Tang · Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Ya</div><div class="tags"><span class="th" data-t="agent">Agent</span><span class="th" data-t="ssl">世界模型</span></div></div>
+<div class="dom">其他</div>
+<div class="card" data-score="6.0" data-themes=""><div class="t"><a href="https://doi.org/10.1016/j.cell.2026.08.024" target="_blank" rel="noopener">Metax enables accurate cross-domain taxonomic profiling of metagenomes.</a><span class="badge mid">6.0</span></div><div class="reason">Metax跨域宏基因组分类工具，有代码可用的方法学</div><div class="meta"><span class="vt jr">期刊</span>Cell · 2026-09 · 通讯 Alice Carolyn McHardy（Helmholtz Centre for Infection Research） · Deng ZL, Safaei N, McHardy AC.</div></div></div></details></main></body></html>
