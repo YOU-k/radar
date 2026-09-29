@@ -86,5 +86,25 @@
   "source": "daily",
   "theme": "",
   "legacy_section": "通用 ML / 其他"
+ },
+ {
+  "name": "NexuST: A Hierarchical Foundation Model for Spatial Transcriptomics",
+  "kind": "model",
+  "url": "https://doi.org/10.64898/2026.09.22.753590",
+  "note": "空间转录组分层基础模型，4570万细胞预训练，可直接用。",
+  "score": 8.0,
+  "day": "2026-09-29",
+  "source": "daily",
+  "theme": "singlecell"
+ },
+ {
+  "name": "LucaCell: a sequence-centric foundation model for cross-species single-cell analysis",
+  "kind": "model",
+  "url": "https://doi.org/10.21203/rs.3.rs-11151765/v1",
+  "note": "序列中心跨物种单细胞基础模型，8500万细胞预训练，可迁移。",
+  "score": 8.0,
+  "day": "2026-09-29",
+  "source": "daily",
+  "theme": "singlecell"
  }
 ]
