@@ -106,5 +106,35 @@
   "day": "2026-09-29",
   "source": "daily",
   "theme": "singlecell"
+ },
+ {
+  "name": "EpiZoo: a DNA sequence-aware foundation model for cross-species single-cell epigenomics",
+  "kind": "model",
+  "url": "https://doi.org/10.64898/2026.09.24.754017",
+  "note": "跨物种单细胞表观组基础模型，序列感知，可迁移到衰老图谱。",
+  "score": 7.0,
+  "day": "2026-10-02",
+  "source": "daily",
+  "theme": "singlecell"
+ },
+ {
+  "name": "A pre-train and fine-tune framework for adaptive boosting of pre-trained polygenic risk scores.",
+  "kind": "model",
+  "url": "https://doi.org/10.1038/s41467-026-77128-5",
+  "note": "预训练PRS微调提升框架，Nature Communications，人群遗传建模可用。",
+  "score": 7.0,
+  "day": "2026-10-02",
+  "source": "daily",
+  "theme": "cohort"
+ },
+ {
+  "name": "SingPro 2.0: a proteomics-centric knowledge base for single-cell multimodal profiling.",
+  "kind": "dataset",
+  "url": "https://doi.org/10.1093/nar/gkag933",
+  "note": "NAR单细胞多模态蛋白知识库，公开可获取数据库，多模态图谱直接可用。",
+  "score": 7.0,
+  "day": "2026-10-02",
+  "source": "daily",
+  "theme": "singlecell"
  }
 ]
