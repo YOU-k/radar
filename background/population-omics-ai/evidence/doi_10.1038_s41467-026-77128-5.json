@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-026-77128-5",
+  "title": "A pre-train and fine-tune framework for adaptive boosting of pre-trained polygenic risk scores.",
+  "url": "https://doi.org/10.1038/s41467-026-77128-5",
+  "abstract": "研究提出Adaptive Boosting of pre-trained Polygenic Risk Scores框架，通过自适应变量选择和模型提升对已有PRS进行微调，以捕捉原模型未充分纳入的额外预测信号。模拟显示该方法能在控制错误发现率的同时识别与预训练PRS正交的信号，并在UK Biobank数据上对二分类疾病等性状的预训练PRS进行了微调。",
+  "authors": "",
+  "venue": "Nature communications",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0,
+   "pmcid": "PMC13623977"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank上PRS微调框架，方法有新意且可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "预训练PRS微调框架，UK Biobank验证，方法学有通用价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "预训练PRS自适应提升微调框架",
+  "data": "模拟数据及UK Biobank二分类疾病等性状",
+  "scenario": "PRS微调提升预测",
+  "benchmark": "对比PRS(basic)、PRS-CS、LDpred、MegaPRS及LASSO、贝叶斯变量选择",
+  "results": "模拟中AB-PRS在各场景R2普遍优于基线预训练PRS，配对检验显著；有效控制FDR，噪声选择比例<28%，重要预测因子选择>50%",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究提出Adaptive Boosting of pre-trained Polygenic Risk Scores框架，通过自适应变量选择和模型提升对已有PRS进行微调。在模拟和UK Biobank数据上，以PRS(basic)、PRS-CS、LDpred、MegaPRS等预训练PRS为基线进行对比。结果显示AB-PRS在模拟各场景预测性能普遍优于基线，能控制错误发现率并识别与预训练PRS正交的信号。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 9,
+ "added_on": "2026-10-04"
+}

@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1002/joa3.70463",
+  "title": "Prediction of Atrial Fibrillation Risk Through the Integration of Genetic Information and Artificial Intelligence-Based Electrocardiogram Data.",
+  "url": "https://doi.org/10.1002/joa3.70463",
+  "abstract": "研究分析39,478名无既往房颤的UK Biobank参与者，评估在CHARGE-AF临床风险模型基础上加入房颤多基因风险评分、AI-ECG年龄差和AI-ECG预测性别错配是否能改善房颤风险预测。模型性能通过序贯预测模型比较，结果显示整合遗传信息和AI-ECG数据可提升房颤风险预测。",
+  "authors": "",
+  "venue": "Journal of arrhythmia",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0,
+   "pmcid": "PMC13602817"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank近4万人整合PRS与AI-ECG提升房颤预测，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank近4万人，PRS+AI-ECG整合提升房颤风险预测",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CHARGE-AF整合PRS与AI-ECG",
+  "data": "UK Biobank 39,478名无既往房颤参与者",
+  "scenario": "房颤风险预测",
+  "benchmark": "CHARGE-AF临床风险模型",
+  "results": "整合房颤多基因风险评分、AI-ECG年龄差和AI-ECG预测性别错配可提升房颤风险预测",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究分析39,478名无既往房颤的UK Biobank参与者，评估在CHARGE-AF临床风险模型基础上加入遗传和AI-ECG信息能否改善房颤风险预测。方法上整合房颤多基因风险评分、AI-ECG年龄差和AI-ECG预测性别错配，并通过序贯预测模型比较性能。结果显示整合遗传信息和AI-ECG数据可提升房颤风险预测。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 8,
+ "added_on": "2026-10-04"
+}

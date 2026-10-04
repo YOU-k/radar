@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41587-026-03307-w",
+  "title": "Deep learning perturbation models can outperform baselines on calibrated metrics.",
+  "url": "https://doi.org/10.1038/s41587-026-03307-w",
+  "abstract": "研究针对深度学习遗传扰动模型常被报告不如无信息基线的问题，提出阳性对照基线和指标校准框架。在14个数据集和18个指标上发现，常用指标如MSE和Pearson Δ常校准不良，降低了对阳性模型性能的敏感性；在良好校准指标下，深度学习扰动模型可优于无信息基线。",
+  "authors": "",
+  "venue": "Nature biotechnology",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "扰动模型评测基准与指标校准，含批判性结论，契合基准方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "扰动模型评测基准与校准框架，批判性结果，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "阳性对照基线与指标校准框架",
+  "data": "14个数据集、18个指标",
+  "scenario": "遗传扰动模型评估",
+  "benchmark": "无信息基线；MSE、Pearson Δ等常用指标",
+  "results": "常用指标如MSE和Pearson Δ常校准不良，降低对阳性模型性能的敏感性；在良好校准指标下，深度学习扰动模型可优于无信息基线",
+  "availability": "",
+  "limitations": "常用指标校准不良，降低对阳性模型性能的敏感性",
+  "summary": "研究针对深度学习遗传扰动模型常被报告不如无信息基线的问题，提出阳性对照基线和指标校准框架。在14个数据集和18个指标上评估常用指标的校准情况。发现常用指标如MSE和Pearson Δ常校准不良，降低了对阳性模型性能的敏感性；在良好校准指标下，深度学习扰动模型可优于无信息基线。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 7,
+ "added_on": "2026-10-04"
+}

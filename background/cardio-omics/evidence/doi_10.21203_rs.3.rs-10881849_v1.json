@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.21203/rs.3.rs-10881849/v1",
+  "title": "Age Acceleration and Mortality Risk Constitute Distinct Dimensions of Organ Aging",
+  "url": "https://doi.org/10.21203/rs.3.rs-10881849/v1",
+  "abstract": "研究为UK Biobank中409,206名参与者的14个器官构建了整合NMR代谢组、Olink蛋白组和临床表型的多组学器官特异性衰老时钟。通过将年龄加速与器官特异性死亡及全因死亡对比，发现年龄加速和死亡风险是器官生物学的不同维度，具有可分离的表型、分子和遗传结构，并通过特征消融GWAS进一步解析其遗传基础。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 40万人多组学器官衰老时钟，方法新且数据公开",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 40万人多组学器官衰老时钟，含心血管死亡风险",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多组学器官特异性衰老时钟",
+  "data": "UK Biobank 409,206名参与者，14个器官",
+  "scenario": "器官衰老与死亡风险",
+  "benchmark": "器官特异性死亡与全因死亡对比",
+  "results": "年龄加速与死亡风险是器官生物学的不同维度，具有可分离的表型、分子和遗传结构",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究为UK Biobank中409,206名参与者的14个器官构建了整合NMR代谢组、Olink蛋白组和临床表型的多组学器官特异性衰老时钟。通过将年龄加速与器官特异性死亡及全因死亡对比，解析两者的关系。发现年龄加速和死亡风险是器官生物学的不同维度，具有可分离的表型、分子和遗传结构，并通过特征消融GWAS进一步解析其遗传基础。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 8,
+ "added_on": "2026-10-04"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.21.753191",
+  "title": "Benchmarking single-cell foundation models for aging biology",
+  "url": "https://doi.org/10.64898/2026.09.21.753191",
+  "abstract": "该研究建立了面向衰老研究的细胞表征基准，评估10个通用单细胞基础模型、3个衰老专用模型及传统方法，覆盖5个生物学问题、超过250万单细胞转录组。使用冻结预训练表征时，Geneformer在时序年龄预测和年龄伪时间一致性上表现最佳，但2000个高变基因平均表现更高；多个模型在三种疾病背景中捕捉到正向分子年龄偏移。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "衰老生物学单细胞基础模型基准，250万细胞，契合AI基准方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "衰老生物学AI基准，评估单细胞基础模型，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基准评测单细胞基础模型表征",
+  "data": "10个通用+3个衰老专用模型，超250万单细胞转录组",
+  "scenario": "衰老细胞表征评估",
+  "benchmark": "通用单细胞基础模型、衰老专用模型、传统方法",
+  "results": "Geneformer在时序年龄预测与年龄伪时间一致性最佳；2000高变基因平均表现更高；多模型在三种疾病背景捕捉正向分子年龄偏移",
+  "availability": "",
+  "limitations": "",
+  "summary": "该研究建立了面向衰老生物学的单细胞表征基准。评估了10个通用单细胞基础模型、3个衰老专用模型及传统方法，覆盖5个生物学问题、超过250万单细胞转录组。发现冻结预训练表征下Geneformer在时序年龄预测和年龄伪时间一致性上最佳，但2000个高变基因平均表现更高，且多个模型在三种疾病背景中捕捉到正向分子年龄偏移。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 5,
+ "added_on": "2026-10-04"
+}

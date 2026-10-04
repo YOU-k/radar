@@ -46,5 +46,13 @@
   "score": 0.646,
   "n_evidence": 102,
   "round": 6
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.7,
+  "highcite": 0.34,
+  "score": 0.646,
+  "n_evidence": 106,
+  "round": 7
  }
 ]

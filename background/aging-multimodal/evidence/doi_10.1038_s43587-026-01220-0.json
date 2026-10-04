@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-026-01220-0",
+  "title": "Multi-modality profiling identifies Neisseria flavescens as a central geroprotective oral commensal in humans.",
+  "url": "https://doi.org/10.1038/s43587-026-01220-0",
+  "abstract": "研究利用生成式多模态框架AURORA构建多模态衰老时钟，并进行降低年龄差的干预计算筛选，预测Neisseria flavescens（Nf）为顶级候选。计算扰动显示Nf丰度增加与有利生理特征、有益肠道菌群和有益代谢物合成相关；分离两株Nf并验证其代谢物产生，功能实验表明活Nf可延长秀丽隐杆线虫寿命和健康寿命。",
+  "authors": "",
+  "venue": "Nature aging",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多模态衰老时钟AURORA并做干预筛选，含类器官外验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Aging多模态衰老时钟+干预筛选，代表转折",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "生成式多模态框架AURORA构建衰老时钟",
+  "data": "分离两株Nf并验证代谢物；线虫功能实验",
+  "scenario": "口腔共生菌抗衰老筛选",
+  "benchmark": "降低年龄差的干预计算筛选",
+  "results": "预测Nf为顶级候选；Nf丰度增加与有利生理特征、有益肠道菌群和代谢物合成相关；活Nf延长线虫寿命和健康寿命",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究利用生成式多模态框架AURORA构建多模态衰老时钟，并进行降低年龄差的干预计算筛选。预测Neisseria flavescens（Nf）为顶级候选，计算扰动显示Nf丰度增加与有利生理特征、有益肠道菌群和有益代谢物合成相关。分离两株Nf并验证其代谢物产生，功能实验表明活Nf可延长秀丽隐杆线虫寿命和健康寿命。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 5,
+ "added_on": "2026-10-04"
+}

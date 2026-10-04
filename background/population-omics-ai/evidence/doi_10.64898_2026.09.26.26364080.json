@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.26.26364080",
+  "title": "Phenome-wide and proteomic analysis of APOE alleles across different ancestries in the All of Us Research Program",
+  "url": "https://doi.org/10.64898/2026.09.26.26364080",
+  "abstract": "研究在All of Us项目中367,757名参与者、六个遗传祖源群体中开展APOE基因型全表型组关联研究，按阿尔茨海默病风险层级测试2632个表型。共识别27个与APOE相关的表型，主要集中在神经和脂质相关性状；5个脂质相关性状显示女性效应更大，9个关联具有祖源特异性。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "All of Us大队列多祖源APOE全表型组分析，契合人群多组学方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "All of Us 36万人跨祖源APOE全表型组+蛋白组，队列规模与资源价值高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "APOE基因型全表型组关联研究",
+  "data": "All of Us 367,757名参与者，六个遗传祖源群体",
+  "scenario": "跨祖源APOE表型关联",
+  "benchmark": "按阿尔茨海默病风险层级测试2632个表型",
+  "results": "识别27个APOE相关表型，集中于神经和脂质性状；5个脂质性状女性效应更大，9个关联具祖源特异性",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究在All of Us项目中开展APOE基因型的全表型组关联分析。按阿尔茨海默病风险层级在六个遗传祖源群体中测试2632个表型。共识别27个APOE相关表型，主要集中于神经和脂质相关性状，其中5个脂质性状女性效应更大，9个关联具祖源特异性。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 9,
+ "added_on": "2026-10-04"
+}

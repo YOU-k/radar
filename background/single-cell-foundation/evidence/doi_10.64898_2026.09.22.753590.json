@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.22.753590",
+  "title": "NexuST: A Hierarchical Foundation Model for Spatial Transcriptomics",
+  "url": "https://doi.org/10.64898/2026.09.22.753590",
+  "abstract": "NexuST是一种分层基础模型，通过反复交错基因级分子建模与细胞级空间建模，使两个层级在端到端预训练中相互优化。研究构建了HumanST-46M，包含来自72个数据集、11个器官、三种成像平台的4570万人类细胞。在四个留出数据集约260万细胞上，NexuST在细胞类型注释、区域预测、基因恢复等任务上达到SOTA或具竞争力表现。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "空间转录组分层基础模型，构建4570万细胞图谱，多任务SOTA。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "空间转录组分层基础模型，含4570万细胞大规模图谱，方向必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "分层基础模型，交错基因级与细胞级建模",
+  "data": "72个数据集、11个器官、4570万人类细胞；留出约260万细胞",
+  "scenario": "空间转录组细胞类型注释等",
+  "benchmark": "四个留出数据集，SOTA或具竞争力",
+  "results": "在细胞类型注释、区域预测、基因恢复等任务上达到SOTA或具竞争力表现",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究提出NexuST，一个用于空间转录组学的分层基础模型。它通过反复交错基因级分子建模与细胞级空间建模，使两个层级在端到端预训练中相互优化，并构建了HumanST-46M数据集。在四个留出数据集约260万细胞上，NexuST在细胞类型注释、区域预测、基因恢复等任务上达到SOTA或具竞争力表现。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 7,
+ "added_on": "2026-10-04"
+}

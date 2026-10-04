@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.01.26364322",
+  "title": "NMR metabolomics for cardiovascular-kidney-metabolic risk stratification in an integrated healthcare system",
+  "url": "https://doi.org/10.64898/2026.10.01.26364322",
+  "abstract": "研究在54,933名美国整合医疗系统参与者中检测250个NMR代谢标志物，并关联纵向电子健康记录，评估9个心血管-肾脏-代谢终点。将NMR加入标准诊疗预测因子后，几乎所有终点判别能力提升，其中2型糖尿病、慢性肾病和代谢功能障碍相关脂肪性肝病增益最大，并改善并发症和跨器官结局预测。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "5.5万人队列NMR代谢组整合EHR，多终点风险分层，契合人群多组学方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "5.5万人队列NMR代谢组整合EHR，多终点风险分层，具人群多组学价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "NMR代谢组风险分层",
+  "data": "54,933名美国整合医疗系统参与者，250个NMR代谢标志物",
+  "scenario": "心血管-肾脏-代谢风险分层",
+  "benchmark": "对比标准诊疗预测因子",
+  "results": "加入NMR后几乎所有9个终点判别能力提升，2型糖尿病、慢性肾病和代谢功能障碍相关脂肪性肝病增益最大",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究在54,933名美国整合医疗系统参与者中检测250个NMR代谢标志物，并关联纵向电子健康记录。评估9个心血管-肾脏-代谢终点，将NMR加入标准诊疗预测因子进行对比。发现加入NMR后几乎所有终点判别能力提升，其中2型糖尿病、慢性肾病和代谢功能障碍相关脂肪性肝病增益最大，并改善并发症和跨器官结局预测。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 9,
+ "added_on": "2026-10-04"
+}

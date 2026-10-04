@@ -136,5 +136,32 @@
   "day": "2026-10-02",
   "source": "daily",
   "theme": "singlecell"
+ },
+ {
+  "name": "UK Biobank",
+  "kind": "dataset",
+  "url": "",
+  "note": "大规模人群遗传与多组学关联分析 · 被 8 篇高分工作使用：Robust cis-by-trans epistasis in the hum / Multi-ancestry MHC-pQTL mapping reveals  / Molecular Circadian Disturbance in Human",
+  "day": "2026-10-04",
+  "source": "daily-infra",
+  "used_by_titles": [
+   "Robust cis-by-trans epistasis in the human plasma proteome highlights an ABO-centered interaction network.",
+   "Multi-ancestry MHC-pQTL mapping reveals disease-linked HLA protein networks and shared genetic architecture",
+   "Molecular Circadian Disturbance in Human Blood Independently Predicts Multi-Disease Risk and Maps to Hepatic metabolism Pathways",
+   "Uncertainty redefines biological age",
+   "Prediction of Atrial Fibrillation Risk Through the Integration of Genetic Information and Artificial Intelligence-Based Electrocardiogram Data."
+  ]
+ },
+ {
+  "name": "UKB-PPP",
+  "kind": "dataset",
+  "url": "",
+  "note": "血浆蛋白组学与pQTL分析 · 被 2 篇高分工作使用：Robust cis-by-trans epistasis in the hum / Multi-ancestry MHC-pQTL mapping reveals ",
+  "day": "2026-10-04",
+  "source": "daily-infra",
+  "used_by_titles": [
+   "Robust cis-by-trans epistasis in the human plasma proteome highlights an ABO-centered interaction network.",
+   "Multi-ancestry MHC-pQTL mapping reveals disease-linked HLA protein networks and shared genetic architecture"
+  ]
  }
 ]

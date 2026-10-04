@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.24.754017",
+  "title": "EpiZoo: a DNA sequence-aware foundation model for cross-species single-cell epigenomics",
+  "url": "https://doi.org/10.64898/2026.09.24.754017",
+  "abstract": "研究提出EpiZoo，一个面向跨物种单细胞表观基因组学的DNA序列感知基础模型。EpiZoo将来自不同物种的百万维单细胞表观基因组谱转换为紧凑的“细胞句子”，整合DNA编码的调控信息、序列无关的表观基因组背景以及基于可及性的重要性，从而克服现有模型依赖基因组坐标、局限于单一物种的问题。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种单细胞表观基因组DNA序列感知基础模型，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨物种单细胞表观基因组基础模型，序列感知，方向关键",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "DNA序列感知基础模型，构建细胞句子",
+  "data": "跨物种单细胞表观基因组谱（百万维）",
+  "scenario": "跨物种单细胞表观基因组学",
+  "benchmark": "",
+  "results": "将百万维单细胞表观基因组谱转换为紧凑细胞句子，克服依赖基因组坐标、局限于单一物种的问题",
+  "availability": "",
+  "limitations": "依赖基因组坐标、局限于单一物种（现有模型问题）",
+  "summary": "研究提出EpiZoo，一个面向跨物种单细胞表观基因组学的DNA序列感知基础模型。EpiZoo将来自不同物种的百万维单细胞表观基因组谱转换为紧凑的细胞句子，整合DNA编码的调控信息、序列无关的表观基因组背景以及基于可及性的重要性。从而克服现有模型依赖基因组坐标、局限于单一物种的问题。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 7,
+ "added_on": "2026-10-04"
+}

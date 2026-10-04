@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.21203/rs.3.rs-11151765/v1",
+  "title": "LucaCell: a sequence-centric foundation model for cross-species single-cell analysis",
+  "url": "https://doi.org/10.21203/rs.3.rs-11151765/v1",
+  "abstract": "LucaCell是一种以序列为中心的基础模型，用预训练mRNA序列嵌入表示基因，而非固定基因注释，并将表达离散化为bin后用Transformer编码器建模。模型在8500万人类和小鼠单细胞上预训练，可在人、小鼠和狐猴肾脏数据中实现跨物种、跨模态细胞类型迁移，并实现无比对微生物嵌入，区分50多种细菌且保留种内结构。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "序列中心跨物种单细胞基础模型，8500万细胞预训练，权重公开。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "序列中心跨物种单细胞基础模型，8500万细胞预训练，代表新范式",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "以序列为中心的基础模型，bin化表达+Transformer",
+  "data": "8500万人类和小鼠单细胞；人、小鼠、狐猴肾脏数据",
+  "scenario": "跨物种、跨模态细胞类型迁移",
+  "benchmark": "人、小鼠和狐猴肾脏数据；50多种细菌",
+  "results": "实现跨物种、跨模态细胞类型迁移，并实现无比对微生物嵌入，区分50多种细菌且保留种内结构",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究提出LucaCell，一个以序列为中心的基础模型，用预训练mRNA序列嵌入表示基因而非固定基因注释。它将表达离散化为bin后用Transformer编码器建模，并在8500万人类和小鼠单细胞上预训练。模型可在人、小鼠和狐猴肾脏数据中实现跨物种、跨模态细胞类型迁移，并实现无比对微生物嵌入，区分50多种细菌且保留种内结构。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 7,
+ "added_on": "2026-10-04"
+}

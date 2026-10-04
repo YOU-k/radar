@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.26.26364091",
+  "title": "Uncertainty redefines biological age",
+  "url": "https://doi.org/10.64898/2026.09.26.26364091",
+  "abstract": "研究提出概率框架，从预测年龄分布的均值和宽度推导生物年龄差（BAG）与生物年龄不确定性（BAU），并在超过45万名UK Biobank参与者中评估其与衰老相关结局的前瞻性关联。BAU与BAG弱相关，并随个体分子间年龄信号不一致而增加；研究还通过跨组学、GWAS及组织功能映射刻画BAU的分子和遗传基础。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "45万人队列提出生物年龄不确定性框架，跨组学定量支撑",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "45万人队列提出生物年龄不确定性框架，方法新",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "概率框架推导BAG与BAU",
+  "data": "超45万名UK Biobank参与者",
+  "scenario": "生物年龄不确定性评估",
+  "benchmark": "BAG（生物年龄差）",
+  "results": "BAU与BAG弱相关；BAU随个体分子间年龄信号不一致而增加；通过跨组学、GWAS及组织功能映射刻画其分子和遗传基础",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究提出概率框架，从预测年龄分布的均值和宽度推导生物年龄差（BAG）与生物年龄不确定性（BAU）。在超过45万名UK Biobank参与者中评估其与衰老相关结局的前瞻性关联。发现BAU与BAG弱相关，并随个体分子间年龄信号不一致而增加，还通过跨组学、GWAS及组织功能映射刻画了BAU的分子和遗传基础。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 5,
+ "added_on": "2026-10-04"
+}

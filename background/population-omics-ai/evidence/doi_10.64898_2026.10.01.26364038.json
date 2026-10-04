@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.01.26364038",
+  "title": "Generalizability of proteomic risk prediction across biobanks reveals dependence on phenotype definitions",
+  "url": "https://doi.org/10.64898/2026.10.01.26364038",
+  "abstract": "研究在英国生物银行53,026人中基于Olink蛋白组数据训练15种疾病预测模型，平均AUC达0.74，范围0.56-0.89。模型较仅用临床因素平均提升ΔAUC=0.03，且不依赖模型架构，简单模型如L2表现相当。研究提示蛋白组风险预测的跨队列泛化性受表型定义影响。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank蛋白组风险预测跨队列泛化，契合多组学预测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank蛋白组风险预测跨队列泛化性评估，基准价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Olink蛋白组疾病风险预测模型",
+  "data": "英国生物银行53,026人Olink蛋白组数据",
+  "scenario": "跨队列蛋白组风险预测",
+  "benchmark": "对比仅用临床因素模型及不同模型架构",
+  "results": "15种疾病预测模型平均AUC 0.74（范围0.56-0.89），较临床因素平均提升ΔAUC=0.03，不依赖模型架构",
+  "availability": "",
+  "limitations": "跨队列泛化性受表型定义影响",
+  "summary": "研究在英国生物银行53,026人中基于Olink蛋白组数据训练15种疾病预测模型。评估模型判别能力并与仅用临床因素的模型及不同模型架构对比。发现平均AUC达0.74（范围0.56-0.89），较临床因素平均提升ΔAUC=0.03，且不依赖模型架构，简单模型如L2表现相当，提示跨队列泛化性受表型定义影响。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 9,
+ "added_on": "2026-10-04"
+}

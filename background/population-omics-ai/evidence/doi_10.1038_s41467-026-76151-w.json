@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41467-026-76151-w",
+  "title": "Deviations from genetic additivity driven by rare variants at biobank scale.",
+  "url": "https://doi.org/10.1038/s41467-026-76151-w",
+  "abstract": "研究采用正交等位基因重编码框架，在不依赖Hardy-Weinberg假设的情况下可扩展地检验非加性遗传效应，并与现有线性混合模型兼容。分析最多399,943名UK Biobank个体、2906个血浆蛋白和55个数量性状，发现约三分之一同源基因-蛋白关系表现出非线性剂量效应，揭示稀有变异驱动的遗传非加性。",
+  "authors": "",
+  "venue": "Nature communications",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0,
+   "pmcid": "PMC13620152"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 40万人非加性遗传与pQTL图谱，规模与机制兼具",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 40万人蛋白组非加性遗传图谱，生物样本库级发现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "正交等位基因重编码检验非加性效应",
+  "data": "UK Biobank最多399,943名欧洲祖源个体，2906个血浆蛋白和55个数量性状",
+  "scenario": "稀有变异非加性遗传效应",
+  "benchmark": "对比标准HWE依赖的等位基因重编码及加性、隐性编码",
+  "results": "约三分之一同源基因-蛋白关系表现非线性剂量效应；方法在HWE偏离下保持校准(λGC=0.94)，标准重编码膨胀(λGC=78.3)",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究采用正交等位基因重编码框架，在不依赖Hardy-Weinberg假设下可扩展地检验非加性遗传效应，并与现有线性混合模型兼容。分析最多399,943名UK Biobank个体、2906个血浆蛋白和55个数量性状。发现约三分之一同源基因-蛋白关系表现出非线性剂量效应，揭示稀有变异驱动的遗传非加性。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 9,
+ "added_on": "2026-10-04"
+}
