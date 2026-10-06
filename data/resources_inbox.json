@@ -163,5 +163,15 @@
    "Robust cis-by-trans epistasis in the human plasma proteome highlights an ABO-centered interaction network.",
    "Multi-ancestry MHC-pQTL mapping reveals disease-linked HLA protein networks and shared genetic architecture"
   ]
+ },
+ {
+  "name": "Urban Genomics in a Rapidly Urbanizing Megacity Reveals Layered Cardiometabolic Genetic Architecture",
+  "kind": "dataset",
+  "url": "https://doi.org/10.21203/rs.3.rs-10933833/v1",
+  "note": "上海人群高深度WGS+多组学队列资源，中国人群遗传架构，可迁移。",
+  "score": 7.0,
+  "day": "2026-10-06",
+  "source": "daily",
+  "theme": "cohort"
  }
 ]
