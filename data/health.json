@@ -1,27 +1,27 @@
 {
- "date": "2026-10-06",
+ "date": "2026-10-07",
  "sources": {
-  "arxiv": 124,
-  "europepmc": 715,
-  "semantic_scholar": 3,
+  "arxiv": 168,
+  "europepmc": 554,
+  "semantic_scholar": 4,
   "huggingface": 0,
   "github": 0,
-  "rss": 2
+  "rss": 7
  },
  "errors": [],
  "stages": {
   "score": {
-   "sent": 66,
+   "sent": 56,
    "unscored": 0
   },
-  "deepread": 0,
-  "context": 15,
-  "enrich": 16,
-  "resources": 1,
-  "extract": 8
+  "deepread": 1,
+  "context": 3,
+  "enrich": 3,
+  "resources": 0,
+  "extract": 1
  },
  "llm": {
-  "ok": 12,
+  "ok": 9,
   "fail": 0
  },
  "problems": [
