@@ -173,5 +173,15 @@
   "day": "2026-10-06",
   "source": "daily",
   "theme": "cohort"
+ },
+ {
+  "name": "VINTER: a generative vision-language model for annotating and interrogating spatial tissues",
+  "kind": "model",
+  "url": "https://doi.org/10.64898/2026.10.01.752251",
+  "note": "空间转录组生成式视觉语言模型，145万对数据，可标注组织。",
+  "score": 7.0,
+  "day": "2026-10-09",
+  "source": "daily",
+  "theme": "singlecell"
  }
 ]
