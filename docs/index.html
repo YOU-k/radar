@@ -117,7 +117,7 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 [data-t=aging]{--c:#1a7f37;--cb:#1a7f3714;--cl:#1a7f3755;--cd:#81b891;--cbd:#81b8911f}[data-t=cohort]{--c:#0969da;--cb:#0969da14;--cl:#0969da55;--cd:#77acea;--cbd:#77acea1f}[data-t=cardio]{--c:#cf222e;--cb:#cf222e14;--cl:#cf222e55;--cd:#e4858c;--cbd:#e4858c1f}[data-t=organoid]{--c:#9a6700;--cb:#9a670014;--cl:#9a670055;--cd:#c7ab72;--cbd:#c7ab721f}[data-t=singlecell]{--c:#8250df;--cb:#8250df14;--cl:#8250df55;--cd:#ba9eed;--cbd:#ba9eed1f}[data-t=vcell]{--c:#bf3989;--cb:#bf398914;--cl:#bf398955;--cd:#db92be;--cbd:#db92be1f}[data-t=ssl]{--c:#1b7c83;--cb:#1b7c8314;--cl:#1b7c8355;--cd:#81b6ba;--cbd:#81b6ba1f}[data-t=agent]{--c:#bc4c00;--cb:#bc4c0014;--cl:#bc4c0055;--cd:#da9c72;--cbd:#da9c721f}</style></head><body><main>
 <div class="top"><h1>radar · 科研情报</h1>
 <div class="health">采集提示（2026-10-11）：huggingface 0 条</div>
-<div class="meta">构建 2026-10-11 · 最新日报 2026-10-11 · 27 份日报 / 4 份周报 / 8 个方向</div>
+<div class="meta">构建 2026-10-11 · 最新日报 2026-10-11 · 27 份日报 / 5 份周报 / 8 个方向</div>
 <div class="tabs" role="tablist"><button type="button" role="tab" class="tab on" data-tab="day">日报</button><button type="button" role="tab" class="tab" data-tab="week">周报</button><button type="button" role="tab" class="tab" data-tab="bg">总览</button><button type="button" role="tab" class="tab" data-tab="res">资源库</button></div></div>
 <div id="panel-day" class="panel on">
 <div class="fbar" id="fbar-day"><button type="button" class="fchip" data-t="aging" aria-pressed="false" data-v="aging">衰老<span class="n">27</span></button><button type="button" class="fchip" data-t="cohort" aria-pressed="false" data-v="cohort">人群队列<span class="n">34</span></button><button type="button" class="fchip" data-t="cardio" aria-pressed="false" data-v="cardio">心血管<span class="n">29</span></button><button type="button" class="fchip" data-t="organoid" aria-pressed="false" data-v="organoid">类器官<span class="n">7</span></button><button type="button" class="fchip" data-t="singlecell" aria-pressed="false" data-v="singlecell">单细胞<span class="n">31</span></button><button type="button" class="fchip" data-t="vcell" aria-pressed="false" data-v="vcell">虚拟细胞<span class="n">5</span></button><button type="button" class="fchip" data-t="ssl" aria-pressed="false" data-v="ssl">世界模型<span class="n">9</span></button><button type="button" class="fchip" data-t="agent" aria-pressed="false" data-v="agent">Agent<span class="n">11</span></button></div>
@@ -363,7 +363,214 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 <div class="dom">虚拟细胞</div>
 <div class="card tagged" style="--tc:#bf3989" data-score="6.0" data-themes="vcell singlecell"><div class="t"><a href="https://arxiv.org/abs/2609.34391" target="_blank" rel="noopener">P2P: Cross-View Population Denoising for Unpaired Single-Cell Perturbation Response Prediction</a><span class="badge mid">6.0</span></div><div class="reason">Perturb-seq 群体去噪预测扰动响应，虚拟细胞核心任务，方法可迁移。</div><div class="meta"><span class="vt pp">预印本</span>arXiv · 2026-09 · Haojie Yang, Ran Su</div><div class="tags"><span class="th" data-t="vcell">虚拟细胞</span><span class="th" data-t="singlecell">单细胞</span></div><div class="bgline">虚拟细胞与扰动响应预测 › 2.1 扰动响应生成模型 · 跨视图群体去噪处理非配对Perturb-seq，新方法。</div></div></div></details>
 <details class="day" data-date="2026-09-28" data-first="0"><summary>2026-09-28 · 周一<span class="newdot">新</span><span class="cnt">0 条</span></summary><div class="daybody"><div class="empty">当日无条目。</div></div></details><div class="arch">更早：<a href="archive/2026-09.html">2026-09 日报（13）</a></div></div>
-<div id="panel-week" class="panel"><div class="wk" data-week="2026-W40"><h3>2026-W40 <span class="newdot">新</span></h3><h2>本周科研情报总结（2026-09-28 ~ 2026-10-03）</h2>
+<div id="panel-week" class="panel"><div class="wk" data-week="2026-W41"><h3>2026-W41 <span class="newdot">新</span></h3><h2>2026-10-05 ~ 10-08 科研情报周报（按领域）</h2>
+<h2>人群健康与多组学 AI</h2>
+<h3>本周亮点</h3>
+<ul>
+<li><strong>A proteome atlas of structural variation and VNTR effects on complex traits and diseases</strong>（8.0）：在 54,306 名 UKB 参与者中插补 54,578 个 SV 与 15,826 个 VNTR，系统扫描其对 2,923 种血浆蛋白的影响，发现 SV/VNTR 共同解释蛋白丰度遗传力约 8.0%，鉴定 8,065 个 SV-蛋白与 4,101 个 VNTR-蛋白独立关联。是把非 SNP 变异维度接入人群蛋白组的重要资源型工作。<a href="https://doi.org/10.64898/2026.09.26.26364064" target="_blank" rel="noopener">链接</a></li>
+<li><strong>Proteomic Signatures Capture Environmental Exposures Across Diverse Populations</strong>（8.0）：All of Us 中 10,043 人 × 5,416 蛋白，关联 100+ 环境暴露，发现蛋白暴露特征跨人群/社会经济阶层基本一致，仅 &lt;1% 蛋白存在显著异质性（BMI 例外，瘦素异质性最高）。对"跨队列可迁移性"这一核心问题给出正面证据。<a href="https://doi.org/10.64898/2026.10.06.26364311" target="_blank" rel="noopener">链接</a></li>
+<li><strong>LifeLong Digital Twin</strong>（7.0）：提出事件驱动终身数字孪生建模范式（Life Events → 每日 Health States → Lifelong Health Context）+ Agent Harness，在 25 个疾病终点、3 类任务上评测 4 个语言模型。最贴合"生成式疾病轨迹"方向的新框架。<a href="https://arxiv.org/abs/2610.05566" target="_blank" rel="noopener">链接</a></li>
+<li><strong>Frailty-Related Metabolic Signature…</strong>（7.0）：UKB 223,907 人（122,959 人有 NMR 代谢组、169 种代谢物），弹性网构建衰弱代谢特征，Cox 评估其在衰弱-CAD 关联中的中介及与遗传风险的交互。<a href="https://doi.org/10.1016/j.jnha.2026.100998" target="_blank" rel="noopener">链接</a></li>
+</ul>
+<h3>数据与资源</h3>
+<ul>
+<li>UKB SV/VNTR 插补参考面板 + 2,923 血浆蛋白 pQTL 式关联图谱（54,306 人）——若面板与汇总统计公开，可直接复用于人群多组学建模。</li>
+<li>All of Us 血浆蛋白组 × 环境暴露关联资源（10,043 人 / 5,416 蛋白）。</li>
+<li>SHANGHAI 资源：1,016 人 48.6× WGS + 多组学临床，4,320 万变异（708 万新变异）、10 万+ SV，中国城市人群心脏代谢遗传架构（见下节）。</li>
+</ul>
+<h3>评测与警示</h3>
+<ul>
+<li>UKB SV/VNTR 工作仅欧洲人群，跨人群（东亚/中国）可迁移性未知；SV/VNTR 插补依赖参考面板质量，罕见 SV 与复杂 VNTR 可能被低估；摘要未提数据/代码可用性，需查全文 Data/Code Availability。</li>
+<li>LifeLong Digital Twin 属 arXiv 预印本，25 终点/3 任务的评测细节与基线对比需看正文确认是否真跑赢现有轨迹模型。</li>
+<li>衰弱代谢特征研究为观察性中介分析，因果方向依赖建模假设。</li>
+</ul>
+<h3>一句话判断</h3>
+<p>本周人群多组学 AI 的实质进展集中在"非 SNP 变异 × 蛋白组"和"跨人群暴露组可迁移性"两个资源型方向，方法学新意有限但数据资产价值高，且都指向 ChinaHEART 迁移路径。</p>
+<hr />
+<h2>心血管队列与临床多组学</h2>
+<h3>本周亮点</h3>
+<ul>
+<li><strong>Urban Genomics in a Rapidly Urbanizing Megacity Reveals Layered Cardiometabolic Genetic Architecture</strong>（7.0）：上海 1,016 人 48.6× 高深度 WGS + 多组学临床，识别 4,320 万变异（708 万此前未报道）、10 万+ SV，显示稀有与人群特异变异显著富集。中国人群心血管遗传资源，优先级高。<a href="https://doi.org/10.21203/rs.3.rs-10933833/v1" target="_blank" rel="noopener">链接</a></li>
+<li><strong>A Calibrated Glycaemic-Blind ML Model for Opportunistic Prediabetes Screening in UK Biobank</strong>（6.0）：UKB 大队列血糖盲筛查模型，强调校准评估，方法框架可迁移至 ChinaHEART 的糖尿病前期分诊。<a href="https://doi.org/10.21203/rs.3.rs-10718319/v1" target="_blank" rel="noopener">链接</a></li>
+<li><strong>Semaglutide, independent of weight loss, attenuates cardiac and hepatic remodelling in HFpEF</strong>（7.0，EHJ）：ZSF1 大鼠 + 哥廷根小型猪双模型，用经验证不引起减重的 semaglutide 剂量，证明其独立于减重减轻 HFpEF 心肝重构。机制证据，非队列/AI 建模。<a href="https://doi.org/10.1093/eurheartj/ehag732" target="_blank" rel="noopener">链接</a></li>
+<li><strong>DVT exacerbated by syndecan-4 shedding and piezo1-dependent EndMT</strong>（7.0，EHJ）：DVT 患者血浆蛋白组 + SDC4 敲除小鼠 + 内皮谱系追踪 + scRNA-seq，确认 SDC4 差异表达并促进内皮-间质转化。<a href="https://doi.org/10.1093/eurheartj/ehag775" target="_blank" rel="noopener">链接</a></li>
+</ul>
+<h3>数据与资源</h3>
+<ul>
+<li>SHANGHAI 城市人群高深度 WGS + 多组学队列资源（1,016 人，48.6×）。</li>
+<li>其余条目（EHJ 评论/综述、临床前药物实验、DVT 机制）均无公开数据集或模型。</li>
+</ul>
+<h3>评测与警示</h3>
+<ul>
+<li>本周 EHJ 条目中有 3 条为评论/观点/综述（房颤密度与卒中风险、房颤密度测量方法学、成人先心病终身管理），摘要缺失、无数据无模型，7.0 分主要来自期刊级别而非内容增量，需警惕"大刊即高分"的评分惯性。</li>
+<li>房颤密度两篇明确指出该指标"仍需预测性验证"，属尚未落地的信号。</li>
+<li>SHANGHAI 队列仅 1,016 人，样本量对稀有变异关联的统计效力有限；为 Research Square 预印本，未经同行评审。</li>
+<li>司美格鲁肽与 DVT 两项均为临床前/机制研究，无公开数据，不可直接复用。</li>
+</ul>
+<h3>一句话判断</h3>
+<p>本周心血管领域的真正增量是中国人群高深度 WGS 队列资源与可迁移的校准化筛查模型；EHJ 多篇评论/综述属"知道即可"，不构成方法学进展。</p>
+<hr />
+<h2>衰老与多模态健康模型</h2>
+<h3>本周亮点</h3>
+<ul>
+<li><strong>Intraindividual longitudinal changes of the proteome reveal dynamic markers of biological aging</strong>（8.0）：基于 KORA 队列 4,100 人、9,105 份血浆样本、最多 3 个纵向时间点（25–88 岁）的 LC-MS 蛋白质组，构建纵向蛋白质组衰老时钟与"蛋白质组年龄加速"，并串联风险因素分层 → 中介分析 → MR 的因果链。核心突破是<strong>个体内纵向建模</strong>而非横截面时钟。<a href="https://doi.org/10.64898/2026.10.01.755909" target="_blank" rel="noopener">链接</a></li>
+<li><strong>Disease-associated mutations directionally modulate epigenetic age in iPSC-derived tissues</strong>（6.0）：首次证明疾病突变可在 iPSC 衍生组织中定向重塑表观年龄轨迹，直接对应"类器官 + 衰老时钟"合作项目设计。<a href="https://doi.org/10.64898/2026.09.30.755445" target="_blank" rel="noopener">链接</a></li>
+</ul>
+<h3>数据与资源</h3>
+<ul>
+<li>KORA 纵向血浆蛋白质组（9,105 样本 / 4,100 人 / 最多 3 时间点），受控访问需申请；LC-MS 原始数据通常存 ProteomeXchange/PRIDE，代码需查补充材料。</li>
+</ul>
+<h3>评测与警示</h3>
+<ul>
+<li>KORA 为德国单一队列、欧洲人群，跨人群（东亚/中国）校准与迁移未验证。</li>
+<li>纵向仅最多 3 个时间点，动态建模的时间分辨率有限；LC-MS 通量与成本高，难直接套到大队列常规检测。</li>
+<li>MR 因果方向仍需谨慎解读；摘要未提数据/代码开放，<strong>不能直接拿来用</strong>，需确认 GitHub 与 accession。</li>
+</ul>
+<h3>一句话判断</h3>
+<p>本周衰老领域的实质进展是"纵向、个体内、多时间点"的蛋白质组衰老建模范式，可直接迁移到类器官重复扰动/多时间点采样设计，以及 ChinaHEART 的组学年龄加速中介分析。</p>
+<hr />
+<h2>生物医学数据库 / 模型 / 部署</h2>
+<h3>本周亮点</h3>
+<ul>
+<li><strong>VINTER: a generative vision-language model for annotating and interrogating spatial tissues</strong>（7.0）：在 145 万组织学-文本对上对齐的生成式视觉语言模型，将组织学图像、实测基因表达、空间邻域作为单一序列读取；因基因以文本形式输入，可在固定图像下编辑分子证据。联合三源信息后组织注释精度优于空间域方法与空间基础模型。<a href="https://doi.org/10.64898/2026.10.01.752251" target="_blank" rel="noopener">链接</a></li>
+<li><strong>Flock: A Negative-Enriched Protein-Protein Interaction Dataset</strong>（6.0，资源）：大规模负样本富集 PPI 数据集，公开可用，对蛋白互作预测与蛋白语言模型训练有直接价值。<a href="https://doi.org/10.64898/2026.09.30.755672" target="_blank" rel="noopener">链接</a></li>
+<li><strong>GeneICL: A Tabular Foundation Model for Bulk Transcriptomics</strong>（6.0）：bulk 转录组表格基础模型，思路可迁移，但数据与权重未公开。<a href="https://www.semanticscholar.org/paper/312d18815861928df3a2714f1b9af7218ead1967" target="_blank" rel="noopener">链接</a></li>
+<li><strong>MS-ECG-FM</strong>（6.0）：多源对比学习 ECG 基础模型，突破仅依赖解读报告监督的局限，但权重未公开。<a href="https://arxiv.org/abs/2610.07662" target="_blank" rel="noopener">链接</a></li>
+</ul>
+<h3>数据与资源</h3>
+<ul>
+<li>Flock PPI 负样本富集数据集（公开可用）。</li>
+<li>VINTER 模型（145 万组织学-文本对训练，可用性待查）。</li>
+<li>GeneICL、MS-ECG-FM：模型存在但权重/数据未公开。</li>
+</ul>
+<h3>评测与警示</h3>
+<ul>
+<li>GeneICL 与 MS-ECG-FM 均未公开权重与数据，<strong>可复现性存疑</strong>，短期只能借鉴思路不能直接部署。</li>
+<li>VINTER 声称优于空间域方法与空间基础模型，但摘要未给具体基线数值与评测数据集，需看正文确认。</li>
+<li>Flock 为预印本，负样本富集策略可能引入选择偏差，用于训练时需注意分布偏移。</li>
+</ul>
+<h3>一句话判断</h3>
+<p>本周模型/资源侧以"可用性分层"为特征：Flock 与 VINTER 有复用潜力，GeneICL 与 MS-ECG-FM 目前只能作为思路参考。</p>
+<hr />
+<h2>方法储备（世界模型 / 自监督表征 / Agent）</h2>
+<h3>本周亮点</h3>
+<ul>
+<li><strong>Drive vs. Decay: On the Training Dynamics of Joint-Embedding Predictive Architectures</strong>（6.0）：用"驱动-衰减比"解释 JEPA 表征坍缩，统一既有启发式。<a href="https://arxiv.org/abs/2610.02344" target="_blank" rel="noopener">链接</a></li>
+<li><strong>Counterfactual Action Evaluation, Observation Bottlenecks, and Representation Geometry in JEPA World Models</strong>（6.0）：提出反事实动作评估协议，揭示"低隐预测误差 ≠ 动作可区分"。<a href="https://arxiv.org/abs/2610.02860" target="_blank" rel="noopener">链接</a></li>
+<li><strong>DSReg: Provably Recovering Individual World Latents without Reconstruction</strong>（6.0）：为 JEPA 类无重建方法提供可证明恢复个体隐变量的理论，突破仅识别到线性变换的限制。<a href="https://arxiv.org/abs/2610.09457" target="_blank" rel="noopener">链接</a></li>
+<li><strong>RSI-Forge: From Research Papers to Environments for Recursive Self-Improvement</strong>（6.0）：把论文转成可执行环境用于递归自我改进，AI 科研自动化实质进展。<a href="https://arxiv.org/abs/2610.09426" target="_blank" rel="noopener">链接</a></li>
+</ul>
+<h3>数据与资源</h3>
+<ul>
+<li>无（均为理论/协议/框架类工作，未见公开数据集或权重）。</li>
+</ul>
+<h3>评测与警示</h3>
+<ul>
+<li>三篇 JEPA 工作均为 arXiv 预印本，理论结论（可证明恢复、坍缩解释）的假设条件需看正文核实。</li>
+<li>RSI-Forge 的"论文→可执行环境"转换成功率与自我改进增益未见定量基线，需警惕 demo 级证据。</li>
+<li>本周世界模型/Agent 工作与生物医学场景无直接接口，属纯方法储备。</li>
+</ul>
+<h3>一句话判断</h3>
+<p>本周方法储备侧的核心信号是 JEPA 理论从"经验启发式"走向"可证明表征恢复"，以及 Agent 科研自动化开始构建可执行环境；对健康轨迹建模的迁移价值在中期而非当下。</p>
+<hr />
+<h2>Registry 增补建议</h2>
+<h3>databases.md</h3>
+<ul>
+<li>UKB SV/VNTR 插补参考面板 + 2,923 血浆蛋白 pQTL 图谱（54,306 人，Jian Yang 组）— <a href="https://doi.org/10.64898/2026.09.26.26364064" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.26.26364064</a></li>
+<li>All of Us 血浆蛋白组 × 环境暴露关联资源（10,043 人 / 5,416 蛋白）— <a href="https://doi.org/10.64898/2026.10.06.26364311" target="_blank" rel="noopener">https://doi.org/10.64898/2026.10.06.26364311</a></li>
+<li>SHANGHAI 城市人群高深度 WGS + 多组学队列（1,016 人 / 48.6×）— <a href="https://doi.org/10.21203/rs.3.rs-10933833/v1" target="_blank" rel="noopener">https://doi.org/10.21203/rs.3.rs-10933833/v1</a></li>
+<li>KORA 纵向血浆蛋白质组队列（9,105 样本 / 4,100 人 / 最多 3 时间点，受控访问）— <a href="https://doi.org/10.64898/2026.10.01.755909" target="_blank" rel="noopener">https://doi.org/10.64898/2026.10.01.755909</a></li>
+<li>Flock 负样本富集 PPI 数据集（公开可用）— <a href="https://doi.org/10.64898/2026.09.30.755672" target="_blank" rel="noopener">https://doi.org/10.64898/2026.09.30.755672</a></li>
+</ul>
+<h3>models.md</h3>
+<ul>
+<li>VINTER 生成式视觉语言模型（空间组织注释，145 万组织学-文本对）— <a href="https://doi.org/10.64898/2026.10.01.752251" target="_blank" rel="noopener">https://doi.org/10.64898/2026.10.01.752251</a></li>
+<li>LifeLong Digital Twin（事件驱动终身健康轨迹建模 + Agent Harness）— <a href="https://arxiv.org/abs/2610.05566" target="_blank" rel="noopener">https://arxiv.org/abs/2610.05566</a></li>
+<li>MS-ECG-FM 多源对比学习 ECG 基础模型（权重未公开）— <a href="https://arxiv.org/abs/2610.07662" target="_blank" rel="noopener">https://arxiv.org/abs/2610.07662</a></li>
+<li>GeneICL bulk 转录组表格基础模型（数据/权重未公开）— <a href="https://www.semanticscholar.org/paper/312d18815861928df3a2714f1b9af7218ead1967" target="_blank" rel="noopener">https://www.semanticscholar.org/paper/312d18815861928df3a2714f1b9af7218ead1967</a></li>
+</ul>
+<h3>people.md</h3>
+<ul>
+<li>Jian Yang（Westlake University）— UKB SV/VNTR 蛋白组图谱通讯作者，人群多组学遗传整合</li>
+<li>Matthias Heinig（Helmholtz Munich）— KORA 纵向蛋白质组衰老时钟通讯作者</li>
+<li>Hui Pan（Chinese Academy of Medical Sciences &amp; Peking Union Medical College）— UKB 衰弱代谢特征通讯作者，中国人群队列方向</li>
+<li>George James Murphy（CReM, Boston University / Boston Medical Center）— iPSC 衍生组织表观年龄通讯作者，类器官衰老方向</li>
+<li>Andrew Graven Potterton（Ternary Therapeutics）— Flock PPI 数据集通讯作者</li>
+</ul>
+<h2>本周来源分布</h2>
+<p>期刊 8 篇 · 预印本 26 篇（仅统计进 digest 的论文）</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>期刊 / 平台</th>
+<th>类型</th>
+<th>篇数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arXiv</td>
+<td>预印本</td>
+<td>11</td>
+</tr>
+<tr>
+<td>bioRxiv</td>
+<td>预印本</td>
+<td>8</td>
+</tr>
+<tr>
+<td>European heart journal</td>
+<td>期刊</td>
+<td>6</td>
+</tr>
+<tr>
+<td>medRxiv</td>
+<td>预印本</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Research Square</td>
+<td>预印本</td>
+<td>2</td>
+</tr>
+<tr>
+<td>The journal of nutrition health &amp; aging</td>
+<td>期刊</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Nature Communications</td>
+<td>期刊</td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>方向背景本周变更</h2>
+<h3>多模态衰老时钟与生物年龄</h3>
+<ul>
+<li>新增 [19] Intraindividual longitudinal changes of the proteome reveal dynamic markers of biological aging</li>
+</ul>
+<h3>心血管队列多组学与临床 AI</h3>
+<ul>
+<li>新增 [34] A proteome atlas of structural variation and VNTR effects on complex traits and diseases</li>
+<li>新增 [63] Frailty-Related Metabolic Signature in the Association Between Frailty and Coronary Artery Disease: Modification by Genetic Susceptibility.</li>
+</ul>
+<h3>人群健康与多组学 AI</h3>
+<ul>
+<li>新增 [26] A proteome atlas of structural variation and VNTR effects on complex traits and diseases</li>
+<li>新增 [3] LifeLong Digital Twin: A Unified Modeling Paradigm and Agent Harness for Event-Driven Lifelong Health State Trajectories</li>
+<li>新增 [65] Proteomic Signatures Capture Environmental Exposures Across Diverse Populations</li>
+</ul>
+<h3>单细胞与空间组学基础模型与虚拟细胞</h3>
+<ul>
+<li>新增 [18] VINTER: a generative vision-language model for annotating and interrogating spatial tissues</li>
+</ul>
+<h3>虚拟细胞与扰动响应预测</h3>
+<ul>
+<li>新增 [10] Deep learning perturbation models can outperform baselines on calibrated metrics.</li>
+</ul></div>
+<div class="wk" data-week="2026-W40"><h3>2026-W40 <span class="newdot">新</span></h3><h2>本周科研情报总结（2026-09-28 ~ 2026-10-03）</h2>
 <blockquote>
 <p>说明：本周 digest 中 09-28 无高分条目；09-30、10-01、10-02、10-03 的 digest 部分被截断，以下总结以结构化抽取 + 可见 digest 全文为准，截断部分可能遗漏少量条目。</p>
 </blockquote>
@@ -926,58 +1133,58 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 <li>（本周无值得长期跟踪的独立研究者条目；上述 repo 均为工具/代码类，暂不单列人物）</li>
 </ul></div></div>
 <div id="panel-bg" class="panel"><div class="sec"><div class="sec-t">一页总览</div><div class="sec-d">每个主题一行：处在什么阶段、真正要回答的问题、卡在哪。点主题名跳到该方向的报告。</div></div>
-<a class="ov" href="#topic-aging" style="border-left-color:#1a7f37"><div class="ov-h"><span class="th" data-t="aging">衰老</span><span class="ov-n">多模态衰老时钟与生物年龄</span></div><div class="ov-s">单组学成熟 / 多模态与单细胞空间朝阳 / 基准与类器…</div><div class="ov-l"><b>问题</b> 生物年龄/年龄差是因果可干预的衰老速率，还是组织、免疫、批次与疾病读数？</div><div class="ov-l"><b>瓶颈</b> 分子层与多模态整合层：测量标准化不足 + 因果识别不足；跨组织、跨模态口径未收敛。</div></a>
-<a class="ov" href="#topic-cohort" style="border-left-color:#0969da"><div class="ov-h"><span class="th" data-t="cohort">人群队列</span><span class="ov-n">人群健康与多组学 AI</span></div><div class="ov-s">朝阳偏早期（数据资源与关联图谱成熟、生成式轨迹与衰老时…</div><div class="ov-l"><b>问题</b> 遗传 + 纵向 EHR + 多组学能否在独立队列稳定预测，并识别可扰动生物学？</div><div class="ov-l"><b>瓶颈</b> 遗传/分子→疾病层 + 人群→干预层：因果识别不足 + 转化不足；跨祖源、跨平台测量多样性。</div></a>
-<a class="ov" href="#topic-cardio" style="border-left-color:#cf222e"><div class="ov-h"><span class="th" data-t="cardio">心血管</span><span class="ov-n">心血管队列多组学与临床 AI</span><span class="ov-deep">深度调研 2</span></div><div class="ov-s">成熟评分体系 + 朝阳多组学/ECG-AI + 萌芽转…</div><div class="ov-l"><b>问题</b> 哪些血浆分子是心血管病的因果介质，风险轨迹能否跨人群改变临床决策？</div><div class="ov-l"><b>瓶颈</b> 人群→干预与转化层：因果识别、跨人群校准、临床效用证据不足。</div></a>
-<a class="ov" href="#topic-organoid" style="border-left-color:#9a6700"><div class="ov-h"><span class="th" data-t="organoid">类器官</span><span class="ov-n">类器官与模式生物虚拟响应建模</span></div><div class="ov-s">朝阳偏早期（临床对应成熟、跨物种迁移与评测早期）</div><div class="ov-l"><b>问题</b> 扰动响应函数能否跨背景、跨物种外推，并作为患者结局替代读出？</div><div class="ov-l"><b>瓶颈</b> 细胞状态→组织/器官层：因果识别不足；混杂与真实处理效应未可靠分离；跨物种缺 ground truth。</div></a>
-<a class="ov" href="#topic-singlecell" style="border-left-color:#8250df"><div class="ov-h"><span class="th" data-t="singlecell">单细胞</span><span class="ov-n">单细胞与空间组学基础模型与虚拟细胞</span></div><div class="ov-s">朝阳（单细胞 FM 成熟、扰动/空间多模态/评测未收敛）</div><div class="ov-l"><b>问题</b> 同一扰动或变异在不同细胞类型、组织、物种中是否有可迁移响应规则？</div><div class="ov-l"><b>瓶颈</b> 分子→细胞状态层：因果识别不足 + 测量/评测不足；简单基线常不输复杂模型。</div></a>
-<a class="ov" href="#topic-vcell" style="border-left-color:#bf3989"><div class="ov-h"><span class="th" data-t="vcell">虚拟细胞</span><span class="ov-n">虚拟细胞与扰动响应预测</span></div><div class="ov-s">朝阳偏早（生成模型与数据爆发、世界模型萌芽、评测批判密…</div><div class="ov-l"><b>问题</b> 给定细胞状态与扰动，能否预测未见上下文的分布，而非平均表达向量？</div><div class="ov-l"><b>瓶颈</b> 细胞状态层：因果识别不足、评测弱；细胞状态→组织/个体转化不足。</div></a>
-<a class="ov" href="#topic-ssl" style="border-left-color:#1b7c83"><div class="ov-h"><span class="th" data-t="ssl">世界模型</span><span class="ov-n">世界模型与自监督表征学习</span></div><div class="ov-s">朝阳（掩码/自蒸馏成熟、隐空间预测爆发、科学数据迁移刚…</div><div class="ov-l"><b>问题</b> 细胞/组织状态空间是否低维可外推，衰老与共病轨迹是否由少量潜在状态生成？</div><div class="ov-l"><b>瓶颈</b> 评测层与动作空间层：动作空间不明确、干预验证薄弱；生物动作（剂量、时程、背景）远比机器人模糊。</div></a>
-<a class="ov" href="#topic-agent" style="border-left-color:#bc4c00"><div class="ov-h"><span class="th" data-t="agent">Agent</span><span class="ov-n">LLM 科研智能体与可验证奖励强化学习</span></div><div class="ov-s">朝阳偏早期（RLVR 配方趋稳、智能体做科研未收敛、生…</div><div class="ov-l"><b>问题</b> 智能体能否产生可湿验证的新因果假设，RLVR 是否真正扩展推理上界？</div><div class="ov-l"><b>瓶颈</b> 评测与验证层：可验证奖励稀缺 + 转化反馈慢；RLVR 只证明可验证答案，不证明生物因果。</div></a>
+<a class="ov" href="#topic-aging" style="border-left-color:#1a7f37"><div class="ov-h"><span class="th" data-t="aging">衰老</span><span class="ov-n">多模态衰老时钟与生物年龄</span></div><div class="ov-s">朝阳期偏早期（内部高度不均：单组学时钟成熟、多模态整合…</div><div class="ov-l"><b>问题</b> 生物年龄/年龄差是因果可干预的衰老速率，还是组织、免疫、批次与疾病读数？</div><div class="ov-l"><b>瓶颈</b> 分子层与多模态整合层：测量标准化不足 + 因果识别不足；跨组织、跨模态口径未收敛。</div></a>
+<a class="ov" href="#topic-cohort" style="border-left-color:#0969da"><div class="ov-h"><span class="th" data-t="cohort">人群队列</span><span class="ov-n">人群健康与多组学 AI</span></div><div class="ov-s">朝阳期叠加成熟基础设施（资源层成熟、生成式轨迹朝阳、E…</div><div class="ov-l"><b>问题</b> 遗传 + 纵向 EHR + 多组学能否在独立队列稳定预测，并识别可扰动生物学？</div><div class="ov-l"><b>瓶颈</b> 遗传/分子→疾病层 + 人群→干预层：因果识别不足 + 转化不足；跨祖源、跨平台测量多样性。</div></a>
+<a class="ov" href="#topic-cardio" style="border-left-color:#cf222e"><div class="ov-h"><span class="th" data-t="cardio">心血管</span><span class="ov-n">心血管队列多组学与临床 AI</span><span class="ov-deep">深度调研 2</span></div><div class="ov-s">成熟底座 + 朝阳上层（2.1 成熟、2.2/2.3 …</div><div class="ov-l"><b>问题</b> 哪些血浆分子是心血管病的因果介质，风险轨迹能否跨人群改变临床决策？</div><div class="ov-l"><b>瓶颈</b> 人群→干预与转化层：因果识别、跨人群校准、临床效用证据不足。</div></a>
+<a class="ov" href="#topic-organoid" style="border-left-color:#9a6700"><div class="ov-h"><span class="th" data-t="organoid">类器官</span><span class="ov-n">类器官与模式生物虚拟响应建模</span></div><div class="ov-s">朝阳期偏早期（临床对应成熟、跨物种迁移朝阳、虚拟组织与…</div><div class="ov-l"><b>问题</b> 扰动响应函数能否跨背景、跨物种外推，并作为患者结局替代读出？</div><div class="ov-l"><b>瓶颈</b> 细胞状态→组织/器官层：因果识别不足；混杂与真实处理效应未可靠分离；跨物种缺 ground truth。</div></a>
+<a class="ov" href="#topic-singlecell" style="border-left-color:#8250df"><div class="ov-h"><span class="th" data-t="singlecell">单细胞</span><span class="ov-n">单细胞与空间组学基础模型与虚拟细胞</span></div><div class="ov-s">朝阳期（基础模型与扰动预测爆发、数据资源成熟、可解释性…</div><div class="ov-l"><b>问题</b> 同一扰动或变异在不同细胞类型、组织、物种中是否有可迁移响应规则？</div><div class="ov-l"><b>瓶颈</b> 分子→细胞状态层：因果识别不足 + 测量/评测不足；简单基线常不输复杂模型。</div></a>
+<a class="ov" href="#topic-vcell" style="border-left-color:#bf3989"><div class="ov-h"><span class="th" data-t="vcell">虚拟细胞</span><span class="ov-n">虚拟细胞与扰动响应预测</span></div><div class="ov-s">朝阳期偏早（生成模型与数据爆发、世界模型萌芽、评测批判…</div><div class="ov-l"><b>问题</b> 给定细胞状态与扰动，能否预测未见上下文的分布，而非平均表达向量？</div><div class="ov-l"><b>瓶颈</b> 细胞状态层：因果识别不足、评测弱；细胞状态→组织/个体转化不足。</div></a>
+<a class="ov" href="#topic-ssl" style="border-left-color:#1b7c83"><div class="ov-h"><span class="th" data-t="ssl">世界模型</span><span class="ov-n">世界模型与自监督表征学习</span></div><div class="ov-s">朝阳期（掩码/自蒸馏成熟、隐空间预测爆发、科学数据迁移…</div><div class="ov-l"><b>问题</b> 细胞/组织状态空间是否低维可外推，衰老与共病轨迹是否由少量潜在状态生成？</div><div class="ov-l"><b>瓶颈</b> 评测层与动作空间层：动作空间不明确、干预验证薄弱；生物动作（剂量、时程、背景）远比机器人模糊。</div></a>
+<a class="ov" href="#topic-agent" style="border-left-color:#bc4c00"><div class="ov-h"><span class="th" data-t="agent">Agent</span><span class="ov-n">LLM 科研智能体与可验证奖励强化学习</span></div><div class="ov-s">朝阳期偏早期（RLVR 配方相对稳定、科研智能体方法未…</div><div class="ov-l"><b>问题</b> 智能体能否产生可湿验证的新因果假设，RLVR 是否真正扩展推理上界？</div><div class="ov-l"><b>瓶颈</b> 评测与验证层：可验证奖励稀缺 + 转化反馈慢；RLVR 只证明可验证答案，不证明生物因果。</div></a>
 <div class="sec"><div class="sec-t">跨方向</div><div class="sec-d">两份报告分工不同：一份讲为什么（底层逻辑，每月更新），一份讲做什么（联合项目建议，每周更新）。</div></div>
 <details class="bg" data-src="bg/principles.html"><summary>为什么 · 全局判断（第一性原理）<span class="cnt">8 个领域 · 每月更新 · 更新 2026-10-01 · [证据] = 来自方向背景报告；[常识] = 模型领域知识，需核实</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/principles.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" data-src="bg/joint.html"><summary>做什么 · 联合行动建议<span class="cnt">8 个方向 · 证据 639 篇 · 更新 2026-10-04</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/joint.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
+<details class="bg" data-src="bg/joint.html"><summary>做什么 · 联合行动建议<span class="cnt">8 个方向 · 证据 646 篇 · 更新 2026-10-11</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/joint.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
 <div class="sec"><div class="sec-t">各方向</div><div class="sec-d">每个方向一份证据综述（每周吃日报增量重编）。卡片里先给 TL;DR，展开后加载全文；有深度调研的放在最上面。</div></div>
-<details class="bg" id="topic-aging" data-src="bg/aging.html"><summary><span class="th" data-t="aging">衰老</span>多模态衰老时钟与生物年龄<span class="cnt">证据 74 篇 · 覆盖度 0.62 · 第 5 轮 · 更新 2026-10-04</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-aging" data-src="bg/aging.html"><summary><span class="th" data-t="aging">衰老</span>多模态衰老时钟与生物年龄<span class="cnt">证据 75 篇 · 覆盖度 0.62 · 第 6 轮 · 更新 2026-10-11 · 数字核验删句 1</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>第一代表观遗传时钟以实际年龄为训练目标，Horvath 用 353 个 CpG 构建多组织预测器，测试误差约 3.6 年 [<a class="cite" href="#ref-aging-1">1</a>]。</li>
-<li>第二代时钟转向复合终点，DNAm PhenoAge 在全因死亡、癌症、健康寿命等预测上显著优于第一代标志物 [<a class="cite" href="#ref-aging-2">2</a>]。</li>
-<li>Generation Scotland 队列 18,859 人中，13 种时钟与 57 种疾病共产生 176 个 Bonferroni 显著关联，GrimAge v2 和 DunedinPACE 各有 72 个 [<a class="cite" href="#ref-aging-3">3</a>]。</li>
-<li>跨五种组织、284 份样本比较发现，口腔与血液组织的表观年龄平均差近 30 年，Skin and Blood clock 跨组织一致性最好 [<a class="cite" href="#ref-aging-4">4</a>]。</li>
-<li>UK Biobank 中 45,441 人、2,897 个血浆蛋白训练的模型筛选出 204 个蛋白，与实际年龄 Pearson r=0.94 [<a class="cite" href="#ref-aging-5">5</a>]。</li>
-<li>器官特异化路线在 UKB 43,616 人及中国 3,977 人、美国 800 人队列中，跨队列 r 分别达 0.98 和 0.93 [<a class="cite" href="#ref-aging-6">6</a>]。</li>
-<li>转录组时钟在 ARCHS4 的 56,877 例人类 RNA-seq 上，混合专家模型达到 MAE=7.58 年，百岁老人误差达 ±40 年 [<a class="cite" href="#ref-aging-7">7</a>]。</li>
-<li>K-Dense 多智能体系统在 ARCHS4 的 57,584 样本上达到 R²=0.854、MAE=4.26 年，并提供校准置信区间 [<a class="cite" href="#ref-aging-8">8</a>]。</li>
-<li>StackAge 整合 UKB 30,376 人的 2,923 个蛋白与 251 个代谢物，2 型糖尿病、阿尔茨海默病和慢性肾脏病 AUC 超过 0.90 [<a class="cite" href="#ref-aging-9">9</a>]。</li>
-<li>LongevityBench 评测 18 个前沿 AI 系统后结论是没有单一模型主导所有任务，且组学年龄预测被识别为最难的任务 [<a class="cite" href="#ref-aging-10">10</a>]。</li>
+<li>表观遗传时钟是单组学衰老时钟中最成熟的一支，Horvath 多组织预测器从 21,369 个 CpG 中选出 <strong>353 个时钟 CpG</strong>，在多数组织中预测误差约 <strong>3.6 年</strong> [<a class="cite" href="#ref-aging-1">1</a>]。</li>
+<li>时钟临床效用需大队列横向比较：Generation Scotland 18,859 人、随访 10 年的无偏比较纳入 14 种时钟与 174 种新发疾病，完全校正模型下 13 种时钟与 57 种疾病共 <strong>176 个 Bonferroni 显著关联</strong>，其中 <strong>GrimAge v2 和 DunedinPACE 各有 72 个</strong>显著关联 [<a class="cite" href="#ref-aging-2">2</a>]。</li>
+<li>表观时钟的生物学可解释性与可靠性受质疑：TranslAGE 平台评估 18 种 DNAm 标志物发现多数技术重现性好，但<strong>生物学可靠性低至中等</strong>，调整免疫组成后进一步下降，且技术重现性不能预测生物学可靠性 [<a class="cite" href="#ref-aging-3">3</a>]。</li>
+<li>跨组织可比性是另一争议点：对五种组织中 284 份样本（83 人，9–70 岁）的比较显示，口腔与血液组织的表观年龄估计<strong>平均差近 30 年</strong>，多数血液时钟与口腔组织相关性低，<strong>Skin and Blood clock</strong> 跨组织一致性最好 [<a class="cite" href="#ref-aging-4">4</a>]。</li>
+<li>蛋白质组时钟依托大规模血浆蛋白平台迅速扩展：UKB 中基于 2,897 个血浆蛋白、45,441 人训练的模型经 Boruta 筛选出 <strong>204 个蛋白</strong>，预测实际年龄 <strong>Pearson r=0.94</strong>，其年龄差与 27 个衰老表型、全因死亡和 26 种年龄相关疾病关联 [<a class="cite" href="#ref-aging-5">5</a>]。</li>
+<li>转录组时钟在方法上更强调跨平台与跨组织泛化：基于 ARCHS4 的混合专家模型在 56,877 例 2–114 岁样本上达到 <strong>MAE=7.58 年</strong>，肺和脑预测最佳、肝较差，FOSB 重要性 1.00，残差随年龄增大，百岁老人误差达 ±40 年 [<a class="cite" href="#ref-aging-6">6</a>]。</li>
+<li>多模态衰老时钟正从单一组学向跨器官、跨模态整合推进：基于UKB 44,498人Olink约3,000蛋白的LASSO模型构建了11个器官年龄模型，脑、动脉和整体年龄预测传统年龄r²=0.97，器官年龄差可预测疾病、环境暴露和死亡[<a class="cite" href="#ref-aging-7">7</a>]。</li>
+<li>跨队列泛化是这些工作的共同薄弱环节：MRIBAG的腹部特征共线性导致泛化较差，脑模型在外部队列存在域偏移[<a class="cite" href="#ref-aging-8">8</a>]；CTBA队列以白人为主（92%）、外部验证有限[<a class="cite" href="#ref-aging-9">9</a>]；ProtBAG训练数据的病理构成会影响泛化与可解释性[<a class="cite" href="#ref-aging-10">10</a>]。</li>
+<li>单细胞转录组已被用于构建细胞类型特异的免疫衰老时钟：基于1081名18至97岁健康欧洲人外周血单个核细胞的约130万细胞，研究用LASSO、随机森林和PointNet为五类免疫细胞建立<strong>sc-ImmuAging</strong>，内外验证表现优于对照，并揭示COVID-19感染后单核细胞和BCG接种后CD8+T细胞的年龄改变异质性[<a class="cite" href="#ref-aging-11">11</a>]。</li>
+<li>衰老生物学正从单一模态的专用时钟走向多模态、多任务的基准与基础模型：LongevityBench 以 <strong>17 项任务、5 个生物数据域</strong> 评估 <strong>18 个前沿 AI 系统</strong>（来自 6 个开发团队），结果显示没有单一模型主导所有任务，<strong>组学年龄预测是最难的任务</strong>，而 0.6B–9B 的多任务 Longevity-LLM 可匹配或超过更大的通用系统 [<a class="cite" href="#ref-aging-12">12</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/aging.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" id="topic-cohort" data-src="bg/cohort.html"><summary><span class="th" data-t="cohort">人群队列</span>人群健康与多组学 AI<span class="cnt">证据 100 篇 · 覆盖度 0.83 · 第 9 轮 · 更新 2026-10-04 · 数字核验删句 1</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-cohort" data-src="bg/cohort.html"><summary><span class="th" data-t="cohort">人群队列</span>人群健康与多组学 AI<span class="cnt">证据 103 篇 · 覆盖度 0.83 · 第 10 轮 · 更新 2026-10-11 · 数字核验删句 1</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>生成式疾病轨迹模型正从单病种、结构化数据转向多病共存、多模态、终身轨迹联合建模，ALADYNOULLI 在 3 个生物库、n&gt;683,000、随访 52 年、348 种疾病上识别出 21 个可复制特征 [<a class="cite" href="#ref-cohort-1">1</a>]</li>
-<li>Foresight 整合结构化数据与占约 80% 的自由文本，支持跨日/周/月预测与死亡前全程模拟，但作者强调当前形式不宜直接用于临床决策支持 [<a class="cite" href="#ref-cohort-2">2</a>]</li>
-<li>NOAH 基于 MIMIC 家族 559M 事件、299,000 患者训练，支持自回归预测、零样本分类与反事实干预模拟，但其外部泛化待验证 [<a class="cite" href="#ref-cohort-3">3</a>]</li>
-<li>Foresight-England 作为首个国家级 EHR 生成式基础模型，采用 243M 参数 Transformer 解码器，但因 NHS England 暂停数据访问，定量结果无法导出 [<a class="cite" href="#ref-cohort-4">4</a>]</li>
-<li>一项基于 All of Us 297,861 人、12 项生物标志物 3 年轨迹特征的研究用 LightGBM 建模，轨迹模型 AUROC 0.797 显著优于静态汇总 0.755（P&lt;0.001），但缺乏外部队列验证 [<a class="cite" href="#ref-cohort-5">5</a>]</li>
-<li>UK Biobank Pharma Proteomics Project 对 54,219 人检测 2,923 种蛋白，发现 14,287 个主要遗传关联，81% 为既往未报道 [<a class="cite" href="#ref-cohort-6">6</a>]</li>
-<li>跨祖源方面，ARIC 中 7,213 名欧裔和 1,871 名非裔的 4,657 种蛋白 cis-pQTL 定位显示多数关联共享，但非裔样本可缩小可信集并发现人群特异位点 [<a class="cite" href="#ref-cohort-7">7</a>]</li>
-<li>在 All of Us、Penn Medicine 与 UCLA 生物库 171,095 人中计算 48 个冠心病 PRS，发现群体预测表现相似的 PRS 在个体层面一致性差（ICC 与 Light κ 低），提示临床使用需谨慎 [<a class="cite" href="#ref-cohort-8">8</a>]</li>
-<li>综合来看，多组学与遗传整合已从单一组学关联走向跨分子层、跨祖源、跨队列的系统映射，但欧洲祖源主导、个体级 PRS 一致性差、非加性效应与上位效应尚待功能验证等争议仍未解决 [<a class="cite" href="#ref-cohort-8">8</a>][<a class="cite" href="#ref-cohort-9">9</a>][<a class="cite" href="#ref-cohort-10">10</a>]</li>
-<li>纵向多组学研究的核心进展是把衰老时钟从单时点快照推向轨迹建模，Science 的 8 年随访对 335 名女性的全血基因表达和代谢组做纵向分析，发现 5,061 个基因和 181 个代谢物随时间变化 [<a class="cite" href="#ref-cohort-11">11</a>]</li>
+<li>生成式疾病轨迹模型正从单病种、结构化数据建模，转向对多病共存、多模态终身健康状态的统一建模，但证据多依赖登记编码与单一数据生态，外部验证、记录偏倚与统计显著性仍是共同短板 [<a class="cite" href="#ref-cohort-1">1</a>][<a class="cite" href="#ref-cohort-2">2</a>][<a class="cite" href="#ref-cohort-3">3</a>]</li>
+<li>Foresight 利用结构化数据及约占 80% 的自由文本，在三家医院躯体和精神健康数据上覆盖 18 类 SNOMED 概念，但作者明确其当前形式不宜直接用于临床决策支持 [<a class="cite" href="#ref-cohort-4">4</a>]</li>
+<li>ALADYNOULLI 以概率混合而非混合概率的形式联合建模纵向 EHR 诊断、年龄与多基因风险，应用于三个生物库、n&gt;683,000、随访 52 年、348 种疾病，识别 21 个可复制特征（跨队列组成保留中位 80%），亚型 Cohen's d 达 4.25，基于特征的 GWAS 发现 151 个全基因组显著位点 [<a class="cite" href="#ref-cohort-1">1</a>]</li>
+<li>Foresight-England 作为首个国家级 EHR 生成式基础模型，是 243M 参数 Transformer 解码器，基于约 6100 万人去标识化纵向 EHR（训练 5490 万、评估 610 万），但因 NHS England 暂停数据访问，定量结果无法导出 [<a class="cite" href="#ref-cohort-5">5</a>]</li>
+<li>UK Biobank 的 Pharma Proteomics Project 对 54,219 名参与者检测 2,923 种血浆蛋白，发现 14,287 个主要遗传关联，其中 81% 为既往未报道，并精细映射出 29,420 个独立信号 [<a class="cite" href="#ref-cohort-6">6</a>]</li>
+<li>一项采用正交等位基因重编码框架的研究分析最多 399,943 名 UK Biobank 个体、2,906 个血浆蛋白和 55 个数量性状，发现约三分之一同源基因-蛋白关系表现出非线性剂量效应；该方法在 HWE 偏离下保持校准（λGC=0.94），而标准重编码出现膨胀（λGC=78.3） [<a class="cite" href="#ref-cohort-7">7</a>]</li>
+<li>Pan-UK Biobank 跨祖源荟萃分析覆盖 7,271 个表型，新发现 14,676 个仅欧洲祖源分析未检出的位点 [<a class="cite" href="#ref-cohort-8">8</a>]</li>
+<li>一项评估 48 个冠心病 PRS 的研究在 All of Us、Penn Medicine 与 UCLA 生物库 171,095 人中比较校准与区分度，发现群体预测表现相似的 PRS 在个体层面一致性差（ICC 与 Light κ 低） [<a class="cite" href="#ref-cohort-9">9</a>]</li>
+<li>对 335 名女性 8 年全血样本的纵向分析发现，5,061 个基因和 181 个代谢物随时间变化，且个体轨迹常偏离群体水平趋势，这些纵向变化基因具有细胞类型特异性并富集于心血管代谢和神经退行性疾病通路，同时受遗传、昼夜节律、季节和污染物影响 [<a class="cite" href="#ref-cohort-10">10</a>]</li>
+<li>在 All of Us 中，对 393,590 名参与者比较患者介导 EHR（PME，19,703 人）与提供者来源 EHR（HPO，373,887 人），发现 PME 更白、更女性、更多保险、随访更长，WGS 更少（35.2% vs 83.2%），并在疾病患病率、10 个表型 PheWAS 及 5,000 多个已知基因型-表型关联复制率上存在差异 [<a class="cite" href="#ref-cohort-11">11</a>]</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/cohort.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" id="topic-cardio" data-src="bg/cardio.html"><summary><span class="th" data-t="cardio">心血管</span>心血管队列多组学与临床 AI<span class="cnt">证据 97 篇 · 覆盖度 0.66 · 第 8 轮 · 更新 2026-10-04 · 数字核验删句 7</span></summary><div class="bgbody"><details class="bg sub" data-src="bg/cardio-omics-deep-36e80f93.html"><summary>深度调研：心血管靶点问题因病种而异：ASCVD 与血压轴缺的是校准与实施链，ICH、HFpEF 与房颤基质仍缺靶点<span class="cnt">深度调研 · 心血管 · 2026-09-27</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/cardio-omics-deep-36e80f93.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details><details class="bg sub" data-src="bg/cardio-omics-deep-f26fe910.html"><summary>深度调研：专家评审综合：心血管调研（心内科 · 遗传流病 · 药物研发 · 医学 AI）<span class="cnt">深度调研 · 心血管 · 2026-09-27</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/cardio-omics-deep-f26fe910.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-cardio" data-src="bg/cardio.html"><summary><span class="th" data-t="cardio">心血管</span>心血管队列多组学与临床 AI<span class="cnt">证据 99 篇 · 覆盖度 0.66 · 第 9 轮 · 更新 2026-10-11 · 数字核验删句 9</span></summary><div class="bgbody"><details class="bg sub" data-src="bg/cardio-omics-deep-36e80f93.html"><summary>深度调研：心血管靶点问题因病种而异：ASCVD 与血压轴缺的是校准与实施链，ICH、HFpEF 与房颤基质仍缺靶点<span class="cnt">深度调研 · 心血管 · 2026-09-27</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/cardio-omics-deep-36e80f93.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details><details class="bg sub" data-src="bg/cardio-omics-deep-f26fe910.html"><summary>深度调研：专家评审综合：心血管调研（心内科 · 遗传流病 · 药物研发 · 医学 AI）<span class="cnt">深度调研 · 心血管 · 2026-09-27</span></summary><div class="bgbody"><div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/cardio-omics-deep-f26fe910.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details><h2>摘要（TL;DR）</h2>
 <ul>
-<li>China-PAR项目基于4个中国当代队列，以21320人推导、14123与70838人外部验证，建立性别特异性10年ASCVD风险方程，男性C统计量0.794、女性0.811，校准χ²男13.1（P=0.16）、女12.8（P=0.17），12年随访1048例首发ASCVD，并与ACC/AHA指南的Pooled Cohort Equations对比[<a class="cite" href="#ref-cardio-1">1</a>]。</li>
-<li>UK Biobank研究中，从645个候选变量数据驱动筛选出含10个预测因子的UKCRP模型，AUC 0.762±0.010、Brier 0.057±0.006，10年内31466人发生CVD，心肌梗死AUC 0.774、缺血性卒中0.730、出血性卒中0.644，优于AHA/ASCVD、FGCRS、QRISK3、SCORE2等现有模型[<a class="cite" href="#ref-cardio-2">2</a>]。</li>
-<li>开滦队列16378名中国T2DM患者的研究用功能主成分分析提取4年风险因子轨迹，构建ML-CVD-C，与PREVENT、China-PAR、SCORE-2D、ADVANCE比较，整合纵向轨迹的模型优于仅用基线变量的模型[<a class="cite" href="#ref-cardio-3">3</a>]。</li>
-<li>QRISK3在UK Biobank独立外部验证中区分度中等且随年龄下降，系统性高估CVD风险，老年参与者高估达20%[<a class="cite" href="#ref-cardio-4">4</a>]。</li>
-<li>中国两项队列的验证更直接：CKB吴忠子队列42937人与JBPCD 14125人中，一般人群C统计量0.723–0.778、糖尿病人群仅0.584–0.629，原模型E/O一般人群1.47–3.78、糖尿病0.32–2.70，重校准后CKB-CVD高风险48.4%而实际10年风险25.7%[<a class="cite" href="#ref-cardio-5">5</a>]。</li>
-<li>跨国糖尿病队列进一步显示，新西兰47958人与中国46558人中，多数预测因子风险比相似但年龄差异显著，女性每10年风险比新西兰1.61 vs 中国2.51，且标准重校准未改善中国队列校准[<a class="cite" href="#ref-cardio-6">6</a>]。</li>
-<li>多族裔验证中，整合PRS与ASCVD-PCE的ASCVD-IRT在白人、黑人、南亚及西班牙裔的NRI分别为2.7%、2.5%、8.7%、7.5%（西班牙裔CI含0）[<a class="cite" href="#ref-cardio-7">7</a>]。</li>
-<li>Echo2HF基于4057664段超声视频、70763例开发，外部34802例验证，10年AUROC内部0.83（95%CI 0.81–0.85）、外部0.82（0.81–0.83），优于PCP-HF与PREVENT[<a class="cite" href="#ref-cardio-8">8</a>]。</li>
-<li>基于多机构EHR的412085例45–95岁人群研究，14,334例新发AF，验证C-statistic 0.777（95%CI 0.771–0.783）、校准0.99，优于CHARGE-AF的0.753[<a class="cite" href="#ref-cardio-9">9</a>]。</li>
-<li>方法学上的核心张力在于：机器学习与深度学习在单一队列内部常报告更高的区分度（如GBM AUC 0.828[<a class="cite" href="#ref-cardio-10">10</a>]、Echo2HF AUROC 0.83[<a class="cite" href="#ref-cardio-8">8</a>]），但跨人群外部验证时校准普遍不佳[<a class="cite" href="#ref-cardio-4">4</a>][<a class="cite" href="#ref-cardio-5">5</a>][<a class="cite" href="#ref-cardio-6">6</a>]。</li>
+<li>China-PAR 基于4个中国当代队列开发性别特异性方程，男性C统计量 0.794、女性 0.811，校准χ²男13.1（P=0.16）、女12.8（P=0.17）[<a class="cite" href="#ref-cardio-1">1</a>]</li>
+<li>SCORE2 采用13国45队列（677684人、30121事件）推导、25队列113万人外部验证，外部验证C-index为0.67-0.81 [<a class="cite" href="#ref-cardio-2">2</a>]</li>
+<li>QRISK3在UK Biobank中系统性高估CVD风险，老年参与者高估达20% [<a class="cite" href="#ref-cardio-3">3</a>]</li>
+<li>中国CKB吴忠子队列42937人与JBPCD 14125人验证显示，重校准后CKB-CVD高风险组预测48.4%而实际10年风险25.7%，区分度变化不大但校准显著改善 [<a class="cite" href="#ref-cardio-4">4</a>]</li>
+<li>新西兰47958人与中国46558人T2D队列中，女性每10年年龄风险比新西兰1.61 vs 中国2.51，标准重校准未能改善中国队列校准 [<a class="cite" href="#ref-cardio-5">5</a>]</li>
+<li>UK Biobank 423604人、473个变量的AutoPrognosis研究显示机器学习可整合大量变量和复杂交互，但变量缺失严重、部分血脂数据当时未发布、外部验证有限 [<a class="cite" href="#ref-cardio-6">6</a>]</li>
+<li>UKCRP模型含10个预测因子，AUC 0.762±0.010、Brier 0.057±0.006，优于AHA/ASCVD、FGCRS、QRISK3、SCORE2等多种现有临床模型，但以白人为主（94.0%）、出血性卒中预测较差 [<a class="cite" href="#ref-cardio-7">7</a>]</li>
+<li>CHARLS 8080名≥45岁无基线CVD者随访9年，GBM AUC 0.828最高、Logistic 0.792，局限为单队列、缺乏外部验证 [<a class="cite" href="#ref-cardio-8">8</a>]</li>
+<li>Pharma Proteomics Project在54,219名UK Biobank参与者中对2,923个蛋白进行pQTL定位，鉴定14,287个主要遗传关联，其中81%为新发现 [<a class="cite" href="#ref-cardio-9">9</a>]</li>
+<li>UKB-PPP 41,931人中，临床模型中位C-index为0.64，163种疾病5蛋白即媲美临床模型，另30种更优 [<a class="cite" href="#ref-cardio-10">10</a>]</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/cardio.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
 <details class="bg" id="topic-organoid" data-src="bg/organoid.html"><summary><span class="th" data-t="organoid">类器官</span>类器官与模式生物虚拟响应建模<span class="cnt">证据 64 篇 · 覆盖度 0.47 · 第 5 轮 · 更新 2026-09-27 · 数字核验删句 1</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
@@ -994,18 +1201,18 @@ details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
 <li>跨物种迁移的真实泛化边界仍有待统一评测，Nicheformer 的独立基准结果未完全复现 [<a class="cite" href="#ref-organoid-10">10</a>]，而多数模型的局限尚未明确 [<a class="cite" href="#ref-organoid-11">11</a>][<a class="cite" href="#ref-organoid-12">12</a>]。</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/organoid.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
-<details class="bg" id="topic-singlecell" data-src="bg/singlecell.html"><summary><span class="th" data-t="singlecell">单细胞</span>单细胞与空间组学基础模型与虚拟细胞<span class="cnt">证据 91 篇 · 覆盖度 0.65 · 第 7 轮 · 更新 2026-10-04 · 数字核验删句 2</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
+<details class="bg" id="topic-singlecell" data-src="bg/singlecell.html"><summary><span class="th" data-t="singlecell">单细胞</span>单细胞与空间组学基础模型与虚拟细胞<span class="cnt">证据 92 篇 · 覆盖度 0.65 · 第 8 轮 · 更新 2026-10-11 · 数字核验删句 1</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
 <ul>
-<li>单细胞基础模型的核心思路是把细胞类比为“句子”、基因类比为“词元”，用 Transformer 等架构在大规模单细胞组学数据上自监督预训练，再适配细胞类型注释等下游任务 [<a class="cite" href="#ref-singlecell-1">1</a>]。</li>
-<li>早期代表性工作沿两条路径展开：scGPT 在超 3300 万个细胞的单细胞 RNA 测序数据上预训练 [<a class="cite" href="#ref-singlecell-2">2</a>]，Geneformer 则在约 3000 万个单细胞转录组上预训练 [<a class="cite" href="#ref-singlecell-3">3</a>]。</li>
-<li>随后工作沿数据规模与物种范围扩张：CellFM 预训练于 1 亿人类细胞 [<a class="cite" href="#ref-singlecell-4">4</a>]，scPRINT-2 扩展到 3.5 亿细胞、16 个物种 [<a class="cite" href="#ref-singlecell-5">5</a>]，TranscriptFormer 在多达 1.12 亿细胞、12 个物种、跨越 15.3 亿年进化的数据上训练 [<a class="cite" href="#ref-singlecell-6">6</a>]。</li>
-<li>架构层面出现引入生物学先验或替换注意力机制的路线：RegFormer 融合基因调控网络先验与 Mamba 状态空间建模，在 2500 万人类细胞上学习表达动态与调控层级 [<a class="cite" href="#ref-singlecell-7">7</a>]；LucaCell 以序列为中心，在 8500 万人类和小鼠单细胞上预训练 [<a class="cite" href="#ref-singlecell-8">8</a>]。</li>
-<li>并非所有工作都依赖大规模表达数据预训练：GenePT 用 GPT-3.5 基于 NCBI 基因文本描述生成基因嵌入，无需数据策展与额外预训练，在基因属性与细胞类型分类等下游任务上达到与 Geneformer 等相当甚至更优的性能 [<a class="cite" href="#ref-singlecell-9">9</a>]。</li>
-<li>对基础模型实际效用的评估出现明显分歧：一项零样本评估发现 Geneformer 和 scGPT 在 AvgBIO 上多低于 HVG、Harmony、scVI 等更简单的基线 [<a class="cite" href="#ref-singlecell-10">10</a>]；另一项工作用 2220 万细胞语料预训练 400 个模型并开展 6400 次实验，未观察到明确的数据缩放定律 [<a class="cite" href="#ref-singlecell-11">11</a>]。</li>
-<li>表征提取方式本身受到质疑：一项逐层评估发现轨迹最优层在 60% 深度，比最终层高 31%，扰动最优层随 T 细胞激活状态在 0–96% 间变化，直接挑战了当前基准普遍默认使用最终层嵌入的做法 [<a class="cite" href="#ref-singlecell-12">12</a>]。</li>
-<li>空间转录组基础模型的预训练目标正在从「重建观测基因」转向「预测潜在细胞表征」：CellWorld 将预测目标改为潜在细胞表征，CellWorld-Small（5.74M）在全部 11 个线性探针和 7 个空间基准上超越所有基线 [<a class="cite" href="#ref-singlecell-13">13</a>]。</li>
-<li>扰动响应预测正从静态的对照—处理映射转向对未见扰动、未见细胞背景的泛化建模：Tahoe-x1 将扰动训练的单细胞基础模型扩展到最高 30 亿参数，在四项基准上均达 SOTA，计算效率较先前细胞状态模型提升 3–30 倍 [<a class="cite" href="#ref-singlecell-14">14</a>]。</li>
-<li>领域层面的共识与争议集中在评估标准上：可信虚拟细胞路线图批评当前工作偏重模型规模与数据量，主张评估应超越留出重建精度，转向泛化到未见细胞类型与扰动等生物学标准 [<a class="cite" href="#ref-singlecell-15">15</a>]。</li>
+<li>scGPT 在超 3300 万个细胞上预训练，经迁移学习后在注释、整合、扰动预测、基因网络推断等任务表现优异 [<a class="cite" href="#ref-singlecell-1">1</a>]</li>
+<li>CellFM 进一步将预训练规模推到 1 亿人类细胞，在多种任务上达到或超过现有基础模型 [<a class="cite" href="#ref-singlecell-2">2</a>]</li>
+<li>scPRINT-2 在 3.5 亿细胞、16 个物种上预训练，在表达去噪、细胞嵌入和细胞类型预测上达到 SOTA，并具备表达插补与反事实推理的生成能力 [<a class="cite" href="#ref-singlecell-3">3</a>]</li>
+<li>RegFormer 认为 Transformer 存在可扩展性与上下文长度限制，转而融合基因调控网络先验与 Mamba 状态空间建模，在 2500 万人类细胞上预训练，在细胞注释、GRN 重建、遗传扰动预测和药物响应建模等基准上持续优于 scGPT 和 Geneformer [<a class="cite" href="#ref-singlecell-4">4</a>]</li>
+<li>GenePT 用 GPT-3.5 基于 NCBI 基因文本描述生成基因嵌入，再经表达加权生成单细胞嵌入，无需数据策展与额外预训练，在基因属性与细胞类型分类等任务上达到与 Geneformer 等相当甚至更优的性能 [<a class="cite" href="#ref-singlecell-5">5</a>]</li>
+<li>零样本评估显示，Geneformer 和 scGPT 在五个数据集上的细胞类型聚类与批次校正多数情况下不如 HVG、Harmony、scVI 等更简单基线，HVG 在所有指标上优于二者，scGPT 仅在 PBMC 12k 上部分优于 scVI/Harmony [<a class="cite" href="#ref-singlecell-6">6</a>]</li>
+<li>用 2220 万细胞语料预训练 400 个模型、开展 6400 次实验后发现，性能在远小于当前训练语料的数据规模即趋于平台，未观察到明确的数据缩放定律 [<a class="cite" href="#ref-singlecell-7">7</a>]</li>
+<li>对 scFoundation（100M）和 Tahoe-X1（1.3B）的逐层评估表明，最优层依赖任务与细胞情境，轨迹最优层在 60% 深度、比最终层高 31%，扰动最优层随 T 细胞激活状态在 0–96% 间变化，静息细胞首层反而最佳 [<a class="cite" href="#ref-singlecell-8">8</a>]</li>
+<li>对 Geneformer V2-316M 与 scGPT 全人模型各层残差流激活训练 TopK 稀疏自编码器（SAE）后，生成 82525 与 24527 个特征，其中 99.8% 特征 SVD 不可见，仅 29–59% 可注释到通路，只有 3/48（6.2%）转录因子显示调控靶标特异性响应，多组织对照为 10.4% [<a class="cite" href="#ref-singlecell-9">9</a>]</li>
+<li>在四个 Perturb-seq 数据集上，差分空间的 Train Mean 基线（0.711/0.557/0.373/0.628）优于 scGPT（0.641/0.554/0.327/0.596）与 scFoundation（0.552/0.459/0.269/0.471），结合 GO 特征的随机森林最佳（0.739/0.586/0.480/0.648） [<a class="cite" href="#ref-singlecell-10">10</a>]</li>
 </ul>
 <div class="lazy"><div class="empty">正在加载全文…</div></div><a class="full" href="bg/singlecell.html" target="_blank" rel="noopener">单独打开全文 →</a></div></details>
 <details class="bg" id="topic-vcell" data-src="bg/vcell.html"><summary><span class="th" data-t="vcell">虚拟细胞</span>虚拟细胞与扰动响应预测<span class="cnt">证据 45 篇 · 覆盖度 0.56 · 第 5 轮 · 更新 2026-10-04</span></summary><div class="bgbody"><h2>摘要（TL;DR）</h2>
