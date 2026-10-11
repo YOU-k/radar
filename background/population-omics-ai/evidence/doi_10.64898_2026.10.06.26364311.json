@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.06.26364311",
+  "title": "Proteomic Signatures Capture Environmental Exposures Across Diverse Populations",
+  "url": "https://doi.org/10.64898/2026.10.06.26364311",
+  "abstract": "利用All of Us项目中10043名参与者的5416种血浆蛋白，评估其与100多种环境暴露（肥胖、空气污染、气温、物质使用等）的关联及复合评分。发现蛋白暴露特征在不同人群和社会经济阶层间基本一致，仅<1%蛋白存在显著跨人群异质性，BMI为例外，其中瘦素关联异质性最高。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "All of Us万人血浆蛋白组与环境暴露跨人群分析，契合多组学队列",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "All of Us万人蛋白组暴露图谱，跨人群资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "血浆蛋白与100多种环境暴露关联及复合评分分析",
+  "data": "All of Us项目10,043名参与者，5,416种血浆蛋白",
+  "scenario": "环境暴露的蛋白组特征跨人群评估",
+  "benchmark": "未提及",
+  "results": "蛋白暴露特征在不同人群和社会经济阶层间基本一致；仅<1%蛋白存在显著跨人群异质性；BMI为例外，瘦素关联异质性最高",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究评估血浆蛋白能否捕捉多种环境暴露。利用All of Us项目中10,043名参与者的5,416种血浆蛋白，分析其与100多种环境暴露的关联及复合评分。发现蛋白暴露特征在不同人群和社会经济阶层间基本一致，仅<1%蛋白存在显著跨人群异质性，BMI为例外，瘦素关联异质性最高。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 10,
+ "added_on": "2026-10-11"
+}

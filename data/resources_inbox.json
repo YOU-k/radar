@@ -183,5 +183,33 @@
   "day": "2026-10-09",
   "source": "daily",
   "theme": "singlecell"
+ },
+ {
+  "name": "Olink proteomics",
+  "kind": "dataset",
+  "url": "",
+  "note": "血浆蛋白组关联与风险预测 · 被 3 篇高分工作使用：A pre-train and fine-tune framework for  / Urban Genomics in a Rapidly Urbanizing M / VINTER: a generative vision-language mod",
+  "day": "2026-10-11",
+  "source": "daily-infra",
+  "used_by_titles": [
+   "A pre-train and fine-tune framework for adaptive boosting of pre-trained polygenic risk scores.",
+   "Urban Genomics in a Rapidly Urbanizing Megacity Reveals Layered Cardiometabolic Genetic Architecture",
+   "VINTER: a generative vision-language model for annotating and interrogating spatial tissues"
+  ]
+ },
+ {
+  "name": "scRNA-seq",
+  "kind": "dataset",
+  "url": "",
+  "note": "单细胞转录组图谱与建模 · 被 5 篇高分工作使用：A lifespan-scale single-cell atlas defin / A single-cell RNA-seq catalog of ground  / LucaCell: a sequence-centric foundation ",
+  "day": "2026-10-11",
+  "source": "daily-infra",
+  "used_by_titles": [
+   "A lifespan-scale single-cell atlas defines an early-childhood immunometabolic transition linked to age-referenced immune states",
+   "A single-cell RNA-seq catalog of ground truth gene coregulation",
+   "LucaCell: a sequence-centric foundation model for cross-species single-cell analysis",
+   "Benchmarking single-cell foundation models for aging biology",
+   "2026 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines."
+  ]
  }
 ]

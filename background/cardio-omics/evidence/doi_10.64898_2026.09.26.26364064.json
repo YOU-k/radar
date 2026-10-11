@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.09.26.26364064",
+  "title": "A proteome atlas of structural variation and VNTR effects on complex traits and diseases",
+  "url": "https://doi.org/10.64898/2026.09.26.26364064",
+  "abstract": "研究利用长读长组装参考面板，在54,306名UK Biobank参与者中插补了54,578个一般结构变异和15,826个VNTR，并检测其对2,923种血浆蛋白丰度的影响。结果发现SV和VNTR共同解释蛋白丰度变异遗传力的约8.0%，其中123种蛋白主要由SV驱动，并鉴定出8,065个SV-蛋白和4,101个VNTR-蛋白独立关联。这些关联常扰动活跃调控元件、TAD边界和转录后过程。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank五万人SV/VNTR插补，血浆蛋白组关联图谱，方法新且数据可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank五万人蛋白组SV/VNTR图谱，心血管多组学必读资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "长读长组装参考面板插补SV与VNTR并关联分析",
+  "data": "54,306名UK Biobank参与者，54,578个SV和15,826个VNTR，2,923种血浆蛋白",
+  "scenario": "复杂性状与疾病的SV/VNTR效应解析",
+  "benchmark": "未提及",
+  "results": "SV和VNTR共同解释蛋白丰度变异遗传力约8.0%；123种蛋白主要由SV驱动；鉴定8,065个SV-蛋白和4,101个VNTR-蛋白独立关联",
+  "availability": "",
+  "limitations": "仅基于UK Biobank人群，未提及其他队列验证",
+  "summary": "研究构建了结构变异和VNTR对复杂性状与疾病影响的蛋白质组图谱。利用长读长组装参考面板在54,306名UK Biobank参与者中插补54,578个SV和15,826个VNTR，检测其对2,923种血浆蛋白丰度的影响。发现SV和VNTR共同解释蛋白丰度变异遗传力约8.0%，鉴定出大量独立关联并揭示其扰动活跃调控元件、TAD边界和转录后过程。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 9,
+ "added_on": "2026-10-11"
+}

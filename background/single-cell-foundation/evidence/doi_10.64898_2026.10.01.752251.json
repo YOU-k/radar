@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.01.752251",
+  "title": "VINTER: a generative vision-language model for annotating and interrogating spatial tissues",
+  "url": "https://doi.org/10.64898/2026.10.01.752251",
+  "abstract": "提出VINTER，一种在145万组织学-文本对上对齐的生成式视觉语言模型，将组织学图像、实测基因表达和空间邻域作为单一序列读取。模型输出每个组织类别的概率，且因基因以文本形式输入，可在固定图像下编辑分子证据。联合三源信息后，其组织注释精度优于空间域方法和空间基础模型。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "空间组学视觉语言基础模型，多模态整合且优于基线，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "空间组学视觉语言基础模型，多模态整合且优于空间基础模型，属方向必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "生成式视觉语言模型，统一读取组织学图像、基因表达与空间邻域",
+  "data": "145万组织学-文本对",
+  "scenario": "空间组织注释与分子证据编辑",
+  "benchmark": "空间域方法、空间基础模型",
+  "results": "联合三源信息后组织注释精度优于空间域方法和空间基础模型",
+  "availability": "",
+  "limitations": "",
+  "summary": "提出VINTER，一种生成式视觉语言模型，用于注释和查询空间组织。该模型在145万组织学-文本对上对齐，将组织学图像、实测基因表达和空间邻域作为单一序列读取，输出每个组织类别的概率，并可在固定图像下编辑分子证据。联合三源信息后，其组织注释精度优于空间域方法和空间基础模型。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 8,
+ "added_on": "2026-10-11"
+}

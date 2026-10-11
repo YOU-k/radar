@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "arxiv:2610.05566",
+  "title": "LifeLong Digital Twin: A Unified Modeling Paradigm and Agent Harness for Event-Driven Lifelong Health State Trajectories",
+  "url": "https://arxiv.org/abs/2610.05566",
+  "abstract": "提出LifeLong Digital Twin统一建模范式，将Life Events组织为每日Health States并累积为Lifelong Health Context，配套Agent Harness整合语言模型文本之外的多模态证据。在25个疾病终点、3类任务上评估4个语言模型，用于疾病轨迹等终身健康建模。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "终身健康轨迹数字孪生建模范式，契合EHR纵向轨迹与生成式建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "终身健康轨迹数字孪生建模范式，方向前沿",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "LifeLong Digital Twin统一建模范式与Agent Harness",
+  "data": "25个疾病终点、3类任务、4个语言模型",
+  "scenario": "终身健康状态轨迹建模与疾病预测",
+  "benchmark": "Baseline（无Context/Harness）",
+  "results": "16个模型-读出比较全部提升；疾病识别F1从0.422升至0.504(Context)、0.515(Harness)，相对增益19.4%、22.0%；五年C微F1从0.481升至0.559、0.569",
+  "availability": "",
+  "limitations": "缺乏配对不确定性、疾病支持计数和组件消融，未确立统计显著性",
+  "summary": "提出LifeLong Digital Twin统一建模范式，将Life Events组织为每日Health States并累积为Lifelong Health Context，配套Agent Harness整合多模态证据。在25个疾病终点、3类任务上评估4个语言模型。发现Context和Harness在所有16个主要模型-读出比较中均优于Baseline，疾病识别F1相对增益达19.4%和22.0%。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 10,
+ "added_on": "2026-10-11"
+}

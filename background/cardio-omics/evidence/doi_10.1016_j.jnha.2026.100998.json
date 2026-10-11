@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.jnha.2026.100998",
+  "title": "Frailty-Related Metabolic Signature in the Association Between Frailty and Coronary Artery Disease: Modification by Genetic Susceptibility.",
+  "url": "https://doi.org/10.1016/j.jnha.2026.100998",
+  "abstract": "研究在223,907名基线无冠心病的UK Biobank参与者中，用五组分表型定义衰弱，并在122,959名有核磁共振代谢组数据者中分析169种代谢物与衰弱评分的关联。通过弹性网回归构建衰弱相关代谢特征，并用Cox模型评估其在衰弱-冠心病关联中的中介作用及与遗传风险的交互。",
+  "authors": "",
+  "venue": "The journal of nutrition, health & aging",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank二十余万人代谢组中介分析，衰弱-冠心病轨迹，队列规模达标",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "22万人队列代谢组中介衰弱-冠心病关联，含遗传交互",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "弹性网回归构建代谢特征，Cox模型评估中介与交互",
+  "data": "223,907名基线无冠心病UK Biobank参与者；122,959名有NMR代谢组数据者，169种代谢物",
+  "scenario": "衰弱与冠心病关联的代谢中介及遗传交互",
+  "benchmark": "未提及",
+  "results": "未提及具体定量结果",
+  "availability": "",
+  "limitations": "仅基于UK Biobank人群，未提及其他队列验证",
+  "summary": "研究探讨衰弱相关代谢特征在衰弱与冠心病关联中的中介作用及遗传易感性的修饰效应。在223,907名基线无冠心病UK Biobank参与者中用五组分表型定义衰弱，并在122,959名有NMR代谢组数据者中分析169种代谢物与衰弱评分的关联，通过弹性网回归构建代谢特征并用Cox模型评估中介与交互。摘要未报告具体定量结果。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 9,
+ "added_on": "2026-10-11"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.01.755909",
+  "title": "Intraindividual longitudinal changes of the proteome reveal dynamic markers of biological aging",
+  "url": "https://doi.org/10.64898/2026.10.01.755909",
+  "abstract": "基于KORA队列最多三个时间点的血浆LC-MS蛋白质组纵向数据（9105样本、4100人、25-88岁）构建蛋白质组衰老时钟，预测实际年龄并得出蛋白质组年龄加速指标。该指标与生活方式和临床风险因素相关，风险因素分层分析显示心血管代谢暴露共享蛋白质组特征，而吸烟和体力活动具有独特特征；个体内血脂异常和肾功能受损与年龄加速增加相关。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "大样本纵向血浆蛋白组衰老时钟，含年龄加速指标，数据可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "大规模纵向血浆蛋白组衰老时钟，含公开数据，代表多模态时钟方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "血浆蛋白质组衰老时钟，预测年龄并计算年龄加速",
+  "data": "KORA队列血浆LC-MS蛋白质组，9105样本、4100人、25-88岁",
+  "scenario": "人群纵向衰老与风险因素关联",
+  "benchmark": "实际年龄",
+  "results": "蛋白质组年龄加速与生活方式及临床风险因素相关；心血管代谢暴露共享蛋白质组特征，吸烟和体力活动具独特特征；个体内血脂异常和肾功能受损与年龄加速增加相关",
+  "availability": "",
+  "limitations": "",
+  "summary": "本文基于KORA队列纵向血浆蛋白质组数据构建蛋白质组衰老时钟，预测实际年龄并得出蛋白质组年龄加速指标。方法上利用最多三个时间点的LC-MS蛋白质组纵向数据（9105样本、4100人、25-88岁）进行分析。发现该年龄加速指标与生活方式和临床风险因素相关，心血管代谢暴露共享蛋白质组特征，而吸烟和体力活动具有独特特征，个体内血脂异常和肾功能受损与年龄加速增加相关。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 6,
+ "added_on": "2026-10-11"
+}
