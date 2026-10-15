@@ -1,0 +1,126 @@
+<!doctype html><html lang=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><title>日报归档 2026-10 · radar</title><style>
+:root{color-scheme:light dark;--bg:#f6f8fa;--card:#fff;--fg:#1f2328;--muted:#57606a;--muted2:#4b5563;--border:#d0d7de;
+--link:#0969da;--accent:#1f6feb;--green:#1a7f37;--purple:#8250df;--topbg:rgba(246,248,250,.94);--thbg:#f6f8fa;
+--hi-bg:#dafbe1;--hi-fg:#1a7f37;--mid-bg:#fff8c5;--mid-fg:#9a6700;--lo-bg:#eaeef2;--lo-fg:#57606a;--res-bg:#ddf4ff;--res-fg:#0969da;
+--pp-bg:#fff1e5;--pp-fg:#bc4c00;--new:#cf222e;--warn-bg:#fff8c5;--warn-fg:#9a6700;--shadow:0 1px 2px rgba(31,35,40,.04)}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--fg:#e6edf3;--muted:#9198a1;--muted2:#b1bac4;--border:#30363d;
+--link:#4493f8;--accent:#1f6feb;--green:#3fb950;--purple:#bc8cff;--topbg:rgba(13,17,23,.92);--thbg:#1c2128;
+--hi-bg:#12361f;--hi-fg:#56d364;--mid-bg:#3a2e0a;--mid-fg:#e3b341;--lo-bg:#262c36;--lo-fg:#9198a1;--res-bg:#0c2d4b;--res-fg:#79c0ff;
+--pp-bg:#3d1f0a;--pp-fg:#ffa657;--new:#ff7b72;--warn-bg:#3a2e0a;--warn-fg:#e3b341;--shadow:none}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,"PingFang SC","Noto Sans SC",sans-serif}
+main{max-width:720px;margin:0 auto;padding:0 12px 80px}
+a{color:var(--link);text-decoration:none}
+a:active{opacity:.7}
+[id]{scroll-margin-top:150px}
+.top{position:sticky;top:0;z-index:9;background:var(--topbg);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:12px 12px 10px;border-bottom:1px solid var(--border);margin:0 -12px 16px}
+.top h1{font-size:17px;margin:0 0 2px}
+.top .meta{color:var(--muted);font-size:12px;margin-bottom:10px}
+.tabs{display:flex;gap:8px}
+.tab{flex:1;text-align:center;padding:9px 0;border:1px solid var(--border);border-radius:20px;background:var(--card);color:var(--muted);font:600 14.5px/1.4 inherit;cursor:pointer;user-select:none;position:relative}
+.tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab .nb{position:absolute;top:-6px;right:4px;background:var(--new);color:#fff;border-radius:9px;font-size:10.5px;line-height:17px;min-width:17px;padding:0 4px}
+.panel{display:none}.panel.on{display:block}
+details.bg{background:var(--card);border:1px solid var(--border);border-radius:12px;margin:0 0 10px;padding:0 16px}
+details.bg>summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:600;font-size:15px}
+details.bg>summary::-webkit-details-marker{display:none}
+details.bg>summary .cnt{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:2px}
+.bgbody{font-size:14.5px;padding-bottom:14px;overflow-wrap:anywhere}
+.bgbody h2{font-size:15px;color:var(--green)}
+.bgbody h3{font-size:14.5px;color:var(--purple);margin-bottom:4px}
+.bgbody ol{padding-left:20px;font-size:13px;color:var(--muted2)}
+.bgbody li:target{background:var(--mid-bg)}
+a.cite{font-size:.85em;vertical-align:.1em}
+a.full{display:inline-block;font-size:13px;margin-top:6px}
+.lazy .empty{padding:10px 0}
+#q{width:100%;padding:9px 14px;border:1px solid var(--border);border-radius:20px;background:var(--card);color:var(--fg);font-size:14px;outline:none;margin-bottom:12px}
+#q:focus{border-color:var(--link)}
+.wk{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:4px 16px 14px;margin:0 0 10px;font-size:14.5px;box-shadow:var(--shadow);overflow-wrap:anywhere}
+.wk h2{font-size:15px;color:var(--green)}
+.wk h3{font-size:14.5px;color:var(--purple);margin-bottom:4px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0;max-width:100%}
+.tw table{border-collapse:collapse;font-size:12.5px;width:max-content;max-width:none}
+.tw th,.tw td{border:1px solid var(--border);padding:4px 6px;text-align:left;vertical-align:top;min-width:7em;max-width:22em;overflow-wrap:anywhere}
+.tw th{background:var(--thbg)}
+details.day{margin:0 0 10px}
+details.day>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;padding:11px 4px;border-bottom:1px solid var(--border);font-weight:600;font-size:15px}
+details.day>summary::-webkit-details-marker{display:none}
+details.day>summary .cnt{font-weight:400;color:var(--muted);font-size:12px;margin-left:auto}
+details.day>summary::after{content:"›";color:var(--muted);transition:transform .15s}
+details.day[open]>summary::after{transform:rotate(90deg)}
+details.day>.daybody{padding-top:8px}
+.newdot{display:none;font-size:11px;font-weight:700;color:#fff;background:var(--new);border-radius:8px;padding:0 6px;line-height:18px}
+.isnew .newdot{display:inline-block}
+.dom{color:var(--purple);font-size:13px;font-weight:600;margin:14px 2px 6px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:11px 13px;margin:0 0 10px;box-shadow:var(--shadow)}
+.card .t{font-size:15px;line-height:1.5}
+.card .t a{color:var(--fg);font-weight:600}
+.badge{display:inline-block;min-width:34px;text-align:center;font-size:12px;font-weight:700;border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+.badge.hi{background:var(--hi-bg);color:var(--hi-fg)}
+.badge.mid{background:var(--mid-bg);color:var(--mid-fg)}
+.badge.lo{background:var(--lo-bg);color:var(--lo-fg)}
+.badge.res{background:var(--res-bg);color:var(--res-fg)}
+.vt{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:0 5px;margin-right:4px}
+.vt.jr{background:var(--hi-bg);color:var(--hi-fg)}
+.vt.pp{background:var(--pp-bg);color:var(--pp-fg)}
+.reason{color:var(--muted2);font-size:13.5px;margin-top:5px}
+.meta{color:var(--muted);font-size:12px;margin-top:5px}
+.legend{color:var(--muted);font-size:11.5px;margin:-4px 2px 10px}
+.bgline{color:var(--purple);font-size:12.5px;margin-top:4px;border-left:3px solid var(--purple);padding-left:6px}
+details.deep{margin-top:8px;border-top:1px dashed var(--border);padding-top:6px}
+details.deep>summary{cursor:pointer;list-style:none;color:var(--link);font-size:13px;padding:4px 0}
+details.deep>summary::-webkit-details-marker{display:none}
+details.deep>summary::before{content:"▸ "}
+details.deep[open]>summary::before{content:"▾ "}
+details.deep .deepbody{font-size:13.5px;color:var(--muted2);padding-top:4px;overflow-wrap:anywhere}
+details.deep .deepbody h2,details.deep .deepbody h3{font-size:13.5px;color:var(--green);margin:10px 0 2px}
+details.deep .deepbody p{margin:4px 0}
+.empty{color:var(--muted);font-size:13px;padding:6px 2px}
+.hide{display:none!important}
+.health{font-size:12px;color:var(--warn-fg);background:var(--warn-bg);border-radius:6px;padding:2px 8px;margin:2px 0 6px}
+.sec{margin:18px 2px 8px}
+.sec-t{font-size:15px;font-weight:700}
+.sec-d{font-size:12.5px;color:var(--muted)}
+a.ov{display:block;background:var(--card);border:1px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:8px 12px;margin:0 0 8px;color:var(--fg);font-size:13px}
+.ov-h{display:flex;align-items:center;flex-wrap:wrap;gap:2px}
+.ov-n{font-weight:700;font-size:14px}
+.ov-deep{margin-left:auto;font-size:11px;color:var(--link);border:1px solid var(--border);border-radius:8px;padding:0 6px}
+.ov-s{color:var(--muted);font-size:12px;margin:2px 0}
+.ov-l{margin-top:2px;line-height:1.5}
+.ov-l b{color:var(--muted);font-weight:600;margin-right:4px}
+details.bg.sub{border-style:dashed;margin:0 0 10px;background:var(--bg)}
+.th{display:inline-block;font-size:11.5px;font-weight:600;border-radius:10px;padding:0 7px;margin:0 4px 2px 0;line-height:18px;white-space:nowrap;color:var(--c);background:var(--cb);border:1px solid var(--cl)}
+.card.tagged{border-left:4px solid var(--tc,var(--border))}
+.tags{margin-top:5px}
+.fbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.fchip{font:600 12.5px/1.4 inherit;border-radius:16px;padding:6px 12px;cursor:pointer;user-select:none;border:1px solid var(--cl,var(--border));background:var(--card);color:var(--c,var(--muted))}
+.fchip.on{box-shadow:inset 0 0 0 2px currentColor}
+.fchip .n{font-weight:400;opacity:.75;margin-left:3px}
+@media (prefers-color-scheme:dark){.th[data-t],.fchip[data-t]{--c:var(--cd);--cb:var(--cbd)}}
+.sum{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:8px 14px;margin:0 0 12px;font-size:14px}
+.sum h4{margin:4px 0 2px;font-size:13px;color:var(--muted)}
+.sum ul{margin:4px 0;padding-left:18px}
+.sum li{margin:3px 0}
+.pri{font-size:13px;font-weight:700;margin:16px 2px 6px}
+.pri.p0{color:var(--new)}.pri.p1{color:var(--mid-fg)}.pri.p2{color:var(--muted)}.pri.pn{color:var(--link)}
+.rcard{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 12px;margin:0 0 8px;font-size:13.5px;overflow-wrap:anywhere}
+.rcard .rn{font-weight:700;font-size:14.5px}
+.rcard .rk{font-size:11.5px;color:var(--muted);border:1px solid var(--border);border-radius:4px;padding:0 4px;margin-left:6px;font-weight:400}
+.rcard .why{color:var(--fg);margin-top:3px}
+.rcard .rm{color:var(--muted);font-size:12px;margin-top:3px}
+.rcard.new{border-style:dashed}
+.st{display:inline-block;font-size:11px;border-radius:4px;padding:0 5px;margin-left:4px;font-weight:600}
+.st.ok{background:var(--hi-bg);color:var(--hi-fg)}.st.warn{background:var(--mid-bg);color:var(--mid-fg)}.st.bad{background:var(--pp-bg);color:var(--pp-fg)}
+.arch{margin:16px 2px;font-size:13.5px}
+.arch a{display:inline-block;margin:4px 10px 4px 0}
+.back{display:inline-block;margin:10px 0}
+[data-t=aging]{--c:#1a7f37;--cb:#1a7f3714;--cl:#1a7f3755;--cd:#81b891;--cbd:#81b8911f}[data-t=cohort]{--c:#0969da;--cb:#0969da14;--cl:#0969da55;--cd:#77acea;--cbd:#77acea1f}[data-t=cardio]{--c:#cf222e;--cb:#cf222e14;--cl:#cf222e55;--cd:#e4858c;--cbd:#e4858c1f}[data-t=organoid]{--c:#9a6700;--cb:#9a670014;--cl:#9a670055;--cd:#c7ab72;--cbd:#c7ab721f}[data-t=singlecell]{--c:#8250df;--cb:#8250df14;--cl:#8250df55;--cd:#ba9eed;--cbd:#ba9eed1f}[data-t=vcell]{--c:#bf3989;--cb:#bf398914;--cl:#bf398955;--cd:#db92be;--cbd:#db92be1f}[data-t=ssl]{--c:#1b7c83;--cb:#1b7c8314;--cl:#1b7c8355;--cd:#81b6ba;--cbd:#81b6ba1f}[data-t=agent]{--c:#bc4c00;--cb:#bc4c0014;--cl:#bc4c0055;--cd:#da9c72;--cbd:#da9c721f}</style></head><body><main><a class="back" href="../index.html">← 返回 radar</a><h1 style="font-size:18px;margin:4px 0">日报归档 2026-10</h1><div class="meta">1 份日报</div><details class="day" data-date="2026-10-01" data-first="0"><summary>2026-10-01 · 周四<span class="newdot">新</span><span class="cnt">5 条</span></summary><div class="daybody"><div class="sum"><h4>今日要点</h4><ul><li data-themes="cardio cohort"><span class="th" data-t="cardio">心血管</span><span class="th" data-t="cohort">人群队列</span>MIMIC-IV-ECG 的 Parquet 镜像上架 HuggingFace，便于机器学习直接加载 ECG 数据。</li><li data-themes="cohort"><span class="th" data-t="cohort">人群队列</span>ReLMem 提出纵向 EHR 循环记忆建模，方法可迁移至队列健康建模。</li><li data-themes="singlecell"><span class="th" data-t="singlecell">单细胞</span>CellMSA 用跨批次上下文建模做单细胞表征学习，预印本于 arXiv，暂无公开代码。</li><li data-themes="ssl"><span class="th" data-t="ssl">世界模型</span>JEPA-Anything 跨域预测世界模型以 HuggingFace 资源公开，可作方法储备。</li><li data-themes="agent"><span class="th" data-t="agent">Agent</span>Agent Error Dataset 放出 5 万条错误诊断对，用于失败分析与错误感知后训练。</li><li data-themes=""><b>必读：</b>ReLMem：纵向 EHR 循环记忆建模，与人群队列健康建模方向最贴合。</li></ul></div><div class="dom">人群队列</div>
+<div class="card tagged" style="--tc:#0969da" data-score="6.0" data-themes="cohort"><div class="t"><a href="https://www.semanticscholar.org/paper/1d83069b7c67c913872d3ede14267512c94fbfa1" target="_blank" rel="noopener">ReLMem: Learning Recurrent Memory for Longitudinal EHR Modeling</a><span class="badge mid">6.0</span></div><div class="reason">纵向EHR循环记忆建模，契合队列健康建模方向，方法可迁移。</div><div class="meta">semantic_scholar · 2026-09-29 · Zi-Jie Meng, Xi-Wei Dai, Ying-Ying Zhang, Jian Wu, Xian Wu</div><div class="tags"><span class="th" data-t="cohort">人群队列</span></div></div>
+<div class="dom">心血管</div>
+<div class="card tagged" style="--tc:#cf222e" data-score="6.0" data-themes="cardio cohort"><div class="t"><a href="https://huggingface.co/datasets/VietDoan99/mimic4-ecg-private" target="_blank" rel="noopener">[dataset] VietDoan99/mimic4-ecg-private</a><span class="badge mid">6.0</span><span class="badge res">资源</span></div><div class="reason">MIMIC-IV-ECG的Parquet镜像，便于ML加载，心血管ECG可用资源。</div><div class="meta">huggingface · 2026-09-15 · VietDoan99</div><div class="tags"><span class="th" data-t="cardio">心血管</span><span class="th" data-t="cohort">人群队列</span></div><div class="bgline">心血管队列多组学与临床 AI › 3 数据与资源 · 新增MIMIC-IV-ECG的Parquet镜像，便于ML流水线加载，属数据工程资源而非新证据。</div></div>
+<div class="dom">单细胞</div>
+<div class="card tagged" style="--tc:#8250df" data-score="6.0" data-themes="singlecell"><div class="t"><a href="https://arxiv.org/abs/2609.38908" target="_blank" rel="noopener">CellMSA: Context Modeling for Single-Cell Representation Learning</a><span class="badge mid">6.0</span></div><div class="reason">单细胞表征学习的跨批次上下文建模，契合单细胞基础模型方向，无公开代码。</div><div class="meta"><span class="vt pp">预印本</span>arXiv · 2026-09 · Suyuan Zhao, Minghao Liu, Yizhen Luo, Zaiqing Nie</div><div class="tags"><span class="th" data-t="singlecell">单细胞</span></div><div class="bgline">单细胞与空间组学基础模型与虚拟细胞 › 2.1 单细胞基础模型 · 提出跨批次上下文建模，弥补现有基础模型仅独立编码或同批次去噪的不足</div></div>
+<div class="dom">世界模型</div>
+<div class="card tagged" style="--tc:#1b7c83" data-score="6.0" data-themes="ssl"><div class="t"><a href="https://huggingface.co/datasets/Gen-Verse/jepa-anything" target="_blank" rel="noopener">[dataset] Gen-Verse/jepa-anything</a><span class="badge mid">6.0</span><span class="badge res">资源</span></div><div class="reason">JEPA-Anything 跨域预测世界模型，公开 HuggingFace 资源，方法储备可用。</div><div class="meta">huggingface · 2026-09-17 · Gen-Verse</div><div class="tags"><span class="th" data-t="ssl">世界模型</span></div><div class="bgline">世界模型与自监督表征学习 › 2.1 预测隐空间与世界模型 · 新增跨域统一JEPA预测框架及公开数据集资源，扩展V-JEPA 2单域设定</div></div>
+<div class="dom">Agent</div>
+<div class="card tagged" style="--tc:#bc4c00" data-score="6.0" data-themes="agent"><div class="t"><a href="https://arxiv.org/abs/2609.40111" target="_blank" rel="noopener">Agent Error Dataset: Scaling 50,000 Error--Diagnosis Pairs for Failure Analysis and Error-Aware Post-Training</a><span class="badge mid">6.0</span><span class="badge res">资源</span></div><div class="reason">5万条智能体错误诊断对数据集，可用于agent后训练，规模可观。</div><div class="meta"><span class="vt pp">预印本</span>arXiv · 2026-09 · Kunlun Zhu, Xuyan Ye, Yibo Li, Cheng Qian, Beibin Li</div><div class="tags"><span class="th" data-t="agent">Agent</span></div><div class="bgline">LLM 科研智能体与可验证奖励强化学习 › 2.4 智能体信用分配、验证与安全机制 · 新增5万条错误诊断对数据集，覆盖33环境，为智能体失败分析与错误感知后训练提供大规模数据。</div></div></div></details></main></body></html>
