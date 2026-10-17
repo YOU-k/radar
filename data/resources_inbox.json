@@ -211,5 +211,15 @@
    "Benchmarking single-cell foundation models for aging biology",
    "2026 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines."
   ]
+ },
+ {
+  "name": "An open vision-language model for diverse medical applications.",
+  "kind": "model",
+  "url": "https://doi.org/10.1038/s41591-026-04626-w",
+  "note": "Nature Medicine发布MedGemma医学视觉语言基础模型，开放权重，可微调用于医学多模态。",
+  "score": 7.0,
+  "day": "2026-10-17",
+  "source": "daily",
+  "theme": "cohort"
  }
 ]
