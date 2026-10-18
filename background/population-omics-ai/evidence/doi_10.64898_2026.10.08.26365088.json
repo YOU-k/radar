@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.08.26365088",
+  "title": "Decomposing polygenic risk of coronary artery disease into distinct biological processes",
+  "url": "https://doi.org/10.64898/2026.10.08.26365088",
+  "abstract": "研究对526个全基因组显著冠心病相关变异，利用其与78个CAD相关表型的关联进行数据驱动潜在因子分解，识别出8个遗传组分，包括富含胆固醇脂蛋白、富甘油三酯脂蛋白、脂蛋白(a)、代谢不健康正常体重、肥胖、内皮功能障碍、凝血和心脏重构。基于这些组分构建的特定过程多基因风险评分（pPRSs）能捕捉传统风险因素之外的生物学特征，并在UK Biobank（n=458,905）等队列中验证。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank大队列多基因风险分解，方法有创新且可复现",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank大队列多基因风险分解，方法学新且可复现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "数据驱动潜在因子分解",
+  "data": "526个CAD显著变异×78个CAD相关表型；UK Biobank n=458,905验证",
+  "scenario": "冠心病多基因风险分层",
+  "benchmark": "传统风险因素及常规多基因风险评分",
+  "results": "识别8个遗传组分；构建过程特异性pPRS，可捕捉传统风险因素之外的生物学特征",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究将冠心病的多基因风险分解为不同生物学过程。作者对526个全基因组显著CAD变异与78个CAD相关表型的关联进行数据驱动潜在因子分解，识别出8个遗传组分，并据此构建过程特异性多基因风险评分。这些评分能捕捉传统风险因素之外的生物学特征，并在UK Biobank大样本中验证。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 11,
+ "added_on": "2026-10-18"
+}

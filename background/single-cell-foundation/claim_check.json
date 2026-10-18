@@ -1,9 +1,9 @@
 {
- "date": "2026-10-11",
+ "date": "2026-10-18",
  "dropped": [
   {
    "part": "5",
-   "sentence": "scEval 框架在 8 项任务上比较 10 个模型，认为 scGPT、Geneformer、CellPLM 综合最佳，但基础模型并非在所有任务上优于任务专用方法 [doi:10.1101/2023.09.08.555192]。"
+   "sentence": "另一项三模型三数据集的评测则称 **scFoundation** 持续最佳、**Geneformer** 甚至不如基线 [doi:10.1145/3701551.3708811]；而 scEval 框架在 8 项任务、10 个模型上认为 scGPT、Geneformer、CellPLM 综合最佳，但并非所有任务都优于专用方法 [doi:10.1101/2023.09.08.555192]。"
   }
  ]
 }

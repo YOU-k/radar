@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "arxiv:2610.17066",
+  "title": "PerturbBridge: Direct Phenotypic Supervision for Cellular Perturbation Generation",
+  "url": "https://arxiv.org/abs/2610.17066",
+  "abstract": "针对虚拟细胞模型仅匹配真实图像分布、未显式优化扰动特异性生物响应的问题，提出PerturbBridge，一种随机数据到数据桥模型，在训练中对预测的扰动图像直接施加扰动特异性表型监督，联合优化桥回归与可微生物响应损失，生物梯度通过特征提取器回传。该方法明确了生物响应信息应进入生成流程的位置，即训练阶段的直接表型监督。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "扰动生成模型引入表型监督，契合虚拟细胞方向，需核验代码",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "虚拟细胞扰动生成新方法，直接表型监督有代码潜力",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "随机数据到数据桥模型+扰动特异性表型监督",
+  "data": "BBBC021 63,781训练/5,120测试图像；JUMP；AllenCell显微图像",
+  "scenario": "细胞扰动图像生成",
+  "benchmark": "CellFlux、IMPA、Bridge-only、真实扰动数据",
+  "results": "BBBC021 MoA准确率77.8%（CellProfiler）/74.9%（DINOv2），较CellFlux提升5.7/7.5个百分点；JUMP Hit@10 12.15%，中位秩74；AllenCell Hit@1 69.29%",
+  "availability": "",
+  "limitations": "",
+  "summary": "针对虚拟细胞模型仅匹配真实图像分布、未显式优化扰动特异性生物响应的问题，提出PerturbBridge随机数据到数据桥模型。该方法在训练中对预测的扰动图像直接施加扰动特异性表型监督，联合优化桥回归与可微生物响应损失，生物梯度通过特征提取器回传。在BBBC021、JUMP、AllenCell三个显微基准上，生成的图像更好地保留了MoA相关表型和扰动特异性特征，MoA分类与扰动检索指标均优于CellFlux等基线。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 7,
+ "added_on": "2026-10-18"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1126/science.aeb2986",
+  "title": "Epigenetic aging and transposon dysregulation reflect size-related lifespan compression in dogs.",
+  "url": "https://doi.org/10.1126/science.aeb2986",
+  "abstract": "利用894只犬的1640份甲基化组构建表观遗传时钟，发现其可预测死亡率且生命早期表观遗传衰老最快。在人类衰老相关基因同源位点上，犬启动子甲基化呈现一致的年龄效应，提示免疫通路重塑保守。体型大和雄性犬寿命更短且分子衰老加速，其中体型相关甲基化变化集中于转座子元件，性别相关变化集中于X染色体。",
+  "authors": "",
+  "venue": "Science (New York, N.Y.)",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "894犬1640份甲基化组表观时钟，跨物种保守，数据规模足",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Science犬类表观时钟，894只跨物种保守，代表转折点",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "犬甲基化组表观遗传时钟",
+  "data": "894只犬的1640份甲基化组",
+  "scenario": "犬衰老与寿命预测",
+  "benchmark": "死亡率预测、人类衰老基因同源位点",
+  "results": "时钟可预测死亡率，生命早期表观遗传衰老最快；大体型和雄性犬寿命更短且分子衰老加速，体型相关变化集中于转座子元件，性别相关变化集中于X染色体",
+  "availability": "",
+  "limitations": "",
+  "summary": "构建犬表观遗传时钟并研究体型与性别对衰老的影响。利用894只犬的1640份甲基化组数据构建时钟，并在人类衰老相关基因同源位点比较年龄效应。发现时钟可预测死亡率、生命早期衰老最快，大体型和雄性犬分子衰老加速，体型相关变化集中于转座子元件。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 7,
+ "added_on": "2026-10-18"
+}

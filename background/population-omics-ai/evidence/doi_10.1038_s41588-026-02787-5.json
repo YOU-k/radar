@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-026-02787-5",
+  "title": "Imputation of fluid intelligence scores reduces ascertainment bias and increases power for analyses of common and rare variants.",
+  "url": "https://doi.org/10.1038/s41588-026-02787-5",
+  "abstract": "整合UK Biobank多种流体智力测量并填充未测个体，样本量从约27万增至超45.5万。验证显示填充表型遗传上类似实测流体智力，联合分析使独立显著常见SNP关联从390增至550，并减少受教育程度带来的 ascertainment bias，罕见变异分析鉴定26个显著基因。",
+  "authors": "",
+  "venue": "Nature genetics",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank大队列遗传填充方法，提升关联分析效力",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank表型填充提升GWAS效力，方法学与队列价值高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "流体智力表型填充与关联分析",
+  "data": "UK Biobank多种流体智力测量；样本由约27万增至超45.5万",
+  "scenario": "智力遗传关联分析",
+  "benchmark": "实测流体智力及未填充表型分析",
+  "results": "独立显著常见SNP关联由390增至550；罕见变异分析鉴定26个显著基因",
+  "availability": "",
+  "limitations": "填充表型依赖实测样本代表性，可能存在残余偏差",
+  "summary": "研究旨在通过填充流体智力评分减少 ascertainment bias 并提升遗传关联分析效力。作者整合UK Biobank多种流体智力测量并填充未测个体，使样本量从约27万增至超45.5万，并验证填充表型在遗传上类似实测流体智力。联合分析使独立显著常见SNP关联从390增至550，罕见变异分析鉴定出26个显著基因。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 11,
+ "added_on": "2026-10-18"
+}

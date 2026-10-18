@@ -221,5 +221,17 @@
   "day": "2026-10-17",
   "source": "daily",
   "theme": "cohort"
+ },
+ {
+  "name": "All of Us Research Program",
+  "kind": "dataset",
+  "url": "",
+  "note": "多祖源人群表型与蛋白组分析 · 被 2 篇高分工作使用：Phenome-wide and proteomic analysis of A / Immunoregulatory gene GIMAP6 suppresses ",
+  "day": "2026-10-18",
+  "source": "daily-infra",
+  "used_by_titles": [
+   "Phenome-wide and proteomic analysis of APOE alleles across different ancestries in the All of Us Research Program",
+   "Immunoregulatory gene GIMAP6 suppresses lethal atherosclerotic vasculopathy and ischemic heart failure."
+  ]
  }
 ]
