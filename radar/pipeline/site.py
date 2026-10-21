@@ -96,6 +96,11 @@ details.day>.daybody{padding-top:10px}
 .badge.mid{background:var(--mid-bg);color:var(--mid-fg)}
 .badge.lo{background:var(--lo-bg);color:var(--lo-fg)}
 .badge.res{background:var(--res-bg);color:var(--res-fg)}
+.rt{display:inline-block;font-size:11px;font-weight:700;border-radius:6px;padding:0 6px;margin-right:4px;line-height:18px}
+.rt.ra{background:var(--hi-bg);color:var(--hi-fg)}
+.rt.rb{background:var(--mid-bg);color:var(--mid-fg)}
+.rt.rc{background:var(--lo-bg);color:var(--lo-fg)}
+.rt.ri{background:var(--res-bg);color:var(--res-fg)}
 .vt{display:inline-block;font-size:11px;font-weight:700;border-radius:6px;padding:1px 6px;margin-right:4px}
 .vt.jr{background:var(--hi-bg);color:var(--hi-fg)}
 .vt.pp{background:var(--pp-bg);color:var(--pp-fg)}
@@ -431,6 +436,14 @@ def _chips_html(keys_: list[str]) -> str:
     return "".join(_chip(k) for k in keys_)
 
 
+def _rating_html(text: str) -> str:
+    """"创新 A · 证据 B · 可用 C · 一线机构" → 彩色字母徽章（A 绿 / B 黄 / C 灰）。"""
+    out = re.sub(r"(创新|证据|可用)\s*([ABC])",
+                 lambda m: f'<span class="rt r{m.group(2)}">{m.group(1)} {m.group(2)}</span>',
+                 html.escape(text))
+    return out.replace("一线机构", '<span class="rt ri">一线机构</span>')
+
+
 def _filter_bar(bar_id: str, counts: dict[str, int]) -> str:
     """主题筛选条：只列有条目的主题，点一下只看该主题，再点取消。"""
     out = [f'<div class="fbar" id="{bar_id}">']
@@ -495,7 +508,7 @@ def _parse_digest(text: str) -> list[tuple[str, list[dict]]]:
             it = {"title": m.group("title"), "url": m.group("url"),
                   "score": float(m.group("score")),
                   "reason": m.group("reason") or "", "meta": "", "deep": "",
-                  "tag": m.group("tag") or "", "bg": "", "themes": []}
+                  "tag": m.group("tag") or "", "bg": "", "themes": [], "rating": ""}
             cur.append(it)
             i += 1
             while i < len(lines) and SUB_RE.match(lines[i]):
@@ -504,6 +517,8 @@ def _parse_digest(text: str) -> list[tuple[str, list[dict]]]:
                     it["bg"] = body[3:]
                 elif body.startswith("主题："):
                     it["themes"] = themes.parse_line(body[3:])
+                elif body.startswith("评级："):
+                    it["rating"] = body[3:]
                 elif not it["meta"]:
                     it["meta"] = body
                 i += 1
@@ -561,6 +576,8 @@ def _render_digest(path: Path, first: bool) -> str:
                 parts.append(f'<div class="meta">{_meta_html(it["meta"])}</div>')
             if tks:
                 parts.append(f'<div class="tags">{_chips_html(tks)}</div>')
+            if it.get("rating"):
+                parts.append(f'<div class="tags">{_rating_html(it["rating"])}</div>')
             if it.get("bg"):
                 parts.append(f'<div class="bgline">{html.escape(it["bg"])}</div>')
             if it["deep"]:
@@ -653,8 +670,10 @@ def _res_card(r: dict, new: bool = False) -> str:
     color = themes.by_key().get(tks[0], {}).get("color", "") if tks else ""
     style = f' style="border-left:4px solid {color}"' if color else ""
     kind = r.get("kind", "dataset")
+    pri = r.get("priority", "")
+    pchip = f'<span class="rk">{html.escape(pri)}</span>' if pri in ("P0", "P1") else ""
     return (f'<div class="rcard{" new" if new else ""}"{style} data-themes="{" ".join(tks)}" data-kind="{html.escape(kind)}">'
-            f'<div class="rn">{name}<span class="rk">{KIND_ZH.get(kind, html.escape(kind))}</span>{status}</div>'
+            f'<div class="rn">{name}<span class="rk">{KIND_ZH.get(kind, html.escape(kind))}</span>{pchip}{status}</div>'
             f'<div class="tags">{_chips_html(tks)}</div>'
             f'<div class="why">{html.escape(why)}</div><div class="rm">{html.escape(meta)}</div></div>')
 
@@ -686,15 +705,19 @@ def _render_resources(reg_path: Path, inbox_path: Path | None = None) -> str:
         f'<button type="button" class="fchip" aria-pressed="false" data-v="{k}">{KIND_ZH[k]}<span class="n">'
         f'{sum(r.get("kind") == k for r in rows + new)}</span></button>' for k in kinds) + "</div>")
     out = [f'<div class="meta" style="margin:0 2px 8px">主表 {len(rows)} 项 · 日报新发现 {len(new)} 项（未核验）· '
-           f'按你的应用线排优先级；规模、开放性以人工种子为准，其余标注来源。点主题/类型筛选，再点取消</div>',
+           f'按类别分组，组内按优先级（P0 &gt; P1 &gt; P2）与引用数排序；规模、开放性以人工种子为准，其余标注来源。'
+           f'点主题/类型筛选，再点取消</div>',
            _filter_bar("fbar-res", counts), kind_bar]
-    for pr in ("P0", "P1", "P2"):
-        sub = [r for r in rows if (r.get("priority") if r.get("priority") in PRI_ZH else "P2") == pr]
-        if not sub:
-            continue
-        sub.sort(key=lambda r: (not r.get("pinned"), -len(r.get("themes", [])), -len(r.get("used_by", [])),
-                                r["name"].lower()))
-        out.append(f'<div class="rgroup"><div class="pri {pr.lower()}">{PRI_ZH[pr]}（{len(sub)}）</div>'
+    pri_order = {"P0": 0, "P1": 1, "P2": 2}
+    kinds_present = [k for k in KIND_ZH if any(r.get("kind") == k for r in rows)]
+    if any(r.get("kind") not in KIND_ZH for r in rows):
+        kinds_present.append("")
+    for kind in kinds_present:
+        sub = [r for r in rows if (r.get("kind") if kind else r.get("kind", "")) == kind] if kind else \
+              [r for r in rows if r.get("kind") not in KIND_ZH]
+        sub.sort(key=lambda r: (pri_order.get(r.get("priority") or "", 2),
+                                not r.get("pinned"), -len(r.get("used_by", [])), r["name"].lower()))
+        out.append(f'<div class="rgroup"><div class="pri">{KIND_ZH.get(kind, "其他")}（{len(sub)}）</div>'
                    + "".join(_res_card(r) for r in sub) + "</div>")
     if new:
         out.append(f'<div class="rgroup"><div class="pri pn">新发现 · 未核验（{len(new)}）'
@@ -924,7 +947,7 @@ def build_site(today: date | None = None) -> Path:
         "</div>",
         '<div id="panel-day" class="panel on">',
         _filter_bar("fbar-day", _day_theme_counts(recent_d)),
-        '<div class="legend">分数 = 与你方向的相关度（0–10，≥7.5 绿）· 期刊/预印本 · 左色条 = 主题 · 红色"新" = 上次访问后新增</div>',
+        '<div class="legend">分数 = 与你方向的相关度（0–10，≥7.5 绿）· 评级 = 创新/证据/可用 A&gt;B&gt;C（条目本身硬度，与相关度正交）· 左色条 = 主题 · 红色"新" = 上次访问后新增</div>',
         f"{day_html}</div>",
         f'<div id="panel-week" class="panel">{week_html}</div>',
         f'<div id="panel-bg" class="panel">{bg_html}</div>',

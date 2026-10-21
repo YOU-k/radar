@@ -1,8 +1,16 @@
 from __future__ import annotations
 
 import os
+import re
 from datetime import date
 from pathlib import Path
+
+TOP_INST = re.compile(
+    r"(?i)harvard|stanford|\bMIT\b|oxford|cambridge|yale|princeton|caltech|columbia|rockefeller|"
+    r"johns hopkins|\bUCSF\b|berkeley|\bUCLA\b|university of pennsylvania|mayo clinic|karolinska|"
+    r"\bETH\b|\bEPFL\b|max planck|helmholtz|broad institute|sanger|francis crick|allen institute|"
+    r"massachusetts general|scripps|tsinghua|peking|清华|北京大学|复旦|fudan|浙江大学|zhejiang|"
+    r"中国科学院|chinese academy of sciences")
 
 from .. import themes
 from ..config import ROOT
@@ -28,6 +36,12 @@ def item_block(it: Item, tags: list[str]) -> list[str]:
         lines.append(f"  <sub>{src} · {it.published} · {it.authors[:80]}</sub>")
     if tags:
         lines.append(f"  <sub>主题：{themes.line(tags)}</sub>")
+    rating = it.extra.get("rating") or {}
+    rated = " · ".join(f"{zh} {rating[k]}" for k, zh in (("nov", "创新"), ("evi", "证据"), ("use", "可用"))
+                      if rating.get(k) in ("A", "B", "C"))
+    if rated:
+        top = " · 一线机构" if TOP_INST.search(str(it.extra.get("pi_inst") or "")) else ""
+        lines.append(f"  <sub>评级：{rated}{top}</sub>")
     if it.extra.get("bg"):
         lines.append(f"  <sub>定位：{it.extra['bg']}</sub>")
     if it.deepread:

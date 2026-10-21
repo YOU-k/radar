@@ -133,11 +133,15 @@ def llm_rerank(items: list[Item]) -> bool:
             "类型 type 五选一：paper（论文/新闻）/ dataset（数据集/数据库）/ model（模型）/ tool（软件工具）/ other。\n"
             "dataset/model 的认定从严：必须有真实存在、公开可获取的产物（公开下载链接、GEO/Zenodo 编号、"
             "HuggingFace 页面、官方开源权重）；只发了论文、数据/权重未公开或「可应要求提供」的一律标 paper。\n"
+            "再按三个维度各给一个 A/B/C 专家评级（与相关度分数正交，只评条目本身的硬度，从严）："
+            "nov 创新性（A 新范式/首创方法/新基准/新资源类型；B 有意义的改进或新组合；C 例行应用、跟风或纯增量）、"
+            "evi 证据强度（A 大队列/多中心/外部验证/系统性基准；B 中等规模或单队列有部分验证；C 小样本、无验证、纯关联或纯观点）、"
+            "use 可用性（A 数据与代码或权重公开可获取；B 部分开放或需申请；C 未开放或仅应要求提供）。\n"
             f"主题 tags：{THEME_RULE}"
             f"主题：{themes.prompt_list()}\n\n"
             f"【兴趣画像】\n{profile}\n\n【条目】\n"
             + json.dumps(payload, ensure_ascii=False)
-            + '\n\n只输出 JSON 数组，形如 [{"id":0,"score":8,"type":"dataset","tags":["cardio","cohort"],"reason":"..."}]，不要输出其他内容。'
+            + '\n\n只输出 JSON 数组，形如 [{"id":0,"score":8,"type":"dataset","tags":["cohort"],"nov":"A","evi":"B","use":"A","reason":"..."}]，不要输出其他内容。'
         )
         try:
             content = llm.chat(prompt, model=llm.SCORE_MODEL, temperature=0.2, timeout=180)
@@ -152,6 +156,10 @@ def llm_rerank(items: list[Item]) -> bool:
                     kind = str(s.get("type", "")).strip().lower()
                     if kind in ("paper", "dataset", "model", "tool", "other"):
                         chunk[j].extra["kind"] = kind
+                    rating = {k: str(s.get(k, "")).strip().upper()[:1] for k in ("nov", "evi", "use")}
+                    rating = {k: v for k, v in rating.items() if v in ("A", "B", "C")}
+                    if rating:
+                        chunk[j].extra["rating"] = rating
                     tags = themes.clean(s.get("tags") or [])
                     if tags:
                         chunk[j].extra["themes"] = tags
