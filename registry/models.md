@@ -10,6 +10,9 @@
 - UCE (Universal Cell Embedding) — 跨物种细胞 embedding — ⭐⭐
 - scVI / scANVI — 经典 VAE 整合/注释基线 — ⭐，scvi-tools 一条命令
 - scArches — 参考映射 + 增量整合 — ⭐⭐，跨队列校正常用
+- NexuST — 空间转录组分层基础模型（基因级+细胞级交错预训练），配套 HumanST-46M — ⭐⭐（2026-09）
+- LucaCell — 序列中心跨物种单细胞基础模型，8500 万细胞预训练 — ⭐⭐（2026-09）
+- Speciesformer — 跨物种生成式虚拟细胞模型，1.31 亿细胞 SpeciesCorpus — ⭐⭐（2026-09）
 
 ## 单细胞工具 / 批次整合
 
@@ -51,6 +54,9 @@
 
 - Squidpy — 空间组学分析与图建模 — ⭐，空转 pipeline 核心
 - Tangram — 单细胞→空间映射 — ⭐⭐，空转注释常用
+- spaGFM — 空间转录组图基础模型，4390 万细胞预训练 — ⭐⭐（2026-09）
+- ResolVI — 空转分子错误分配的概率校正（Nature Methods）— ⭐⭐，可直接用（2026-09）
+- DePass — 图学习配对单细胞与空间多组学整合（Nature Cell Biology）— ⭐⭐（2026-10）
 
 ## 多模态整合
 
@@ -58,10 +64,18 @@
 - MultiVI (scvi-tools) — RNA+ATAC VAE 整合 — ⭐⭐
 - totalVI — RNA+蛋白 (CITE-seq) — ⭐⭐
 - OT/最优传输类（如 scOT 方法）— 跨模态映射新趋势 — ⭐⭐
+- AtlasOT (FUGW) — 最优传输多模态疾病图谱整合，处理非配对/不平衡 — ⭐⭐（2026-10）
+
+## 虚拟细胞 / 扰动响应
+
+- P2P — 跨视图群体去噪的非配对单细胞扰动响应预测 — ⭐⭐，虚拟细胞核心任务（2026-10）
+- PRAXIS-VirtualCell — 可编程可信虚拟细胞 agent 框架 — ⭐⭐，若开源可直接用（2026-10）
 
 ## 通用 ML / 自监督
 
 - I-JEPA — 自监督表征新范式参考实现 — ⭐⭐，可迁移到组学表征学习
+- ProteinJEPA — JEPA 潜空间预测用于蛋白语言模型预训练，19 任务验证 — ⭐⭐（2026-09）
+- jepa-anything (Gen-Verse) — 跨七领域统一 JEPA 预测世界模型 — ⭐⭐（2026-10）
 
 ## 持续学习 / 增量（新数据进来矫正模型用）
 

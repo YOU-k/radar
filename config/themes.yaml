@@ -7,8 +7,9 @@ themes:
      hint: 衰老时钟、生物年龄、衰老多组学与图谱、衰老基准}
   - {key: cohort,    label: 人群队列, color: "#0969da", topic: population-omics-ai,       domains: [population_omics_ai],
      hint: 生物样本库/EHR 的疾病轨迹与风险预测、人群多组学与遗传整合、医学基础模型}
-  - {key: cardio,    label: 心血管,   color: "#cf222e", topic: cardio-omics,              domains: [cardio_omics],
-     hint: 心血管病队列、风险评分、心血管多组学/PRS/MR、ECG 与心脏影像 AI、中国人群心血管队列}
+  # 2026-10-21 起暂停：心血管组整体下线（domain + theme + background topic），恢复时取消注释。
+  # - {key: cardio,    label: 心血管,   color: "#cf222e", topic: cardio-omics,              domains: [cardio_omics],
+  #    hint: 心血管病队列、风险评分、心血管多组学/PRS/MR、ECG 与心脏影像 AI、中国人群心血管队列}
   - {key: organoid,  label: 类器官,   color: "#9a6700", topic: organoid-virtual-response, domains: [organoid_models],
      hint: 类器官/器官芯片/模式生物上的扰动与响应建模、跨物种迁移}
   - {key: singlecell, label: 单细胞,  color: "#8250df", topic: single-cell-foundation,    domains: [data_models],

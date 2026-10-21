@@ -123,32 +123,33 @@ domains:
       - biobank
     hf_cadence: monthly
 
-  - name: cardio_omics
-    label_zh: 心血管队列与临床多组学
-    # 2026-09 新增：为 ChinaHEART 心血管队列做准备。大队列心血管风险预测、心血管多组学（蛋白/代谢/脂质/PRS）、
-    # MR 找靶点、ECG/影像 AI 与组学/EHR 联合、中国人群队列。周量（CREATION_DATE）：关键词 ~110、整刊 ~30。
-    keywords_zh: [心血管, 冠心病, 心力衰竭, 心房颤动, 卒中, 高血压, 动脉粥样硬化, 心血管风险预测, 心电图, 孟德尔随机化, 中国人群队列, 心脏代谢]
-    keywords_en: [cardiovascular, coronary artery disease, heart failure, atrial fibrillation, stroke, hypertension, atherosclerosis, cardiometabolic, cardiovascular risk prediction, ECG, electrocardiogram, Mendelian randomization, China Kadoorie Biobank, ChinaHEART, SCORE2, China-PAR, plasma proteomics, lipoprotein, polygenic risk, UK Biobank]
-    arxiv:
-      categories: [cs.LG, q-bio.QM, eess.SP, stat.AP]
-      queries:
-        - "cardiovascular risk prediction deep learning"
-        - "electrocardiogram foundation model"
-        - "heart failure machine learning cohort"
-        - "atrial fibrillation deep learning"
-    europepmc_query: '(cardiovascular OR "coronary artery disease" OR "heart failure" OR "atrial fibrillation" OR stroke OR hypertension OR atherosclerosis OR cardiometabolic) AND ("deep learning" OR "machine learning" OR "foundation model" OR "risk prediction" OR proteomic OR proteomics OR metabolomic OR polygenic OR "Mendelian randomization" OR "multi-omics") AND (cohort OR biobank OR "population-based" OR "electronic health records")'
-    journals:
-      - Nature Cardiovascular Research
-      - European Heart Journal
-      - Circulation
-    rss: []
-    github_queries:
-      - ecg-deep-learning
-      - cardiovascular-risk
-    github_cadence: weekly
-    hf_queries:
-      - ecg
-    hf_cadence: monthly
+  # 2026-10-21 起暂停：心血管组整体下线（连同 themes.yaml 的 cardio 标签、background/_cardio-omics），恢复时取消注释。
+  # - name: cardio_omics
+  #   label_zh: 心血管队列与临床多组学
+  #   # 2026-09 新增：为 ChinaHEART 心血管队列做准备。大队列心血管风险预测、心血管多组学（蛋白/代谢/脂质/PRS）、
+  #   # MR 找靶点、ECG/影像 AI 与组学/EHR 联合、中国人群队列。周量（CREATION_DATE）：关键词 ~110、整刊 ~30。
+  #   keywords_zh: [心血管, 冠心病, 心力衰竭, 心房颤动, 卒中, 高血压, 动脉粥样硬化, 心血管风险预测, 心电图, 孟德尔随机化, 中国人群队列, 心脏代谢]
+  #   keywords_en: [cardiovascular, coronary artery disease, heart failure, atrial fibrillation, stroke, hypertension, atherosclerosis, cardiometabolic, cardiovascular risk prediction, ECG, electrocardiogram, Mendelian randomization, China Kadoorie Biobank, ChinaHEART, SCORE2, China-PAR, plasma proteomics, lipoprotein, polygenic risk, UK Biobank]
+  #   arxiv:
+  #     categories: [cs.LG, q-bio.QM, eess.SP, stat.AP]
+  #     queries:
+  #       - "cardiovascular risk prediction deep learning"
+  #       - "electrocardiogram foundation model"
+  #       - "heart failure machine learning cohort"
+  #       - "atrial fibrillation deep learning"
+  #   europepmc_query: '(cardiovascular OR "coronary artery disease" OR "heart failure" OR "atrial fibrillation" OR stroke OR hypertension OR atherosclerosis OR cardiometabolic) AND ("deep learning" OR "machine learning" OR "foundation model" OR "risk prediction" OR proteomic OR proteomics OR metabolomic OR polygenic OR "Mendelian randomization" OR "multi-omics") AND (cohort OR biobank OR "population-based" OR "electronic health records")'
+  #   journals:
+  #     - Nature Cardiovascular Research
+  #     - European Heart Journal
+  #     - Circulation
+  #   rss: []
+  #   github_queries:
+  #     - ecg-deep-learning
+  #     - cardiovascular-risk
+  #   github_cadence: weekly
+  #   hf_queries:
+  #     - ecg
+  #   hf_cadence: monthly
 
   - name: organoid_models
     label_zh: 类器官与模式生物扰动响应

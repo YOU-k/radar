@@ -125,12 +125,12 @@ def test_joint_prompt_asks_every_application_line(spec, monkeypatch):
 
 def test_prioritize_and_themes(monkeypatch):
     from radar import themes
-    reg = {"uk biobank": {"name": "UK Biobank", "kind": "database", "used_by": ["a", "b"], "topics": ["心血管方向", "人群方向"],
+    reg = {"uk biobank": {"name": "UK Biobank", "kind": "database", "used_by": ["a", "b"], "topics": ["衰老方向", "人群方向"],
                           "open": "restricted", "note": "n"},
            "scgpt": {"name": "scGPT", "kind": "model", "used_by": ["c", "d"], "topics": ["单细胞方向"], "open": "yes",
                      "note": "n", "priority": "P1", "why": "旧理由"}}
-    R.attach_themes(reg, {"心血管方向": "cardio-omics", "人群方向": "population-omics-ai", "单细胞方向": "single-cell-foundation"})
-    assert reg["uk biobank"]["themes"] == ["cardio", "cohort"] and reg["scgpt"]["themes"] == ["singlecell"]
+    R.attach_themes(reg, {"衰老方向": "aging-multimodal", "人群方向": "population-omics-ai", "单细胞方向": "single-cell-foundation"})
+    assert reg["uk biobank"]["themes"] == ["aging", "cohort"] and reg["scgpt"]["themes"] == ["singlecell"]
     seen = []
 
     class L:
@@ -140,7 +140,7 @@ def test_prioritize_and_themes(monkeypatch):
     assert R.prioritize(reg, L()) == 1 and len(seen) == 1 and "scGPT" not in seen[0]  # 已有优先级不重打
     assert reg["uk biobank"]["priority"] == "P0" and reg["scgpt"]["why"] == "旧理由"
     md = R.render(reg)
-    assert md.index("## P0 优先上手（1）") < md.index("## P1 值得登记（1）") and "#心血管 #人群队列" in md
+    assert md.index("## P0 优先上手（1）") < md.index("## P1 值得登记（1）") and "#衰老 #人群队列" in md
 
 
 def test_principles_report(spec, monkeypatch):

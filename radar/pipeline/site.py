@@ -63,7 +63,7 @@ details.bg>summary .cnt{display:block;font-weight:400;color:var(--muted);font-si
 a.cite{font-size:.85em;vertical-align:.1em}
 a.full{display:inline-block;font-size:13px;margin-top:6px}
 .lazy .empty{padding:10px 0}
-#q{width:100%;padding:9px 14px;border:1px solid var(--border);border-radius:20px;background:var(--card);color:var(--fg);font-size:14px;outline:none;margin-bottom:12px}
+#q{width:100%;padding:9px 14px;border:1px solid var(--border);border-radius:20px;background:var(--card);color:var(--fg);font-size:14px;outline:none;margin:10px 0 0;box-sizing:border-box}
 #q:focus{border-color:var(--link)}
 .wk{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:4px 16px 14px;margin:0 0 10px;font-size:14.5px;box-shadow:var(--shadow);overflow-wrap:anywhere}
 .wk h2{font-size:15px;color:var(--green)}
@@ -224,7 +224,19 @@ function applyDay(){
     if(active)d.open=n>0;else d.open=d.dataset.first==='1';
   });
 }
-if(q){q.value=state.q||'';q.addEventListener('input',()=>{state.q=q.value;save();applyDay()})}
+/* 全局搜索：除日报卡片（applyDay）外，还过滤周报条目 / 方向卡 / 资源卡，命中数挂到 tab 角标 */
+function qb(tab,n){const t=tabs.find(x=>x.dataset.tab===tab);if(!t)return;let s=t.querySelector('.qb');if(!s){s=document.createElement('span');s.className='nb qb';t.appendChild(s)}s.textContent=n;s.style.display=n?'':'none'}
+function applyGlobal(){
+  const s=(q?q.value:'').trim().toLowerCase();
+  let nw=0,nbg=0;
+  document.querySelectorAll('.wk').forEach(w=>{let n=0;w.querySelectorAll('li').forEach(li=>{const hit=!s||li.textContent.toLowerCase().includes(s);li.classList.toggle('hide',!hit);if(hit)n++});nw+=n;w.classList.toggle('hide',!!s&&!n)});
+  document.querySelectorAll('.ov').forEach(c=>{const hit=!s||c.textContent.toLowerCase().includes(s);c.classList.toggle('hide',!hit);if(hit)nbg++});
+  const doneRes=()=>qb('res',s?document.querySelectorAll('.rcard:not(.hide)').length:0);
+  if(s){loadRes().then(()=>{applyRes();doneRes()})}else{applyRes();doneRes()}
+  qb('week',s?nw:0);qb('bg',s?nbg:0);
+  qb('day',s?days.reduce((a,d)=>a+d.querySelectorAll('.card:not(.hide)').length,0):0);
+}
+if(q){q.value=state.q||'';q.addEventListener('input',()=>{state.q=q.value;save();applyDay();applyGlobal()});setTimeout(()=>{if(q.value){applyDay();applyGlobal()}},0)}
 function bindChips(bar,key,after){
   if(!bar)return;
   const chips=[...bar.querySelectorAll('.fchip')];
@@ -235,8 +247,9 @@ function bindChips(bar,key,after){
 }
 bindChips(document.getElementById('fbar-day'),'dayTheme',applyDay);
 function applyRes(){
+  const qs=(q?q.value:'').trim().toLowerCase();
   document.querySelectorAll('.rcard').forEach(c=>{
-    const hit=(!state.resTheme||(' '+c.dataset.themes+' ').includes(' '+state.resTheme+' '))&&(!state.resKind||c.dataset.kind===state.resKind);
+    const hit=(!qs||c.textContent.toLowerCase().includes(qs))&&(!state.resTheme||(' '+c.dataset.themes+' ').includes(' '+state.resTheme+' '))&&(!state.resKind||c.dataset.kind===state.resKind);
     c.classList.toggle('hide',!hit);
   });
   document.querySelectorAll('.rgroup').forEach(g=>g.classList.toggle('hide',!g.querySelector('.rcard:not(.hide)')));
@@ -895,11 +908,12 @@ def build_site(today: date | None = None) -> Path:
         '<button type="button" role="tab" class="tab" data-tab="week">周报</button>'
         '<button type="button" role="tab" class="tab" data-tab="bg">总览</button>'
         '<button type="button" role="tab" class="tab" data-tab="res">资源库</button>'
-        "</div></div>",
+        "</div>",
+        f'<input id=q placeholder="搜索全部：日报 / 周报 / 方向 / 资源库（关键词，命中数显示在标签上）…">',
+        "</div>",
         '<div id="panel-day" class="panel on">',
         _filter_bar("fbar-day", _day_theme_counts(recent_d)),
         '<div class="legend">分数 = 与你方向的相关度（0–10，≥7.5 绿）· 期刊/预印本 · 左色条 = 主题 · 红色"新" = 上次访问后新增</div>',
-        f'<input id=q placeholder="过滤最近 {len(recent_d)} 天的条目（标题 / 关键词）…">',
         f"{day_html}</div>",
         f'<div id="panel-week" class="panel">{week_html}</div>',
         f'<div id="panel-bg" class="panel">{bg_html}</div>',

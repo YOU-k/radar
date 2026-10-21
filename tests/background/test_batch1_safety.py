@@ -43,7 +43,7 @@ def test_llm_retry_counts(monkeypatch):
     assert llm.chat("x") == "ok" and len(calls) == 2 and llm.STATS["ok"] == before["ok"] + 1
 
 
-PAREN = ("# d\n\n## 心血管（1 条）\n\n"
+PAREN = ("# d\n\n## 衰老（1 条）\n\n"
          "- **[Lancet paper](https://doi.org/10.1016/S0140-6736(24)01234-5)** `8.0` — r\n"
          "  <sub>〔期刊〕The Lancet · 2026-09 · A</sub>\n")
 
@@ -53,7 +53,7 @@ def test_paren_url_survives_site_and_retag(tmp_path, monkeypatch):
     assert it["url"] == "https://doi.org/10.1016/S0140-6736(24)01234-5"
     assert retag.parse_blocks(PAREN)[0]["url"].endswith("(24)01234-5")
     p = tmp_path / "2026-09-27.md"; p.write_text(PAREN, encoding="utf-8")
-    monkeypatch.setattr(retag, "llm_tags", lambda b: {0: ["cardio"]})
+    monkeypatch.setattr(retag, "llm_tags", lambda b: {0: ["aging"]})
     monkeypatch.setattr(retag, "day_summary", lambda e: [])
     assert retag.retag_digest(p) == 1 and "S0140-6736(24)01234-5" in p.read_text(encoding="utf-8")
 

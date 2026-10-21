@@ -43,7 +43,7 @@ def test_css_dark_mode_and_scroll_margin():
     assert "@media (prefers-color-scheme:dark)" in site.CSS and "--bg:#0d1117" in site.CSS
     assert "scroll-margin-top" in site.CSS and "overflow-wrap:anywhere" in site.CSS
     css = site.theme_css()
-    assert "[data-t=cardio]" in css and "--cd:" in css  # 暗色下用调亮的主题色
+    assert "[data-t=aging]" in css and "--cd:" in css  # 暗色下用调亮的主题色
 
 
 def test_js_storage_wrapped_in_try_catch():
@@ -62,21 +62,21 @@ def fake_root(tmp_path, monkeypatch):
         d = (d0 - timedelta(days=i)).isoformat()
         (root / "digests" / f"{d}.md").write_text(
             f"# {d}\n\n## 领域（1 条）\n\n- **[Paper {i}](https://doi.org/10.1016/s0140-6736(24)0000{i % 10}-x)** `7.0` — r\n"
-            "  <sub>主题：#心血管</sub>\n", encoding="utf-8")
+            "  <sub>主题：#衰老</sub>\n", encoding="utf-8")
     for w in range(10):
         (root / "weekly" / f"2026-W{30 + w:02d}.md").write_text(
             f"# 每周 W{30 + w}\n\n# 第二个标题\n\n- 链接 https://www.semanticscholar.org/very/long/url/{'x' * 80}\n",
             encoding="utf-8")
-    bg = root / "background" / "cardio-omics"
+    bg = root / "background" / "aging-multimodal"
     (bg / "deep").mkdir(parents=True)
     refs = "\n".join(f"{n}. Ref {n}. https://doi.org/10.1/{n}" for n in range(1, 4))
-    (bg / "report.md").write_text("# 心血管 · 方向背景报告\n\n证据 3 篇\n\n## 摘要（TL;DR）\n\n- 要点 [1]\n\n"
+    (bg / "report.md").write_text("# 衰老 · 方向背景报告\n\n证据 3 篇\n\n## 摘要（TL;DR）\n\n- 要点 [1]\n\n"
                                   "## 1 背景\n\n正文 [2]\n\n| a | b |\n|---|---|\n| 1 | 2 |\n\n## 参考文献\n\n" + refs + "\n",
                                   encoding="utf-8")
     (bg / "deep" / "2026-09-27-深度.md").write_text("# 深度标题\n\n内容 https://x.org/y\n", encoding="utf-8")
     (root / "background" / "_resources").mkdir()
     (root / "background" / "_resources" / "registry.json").write_text(json.dumps({
-        "chinaheart": {"name": "ChinaHEART", "kind": "dataset", "used_by": ["a"], "topics": [], "themes": ["cardio"],
+        "chinaheart": {"name": "ChinaHEART", "kind": "dataset", "used_by": ["a"], "topics": [], "themes": ["aging"],
                        "pinned": True, "seed": True, "priority": "P0", "open": "controlled", "verified": "n/a",
                        "why": "目标队列"}}), encoding="utf-8")
     (root / "data").mkdir()
@@ -105,11 +105,11 @@ def test_build_site_structure(fake_root):
     assert t.count('<div class="wk"') == site.RECENT_WEEKS and (docs / "archive" / "weekly.html").exists()
     assert "<h1>第二个标题" not in t
     # 方向报告：卡片只内联 TL;DR，全文在 docs/bg/，深度调研也拆页
-    assert 'data-src="bg/cardio.html"' in t and "正文 [" not in t and "要点 [" in t
-    page = (docs / "bg" / "cardio.html").read_text(encoding="utf-8")
-    assert 'id="doc-rest"' in page and '<li id="ref-cardio-2">' in page and 'class="tw"' in page
-    assert '<a class="cite" href="#ref-cardio-1">1</a>' in t  # TL;DR 里的引用链到懒加载部分
-    deep = list((docs / "bg").glob("cardio-omics-deep-*.html"))
+    assert 'data-src="bg/aging.html"' in t and "正文 [" not in t and "要点 [" in t
+    page = (docs / "bg" / "aging.html").read_text(encoding="utf-8")
+    assert 'id="doc-rest"' in page and '<li id="ref-aging-2">' in page and 'class="tw"' in page
+    assert '<a class="cite" href="#ref-aging-1">1</a>' in t  # TL;DR 里的引用链到懒加载部分
+    deep = list((docs / "bg").glob("aging-multimodal-deep-*.html"))
     assert len(deep) == 1 and 'href="https://x.org/y"' in deep[0].read_text(encoding="utf-8")
     # 资源库单独成页，含置顶与"新发现 · 未核验"
     assert 'data-src="res.html"' in t

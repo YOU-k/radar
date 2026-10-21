@@ -10,6 +10,17 @@
 - Vadim Gladyshev (Harvard) — 衰老组学 + rejuvenation
 - Tony Wyss-Coray (Stanford) — 血浆蛋白组与衰老、脑衰老
 - Anne Brunet (Stanford) — 衰老表观遗传与单细胞
+- Jing-Dong J. Han（北京大学）— AURORA 生成式多模态衰老时钟（Nature Aging 2026）
+- Qian Di（清华大学）— 生物年龄不确定性 BAU 概率框架（2026-09）
+- David Furman（Buck Institute）— GTEx 血液/组织器官衰老时钟（2026-09）
+- Shiwen Ni（深圳先进技术研究院）— 衰老生物学单细胞基础模型基准（2026-09）
+
+## 人群队列 / 多组学
+
+- Haitao Chen（中山大学）— 14 器官多组学衰老时钟，UKB 40 万人（2026-09）
+- Sirui Zhou（McGill）— All of Us 跨祖源 APOE 表型组 + 蛋白组（2026-09）
+- Xuanyao Liu（UI Chicago）— UKB-PPP 蛋白水平上位效应图谱（2026-09）
+- Alexander J. Mentzer（Oxford）— 多祖先 MHC-pQTL，UKB+CKB 蛋白组遗传整合（2026-09）
 
 ## 单细胞 / virtual cell
 

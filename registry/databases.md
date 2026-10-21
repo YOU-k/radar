@@ -11,6 +11,7 @@
 - recount3 — 统一重处理 RNA-seq — 人/鼠，含 GTEx/TCGA
 - ArrayExpress / BioStudies — EBI 侧表达与多组学归档，与 GEO 互补 — 支持程序化批量下载
 - GTEx — 多组织基因型-表达（eQTL）参考队列 — 衰老/组织特异研究常用基线
+- 儿童癌症统一处理可变剪接图谱 — transcriptome-wide 统一处理剪接谱 — 公开数据可复用（2026-09）
 
 ## 单细胞
 
@@ -20,6 +21,7 @@
 - Tabula Sapiens — 人多器官单细胞参考 — 24 组织 50 万细胞
 - Single Cell Portal (Broad) — Broad 托管单细胞数据集 — 含大量 PBMC/免疫图谱，网页+API
 - scRNA-seq 衰老专属：见 Aging Atlas
+- HuDeHA 人发育海马单细胞图谱 — 受孕后 3 周–15.3 岁，658,059 细胞，含家族性 AD 脑类器官对照基准 — 类器官成熟度/区域身份校正可用（2026-09）
 
 ## 空间转录组
 
@@ -27,6 +29,7 @@
 - SpatialDB / STOmicsDB — 空转数据聚合
 - SODB (STOmics) — 空间组学数据库集合 — 整合多平台空转数据
 - 10x 官方公开数据集 — 质控好，适合 demo
+- 小鼠比目鱼肌高分辨空转图谱 — 健康/去神经单细胞与亚细胞异质性 — 公开空转数据（2026-09）
 
 ## 蛋白质组
 
@@ -69,3 +72,9 @@
 
 - TCGA — 肿瘤多模态标杆（RNA+甲基化+CNV+病理+结局）
 - 10x Multiome 公共集 — RNA+ATAC 同细胞
+
+## 评测基准
+
+- OmniVCBench — 虚拟细胞多模态推理基准，6077 条可溯源 QA — 可直接用于评估（2026-10）
+- 单细胞共调控 ground truth 目录 — 35 样本，含正/负共调控对照 — 归一化与共调控方法评估用（2026-09）
+- Agent Error Dataset — 5 万条智能体错误诊断对 / 33 环境 — agent 后训练资源（2026-10）
