@@ -29,7 +29,8 @@ def item_block(it: Item, tags: list[str]) -> list[str]:
     tag = "〔资源〕" if is_resource(it) else ""
     lines = [f"- **[{it.title}]({it.url})** `{it.score:.1f}`{tag}{reason}"]
     if it.extra.get("venue_type") or it.extra.get("pi"):
-        lines.append(f"  <sub>{venue_line(it)} · {it.authors[:60]}</sub>")
+        tail = "" if it.extra.get("pi") else f" · {it.authors[:60]}"  # 已有 PI+机构时作者列表是噪音
+        lines.append(f"  <sub>{venue_line(it)}{tail}</sub>")
     else:  # 非论文（GitHub/HF/博客）或未补全
         journal = it.extra.get("journal")
         src = f"{journal} · {it.source}" if journal else it.source

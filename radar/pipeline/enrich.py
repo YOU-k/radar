@@ -160,7 +160,7 @@ def enrich_item(it: Item, get=_get) -> None:
         ex["pi"] = pi
         ex["pi_role"] = "通讯" if corr else "末位"
     if inst:
-        ex["pi_inst"] = inst
+        ex["pi_inst"] = short_inst(inst)
 
 
 def enrich(items: list[Item], min_score: float, get=_get, pause: float = 0.2) -> int:

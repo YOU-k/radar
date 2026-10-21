@@ -67,16 +67,27 @@ def inspiration_heading(it: Item, profile: str) -> str:
 
 def _deepread_one(it: Item, profile: str) -> str:
     text, basis = _fulltext(it)
-    prompt = (
-        "下面是某研究者的兴趣画像和一篇文献的内容。请写中文深读笔记，markdown，含五节，"
-        "每节 1-3 句，直接以小标题开头：\n"
-        "**总结** / **核心方法** / **数据与代码可用性**（能否直接拿来用，给出线索）/ "
-        f"**局限** / **{inspiration_heading(it, profile)}**（结合画像，具体可执行；"
-        "点名对应画像「应用线」里的哪一条，与所有应用线都不相关就直说，不要硬套）。\n\n"
-        f"【兴趣画像】\n{profile}\n\n"
-        f"【文献】\n标题：{it.title}\n作者：{it.authors}\n链接：{it.url}\n"
-        f"内容（{basis}）：\n{text}"
-    )
+    if it.score >= 8.0:
+        prompt = (
+            "下面是某研究者的兴趣画像和一篇文献的内容。请写中文深读笔记，markdown，含五节，"
+            "每节 1-3 句，直接以小标题开头：\n"
+            "**总结** / **核心方法** / **数据与代码可用性**（能否直接拿来用，给出线索）/ "
+            f"**局限** / **{inspiration_heading(it, profile)}**（结合画像，具体可执行；"
+            "点名对应画像「应用线」里的哪一条，与所有应用线都不相关就直说，不要硬套）。\n\n"
+            f"【兴趣画像】\n{profile}\n\n"
+            f"【文献】\n标题：{it.title}\n作者：{it.authors}\n链接：{it.url}\n"
+            f"内容（{basis}）：\n{text}"
+        )
+    else:  # 7.5–8：速读版，三节各 ≤60 字，服务扫读而不是存档
+        prompt = (
+            "下面是某研究者的兴趣画像和一篇文献的内容。请写中文速读笔记，markdown，只含三节，"
+            "每节不超过 60 字，直接以小标题开头：\n"
+            "**总结**（做了什么、核心数字）/ **数据与代码可用性**（能否直接拿来用）/ "
+            f"**{inspiration_heading(it, profile)}**（一句话说清为什么值得或不值得读全文）。\n\n"
+            f"【兴趣画像】\n{profile}\n\n"
+            f"【文献】\n标题：{it.title}\n作者：{it.authors}\n链接：{it.url}\n"
+            f"内容（{basis}）：\n{text}"
+        )
     return llm.chat(prompt, model=llm.DEEP_MODEL, temperature=0.3, timeout=300).strip()
 
 

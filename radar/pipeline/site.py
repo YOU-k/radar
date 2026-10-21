@@ -439,7 +439,7 @@ def _chips_html(keys_: list[str]) -> str:
 def _rating_html(text: str) -> str:
     """"创新 A · 证据 B · 可用 C · 一线机构" → 彩色字母徽章（A 绿 / B 黄 / C 灰）。"""
     out = re.sub(r"(创新|证据|可用)\s*([ABC])",
-                 lambda m: f'<span class="rt r{m.group(2)}">{m.group(1)} {m.group(2)}</span>',
+                 lambda m: f'<span class="rt r{m.group(2).lower()}">{m.group(1)} {m.group(2)}</span>',
                  html.escape(text))
     return out.replace("一线机构", '<span class="rt ri">一线机构</span>')
 

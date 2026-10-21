@@ -127,7 +127,9 @@ def resolve_key(name: str, kind: str = "", seeds: dict | None = None) -> tuple[s
 
 def is_core(r: dict) -> bool:
     """进主表的门槛：种子 / 置顶；或被 ≥2 篇工作用、或跨方向、或（开放 + 链接核验通过 + 有规模，且不是小工具）。
-    日报收件箱来的新条目（status=new）不进主表，站点单独列"新发现 · 未核验"。"""
+    日报收件箱来的新条目（status=new）不进主表，站点单独列"新发现 · 未核验"。归档（archived）不展示。"""
+    if r.get("status") == "archived":
+        return False
     if r.get("pinned") or r.get("seed"):
         return True
     if r.get("status") == "new":
@@ -136,6 +138,32 @@ def is_core(r: dict) -> bool:
         return True
     return (r.get("open") == "yes" and r.get("verified") == "ok" and bool(r.get("scale"))
             and r.get("kind") in ("dataset", "model", "database", "benchmark"))
+
+
+NEW_PROMOTE_USES = 2   # 日报新发现被 ≥2 篇证据引用：自动转正进主表
+NEW_EXPIRE_DAYS = 90   # 90 天仍无人引用：归档（不进主表也不进"新发现"列表）
+
+
+def maintenance(reg: dict, today: date | None = None) -> tuple[int, int]:
+    """日报新发现的自动流转：被 ≥NEW_PROMOTE_USES 篇工作引用的转正（去掉 status=new）；
+    超过 NEW_EXPIRE_DAYS 天仍无引用的归档（status=archived，不再展示）。返回 (转正数, 归档数)。"""
+    today = today or date.today()
+    promoted = archived = 0
+    for r in reg.values():
+        if r.get("status") != "new":
+            continue
+        if len(r.get("used_by", [])) >= NEW_PROMOTE_USES:
+            del r["status"]
+            promoted += 1
+            continue
+        try:
+            age = (today - date.fromisoformat(str(r.get("added", ""))[:10])).days
+        except ValueError:
+            continue
+        if age > NEW_EXPIRE_DAYS:
+            r["status"] = "archived"
+            archived += 1
+    return promoted, archived
 
 
 def mine(evs: list[Evidence], topic_name: str, llm: LLM) -> list[dict]:
@@ -482,7 +510,7 @@ def render(reg: dict, day: date | None = None) -> str:
     all_rows = sorted(reg.values(), key=lambda r: (-len(r["topics"]), -len(r["used_by"]), r["name"].lower()))
     rows = [r for r in all_rows if is_core(r)]
     new = [r for r in all_rows if r.get("status") == "new"]
-    tail = [r for r in all_rows if not is_core(r) and r.get("status") != "new"]
+    tail = [r for r in all_rows if not is_core(r) and r.get("status") not in ("new", "archived")]
     out = [f"# 资源登记（数据集 / 模型 / 基准）\n",
            f"从 {sum(len(r['used_by']) for r in all_rows)} 处证据引用中挖出资源，并入人工种子与日报新发现，共 {len(all_rows)} 项；"
            f"主表 {len(rows)} 项（种子/置顶，或被 ≥2 篇工作使用、或跨方向、或开放且链接核验通过且规模明确），"
@@ -590,6 +618,9 @@ def run_resources(llm: LLM | None, root: Path | None = None, head: Callable | No
     attach_themes(reg)
     if llm is not None:
         print(f"[resources] prioritized {prioritize(reg, llm)}")
+    promoted, archived = maintenance(reg)
+    if promoted or archived:
+        print(f"[resources] maintenance: 转正 {promoted}，归档 {archived}")
     reg_path.write_text(json.dumps(reg, ensure_ascii=False, indent=1), encoding="utf-8")
     out = out_dir / "resources.md"
     out.write_text(render(reg), encoding="utf-8")
