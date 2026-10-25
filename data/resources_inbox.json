@@ -233,5 +233,15 @@
    "Phenome-wide and proteomic analysis of APOE alleles across different ancestries in the All of Us Research Program",
    "Immunoregulatory gene GIMAP6 suppresses lethal atherosclerotic vasculopathy and ischemic heart failure."
   ]
+ },
+ {
+  "name": "CauTrigger: deciphering biological system state transitions by hierarchical causal decomposition.",
+  "kind": "model",
+  "url": "https://doi.org/10.1038/s41592-026-03274-9",
+  "note": "Nature Methods层次因果潜变量模型预测扰动，与虚拟细胞相关。",
+  "score": 7.0,
+  "day": "2026-10-25",
+  "source": "daily",
+  "theme": "singlecell"
  }
 ]
