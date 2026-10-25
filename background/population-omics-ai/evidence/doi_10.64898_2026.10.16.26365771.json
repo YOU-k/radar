@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.16.26365771",
+  "title": "Functional architecture of rare protein coding variation across 786,871 exomes",
+  "url": "https://doi.org/10.64898/2026.10.16.26365771",
+  "abstract": "提出Kernel Allelic Series Model（KASM），用多个功能注释构建核函数刻画基因内等位基因效应的协变结构。在UK Biobank和All of Us共786,871人的外显子组数据、26个复杂性状上应用，整合35个描述蛋白质结构与功能的注释。结果表明整合功能预测注释有助于解释编码变异对复杂性状的异质效应并促进基因发现。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank与All of Us大规模外显子组方法，契合多组学遗传整合",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank与All of Us近79万外显子，稀有变异功能整合方法学新意",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Kernel Allelic Series Model(KASM)",
+  "data": "UK Biobank与All of Us共786,871人外显子组",
+  "scenario": "罕见编码变异关联分析",
+  "benchmark": "常规罕见变异负荷检验",
+  "results": "整合35个蛋白结构与功能注释，在26个复杂性状上解释编码变异异质效应并促进基因发现",
+  "availability": "",
+  "limitations": "仅编码区变异、依赖注释质量",
+  "summary": "提出KASM刻画基因内等位基因效应的协变结构。用多个功能注释构建核函数，在786,871人外显子组、26个复杂性状上整合35个蛋白结构与功能注释应用。发现整合功能预测注释有助于解释编码变异异质效应并促进基因发现。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 12,
+ "added_on": "2026-10-25"
+}

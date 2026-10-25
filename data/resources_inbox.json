@@ -243,5 +243,18 @@
   "day": "2026-10-25",
   "source": "daily",
   "theme": "singlecell"
+ },
+ {
+  "name": "Perturb-seq",
+  "kind": "dataset",
+  "url": "",
+  "note": "单细胞扰动响应图谱与基准评测 · 被 3 篇高分工作使用：Power-law scaling of mitotic spindles wi / Genomic foundation models do not yet boo / Functional architecture of rare protein ",
+  "day": "2026-10-25",
+  "source": "daily-infra",
+  "used_by_titles": [
+   "Power-law scaling of mitotic spindles with genome sizes across eukaryotes is driven by chromosome crowding.",
+   "Genomic foundation models do not yet boost common variant discovery beyond standard functional annotations",
+   "Functional architecture of rare protein coding variation across 786,871 exomes"
+  ]
  }
 ]

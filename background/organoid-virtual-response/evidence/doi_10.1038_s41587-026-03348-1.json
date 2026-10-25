@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41587-026-03348-1",
+  "title": "Deep dynamical models of single-cell multiomic velocities predict loss-of-function and rescue perturbations in B cells.",
+  "url": "https://doi.org/10.1038/s41587-026-03348-1",
+  "abstract": "提出DynaVelo，一种从单细胞多组学数据学习基因表达与转录因子motif活性联合动态的生成式神经常微分方程模型，可对向量场进行计算机扰动。模型重现了野生型小鼠生发中心B细胞的体内分叉动态，并揭示Arid1a和Ctcf杂合缺失下的动态变化。计算机扰动生成动态、细胞状态特异的基因调控网络，恢复已知TF-基因边并预测突变体中受破坏的边。",
+  "authors": "",
+  "venue": "Nature biotechnology",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞多组学动态模型做计算机扰动预测，含定量验证。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞多组学动态模型预测扰动，具建模与预测价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "生成式神经常微分方程",
+  "data": "单细胞多组学数据（小鼠生发中心B细胞）",
+  "scenario": "B细胞扰动动态预测",
+  "benchmark": "野生型体内分叉动态",
+  "results": "重现野生型小鼠生发中心B细胞体内分叉动态；揭示Arid1a和Ctcf杂合缺失动态变化；恢复已知TF-基因边",
+  "availability": "",
+  "limitations": "",
+  "summary": "该文提出DynaVelo，一种从单细胞多组学数据学习基因表达与转录因子motif活性联合动态的生成式神经常微分方程模型，可对向量场进行计算机扰动。模型重现了野生型小鼠生发中心B细胞的体内分叉动态，并揭示Arid1a和Ctcf杂合缺失下的动态变化。计算机扰动生成动态、细胞状态特异的基因调控网络，恢复已知TF-基因边并预测突变体中受破坏的边。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 9,
+ "added_on": "2026-10-25"
+}

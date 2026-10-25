@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.xgen.2026.101391",
+  "title": "Choice of phenotype scale is critical in biobank-based G × E tests.",
+  "url": "https://doi.org/10.1016/j.xgen.2026.101391",
+  "abstract": "指出许多biobank GWAS检出的G×E信号实为另一表型尺度上的加性效应，属被低估的经典问题。分析区分了身高上随对数尺度消失的G×性别效应与睾酮上对数尺度揭示的女性特异性生物学效应；在UK Biobank 32个表型中，幂变换可解释45%的多基因评分G×E信号。",
+  "authors": "",
+  "venue": "Cell genomics",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank大规模G×E方法学，揭示表型尺度问题，有定量支撑",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank大样本，揭示G×E检验表型尺度关键方法学问题，具转折意义",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "表型尺度幂变换下重估G×E信号",
+  "data": "UK Biobank 32个表型",
+  "scenario": "生物样本库G×E检验",
+  "benchmark": "原始尺度加性效应/常规G×E检验",
+  "results": "幂变换可解释45%的多基因评分G×E信号；身高G×性别效应随对数尺度消失，睾酮对数尺度揭示女性特异性效应",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究表型尺度选择对生物样本库G×E检验的影响。通过对表型做幂变换并在UK Biobank 32个表型上重估G×E信号，区分真实交互与尺度导致的伪交互。发现许多G×E信号实为另一尺度上的加性效应，幂变换可解释45%的多基因评分G×E信号。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 12,
+ "added_on": "2026-10-25"
+}

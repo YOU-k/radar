@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.13.758880",
+  "title": "Genomic foundation models do not yet boost common variant discovery beyond standard functional annotations",
+  "url": "https://doi.org/10.64898/2026.10.13.758880",
+  "abstract": "采用替代功能错误发现率框架，在27个UK Biobank性状上比较标准功能注释baselineLD与三种基因组基础模型（AlphaGenome、Borzoi、GPN-Star）衍生的注释对常见变异发现的增益。GPN-Star较标准GWAS减少位点发现，AlphaGenome和Borzoi增加发现但均低于baselineLD（中位1.8%、3.8%对5.1%）。结论是GFM尚未超越标准功能注释。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank上基因组基础模型基准评测，方法学有价值",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 27性状系统评估基因组基础模型，方法学基准必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "替代功能FDR框架比较注释增益",
+  "data": "UK Biobank 27个性状",
+  "scenario": "常见变异发现",
+  "benchmark": "baselineLD标准功能注释",
+  "results": "GPN-Star减少位点发现；AlphaGenome、Borzoi增加发现但低于baselineLD(中位1.8%、3.8%对5.1%)",
+  "availability": "",
+  "limitations": "仅27个性状、仅三种GFM",
+  "summary": "检验基因组基础模型能否超越标准功能注释促进常见变异发现。采用替代功能错误发现率框架，在27个UK Biobank性状上比较baselineLD与AlphaGenome、Borzoi、GPN-Star衍生注释。发现GFM均未超越baselineLD，GPN-Star甚至减少位点发现。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 12,
+ "added_on": "2026-10-25"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s43587-026-01234-8",
+  "title": "Transcriptomic reprogramming screen identifies SRSF1 as a regulator of aging.",
+  "url": "https://doi.org/10.1038/s43587-026-01234-8",
+  "abstract": "研究构建了人成纤维细胞的可解释转录组年龄预测器，并开展cDNA过表达筛选，寻找能将衰老转录组重编程为年轻状态的因子。筛选鉴定出RNA加工与剪接因子SRSF1，其诱导可产生强烈的年轻化转录特征且不丧失细胞身份。体外实验显示SRSF1诱导可恢复年轻表型。",
+  "authors": "",
+  "venue": "Nature aging",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "转录组年龄预测器加扰动筛选，契合衰老建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "转录组年龄预测器加扰动筛选，属衰老建模",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "可解释转录组年龄预测器+cDNA过表达筛选",
+  "data": "人成纤维细胞转录组（样本规模未提及）",
+  "scenario": "细胞衰老重编程",
+  "benchmark": "转录组年龄预测器预测的年龄",
+  "results": "鉴定SRSF1为衰老调控因子，其诱导产生强烈年轻化转录特征且不丧失细胞身份，体外恢复年轻表型",
+  "availability": "",
+  "limitations": "仅体外成纤维细胞模型，样本规模与体内验证未提及",
+  "summary": "研究构建了人成纤维细胞的可解释转录组年龄预测器，并开展cDNA过表达筛选以寻找能将衰老转录组重编程为年轻状态的因子。筛选鉴定出RNA加工与剪接因子SRSF1，其诱导可产生强烈的年轻化转录特征且不丧失细胞身份。体外实验显示SRSF1诱导可恢复年轻表型。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.5"
+ ],
+ "fulltext_path": "",
+ "added_round": 8,
+ "added_on": "2026-10-25"
+}

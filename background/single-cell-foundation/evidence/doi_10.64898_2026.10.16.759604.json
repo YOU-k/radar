@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.16.759604",
+  "title": "Genetic Perturbation Prediction Models Fail Out-of-Distribution: A Rigorous Benchmark and Systematic Evaluation",
+  "url": "https://doi.org/10.64898/2026.10.16.759604",
+  "abstract": "提出EL-PERTURB基准框架，采用分层分布外(OOD)划分策略，在必需基因和全基因组Perturb-seq筛选数据上对6类架构的20个扰动预测模型进行压力测试。结果显示现有基准多依赖随机划分而掩盖了系统性失效模式，扰动预测模型在真实OOD条件下泛化失败。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "扰动预测OOD基准，揭示泛化失败，属批判性评测。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "扰动预测OOD系统性失效基准，批判性必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "EL-PERTURB基准框架与分层OOD划分",
+  "data": "必需基因与全基因组Perturb-seq筛选数据",
+  "scenario": "遗传扰动预测泛化评估",
+  "benchmark": "6类架构20个扰动预测模型",
+  "results": "现有基准多依赖随机划分而掩盖系统性失效模式，扰动预测模型在真实OOD条件下泛化失败",
+  "availability": "",
+  "limitations": "聚焦扰动预测模型，未覆盖其他单细胞任务",
+  "summary": "提出EL-PERTURB基准框架，采用分层分布外(OOD)划分策略对扰动预测模型进行压力测试。在必需基因和全基因组Perturb-seq筛选数据上评估6类架构的20个扰动预测模型。结果显示现有基准多依赖随机划分而掩盖系统性失效模式，扰动预测模型在真实OOD条件下泛化失败。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "5"
+ ],
+ "fulltext_path": "",
+ "added_round": 10,
+ "added_on": "2026-10-25"
+}

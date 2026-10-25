@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.7189/jogh.16.04313",
+  "title": "Large-scale plasma proteomic profiling enhances prediction of heart failure among hypertensive individuals: prospective insights from the UK Biobank.",
+  "url": "https://doi.org/10.7189/jogh.16.04313",
+  "abstract": "在UK Biobank 16,128名无基线心衰的高血压参与者中，用Olink平台检测2,911种血浆蛋白，按1:1划分训练与验证集。训练集用Cox模型筛选心衰相关蛋白，再用LASSO构建蛋白风险评分（PRS），并在验证集用Harrell C-index、时间依赖ROC和净重分类改善评估。结果显示血浆蛋白组学可捕捉早期分子变化，提升高血压人群心衰风险预测。",
+  "authors": "",
+  "venue": "Journal of global health",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0,
+   "pmcid": "PMC13688282"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank万人级血浆蛋白组心衰预测，契合多组学预测",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank万人级血浆蛋白组整合预测心衰，符合人群多组学方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Cox筛选+LASSO构建蛋白风险评分",
+  "data": "UK Biobank 16,128名高血压者血浆2,911种蛋白",
+  "scenario": "高血压人群心衰风险预测",
+  "benchmark": "Harrell C-index、时间依赖ROC、NRI",
+  "results": "随访15.1年1074人(6.66%)发生心衰；NT-proBNP关联最强(HR=1.68)；蛋白组学提升风险预测",
+  "availability": "",
+  "limitations": "观察性设计、仅高血压人群、需外部验证",
+  "summary": "评估血浆蛋白组学能否提升高血压人群心衰预测。在16,128名无基线心衰的高血压参与者中检测2,911种Olink蛋白，1:1划分训练验证集，用Cox筛选、LASSO构建蛋白风险评分并以C-index等评估。发现蛋白组学可捕捉早期分子变化、提升心衰风险预测。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 12,
+ "added_on": "2026-10-25"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-026-03274-9",
+  "title": "CauTrigger: deciphering biological system state transitions by hierarchical causal decomposition.",
+  "url": "https://doi.org/10.1038/s41592-026-03274-9",
+  "abstract": "提出CauTrigger，将do- calculus整合进分层深度潜变量模型，分离因果与虚假潜因子，递归重建调控层级，从观察数据中识别潜在因果触发因素并预测跨层扰动结果。在合成和真实多层调控数据集上优于现有方法。",
+  "authors": "",
+  "venue": "Nature methods",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "因果潜动力学预测跨层扰动，契合扰动响应建模",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "因果潜动力学预测扰动结果，方法新颖有代码",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "CauTrigger分层因果分解",
+  "data": "合成与真实多层调控数据集",
+  "scenario": "生物系统状态转变预测",
+  "benchmark": "现有方法",
+  "results": "在合成和真实多层调控数据集上优于现有方法",
+  "availability": "",
+  "limitations": "",
+  "summary": "提出CauTrigger，将do-calculus整合进分层深度潜变量模型，分离因果与虚假潜因子，递归重建调控层级，从观察数据中识别潜在因果触发因素并预测跨层扰动结果。在合成和真实多层调控数据集上优于现有方法。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 8,
+ "added_on": "2026-10-25"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.molcel.2026.09.014",
+  "title": "Emerging frontiers for AI in single-cell genomics.",
+  "url": "https://doi.org/10.1016/j.molcel.2026.09.014",
+  "abstract": "综述单细胞基因组学中AI嵌入模型与基础模型的发展，指出早期scRNA-seq嵌入模型和基础模型在实验生物学家中应用有限，但随着大规模单细胞图谱的积累，利用AI在庞大数据背景下解读新数据集的需求明确。文章还讨论了单细胞表观/多组学检测和Perturb-seq技术带来的新建模机会。",
+  "authors": "",
+  "venue": "Molecular cell",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统综述单细胞基础模型与Perturb-seq建模前沿，契合方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Mol Cell综述，AI单细胞基础模型方向背景必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "综述AI嵌入模型与基础模型",
+  "data": "无原始数据分析（综述）",
+  "scenario": "单细胞基因组学AI应用",
+  "benchmark": "",
+  "results": "指出早期嵌入/基础模型在实验生物学家中应用有限，大规模图谱积累使AI解读新数据集需求明确",
+  "availability": "",
+  "limitations": "综述性质，未提供新方法或定量验证",
+  "summary": "综述单细胞基因组学中AI嵌入模型与基础模型的发展。文章梳理早期scRNA-seq嵌入模型和基础模型的应用现状，并讨论单细胞表观/多组学检测与Perturb-seq带来的新建模机会。指出随着大规模单细胞图谱积累，利用AI在庞大数据背景下解读新数据集的需求明确，但早期模型在实验生物学家中应用有限。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 10,
+ "added_on": "2026-10-25"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-026-02809-2",
+  "title": "Genome-wide detection of genotype-environment interactions at biobank scale with fastGxE.",
+  "url": "https://doi.org/10.1038/s41588-026-02809-2",
+  "abstract": "提出fastGxE，一种可扩展且有效的全基因组基因-环境交互（GxE）分析方法，用于识别与环境因素交互影响性状的遗传变异。方法控制多基因效应、多基因交互效应和噪声异质性，对环境因素数量保持稳健，并在大型生物样本库中实现32.98倍以上的速度提升。",
+  "authors": "",
+  "venue": "Nature genetics",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "生物样本库规模GxE高效方法，方法学新意且可扩展",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "生物样本库规模GxE高效方法，UK Biobank级方法学工具",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "fastGxE全基因组G×E分析",
+  "data": "大型生物样本库（规模未在摘要给出）",
+  "scenario": "生物样本库规模G×E检测",
+  "benchmark": "现有G×E方法",
+  "results": "控制多基因效应、多基因交互与噪声异质性，对环境因素数量稳健，速度提升32.98倍以上",
+  "availability": "",
+  "limitations": "",
+  "summary": "提出可扩展的全基因组基因-环境交互分析方法fastGxE。方法控制多基因效应、多基因交互效应和噪声异质性，对环境因素数量保持稳健。在大型生物样本库中实现32.98倍以上速度提升。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 12,
+ "added_on": "2026-10-25"
+}

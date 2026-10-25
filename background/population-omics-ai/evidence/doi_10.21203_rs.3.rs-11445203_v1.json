@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.21203/rs.3.rs-11445203/v1",
+  "title": "Multimodal mediators connecting APOE4 to dementia",
+  "url": "https://doi.org/10.21203/rs.3.rs-11445203/v1",
+  "abstract": "整合UK Biobank的神经影像（n=58,876）、血浆蛋白组（n=51,623）和血浆代谢组（n=267,627）多模态数据，系统解析APOE4携带与全因痴呆、阿尔茨海默病及血管性痴呆之间的脑结构与外周分子中介因素。采用多变量logistic回归估计APOE4等位基因剂量反应风险，并结合反事实因果中介分析，区分共享与疾病特异的中介通路。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank多模态中介分析，蛋白组代谢组整合机制发现",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank多模态多组学解析APOE4痴呆中介，人群规模大且机制发现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多变量logistic+反事实因果中介分析",
+  "data": "UK Biobank神经影像58,876、蛋白组51,623、代谢组267,627",
+  "scenario": "APOE4致痴呆中介解析",
+  "benchmark": "共享与疾病特异中介通路对比",
+  "results": "估计APOE4剂量反应风险，区分全因痴呆、阿尔茨海默病与血管性痴呆的共享及特异中介通路",
+  "availability": "",
+  "limitations": "观察性中介假设、样本重叠有限",
+  "summary": "解析APOE4携带与痴呆间的脑结构与外周分子中介因素。整合UK Biobank神经影像、血浆蛋白组和代谢组多模态数据，用多变量logistic估计剂量反应风险并结合反事实因果中介分析。区分了共享与疾病特异的中介通路。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 12,
+ "added_on": "2026-10-25"
+}
