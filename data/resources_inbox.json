@@ -256,5 +256,15 @@
    "Genomic foundation models do not yet boost common variant discovery beyond standard functional annotations",
    "Functional architecture of rare protein coding variation across 786,871 exomes"
   ]
+ },
+ {
+  "name": "ProtCell: a foundation model for single-cell proteomics",
+  "kind": "model",
+  "url": "https://doi.org/10.64898/2026.10.22.760932",
+  "note": "380万细胞单细胞蛋白组基础模型，与单细胞多模态直接相关，需确认权重公开",
+  "score": 7.0,
+  "day": "2026-10-28",
+  "source": "daily",
+  "theme": "singlecell"
  }
 ]
