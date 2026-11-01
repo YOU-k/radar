@@ -266,5 +266,15 @@
   "day": "2026-10-28",
   "source": "daily",
   "theme": "singlecell"
+ },
+ {
+  "name": "A haplotype reference panel constructed from 490,319 UK Biobank genomes improves genotype imputation for global populations.",
+  "kind": "dataset",
+  "url": "https://doi.org/10.1038/s41588-026-02819-0",
+  "note": "49万UKB全基因组单倍型参考面板，显著提升全球插补精度，可直接用。",
+  "score": 8.0,
+  "day": "2026-11-01",
+  "source": "daily",
+  "theme": "cohort"
  }
 ]
