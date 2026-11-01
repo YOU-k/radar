@@ -276,5 +276,18 @@
   "day": "2026-11-01",
   "source": "daily",
   "theme": "cohort"
+ },
+ {
+  "name": "All of Us",
+  "kind": "dataset",
+  "url": "",
+  "note": "多祖先人群蛋白组与基因组基准 · 被 3 篇高分工作使用：SPARCS enables scalable recovery of comp / A family-aware All of Us benchmark for p / A haplotype reference panel constructed ",
+  "day": "2026-11-01",
+  "source": "daily-infra",
+  "used_by_titles": [
+   "SPARCS enables scalable recovery of complex image-based phenotypes for genetic screening.",
+   "A family-aware All of Us benchmark for polygenic prediction and genomic machine learning",
+   "A haplotype reference panel constructed from 490,319 UK Biobank genomes improves genotype imputation for global populations."
+  ]
  }
 ]

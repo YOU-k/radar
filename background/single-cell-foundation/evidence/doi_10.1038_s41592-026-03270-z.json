@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-026-03270-z",
+  "title": "Advancing morphological profiling with self-supervised learning through comparative insights into representation learning of cellular perturbations.",
+  "url": "https://doi.org/10.1038/s41592-026-03270-z",
+  "abstract": "系统评估对比式(DINO)、掩码生成式(MAE、iTPN)及混合式(DINOv2)自监督基础模型在图像表型谱分析中的表现，预训练于JUMP-CP全部未标注化学扰动数据（119,876化合物、约177万图像、7个实验室）。在JUMP-Target2留出集上，最佳SSL模型在化合物重复检索上优于CellProfiler。",
+  "authors": "",
+  "venue": "Nature methods",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "系统评估自监督基础模型于Cell Painting扰动表征，契合形态基础模型与评测。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell Painting自监督表征系统评测，JUMP-CP大规模，方向基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "自监督基础模型对比评估",
+  "data": "JUMP-CP未标注数据119,876化合物、约177万图像、7个实验室",
+  "scenario": "图像表型谱分析",
+  "benchmark": "JUMP-Target2留出集，对比CellProfiler",
+  "results": "最佳SSL模型在化合物重复检索上优于CellProfiler",
+  "availability": "",
+  "limitations": "",
+  "summary": "本文系统评估自监督基础模型在图像表型谱分析中的表现。比较对比式(DINO)、掩码生成式(MAE、iTPN)及混合式(DINOv2)模型，预训练于JUMP-CP全部未标注化学扰动数据。在JUMP-Target2留出集上，最佳SSL模型在化合物重复检索上优于CellProfiler。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.5"
+ ],
+ "fulltext_path": "",
+ "added_round": 11,
+ "added_on": "2026-11-01"
+}

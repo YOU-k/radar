@@ -1,0 +1,87 @@
+{
+ "candidate": {
+  "id": "arxiv:2610.36361",
+  "title": "HELICS: Biobank-scale Conditional Synthetic Genome Generation via Latent Flow Matching",
+  "url": "https://arxiv.org/abs/2610.36361",
+  "abstract": "HELICS 是面向生物样本库规模基因型数据的无定相潜空间流匹配框架，用于在数十万至数千万相关SNP的超高维离散分布上做条件合成基因组生成。方法通过潜空间插值条件合成实现全基因组SNP级生成，目标是支持隐私保护的基准测试、模拟和数据增强，尤其针对代表性不足人群、罕见或失衡疾病队列及受限生物样本库等数据有限场景。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "生物样本库规模合成基因组生成框架，方法新且支持基准",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "生物样本库规模合成基因组生成框架，方法学新且面向隐私基准",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "潜空间流匹配条件合成基因组生成",
+  "data": "UKB无定相基因型，chr15 18,784 SNP及全基因组600,336 SNP",
+  "scenario": "隐私保护合成基因组生成",
+  "benchmark": "HAPNEST、Sim1000G、HAPGEN2、GAN、RBM、HCLT",
+  "results": "",
+  "availability": "",
+  "limitations": "低MAF变异R²偏低，生成NN IBS相似度较高提示多样性有限",
+  "summary": "提出HELICS，面向生物样本库规模基因型数据的无定相潜空间流匹配框架，用于超高维离散分布上的条件合成基因组生成。方法通过染色体特异编码与多染色体潜空间流实现全基因组SNP级生成，并支持性状条件合成。在chr15及全22条常染色体基准上，HELICS在MAF、LD和隐私代理指标上优于HAPNEST等基线，并能对多基因性状的遗传易感性进行条件控制。",
+  "_unverified_numbers": [
+   {
+    "field": "data",
+    "number": "600,336",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "results",
+    "number": "0.362",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "results",
+    "number": "0.019",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "results",
+    "number": "0.115",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "results",
+    "number": "0.009",
+    "reason": "cited",
+    "dropped": true
+   },
+   {
+    "field": "results",
+    "number": "0.109",
+    "reason": "cited",
+    "dropped": true
+   }
+  ],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "2.5"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 13,
+ "added_on": "2026-11-01"
+}

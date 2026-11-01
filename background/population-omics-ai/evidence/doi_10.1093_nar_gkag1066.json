@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/nar/gkag1066",
+  "title": "MetabHub: an integrative platform for plasma nuclear magnetic resonance metabolomics using mediation analysis, disease prediction, and risk stratification.",
+  "url": "https://doi.org/10.1093/nar/gkag1066",
+  "abstract": "构建了基于UK Biobank个体数据的血浆NMR代谢组学网络平台MetabHub，整合251项NMR代谢物、129项临床指标、54项环境暴露、全基因组变异和57种新发疾病。平台支持性别合并及性别特异的关联分析，并引入中介分析，实现从遗传、暴露到代谢物再到疾病的通路解析与纵向风险分层。",
+  "authors": "",
+  "venue": "Nucleic acids research",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank多组学代谢平台，整合遗传暴露疾病可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank NMR代谢组整合平台，公开资源与风险分层",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "NMR代谢组学整合与中介分析平台",
+  "data": "UK Biobank个体：251项NMR代谢物、129临床指标、54环境暴露、全基因组变异、57种疾病",
+  "scenario": "代谢组学关联与风险分层",
+  "benchmark": "",
+  "results": "整合251项NMR代谢物、129项临床指标、54项环境暴露、全基因组变异和57种新发疾病，支持性别合并及性别特异关联与中介分析",
+  "availability": "",
+  "limitations": "摘要未给出具体预测性能定量结果",
+  "summary": "构建了基于UK Biobank个体数据的血浆NMR代谢组学网络平台MetabHub。平台整合251项NMR代谢物、129项临床指标、54项环境暴露、全基因组变异和57种新发疾病，支持性别合并及性别特异关联分析并引入中介分析。实现了从遗传、暴露到代谢物再到疾病的通路解析与纵向风险分层。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 13,
+ "added_on": "2026-11-01"
+}

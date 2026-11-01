@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.22.760932",
+  "title": "ProtCell: a foundation model for single-cell proteomics",
+  "url": "https://doi.org/10.64898/2026.10.22.760932",
+  "abstract": "ProtCell 是一个面向单细胞蛋白组学的基础模型，基于98个数据集约3.8亿细胞预训练。模型在 transformer 编码器中结合蛋白身份嵌入与连续丰度嵌入，通过掩码丰度建模学习细胞级和蛋白级表征。它可连接碎片化的蛋白组谱以实现可迁移注释和批次校正，并通过丰度重建扩展有限面板，推断出未测量的细胞毒性蛋白程序。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "单细胞蛋白组基础模型，3.8亿细胞预训练，契合蛋白基础模型方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "单细胞蛋白组基础模型，3.8亿细胞预训练，填补模态空白",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "ProtCell基础模型，掩码丰度建模",
+  "data": "98个数据集约3.8亿细胞",
+  "scenario": "单细胞蛋白组学表征学习",
+  "benchmark": "",
+  "results": "可连接碎片化蛋白组谱实现可迁移注释和批次校正，并扩展有限面板推断未测量的细胞毒性蛋白程序",
+  "availability": "",
+  "limitations": "",
+  "summary": "本文提出面向单细胞蛋白组学的基础模型ProtCell。基于98个数据集约3.8亿细胞预训练，在transformer编码器中结合蛋白身份嵌入与连续丰度嵌入，通过掩码丰度建模学习细胞级和蛋白级表征。模型可连接碎片化蛋白组谱实现可迁移注释和批次校正，并扩展有限面板推断未测量的细胞毒性蛋白程序。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 11,
+ "added_on": "2026-11-01"
+}

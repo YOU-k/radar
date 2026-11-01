@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.22.26366229",
+  "title": "A family-aware All of Us benchmark for polygenic prediction and genomic machine learning",
+  "url": "https://doi.org/10.64898/2026.10.22.26366229",
+  "abstract": "构建了基于All of Us v9的家族感知基准，将整个家族组分固定分配到发现、校准和测试集，并保留一级亲属用于家族内评估，同时区分仅用AoU发现数据训练的模型与使用外部GWAS汇总统计的模型，以解决跨研究PRS性能难以比较及机器学习评估中亲属数据泄漏的问题。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "All of Us万人级家族感知PRS基准，解决数据泄漏，可复用",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "All of Us家族感知PRS基准，解决跨研究可比与数据泄漏，必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "家族感知基准构建与评估",
+  "data": "All of Us v9基因型与表型数据，按家族分组划分",
+  "scenario": "多基因风险评分评估",
+  "benchmark": "仅AoU发现数据模型 vs 外部GWAS汇总统计模型",
+  "results": "将整个家族组分固定分配到发现、校准和测试集，保留一级亲属用于家族内评估，区分两类训练策略以消除亲属数据泄漏",
+  "availability": "",
+  "limitations": "摘要未给出具体定量性能结果",
+  "summary": "构建了基于All of Us v9的家族感知基准用于多基因预测与基因组机器学习评估。方法将整个家族组分固定分配到发现、校准和测试集，并保留一级亲属用于家族内评估，同时区分仅用AoU发现数据训练的模型与使用外部GWAS汇总统计的模型。该设计解决了跨研究PRS性能难以比较及机器学习评估中亲属数据泄漏的问题。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 13,
+ "added_on": "2026-11-01"
+}

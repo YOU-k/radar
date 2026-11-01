@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-026-02806-5",
+  "title": "fastGxE is a powerful method for uncovering genotype-environment interactions in biobanks.",
+  "url": "https://doi.org/10.1038/s41588-026-02806-5",
+  "abstract": "fastGxE 是一种用于在生物样本库中挖掘基因型-环境交互作用的方法，发表于 Nature Genetics。摘要信息有限，未提供具体建模策略、数据规模或定量性能结果。",
+  "authors": "",
+  "venue": "Nature genetics",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Nature Genetics生物样本库GxE方法，规模大具方法学价值",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Genetics生物样本库GxE方法，方向方法学必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基因型-环境交互作用检测方法",
+  "data": "",
+  "scenario": "生物样本库GxE挖掘",
+  "benchmark": "",
+  "results": "",
+  "availability": "",
+  "limitations": "摘要信息有限，未提供建模策略、数据规模或定量结果",
+  "summary": "提出fastGxE方法用于在生物样本库中挖掘基因型-环境交互作用。摘要信息有限，未提供具体建模策略、数据规模或定量性能结果。该方法发表于Nature Genetics，旨在提升GxE发现的效力。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 13,
+ "added_on": "2026-11-01"
+}

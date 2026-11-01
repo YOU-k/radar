@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.23.26366372",
+  "title": "Integrated multiomic scores for cardiovascular disease prediction across multiancestral populations",
+  "url": "https://doi.org/10.64898/2026.10.23.26366372",
+  "abstract": "在UK Biobank 50,673人中基于999种血浆蛋白构建疾病特异蛋白组评分，并在PURE研究9,358人中验证。进一步整合2,279个多基因评分和479个DNA甲基化评分，构建针对心梗、房颤、心衰和心血管死亡的4种多组学评分MEGASCORE，评估其跨祖源人群的预测与判别能力。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "多组学评分跨祖源验证，蛋白甲基化遗传整合定量扎实",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "多组学评分跨祖源验证，蛋白组+PRS+甲基化整合代表性强",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多组学评分整合构建",
+  "data": "UKB 50,673人蛋白组；PURE 9,358人验证",
+  "scenario": "心血管疾病预测",
+  "benchmark": "999种血浆蛋白评分、2,279个多基因评分、479个DNA甲基化评分",
+  "results": "基于999种血浆蛋白构建疾病特异蛋白组评分，整合2,279个多基因评分和479个DNA甲基化评分构建4种MEGASCORE，评估跨祖源预测与判别能力",
+  "availability": "",
+  "limitations": "摘要未给出具体AUC等定量性能数值",
+  "summary": "在UK Biobank 50,673人中基于999种血浆蛋白构建疾病特异蛋白组评分，并在PURE研究9,358人中验证。进一步整合2,279个多基因评分和479个DNA甲基化评分，构建针对心梗、房颤、心衰和心血管死亡的4种多组学评分MEGASCORE。评估了其跨祖源人群的预测与判别能力。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 13,
+ "added_on": "2026-11-01"
+}

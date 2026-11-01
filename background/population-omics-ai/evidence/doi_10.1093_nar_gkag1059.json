@@ -1,0 +1,51 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/nar/gkag1059",
+  "title": "Biobank-scale self-supervised genotype pretraining yields transferable representations for human genetics.",
+  "url": "https://doi.org/10.1093/nar/gkag1059",
+  "abstract": "提出SNPBERT，基于UK Biobank 485,923名参与者的基因型，用掩码rsID预测进行自监督预训练。嵌入可恢复人群结构，效果与PCA相当，并识别祖先信息标记SNP；结合注意力多实例头微调后生成疾病特异风险评分，较传统多基因风险评分提供互补信息。",
+  "authors": "",
+  "venue": "Nucleic acids research",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0,
+   "pmcid": "PMC13717189"
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank 48万基因型自监督预训练，表征可迁移",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank 48万人基因型自监督预训练，可迁移表征",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "掩码rsID自监督基因型预训练",
+  "data": "UKB 485,923名参与者基因型，13,615个SNP词表",
+  "scenario": "人群结构与疾病风险分层",
+  "benchmark": "PCA聚类、GWAS-PRS",
+  "results": "验证MLM损失0.435、掩码token准确率78.5%；UKB子集ARI 0.93（PCA 0.92）；1KGP ARI 0.99、HGDP 0.93、HapMap3 0.81",
+  "availability": "",
+  "limitations": "剂量感知变体聚类一致性低于稀疏模型",
+  "summary": "提出SNPBERT，基于UK Biobank 485,923名参与者的基因型，用掩码rsID预测进行自监督预训练。嵌入可恢复人群结构，效果与PCA相当，并识别祖先信息标记SNP；结合注意力多实例头微调后生成疾病特异风险评分。较传统多基因风险评分提供互补信息。",
+  "_unverified_numbers": [],
+  "_basis": "abstract+results"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "cache",
+ "added_round": 13,
+ "added_on": "2026-11-01"
+}
