@@ -289,5 +289,15 @@
    "A family-aware All of Us benchmark for polygenic prediction and genomic machine learning",
    "A haplotype reference panel constructed from 490,319 UK Biobank genomes improves genotype imputation for global populations."
   ]
+ },
+ {
+  "name": "Multi-omics in the All Of Us Research Program expands mapping genetic mechanisms in health and disease",
+  "kind": "dataset",
+  "url": "https://doi.org/10.64898/2026.10.29.26366507",
+  "note": "All of Us多组学队列万人级蛋白/转录组与QTL图谱，人群多组学核心资源。",
+  "score": 9.0,
+  "day": "2026-11-04",
+  "source": "daily",
+  "theme": "cohort"
  }
 ]
