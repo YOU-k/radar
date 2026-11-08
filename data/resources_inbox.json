@@ -299,5 +299,15 @@
   "day": "2026-11-04",
   "source": "daily",
   "theme": "cohort"
+ },
+ {
+  "name": "[dataset] transhumanist-already-exists/pansci-mouse-aging-snrna",
+  "kind": "dataset",
+  "url": "https://huggingface.co/datasets/transhumanist-already-exists/pansci-mouse-aging-snrna",
+  "note": "小鼠多器官多年龄单核图谱，2000 万核公开可下载，直接可用。",
+  "score": 7.0,
+  "day": "2026-11-08",
+  "source": "daily",
+  "theme": "aging"
  }
 ]
