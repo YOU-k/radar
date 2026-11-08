@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.10.29.26366507",
+  "title": "Multi-omics in the All Of Us Research Program expands mapping genetic mechanisms in health and disease",
+  "url": "https://doi.org/10.64898/2026.10.29.26366507",
+  "abstract": "基于All of Us多组学队列的祖源多样化参与者，生成蛋白组（N=10,043）与转录组（N=9,043）数据并开展e/s/pQTL分析。共检出182,246个QTL，其中54,255个精细定位到罕见变异，59.4%（32,235个）解析为单一因果变异。罕见变异效应更易受祖源限制、跨分子层重复，并富集于已知孟德尔疾病基因（OR=1.4）和获批药物靶点。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 9.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "All of Us万人级多组学QTL图谱，数据公开，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "All of Us万人级多组学QTL图谱，祖源多样，资源与机制发现并重",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "eQTL/sQTL/pQTL分析及精细定位",
+  "data": "蛋白组N=10,043、转录组N=9,043的祖源多样化参与者",
+  "scenario": "多组学遗传机制图谱构建",
+  "benchmark": "未提及",
+  "results": "检出182,246个QTL，54,255个精细定位到罕见变异，59.4%（32,235个）解析为单一因果变异；罕见变异效应富集于孟德尔疾病基因（OR=1.4）和获批药物靶点",
+  "availability": "",
+  "limitations": "",
+  "summary": "基于All of Us多组学队列的祖源多样化参与者开展QTL定位研究。生成蛋白组与转录组数据并做e/s/pQTL分析及精细定位。发现大量QTL可精细定位到罕见变异，罕见变异效应更易受祖源限制、跨分子层重复，并富集于疾病基因与药物靶点。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 14,
+ "added_on": "2026-11-08"
+}

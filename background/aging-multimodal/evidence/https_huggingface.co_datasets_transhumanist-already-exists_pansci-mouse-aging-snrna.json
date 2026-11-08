@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "https://huggingface.co/datasets/transhumanist-already-exists/pansci-mouse-aging-snrna",
+  "title": "[dataset] transhumanist-already-exists/pansci-mouse-aging-snrna",
+  "url": "https://huggingface.co/datasets/transhumanist-already-exists/pansci-mouse-aging-snrna",
+  "abstract": "构建了覆盖13个器官、5个年龄段、雌雄两性的小鼠衰老单核转录组图谱，共包含93只小鼠的20,317,820个细胞核。默认配置wt_main为致密核心集，含32只野生型小鼠、11个器官。该资源可用于研究衰老过程中跨器官的细胞类型与基因表达变化。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "大规模跨器官单核衰老图谱，公开数据，契合单细胞衰老资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "大规模跨器官单核衰老图谱，公开数据资源，符合多组学衰老图谱纳入标准。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "单核RNA测序构建跨器官衰老图谱",
+  "data": "93只小鼠13器官5年龄段20,317,820个细胞核",
+  "scenario": "小鼠多器官衰老细胞图谱",
+  "benchmark": "",
+  "results": "核心集含32只野生型小鼠11个器官；全图谱覆盖13器官、5年龄段、雌雄两性",
+  "availability": "数据集公开",
+  "limitations": "仅小鼠；摘要未报告具体分析结果",
+  "summary": "构建覆盖13个器官、5个年龄段、雌雄两性的小鼠衰老单核转录组图谱。对93只小鼠共20,317,820个细胞核进行单核RNA测序并整合为图谱资源。默认核心集wt_main含32只野生型小鼠、11个器官，可用于研究衰老中跨器官细胞类型与基因表达变化。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 10,
+ "added_on": "2026-11-08"
+}

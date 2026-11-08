@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.11.02.26366836",
+  "title": "Sex shapes plasma molecular signatures of dementia risk across APOE ε4 strata",
+  "url": "https://doi.org/10.64898/2026.11.02.26366836",
+  "abstract": "在43,759名UK Biobank参与者中按性别与APOE ε4分层，分析血浆蛋白组和代谢组对痴呆的预测能力。APOE ε4状态与痴呆关联存在性别差异（交互p=0.027），机器学习模型在携带者中判别力更高（AUC 0.85-0.90），女性携带者最佳。多数关键分子预测因子为亚组特异，如女性携带者的C7、CDON、EDIL3和男性携带者的KLK4、MMP12、TGFBI。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank四万人蛋白代谢组痴呆预测，含性别分层",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank四万人血浆多组学按性别分层预测痴呆，具人群健康价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "按性别与APOE ε4分层的机器学习预测",
+  "data": "43,759名UK Biobank参与者的血浆蛋白组与代谢组",
+  "scenario": "痴呆风险分子预测",
+  "benchmark": "按性别与APOE ε4分层的亚组比较",
+  "results": "APOE ε4与痴呆关联存在性别差异（交互p=0.027）；携带者模型AUC 0.85-0.90，女性携带者最佳；关键预测因子亚组特异（女性C7、CDON、EDIL3；男性KLK4、MMP12、TGFBI）",
+  "availability": "",
+  "limitations": "",
+  "summary": "在UK Biobank参与者中按性别与APOE ε4分层，评估血浆蛋白组和代谢组对痴呆的预测能力。采用机器学习模型进行判别并比较各亚组表现。发现APOE ε4与痴呆关联存在性别差异，携带者判别力更高且女性携带者最佳，多数关键分子预测因子为亚组特异。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "4"
+ ],
+ "fulltext_path": "",
+ "added_round": 14,
+ "added_on": "2026-11-08"
+}

@@ -64,6 +64,7 @@
 - doi:10.1016/j.neuron.2024.12.007
 - doi:10.1038/s43587-026-01067-5
 - doi:10.1038/s43587-026-01247-3
+- https://huggingface.co/datasets/transhumanist-already-exists/pansci-mouse-aging-snrna
 
 ### 2.4 衰老生物学基准与基础模型
 - doi:10.1016/j.cell.2026.08.026
