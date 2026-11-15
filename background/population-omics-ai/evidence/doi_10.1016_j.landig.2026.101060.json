@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.landig.2026.101060",
+  "title": "ClinicalAge, a framework for modelling ageing trajectories from longitudinal electronic health records in the UK: a model development and validation study.",
+  "url": "https://doi.org/10.1016/j.landig.2026.101060",
+  "abstract": "开发并验证基于常规纵向电子健康记录的新型衰老生物标志物ClinicalAge。使用UK Biobank数据建模、CPRD Aurum数据外部验证，从诊断与用药等EHR轨迹中估计个体衰老程度，并评估其与发病和死亡风险的关联。",
+  "authors": "",
+  "venue": "The Lancet. Digital health",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank+CPRD纵向EHR衰老轨迹建模并外部验证，契合EHR轨迹方向。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank+CPRD纵向EHR衰老轨迹建模，跨队列验证",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "基于纵向EHR轨迹建模衰老生物标志物",
+  "data": "UK Biobank建模、CPRD Aurum外部验证的纵向电子健康记录",
+  "scenario": "衰老程度评估与发病死亡风险",
+  "benchmark": "CPRD Aurum外部验证",
+  "results": "",
+  "availability": "",
+  "limitations": "",
+  "summary": "开发并验证基于常规纵向电子健康记录的新型衰老生物标志物ClinicalAge。使用UK Biobank数据建模、CPRD Aurum数据外部验证，从诊断与用药等EHR轨迹中估计个体衰老程度。并评估其与发病和死亡风险的关联。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 15,
+ "added_on": "2026-11-15"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.11.05.763758",
+  "title": "SARDINE unlocks EWAS summary statistics for large-scale epigenetic biomarker analysis",
+  "url": "https://doi.org/10.64898/2026.11.05.763758",
+  "abstract": "提出SARDINE统计框架，仅用EWAS汇总统计、时钟权重和参考甲基化协方差即可估计表观遗传时钟与表型的关联，无需个体数据；在15677人中38种表观标志物和4种表型上准确复现个体水平估计，并揭示标志物与衰老、疾病和生活方式关联的异质性。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "表观时钟汇总统计新框架，可复用且大规模验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "表观时钟汇总统计框架，可大规模复用EWAS，方法学价值高",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SARDINE汇总统计框架",
+  "data": "15677人，38种表观标志物、4种表型",
+  "scenario": "EWAS汇总统计关联分析",
+  "benchmark": "个体水平估计",
+  "results": "在15677人中准确复现个体水平估计，揭示标志物与衰老、疾病、生活方式关联异质性",
+  "availability": "",
+  "limitations": "",
+  "summary": "提出SARDINE统计框架用于表观遗传时钟与表型关联分析。仅用EWAS汇总统计、时钟权重和参考甲基化协方差估计关联，无需个体数据。在15677人中准确复现个体水平估计并揭示关联异质性。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 11,
+ "added_on": "2026-11-15"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.10.029",
+  "title": "Mesoscale molecular architecture of the striatum across cell types and adult aging.",
+  "url": "https://doi.org/10.1016/j.cell.2026.10.029",
+  "abstract": "用Slide-tags单核空间转录组分析19例死后供体、110万细胞，揭示纹状体一致分为六个区，每区由分子上不同的棘状投射神经元群体界定并具空间协调的神经元-星形胶质细胞互作网络。构建配套小鼠空间图谱识别四个同源区并与脑内传入投射区域对齐，进而推断衰老相关变化。",
+  "authors": "",
+  "venue": "Cell",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "空间转录组衰老图谱，公开数据资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "纹状体空间衰老图谱，跨区域分子架构资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Slide-tags单核空间转录组",
+  "data": "19例死后供体、110万细胞",
+  "scenario": "纹状体空间分子图谱",
+  "benchmark": "配套小鼠空间图谱",
+  "results": "纹状体一致分为六个区，每区由分子不同的棘状投射神经元群体界定并具空间协调神经元-星形胶质细胞互作网络",
+  "availability": "",
+  "limitations": "",
+  "summary": "用Slide-tags单核空间转录组分析19例供体110万细胞。揭示纹状体分为六个区并由不同棘状投射神经元群体界定。构建小鼠空间图谱识别四个同源区并推断衰老相关变化。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 11,
+ "added_on": "2026-11-15"
+}

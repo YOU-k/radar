@@ -110,5 +110,13 @@
   "score": 0.8,
   "n_evidence": 119,
   "round": 14
+ },
+ {
+  "seed_hit": 1.0,
+  "saturation": 0.6,
+  "highcite": 0.0,
+  "score": 0.8,
+  "n_evidence": 121,
+  "round": 15
  }
 ]

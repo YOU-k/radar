@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.cell.2026.09.014",
+  "title": "Single-cell, multi-region profiling of the macaque brain across the lifespan.",
+  "url": "https://doi.org/10.1016/j.cell.2026.09.014",
+  "abstract": "构建覆盖11个脑区、55只0.5-21岁恒河猴、530万细胞的转录组图谱。识别衰老耗竭的脆弱神经元群体及仅在单细胞分辨率可见的胶质细胞组成变化，刻画跨区域跨细胞类型的年龄相关分子特征（含性别特异特征），并发现其与阿尔茨海默病特征重叠。",
+  "authors": "",
+  "venue": "Cell",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨生命周期单细胞脑图谱，衰老多组学资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨寿命猕猴脑单细胞图谱，衰老必读资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "单细胞多脑区转录组图谱",
+  "data": "55只0.5-21岁恒河猴、11脑区、530万细胞",
+  "scenario": "灵长类脑衰老图谱",
+  "benchmark": "",
+  "results": "识别衰老耗竭的脆弱神经元群体及仅单细胞分辨率可见的胶质细胞变化，特征与阿尔茨海默病重叠",
+  "availability": "",
+  "limitations": "",
+  "summary": "构建覆盖11个脑区、55只恒河猴、530万细胞的转录组图谱。通过单细胞多区域 profiling 刻画跨区域跨细胞类型年龄相关分子特征。发现衰老耗竭的脆弱神经元群体及与阿尔茨海默病重叠的特征。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 11,
+ "added_on": "2026-11-15"
+}

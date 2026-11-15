@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.21203/rs.3.rs-10675323/v1",
+  "title": "Disease aging clocks in the plasma proteome stratify risk and track preclinical progression",
+  "url": "https://doi.org/10.21203/rs.3.rs-10675323/v1",
+  "abstract": "构建针对31种年龄相关疾病的血浆蛋白组“疾病衰老时钟”，通过提取最大化年龄介导疾病风险成分的蛋白复合评分。在44,526名UK Biobank参与者中，疾病年龄差可将同龄人10年发病率区分达20倍，每增加1年差距使2型糖尿病风险升高24%、慢性肾病21%、阿尔茨海默病风险亦升高。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "血浆蛋白疾病衰老时钟，大规模UKB验证",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "血浆蛋白组疾病衰老时钟，UKB大队列，代表新方向",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "血浆蛋白组疾病衰老时钟",
+  "data": "44526名UK Biobank参与者血浆蛋白组",
+  "scenario": "31种年龄相关疾病风险分层",
+  "benchmark": "同龄人发病率对比",
+  "results": "疾病年龄差区分10年发病率达20倍；每增1年2型糖尿病风险升24%、慢性肾病21%、阿尔茨海默病亦升高",
+  "availability": "",
+  "limitations": "",
+  "summary": "构建针对31种年龄相关疾病的血浆蛋白组疾病衰老时钟。通过提取最大化年龄介导疾病风险成分的蛋白复合评分。在44526人中疾病年龄差可区分10年发病率达20倍并升高多种疾病风险。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 11,
+ "added_on": "2026-11-15"
+}

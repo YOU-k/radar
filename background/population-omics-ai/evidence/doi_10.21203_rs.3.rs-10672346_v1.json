@@ -1,0 +1,57 @@
+{
+ "candidate": {
+  "id": "doi:10.21203/rs.3.rs-10672346/v1",
+  "title": "Large-scale cross-species proteomics and machine learning identify biomarkers and peripheral therapeutic targets for delirium",
+  "url": "https://doi.org/10.21203/rs.3.rs-10672346/v1",
+  "abstract": "整合UK Biobank血浆蛋白组（52,936人、2,911蛋白、17.5年随访）机器学习风险预测、两样本孟德尔随机化（蛋白QTL N=35,559；谵妄GWAS 4,381例 vs 469,981对照）、人鼠术后谵妄跨物种蛋白组及小鼠肝特异性敲低/补充功能验证，识别出1,470个血浆蛋白标志物并验证候选靶点。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank血浆蛋白组5万人+MR+跨物种验证，蛋白组整合疾病预测，方法扎实。",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank大规模蛋白组+ML+MR+跨物种验证，标志性发现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "机器学习风险预测+孟德尔随机化+跨物种蛋白组",
+  "data": "UK Biobank血浆蛋白组52,936人、2,911蛋白；人鼠术后谵妄蛋白组",
+  "scenario": "谵妄生物标志物与治疗靶点",
+  "benchmark": "两样本孟德尔随机化（蛋白QTL N=35,559；谵妄GWAS 4,381例vs469,981对照）",
+  "results": "识别1,470个血浆蛋白标志物，并验证候选外周治疗靶点",
+  "availability": "",
+  "limitations": "",
+  "summary": "旨在为谵妄识别血浆蛋白生物标志物和外周治疗靶点。整合UK Biobank大规模血浆蛋白组机器学习风险预测、两样本孟德尔随机化、人鼠术后谵妄跨物种蛋白组及小鼠肝特异性敲低/补充功能验证。识别出1,470个血浆蛋白标志物并验证了候选靶点。",
+  "_unverified_numbers": [
+   {
+    "field": "benchmark",
+    "number": "981",
+    "reason": "not_found",
+    "dropped": false
+   }
+  ],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 15,
+ "added_on": "2026-11-15"
+}
