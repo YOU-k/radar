@@ -309,5 +309,15 @@
   "day": "2026-11-08",
   "source": "daily",
   "theme": "aging"
+ },
+ {
+  "name": "LACA: a cross-species single-cell resource for exploring longevity and aging-associated cellular and molecular programs.",
+  "kind": "dataset",
+  "url": "https://doi.org/10.1093/nar/gkag1129",
+  "note": "NAR长寿跨物种单细胞图谱，1.48亿细胞公开数据库，衰老建模可直接用。",
+  "score": 7.0,
+  "day": "2026-11-21",
+  "source": "daily",
+  "theme": "aging"
  }
 ]
