@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41592-026-03319-z",
+  "title": "Joint single-cell capture of Cas9 edits and transcriptomes reveals on- and off-target effects on gene expression.",
+  "url": "https://doi.org/10.1038/s41592-026-03319-z",
+  "abstract": "提出Superb-seq，整合Cas9编辑、T7原位转录与单细胞RNA测序，在3个细胞系3.5万个细胞上同时捕获单细胞编辑结果与转录组。在1万个K562细胞中用7条gRNA靶向4个染色质重塑基因，检出5761个编辑细胞、全部在靶位点及36个脱靶位点，较Perturb-seq更准确估计下游表达扰动效应。",
+  "authors": "",
+  "venue": "Nature methods",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "Superb-seq联合捕获编辑与转录组，提升扰动效应估计，契合扰动数据资源",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Superb-seq联合捕获编辑与转录组，提升扰动效应估计，属扰动数据资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Superb-seq整合Cas9编辑、T7原位转录与scRNA-seq",
+  "data": "3个细胞系3.5万个细胞；K562中1万个细胞、7条gRNA",
+  "scenario": "单细胞编辑与转录组联合捕获",
+  "benchmark": "Perturb-seq",
+  "results": "检出5761个编辑细胞、全部在靶位点及36个脱靶位点；较Perturb-seq更准确估计下游表达扰动效应",
+  "availability": "",
+  "limitations": "",
+  "summary": "提出Superb-seq方法，将Cas9编辑检测、T7原位转录与单细胞RNA测序整合，实现单细胞层面同时捕获编辑结果与转录组。在3个细胞系3.5万个细胞上应用，并在1万个K562细胞中用7条gRNA靶向4个染色质重塑基因。结果检出5761个编辑细胞、全部在靶位点及36个脱靶位点，且较Perturb-seq更准确估计下游表达扰动效应。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 11,
+ "added_on": "2026-11-22"
+}

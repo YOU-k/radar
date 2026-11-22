@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-026-02844-z",
+  "title": "Regularized ensemble polygenic risk prediction with GWAS summary statistics.",
+  "url": "https://doi.org/10.1038/s41588-026-02844-z",
+  "abstract": "提出仅利用GWAS汇总统计构建正则化集成PRS的统计框架，可整合大量候选PRS模型而无需个体基因型数据。在多个性状和人群的分析中，该方法在人群内及跨人群均持续优于现有最先进PRS方法，有助于样本不足的非欧洲人群应用。",
+  "authors": "",
+  "venue": "Nature genetics",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "仅用GWAS汇总统计的集成PRS方法，跨人群优于现有方法",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Nature Genetics的PRS方法学突破，跨人群泛化，生物样本库遗传分析必读",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "仅用GWAS汇总统计的正则化集成PRS",
+  "data": "GWAS汇总统计，多个性状与人群",
+  "scenario": "多基因风险评分预测",
+  "benchmark": "现有最先进PRS方法",
+  "results": "在人群内及跨人群均持续优于现有最先进PRS方法",
+  "availability": "",
+  "limitations": "有助于样本不足的非欧洲人群应用",
+  "summary": "研究提出仅利用GWAS汇总统计构建正则化集成PRS的统计框架，可整合大量候选PRS模型而无需个体基因型数据。在多个性状和人群的分析中评估该方法。结果显示其在人群内及跨人群均持续优于现有最先进PRS方法，有助于样本不足的非欧洲人群应用。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 16,
+ "added_on": "2026-11-22"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1038/s41588-026-02826-1",
+  "title": "Optimizing phenotype scale improves genetic analyses in large-scale biobanks.",
+  "url": "https://doi.org/10.1038/s41588-026-02826-1",
+  "abstract": "提出SIQReg，通过最小化表型分位数间异质性学习数据驱动的表型尺度。在25个UK Biobank复杂性状中24个拒绝默认尺度，学到的尺度介于默认与对数之间，表明性状既非纯加性也非纯乘性；该方法消除大部分非加性信号（含97%方差数量性状位点），并改善加性与非加性遗传分析。",
+  "authors": "",
+  "venue": "Nature genetics",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank表型尺度优化方法，改善大规模遗传分析",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UKB表型尺度优化方法学，改善大规模生物样本库遗传分析，具通用价值",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "SIQReg学习数据驱动表型尺度",
+  "data": "25个UK Biobank复杂性状",
+  "scenario": "复杂性状遗传分析",
+  "benchmark": "默认表型尺度",
+  "results": "25个性状中24个拒绝默认尺度，消除含97%方差数量性状位点的非加性信号",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究提出SIQReg，通过最小化表型分位数间异质性学习数据驱动的表型尺度。在25个UK Biobank复杂性状中检验该方法。24个性状拒绝默认尺度，学到的尺度介于默认与对数之间，表明性状既非纯加性也非纯乘性；该方法消除大部分非加性信号（含97%方差数量性状位点），并改善加性与非加性遗传分析。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 16,
+ "added_on": "2026-11-22"
+}

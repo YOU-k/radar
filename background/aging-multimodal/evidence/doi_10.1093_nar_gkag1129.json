@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/nar/gkag1129",
+  "title": "LACA: a cross-species single-cell resource for exploring longevity and aging-associated cellular and molecular programs.",
+  "url": "https://doi.org/10.1093/nar/gkag1129",
+  "abstract": "构建长寿与衰老细胞图谱LACA，整合134个物种的单细胞转录组数据及其最大寿命信息，包含超1.48亿细胞和190个注释细胞类型。提供长寿基因比较、基因-寿命相关性和细胞-寿命相关性等跨物种分析工具，帮助解读进化与寿命相关机制。",
+  "authors": "",
+  "venue": "Nucleic acids research",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "跨物种单细胞长寿图谱资源，含寿命关联工具，契合方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "跨物种单细胞长寿图谱资源，含寿命关联工具",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "整合单细胞转录组与最大寿命信息的跨物种图谱",
+  "data": "134个物种单细胞转录组及最大寿命信息，超1.48亿细胞、190个注释细胞类型",
+  "scenario": "跨物种长寿与衰老细胞分子程序分析",
+  "benchmark": "",
+  "results": "提供长寿基因比较、基因-寿命相关性和细胞-寿命相关性等跨物种分析工具",
+  "availability": "",
+  "limitations": "",
+  "summary": "构建长寿与衰老细胞图谱LACA。整合134个物种的单细胞转录组数据及其最大寿命信息，包含超1.48亿细胞和190个注释细胞类型。提供长寿基因比较、基因-寿命相关性和细胞-寿命相关性等跨物种分析工具，帮助解读进化与寿命相关机制。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 12,
+ "added_on": "2026-11-22"
+}

@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.11.17.767412",
+  "title": "GenVinci reconstructs 3D molecular tissue scenes from histology to map senescence across aging and disease",
+  "url": "https://doi.org/10.64898/2026.11.17.767412",
+  "abstract": "构建ImageOmicsNet-300M语料库，含3亿单细胞与空间转录组谱、2490万H&E预测虚拟空间转录组谱及4623张H&E切片，其中1782张来自衰老小鼠器官、人皮肤连续切片跨50年。基于此开发多模态组织基础模型GenVinci，从常规2D组织学重建3D组织场景，零样本泛化预测空间基因表达并映射衰老。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 8.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "组织基础模型重建空间转录组映射衰老，含大规模公开语料",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "组织基础模型重建3D空间组学映射衰老，方法新颖",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "多模态组织基础模型GenVinci",
+  "data": "ImageOmicsNet-300M：3亿单细胞与空间转录组谱、2490万H&E虚拟空间转录组谱、4623张H&E切片（1782张衰老小鼠器官、人皮肤连续切片跨50年）",
+  "scenario": "从2D组织学重建3D组织并映射衰老",
+  "benchmark": "零样本泛化预测空间基因表达",
+  "results": "从常规2D组织学重建3D组织场景，零样本泛化预测空间基因表达并映射衰老",
+  "availability": "",
+  "limitations": "",
+  "summary": "构建含3亿单细胞与空间转录组谱、2490万H&E预测虚拟空间转录组谱及4623张H&E切片的ImageOmicsNet-300M语料库。基于此开发多模态组织基础模型GenVinci。该模型可从常规2D组织学重建3D组织场景，零样本泛化预测空间基因表达并映射衰老。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.4"
+ ],
+ "fulltext_path": "",
+ "added_round": 12,
+ "added_on": "2026-11-22"
+}

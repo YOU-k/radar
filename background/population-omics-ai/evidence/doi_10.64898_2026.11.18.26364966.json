@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.11.18.26364966",
+  "title": "Prospective multi-omic profiling identifies predictive and genetically supported molecular determinants of incident epilepsy",
+  "url": "https://doi.org/10.64898/2026.11.18.26364966",
+  "abstract": "整合UK Biobank血浆蛋白组、代谢组与基因组数据，在5.3万参与者中定量2923种血浆蛋白并随访新发癫痫最长15年。Cox分析识别116种与癫痫发病相关蛋白，以神经丝轻链NEFL（HR=2.03）和GDF15（HR=1.73）为首，并评估其预测与因果相关性。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "UK Biobank五万人蛋白组代谢组整合，预测癫痫发病并评估因果",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "UK Biobank五万人蛋白代谢基因组整合，前瞻预测癫痫，代表多组学机制发现",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "Cox分析整合蛋白组代谢组基因组",
+  "data": "UK Biobank 5.3万参与者，定量2923种血浆蛋白，随访最长15年",
+  "scenario": "新发癫痫预测",
+  "benchmark": "",
+  "results": "识别116种与癫痫发病相关蛋白，NEFL HR=2.03、GDF15 HR=1.73为首",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究整合UK Biobank血浆蛋白组、代谢组与基因组数据，在5.3万参与者中定量2923种血浆蛋白并随访新发癫痫最长15年。采用Cox分析识别与癫痫发病相关的蛋白。共识别116种相关蛋白，以神经丝轻链NEFL（HR=2.03）和GDF15（HR=1.73）为首，并评估其预测与因果相关性。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 16,
+ "added_on": "2026-11-22"
+}

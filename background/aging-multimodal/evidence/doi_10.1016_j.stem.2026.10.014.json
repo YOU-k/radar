@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1016/j.stem.2026.10.014",
+  "title": "A spatiotemporal atlas of maturation and aging of the male monkey hypothalamic-pituitary-testicular axis.",
+  "url": "https://doi.org/10.1016/j.stem.2026.10.014",
+  "abstract": "用空间ATAC-RNA测序结合单核与单细胞RNA测序，构建食蟹猴下丘脑-垂体-睾丸轴在幼年、青春期、成年和老年阶段的空间时间图谱。刻画KNDy神经元、促性腺细胞、支持细胞和间质细胞的转录、染色质及空间变化，发现KNDy神经元在静息样与兴奋样状态间转换并发生空间重排。",
+  "authors": "",
+  "venue": "Cell stem cell",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "空间多组学衰老图谱，数据资源可复用，契合多模态衰老方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "Cell子刊空间多组学衰老图谱，跨组织跨年龄，代表方向资源",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "空间ATAC-RNA测序+单核/单细胞RNA测序",
+  "data": "食蟹猴下丘脑-垂体-睾丸轴幼年、青春期、成年、老年阶段组织",
+  "scenario": "雄性生殖轴衰老时空图谱",
+  "benchmark": "",
+  "results": "刻画KNDy神经元、促性腺细胞、支持细胞和间质细胞的转录、染色质及空间变化；KNDy神经元在静息样与兴奋样状态间转换并发生空间重排",
+  "availability": "",
+  "limitations": "",
+  "summary": "构建食蟹猴下丘脑-垂体-睾丸轴跨幼年、青春期、成年和老年阶段的空间时间图谱。采用空间ATAC-RNA测序结合单核与单细胞RNA测序进行分析。发现KNDy神经元在静息样与兴奋样状态间转换并发生空间重排，并刻画多种细胞的转录、染色质及空间变化。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.3"
+ ],
+ "fulltext_path": "",
+ "added_round": 12,
+ "added_on": "2026-11-22"
+}

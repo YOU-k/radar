@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.21203/rs.3.rs-11733688/v1",
+  "title": "Identifying cohorts at elevated risk of cancers using generative modeling of patient health states",
+  "url": "https://doi.org/10.21203/rs.3.rs-11733688/v1",
+  "abstract": "提出GenEHR，基于数百万患者电子健康记录训练的自回归生成模型，学习诊断、用药、检验值和操作等多模态病史并显式建模就诊间隔，以预测未来临床事件。将基础训练获得的通用患者表征与参数高效的有监督适配结合，用于17种癌症的风险分层，在五个大型EHR队列中完成验证。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "百万级EHR生成式基础模型，跨五队列癌症风险分层",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "百万级EHR生成式基础模型，跨五队列癌症风险分层，代表转折点",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "GenEHR自回归生成模型学习健康状态",
+  "data": "数百万患者电子健康记录，五个大型EHR队列验证",
+  "scenario": "17种癌症风险分层",
+  "benchmark": "",
+  "results": "在五个大型EHR队列中完成17种癌症风险分层验证",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究提出GenEHR，基于数百万患者电子健康记录训练的自回归生成模型，学习诊断、用药、检验值和操作等多模态病史并显式建模就诊间隔以预测未来临床事件。将基础训练获得的通用患者表征与参数高效的有监督适配结合。用于17种癌症的风险分层，在五个大型EHR队列中完成验证。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.1"
+ ],
+ "fulltext_path": "",
+ "added_round": 16,
+ "added_on": "2026-11-22"
+}

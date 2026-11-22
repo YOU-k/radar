@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.64898/2026.11.17.26366584",
+  "title": "Single-cell dissection of immune-state architecture across diverse human population cohorts",
+  "url": "https://doi.org/10.64898/2026.11.17.26366584",
+  "abstract": "介绍CARDINAL项目并给出首批结果，构建覆盖成年生命历程的群体规模外周血单细胞图谱，包含来自两个英国队列6003名个体的近1000万免疫细胞。旨在解析衰老、环境暴露、感染史和疾病如何共同影响免疫变异、调控机制与疾病易感性。",
+  "authors": "",
+  "venue": "",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "群体规模免疫图谱资源，契合大规模图谱方向",
+   "revised": false
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "群体规模免疫单细胞图谱资源，具方向代表性，可作背景必读。",
+   "revised": false
+  }
+ ],
+ "extraction": {
+  "method": "群体规模外周血单细胞图谱构建",
+  "data": "两个英国队列6003人外周血，近1000万免疫细胞",
+  "scenario": "免疫状态架构解析",
+  "benchmark": "",
+  "results": "构建覆盖成年生命历程的群体规模外周血单细胞图谱，纳入6003名个体近1000万免疫细胞",
+  "availability": "",
+  "limitations": "",
+  "summary": "介绍CARDINAL项目并给出首批结果，构建覆盖成年生命历程的群体规模外周血单细胞图谱。研究纳入来自两个英国队列的6003名个体的近1000万免疫细胞进行单细胞分析。旨在解析衰老、环境暴露、感染史和疾病如何共同影响免疫变异、调控机制与疾病易感性。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "3"
+ ],
+ "fulltext_path": "",
+ "added_round": 13,
+ "added_on": "2026-11-22"
+}

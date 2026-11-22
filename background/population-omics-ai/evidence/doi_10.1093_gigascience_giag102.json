@@ -1,0 +1,50 @@
+{
+ "candidate": {
+  "id": "doi:10.1093/gigascience/giag102",
+  "title": "Machine learning-based proteomics analysis identified 23 protein biomarkers for enhanced risk prediction of myocardial infarction in Chinese and Europeans.",
+  "url": "https://doi.org/10.1093/gigascience/giag102",
+  "abstract": "在中国4000名成人中联合Olink与SomaScan平台测量逾9500种血浆蛋白，用传统与机器学习方法构建蛋白风险评分，并与传统危险因素及多基因评分比较。共识别23个心肌梗死蛋白标志物，模型在37,187名欧洲人中外部验证，提升了风险预测的区分度与重分类。",
+  "authors": "",
+  "venue": "GigaScience",
+  "year": null,
+  "citations": null,
+  "found_by": [
+   "inbox"
+  ],
+  "extra": {
+   "radar_score": 7.0
+  }
+ },
+ "panel": [
+  {
+   "role": "bio",
+   "vote": "yes",
+   "reason": "四千人蛋白组+跨族裔外部验证，多组学风险预测有方法学价值",
+   "revised": true
+  },
+  {
+   "role": "media",
+   "vote": "yes",
+   "reason": "万人级血浆蛋白组机器学习风险预测，跨中欧队列外部验证，具人群多组学价值",
+   "revised": true
+  }
+ ],
+ "extraction": {
+  "method": "传统与机器学习构建蛋白风险评分",
+  "data": "中国4000名成人血浆蛋白，Olink+SomaScan测逾9500种蛋白",
+  "scenario": "心肌梗死风险预测",
+  "benchmark": "传统危险因素与多基因评分",
+  "results": "识别23个心肌梗死蛋白标志物，在37,187名欧洲人中外部验证，提升区分度与重分类",
+  "availability": "",
+  "limitations": "",
+  "summary": "研究在中国成人中联合Olink与SomaScan平台测量逾9500种血浆蛋白，构建心肌梗死蛋白风险评分。采用传统与机器学习方法，并与传统危险因素及多基因评分比较。共识别23个蛋白标志物，模型在37,187名欧洲人中外部验证，提升了风险预测的区分度与重分类。",
+  "_unverified_numbers": [],
+  "_basis": "abstract"
+ },
+ "sections": [
+  "2.2"
+ ],
+ "fulltext_path": "",
+ "added_round": 16,
+ "added_on": "2026-11-22"
+}
