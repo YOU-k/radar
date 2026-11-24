@@ -1,31 +1,30 @@
 {
- "date": "2026-11-23",
+ "date": "2026-11-24",
  "sources": {
-  "arxiv": 5,
-  "europepmc": 0,
-  "semantic_scholar": 6,
+  "arxiv": 103,
+  "europepmc": 451,
+  "semantic_scholar": 3,
   "huggingface": 0,
   "github": 0,
-  "rss": 1
+  "rss": 5
  },
  "errors": [],
  "stages": {
   "score": {
-   "sent": 6,
+   "sent": 58,
    "unscored": 0
   },
   "deepread": 0,
-  "context": 0,
-  "enrich": 0,
+  "context": 1,
+  "enrich": 1,
   "resources": 0,
   "extract": 0
  },
  "llm": {
-  "ok": 1,
+  "ok": 5,
   "fail": 0
  },
  "problems": [
-  "europepmc 0 条",
   "huggingface 0 条",
   "github 0 条"
  ]
