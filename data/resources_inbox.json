@@ -332,5 +332,15 @@
    "Population-scale single-nucleus multi-omic profiling of skeletal muscle reveals extensive context-specific genetic regulation.",
    "ClinicalAge, a framework for modelling ageing trajectories from longitudinal electronic health records in the UK: a model development and validation study."
   ]
+ },
+ {
+  "name": "The molecular phenotypes of null alleles in cells (MorPhiC) data resource.",
+  "kind": "dataset",
+  "url": "https://doi.org/10.1093/nar/gkag1238",
+  "note": "MorPhiC公开门户，300+基因扰动多组学资源，可直接用于扰动建模。",
+  "score": 7.0,
+  "day": "2026-11-27",
+  "source": "daily",
+  "theme": "organoid"
  }
 ]
